@@ -1,8 +1,382 @@
 {
-  "generatedAt": "2026-07-25T09:57:09.952Z",
+  "generatedAt": "2026-07-25T11:23:39.917Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "xai-grok-workspace",
+      "categories": [
+        "tool"
+      ],
+      "title": "Grok in Google Workspace — free xAI add-on lands inside Docs, Sheets, and Slides",
+      "org": "xAI",
+      "date": "2026-07-24",
+      "url": "https://x.ai/news/introducing-google-workspace-addon",
+      "summary": "xAI shipped a free Google Workspace add-on that puts Grok inside Google Docs, Sheets, and Slides. One install turns on drafting, spreadsheet analysis with cited cells, and outline-to-deck slide generation.",
+      "tags": [
+        "xai",
+        "grok",
+        "grok-workspace",
+        "google-workspace",
+        "google-docs",
+        "google-sheets",
+        "google-slides",
+        "productivity",
+        "add-on",
+        "ai-assistant",
+        "workspace-marketplace",
+        "free-tier"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Price": "Free",
+        "Apps": "Docs, Sheets, Slides",
+        "Install": "Google Workspace Marketplace"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "xAI"
+        },
+        {
+          "label": "Product",
+          "value": "Grok for Google Workspace add-on"
+        },
+        {
+          "label": "Apps covered",
+          "value": "Google Docs, Sheets, Slides"
+        },
+        {
+          "label": "Price",
+          "value": "Free"
+        },
+        {
+          "label": "Install",
+          "value": "Google Workspace Marketplace"
+        },
+        {
+          "label": "Cross-suite",
+          "value": "Follows Grok for Microsoft 365 the week before"
+        },
+        {
+          "label": "Announced",
+          "value": "24 July 2026"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much does Grok for Google Workspace cost?",
+          "a": "The Grok for Google Workspace add-on is free. xAI publishes it as a no-cost download on the Google Workspace Marketplace, and one install turns Grok on across Docs, Sheets, and Slides — there is no separate seat charge for the assistant."
+        },
+        {
+          "q": "What can Grok actually do inside Sheets, Slides, and Docs?",
+          "a": "In Sheets, Grok answers questions about the open spreadsheet with cited cell references, writes formulas, builds charts, and runs scenario models that recalculate when assumptions change. In Slides, it turns plain outlines into working decks with diagrams and images. In Docs, it drafts, refines, and copyedits text with tone-consistent rewrites."
+        },
+        {
+          "q": "How is Grok for Google Workspace different from Grok in Microsoft 365?",
+          "a": "The Google Workspace add-on ships one week after Grok for Microsoft 365 add-ins for Word, Excel, PowerPoint, and Outlook. Both put the same Grok assistant inside the host suite; the Google Workspace version is free at launch, while Microsoft 365 pricing follows Grok's regular API and subscription tiers."
+        },
+        {
+          "q": "Which Grok model powers the Workspace add-on?",
+          "a": "The add-on calls xAI's current Grok model in the cloud — the same Grok 4.5 stack rolled out across grok.com, iOS, Android, and X. Users do not choose a model in the sidebar; xAI routes each request to whichever Grok variant its API selects for that task."
+        }
+      ],
+      "explainer": {
+        "tagline": "xAI turned Grok on inside every Google Workspace doc, sheet, and slide — free, one install, cited cells and all.",
+        "whatIsIt": "Grok for Google Workspace is xAI's new marketplace add-on that puts a Grok sidebar inside Google Docs, Sheets, and Slides at no cost. One install through the Google Workspace Marketplace enables the assistant across all three apps for a personal or a Workspace account.",
+        "howItWorks": "The sidebar sends the current document, spreadsheet range, or slide outline to Grok in the cloud on request. In Sheets, answers cite the exact cell references they came from; in Slides, Grok assembles decks from an outline and pulls diagrams or images to support each point; in Docs, it organises unformatted notes into structured drafts and does grammar and tone edits inline.",
+        "whyItMatters": "This is xAI's second major productivity-suite launch in a week — Grok for Microsoft 365 arrived seven days earlier — and Google Workspace has been the last big office suite without a first-class Grok surface. Making the add-on free removes the biggest adoption block; teams already on Workspace can trial Grok next to Gemini without a procurement conversation.",
+        "forWho": "Google Workspace users who want Grok inside Docs, Sheets, and Slides without changing tools or paying for another AI seat.",
+        "tryIt": "https://workspace.google.com/marketplace/app/grok/660927092109"
+      },
+      "image": {
+        "url": "https://x.ai/images/news/grok-in-google-workspace-og.png",
+        "alt": "xAI Grok for Google Workspace announcement card",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://x.ai/news/introducing-google-workspace-addon"
+        },
+        {
+          "label": "Workspace Marketplace",
+          "url": "https://workspace.google.com/marketplace/app/grok/660927092109"
+        },
+        {
+          "label": "Coverage: Basenor",
+          "url": "https://www.basenor.com/blogs/news/grok-in-google-workspace-5-details-that-matter"
+        },
+        {
+          "label": "Coverage: Yahoo/Stocktwits",
+          "url": "https://tech.yahoo.com/ai/copilot/articles/spacexai-expands-grok-integration-google-202158385.html"
+        }
+      ],
+      "publishDate": "2026-07-25T11:22:15.185Z"
+    },
+    {
+      "id": "xai-grok-build-workflows",
+      "categories": [
+        "tool"
+      ],
+      "title": "Grok Build Workflows — xAI's coding CLI now fans a task across up to 1,024 parallel agents",
+      "org": "xAI",
+      "date": "2026-07-23",
+      "url": "https://x.ai/news/workflows",
+      "summary": "Grok Build gained Workflows: orchestration scripts that fan a task across up to 1,024 parallel agents, verify results with independent skeptics, and return one report. Reusable slash commands live in .grok/workflows/.",
+      "tags": [
+        "xai",
+        "grok",
+        "grok-build",
+        "coding-agent",
+        "workflows",
+        "parallel-agents",
+        "orchestration",
+        "code-review",
+        "issue-triage",
+        "developer-tools",
+        "cli",
+        "grok-build-0-1",
+        "slash-commands"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Default agents per run": "128",
+        "Max agents per run": "1024",
+        "Model": "grok-build-0.1"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "xAI"
+        },
+        {
+          "label": "Product",
+          "value": "Workflows in Grok Build"
+        },
+        {
+          "label": "Default parallel agents",
+          "value": "128 per run"
+        },
+        {
+          "label": "Max parallel agents",
+          "value": "1,024 per run"
+        },
+        {
+          "label": "Model",
+          "value": "grok-build-0.1"
+        },
+        {
+          "label": "API price",
+          "value": "$1 / 1M input tokens, $2 / 1M output tokens"
+        },
+        {
+          "label": "Storage",
+          "value": ".grok/workflows/ (reusable slash commands)"
+        },
+        {
+          "label": "Availability",
+          "value": "SuperGrok and X Premium+; heavy runs on SuperGrok Heavy"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How many parallel agents can one Grok Build workflow run?",
+          "a": "A single Grok Build workflow runs 128 agents in parallel by default, and can scale up to 1,024 per run for the largest jobs. The orchestration script fans the task out, collects results, and pipes them through independent skeptic agents that challenge findings before the final report is written."
+        },
+        {
+          "q": "What kinds of jobs are Grok Build workflows built for?",
+          "a": "xAI positions Grok Build workflows for tasks a single chat cannot hold in one context: reviewing every feature in a large pull request, triaging the last 100 open issues, auditing a codebase for one class of bug, and documentation sweeps. Anything that splits cleanly into independent pieces and needs a single consolidated report."
+        },
+        {
+          "q": "How much does using Grok Build workflows cost?",
+          "a": "Access to workflows is included for SuperGrok and X Premium+ subscribers, but the largest parallel runs need SuperGrok Heavy, which sits around $300 per month. On the API, the underlying grok-build-0.1 model is billed at $1 per million input tokens and $2 per million output tokens; each workflow spends across every parallel agent it launches."
+        },
+        {
+          "q": "Can a team save and share a Grok Build workflow across projects?",
+          "a": "Yes. A completed workflow can be saved as a reusable slash command in the .grok/workflows/ directory of any repo, checked into git alongside the code, and rerun by any teammate with a single command. That turns a one-off orchestration into a shareable playbook — the pattern lives with the codebase, not one engineer's chat history."
+        }
+      ],
+      "explainer": {
+        "tagline": "Grok Build learned to fan a job across up to 1,024 parallel agents, verify with independent skeptics, and post one report — from a single slash command.",
+        "whatIsIt": "Workflows are xAI's new orchestration layer on top of Grok Build, the company's terminal coding agent. A workflow is a script that spawns many Grok Build sub-agents in parallel, gives each a slice of a larger job, and stitches the results back together. It targets work that will not fit in one context window.",
+        "howItWorks": "Each workflow run defaults to 128 concurrent agents and scales up to 1,024. Sub-agent results pass through independent skeptic agents that try to refute the findings before they land in the final report, cutting false positives. Saved workflows live in .grok/workflows/ as reusable slash commands, so a team can commit them next to the code they operate on.",
+        "whyItMatters": "Fanning work across many agents is the current frontier of coding-agent design — Claude Code has fleet-view, Codex has multi-agent runs, and now Grok Build gets a first-class orchestration primitive. The 1,024-agent ceiling and the built-in skeptic verification make Grok Build competitive on the two jobs that break single-context coders: large PR reviews and 100-issue triage sweeps.",
+        "forWho": "Engineering teams using Grok Build for large PR reviews, backlog triage, or codebase-wide audits that a single chat cannot hold.",
+        "tryIt": "grok workflow run <name>"
+      },
+      "image": {
+        "url": "https://x.ai/images/news/workflows-og.png",
+        "alt": "xAI Grok Build Workflows announcement",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://x.ai/news/workflows"
+        },
+        {
+          "label": "Coverage: Basenor",
+          "url": "https://www.basenor.com/blogs/news/grok-build-workflows-explained-in-5-points"
+        },
+        {
+          "label": "Coverage: BuildFastWithAI",
+          "url": "https://www.buildfastwithai.com/blogs/grok-build-xai-cli-ai-agents-2026"
+        },
+        {
+          "label": "Coverage: DevOps.com",
+          "url": "https://devops.com/xai-enters-the-coding-agent-race-with-grok-build/"
+        }
+      ],
+      "publishDate": "2026-07-25T11:22:15.185Z"
+    },
+    {
+      "id": "aisi-caisi-kimi-k3-cyber",
+      "categories": [
+        "security",
+        "benchmark",
+        "paper"
+      ],
+      "title": "UK AISI + CAISI evaluate Kimi K3 — 32% on ExploitBench vs 76% for US frontier models",
+      "org": "UK AISI + CAISI",
+      "date": "2026-07-23",
+      "url": "https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities",
+      "summary": "UK AISI and NIST's CAISI evaluated Kimi K3 on cyber tasks: 32% on ExploitBench vs 76% for US frontier models, 0 of 41 arbitrary-code-execution outcomes, and step 17 of a 32-step network attack vs 28.5 for the frontier.",
+      "tags": [
+        "kimi-k3",
+        "moonshot",
+        "uk-aisi",
+        "caisi",
+        "nist",
+        "cyber-evaluation",
+        "exploit-development",
+        "exploitbench",
+        "ai-safety",
+        "government-evaluation",
+        "open-weight",
+        "glm-5-2",
+        "cybersecurity"
+      ],
+      "importance": "major",
+      "metrics": {
+        "ExploitBench (Kimi K3)": "32%",
+        "ExploitBench (top US models)": "76%",
+        "Kimi K3 ACE (of 41 tasks)": 0,
+        "Network attack steps (Kimi K3)": "17 of 32",
+        "Network attack steps (frontier avg)": 28.5
+      },
+      "quickFacts": [
+        {
+          "label": "Evaluators",
+          "value": "UK AISI + US CAISI (NIST)"
+        },
+        {
+          "label": "Model tested",
+          "value": "Kimi K3 (Moonshot AI, released 16 Jul 2026)"
+        },
+        {
+          "label": "Cyber-exploit benchmark",
+          "value": "ExploitBench (CMU) — 41 Chrome V8 vulnerabilities post-2023"
+        },
+        {
+          "label": "Kimi K3 ExploitBench score",
+          "value": "32% (vs 76% for top US models)"
+        },
+        {
+          "label": "Arbitrary code execution",
+          "value": "0 of 41 samples (US frontier avg: 20 of 41)"
+        },
+        {
+          "label": "Simulated network attack",
+          "value": "step 17 of 32 avg (US frontier avg: 28.5)"
+        },
+        {
+          "label": "vs GLM-5.2",
+          "value": "Kimi K3 32% beats GLM-5.2 24% on ExploitBench"
+        },
+        {
+          "label": "Safety alignment",
+          "value": "K3 did not refuse offensive-cyber tasks"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What did UK AISI and CAISI actually measure with Kimi K3?",
+          "a": "UK AISI and CAISI ran Kimi K3 through ExploitBench, a Carnegie Mellon University benchmark that asks a model to write exploits for 41 Chrome V8 engine vulnerabilities disclosed after 2023, plus a 32-step simulated network-attack range. They compared its results against the current US frontier closed models and against the strongest open-weight alternatives."
+        },
+        {
+          "q": "How does Kimi K3 compare to US frontier models on cyber tasks?",
+          "a": "Kimi K3 sits well behind. On ExploitBench it scored 32% to the leading US models' 76%. On arbitrary code execution it landed 0 of 41 tasks compared with a US-frontier average of 20 of 41. On the network-attack range it made step 17 of 32 on average, versus 28.5 steps for the strongest models — and completed the full attack in only 1 of 10 attempts."
+        },
+        {
+          "q": "How does Kimi K3 compare to other open-weight models?",
+          "a": "Kimi K3 is now the strongest open-weight model on this cyber suite. Its 32% ExploitBench score beats Z.ai's GLM-5.2 at 24%, which UK AISI had identified in June as the leading open-weight model on the benchmark. Between them, K3 and GLM-5.2 mark the current open-weight ceiling on offensive cyber."
+        },
+        {
+          "q": "Did Kimi K3 refuse to help with the offensive-cyber tasks?",
+          "a": "No. UK AISI and CAISI report that Kimi K3's built-in safeguards did not prevent it from attempting exploit development or offensive cyber operations during the evaluation. The report frames this as a safety-alignment gap — the model's below-frontier performance is a capability limit, not a refusal."
+        },
+        {
+          "q": "Why does a preliminary government evaluation of a Chinese model matter now?",
+          "a": "Kimi K3 shipped 16 July 2026 as Moonshot's 2.8-trillion-parameter frontier open-weight model, and full weights land 27 July. Governments moving first on cyber evaluations before wide download signals that open-weight risk assessment is now a Day-Zero exercise, not a post-hoc one — and gives US policymakers a shared UK-US baseline as sanctions discussions around Moonshot heat up."
+        }
+      ],
+      "explainer": {
+        "tagline": "UK AISI and NIST's CAISI put Kimi K3 through joint cyber evals and found it trails the US frontier by a wide margin — but still leads open-weight rivals.",
+        "whatIsIt": "The UK Artificial Intelligence Security Institute and the US Center for AI Standards and Innovation, part of NIST, published a joint preliminary assessment of Moonshot AI's Kimi K3 on offensive cyber tasks. It is the first cross-Atlantic government evaluation of a Chinese frontier open-weight model on this axis.",
+        "howItWorks": "The two agencies ran Kimi K3 through Carnegie Mellon's ExploitBench, a set of 41 exploit-development tasks against Chrome V8 vulnerabilities disclosed after 2023, and through a 32-step simulated network-attack range. Each task was scored against the current US frontier closed models and the strongest open-weight model as of June, GLM-5.2, using an Item Response Theory methodology the labs have published in prior reports.",
+        "whyItMatters": "The result gives policymakers concrete numbers instead of vibes: Kimi K3 is not at frontier cyber capability, but it is the new open-weight ceiling and its safeguards do not refuse offensive-cyber help. The evaluation lands four days before Moonshot's scheduled 27 July open-weight drop, and while the White House weighs Entity-List designations against Moonshot — giving a shared UK-US technical baseline for those talks.",
+        "forWho": "Security teams, policy watchers, and open-weight model users trying to size the real cyber-abuse risk of a new frontier Chinese model.",
+        "tryIt": "https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities"
+      },
+      "benchmarks": [
+        {
+          "name": "ExploitBench (41 Chrome V8 vulns, post-2023)",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Kimi K3 (Moonshot)",
+              "score": 32,
+              "highlight": true
+            },
+            {
+              "name": "US frontier models (avg)",
+              "score": 76
+            },
+            {
+              "name": "GLM-5.2 (Z.ai)",
+              "score": 24
+            }
+          ],
+          "source": "https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities"
+        }
+      ],
+      "image": {
+        "url": "https://cdn.prod.website-files.com/663bd486c5e4c81588db7a48/6a624d7a39430cd8ef9ea34a_Copy%20of%20Metacard%20(13).png",
+        "alt": "UK AISI Kimi K3 cyber capabilities assessment social card",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "UK AISI assessment",
+          "url": "https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities"
+        },
+        {
+          "label": "NIST / CAISI mirror",
+          "url": "https://www.nist.gov/news-events/news/2026/07/uk-aisi-caisi-preliminary-assessment-kimi-k3s-cyber-capabilities"
+        },
+        {
+          "label": "Prior UK AISI open-weight cyber study",
+          "url": "https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber"
+        },
+        {
+          "label": "Coverage: Cryptopolitan",
+          "url": "https://www.cryptopolitan.com/kimi-k3-lags-us-models-cyberattack-tasks/"
+        }
+      ],
+      "publishDate": "2026-07-25T11:22:15.185Z"
+    },
     {
       "id": "anthropic-claude-code-2-1-219",
       "categories": [

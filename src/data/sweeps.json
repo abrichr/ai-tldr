@@ -25336,6 +25336,83 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260725t112215z",
+      "timestamp": "2026-07-25T11:22:15.185Z",
+      "source": "github-actions-sweep",
+      "summary": "Three qualifying items in the last 72h: xAI shipped Grok for Google Workspace (free add-on, Jul 24) and Grok Build Workflows (up to 1,024 parallel agents, Jul 23), plus UK AISI and CAISI jointly published a preliminary cyber evaluation of Moonshot's Kimi K3 (Jul 23) with hard numbers. Lab blogs, GitHub trending, HF trending, HN, and 8 YouTube channels were all scanned; the RSS feed's 5 fresh videos are already in the feed, and the bio/neuro/pharma lane returned no released model or FDA-cleared device within the window.",
+      "counts": {
+        "added": 3,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "xai-grok-workspace",
+          "title": "Grok in Google Workspace — free xAI add-on lands inside Docs, Sheets, and Slides",
+          "category": "tool",
+          "note": "New free add-on published on x.ai/news 24 Jul, live on Google Workspace Marketplace. Multi-outlet coverage (Basenor, Yahoo/Stocktwits, ABAB, TradingView). Major tool release."
+        },
+        {
+          "id": "xai-grok-build-workflows",
+          "title": "Grok Build Workflows — xAI's coding CLI now fans a task across up to 1,024 parallel agents",
+          "category": "tool",
+          "note": "New coding-agent orchestration feature announced 23 Jul on x.ai/news/workflows. 128 default / 1024 max parallel agents. Multi-outlet coverage (Basenor, BuildFastWithAI, DevOps.com). Major tool feature."
+        },
+        {
+          "id": "aisi-caisi-kimi-k3-cyber",
+          "title": "UK AISI + CAISI evaluate Kimi K3 — 32% on ExploitBench vs 76% for US frontier models",
+          "category": "security",
+          "note": "Joint UK AISI and NIST/CAISI preliminary evaluation published 23 Jul on aisi.gov.uk (mirrored on nist.gov). Concrete benchmark numbers with US frontier and GLM-5.2 comparisons — distinct angle from the existing White House sanctions item (that's political; this is technical). Categories: security + benchmark + paper."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "dataset",
+        "paper",
+        "algorithm",
+        "video",
+        "security",
+        "benchmark",
+        "article",
+        "ecosystem"
+      ]
+    },
+    {
+      "id": "sweep-20260725t112339z",
+      "timestamp": "2026-07-25T11:23:39.917Z",
+      "source": "github-actions-sweep",
+      "summary": "Follow-up: trimmed the three new-item summaries under the 240-char cap.",
+      "counts": {
+        "added": 0,
+        "updated": 3,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [
+        {
+          "id": "xai-grok-workspace",
+          "title": "Grok in Google Workspace — free xAI add-on lands inside Docs, Sheets, and Slides",
+          "note": "trim summary under 240 chars"
+        },
+        {
+          "id": "xai-grok-build-workflows",
+          "title": "Grok Build Workflows — xAI's coding CLI now fans a task across up to 1,024 parallel agents",
+          "note": "trim summary under 240 chars"
+        },
+        {
+          "id": "aisi-caisi-kimi-k3-cyber",
+          "title": "UK AISI + CAISI evaluate Kimi K3 — 32% on ExploitBench vs 76% for US frontier models",
+          "note": "trim summary under 240 chars"
+        }
+      ],
+      "removed": [],
+      "coverage": []
     }
   ]
 }
