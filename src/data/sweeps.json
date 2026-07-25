@@ -25303,6 +25303,39 @@
         "benchmark",
         "algorithm"
       ]
+    },
+    {
+      "id": "sweep-20260725t095709z",
+      "timestamp": "2026-07-25T09:57:09.952Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched Anthropic/OpenAI/DeepMind/Meta/Mistral/Cohere/Qwen/DeepSeek blogs, GitHub trending, HuggingFace models/papers/datasets, HN top 30, 8 YouTube channels, Cursor changelog, Simon Willison, and the AI-for-science lane (medical imaging, BCIs, pharma AI). Almost everything fresh in the last 72h was already in the feed (Opus 5, Gemini 3.6, Inkling, Laguna S 2.1, Solar Open 2, Unlimited-OCR, Cursor Router, OpenAI Presence, all 5 fresh YouTube videos). Added Claude Code 2.1.219 as the one qualifying new release — Opus 5 becomes the default Opus in the CLI, plus deeper subagent nesting and a strict sandbox allowlist.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "anthropic-claude-code-2-1-219",
+          "title": "Claude Code 2.1.219 — Opus 5 becomes default, subagents nest to depth 3",
+          "category": "tool",
+          "note": "Real release — Anthropic ships Claude Code 2.1.219 with Opus 5 as the new default Opus model, 1M-token context in fast mode, subagent nesting up to depth 3, DirectoryAdded hook, and a strict sandbox network allowlist. Distinct from the Opus 5 model launch item because it changes tool-level defaults and adds several unrelated features. Skipped ecosystem-only items (Nvidia/MS/Meta open-weights letter — advocacy, no enacted change; fails ecosystem gate) and KAT-Coder-V2.5-Dev (HF trending #18 with only 135 likes, GitHub repo has 2 stars — below the top-10 HF trending bar and below paper 2-of-N)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "article",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }

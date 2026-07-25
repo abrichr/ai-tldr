@@ -1,8 +1,126 @@
 {
-  "generatedAt": "2026-07-25T06:23:52.365Z",
+  "generatedAt": "2026-07-25T09:57:09.952Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "anthropic-claude-code-2-1-219",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "Claude Code 2.1.219 — Opus 5 becomes default, subagents nest to depth 3",
+      "org": "Anthropic",
+      "date": "2026-07-24",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
+      "summary": "Claude Code 2.1.219 makes Claude Opus 5 the default Opus model in the CLI, adds a 1M-token context in fast mode, subagent nesting up to depth 3, and a strict sandbox network allowlist that refuses non-allowed hosts without prompting.",
+      "tags": [
+        "anthropic",
+        "claude-code",
+        "claude-opus-5",
+        "coding-agent",
+        "cli",
+        "subagents",
+        "sandbox",
+        "release"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Anthropic"
+        },
+        {
+          "label": "Version",
+          "value": "2.1.219"
+        },
+        {
+          "label": "Released",
+          "value": "2026-07-24"
+        },
+        {
+          "label": "New default Opus",
+          "value": "Claude Opus 5 (1M context)"
+        },
+        {
+          "label": "Fast mode price",
+          "value": "$10 in / $50 out per 1M tokens"
+        },
+        {
+          "label": "Subagent nesting",
+          "value": "3 levels deep (was 1)"
+        },
+        {
+          "label": "Removed from fast mode",
+          "value": "Opus 4.7"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What changed for Opus 4.7 users in Claude Code 2.1.219?",
+          "a": "Claude Code 2.1.219 removes Opus 4.7 from fast mode. The `/fast` flag now routes to Opus 5 or Opus 4.8 only, so anyone who was pinning `/fast` to Opus 4.7 in the CLI must pick a different model or drop out of fast mode entirely."
+        },
+        {
+          "q": "How does deeper subagent nesting work in Claude Code 2.1.219?",
+          "a": "Claude Code 2.1.219 lets a subagent spawn its own subagents down to three levels deep, up from a hard cap of one. Set the `CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH=1` environment variable to keep the old flat behaviour when a workflow assumes a single fan-out."
+        },
+        {
+          "q": "What is the strict sandbox allowlist in Claude Code 2.1.219?",
+          "a": "A new `sandbox.network.strictAllowlist` setting causes the Claude Code sandbox to refuse any host that isn't on the explicit allowlist instead of prompting for approval. Operators can lock down which domains a sandboxed command may reach without a human having to click through every unknown request."
+        },
+        {
+          "q": "How much does Claude Opus 5 cost in Claude Code fast mode?",
+          "a": "Claude Opus 5 in Claude Code's fast mode is billed at $10 per million input tokens and $50 per million output tokens, per the v2.1.219 release notes. Standard-mode pricing follows the usual Anthropic API rates rather than the fast-mode surcharge."
+        }
+      ],
+      "explainer": {
+        "tagline": "Anthropic's terminal coding agent adopts Opus 5 as its default and lets subagents spin up their own subagents three layers deep.",
+        "whatIsIt": "Opus 5 replaces Opus 4.7 as Claude Code's default Opus model in v2.1.219, arriving with a 1M-token context and a fast-mode price of $10 in and $50 out per million tokens. The release also adds a strict sandbox network allowlist that refuses non-allowed hosts without prompting the user, plus a new DirectoryAdded hook that fires when `/add-dir` or the SDK's `register_repo_root` request registers a working directory mid-session.",
+        "howItWorks": "Subagents spawned by Claude Code can now spawn their own subagents down to three levels deep — the previous limit was one — with `CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH=1` turning nesting off for workflows that assume a flat structure. Nested subagents at depth 2 or more surface in the headless stream-json output when `--forward-subagent-text` is set, keyed by their spawning tool_use id, so an orchestrator can see the whole tree instead of only its immediate children.",
+        "whyItMatters": "Users of the Claude Code CLI pick up Opus 5's stronger long-horizon coding without changing model flags, and the deeper subagent tree lets one automated workflow decompose a task into workers of workers rather than a flat fan-out — the shape most complex orchestration actually wants. The stricter sandbox allowlist also removes a common approval-fatigue paper cut when running untrusted commands in headless CI or a batch job.",
+        "forWho": "Claude Code power users, teams running Claude Code in CI, and anyone building multi-agent workflows on top of the CLI.",
+        "tryIt": "npm install -g @anthropic-ai/claude-code@2.1.219"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/24526cd9f128be20facd538d7b2f3d7cdfe427ae03671f0bc99d44936a3a051a/anthropics/claude-code/releases/tag/v2.1.219",
+        "alt": "Claude Code v2.1.219 release page on GitHub",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Release notes",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219"
+        },
+        {
+          "label": "Full changelog",
+          "url": "https://code.claude.com/docs/en/changelog"
+        },
+        {
+          "label": "Claude Opus 5 launch",
+          "url": "https://www.anthropic.com/news/claude-opus-5"
+        },
+        {
+          "label": "Docs",
+          "url": "https://code.claude.com/docs/en/overview"
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "Opus 5 fast mode — input",
+            "price": "$10.00",
+            "unit": "/ 1M tokens"
+          },
+          {
+            "plan": "Opus 5 fast mode — output",
+            "price": "$50.00",
+            "unit": "/ 1M tokens"
+          }
+        ],
+        "source": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219"
+      },
+      "publishDate": "2026-07-25T09:57:09.952Z"
+    },
     {
       "id": "wes-roth-opus-5-genspark-jul24",
       "categories": [
