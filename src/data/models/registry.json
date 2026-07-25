@@ -59,9 +59,28 @@
           "blurb": "Anthropic's flagship Claude tier — most capable Opus-class model for the hardest reasoning, coding, and long-horizon agentic work.",
           "versions": [
             {
+              "name": "Claude Opus 5",
+              "slug": "claude-opus-5",
+              "blurb": "Opus-tier model for complex agentic coding and enterprise work (Jul 2026). 1M context, 128K max output, adaptive thinking; $5/$25 per MTok — same price as Opus 4.8.",
+              "tags": [
+                "frontier",
+                "proprietary",
+                "reasoning",
+                "multimodal",
+                "coding",
+                "long-context",
+                "agentic"
+              ],
+              "contextWindow": "1M",
+              "license": "Proprietary",
+              "date": "2026-07-24",
+              "rich": true,
+              "current": true
+            },
+            {
               "name": "Claude Opus 4.8",
               "slug": "claude-opus-4-8",
-              "blurb": "Opus-tier flagship (May 2026). Better coding/knowledge work and tool-calling than 4.7; ~4x less likely to let its own code flaws pass unremarked. 1M context.",
+              "blurb": "Opus-tier model (May 2026). Better coding/knowledge work and tool-calling than 4.7; ~4x less likely to let its own code flaws pass unremarked. 1M context.",
               "tags": [
                 "frontier",
                 "proprietary",
@@ -74,7 +93,6 @@
               "contextWindow": "1M",
               "license": "Proprietary",
               "date": "2026-05-28",
-              "current": true,
               "rich": true
             },
             {

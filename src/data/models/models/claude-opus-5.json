@@ -1,0 +1,165 @@
+{
+  "slug": "claude-opus-5",
+  "name": "Claude Opus 5",
+  "maker": "anthropic",
+  "makerTitle": "Anthropic",
+  "line": "claude-opus",
+  "lineTitle": "Claude Opus",
+  "tagline": "Anthropic's Opus-tier model for complex agentic coding and enterprise work, at the same $5/$25 pricing as Opus 4.8.",
+  "seoTitle": "Claude Opus 5 — Specs, Pricing & Availability",
+  "metaDescription": "Claude Opus 5 (Jul 2026): Anthropic's Opus-tier model for complex agentic coding and enterprise work — 1M context, 128K output, adaptive thinking, $5/$25 per MTok.",
+  "releaseDate": "2026-07-24",
+  "status": "Generally available",
+  "license": "Proprietary",
+  "openWeights": false,
+  "modalities": [
+    "Text",
+    "Vision"
+  ],
+  "contextWindow": "1M",
+  "maxOutput": "128K",
+  "knowledgeCutoff": "May 2026",
+  "architecture": "Proprietary transformer with adaptive thinking.",
+  "tags": [
+    "frontier",
+    "proprietary",
+    "reasoning",
+    "multimodal",
+    "coding",
+    "long-context",
+    "agentic"
+  ],
+  "overview": [
+    "Claude Opus 5 is Anthropic's Opus-tier model, released on July 24, 2026 and positioned for complex agentic coding and enterprise work. Anthropic frames it as the successor to Opus 4.8 and describes stronger self-verification, iteration, and long-horizon task completion, plus improvements on scientific research (chemistry, biology, bioinformatics) and visual artifact generation.",
+    "It ships with a 1 million-token context window and up to 128K output tokens on the synchronous Messages API. Modalities are text and image (vision). Adaptive thinking is available; the effort parameter defaults to high on the Claude API and Claude Code. Reliable knowledge is through May 2026.",
+    "Pricing is $5 per million input tokens and $25 per million output tokens — the same rate as Opus 4.8. A Fast mode is offered at roughly 2x base price for about 2.5x faster output. The model is generally available on the Claude API, Claude Platform on AWS, Amazon Bedrock, Google Cloud, and Microsoft Foundry, and is the new default on Claude Max."
+  ],
+  "strengths": [
+    "Positioned for complex agentic coding and enterprise workflows that need long-horizon planning",
+    "1M-token context window with 128K max output on the synchronous Messages API",
+    "Adaptive thinking with the effort parameter defaulting to high on the Claude API and Claude Code",
+    "Same $5/$25 per MTok pricing as Opus 4.8 despite the tier upgrade",
+    "Reliable knowledge cutoff extended to May 2026"
+  ],
+  "useCases": [
+    "Reach for it when a coding task needs multi-step planning, tool use, and self-verification across a large codebase.",
+    "Reach for it for enterprise agent workflows (research, due diligence, financial modeling) that need long-horizon reliability.",
+    "Reach for it for scientific research and data analysis where the model needs to plan, iterate, and check its own work."
+  ],
+  "pricing": {
+    "input": "$5.00",
+    "output": "$25.00",
+    "unit": "per million tokens",
+    "note": "Fast mode is offered at roughly 2x base price for about 2.5x faster output.",
+    "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+  },
+  "apis": [
+    {
+      "provider": "Anthropic API",
+      "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "modelId": "claude-opus-5"
+    },
+    {
+      "provider": "Amazon Bedrock",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/claude-in-amazon-bedrock",
+      "modelId": "anthropic.claude-opus-5"
+    },
+    {
+      "provider": "Google Vertex AI",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/claude-on-vertex-ai",
+      "modelId": "claude-opus-5"
+    }
+  ],
+  "links": [
+    {
+      "label": "Introducing Claude Opus 5",
+      "url": "https://www.anthropic.com/news/claude-opus-5",
+      "kind": "announcement"
+    },
+    {
+      "label": "Models overview (Claude docs)",
+      "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "kind": "official"
+    },
+    {
+      "label": "Claude Opus product page",
+      "url": "https://www.anthropic.com/claude/opus",
+      "kind": "official"
+    },
+    {
+      "label": "Claude on Amazon Bedrock",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/claude-in-amazon-bedrock",
+      "kind": "api-docs"
+    },
+    {
+      "label": "Claude on Google Vertex AI",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/claude-on-vertex-ai",
+      "kind": "api-docs"
+    }
+  ],
+  "faq": [
+    {
+      "q": "When was Claude Opus 5 released?",
+      "a": "Anthropic released Claude Opus 5 on July 24, 2026, on the Claude API, Claude Platform on AWS, Amazon Bedrock, Google Cloud, and Microsoft Foundry. It also became the new default model on Claude Max at launch. Its reliable knowledge cutoff is May 2026."
+    },
+    {
+      "q": "How much does Claude Opus 5 cost?",
+      "a": "Claude Opus 5 is priced at $5 per million input tokens and $25 per million output tokens on the Anthropic API — the same rate as Opus 4.8. A Fast mode is offered at roughly 2x base price for about 2.5x faster output."
+    },
+    {
+      "q": "What is the context window of Claude Opus 5?",
+      "a": "Claude Opus 5 has a 1 million-token context window and supports up to 128K output tokens in a single synchronous Messages API response. Extended output up to 300K tokens is available via the Message Batches API using the output-300k-2026-03-24 beta header."
+    },
+    {
+      "q": "What is the model ID for Claude Opus 5?",
+      "a": "On the Claude API and Google Vertex AI the model ID is claude-opus-5. On Amazon Bedrock it is anthropic.claude-opus-5. Every Claude model ID is a pinned snapshot, so this string is fixed to the July 24 2026 release."
+    },
+    {
+      "q": "How does Claude Opus 5 compare to Claude Fable 5?",
+      "a": "Anthropic positions Fable 5 as its most capable widely-released model, while Opus 5 targets complex agentic coding and enterprise work at half of Fable 5's per-token price ($5/$25 vs $10/$50 per MTok). On the internal CursorBench 3.2 coding benchmark Opus 5 lands within 0.5% of Fable 5's peak score at half the cost per task."
+    }
+  ],
+  "versionHistory": [
+    {
+      "version": "Claude Opus 5",
+      "slug": "claude-opus-5",
+      "date": "2026-07-24",
+      "current": true
+    },
+    {
+      "version": "Claude Opus 4.8",
+      "slug": "claude-opus-4-8",
+      "date": "2026-05-28"
+    },
+    {
+      "version": "Claude Opus 4.7",
+      "slug": "claude-opus-4-7",
+      "date": "2026-04-16"
+    },
+    {
+      "version": "Claude Opus 4.6",
+      "slug": "claude-opus-4-6",
+      "date": "2026-02-05"
+    },
+    {
+      "version": "Claude Opus 4.5",
+      "slug": "claude-opus-4-5",
+      "date": "2025-11-24"
+    },
+    {
+      "version": "Claude Opus 4.1",
+      "slug": "claude-opus-4-1",
+      "date": "2025-08-05"
+    },
+    {
+      "version": "Claude Opus 4",
+      "slug": "claude-opus-4",
+      "date": "2025-05-22"
+    },
+    {
+      "version": "Claude 3 Opus",
+      "slug": "claude-3-opus",
+      "date": "2024-03-04"
+    }
+  ]
+}
