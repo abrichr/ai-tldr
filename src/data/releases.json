@@ -1,8 +1,120 @@
 {
-  "generatedAt": "2026-07-25T13:21:24.870Z",
+  "generatedAt": "2026-07-25T15:08:31.183Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "berabuddies-kimi-k3-redis-zero-days",
+      "categories": [
+        "security",
+        "model"
+      ],
+      "title": "Kimi K3 finds Redis zero-days — 32 agents build authenticated RCE in 27 min",
+      "org": "Bera Buddies",
+      "date": "2026-07-24",
+      "url": "https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html",
+      "summary": "Moonshot's Kimi K3, driven by 32 coordinated agents, found 19 Redis zero-days and produced authenticated remote-code-execution PoCs. Redis shipped patches for seven versions on July 23.",
+      "tags": [
+        "kimi-k3",
+        "moonshot",
+        "redis",
+        "security",
+        "zero-day",
+        "ai-agents",
+        "rce",
+        "cve",
+        "vulnerability-discovery"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Zero-days found": 19,
+        "Fastest exploit": "27 min",
+        "Redis versions patched": 7
+      },
+      "quickFacts": [
+        {
+          "label": "Researcher",
+          "value": "Chaofan Shou (Bera Buddies)"
+        },
+        {
+          "label": "Model used",
+          "value": "Kimi K3 (Moonshot)"
+        },
+        {
+          "label": "Agents",
+          "value": "32 coordinated agents"
+        },
+        {
+          "label": "Redis versions affected",
+          "value": "6.2.22, 7.4.9, 8.6.4, 8.8.0"
+        },
+        {
+          "label": "Patched versions",
+          "value": "6.2.23, 7.2.15, 7.4.10, 8.2.8, 8.4.5, 8.6.5, 8.8.1"
+        },
+        {
+          "label": "Access required",
+          "value": "Authenticated (RESTORE command)"
+        },
+        {
+          "label": "CVE",
+          "value": "CVE-2026-25589"
+        }
+      ],
+      "explainer": {
+        "tagline": "A 32-agent Kimi K3 run cloned Redis, fuzzed it, debugged crashes in GDB, and shipped an RCE proof of concept.",
+        "whatIsIt": "Researchers at Bera Buddies used Moonshot's open-weight Kimi K3 model to run an autonomous vulnerability-discovery workflow against Redis. The agents found 19 zero-days and wrote authenticated remote-code-execution exploits for Redis 6.2.22, 7.4.9, 8.6.4, and 8.8.0. Redis pushed seven patched versions on July 23 in response.",
+        "howItWorks": "Kimi K3 coordinated 32 specialised agents that cloned the Redis source tree, generated fuzzers, instrumented the binary, and used GDB to root-cause crashes. The lead bug is a double-free in stream consumer groups: a crafted RESTORE payload makes two consumers share the same pending-entry record, so freeing one leaves the other holding a dangling pointer. A separate heap overflow lives in the bundled RedisBloom TDigest module.",
+        "whyItMatters": "Every RCE chain in the write-up requires an authenticated client with access to the RESTORE command, so this is not a pre-auth internet worm — but it does show a mid-tier open model orchestrating end-to-end 0-day discovery and PoC development in minutes, not weeks. Redis operators should upgrade to a patched build; the same class of AI-agent triage will now be pointed at other C daemons.",
+        "tryIt": "https://github.com/berabuddies/redis-poc"
+      },
+      "faq": [
+        {
+          "q": "Is this exploit pre-authentication?",
+          "a": "No. Every chain Bera Buddies published requires an authenticated Redis client with access to the RESTORE command, and the Streams paths additionally need EVAL and XGROUP. The findings matter because a compromised low-privilege credential can now escalate to code execution, not because an internet-exposed Redis is instantly ownable."
+        },
+        {
+          "q": "Which Redis versions should I upgrade to?",
+          "a": "Move off 6.2.22, 7.4.9, 8.6.4, and 8.8.0. Redis shipped seven patched builds on July 23, 2026: 6.2.23, 7.2.15, 7.4.10, 8.2.8, 8.4.5, 8.6.5, and 8.8.1. The stream-RESTORE double-free and the RedisBloom TDigest heap overflow are both addressed."
+        },
+        {
+          "q": "How autonomous was Kimi K3 really?",
+          "a": "Chaofan Shou claims 32 agents produced 19 zero-days in about 90 minutes and a full Redis 8.8.0 exploit chain in 27 minutes, coordinated by Kimi K3 with human prompts limited to 'find memory-corruption bugs'. Those numbers are self-reported and neither Redis nor Moonshot has independently confirmed them."
+        },
+        {
+          "q": "Where can I read the PoCs?",
+          "a": "Bera Buddies published the non-destructive proof-of-concept exploits at github.com/berabuddies/redis-poc, covering the stream consumer-group NACK double-free for 6.2.22, 7.4.9, and 8.6.4, plus the TDigest heap overflow for 8.8.0. The lead CVE is CVE-2026-25589."
+        }
+      ],
+      "image": {
+        "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0TE9DH98zjhcQPB99o9CcCvYH1otVTUwpXl_9Af1Nbl89gqHBAqP2jtb-BFrmXdR-4OYmPOGJJoilFiac2ooKHM5Lbe_kD5kLpW1eRcdpOWsG53701lGhFi93e0UpvGrptdb2usksom4mF56GWE1of2M7KsmAZav9cENd90xYAVz7Dq3yPIBJEODDDaQ/s1700-e365/redis-0day.jpg",
+        "alt": "Kimi K3 agents find Redis zero-day vulnerabilities",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "The Hacker News Report",
+          "url": "https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html"
+        },
+        {
+          "label": "PoC Repository",
+          "url": "https://github.com/berabuddies/redis-poc"
+        },
+        {
+          "label": "Redis 8.8.1 Release",
+          "url": "https://github.com/redis/redis/releases/tag/8.8.1"
+        },
+        {
+          "label": "Redis 6.2.23 Release",
+          "url": "https://github.com/redis/redis/releases/tag/6.2.23"
+        },
+        {
+          "label": "Cybersecurity News",
+          "url": "https://cybersecuritynews.com/redis-server-0-day-exploit/"
+        }
+      ],
+      "publishDate": "2026-07-25T15:08:31.183Z"
+    },
     {
       "id": "xai-grok-workspace",
       "categories": [

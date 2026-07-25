@@ -25441,6 +25441,40 @@
         "algorithm",
         "benchmark"
       ]
+    },
+    {
+      "id": "sweep-20260725t150831z",
+      "timestamp": "2026-07-25T15:08:31.183Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched Anthropic/OpenAI/DeepMind/Meta/Mistral/Moonshot/DeepSeek/Zhipu blogs, GitHub trending, HF models/datasets/papers, HN top-30 and newest, TechCrunch AI, Simon Willison, YouTube RSS (8 channels), and the biomedical/pharma/neuro lane. Added one item: Kimi K3 orchestrated a 32-agent Redis zero-day discovery that shipped RCE PoCs and forced seven Redis patches on July 23. Everything else was already in the feed (Opus 5, Grok Workspace, FLUX 3, HF hack coverage, Kimi K3 AISI eval, all 4 fresh YouTube uploads), outside the 72h window (OpenAI Codex Micro Jul 15, Meta Genesis Mission Jul 21, Neuracle BCI Jul 20-21), or failed the ecosystem/dev-action gate (Prentis funding, Cognition-Poke and Midjourney-Co-Star M&A, Composio awesome-list).",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "berabuddies-kimi-k3-redis-zero-days",
+          "title": "Kimi K3 finds Redis zero-days — 32 agents build authenticated RCE in 27 min",
+          "category": "security",
+          "note": "Bera Buddies used Kimi K3 to find 19 Redis zero-days; Redis pushed 7 patched versions on Jul 23; The Hacker News, GB Hackers, eWeek, Cybersecurity News, IBTimes UK, Heise all covered; HN 256 pts; distinct from the existing UK AISI capability eval (that measured ExploitBench percentages; this is a concrete exploit-and-patch incident)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "security",
+        "model",
+        "video",
+        "repo",
+        "tool",
+        "paper",
+        "dataset",
+        "algorithm",
+        "article",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }
