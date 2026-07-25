@@ -25413,6 +25413,34 @@
       ],
       "removed": [],
       "coverage": []
+    },
+    {
+      "id": "sweep-20260725t132124z",
+      "timestamp": "2026-07-25T13:21:24.870Z",
+      "source": "github-actions-sweep",
+      "summary": "Quiet post-Opus-5 window: searched Anthropic/OpenAI/DeepMind/Meta/xAI/Mistral/Cohere/Kimi/DeepSeek/Zhipu lab blogs, GitHub trending, HF trending models/datasets/papers, HN top 30, all 8 YouTube creator RSS feeds, TechCrunch AI, and the biomedical/neuro/pharma lane (NeuroscienceNews, STAT News, Nature subjects, Insilico, hemispheric.ai, Endpoints). Every fresh candidate was already in the feed (Opus 5, ChatGPT Voice desktop, Claude Voice Opus/Sonnet, Runway Media Router, Anthropic Economic Index connector, Codex Micro, Gemini 3.6 Flash, block/buzz, Nanbeige4.2-3B, Solar Open2-250B, Poolside Laguna-S 2.1, Kimi K3, Baidu Unlimited-OCR, Motif-3-Beta preview, Thinking Machines Inkling, all 5 fresh YouTube videos), older than 72h (Codex Micro Jul 15, Grok 4.6 Jul 18, Neuracle brain chip Jul 20, DeepMind Bioresilience Jul 16, Chrome Nano post May 4, Project Glasswing Apr 7), or a paper/reaction without a released artifact (Peking-U memristor Science paper, HF Papers top 10, Simon's Pelicanmaxxing link). Big trending repos alibaba/open-code-review (12.6k stars, created May 18) and citrolabs/ego-lite (3.2k stars, created Apr 16) failed the 'would I tweet as just-shipped today?' test.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "video",
+        "paper",
+        "dataset",
+        "article",
+        "security",
+        "ecosystem",
+        "rumor",
+        "algorithm",
+        "benchmark"
+      ]
     }
   ]
 }
