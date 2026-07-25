@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-25T02:15:47.127Z",
+  "generatedAt": "2026-07-25T06:23:52.365Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
@@ -430,6 +430,10 @@
           "url": "https://platform.claude.com/docs/en/about-claude/models/whats-new-opus-5"
         },
         {
+          "label": "Artificial Analysis",
+          "url": "https://artificialanalysis.ai/articles/opus-5"
+        },
+        {
           "label": "CNBC coverage",
           "url": "https://www.cnbc.com/2026/07/24/anthropic-claude-opus-5-ai-fable-5-cost.html"
         },
@@ -442,7 +446,38 @@
           "url": "https://news.ycombinator.com/item?id=49038433"
         }
       ],
-      "publishDate": "2026-07-24T17:33:19.649Z"
+      "publishDate": "2026-07-24T17:33:19.649Z",
+      "benchmarks": [
+        {
+          "name": "Artificial Analysis Intelligence Index v4.1",
+          "unit": " pts",
+          "max": 100,
+          "results": [
+            {
+              "name": "Claude Opus 5 (max)",
+              "score": 61,
+              "highlight": true
+            },
+            {
+              "name": "Claude Fable 5 (max)",
+              "score": 60
+            },
+            {
+              "name": "GPT-5.6 Sol (max)",
+              "score": 59
+            },
+            {
+              "name": "Kimi K3",
+              "score": 57
+            },
+            {
+              "name": "Claude Opus 4.8 (max)",
+              "score": 56
+            }
+          ],
+          "source": "https://artificialanalysis.ai/articles/opus-5"
+        }
+      ]
     },
     {
       "id": "fireship-hf-hack-jul23",

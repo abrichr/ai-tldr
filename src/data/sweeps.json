@@ -25270,6 +25270,39 @@
         "repo",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260725t062352z",
+      "timestamp": "2026-07-25T06:23:52.365Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, DeepMind, Meta, Mistral, OpenAI, xAI, Cohere, Qwen, Moonshot, DeepSeek), GitHub trending, HuggingFace models/datasets/papers, HN front page, YouTube RSS scan (8 channels), Simon Willison, Techmeme, and AA leaderboard. All 5 fresh YouTube videos and every top HF trending model already live in feed; Claude Opus 5, Codex Micro, ChatGPT Voice, and OpenAI/HF cyberattack coverage all already in; the open-weight letter and Nvidia-SK $500B are ecosystem/policy items that fail the developer-action gate. Only new data: Opus 5 debuted #1 on Artificial Analysis Intelligence Index v4.1 at 61 pts — added as benchmark bar update to the existing opus-5 entry.",
+      "counts": {
+        "added": 0,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [
+        {
+          "id": "anthropic-claude-opus-5",
+          "title": "Claude Opus 5 — Anthropic's new Opus nears Fable 5 at half the price",
+          "note": "Add Artificial Analysis Intelligence Index v4.1 leaderboard (Opus 5 debuts #1 at 61 pts) plus source link. AA article dated 2026-07-24."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "video",
+        "repo",
+        "paper",
+        "article",
+        "dataset",
+        "ecosystem",
+        "security",
+        "benchmark",
+        "algorithm"
+      ]
     }
   ]
 }
