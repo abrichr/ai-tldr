@@ -25538,6 +25538,33 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260725t205430z",
+      "timestamp": "2026-07-25T20:54:30.220Z",
+      "source": "github-actions-sweep",
+      "summary": "Sweep at 2026-07-25T20:46Z: feed already carries the day's frontier news. Searched Anthropic/OpenAI/DeepMind/Meta/xAI/Mistral/Qwen/Moonshot/DeepSeek lab blogs, GitHub daily+weekly trending, HuggingFace models/datasets/papers, HN front pages, YouTube RSS scan across all 8 creator channels, plus the bio/neuro/pharma lane (BCI, medical imaging, pharma drug discovery, ARC-AGI leaderboard). Every ≤72h release with real signal is already in the feed: Claude Opus 5, Alibaba open-code-review, Grok in Workspace, Grok Build Workflows, DeepSeek legacy API sunset, Claude Code 2.1.219, AISI/CAISI Kimi K3 cyber eval, FLUX 3 + FLUX-3-mimic, ChatGPT Voice desktop, Anthropic Economic Index connector, Nanbeige4.2-3B, Solar Open 2, Poolside Laguna S 2.1, Microsoft Mage-Flow, HF Stack v3, Runway Media Router, Tracer Echo, Cursor Router, OpenAI Presence, Substack Pangram, Kimi K3 Redis zero-days, and both fresh YouTube uploads (Wes Roth on Opus 5, Fireship on the HF hack). Nothing else cleared the 72h + inclusion bar without semantic-duping existing entries.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
