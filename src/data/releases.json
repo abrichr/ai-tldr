@@ -1,8 +1,113 @@
 {
-  "generatedAt": "2026-07-25T15:08:31.183Z",
+  "generatedAt": "2026-07-25T16:59:56.030Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "alibaba-open-code-review",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "Alibaba open-code-review — line-level LLM code review at 1/9 the tokens",
+      "org": "Alibaba",
+      "date": "2026-07-24",
+      "url": "https://github.com/alibaba/open-code-review",
+      "summary": "Alibaba open-sourced open-code-review, a hybrid CLI that pairs deterministic pipelines with an LLM agent to leave line-level review comments on Git diffs. Apache-2.0, works with OpenAI or Anthropic models.",
+      "tags": [
+        "code-review",
+        "coding-agent",
+        "developer-tools",
+        "cli",
+        "open-source",
+        "apache-2-0",
+        "openai-compatible",
+        "anthropic-compatible",
+        "alibaba",
+        "go"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "Hybrid pipeline + LLM code reviewer, battle-tested at Alibaba, now Apache-2.0 with 12.7k GitHub stars.",
+        "whatIsIt": "open-code-review is a command-line code reviewer that reads a Git diff and posts precise, line-anchored comments. Alibaba built it internally and released it under Apache-2.0. The project pairs deterministic rule-based pipelines with an LLM agent, and it plugs into OpenAI-compatible or Anthropic-compatible model providers.",
+        "howItWorks": "Reviews start with the deterministic pipeline, which applies a fine-tuned ruleset for common defects — NPE, thread-safety, XSS, SQL injection — and picks which files or chunks are worth spending tokens on. The LLM agent then does dynamic context retrieval and writes the line-level comments. Version 1.7.16, shipped on 2026-07-24, added an iFlytek Spark provider and GraphQL file support.",
+        "whyItMatters": "Teams that already run Claude Code or Copilot review can replace them without changing model providers, since open-code-review speaks OpenAI and Anthropic APIs. The maintainers benchmark it on 200 real pull requests from 50 open-source repos and report higher precision and F1 than Claude Code at about 1/9 the token cost — the kind of gap that shows up on a monthly invoice.",
+        "forWho": "platform teams and open-source maintainers",
+        "tryIt": "npm install -g @alibaba-group/open-code-review"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Alibaba"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        },
+        {
+          "label": "Latest version",
+          "value": "v1.7.16 (2026-07-24)"
+        },
+        {
+          "label": "Language",
+          "value": "Go"
+        },
+        {
+          "label": "Providers",
+          "value": "OpenAI + Anthropic compatible"
+        },
+        {
+          "label": "Install",
+          "value": "npm install -g @alibaba-group/open-code-review"
+        },
+        {
+          "label": "GitHub stars",
+          "value": "12.7k"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much does open-code-review cost?",
+          "a": "open-code-review itself is free and Apache-2.0 licensed. The only cost is the LLM tokens you spend on your own OpenAI or Anthropic key when a review runs. The maintainers report the tool uses about one-ninth the tokens of Claude Code on the same 200-pull-request benchmark."
+        },
+        {
+          "q": "Which models can I plug into open-code-review?",
+          "a": "open-code-review talks to any OpenAI-compatible or Anthropic-compatible endpoint. The v1.7.16 release added iFlytek Spark as a built-in provider, and earlier 1.7 releases added LiteLLM and Eden AI gateways, so you can route to most hosted or self-hosted models without patching the tool."
+        },
+        {
+          "q": "How is open-code-review different from Claude Code review?",
+          "a": "Claude Code is a general coding agent; open-code-review is a specialist. It fires a deterministic ruleset for NPE, thread-safety, XSS, and SQL injection first, then only spends LLM tokens where the pipeline flagged risk. On a 200 PR benchmark from 50 open-source repos, Alibaba reports higher precision and F1 than Claude Code at roughly 1/9 the token cost."
+        },
+        {
+          "q": "Can I run open-code-review on Windows?",
+          "a": "Yes. Version 1.7.13 added a PowerShell installer for Windows, alongside the existing Linux and macOS install paths. Recent 1.7 releases also shipped Bitbucket Pipelines and Gerrit CI examples, so the tool now runs in most common CI setups."
+        }
+      ],
+      "image": {
+        "url": "https://repository-images.githubusercontent.com/1241960226/27bf01cb-17df-44d5-9b7b-bcf17c970c6d",
+        "alt": "GitHub social card for alibaba/open-code-review, an open-source AI code review CLI",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "GitHub repo",
+          "url": "https://github.com/alibaba/open-code-review"
+        },
+        {
+          "label": "Homepage",
+          "url": "https://open-codereview.ai"
+        },
+        {
+          "label": "v1.7.16 release",
+          "url": "https://github.com/alibaba/open-code-review/releases/tag/v1.7.16"
+        },
+        {
+          "label": "All releases",
+          "url": "https://github.com/alibaba/open-code-review/releases"
+        }
+      ],
+      "publishDate": "2026-07-25T16:59:56.030Z"
+    },
     {
       "id": "berabuddies-kimi-k3-redis-zero-days",
       "categories": [

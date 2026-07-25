@@ -25475,6 +25475,37 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260725t165956z",
+      "timestamp": "2026-07-25T16:59:56.030Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic/OpenAI/DeepMind/Meta/xAI/Mistral/Cohere/Qwen/Moonshot/DeepSeek/Z.ai/MiniMax), GitHub trending, HuggingFace models/datasets/papers, HN top 30 and Show HN, 8 YouTube creator RSS feeds, and the biomedical/neuro/pharma science lane. Only one fresh qualifier: Alibaba open-code-review (v1.7.16 on 2026-07-24). All other candidates (Claude Opus 5, OpenAI Presence, Qwen-Image-3.0, Nanbeige4.2-3B, Mage-Flow, Laguna-S-2.1, block/buzz, Kronos, all 4 fresh YouTube videos) already in the feed. Anthropic Economic Futures Fund and OpenAI ChatGPT-for-Small-Business dropped as funding/program announcements failing the ecosystem gate. Bio/neuro lane returned zero qualifying releases in the 72h window.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "alibaba-open-code-review",
+          "title": "Alibaba open-code-review — line-level LLM code review at 1/9 the tokens",
+          "category": "tool",
+          "note": "Trending on github.com/trending today with 12.7k stars and v1.7.16 released 2026-07-24 15:57 UTC — a fresh, dated version of a real Apache-2.0 tool with a specific 1/9-tokens-vs-Claude-Code benchmark claim from its README. Category tool+repo (not just repo — this is a shipped CLI with an npm package and homepage)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
