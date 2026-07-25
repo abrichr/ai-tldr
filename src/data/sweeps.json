@@ -25240,6 +25240,36 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260725t021547z",
+      "timestamp": "2026-07-25T02:15:47.127Z",
+      "source": "github-actions-sweep",
+      "summary": "One addition: a fresh Wes Roth reaction video covering Claude Opus 5 and Genspark's SecondBrain, both launched this week. Lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral) had nothing new inside the 72h window that wasn't already in the feed. Chinese labs (DeepSeek, Qwen, Moonshot, Zhipu) quiet or reachable-blocked. HF trending models within 72h (Inkling, Laguna-S-2.1, Unlimited-OCR, Solar-Open2, Nanbeige4.2-3B, Mage-Flow) all already in feed; Motif-3-Beta preview did not clear the bar. GitHub trending mostly ongoing repos (Kronos, ego-lite, worldmonitor, OmniRoute) with no in-window release event, or awesome-list-shaped (skips per SWEEP_MEMORY). HN top ~30 mostly covered by existing feed items (Opus 5, HF-OpenAI cyberattack). Bio/pharma/neuro lane: no artifact released within 72h with the 2-of-N signals. Ecosystem candidates (Anthropic $200M Economic Futures Research Fund, DeepMind $40M Genesis Mission commitment) failed the developer-action gate.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "wes-roth-opus-5-genspark-jul24",
+          "title": "Wes Roth: 'Opus 5 and Genspark SecondBrain JUST went live...'",
+          "category": "video",
+          "note": "Fresh (2h old at sweep time) video from an approved creator channel; ties Opus 5 (already in feed) to Genspark AI Workspace 6.0 / SecondBrain, both shipped this week. Video items are exempt from semantic-dedup against the release they cover per the video-item exception."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "video",
+        "model",
+        "tool",
+        "article",
+        "paper",
+        "repo",
+        "ecosystem"
+      ]
     }
   ]
 }

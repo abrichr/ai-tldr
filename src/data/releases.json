@@ -1,8 +1,67 @@
 {
-  "generatedAt": "2026-07-24T23:06:34.370Z",
+  "generatedAt": "2026-07-25T02:15:47.127Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "wes-roth-opus-5-genspark-jul24",
+      "categories": [
+        "video"
+      ],
+      "title": "Wes Roth: 'Opus 5 and Genspark SecondBrain JUST went live...'",
+      "org": "Wes Roth",
+      "date": "2026-07-24",
+      "url": "https://www.youtube.com/watch?v=rPFnjDTlYuY",
+      "summary": "Wes Roth reacts to two July releases: Anthropic's Claude Opus 5, which tops the Artificial Analysis leaderboard, and Genspark AI Workspace 6.0 with its SecondBrain persistent-memory system and $199 SecondBrain Note capture device.",
+      "tags": [
+        "wes-roth",
+        "youtube",
+        "video",
+        "anthropic",
+        "claude-opus-5",
+        "genspark",
+        "secondbrain",
+        "agent-memory",
+        "reaction"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Wes Roth walks through Anthropic's Opus 5 launch and Genspark's SecondBrain persistent-memory workspace side by side.",
+        "whatIsIt": "Wes Roth's July 24, 2026 video 'Opus 5 and Genspark SecondBrain JUST went live...' pairs two same-week releases: Anthropic's Claude Opus 5, priced at $5/$25 per million input/output tokens, and Genspark AI Workspace 6.0 with SecondBrain, a persistent cloud memory layer plus a $199 hardware capture device.",
+        "howItWorks": "The video breaks down Opus 5's headline numbers — state-of-the-art scores on frontier coding benchmarks, top of the ARC-AGI 3 leaderboard, matched-cost pricing with Opus 4.8 — then pivots to Genspark's argument that the next AI breakthrough is context, not raw model scale, showing SecondBrain pulling shared memory across email, meeting notes, documents, and CRMs.",
+        "whyItMatters": "Wes Roth is one of the largest AI reaction channels, so his side-by-side framing is where a big slice of the mainstream audience will first meet both releases. The pairing also captures the week's split bet in AI: Anthropic pushing frontier intelligence, Genspark investing in durable memory for today's models.",
+        "forWho": "Casual AI watchers who want a plain-English recap of the Opus 5 launch and what SecondBrain adds to Genspark.",
+        "tryIt": "Watch on YouTube: https://www.youtube.com/watch?v=rPFnjDTlYuY"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/rPFnjDTlYuY/hqdefault.jpg",
+        "alt": "Wes Roth video thumbnail for 'Opus 5 and Genspark SecondBrain JUST went live...'",
+        "fit": "cover"
+      },
+      "author": {
+        "name": "Wes Roth",
+        "profileUrl": "https://www.youtube.com/channel/UCqcbQf6yw5KzRoDDcZ_wBSw"
+      },
+      "links": [
+        {
+          "label": "Watch",
+          "url": "https://www.youtube.com/watch?v=rPFnjDTlYuY"
+        },
+        {
+          "label": "Opus 5 announcement",
+          "url": "https://www.anthropic.com/news/claude-opus-5"
+        },
+        {
+          "label": "Genspark Workspace 6.0",
+          "url": "https://finance.yahoo.com/technology/ai/articles/genspark-unveils-ai-workspace-6-150700549.html"
+        },
+        {
+          "label": "Wes Roth on YouTube",
+          "url": "https://www.youtube.com/channel/UCqcbQf6yw5KzRoDDcZ_wBSw"
+        }
+      ],
+      "publishDate": "2026-07-25T02:15:47.127Z"
+    },
     {
       "id": "deepseek-legacy-api-sunset",
       "categories": [
