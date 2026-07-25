@@ -25506,6 +25506,38 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260725t190857z",
+      "timestamp": "2026-07-25T19:08:57.195Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Apertus 1.5, the Swiss AI Initiative's fully open 8B and 70B multimodal release (July 24). Searched Anthropic/OpenAI/DeepMind/Meta/xAI/Mistral/Cohere/Moonshot/Qwen/DeepSeek blogs, GitHub trending, HF models/papers/datasets, HN, r/LocalLLaMA, Cursor/Claude Code changelogs, YouTube (2 fresh videos, both already ingested), Simon Willison, StatNews, and pharma/BCI channels; everything else in the last 72h was already in the feed or below the bar.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "swiss-ai-apertus-1-5",
+          "title": "Apertus 1.5 — Switzerland's fully open 8B/70B goes multimodal",
+          "category": "model",
+          "note": "Fully open Apache-2.0 8B/70B release from ETH Zurich, EPFL, and CSCS on 2026-07-24, adding native image+audio input, thinking mode, and a 262K context. Covered by ETH Zurich, EPFL, CSCS, apertus-ai.org, and Mirage News; both HF models trending. Not seismic (mid-sized open weights, not SOTA), but a solid major open-weight release with real applied uptake (MeditronFO medical LLM, Ticino gov translation)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }

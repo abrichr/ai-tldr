@@ -1,8 +1,132 @@
 {
-  "generatedAt": "2026-07-25T16:59:56.030Z",
+  "generatedAt": "2026-07-25T19:08:57.195Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "swiss-ai-apertus-1-5",
+      "categories": [
+        "model",
+        "repo"
+      ],
+      "title": "Apertus 1.5 — Switzerland's fully open 8B/70B goes multimodal",
+      "org": "Swiss AI Initiative",
+      "date": "2026-07-24",
+      "url": "https://apertus-ai.org/articles/2026-07-apertus-1-5/",
+      "summary": "Swiss AI Initiative (ETH Zurich, EPFL, CSCS) released Apertus 1.5 in 8B and 70B sizes. Continued pretraining adds native image and audio input, an optional thinking mode, and a 262K-token context. Apache-2.0, weights and training data open.",
+      "importance": "major",
+      "tags": [
+        "open-weights",
+        "multimodal",
+        "vision-language",
+        "swiss-ai",
+        "apertus",
+        "eth-zurich",
+        "epfl",
+        "cscs",
+        "sovereign-ai",
+        "apache-2-0",
+        "european-ai"
+      ],
+      "metrics": {
+        "8B pretrain tokens": "+4T",
+        "70B pretrain tokens": "+2T",
+        "Context": "262K tokens"
+      },
+      "quickFacts": [
+        {
+          "label": "Makers",
+          "value": "ETH Zurich, EPFL, CSCS (Swiss AI Initiative)"
+        },
+        {
+          "label": "Model sizes",
+          "value": "Apertus-v1.5-8B, Apertus-v1.5-70B"
+        },
+        {
+          "label": "License",
+          "value": "Apache 2.0 (research and commercial)"
+        },
+        {
+          "label": "Modalities in",
+          "value": "Image, audio, text"
+        },
+        {
+          "label": "Context window",
+          "value": "262,144 tokens (4× Apertus 1.0)"
+        },
+        {
+          "label": "Training compute",
+          "value": "Alps supercomputer, CSCS Lugano"
+        },
+        {
+          "label": "What's new",
+          "value": "Multimodal input, thinking mode, better tool use"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Where can I download Apertus 1.5?",
+          "a": "Apertus 1.5 is on Hugging Face under the swiss-ai organization: swiss-ai/Apertus-v1.5-8B (9B parameters) and swiss-ai/Apertus-v1.5-70B (72B parameters). Both sit inside the swiss-ai/apertus-v15 collection with weights, tokenizer, and configs."
+        },
+        {
+          "q": "Is Apertus 1.5 really fully open?",
+          "a": "Yes. Apertus 1.5 ships under Apache 2.0 with open weights, open training data references, and public training details, so researchers and companies can inspect, fine-tune, or deploy it commercially without a separate license request from ETH Zurich or EPFL."
+        },
+        {
+          "q": "How is Apertus 1.5 different from Apertus 1.0?",
+          "a": "Apertus 1.5 is a continued pretraining of the 1.0 checkpoints. The 8B saw 4 trillion more tokens and the 70B saw 2 trillion more. It adds native image and audio input, an optional thinking mode for harder reasoning, and quadruples the context window to 262K tokens."
+        },
+        {
+          "q": "Can Swiss researchers run Apertus 1.5 without their own GPUs?",
+          "a": "Yes. CSCS launched an inference endpoint for the Swiss academic community, hosted on the same Alps supercomputer in Lugano that trained the model. Everyone else can pull the weights from Hugging Face or wait for the third-party inference providers the team is onboarding."
+        },
+        {
+          "q": "What is Apertus Mini?",
+          "a": "Apertus Mini is a companion suite of 16 compact models released alongside Apertus 1.5. The Swiss AI Initiative built them through distillation and quantization so smaller devices and edge deployments can run Apertus-family models without a data-centre GPU."
+        }
+      ],
+      "explainer": {
+        "tagline": "Switzerland's fully open Apertus grows eyes and ears, keeps its Apache-2.0 promise.",
+        "whatIsIt": "Apertus 1.5 is the new release of Switzerland's fully open large language model, built by ETH Zurich, EPFL, and the Swiss National Supercomputing Centre (CSCS). It ships in 8B and 70B sizes and, for the first time in the family, takes images and audio as input alongside text. Weights, training data, and training details are all public under Apache 2.0.",
+        "howItWorks": "The team took the Apertus 1.0 checkpoints and kept training them on the Alps supercomputer in Lugano. The 8B model saw 4 trillion additional text and multimodal tokens; the 70B saw 2 trillion. Post-training added an optional thinking mode for harder reasoning, better instruction following, better tool use, and a 262,144-token context window, four times the size of Apertus 1.0.",
+        "whyItMatters": "Apertus 1.5 gives Europe a sovereign, fully open multimodal option at a size teams can actually self-host. Because everything is public — data, weights, training code — regulators, hospitals, and public agencies can audit the whole stack. EPFL is already using it to build MeditronFO, an open medical LLM framework, and the Ticino cantonal government uses Apertus for in-house document translation.",
+        "forWho": "European labs, public-sector teams, and researchers who need an auditable open-weight multimodal model.",
+        "tryIt": "huggingface.co/swiss-ai/Apertus-v1.5-8B"
+      },
+      "image": {
+        "url": "https://actu.epfl.ch/image/165800/1440x810.jpg",
+        "alt": "Apertus 1.5 announcement banner from EPFL, showing the Swiss AI Initiative branding.",
+        "fit": "cover",
+        "credit": "EPFL"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://apertus-ai.org/articles/2026-07-apertus-1-5/"
+        },
+        {
+          "label": "ETH Zurich Post",
+          "url": "https://ai.ethz.ch/news-and-events/ai-center-news/2026/07/apertus-15-building-the-next-generation-of-open-ai-infrastructure.html"
+        },
+        {
+          "label": "EPFL Post",
+          "url": "https://actu.epfl.ch/news/apertus-15-building-the-next-generation-of-open--2/"
+        },
+        {
+          "label": "CSCS Post",
+          "url": "https://www.cscs.ch/science/computer-science-hpc/2026/apertus-15-building-the-next-generation-of-open-ai-infrastructure"
+        },
+        {
+          "label": "Apertus 8B on HF",
+          "url": "https://huggingface.co/swiss-ai/Apertus-v1.5-8B"
+        },
+        {
+          "label": "Apertus 70B on HF",
+          "url": "https://huggingface.co/swiss-ai/Apertus-v1.5-70B"
+        }
+      ],
+      "publishDate": "2026-07-25T19:08:57.195Z"
+    },
     {
       "id": "alibaba-open-code-review",
       "categories": [
