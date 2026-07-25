@@ -25565,6 +25565,34 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260725t225951z",
+      "timestamp": "2026-07-25T22:59:51.324Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Scanned Anthropic, OpenAI, Google DeepMind, Meta, xAI, Mistral, Cohere, Moonshot, DeepSeek, Qwen, Z.ai plus GitHub trending, HF trending models/papers, HN front page (July 24-25), 8 YouTube creators via yt-rss-scan, tier-1 press (TechCrunch AI), coding-agent vendors (Cursor/Codex/Windsurf/Aider/Cline), Simon Willison, Interconnects, and the AI-for-science lane (Neuralink, Insilico, Recursion, Nature Medicine AI, npj Digital Medicine, STAT News, Hemispheric). The last 48h were consumed by items already ingested — Anthropic Opus 5 (Jul 24), ChatGPT Voice on desktop (Jul 23), DeepSeek legacy API sunset (Jul 24), Wes Roth and Fireship videos (Jul 23-24), Genspark SecondBrain (Jul 21, out of 72h window). Every other candidate fell outside the 72h date cap (Gemini 3.6 Flash trio Jul 21, Thinking Machines Inkling Jul 15, Poolside Laguna S 2.1 Jul 21, Ruff v0.16.0 Jul 23 is non-AI, OpenAI Codex Micro Jul 15, Nvidia Nemotron-TwoTower Jul 1, Kimi K2.7 in Copilot Jul 1-7, Cloudflare AI traffic options Jul 1) or was an ecosystem/funding item excluded by the rules (Prentis $100M round, Cognition acquires Poke, Midjourney acquires Co-Star). No fresh qualifying release ≤72h; empty is the correct outcome.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "tutorial",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }
