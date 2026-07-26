@@ -1,8 +1,116 @@
 {
-  "generatedAt": "2026-07-26T19:17:55.589Z",
+  "generatedAt": "2026-07-26T21:03:37.901Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "nvidia-modelexpress",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "NVIDIA ModelExpress — Rust sidecar makes vLLM cold-loads 48× faster",
+      "org": "NVIDIA",
+      "date": "2026-07-24",
+      "url": "https://developer.nvidia.com/blog/modelexpress-distributing-model-artifacts-at-the-speed-of-light/",
+      "summary": "NVIDIA open-sources ModelExpress, an Apache-2.0 Rust component that P2P-transfers model weights next to vLLM, SGLang, TensorRT-LLM, and Dynamo. It reports a 48× cold-load speedup on DeepSeek V4 Pro.",
+      "tags": [
+        "nvidia",
+        "modelexpress",
+        "inference",
+        "model-loading",
+        "vllm",
+        "sglang",
+        "tensorrt-llm",
+        "dynamo",
+        "rust",
+        "open-source",
+        "apache-2-0",
+        "gpudirect-storage",
+        "kubernetes"
+      ],
+      "importance": "major",
+      "metrics": {
+        "License": "Apache-2.0",
+        "Cold-pull speedup (DeepSeek V4 Pro)": "48×"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "NVIDIA (ai-dynamo)"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        },
+        {
+          "label": "Language",
+          "value": "Rust (Python client)"
+        },
+        {
+          "label": "Reported speedup",
+          "value": "48× vs cold Hugging Face pull on DeepSeek V4 Pro"
+        },
+        {
+          "label": "Integrations",
+          "value": "vLLM 0.23+, SGLang, TensorRT-LLM (beta), NVIDIA Dynamo"
+        },
+        {
+          "label": "Deployment",
+          "value": "Kubernetes / Helm sidecar"
+        },
+        {
+          "label": "Repo",
+          "value": "github.com/ai-dynamo/modelexpress"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much faster is ModelExpress than cold-loading from Hugging Face?",
+          "a": "NVIDIA reports ModelExpress delivers up to a 48× speedup versus a cold Hugging Face pull for DeepSeek V4 Pro when it can use GPU-to-GPU P2P transfer. The exact gain depends on which loading path — P2P RDMA, GPUDirect Storage, host-staged POSIX I/O, or a fresh HF download — the loader picks based on what is already cached across the fleet."
+        },
+        {
+          "q": "Which inference servers can use ModelExpress today?",
+          "a": "ModelExpress ships native integrations with vLLM 0.23+ via `--load-format modelexpress`, SGLang as a `remote_instance` backend, TensorRT-LLM in beta, and NVIDIA Dynamo's vLLM and SGLang runtimes with P2P weight and JIT kernel-cache transfer. Other servers can still call it as a sidecar since ModelExpress runs alongside the inference process."
+        },
+        {
+          "q": "What license is ModelExpress and where does the code live?",
+          "a": "ModelExpress is Apache-2.0 licensed and hosted at github.com/ai-dynamo/modelexpress. The core is written in Rust with a Python client that inference frameworks link against, and the repo ships Helm charts for the Kubernetes sidecar deployment path NVIDIA recommends."
+        },
+        {
+          "q": "How does ModelExpress fit into a Kubernetes serving cluster?",
+          "a": "ModelExpress runs as a sidecar next to each inference pod, so replicas pull checkpoints and JIT kernel caches from each other over P2P RDMA or GPUDirect Storage instead of hitting Hugging Face on every scale-out. Helm charts in the ai-dynamo/modelexpress repo cover the shared-cache deployment pattern."
+        }
+      ],
+      "explainer": {
+        "tagline": "NVIDIA's open-source Rust sidecar loads model weights into GPUs up to 48× faster than a cold Hugging Face pull.",
+        "whatIsIt": "ModelExpress is an Apache-2.0 Rust component NVIDIA open-sourced on July 24, 2026 that sits next to an inference server and speeds up model loading. It caches weight artifacts, routes them across GPUs, and hands them to vLLM, SGLang, TensorRT-LLM, or NVIDIA Dynamo without changing the serving stack.",
+        "howItWorks": "Given a request to load a model, ModelExpress picks the fastest path available — GPU-to-GPU P2P over RDMA, GPUDirect Storage off a local NVMe cache, a host-staged POSIX read, or a fresh Hugging Face download — then streams the checkpoint into GPU memory. A Helm-deployed agent shares a fleet-wide cache so JIT kernel builds and weight artifacts survive scale-outs.",
+        "whyItMatters": "Cold-loading a large model from Hugging Face bottlenecks every autoscale and blue/green rollout. ModelExpress cuts that startup from minutes to seconds — NVIDIA reports 48× vs cold HF pull on DeepSeek V4 Pro — which shrinks the tail latency SREs plan around and lowers the cost of running fleets of vLLM or SGLang replicas.",
+        "forWho": "SREs and platform teams running large-model inference at scale",
+        "tryIt": "pip install vllm>=0.23.0 && vllm serve --load-format modelexpress <model>"
+      },
+      "image": {
+        "url": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/07/image5-11.webp",
+        "alt": "Diagram of ModelExpress routing model weights between GPUs, host cache, and Hugging Face",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://developer.nvidia.com/blog/modelexpress-distributing-model-artifacts-at-the-speed-of-light/"
+        },
+        {
+          "label": "Repository",
+          "url": "https://github.com/ai-dynamo/modelexpress"
+        },
+        {
+          "label": "NVIDIA Dynamo",
+          "url": "https://github.com/ai-dynamo/dynamo"
+        }
+      ],
+      "publishDate": "2026-07-26T21:03:37.901Z"
+    },
     {
       "id": "meta-ai-agentic-muse-spark-jul24",
       "categories": [

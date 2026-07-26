@@ -25810,6 +25810,37 @@
         "algorithm",
         "benchmark"
       ]
+    },
+    {
+      "id": "sweep-20260726t210337z",
+      "timestamp": "2026-07-26T21:03:37.901Z",
+      "source": "github-actions-sweep",
+      "summary": "Added NVIDIA ModelExpress, a new open-source Rust weight-loader NVIDIA announced 2026-07-24 with vLLM/SGLang/TensorRT-LLM/Dynamo integrations. Lab blogs, GitHub/HF trending, HN, YouTube RSS, science-lane sources, and tier-1 press otherwise turned up items already in the feed (Opus 5, DeepSeek V4 GA, OpenAI voice desktop, Wes Roth Opus 5 video) or shipped before the 72h cap (Google Gemini 3.6 Flash + Cyber, Meta Genesis SAM 3/DINOv3, Ruff 0.16.0, all 2026-07-21 to 07-23).",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "nvidia-modelexpress",
+          "title": "NVIDIA ModelExpress — Rust sidecar makes vLLM cold-loads 48× faster",
+          "category": "tool",
+          "note": "NVIDIA Technical Blog announcement (2026-07-24, 68h old) + Apache-2.0 Rust repo at ai-dynamo/modelexpress with native vLLM/SGLang/TensorRT-LLM/Dynamo integrations and a reported 48× cold-load speedup on DeepSeek V4 Pro. Clears the top-lab-blog signal on the inclusion bar; would tweet today as 'this just shipped'."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "ecosystem"
+      ]
     }
   ]
 }
