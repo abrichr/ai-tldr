@@ -25685,6 +25685,31 @@
         "tutorial",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260726t131637z",
+      "timestamp": "2026-07-26T13:16:37.047Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep — nothing cleared the bar in the 72h window ending 2026-07-26T13:09Z. Lab blogs (Anthropic Opus 5, DeepMind Gemini 3.6 Flash + 3.5 Flash Cyber, Meta Muse Spark 1.1, Mistral Robostral Navigate) all either already in the feed or older than 72h. GitHub-trending Kronos, alibaba/open-code-review, aisuite, claude-cookbooks already in the feed; slvDev/esp32-ai looked strong (227 HN pts, 1138 stars, Gemma per-layer-embeddings trick) but its repo was created 2026-07-23T14:53Z which finalize-sweep reads as 85h old past midnight (>72h cap). HF models Inkling, Solar-Open2, Nanbeige, Baidu-OCR, Mage-Flow, Laguna-S, Motif-3-Beta all already in the feed; Inflect-Micro-v2 dropped (repo first appeared 2026-06-25, outside window). HF papers had nothing that cleared the 2-of-N bar (code + traction). HF datasets: Stack v3 already in the feed, others derivative. YouTube RSS returned 2 fresh videos (Wes Roth 'Opus 5 + Genspark', Fireship 'HF hack') — both already in the feed. Bio/neuro/pharma active searches (BCI, medical imaging FDA, drug discovery) returned trend articles, no ≤72h qualifying artifact. HN front page had the Debian LLM GR (still under discussion, no enacted change → ecosystem rule refuses) and a leaked DeepSeek investor transcript (funding/insider commentary, no released artifact → skip).",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "showcase",
+        "paper",
+        "dataset",
+        "video",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
