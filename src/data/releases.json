@@ -1,8 +1,105 @@
 {
-  "generatedAt": "2026-07-26T17:07:09.282Z",
+  "generatedAt": "2026-07-26T19:17:55.589Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "meta-ai-agentic-muse-spark-jul24",
+      "categories": [
+        "tool"
+      ],
+      "title": "Meta AI can now act — Muse Spark 1.1 plans, uses your calendar, finishes tasks",
+      "org": "Meta",
+      "date": "2026-07-24",
+      "url": "https://about.fb.com/news/2026/07/meta-ai-muse-spark-doesnt-just-think-it-acts/",
+      "summary": "Meta AI's consumer app becomes agentic today. Powered by Muse Spark 1.1, it makes plans, connects to email and calendar, builds slide decks, runs web research, and follows through on multi-step tasks without extra prompting.",
+      "tags": [
+        "meta",
+        "meta-ai",
+        "muse-spark-1-1",
+        "agentic-ai",
+        "assistant",
+        "personal-assistant",
+        "tool-use",
+        "calendar-integration",
+        "email-integration",
+        "whatsapp",
+        "tool"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Meta (Meta Superintelligence Labs)"
+        },
+        {
+          "label": "Powered by",
+          "value": "Muse Spark 1.1"
+        },
+        {
+          "label": "Context window",
+          "value": "1M tokens"
+        },
+        {
+          "label": "Where",
+          "value": "Meta AI app and meta.ai in select markets today; WhatsApp in the coming weeks"
+        },
+        {
+          "label": "New capabilities",
+          "value": "Planning, calendar and email integration, slide generation, web research, daily briefings"
+        },
+        {
+          "label": "Price",
+          "value": "Free inside the Meta AI app"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What can Meta AI's agentic mode do that the old version couldn't?",
+          "a": "Meta AI's agentic mode plans a multi-step task and finishes it without extra prompts. It can pull data from your calendar and email, write a slide deck, run a web research pass, or set up recurring jobs like meal planning and daily briefings — all inside the same chat."
+        },
+        {
+          "q": "Where is Meta AI's agentic mode available?",
+          "a": "Meta AI's agentic mode starts rolling out July 24, 2026 in the Meta AI app and on meta.ai in select markets. Meta says WhatsApp support and more countries will follow in the coming weeks. Meta has not published a full country list."
+        },
+        {
+          "q": "Which model powers Meta AI's agentic mode?",
+          "a": "The agentic mode runs on Muse Spark 1.1, the multimodal reasoning model Meta Superintelligence Labs released on July 9, 2026. Muse Spark 1.1 has a 1M-token context window and is trained to orchestrate parallel subagents rather than working step by step."
+        },
+        {
+          "q": "How is this different from ChatGPT or Google Gemini?",
+          "a": "Meta AI's agentic mode is built into Facebook's consumer AI app and (soon) WhatsApp, so tasks like calendar edits and email replies happen inside a chat surface most Meta users already have. ChatGPT and Google Gemini offer similar agentic features, but through separate apps."
+        }
+      ],
+      "explainer": {
+        "tagline": "Meta AI stops answering and starts doing — plans, tools, and follow-through, live in the app you already use.",
+        "whatIsIt": "Meta AI's agentic mode turns Meta's consumer assistant into an active helper. It can now plan a task, work across your apps, and follow through end-to-end. Meta says the mode powers slide decks, mood boards, daily briefings pulled from your calendar, and recurring jobs like meal planning.",
+        "howItWorks": "Under the hood, Muse Spark 1.1 acts as a lead agent. It reads your request, drafts a plan, then delegates the small steps to parallel subagents that call tools, browse the web, or write and revise text. A 1M-token context window lets the assistant remember earlier work, and users can course-correct in real time as tasks run.",
+        "whyItMatters": "Consumer AI has been mostly Q&A. Meta AI's agentic mode is a bet that people want the assistant to do the boring parts — reply to that email, check flight prices, produce the deck. Because Meta AI is baked into apps used by billions, this rollout puts agentic AI in more hands overnight than any standalone product.",
+        "forWho": "people who already use Meta AI or plan to try it on WhatsApp",
+        "tryIt": "Open the Meta AI app or visit meta.ai"
+      },
+      "image": {
+        "url": "https://about.fb.com/wp-content/uploads/2026/07/Meta-AI-Doesnt-Just-Think_It-Acts_Social-Share.jpg?w=1200",
+        "alt": "Meta AI banner promoting the new agentic capabilities in the Meta AI app",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://about.fb.com/news/2026/07/meta-ai-muse-spark-doesnt-just-think-it-acts/"
+        },
+        {
+          "label": "Muse Spark 1.1 model",
+          "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/"
+        },
+        {
+          "label": "Evaluation report",
+          "url": "https://ai.meta.com/static-resource/muse-spark-1-1-evaluation-report"
+        }
+      ],
+      "publishDate": "2026-07-26T19:17:55.589Z"
+    },
     {
       "id": "slvdev-esp32-ai",
       "categories": [

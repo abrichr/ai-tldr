@@ -25777,6 +25777,39 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260726t191755z",
+      "timestamp": "2026-07-26T19:17:55.589Z",
+      "source": "github-actions-sweep",
+      "summary": "Scanned lab blogs (Anthropic, OpenAI, Google, Meta, xAI, Mistral, Cohere, Moonshot, DeepSeek, Qwen, z.ai), GitHub trending, HuggingFace models/datasets/papers, HN top 30 + AI Algolia, Simon Willison, TechCrunch, YouTube RSS (8 channels), Meta and Sakana blogs. Meta AI going agentic (Muse Spark 1.1) is the one fresh ≤72h launch that cleared the bar. Everything else was already in the feed (Opus 5, Kimi K3, DeepSeek retire, FLUX 3, Grok Workspace/Workflows, Muse Spark 1.1 model API), out of window (Sakana Fugu-Cyber Jul 21, OpenAI Micro keypad Jul ~17, Cloudflare content-independence Jul 1), or non-qualifying (open-weights industry letter is policy speculation without enacted change; Cognition–Poke acquisition is M&A with no product change; Ruff v0.16.0 is not an AI release).",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "meta-ai-agentic-muse-spark-jul24",
+          "title": "Meta AI can now act — Muse Spark 1.1 plans, uses your calendar, finishes tasks",
+          "category": "tool",
+          "note": "Meta AI consumer app goes agentic on July 24, 2026 (about.fb.com). Distinct from existing meta-muse-spark-1-1 item (July 9 model + paid API launch for developers); this rollout adds planning + tool use + calendar/email integration to Facebook's consumer AI app. Meets inclusion bar via top-lab-blog signal on official domain."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "paper",
+        "dataset",
+        "video",
+        "article",
+        "ecosystem",
+        "algorithm",
+        "benchmark"
+      ]
     }
   ]
 }
