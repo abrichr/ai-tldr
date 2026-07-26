@@ -25628,6 +25628,32 @@
         "security",
         "showcase"
       ]
+    },
+    {
+      "id": "sweep-20260726t100336z",
+      "timestamp": "2026-07-26T10:03:36.583Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic/OpenAI/DeepMind/Meta/Mistral/Moonshot/DeepSeek/Qwen/Z.ai), GitHub trending, HuggingFace models/datasets/papers, HN top 30, r/LocalLLaMA, 8 YouTube creator feeds, TechCrunch AI, Simon Willison, and the AI-for-science lane (nature.com, medical imaging FDA, brain-computer interface, pharma AI). Anthropic Opus 5, Apertus 1.5, DeepSeek legacy sunset, Grok Workspace/Build Workflows, Alibaba open-code-review, Claude Code 2.1.219, AMD Helios, FLUX 3, Two YouTube videos, and the Kimi K3 zero-day work already landed in prior sweeps. Gemini 3.5 Flash Cyber (Jul 21), Qwen3.8-Max-Preview (Jul 19), Codex Micro keypad (Jul 15), AIRS SwiftMR FDA clearance (Jul 21), BrainCo brain-to-robot (Jul 17), and OpenDDE (Jul 7) all fall outside the 72h date cap. Inflect-Micro-v2 (131 HN pts) and DeepSeek fundraise pause (149 HN pts) sat under the 150-pt HN bar. Kimi K3 open weights are scheduled for 00:00 UTC Jul 27 — not yet shipped. No ≤72h release cleared the bar.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
