@@ -25593,6 +25593,41 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260726t065238z",
+      "timestamp": "2026-07-26T06:52:38.290Z",
+      "source": "github-actions-sweep",
+      "summary": "Cron sweep for 2026-07-26 06:34 UTC. One qualifying item added: Anthropic's July 24 context-engineering playbook for the Claude 5 generation (270+ HN pts, /doctor repurposed for skills/CLAUDE.md audits).",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "anthropic-context-engineering-claude-5-rules",
+          "title": "Anthropic's new context-engineering rules — 80% less system prompt on Claude 5",
+          "category": "article",
+          "note": "Published July 24 on the Anthropic/Claude blog (270+ pts on HN top 30). Not a semantic dupe of `simonw-cat-thariq-claude-code-jul21` (different content — that was a fireside chat on tools/safety; this is a written playbook with new /doctor guidance for Claude 5). Not a dupe of the Opus 5 or Claude Code 2.1.219 items — it is guidance about using them. Meets the 'top-lab blog in last 48h' + 'HN front page top 30 with ≥150 points' criteria; would tweet as this-just-shipped."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "ecosystem",
+        "security",
+        "showcase"
+      ]
     }
   ]
 }
