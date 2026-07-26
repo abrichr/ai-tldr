@@ -1,8 +1,127 @@
 {
-  "generatedAt": "2026-07-26T15:13:53.355Z",
+  "generatedAt": "2026-07-26T17:07:09.282Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "slvdev-esp32-ai",
+      "categories": [
+        "repo",
+        "showcase"
+      ],
+      "title": "esp32-ai — 28.9M-parameter LLM runs entirely on an $8 ESP32-S3",
+      "org": "slvDev",
+      "author": {
+        "name": "slvDev",
+        "handle": "@slvDev",
+        "profileUrl": "https://github.com/slvDev",
+        "avatarUrl": "https://github.com/slvDev.png"
+      },
+      "date": "2026-07-25",
+      "url": "https://github.com/slvDev/esp32-ai",
+      "summary": "esp32-ai squeezes a 28.9M-parameter language model onto an $8 ESP32-S3 microcontroller — ~100 times larger than the best previous on-chip LLM. The model runs fully offline at 9.5 tokens per second and writes short stories to a wired screen.",
+      "tags": [
+        "repo",
+        "showcase",
+        "esp32",
+        "esp32-s3",
+        "microcontroller",
+        "edge-ai",
+        "on-device-ai",
+        "embedded-ai",
+        "tinystories",
+        "per-layer-embeddings",
+        "gemma-3n",
+        "quantization",
+        "iot",
+        "llama2-c"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "slvDev (independent)"
+        },
+        {
+          "label": "License",
+          "value": "MIT"
+        },
+        {
+          "label": "Model size",
+          "value": "28.9M params, 14.9 MB after 4-bit quantization"
+        },
+        {
+          "label": "Hardware",
+          "value": "ESP32-S3 microcontroller (~$8)"
+        },
+        {
+          "label": "On-chip memory",
+          "value": "512 KB SRAM + 8 MB PSRAM + 16 MB flash"
+        },
+        {
+          "label": "Speed",
+          "value": "9.5 tokens/sec end-to-end"
+        },
+        {
+          "label": "Training data",
+          "value": "TinyStories dataset"
+        },
+        {
+          "label": "Key technique",
+          "value": "Per-Layer Embeddings from Google Gemma 3n/4"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What can the esp32-ai model actually do?",
+          "a": "esp32-ai writes short, coherent children's stories in the style of the TinyStories dataset it was trained on. The 28.9M-parameter model produces about 9.5 tokens per second to a small screen wired to the chip. It cannot answer questions, follow instructions, write code, or recall facts — those tasks need a much larger reasoning core than an ESP32-S3 can hold."
+        },
+        {
+          "q": "How does esp32-ai fit a 28.9M model on a chip with only 512 KB of SRAM?",
+          "a": "esp32-ai stores most of the model — a 25M-parameter embedding table — in the chip's 16 MB of flash instead of RAM. The 512 KB SRAM only holds the compute core for each token, and the runtime reads roughly 450 bytes of embeddings from flash per token. The technique comes from Google's Gemma 3n/4 Per-Layer Embeddings idea, now applied to microcontrollers for the first time."
+        },
+        {
+          "q": "How does esp32-ai compare to previous on-device LLMs?",
+          "a": "esp32-ai is roughly 100 times larger than the 260K-parameter models previously demonstrated on ESP32-class chips. Prior work (Karpathy's llama2.c line) topped out well under 1M parameters on this hardware. esp32-ai's per-layer-embedding trick unlocks models that would otherwise need a Raspberry Pi or Jetson to run."
+        },
+        {
+          "q": "Is esp32-ai open source and can I try it?",
+          "a": "esp32-ai ships MIT-licensed at github.com/slvDev/esp32-ai, with training scripts, 4-bit quantization code, and flashing instructions. Anyone with an ESP32-S3 dev board and a screen can reproduce the demo. The repo grew past 1,200 stars in three days after landing on Hacker News on 2026-07-25."
+        }
+      ],
+      "explainer": {
+        "tagline": "A hobbyist ports Gemma's Per-Layer Embeddings trick to a microcontroller and gets a 28.9M-param LLM running on $8 of silicon.",
+        "whatIsIt": "esp32-ai is an open-source project that runs a 28.9M-parameter language model entirely on an ESP32-S3 microcontroller — a chip that costs about $8 and has just 512 KB of SRAM. The model is trained on TinyStories, prints short stories to a wired screen at 9.5 tokens per second, and never touches the network.",
+        "howItWorks": "The core trick is Per-Layer Embeddings, borrowed from Google's Gemma 3n/4 architecture. Most of the model's parameters (25M out of 28.9M) live in a big lookup table that gets read from, not multiplied against — so esp32-ai parks that table in the chip's 16 MB of slow flash memory and only pulls about 450 bytes into SRAM per token. The remaining compute core is 4-bit quantized to fit under 15 MB total, and each token cycle uses PSRAM as scratch space.",
+        "whyItMatters": "esp32-ai is roughly 100× larger than any language model previously demonstrated on an ESP32-class chip — earlier ports of Karpathy's llama2.c topped out around 260K parameters. That unlocks text generation on hardware small enough to sit inside a sensor, a toy, or a battery-powered node with no cloud dependency. The Per-Layer Embeddings recipe also generalizes: any model whose weights are dominated by an embedding table can now be flashed onto a microcontroller.",
+        "forWho": "embedded engineers, IoT tinkerers, edge-AI researchers",
+        "tryIt": "git clone https://github.com/slvDev/esp32-ai"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/b65990a4a711ac2754d3524d8649aba17b0724bfde3349b254a3f1ef88d166f5/slvDev/esp32-ai",
+        "alt": "GitHub OG card for slvDev/esp32-ai showing the ESP32-S3 LLM project",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "GitHub repo",
+          "url": "https://github.com/slvDev/esp32-ai"
+        },
+        {
+          "label": "HN discussion",
+          "url": "https://news.ycombinator.com/item?id=49050512"
+        },
+        {
+          "label": "Author's X post",
+          "url": "https://x.com/slvDev/status/2080322138410524737"
+        },
+        {
+          "label": "Source tree",
+          "url": "https://github.com/slvDev/esp32-ai/tree/main/src"
+        }
+      ],
+      "publishDate": "2026-07-26T17:07:09.282Z"
+    },
     {
       "id": "openrouter-classifiers",
       "categories": [

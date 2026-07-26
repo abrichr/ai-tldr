@@ -25742,6 +25742,41 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260726t170709z",
+      "timestamp": "2026-07-26T17:07:09.282Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, xAI, Mistral, Cohere, DeepSeek, Qwen, Moonshot, Zhipu, MiniMax, BFL, OpenRouter), GitHub trending, HuggingFace models/papers, HN top 30 + best-of-48h, Reddit r/LocalLLaMA, Simon Willison, all 8 YouTube creator channels, TechCrunch AI, AISI, Cursor/Claude Code changelogs, and the biomedical/neuro science lane (Nature, STAT, Recursion/Insilico/AbSci/Schrödinger, hemispheric.ai). Added one item: slvDev's esp32-ai — a 28.9M-param LLM on an $8 ESP32-S3, 1.2K stars in 3 days, HN 257 pts, novel Per-Layer Embeddings port from Gemma. Anthropic Claude Opus 5, xAI Grok Workspace, Anthropic voice-Opus/Sonnet, Cloudflare AI options (Jul 1), Baidu Unlimited-OCR (Jun 22), Inflect-Micro-v2 (created Jun 25) all failed the 72h date cap or were already in the feed. AREX (BAAI, top HF paper) fails the 2-of-N paper bar (no released code). DeepSeek fundraise pause + HF CEO's $100M demand from OpenAI are financial/reaction news that fail the ecosystem 'what does a dev do differently?' test.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "slvdev-esp32-ai",
+          "title": "esp32-ai — 28.9M-parameter LLM runs entirely on an $8 ESP32-S3",
+          "category": "repo",
+          "note": "Novel port of Gemma's Per-Layer Embeddings to an ESP32-S3, ~100× larger than any prior on-chip LLM demo. Repo created 2026-07-23 (verified via gh-repo-meta), publicly viral around 2026-07-25 via HN (257 pts, 22h ago) and the author's X post. MIT-licensed, 1,243 stars at sweep time. All 4 links verified 200. Category `repo` primary; also tagged `showcase` for the demo aspect. `major` (not seismic — not a frontier lab, but a technically impressive standalone ship with real traction)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "algorithm",
+        "paper",
+        "article",
+        "security",
+        "showcase",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }
