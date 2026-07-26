@@ -25710,6 +25710,38 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260726t151353z",
+      "timestamp": "2026-07-26T15:13:53.355Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, xAI), GitHub trending, HuggingFace models/papers/datasets, HN top 30, and 8 YouTube creator feeds. Added one item: OpenRouter Classifiers (beta, 24 July). Anthropic Opus 5, Grok Workspace/Workflows, Gemini 3.6 Flash, Cursor 3.0, Kimi K3 already in feed. AREX (BAAI), esp32-ai, Laguna S 2.1 all dated 21–23 July and rejected by the midnight-based 72h cap.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openrouter-classifiers",
+          "title": "OpenRouter Classifiers — auto-tag every AI generation for cost tracking",
+          "category": "tool",
+          "note": "Genuine new tool from OpenRouter (tier-1 AI infra provider): first-party taxonomy tagging + Activity Explorer aggregation shipping in beta on 24 July, verified against the OpenRouter blog and a third-party writeup."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "algorithm",
+        "dataset",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }

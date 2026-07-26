@@ -1,8 +1,112 @@
 {
-  "generatedAt": "2026-07-26T13:16:37.047Z",
+  "generatedAt": "2026-07-26T15:13:53.355Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openrouter-classifiers",
+      "categories": [
+        "tool"
+      ],
+      "title": "OpenRouter Classifiers — auto-tag every AI generation for cost tracking",
+      "org": "OpenRouter",
+      "date": "2026-07-24",
+      "url": "https://openrouter.ai/blog/announcements/classifiers/",
+      "summary": "OpenRouter Classifiers, launched in beta on 24 July, uses a small model to tag every API generation by taxonomy — department, task type, agent complexity, cost center — for reporting and audit, without adding inference latency.",
+      "tags": [
+        "openrouter",
+        "agent-observability",
+        "cost-tracking",
+        "tagging",
+        "taxonomy",
+        "workspace",
+        "beta",
+        "api",
+        "llm-ops",
+        "compliance"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Preset taxonomies": 6,
+        "Max dimensions per classifier": 8
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenRouter"
+        },
+        {
+          "label": "Availability",
+          "value": "Beta, all OpenRouter workspaces"
+        },
+        {
+          "label": "Preset taxonomies",
+          "value": "6 (Department, Audience, Task Type, Engineering Work, Agent Complexity, Capitalizable Software Expense)"
+        },
+        {
+          "label": "Custom taxonomies",
+          "value": "Yes, up to 8 dimensions each"
+        },
+        {
+          "label": "Recommended classifier model",
+          "value": "Gemini 3.5 Flash-Lite"
+        },
+        {
+          "label": "Latency impact",
+          "value": "None — async"
+        },
+        {
+          "label": "Sampling",
+          "value": "Configurable rate per classifier"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much does OpenRouter Classifiers cost?",
+          "a": "OpenRouter Classifiers itself is free during beta; users pay only for the classifier model tokens (OpenRouter recommends Gemini 3.5 Flash-Lite for the lowest cost). A configurable sampling rate lets teams cap spend by classifying a fraction of generations rather than every one."
+        },
+        {
+          "q": "Does OpenRouter Classifiers add latency to my API calls?",
+          "a": "No. OpenRouter Classifiers runs asynchronously after each generation completes, so classification never blocks the response the user sees. Tags are written to logs and surfaced in Activity Explorer within seconds, not inside the request path."
+        },
+        {
+          "q": "What taxonomies can I use with OpenRouter Classifiers?",
+          "a": "OpenRouter Classifiers ships with six presets — Department, Audience, Task Type, Engineering Work, Agent Complexity, and Capitalizable Software Expense — and lets teams build custom taxonomies with up to eight dimensions each. Presets cover common cost-attribution and compliance dimensions out of the box."
+        },
+        {
+          "q": "Can I classify past OpenRouter generations, not just new ones?",
+          "a": "Yes. OpenRouter Classifiers supports on-demand classification of past generations so you can validate a new taxonomy against historical logs before flipping it on for live traffic. That means teams can test taxonomies retroactively rather than only tagging future calls."
+        }
+      ],
+      "explainer": {
+        "tagline": "OpenRouter runs a small model over every API generation to tag department, task type, and cost center — visibility without latency.",
+        "whatIsIt": "OpenRouter Classifiers, released in beta on 24 July 2026, adds structured metadata to every model call you route through OpenRouter. Teams pick a preset taxonomy or define their own, and a classifier model tags each generation asynchronously. Tags land in logs and roll up in the Activity Explorer.",
+        "howItWorks": "A classifier — Gemini 3.5 Flash-Lite is the recommended default — reads each completed generation off-thread and assigns values across up to eight dimensions per classifier. Users pick from six preset taxonomies (Department, Audience, Task Type, Engineering Work, Agent Complexity, Capitalizable Software Expense) or define custom ones. A sampling rate keeps classification cost bounded on high-volume workspaces.",
+        "whyItMatters": "Enterprises running dozens of agents on OpenRouter had no built-in way to see which team, task, or agent tier was burning tokens. Classifiers turns raw generation logs into a labeled dataset that finance can attribute, compliance can audit, and engineers can filter by — without touching inference latency or rewriting apps.",
+        "forWho": "OpenRouter workspace admins, ML platform teams, and finance/compliance owners",
+        "tryIt": "openrouter.ai → Workspace Settings → Classifiers → New Classifier"
+      },
+      "image": {
+        "url": "https://openrouter.ai/blog/images/classifiers.png",
+        "alt": "OpenRouter Classifiers announcement banner",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://openrouter.ai/blog/announcements/classifiers/"
+        },
+        {
+          "label": "OpenRouter Blog",
+          "url": "https://openrouter.ai/blog"
+        },
+        {
+          "label": "OpenRouter Home",
+          "url": "https://openrouter.ai/"
+        }
+      ],
+      "publishDate": "2026-07-26T15:13:53.355Z"
+    },
     {
       "id": "anthropic-context-engineering-claude-5-rules",
       "categories": [
