@@ -25841,6 +25841,38 @@
         "dataset",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260726t230502z",
+      "timestamp": "2026-07-26T23:05:02.571Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched Anthropic/OpenAI/DeepMind/Meta/Mistral/xAI lab blogs, GitHub trending, HuggingFace models+papers+datasets, HN front page, Simon Willison, Cursor changelog, and 8 YouTube creator feeds. One new qualifying item within the 72h window: Inflect-Micro-v2, a compact indie TTS model trending on HN with 198 points. Opus 5, Laguna S 2.1, Solar-Open 2, Genspark Workspace 6.0, Gemini 3.5 Flash Cyber, Google Genesis Mission, ChatGPT Health, and Nanbeige 4.2-3B all had release dates outside the 72h window.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "owensong-inflect-micro-v2",
+          "title": "Inflect-Micro-v2 — 9.36M-parameter local text-to-speech under 40 MB",
+          "category": "model",
+          "note": "9.36M-parameter Apache-2.0 English TTS on HN front page top 10 (198 points, rank 7) and HuggingFace trending; release finalized 2–3 days ago; solid indie release with runnable Space demo."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "article",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }

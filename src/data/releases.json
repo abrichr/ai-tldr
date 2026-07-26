@@ -1,8 +1,65 @@
 {
-  "generatedAt": "2026-07-26T21:03:37.901Z",
+  "generatedAt": "2026-07-26T23:05:02.571Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "owensong-inflect-micro-v2",
+      "categories": [
+        "model",
+        "tool"
+      ],
+      "title": "Inflect-Micro-v2 — 9.36M-parameter local text-to-speech under 40 MB",
+      "org": "Owen Song",
+      "date": "2026-07-24",
+      "url": "https://huggingface.co/owensong/Inflect-Micro-v2",
+      "summary": "Inflect-Micro-v2 is a 9.36M-parameter Apache-2.0 English TTS model that runs on a CPU at 6.28× real time, scoring 66.2% wins in blind human tests against larger systems.",
+      "tags": [
+        "text-to-speech",
+        "tts",
+        "on-device",
+        "edge-ai",
+        "compact-model",
+        "apache-2-0",
+        "open-weights",
+        "voice",
+        "hugging-face",
+        "cpu-inference"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "A complete English text-to-speech model that fits in 37.5 MB and beats larger systems 66% of the time in blind human tests.",
+        "whatIsIt": "Inflect-Micro-v2 is a 9.36M-parameter English text-to-speech model from indie developer Owen Song. The full FP32 checkpoint is 37.53 MB, small enough to bundle inside a desktop or mobile app, yet it produces natural-sounding 24 kHz mono audio without needing a reference voice at runtime.",
+        "howItWorks": "The Inflect-Micro-v2 pipeline reads punctuation to segment long text, then generates the waveform directly on CPU or CUDA. Owen Song reports 6.28× real-time throughput on a 4-thread CPU, deterministic output from a seed value, and controls for playback speed (0.5–2.0×) and prosody variation, all through a single Python API and Hugging Face model download.",
+        "whyItMatters": "Inflect-Micro-v2 shows that useful, natural TTS no longer needs a server: a 37 MB Apache-2.0 model that runs offline unlocks voice for accessibility tools, embedded devices, and any app whose creator does not want to route audio through a cloud vendor. In blind pairwise tests it won 21 of 34 comparisons, tying 3 and losing 10.",
+        "forWho": "indie app developers, accessibility tool builders, on-device voice tinkerers",
+        "tryIt": "hf download owensong/Inflect-Micro-v2 --local-dir Inflect-Micro-v2"
+      },
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/owensong/Inflect-Micro-v2.png",
+        "alt": "Inflect-Micro-v2 Hugging Face model card preview",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Model Card",
+          "url": "https://huggingface.co/owensong/Inflect-Micro-v2"
+        },
+        {
+          "label": "Live Demo",
+          "url": "https://huggingface.co/spaces/owensong/Inflect-v2"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/owenawsong/Inflect"
+        },
+        {
+          "label": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=49053375"
+        }
+      ],
+      "publishDate": "2026-07-26T23:05:02.571Z"
+    },
     {
       "id": "nvidia-modelexpress",
       "categories": [
