@@ -25959,6 +25959,36 @@
         "algorithm",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260727t174922z",
+      "timestamp": "2026-07-27T17:49:22.694Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero new items. Searched lab blogs (Anthropic, DeepMind, Meta, Mistral, Cohere, xAI, Moonshot, DeepSeek, Qwen, Z.ai), GitHub trending, HF trending models/papers/datasets, HN front page, 8 YouTube creator channels, plus second-pass coding-agent changelogs (Cursor), Simon Willison, and STAT News + Nature (subjects/machine-learning) for the science lane. Every fresh top signal — Kimi K3, Claude Opus 5, Gemini 3.6 Flash, Poolside Laguna S 2.1, Upstage Solar Open 2, Nanbeige4.2-3B, Alibaba open-code-review, Cohere North Automations, Meta Muse Spark 1.1, Anthropic voice+Opus, GPT-5.6 rollout — is already in the feed. Only genuine new signal was Kimi K3's open weights + tech report drop on HF/GitHub, captured as an update to the existing moonshot-kimi-k3 entry. Bio/neuro lane returned no ≤72h releases meeting the artifact + 2-of-N bar.",
+      "counts": {
+        "added": 0,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [
+        {
+          "id": "moonshot-kimi-k3",
+          "title": "Kimi K3 — Moonshot's 2.8T flagship with 1M context lands on web, app, and API",
+          "note": "Open weights landed on Hugging Face and K3 technical report published (both trending on HN today, 1017 + 289 points). Adds License row, updates Availability, refreshes summary to reflect self-hostable status."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "video",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark"
+      ]
     }
   ]
 }

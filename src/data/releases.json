@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T14:34:27.824Z",
+  "generatedAt": "2026-07-27T17:49:22.694Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
@@ -8576,7 +8576,7 @@
       "org": "Moonshot AI",
       "date": "2026-07-16",
       "url": "https://platform.kimi.ai/docs/guide/kimi-k3-quickstart",
-      "summary": "Moonshot AI launches Kimi K3, a 2.8-trillion-parameter Mixture-of-Experts model with a 1M-token context, a new Delta Attention hybrid, and native vision. K3 is live on web, app, Kimi Code, and the api.moonshot.ai OpenAI-compatible API.",
+      "summary": "Moonshot AI drops the Kimi K3 open weights on Hugging Face, alongside the K3 technical report. K3 is a 2.8T-parameter Mixture-of-Experts model (104B active) with a 1M-token context, Delta Attention hybrid, and native vision — the model is now self-hostable in addition to the kimi.com app and OpenAI-compatible API.",
       "tags": [
         "kimi-k3",
         "moonshot-ai",
@@ -8599,31 +8599,27 @@
         },
         {
           "label": "Size",
-          "value": "2.8T total parameters (Mixture-of-Experts)"
+          "value": "2.8T total parameters, 104B active (Mixture-of-Experts, 16 of 896 experts per token)"
+        },
+        {
+          "label": "License",
+          "value": "Kimi-K3 License (open weights on Hugging Face)"
         },
         {
           "label": "Context window",
-          "value": "1M tokens"
+          "value": "1,048,576 tokens (1M)"
         },
         {
           "label": "Architecture",
-          "value": "Delta Attention (hybrid linear) + Attention Residuals"
+          "value": "Kimi Delta Attention (hybrid linear) + Attention Residuals"
         },
         {
           "label": "Modalities in",
-          "value": "Text, image, video (native visual understanding)"
-        },
-        {
-          "label": "API model name",
-          "value": "kimi-k3 at api.moonshot.ai/v1 (OpenAI-SDK compatible)"
+          "value": "Text, image, video (native multimodal)"
         },
         {
           "label": "Availability",
-          "value": "kimi.com, Kimi mobile app, Kimi Code (Moderato tier for 256K, Allegretto+ for 1M), API"
-        },
-        {
-          "label": "Reasoning",
-          "value": "Thinking mode always on; reasoning_effort=\"max\" only setting currently exposed"
+          "value": "Open weights on Hugging Face; API kimi-k3 at api.moonshot.ai/v1 (OpenAI-SDK compatible); kimi.com + mobile app + Kimi Code"
         }
       ],
       "faq": [
@@ -8654,20 +8650,20 @@
           "url": "https://platform.kimi.ai/docs/guide/kimi-k3-quickstart"
         },
         {
+          "label": "Open Weights (HF)",
+          "url": "https://huggingface.co/moonshotai/Kimi-K3"
+        },
+        {
+          "label": "Tech Report (PDF)",
+          "url": "https://github.com/MoonshotAI/Kimi-K3/blob/main/k3_tech_report.pdf"
+        },
+        {
           "label": "Kimi (Web)",
           "url": "https://www.kimi.com/en"
         },
         {
-          "label": "Kimi Code Models",
-          "url": "https://www.kimi.com/code/docs/en/kimi-code/models"
-        },
-        {
           "label": "TechCrunch Coverage",
           "url": "https://techcrunch.com/2026/07/16/moonshots-upcoming-kimi-3-is-expected-to-close-the-gap-with-anthropics-opus-4-8/"
-        },
-        {
-          "label": "BigGo Finance Coverage",
-          "url": "https://finance.biggo.com/news/1463f539-2df9-479f-9d17-d6c3a1990722"
         }
       ],
       "image": {
