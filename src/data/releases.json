@@ -1,8 +1,243 @@
 {
-  "generatedAt": "2026-07-27T19:30:41.778Z",
+  "generatedAt": "2026-07-27T23:08:45.172Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "moonshot-kimi-k3-open-weights",
+      "categories": [
+        "model",
+        "repo"
+      ],
+      "title": "Kimi K3 open weights — Moonshot drops the 2.8T MoE on Hugging Face",
+      "org": "Moonshot AI",
+      "date": "2026-07-27",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3",
+      "summary": "Moonshot AI published the full open weights for Kimi K3 on Hugging Face at 00:00 UTC on July 27, making the 2.8-trillion-parameter mixture-of-experts model the largest open-weight AI release in history and free to self-host.",
+      "importance": "major",
+      "tags": [
+        "moonshot",
+        "kimi-k3",
+        "open-weights",
+        "moe",
+        "multimodal",
+        "long-context",
+        "mxfp4",
+        "self-hosting",
+        "china-ai",
+        "frontier-open"
+      ],
+      "metrics": {
+        "Total parameters": "2.8T",
+        "Active parameters": "104B",
+        "Context window": "1M tokens",
+        "Download size": "~594 GB (MXFP4)"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Moonshot AI (China)"
+        },
+        {
+          "label": "Architecture",
+          "value": "Mixture-of-Experts — 896 experts, 16 active per token"
+        },
+        {
+          "label": "Vision encoder",
+          "value": "MoonViT-V2 (401M params)"
+        },
+        {
+          "label": "Context window",
+          "value": "1,048,576 tokens (1M)"
+        },
+        {
+          "label": "Quantization",
+          "value": "MXFP4 weights, MXFP8 activations"
+        },
+        {
+          "label": "License",
+          "value": "Modified MIT (Kimi K3 License)"
+        },
+        {
+          "label": "Download size",
+          "value": "~594 GB across safetensors shards"
+        },
+        {
+          "label": "Minimum hardware",
+          "value": "8× H100 80 GB (per third-party guides)"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Where do I download the Kimi K3 open weights?",
+          "a": "Kimi K3's full open weights live at huggingface.co/moonshotai/Kimi-K3 as MXFP4 safetensors shards, alongside a matching MoonshotAI/Kimi-K3 GitHub repo that ships the tokenizer, tech report, and reference inference code. Community BF16 and GGUF re-quants are expected on Hugging Face within days of the July 27 drop."
+        },
+        {
+          "q": "What license does Kimi K3 use?",
+          "a": "Kimi K3 ships under a Modified MIT license that Moonshot brands as the 'Kimi K3 License,' allowing research, commercial deployment, and further fine-tuning of the weights. This is the same permissive family Moonshot used for Kimi K2.6, and it makes Kimi K3 the largest permissively licensed open-weight AI model available anywhere."
+        },
+        {
+          "q": "What hardware do I need to self-host Kimi K3?",
+          "a": "Third-party self-hosting guides put the minimum for Kimi K3 at 8× H100 80 GB or equivalent, using vLLM, SGLang, or TokenSpeed as the inference engine. A single consumer GPU cannot load Kimi K3 even in the native MXFP4 format — the ~594 GB weight file only fits on multi-GPU servers or with disk-backed offload."
+        },
+        {
+          "q": "How does open-weight Kimi K3 compare to Claude Fable 5 and GPT-5.6 Sol?",
+          "a": "Kimi K3's official model card reports GPQA Diamond 93.5 and DeepSWE 67.5, and arena front-end coding tests show developers picking Kimi K3 ahead of prior US frontier models. It still trails Claude Fable 5 and GPT-5.6 Sol on overall rankings, but Nathan Lambert's Interconnects analysis argues the open-to-closed gap has shrunk from 6–9 months to 3–5."
+        },
+        {
+          "q": "Why is Moonshot releasing Kimi K3 open-weight now?",
+          "a": "Moonshot's Kimi K3 open-weights drop is timed to land just ahead of the 2026 World Artificial Intelligence Conference in Shanghai and follows a run where Moonshot's revenue grew at least 6× and ARR climbed from $200M in April to $300M in June. Moonshot frames the release as making 'frontier intelligence openly available for research, deployment, and further innovation.'"
+        }
+      ],
+      "explainer": {
+        "tagline": "The largest open-weight AI model in history — 2.8T Kimi K3 is now free to self-host.",
+        "whatIsIt": "Kimi K3 is Moonshot AI's flagship mixture-of-experts model with 2.8 trillion total parameters and 104 billion active per token, and on July 27 its full weights went live on Hugging Face for anyone to download and run. That makes Kimi K3 the largest permissively licensed open-weight AI model ever released, and the first 3T-class model that any lab or research team can self-host.",
+        "howItWorks": "Under the hood, Kimi K3 uses 896 experts with 16 activated per token and a 1-million-token context window. MoonViT-V2, a 401M-parameter vision encoder, ships in the same weights so the model handles text, images, and video natively. Moonshot quantizes the release to MXFP4 weights and MXFP8 activations, bringing the download to about 594 GB and letting vLLM, SGLang, and TokenSpeed serve it on multi-H100 nodes.",
+        "whyItMatters": "Self-hosting Kimi K3 gives teams that could never send data to a Chinese API the same 2.8T-parameter reasoning and 1M-token context inside their own network. It also resets the open-versus-closed race: Nathan Lambert argues in Interconnects that the frontier gap has narrowed from 6–9 months down to 3–5, and the Kimi K3 release lands the same day Anthropic publishes its formal position on open-weight risk.",
+        "forWho": "AI labs, sovereign-compute buyers, and self-hosters with 8+ H100s",
+        "tryIt": "huggingface-cli download moonshotai/Kimi-K3"
+      },
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/moonshotai/Kimi-K3.png",
+        "alt": "Hugging Face social banner for the moonshotai/Kimi-K3 model repository",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Hugging Face weights",
+          "url": "https://huggingface.co/moonshotai/Kimi-K3"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/MoonshotAI/Kimi-K3"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49065752"
+        },
+        {
+          "label": "Interconnects Analysis",
+          "url": "https://www.interconnects.ai/p/kimi-k3-the-open-weights-escalation"
+        },
+        {
+          "label": "Tech Report PDF",
+          "url": "https://github.com/MoonshotAI/Kimi-K3/blob/main/k3_tech_report.pdf"
+        }
+      ],
+      "publishDate": "2026-07-27T23:08:45.172Z"
+    },
+    {
+      "id": "anthropic-open-weights-position",
+      "categories": [
+        "article"
+      ],
+      "title": "Anthropic's position on open-weights models — Amodei backs targeted rules, not a ban",
+      "org": "Anthropic",
+      "author": {
+        "name": "Dario Amodei",
+        "handle": "@DarioAmodei",
+        "profileUrl": "https://x.com/DarioAmodei"
+      },
+      "date": "2026-07-27",
+      "url": "https://www.anthropic.com/news/position-open-weights-models",
+      "summary": "Dario Amodei published Anthropic's formal stance on open-weight AI the same day Kimi K3's weights landed, saying Anthropic has never asked for a ban and endorsing three targeted moves: chip export controls, a distillation crackdown, and mandatory pre-release safety testing.",
+      "importance": "major",
+      "tags": [
+        "anthropic",
+        "dario-amodei",
+        "open-weights",
+        "ai-policy",
+        "chip-export-controls",
+        "distillation",
+        "safety-testing",
+        "kimi-k3",
+        "us-china-ai"
+      ],
+      "quickFacts": [
+        {
+          "label": "Author",
+          "value": "Dario Amodei (Anthropic CEO)"
+        },
+        {
+          "label": "Published",
+          "value": "July 27, 2026"
+        },
+        {
+          "label": "Anthropic's headline stance",
+          "value": "Never advocated a ban on open-weights models"
+        },
+        {
+          "label": "Primary concern named",
+          "value": "Authoritarian governments building more powerful AI than the US"
+        },
+        {
+          "label": "Policy 1",
+          "value": "Chip export controls, plus cracking down on smuggling"
+        },
+        {
+          "label": "Policy 2",
+          "value": "Legal action against industrial-scale distillation operations"
+        },
+        {
+          "label": "Policy 3",
+          "value": "Mandatory pre-release safety testing for all sufficiently capable models"
+        },
+        {
+          "label": "Context",
+          "value": "Published the same day Kimi K3's 2.8T open weights went live"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does Anthropic want to ban open-weights models?",
+          "a": "No. In this post Anthropic's Dario Amodei writes that 'Anthropic has never advocated for a ban on open-weights models' and calls open-weight models without dangerous capabilities 'a public good' for businesses, developers, and researchers. Amodei rejects blanket restrictions on the category and instead proposes targeted measures aimed at specific misuse paths."
+        },
+        {
+          "q": "What three policies does Anthropic propose in the open-weights post?",
+          "a": "Anthropic's post backs three specific measures: keep tightening chip export controls to China and prosecute smuggling; pursue legal frameworks against industrial-scale distillation of frontier US models; and require every sufficiently capable model — open or closed — to pass mandatory cyber, biological, and alignment safety testing before release."
+        },
+        {
+          "q": "Why did Anthropic publish this position today?",
+          "a": "Amodei's post landed on July 27, 2026, the same day Moonshot AI released the full 2.8-trillion-parameter Kimi K3 open weights on Hugging Face and Nvidia's letter urging US officials not to over-restrict open models had reached 50 signatories without Anthropic or Amazon on board. The piece is Anthropic's formal reply to that letter and to the wider Kimi K3 debate."
+        },
+        {
+          "q": "Where does Anthropic disagree with the open-weights consensus?",
+          "a": "Anthropic argues that open-weight models are riskier than closed ones for a narrow set of dangerous capabilities because guardrails and usage monitoring cannot be applied after release. Amodei worries in particular about biology, where a single leak could let a small group weaponize pandemic-level viruses, while defense is a multi-year operational effort."
+        }
+      ],
+      "explainer": {
+        "tagline": "Dario Amodei says Anthropic has never asked to ban open weights — and names three targeted moves it would back instead.",
+        "whatIsIt": "Anthropic's July 27 blog post 'Our position on open-weights models,' signed by CEO Dario Amodei, is the company's first formal, top-of-house statement on how open-weight AI should be regulated. It arrived the same day Moonshot AI released the 2.8T Kimi K3 weights and answers a growing question in Washington: does Anthropic want open weights restricted?",
+        "howItWorks": "The Anthropic post separates the category from the risk. Amodei calls capability-limited open-weight models 'a public good,' then lists Anthropic's specific concerns — authoritarian states building superior AI, and open weights being misused for cyber, biological, or alignment failures. From there it converges on three targeted policies rather than a category-wide ban.",
+        "whyItMatters": "Anthropic's position piece reframes the US debate: instead of open-versus-closed, Amodei wants chip export enforcement, legal action against distillation, and mandatory pre-release safety testing that applies to closed frontier models too. That last point cuts against OpenAI and Anthropic's own commercial interest, and it lands one day after Nvidia's 50-signatory open-weights letter went out without Anthropic on it.",
+        "forWho": "AI policy staff, open-weight maintainers, and anyone tracking US-China AI regulation",
+        "tryIt": "https://www.anthropic.com/news/position-open-weights-models"
+      },
+      "image": {
+        "url": "https://cdn.sanity.io/images/4zrzovbb/website/62993bb857986e2808c2a75024f384e7b85312b6-2400x1254.png",
+        "alt": "Anthropic newsroom hero image for Dario Amodei's post on Anthropic's position on open-weights models",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Anthropic Post",
+          "url": "https://www.anthropic.com/news/position-open-weights-models"
+        },
+        {
+          "label": "Nvidia Open-Weights Letter Coverage",
+          "url": "https://www.forbes.com/sites/sandycarter/2026/07/25/huangs-open-weights-letter-doubled-to-50-without-amazon-and-anthropic/"
+        },
+        {
+          "label": "CNBC on Open-Weight Debate",
+          "url": "https://www.cnbc.com/2026/07/24/nvidia-microsoft-meta-open-weight-ai-models.html"
+        },
+        {
+          "label": "Kimi K3 Weights (Same-Day Trigger)",
+          "url": "https://huggingface.co/moonshotai/Kimi-K3"
+        }
+      ],
+      "publishDate": "2026-07-27T23:08:45.172Z"
+    },
     {
       "id": "microsoft-mai-cyber-1-flash",
       "categories": [

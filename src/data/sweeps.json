@@ -26022,6 +26022,43 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260727t230845z",
+      "timestamp": "2026-07-27T23:08:45.172Z",
+      "source": "github-actions-sweep",
+      "summary": "Two fresh items on the July 27 open-weights day: Moonshot published Kimi K3's full 2.8T weights on Hugging Face (largest open-weight release ever), and Anthropic's Dario Amodei posted Anthropic's formal position — no ban, but three targeted policies. Lab blogs (Anthropic, OpenAI 403, DeepMind, Meta, Mistral, Moonshot), GitHub trending, Hugging Face models/datasets/papers, HN top-30, and the 8 YouTube RSS feeds were all scanned; nothing else met the 72h bar.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "moonshot-kimi-k3-open-weights",
+          "title": "Kimi K3 open weights — Moonshot drops the 2.8T MoE on Hugging Face",
+          "category": "model",
+          "note": "Fresh Jul 27 milestone distinct from the Jul 16 API launch (moonshot-kimi-k3): the full 2.8T weights went live on Hugging Face at 00:00 UTC, MoonshotAI/Kimi-K3 GitHub repo created Jul 27 08:01 UTC, HN #30 (1292 pts), Modified MIT license, VentureBeat + Interconnects + Techtimes coverage."
+        },
+        {
+          "id": "anthropic-open-weights-position",
+          "title": "Anthropic's position on open-weights models — Amodei backs targeted rules, not a ban",
+          "category": "article",
+          "note": "Anthropic newsroom post by Dario Amodei published Jul 27, HN #1 (191 pts), directly responds to the Nvidia open-weights letter and the Kimi K3 weights drop the same day — first formal Anthropic policy statement on open weights."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "tool",
+        "ecosystem"
+      ]
     }
   ]
 }
