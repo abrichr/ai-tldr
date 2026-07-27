@@ -1,8 +1,118 @@
 {
-  "generatedAt": "2026-07-27T11:23:09.705Z",
+  "generatedAt": "2026-07-27T14:34:27.824Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "cohere-north-automations",
+      "categories": [
+        "tool"
+      ],
+      "title": "Cohere North Automations — plain-English AI workflows across enterprise systems",
+      "org": "Cohere",
+      "date": "2026-07-27",
+      "url": "https://cohere.com/blog/introducing-north-automations-ai-workflows",
+      "summary": "Cohere North Automations turns plain-language descriptions into multi-step AI workflows across enterprise tools. Users pick a model per step, add approval checkpoints, schedule runs, and connect systems via first-party integrations, MCP, or an SDK.",
+      "tags": [
+        "cohere",
+        "north",
+        "north-automations",
+        "workflow-orchestration",
+        "agents",
+        "enterprise-ai",
+        "mcp",
+        "saas"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Availability": "GA for all North customers",
+        "Deployment": "Cloud, on-prem, or hybrid"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Cohere"
+        },
+        {
+          "label": "Product",
+          "value": "North Automations (module inside the North platform)"
+        },
+        {
+          "label": "Availability",
+          "value": "Live for every North customer at launch"
+        },
+        {
+          "label": "Deployment",
+          "value": "SaaS, on-prem, or hybrid cloud"
+        },
+        {
+          "label": "Model routing",
+          "value": "Pick a model per workflow step"
+        },
+        {
+          "label": "Governance",
+          "value": "Plan Mode preview, approval checkpoints, versioning, token and usage analytics"
+        },
+        {
+          "label": "Integrations",
+          "value": "First-party connectors, MCP tools, and a Cohere SDK for custom systems"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much does Cohere North Automations cost?",
+          "a": "Cohere has not published a public price sheet for North Automations. The launch post says the feature is live for every existing North platform customer at no extra tier, and new buyers are pointed at Cohere's sales team for enterprise pricing on the wider North platform."
+        },
+        {
+          "q": "Is North Automations open source?",
+          "a": "No. North Automations is a proprietary module inside the Cohere North platform, offered as SaaS or private deployment on-prem or in a customer cloud. Cohere's separate North Mini Code coding model is Apache-2.0, but the Automations orchestrator itself is not open weights."
+        },
+        {
+          "q": "Which apps and systems does North Automations connect to?",
+          "a": "The launch post shows Cohere's own internal automations wired into Salesforce, Slack, Gmail, Notion, and BigQuery. North Automations ships first-party connectors for those enterprise systems, MCP support for custom tools, and a Cohere SDK for teams that want to plug in bespoke platforms."
+        },
+        {
+          "q": "How does North Automations differ from a single-task AI agent?",
+          "a": "North Automations chains many steps into one workflow instead of firing a single agent at one task. Each step can pick its own model to control cost, and the whole pipeline has branching, loops, scheduled runs, approval gates, versioning, and audit-friendly usage analytics."
+        }
+      ],
+      "explainer": {
+        "tagline": "Cohere adds a workflow orchestrator to its enterprise North platform, so teams can chain AI agents across their own systems from a plain-English brief.",
+        "whatIsIt": "North Automations is a new module inside Cohere's North enterprise AI platform. Instead of deploying one-off, single-task agents, users describe a goal in plain language and North compiles it into a multi-step workflow that spans tools like Salesforce, Slack, Gmail, Notion, and BigQuery. It is live today for every existing North customer.",
+        "howItWorks": "A plain-language brief compiles into a workflow with branching logic, loops, and scheduled runs. Plan Mode shows the intended steps before execution, human approval checkpoints gate sensitive actions, and each step picks its own model to balance cost against quality. First-party connectors, MCP tools, and an SDK expose customer systems; versioning and token analytics track what changed and what it spent.",
+        "whyItMatters": "Most enterprise AI so far has been a scatter of single-task agents that never finish a real job. North Automations targets what Cohere frames as a $550B agent orchestration market opportunity: end-to-end workflows that mimic an employee's cross-system work, are auditable and versioned, and let a team keep humans in the loop where it matters.",
+        "forWho": "Cohere North enterprise customers",
+        "tryIt": "https://cohere.com/north/automations"
+      },
+      "image": {
+        "url": "https://cdn.sanity.io/images/rjtqmwfu/web3-prod/52fb04311d24a61986b4ca323e7b7c562233373a-3840x2160.png?rect=0,72,3840,2016&w=1200&h=630",
+        "alt": "Cohere North Automations product illustration",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://cohere.com/blog/introducing-north-automations-ai-workflows"
+        },
+        {
+          "label": "Product Page",
+          "url": "https://cohere.com/north/automations"
+        },
+        {
+          "label": "North Platform",
+          "url": "https://cohere.com/north"
+        },
+        {
+          "label": "Docs",
+          "url": "https://docs.cohere.com/"
+        },
+        {
+          "label": "Dashboard",
+          "url": "https://dashboard.cohere.com/welcome/login"
+        }
+      ],
+      "publishDate": "2026-07-27T14:34:27.824Z"
+    },
     {
       "id": "owensong-inflect-micro-v2",
       "categories": [

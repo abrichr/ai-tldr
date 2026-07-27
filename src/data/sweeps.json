@@ -25927,6 +25927,38 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260727t143427z",
+      "timestamp": "2026-07-27T14:34:27.824Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs, GitHub trending, HuggingFace models/papers/datasets, HN top 30, YouTube RSS (8 channels), influential voices, and the AI-for-science lane. One qualifying release: Cohere ships North Automations, a workflow orchestrator for its enterprise North platform. Kimi K3 open weights are trending on HN but the moonshotai/Kimi-K3 HF page is still gated with no verifiable model card, so it is deferred to the next sweep. Molt (NVIDIA) paper is 5 days old; Baidu Unlimited-OCR is over a month old; Poolside Laguna S 2.1 and Gemini 3.5 Flash Cyber already in feed; Qwen Skill Self-Play misses the paper 2-of-N bar (19 stars, no other signals). Wes Roth's Opus 5 video already in feed; no other fresh YouTube uploads in the 72h window.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "cohere-north-automations",
+          "title": "Cohere North Automations — plain-English AI workflows across enterprise systems",
+          "category": "tool",
+          "note": "Cohere launched today; product is live for every existing North platform customer with plain-English workflow orchestration, per-step model routing, approval gates, MCP + SDK integrations. Passes the top-lab-blog-in-last-48h inclusion signal."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "paper",
+        "video",
+        "article",
+        "dataset",
+        "algorithm",
+        "ecosystem"
+      ]
     }
   ]
 }
