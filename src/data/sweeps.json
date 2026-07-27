@@ -25873,6 +25873,33 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260727t071102z",
+      "timestamp": "2026-07-27T07:11:02.758Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep at 2026-07-27T07:00Z. Searched Anthropic/OpenAI/DeepMind/Meta/Mistral/xAI/DeepSeek/Moonshot/Z.ai/Cohere/Ollama/Runway/ElevenLabs lab blogs, GitHub trending, HuggingFace models/datasets/papers, HN front page + newest, r/LocalLLaMA (blocked), influential voices (Simon Willison, Interconnects, LangChain, Karpathy, Latent.Space), YouTube RSS (Wes Roth's Opus 5 + Genspark video already in feed), coding-agent changelogs (Cursor, Claude Code, Codex, Aider, LangGraph, Windsurf/Devin), and the bio/neuro/pharma lane (Arc Institute, Recursion, Insilico, Isomorphic Labs, Hemispheric, Nature subject + Lancet Digital Health). The 72h window (>=2026-07-24T07:00Z) contains only items already in the feed: Claude Opus 5 (Jul 24), Wes Roth's video breakdown (Jul 24), Muse Spark 1.1 agentic Meta AI (Jul 24), Anthropic context-engineering rules (Jul 24), Claude Code 2.1.219 (Jul 24), and DeepSeek legacy API sunset (Jul 24). Kimi K3 open-weights drop is scheduled for later today (huggingface.co/moonshotai/Kimi-K3 still shows 'Upcoming release' with countdown) but the artifact is not yet live, so it does not qualify as shipped. Simon Willison's Jul 26 relay-market post is fresh commentary, but the underlying Vectoral investigation by Matt Lenhard was published in June 2026 (>30d, blocked by Hard Rule 2, the 2026-04-28-E Mythos scar). No pharma/bio/neuro releases from official channels in the window. Empty sweep is the correct result.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "article",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
