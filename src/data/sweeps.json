@@ -25900,6 +25900,33 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260727t112309z",
+      "timestamp": "2026-07-27T11:23:09.705Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched Anthropic/OpenAI/DeepMind/Meta/Mistral/Cohere/Moonshot/z.ai/Qwen lab blogs, github.com/trending, HF models+datasets+papers, HN front page, all 8 YouTube creator channels, Cursor changelog, OpenRouter, Simon Willison, and the AI-for-science lane (STAT News, Nature AI, Hemispheric). Nothing new inside 72h: Opus 5 / Gemini 3.6 / Kimi K3 API / Genesis Mission / Kronos / Stack v3 / OpenRouter Classifiers / Wes Roth Opus-5 video all already in feed; Mistral/Cohere quiet; Kimi K3 open-weights drop is still on countdown (~3h left) so not yet a released artifact; Simon Willison's 07-26 relay-market post is a 280-word link post to someone else's investigation, below the article bar; the HF-OpenAI radical-transparency escalation is corporate demand, not a shipped artifact.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "article",
+        "algorithm",
+        "benchmark",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
