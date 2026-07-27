@@ -25989,6 +25989,39 @@
         "dataset",
         "benchmark"
       ]
+    },
+    {
+      "id": "sweep-20260727t193041z",
+      "timestamp": "2026-07-27T19:30:41.778Z",
+      "source": "github-actions-sweep",
+      "summary": "Scanned lab blogs, GitHub trending, HN top 30, HF papers/models, YouTube RSS (all 8 channels), and the science lane. One qualifier: Microsoft AI's MAI-Cyber-1-Flash — a compact security model derived from MAI-Thinking-1 that pushes MDASH to 96% on CyberGym at ~half the cost, HN #1 today with 161 points.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "microsoft-mai-cyber-1-flash",
+          "title": "Microsoft MAI-Cyber-1-Flash — 96% on CyberGym at half the price of the GPT-5.4 stack",
+          "category": "model",
+          "note": "Announced 2026-07-27 by Microsoft AI (Suleyman + Gallot); HN #1 with 161 points; CyberGym 95.95%/96% with concrete cost claims. Distinct from the existing MDASH entry (May 12): MDASH is the harness, MAI-Cyber-1-Flash is a new model that plugs into it."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }

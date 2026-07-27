@@ -1,8 +1,110 @@
 {
-  "generatedAt": "2026-07-27T17:49:22.694Z",
+  "generatedAt": "2026-07-27T19:30:41.778Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "microsoft-mai-cyber-1-flash",
+      "categories": [
+        "model",
+        "security"
+      ],
+      "title": "Microsoft MAI-Cyber-1-Flash — 96% on CyberGym at half the price of the GPT-5.4 stack",
+      "org": "Microsoft AI",
+      "date": "2026-07-27",
+      "url": "https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/",
+      "summary": "MAI-Cyber-1-Flash is a compact security model derived from MAI-Thinking-1 that pushes Microsoft's MDASH scanning harness to 96% on CyberGym while cutting inference cost roughly in half versus the prior GPT-5.4-heavy stack.",
+      "tags": [
+        "microsoft",
+        "microsoft-ai",
+        "mai-cyber-1-flash",
+        "mai-thinking-1",
+        "cybersecurity",
+        "vulnerability-detection",
+        "security-agent",
+        "cybergym",
+        "mdash",
+        "model",
+        "security"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Microsoft AI"
+        },
+        {
+          "label": "Model",
+          "value": "MAI-Cyber-1-Flash"
+        },
+        {
+          "label": "Lineage",
+          "value": "Derived from MAI-Thinking-1"
+        },
+        {
+          "label": "CyberGym (with MAI-Cyber-1-Flash)",
+          "value": "95.95%"
+        },
+        {
+          "label": "CyberGym (combined with GPT-5.4)",
+          "value": "96% (+12 pts vs Mythos)"
+        },
+        {
+          "label": "Cost",
+          "value": "50% less than the GPT-5.4 + 5.4 mini + 5.3 codex stack"
+        },
+        {
+          "label": "Availability",
+          "value": "Inside MDASH; not a standalone API"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Can I call MAI-Cyber-1-Flash directly?",
+          "a": "MAI-Cyber-1-Flash is not offered as a standalone API. Microsoft AI ships the model inside MDASH, its multi-agent scanning harness that finds and remediates code vulnerabilities. Enterprise teams get it as part of that platform, with role-based access controls, tenant isolation, encryption, auditability, and sandboxed execution built in."
+        },
+        {
+          "q": "How does MAI-Cyber-1-Flash change MDASH's benchmark?",
+          "a": "MDASH driven by MAI-Cyber-1-Flash scores 95.95% on CyberGym, and the combined stack that routes the hardest 10% of steps to GPT-5.4 reaches 96%. Microsoft says that is about 12 points above Anthropic's Mythos and outperforms Gemini and GPT variants on the same code-vulnerability benchmark."
+        },
+        {
+          "q": "Why is the new MDASH cheaper than the old one?",
+          "a": "MAI-Cyber-1-Flash is small and code-heavy, so it handles about 90% of MDASH's security steps on its own. Only the remaining 10% of the hardest sub-tasks route to GPT-5.4, 5.4 mini, and 5.3 codex. Microsoft says that mix cuts inference cost roughly in half versus running the previous, more GPT-heavy configuration."
+        },
+        {
+          "q": "What is MAI-Cyber-1-Flash trained on?",
+          "a": "MAI-Cyber-1-Flash is a compact, code-heavy model derived from Microsoft's MAI-Thinking-1 reasoning family. Microsoft tuned it on the roughly 100 trillion daily security signals it sees across Windows, Azure, Microsoft 365, and its 1.6 million security customers, then specialised it for finding and patching software vulnerabilities."
+        }
+      ],
+      "explainer": {
+        "tagline": "Microsoft's new security-specialist model plugs into MDASH and finds bugs cheaper and better than a GPT-5.4 stack.",
+        "whatIsIt": "MAI-Cyber-1-Flash is a compact, code-heavy security model that Microsoft AI announced on 27 July 2026 and ships inside MDASH, its multi-agent vulnerability scanning harness. The model is derived from the MAI-Thinking-1 reasoning family and specialised for finding and patching code flaws.",
+        "howItWorks": "Inside MDASH, more than a hundred agents explore a codebase, plan possible attacks, and try patches. MAI-Cyber-1-Flash carries out roughly 90% of those steps on its own, and only the hardest 10% of sub-tasks route to GPT-5.4, 5.4 mini, and 5.3 codex for a final call. Microsoft says the model was tuned on the ~100 trillion daily security signals it sees across its own infrastructure.",
+        "whyItMatters": "On CyberGym, the new MDASH stack scores 96% — about 12 points above Anthropic's Mythos — while cutting inference cost roughly in half versus the previous GPT-5.4-heavy configuration. For enterprise security teams that goal was previously out of reach on price: cheaper autonomous bug-finding means large SOCs can afford to scan critical codebases continuously instead of on a schedule.",
+        "forWho": "Enterprise security teams, SOC engineers, and red teamers on Microsoft 365 or Azure",
+        "tryIt": "Available inside Microsoft's MDASH platform (no standalone API)"
+      },
+      "image": {
+        "url": "https://microsoft.ai/wp-content/uploads/2026/07/Cyber-1-New-Header.png",
+        "alt": "MAI-Cyber-1-Flash announcement header from Microsoft AI",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/"
+        },
+        {
+          "label": "MAI-Thinking-1",
+          "url": "https://microsoft.ai/news/introducing-mai-thinking-1/"
+        },
+        {
+          "label": "MDASH Background",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/"
+        }
+      ],
+      "publishDate": "2026-07-27T19:30:41.778Z"
+    },
     {
       "id": "cohere-north-automations",
       "categories": [
