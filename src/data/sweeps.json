@@ -26130,6 +26130,31 @@
         "dataset",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260728t083226z",
+      "timestamp": "2026-07-28T08:32:26.878Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched Anthropic/OpenAI/DeepMind/Meta/x.ai/Mistral/Moonshot/Qwen/DeepSeek/Z.ai lab blogs, GitHub trending, HuggingFace trending models + papers + datasets, HN front page for 2026-07-27, Simon Willison's weblog, WAIC 2026 coverage, MS/AI security channels, coding-agent updates, and the AI-for-science lane (neuro, clinical, pharma). Ran yt-rss-scan across all 8 YouTube creator channels: zero fresh videos in last 72h. Every 2026-07-26/27 release we surfaced is already in the feed (Kimi K3 open weights, Anthropic's open-weights position, MAI-Cyber-1-Flash + MDASH, Open Secure AI Alliance, Alibaba open-code-review, Baidu Unlimited-OCR, Nanbeige 4.2-3B, Poolside Laguna S 2.1, Gemini 3.6 Flash, Claude Opus 5, KAT-Coder-V2.5-Dev). Fresh remaining candidates failed the bar: Cognizant–Anthropic partnership (ecosystem gate — no dev action, pure enterprise contract), Meta U.Pitt assistive-robotics blog (no new artifact — integration story), Solar-Open2-250B (announced 2026-07-23, over 72h), DeepMind bioresilience (2026-07-16, over 72h), Hassabis FINRA-style watchdog proposal (2026-07-14, over 72h). Zero-add sweep.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "security",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
