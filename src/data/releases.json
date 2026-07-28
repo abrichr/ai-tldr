@@ -1,8 +1,215 @@
 {
-  "generatedAt": "2026-07-28T21:16:20.682Z",
+  "generatedAt": "2026-07-28T23:02:40.156Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "mcp-spec-2026-07-28",
+      "categories": [
+        "ecosystem",
+        "tool"
+      ],
+      "title": "MCP 2026-07-28 — stateless transport lands, HTTP+SSE deprecated",
+      "org": "Model Context Protocol",
+      "date": "2026-07-28",
+      "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "summary": "MCP's July 2026 spec turns the protocol stateless: the initialize handshake and Mcp-Session-Id header are gone, every request now carries its own version and capabilities, and legacy HTTP+SSE transport starts a 12-month deprecation.",
+      "tags": [
+        "mcp",
+        "model-context-protocol",
+        "protocol",
+        "stateless-transport",
+        "http-transport",
+        "sdk",
+        "ecosystem",
+        "agents",
+        "typescript",
+        "python",
+        "go",
+        "csharp",
+        "rust"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Tier 1 SDKs": "4 (TS, Python, Go, C#)",
+        "Migration window": "12 months"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Model Context Protocol working group"
+        },
+        {
+          "label": "Spec date",
+          "value": "2026-07-28"
+        },
+        {
+          "label": "License",
+          "value": "Open protocol"
+        },
+        {
+          "label": "SDKs supporting",
+          "value": "TypeScript, Python, Go, C# (Rust in beta)"
+        },
+        {
+          "label": "Big change",
+          "value": "Bidirectional stateful → stateless request/response"
+        },
+        {
+          "label": "Deprecated",
+          "value": "HTTP+SSE transport, Roots, Sampling, Logging"
+        },
+        {
+          "label": "Deprecation window",
+          "value": "≥12 months"
+        }
+      ],
+      "explainer": {
+        "tagline": "MCP goes stateless: no more session handshake, every request stands alone, and the old HTTP+SSE transport is on a 12-month clock.",
+        "whatIsIt": "MCP 2026-07-28 is the latest version of the Model Context Protocol, the standard MCP servers and clients use to expose tools, prompts, and resources to AI agents. The new spec removes the `initialize`/`initialized` handshake and the `Mcp-Session-Id` header so each request is fully self-describing.",
+        "howItWorks": "Every request now carries its own protocol version, client identity, and capabilities in new `Mcp-Method` and `Mcp-Name` headers, letting MCP servers run behind standard load balancers with no shared session store. Server-initiated calls are replaced by Multi Round-Trip Requests, where a server returns `resultType: input_required` and the client retries with the needed data. Tool, prompt, and resource lists gain `ttlMs` and `cacheScope` for HTTP-style caching.",
+        "whyItMatters": "The 2026-07-28 spec is what lets MCP scale like a normal REST service: no sticky sessions, no long-lived streams, and cacheable responses. It also starts a 12-month deprecation clock on HTTP+SSE transport plus Roots, Sampling, and Logging — every MCP server and client will need a migration plan within a year.",
+        "forWho": "MCP server and client authors, agent framework maintainers",
+        "tryIt": "https://modelcontextprotocol.io/specification/2026-07-28"
+      },
+      "faq": [
+        {
+          "q": "Does MCP 2026-07-28 break my existing server?",
+          "a": "MCP 2026-07-28 does not break existing servers immediately. Legacy HTTP+SSE transport, Roots, Sampling, and Logging keep working for at least 12 months. During that window a server can support both the old and new specs. After the deprecation window closes, clients using only the new spec will not talk to a server that still relies on the deprecated features."
+        },
+        {
+          "q": "Which SDKs support the new MCP spec?",
+          "a": "Four Tier 1 MCP SDKs support the 2026-07-28 spec at release: TypeScript, Python, Go, and C#. The Rust SDK ships support in beta. Other community SDKs are expected to follow but are not tracked as Tier 1 by the working group."
+        },
+        {
+          "q": "Why did MCP move to a stateless transport?",
+          "a": "MCP moved to stateless requests so servers can run behind normal HTTP load balancers without shared session storage. The old design required a session id and an open stream, which forced sticky routing and made horizontal scaling painful. Each 2026-07-28 request is self-contained, so any server instance can handle any request."
+        },
+        {
+          "q": "What replaces the deprecated Roots, Sampling, and Logging features?",
+          "a": "The 2026-07-28 spec moves Roots, Sampling, and Logging out of the core protocol into an extensions framework alongside Tasks. Server-initiated calls that once used those channels are now expressed with Multi Round-Trip Requests, where the server returns `resultType: input_required` and the client attaches the needed data on retry."
+        }
+      ],
+      "image": {
+        "url": "https://blog.modelcontextprotocol.io/og-image.png",
+        "alt": "Model Context Protocol logo on the 2026-07-28 spec announcement",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/"
+        },
+        {
+          "label": "Specification",
+          "url": "https://modelcontextprotocol.io/specification/2026-07-28"
+        },
+        {
+          "label": "Spec Repo",
+          "url": "https://github.com/modelcontextprotocol/specification"
+        }
+      ],
+      "publishDate": "2026-07-28T23:02:40.156Z"
+    },
+    {
+      "id": "openai-codex-security",
+      "categories": [
+        "tool",
+        "security",
+        "repo"
+      ],
+      "title": "OpenAI Codex Security — Apache-2.0 CLI scans repos for vulnerabilities",
+      "org": "OpenAI",
+      "date": "2026-07-28",
+      "url": "https://github.com/openai/codex-security",
+      "summary": "OpenAI open-sourced Codex Security, an Apache-2.0 CLI and TypeScript SDK that scans repositories, reviews pull-request changes, tracks findings over time, and plugs into CI as a security gate.",
+      "tags": [
+        "openai",
+        "codex",
+        "codex-security",
+        "security",
+        "vulnerability-scanning",
+        "cli",
+        "typescript-sdk",
+        "ci-cd",
+        "code-review",
+        "apache-2-0",
+        "open-source"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Stars": 285,
+        "License": "Apache-2.0"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenAI"
+        },
+        {
+          "label": "Released",
+          "value": "2026-07-28 (repo made public)"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        },
+        {
+          "label": "Package",
+          "value": "@openai/codex-security (npm)"
+        },
+        {
+          "label": "Runs",
+          "value": "Node.js 22+, Python 3.10+"
+        },
+        {
+          "label": "Auth",
+          "value": "Interactive login or OPENAI_API_KEY"
+        },
+        {
+          "label": "Surfaces",
+          "value": "CLI, TypeScript SDK, CI hook"
+        }
+      ],
+      "explainer": {
+        "tagline": "OpenAI's new Apache-2.0 tool for finding, tracking, and gating security bugs in a codebase, from the command line or inside CI.",
+        "whatIsIt": "Codex Security is a CLI and TypeScript SDK from OpenAI, released as `@openai/codex-security` on npm under Apache-2.0. The tool scans a repository, reviews the diff on a change, keeps a record of findings, and can block a CI job when new vulnerabilities appear.",
+        "howItWorks": "Codex Security runs as a Node.js CLI (`npx codex-security scan .`) backed by the Codex Security service. Developers authenticate once with `codex-security login`; in CI the tool reads `OPENAI_API_KEY` instead. Scans compare the current tree against tracked findings so the same issue does not re-alert once triaged.",
+        "whyItMatters": "OpenAI Codex Security drops a first-party security scanner into the same repos that already use Codex for coding, and hands teams an Apache-2.0 SDK they can wrap into their own review flows. Because the CLI is TypeScript with a matching SDK, teams can call it from an existing Node review bot, a GitHub Action, or a pre-commit hook without a new agent framework.",
+        "forWho": "Security-conscious engineering teams, platform engineers wiring CI, Codex users",
+        "tryIt": "npm install -g @openai/codex-security && npx codex-security scan ."
+      },
+      "faq": [
+        {
+          "q": "Is OpenAI Codex Security free to use?",
+          "a": "The Codex Security CLI and TypeScript SDK are open source under Apache-2.0 on GitHub, but the scanner is a client for the Codex Security service and needs authorized access. Developers log in interactively for local use, and CI jobs read `OPENAI_API_KEY` from the environment. OpenAI has not yet published a separate price list for the backend service."
+        },
+        {
+          "q": "How do I run OpenAI Codex Security in CI?",
+          "a": "Install `@openai/codex-security` from npm on a Node.js 22 runner, set `OPENAI_API_KEY` as a secret, and call `npx codex-security scan .` in the workflow. Codex Security tracks findings between runs, so the pipeline can fail only when a new vulnerability appears in the change, not when a known issue is still open."
+        },
+        {
+          "q": "What does OpenAI Codex Security actually scan for?",
+          "a": "The README describes Codex Security as a tool to find, validate, and address security vulnerabilities across a codebase, and lists repo-wide scans, per-change diff review, and finding history as core features. OpenAI has not published the full vulnerability class list on the repo; the public docs are the source of truth for the backing service."
+        }
+      ],
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/openai/codex-security",
+        "alt": "openai/codex-security GitHub repository social card",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/openai/codex-security"
+        },
+        {
+          "label": "README",
+          "url": "https://github.com/openai/codex-security/blob/main/README.md"
+        }
+      ],
+      "publishDate": "2026-07-28T23:02:40.156Z"
+    },
     {
       "id": "grafana-ai-week-agentic-ops",
       "categories": [

@@ -26368,6 +26368,44 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260728t230240z",
+      "timestamp": "2026-07-28T23:02:40.156Z",
+      "source": "github-actions-sweep",
+      "summary": "Two adds: MCP's July 2026 spec turns the protocol stateless with a 12-month deprecation clock on HTTP+SSE, and OpenAI open-sourced Codex Security, an Apache-2.0 CLI/SDK for repo vulnerability scans. Lab blogs (Anthropic/OpenAI/DeepMind/Meta/Mistral/Cohere/xAI/Qwen), GitHub trending, HuggingFace models/papers/datasets, HN top 30, and 8 YouTube feeds all scanned; other candidates (Cognizant partnership, Meta assistive robotics, Ethan Mollick guide) did not clear the inclusion bar.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "mcp-spec-2026-07-28",
+          "title": "MCP 2026-07-28 — stateless transport lands, HTTP+SSE deprecated",
+          "category": "ecosystem",
+          "note": "MCP spec released today (2026-07-28) with 4 Tier 1 SDKs; HN 91 points 28 comments; ecosystem gate passes — every MCP server/client needs a migration plan within 12 months."
+        },
+        {
+          "id": "openai-codex-security",
+          "title": "OpenAI Codex Security — Apache-2.0 CLI scans repos for vulnerabilities",
+          "category": "tool",
+          "note": "OpenAI open-sourced today; HN 229 points; 285 stars on the newly-public repo; Apache-2.0 CLI + TS SDK for repo security scans."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "ecosystem",
+        "tool",
+        "model",
+        "repo",
+        "paper",
+        "dataset",
+        "article",
+        "video",
+        "security"
+      ]
     }
   ]
 }
