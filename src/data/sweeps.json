@@ -26256,6 +26256,45 @@
         "resource",
         "tutorial"
       ]
+    },
+    {
+      "id": "sweep-20260728t175544z",
+      "timestamp": "2026-07-28T17:55:44.520Z",
+      "source": "github-actions-sweep",
+      "summary": "Two major adds. Anthropic's cryptographic-weaknesses research (2026-07-28) with Claude Mythos halving HAWK key strength and speeding 7-round AES 200-800x, plus Apache-2.0 demo code. NVIDIA's Agent Toolkit expansion (2026-07-26) plugging PhysicsNeMo and CUDA-X into agents with Cadence, Siemens, Synopsys, Samsung and TSMC as launch users. Meta/OpenAI/Mistral/Zhipu/DeepSeek quiet on new artifacts; Anthropic-Cognizant partnership and NVIDIA financing deals failed the ecosystem developer-action gate; YouTube RSS scan returned no fresh videos; no ≤72h bio/neuro release cleared the 2-of-N bar.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "anthropic-mythos-cryptographic-weaknesses",
+          "title": "Anthropic uses Claude Mythos to weaken HAWK and 7-round AES — Apache-2.0 demo code released",
+          "category": "paper",
+          "note": "Top-lab blog on official domain today (2026-07-28) with released code (Apache-2.0), two named attack papers (HAWK, AES) and companion CryptanalysisBench arXiv paper — clears inclusion bar #5 and 2-of-N paper bar (code + top-lab + author reputation)."
+        },
+        {
+          "id": "nvidia-agent-toolkit-physicsnemo-cudax",
+          "title": "NVIDIA Agent Toolkit — PhysicsNeMo and CUDA-X plug into agents for chip and physics work",
+          "category": "tool",
+          "note": "Multi-outlet tier-1 coverage (HPCwire, Manila Times, StockTitan) of a real product expansion from July 26; distinct event from the earlier `nvidia-agent-toolkit-gtc` platform launch — this ships new PhysicsNeMo + CUDA-X library skills and names TSMC/Cadence/Synopsys as launch users. Ecosystem gate passes: developer action = build engineering agents that call PhysicsNeMo/CUDA-X kernels directly."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "algorithm",
+        "dataset",
+        "article",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }

@@ -1,8 +1,233 @@
 {
-  "generatedAt": "2026-07-28T16:13:23.942Z",
+  "generatedAt": "2026-07-28T17:55:44.520Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "anthropic-mythos-cryptographic-weaknesses",
+      "categories": [
+        "paper",
+        "algorithm",
+        "repo"
+      ],
+      "title": "Anthropic uses Claude Mythos to weaken HAWK and 7-round AES — Apache-2.0 demo code released",
+      "org": "Anthropic",
+      "date": "2026-07-28",
+      "url": "https://www.anthropic.com/research/discovering-cryptographic-weaknesses",
+      "summary": "Anthropic's cryptographic-weaknesses research shows Claude Mythos Preview finding a lattice automorphism that halves HAWK's post-quantum key strength and a new Möbius Bridge attack that speeds 7-round AES cryptanalysis 200-800x, all with Apache-2.0 demo code.",
+      "tags": [
+        "cryptography",
+        "cryptanalysis",
+        "post-quantum",
+        "hawk",
+        "aes",
+        "claude-mythos",
+        "anthropic",
+        "security",
+        "ai-research",
+        "algorithm",
+        "open-source",
+        "apache-2-0"
+      ],
+      "importance": "major",
+      "metrics": {
+        "HAWK key strength reduction": "≈50%",
+        "7-round AES speedup": "200-800×",
+        "CryptanalysisBench tasks": 191,
+        "Demo code license": "Apache-2.0"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Anthropic + academic collaborators"
+        },
+        {
+          "label": "Model",
+          "value": "Claude Mythos Preview"
+        },
+        {
+          "label": "Main results",
+          "value": "HAWK lattice automorphism; 7-round AES Möbius Bridge attack"
+        },
+        {
+          "label": "Extra findings",
+          "value": "Attacks on 13-round LEA and 6-round Serpent"
+        },
+        {
+          "label": "Code",
+          "value": "github.com/anthropics/cryptography-research-demo (Apache-2.0)"
+        },
+        {
+          "label": "Benchmark",
+          "value": "CryptanalysisBench (arXiv 2607.18538, 191 tasks)"
+        },
+        {
+          "label": "Production impact",
+          "value": "None — attacks target non-deployed HAWK candidate and reduced-round AES"
+        }
+      ],
+      "explainer": {
+        "tagline": "Claude Mythos Preview found new mathematical attacks that halve HAWK's post-quantum key strength and speed 7-round AES cryptanalysis 200-800x, released with open demo code.",
+        "whatIsIt": "The research post describes two new cryptanalytic results from Claude Mythos Preview, Anthropic's restricted security model. On HAWK, a NIST post-quantum signature candidate, Claude located a nontrivial automorphism in the underlying lattice that theorists suspected existed but had never found, effectively halving key strength. On 7-round reduced AES, Claude produced a new attack the team calls the Möbius Bridge fingerprint.",
+        "howItWorks": "The HAWK result came from about 60 hours of researcher-guided work with Claude Mythos, at roughly $100,000 in API costs. The AES Möbius Bridge attack ran near-autonomously over three days, producing billions of tokens with only three brief prompts from the human. Both were validated by human cryptographers and published as PDFs alongside a companion CryptanalysisBench paper (arXiv:2607.18538) that scores five frontier models on 191 cryptanalytic tasks.",
+        "whyItMatters": "Cryptanalysis is one of the highest-stakes places to test model capability: real progress means real weakening of algorithms defenders depend on. The HAWK and AES results are theoretical — HAWK is not deployed, and the AES attack is on 7 of 10 rounds — so no production system is at risk today. But shipping open demo code plus a benchmark means the wider cryptography community can now rerun, extend and stress-test what Claude found.",
+        "forWho": "cryptographers, post-quantum standards reviewers, AI-safety researchers",
+        "tryIt": "git clone https://github.com/anthropics/cryptography-research-demo"
+      },
+      "image": {
+        "url": "https://www.anthropic.com/api/opengraph-illustration?name=Object-LaptopSecure&backgroundColor=sky",
+        "alt": "Anthropic research illustration for discovering cryptographic weaknesses with Claude",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Research post",
+          "url": "https://www.anthropic.com/research/discovering-cryptographic-weaknesses"
+        },
+        {
+          "label": "HAWK paper (PDF)",
+          "url": "https://www.anthropic.com/document/hawk_key_recovery.pdf"
+        },
+        {
+          "label": "AES paper (PDF)",
+          "url": "https://www.anthropic.com/document/aes_mobius_bridge.pdf"
+        },
+        {
+          "label": "CryptanalysisBench",
+          "url": "https://arxiv.org/abs/2607.18538"
+        },
+        {
+          "label": "Demo code",
+          "url": "https://github.com/anthropics/cryptography-research-demo"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does this break AES in production?",
+          "a": "No. The Möbius Bridge attack targets 7-round reduced AES, not the full 10-round AES used in production. Anthropic states clearly that no deployed cryptosystem is currently affected. The result is a cryptanalytic advance on a weakened variant, useful for stress-testing where the security margins really lie."
+        },
+        {
+          "q": "What happens to HAWK now?",
+          "a": "HAWK is a NIST post-quantum signature candidate, not yet standardized or deployed. Claude Mythos found a lattice automorphism that roughly halves the effective key strength, so HAWK now needs larger parameters to hit its target security level. The finding is being fed into NIST's review of the scheme."
+        },
+        {
+          "q": "How autonomous was the AI in this work?",
+          "a": "The two results sit at different points on the autonomy scale. HAWK took about 60 hours of tight researcher collaboration with Claude Mythos and around $100,000 in API costs. The AES Möbius Bridge attack ran near-autonomously for three days, producing billions of tokens with only three brief human encouragement prompts."
+        },
+        {
+          "q": "Is the code released?",
+          "a": "Yes, Anthropic published a demo repository at github.com/anthropics/cryptography-research-demo under Apache-2.0, containing the AES, HAWK and LEA cryptanalysis code. The repo is marked as an unmaintained research artifact rather than a supported library."
+        },
+        {
+          "q": "What is CryptanalysisBench?",
+          "a": "CryptanalysisBench (arXiv:2607.18538, submitted July 20, 2026) is a companion benchmark of 191 tasks across six families of cryptographic primitives. It was built to track whether frontier AI models can perform real cryptanalysis, with results showing they now break between 65-86% of simpler schemes and produce genuinely novel attacks on harder ones."
+        }
+      ],
+      "publishDate": "2026-07-28T17:55:44.520Z"
+    },
+    {
+      "id": "nvidia-agent-toolkit-physicsnemo-cudax",
+      "categories": [
+        "tool",
+        "ecosystem"
+      ],
+      "title": "NVIDIA Agent Toolkit — PhysicsNeMo and CUDA-X plug into agents for chip and physics work",
+      "org": "NVIDIA",
+      "date": "2026-07-26",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-expands-nvidia-agent-toolkit-with-nvidia-physicsnemo-and-cuda-x-libraries-to-transform-how-the-world-engineers-designs-and-builds",
+      "summary": "NVIDIA plugged PhysicsNeMo and the CUDA-X libraries into its Agent Toolkit so autonomous AI engineers can now call physics models, sparse solvers, and quantum chemistry kernels directly, with Cadence, Siemens, Synopsys, Samsung and TSMC as launch users.",
+      "tags": [
+        "nvidia",
+        "agent-toolkit",
+        "physicsnemo",
+        "cuda-x",
+        "nemotron-3-ultra",
+        "ace-rtl",
+        "chip-design",
+        "eda",
+        "engineering",
+        "agents",
+        "quantum-chemistry",
+        "sparse-solvers"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "NVIDIA"
+        },
+        {
+          "label": "What's new",
+          "value": "PhysicsNeMo + CUDA-X libraries added to Agent Toolkit"
+        },
+        {
+          "label": "New CUDA-X libraries",
+          "value": "cuISS (iterative sparse), cuDSS (direct sparse), cuEST (quantum chemistry)"
+        },
+        {
+          "label": "Reference model",
+          "value": "Nemotron 3 Ultra — leads open models on agentic RTL coding"
+        },
+        {
+          "label": "Reference agent",
+          "value": "ACE-RTL — hardware-design agent from NVIDIA Research"
+        },
+        {
+          "label": "Launch customers",
+          "value": "Cadence, Siemens, Synopsys, Samsung, Silvaco, Keysight, TSMC, ChipAgents"
+        }
+      ],
+      "explainer": {
+        "tagline": "NVIDIA's Agent Toolkit gains PhysicsNeMo and CUDA-X libraries as agent-ready skills, aimed at automating chip design and physics workflows.",
+        "whatIsIt": "The Agent Toolkit expansion turns PhysicsNeMo and updated CUDA-X libraries into skills that agents can call. PhysicsNeMo brings AI physics models for design and simulation. CUDA-X adds new iterative and direct sparse solvers (cuISS, cuDSS) plus quantum chemistry tools (cuEST). Together they extend the toolkit from general enterprise agents into hard engineering domains.",
+        "howItWorks": "Agent Toolkit already provided the harness for building autonomous AI engineers on NVIDIA infrastructure. The new libraries register as tools the agents can invoke, so a workflow like chip verification, structural simulation or molecular modeling can be delegated to an agent that in turn calls accelerated physics or math kernels. NVIDIA points at Nemotron 3 Ultra as its reference model and ACE-RTL, from NVIDIA Research, as a reference hardware-design agent on top of it.",
+        "whyItMatters": "Engineering software vendors — Cadence, Siemens, Synopsys — plus foundries like TSMC and system houses like Samsung are the named launch users. That signals the EDA and semiconductor stack is where NVIDIA is pushing autonomous agents next, replacing bespoke scripting around solvers with agents that can plan, call the solver, and iterate on the result.",
+        "forWho": "chip design and EDA teams, physics simulation groups, engineering software vendors",
+        "tryIt": "https://developer.nvidia.com/physicsnemo"
+      },
+      "image": {
+        "url": "https://iprsoftwaremedia.com/219/files/202607/634ffea7eb85d313ed0fd30311186e9a/6a63f3343d6332dc602a2535_nvidia-agent-toolkit-dac/nvidia-agent-toolkit-dac_68fd82ab-e9ff-4b9a-b17e-e7309d6963a7-prv.jpg?v=68fd82ab-e9ff-4b9a-b17e-e7309d6963a7",
+        "alt": "NVIDIA Agent Toolkit expansion at DAC with PhysicsNeMo and CUDA-X libraries",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "NVIDIA press release",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-expands-nvidia-agent-toolkit-with-nvidia-physicsnemo-and-cuda-x-libraries-to-transform-how-the-world-engineers-designs-and-builds"
+        },
+        {
+          "label": "PhysicsNeMo",
+          "url": "https://developer.nvidia.com/physicsnemo"
+        },
+        {
+          "label": "CUDA-X",
+          "url": "https://www.nvidia.com/en-us/technologies/cuda-x/"
+        },
+        {
+          "label": "CVDP benchmark",
+          "url": "https://github.com/NVlabs/cvdp_benchmark"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What is new versus the existing Agent Toolkit?",
+          "a": "The Agent Toolkit was already NVIDIA's harness for building enterprise AI agents. The July 26, 2026 expansion adds PhysicsNeMo (AI physics models) and updated CUDA-X libraries (new sparse solvers and quantum chemistry kernels) as agent-ready skills, so agents can now directly call physics simulation and math primitives instead of bolting them on."
+        },
+        {
+          "q": "Which industries are the target?",
+          "a": "Chip design and engineering. NVIDIA calls out Cadence, Siemens and Synopsys — the three major EDA vendors — plus Samsung, Silvaco, Keysight, TSMC and startup ChipAgents as launch users. The reference agent, ACE-RTL, is aimed squarely at register-transfer-level chip design and verification."
+        },
+        {
+          "q": "What model do the reference agents use?",
+          "a": "NVIDIA highlights Nemotron 3 Ultra, its open-weights 550B mixture-of-experts model, as leading among open models on agentic RTL coding. ACE-RTL is the NVIDIA Research hardware-design agent built on top of it. Customers can substitute their own model — the toolkit itself is model-agnostic."
+        },
+        {
+          "q": "Is any of this open-source?",
+          "a": "PhysicsNeMo, CUDA-X and Nemotron 3 Ultra are all published by NVIDIA with open weights or open source components on GitHub and Hugging Face. The Agent Toolkit itself is a commercial NVIDIA product; the newly-added libraries and the CVDP benchmark used to evaluate ACE-RTL are freely accessible."
+        }
+      ],
+      "publishDate": "2026-07-28T17:55:44.520Z"
+    },
     {
       "id": "amazon-nova-wind-down-jul28",
       "categories": [
