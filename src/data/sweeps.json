@@ -26328,6 +26328,46 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260728t211620z",
+      "timestamp": "2026-07-28T21:16:20.682Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs, GitHub trending, HuggingFace models/datasets/papers, HN front page, all 8 YouTube creator feeds, HF papers, and the bio/pharma lane. Added two items: Grafana Labs shipped six agentic ops tools to GA on Jul 27 (multi-outlet coverage: Yahoo Finance, hpcwire, VMBlog, InfoQ), and Sebastian Raschka published an architecture deep-dive on Kimi K3 today (202 HN points). No qualifying fresh video (yt-rss-scan returned zero), no fresh datasets, no fresh papers with the 2-of-N bar, and no biomedical release inside the 72h window.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "grafana-ai-week-agentic-ops",
+          "title": "Grafana AI Week — six agentic ops tools land in Grafana Cloud",
+          "category": "tool",
+          "note": "Grafana Labs shipped six AI ops products to GA on Jul 27, opening AI Week. Multi-outlet press coverage (Yahoo Finance, hpcwire, VMBlog, InfoQ, itemonline) and direct company blog with concrete developer changes (MCP server, gcx CLI, Assistant Investigations)."
+        },
+        {
+          "id": "sebastian-raschka-kimi-k3-arch-jul28",
+          "title": "Sebastian Raschka — Kimi K3's NoPE, LatentMoE, and attention residuals",
+          "category": "article",
+          "note": "Sebastian Raschka posted a Kimi K3 architecture deep-dive today (Jul 28). Article hit 202 points on HN front page and clears the influential-voice bar; adds an independent technical read of the largest open-weight model."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }

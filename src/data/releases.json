@@ -1,8 +1,176 @@
 {
-  "generatedAt": "2026-07-28T19:29:08.719Z",
+  "generatedAt": "2026-07-28T21:16:20.682Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "grafana-ai-week-agentic-ops",
+      "categories": [
+        "tool"
+      ],
+      "title": "Grafana AI Week — six agentic ops tools land in Grafana Cloud",
+      "org": "Grafana Labs",
+      "date": "2026-07-27",
+      "url": "https://grafana.com/blog/explore-what-s-next-in-agentic-operations-introducing-ai-week/",
+      "summary": "Grafana Labs opened AI Week on July 27 by pushing six AI ops products to general availability, headlined by Assistant Investigations, a Grafana Cloud MCP server and gcx, a new agent-friendly CLI.",
+      "tags": [
+        "grafana",
+        "grafana-labs",
+        "observability",
+        "ai-agents",
+        "agentic-ops",
+        "mcp",
+        "mcp-server",
+        "assistant-investigations",
+        "gcx",
+        "cli",
+        "grafana-cloud",
+        "incident-response",
+        "sre",
+        "devtools"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Grafana Labs"
+        },
+        {
+          "label": "Event",
+          "value": "AI Week, 27–31 July 2026"
+        },
+        {
+          "label": "Status",
+          "value": "6 tools generally available today"
+        },
+        {
+          "label": "New tools",
+          "value": "Assistant Investigations, Assistant Workspace, Assistant Automations, Cloud MCP server, gcx CLI, Agent Observability"
+        },
+        {
+          "label": "Previews",
+          "value": "Assistant Watchers, Teams integration, Mobile Assistant"
+        },
+        {
+          "label": "Availability",
+          "value": "Grafana Cloud — free-forever tier and paid plans"
+        },
+        {
+          "label": "License",
+          "value": "Proprietary SaaS; gcx and MCP server published as Claude Code plugins"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What did Grafana Labs launch during AI Week Day 1?",
+          "a": "Grafana AI Week Day 1 shipped six products to general availability on Grafana Cloud: Assistant Investigations (autonomous incident responder), Assistant Workspace (shared chat + canvas), Assistant Automations (scheduled prompts), the Grafana Cloud MCP server, gcx (agentic CLI for dashboards and alerts), and Grafana Agent Observability for monitoring LLM apps."
+        },
+        {
+          "q": "What is the Grafana Cloud MCP server for?",
+          "a": "The Grafana Cloud MCP server gives any MCP-compatible client — Claude Code, GitHub Copilot, or a custom agent — direct read and write access to dashboards, alert rules, incidents, and data sources without copy-pasting metrics. It ships as a Claude Code plugin and as a hosted service inside Grafana Cloud."
+        },
+        {
+          "q": "Which parts are not yet GA?",
+          "a": "Three items stay in preview after Grafana AI Week Day 1: Assistant Watchers (public preview) monitors systems based on operational context, the Microsoft Teams integration (private preview) pushes findings into Teams channels, and Mobile Assistant (public preview) runs inside the updated Grafana Mobile app."
+        },
+        {
+          "q": "Where can I try Grafana Assistant Investigations?",
+          "a": "Assistant Investigations is included with every Grafana Cloud stack, including the free-forever tier. Enable it from the Grafana Assistant sidebar, point it at an incident, and it will investigate metrics, logs, traces and profiles in parallel and return a shareable root-cause report you can edit before sending on."
+        }
+      ],
+      "links": [
+        {
+          "label": "AI Week Announcement",
+          "url": "https://grafana.com/blog/explore-what-s-next-in-agentic-operations-introducing-ai-week/"
+        },
+        {
+          "label": "gcx + MCP Deep Dive",
+          "url": "https://grafana.com/blog/telemetry-driven-development-how-to-gain-confidence-in-your-coding-agents-behavior-with-gcx-and-grafana-mcp/"
+        },
+        {
+          "label": "Investigations Docs",
+          "url": "https://grafana.com/docs/grafana-cloud/machine-learning/assistant/platform/investigation/"
+        },
+        {
+          "label": "AI Week Landing Page",
+          "url": "https://grafana.ai/events/ai-week"
+        }
+      ],
+      "explainer": {
+        "tagline": "Grafana's Assistant becomes an agent stack — investigations, MCP, and a CLI drop to GA on the same day.",
+        "whatIsIt": "Grafana AI Week Day 1 turns Grafana Assistant into a full agentic operations layer. Six products went generally available on July 27: Assistant Investigations, Assistant Workspace, Assistant Automations, the Grafana Cloud MCP server, the gcx CLI, and Grafana Agent Observability.",
+        "howItWorks": "Assistant Investigations spawns background agents that fan out across metrics, logs, traces and profiles in parallel and return a signed root-cause report. The Grafana Cloud MCP server exposes dashboards, alert rules and data sources over the Model Context Protocol, and gcx lets Claude Code or GitHub Copilot manage those resources as code with GitOps semantics.",
+        "whyItMatters": "This closes the loop from planning to production for teams already running Grafana. SREs get autonomous root-cause reports without leaving their dashboards, and coding agents can now read live telemetry when they draft a change, not only when something breaks.",
+        "forWho": "SREs, platform teams, and developers building agentic ops workflows",
+        "tryIt": "Install the plugin at claude.com/plugins/grafana-mcp"
+      },
+      "image": {
+        "url": "https://a-us.storyblok.com/f/1022730/1200x628/e81f00d467/ai-week-meta.png/m/1200x630/filters:quality(80)/",
+        "alt": "Grafana AI Week 2026 banner",
+        "fit": "cover"
+      },
+      "publishDate": "2026-07-28T21:16:20.682Z"
+    },
+    {
+      "id": "sebastian-raschka-kimi-k3-arch-jul28",
+      "categories": [
+        "article"
+      ],
+      "title": "Sebastian Raschka — Kimi K3's NoPE, LatentMoE, and attention residuals",
+      "org": "Sebastian Raschka",
+      "date": "2026-07-28",
+      "url": "https://sebastianraschka.com/blog/2026/kimi-k3-architecture-notes.html",
+      "summary": "Sebastian Raschka reads the Kimi K3 architecture end to end: a scaled-up Kimi Linear with LatentMoE compression, NoPE across every layer, and attention residuals that cost ~4% training compute for a real loss win.",
+      "tags": [
+        "sebastian-raschka",
+        "kimi-k3",
+        "moonshot-ai",
+        "architecture",
+        "moe",
+        "latent-moe",
+        "nope",
+        "no-positional-embeddings",
+        "attention-residuals",
+        "kimi-delta-attention",
+        "explainer",
+        "llm-internals"
+      ],
+      "importance": "notable",
+      "links": [
+        {
+          "label": "Full Article",
+          "url": "https://sebastianraschka.com/blog/2026/kimi-k3-architecture-notes.html"
+        },
+        {
+          "label": "Kimi K3 on Hugging Face",
+          "url": "https://huggingface.co/moonshotai/Kimi-K3"
+        },
+        {
+          "label": "Author on X",
+          "url": "https://x.com/rasbt"
+        }
+      ],
+      "explainer": {
+        "tagline": "Raschka turns Kimi K3's dense architecture diagram into a plain-English walk through — component by component.",
+        "whatIsIt": "Kimi K3 Architecture Notes is a July 28 post by Sebastian Raschka that reads Moonshot's 2.8T open-weight release layer by layer. Raschka frames K3 as a production-scale Kimi Linear, ~58× larger than the earlier 48B model.",
+        "howItWorks": "The write-up highlights three novel choices: LatentMoE, which compresses the giant MoE linear layers similar to multi-head latent attention; NoPE (no positional embeddings) across every layer, the first frontier-level model to drop RoPE entirely; and cross-layer attention residuals that connect residual streams with attention weights, adding ~4% training and ~2% inference cost for a validation-loss win.",
+        "whyItMatters": "This is the clearest independent read of K3 anyone has published. Anyone deciding whether to fine-tune or self-host Kimi K3 now has a walk-through of what is new versus prior Kimi Linear or Nemotron 3 Ultra, and why the trade-offs might land in their workload.",
+        "forWho": "ML researchers, model implementers, and infra engineers evaluating Kimi K3",
+        "tryIt": "Read: sebastianraschka.com/blog/2026/kimi-k3-architecture-notes.html"
+      },
+      "image": {
+        "url": "https://sebastianraschka.com/images/blog/2026/kimi-k3-architecture-notes/kimi-k3-architecture.png",
+        "alt": "Kimi K3 architecture diagram from Sebastian Raschka's blog post",
+        "fit": "contain"
+      },
+      "author": {
+        "name": "Sebastian Raschka",
+        "handle": "@rasbt",
+        "profileUrl": "https://sebastianraschka.com",
+        "avatarUrl": "https://github.com/rasbt.png"
+      },
+      "publishDate": "2026-07-28T21:16:20.682Z"
+    },
     {
       "id": "doubleword-kimi-delta-attention",
       "categories": [
