@@ -26295,6 +26295,39 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260728t192908z",
+      "timestamp": "2026-07-28T19:29:08.719Z",
+      "source": "github-actions-sweep",
+      "summary": "Scanned lab blogs (Anthropic/OpenAI/Google DeepMind/Meta/xAI/Mistral/Cohere/Qwen/Moonshot/DeepSeek/Z.ai/MiniMax), GitHub trending, HF models/datasets/papers, HN top 30, YouTube RSS across 8 creators, Simon Willison, and the bio/neuro/pharma lane (Isomorphic/EvolutionaryScale/Arc/Hemispheric/Recursion/Insilico/AbSci/Nature/STAT). One qualifying add: Doubleword's KDA/DeltaNet walkthrough (Jul 27, HN #2 at 245 pts). Poolside Laguna S 2.1, Upstage Solar Open 2, Google Gemini 3.6 Flash were all outside the 72h window (Jul 21-22). YouTube RSS returned zero fresh videos. Bio/neuro/pharma lane returned nothing within 72h.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "doubleword-kimi-delta-attention",
+          "title": "Kimi Delta Attention explained — Doubleword walks the DeltaNet lineage",
+          "category": "article",
+          "note": "HN front page rank 2 with 245 points on 2026-07-28 (well over the 150-pt bar). Jul 27 publication date, Doubleword co-founder Jamie Dborin, explains the DeltaNet/KDA mechanism that runs inside the just-released Kimi K3."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }

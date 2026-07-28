@@ -1,8 +1,65 @@
 {
-  "generatedAt": "2026-07-28T17:55:44.520Z",
+  "generatedAt": "2026-07-28T19:29:08.719Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "doubleword-kimi-delta-attention",
+      "categories": [
+        "article"
+      ],
+      "title": "Kimi Delta Attention explained — Doubleword walks the DeltaNet lineage",
+      "org": "Doubleword",
+      "date": "2026-07-27",
+      "url": "https://blog.doubleword.ai/you-could-have-come-up-with-kimi-delta-attention",
+      "summary": "Doubleword co-founder Jamie Dborin walks step by step through the DeltaNet family of linear-attention variants and shows how you could arrive at Kimi Delta Attention (KDA), the layer now used inside Kimi K3.",
+      "tags": [
+        "article",
+        "explainer",
+        "linear-attention",
+        "kimi-delta-attention",
+        "kda",
+        "delta-net",
+        "attention-mechanism",
+        "kimi-k3",
+        "moonshot",
+        "doubleword"
+      ],
+      "importance": "notable",
+      "author": {
+        "name": "Jamie Dborin",
+        "profileUrl": "https://www.linkedin.com/in/jamesdborin/",
+        "avatarUrl": "https://github.com/jamesdborin.png"
+      },
+      "explainer": {
+        "tagline": "A guided walk through the DeltaNet family that lands on Kimi Delta Attention, the linear-attention layer inside Kimi K3.",
+        "whatIsIt": "Kimi Delta Attention explained is a technical blog post from Doubleword co-founder Jamie Dborin, published July 27, 2026. It walks the reader through the DeltaNet family of linear-attention variants, one step at a time, until the reader can derive Kimi Delta Attention (KDA) themselves — the exact layer that now runs inside Moonshot's Kimi K3 and recent Qwen models.",
+        "howItWorks": "The article starts from plain softmax attention, then swaps in linear attention (a fixed-size recurrent state instead of a KV cache), adds the delta rule to make each write correct for what was already stored, adds a gate to control forgetting, and ends at KDA, which sharpens forgetting with channel-wise decay. Each step is motivated by a small edit to the hidden state, so KDA reads as an obvious next move rather than a black box.",
+        "whyItMatters": "The DeltaNet lineage is the mechanism behind the linear-attention layers in Kimi K3 and recent Qwen releases, so understanding KDA is the shortest path to knowing why those models keep long contexts fast. Dborin's walkthrough gives practitioners a mental model they can extend when the next linear-attention variant lands.",
+        "forWho": "ML researchers and engineers working on efficient long-context attention.",
+        "tryIt": "Read the post at blog.doubleword.ai/you-could-have-come-up-with-kimi-delta-attention"
+      },
+      "image": {
+        "url": "https://github.com/jamesdborin.png",
+        "alt": "Jamie Dborin, Doubleword co-founder and author of the post",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://blog.doubleword.ai/you-could-have-come-up-with-kimi-delta-attention"
+        },
+        {
+          "label": "HN discussion",
+          "url": "https://news.ycombinator.com/item?id=49085909"
+        },
+        {
+          "label": "Kimi K3 model",
+          "url": "https://huggingface.co/moonshotai/kimi-k3"
+        }
+      ],
+      "publishDate": "2026-07-28T19:29:08.719Z"
+    },
     {
       "id": "anthropic-mythos-cryptographic-weaknesses",
       "categories": [
