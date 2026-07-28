@@ -1,8 +1,219 @@
 {
-  "generatedAt": "2026-07-27T23:08:45.172Z",
+  "generatedAt": "2026-07-28T02:11:07.120Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "nvidia-open-secure-ai-alliance",
+      "categories": [
+        "ecosystem",
+        "security",
+        "repo"
+      ],
+      "title": "Open Secure AI Alliance — 50-company coalition open-sources AI security tools",
+      "org": "NVIDIA",
+      "date": "2026-07-27",
+      "url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
+      "summary": "NVIDIA launched the Open Secure AI Alliance with 50+ founding partners — Microsoft, IBM, Red Hat, CrowdStrike, Hugging Face — and open code including NOOA, MDASH, Lightwell, and Safetensors. OpenAI, Anthropic, and Google are absent.",
+      "tags": [
+        "ecosystem",
+        "security",
+        "open-source",
+        "cybersecurity",
+        "nvidia",
+        "microsoft",
+        "ibm",
+        "red-hat",
+        "hugging-face",
+        "linux-foundation",
+        "agent-framework"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Founding members": "50+",
+        "NOOA stars": 381,
+        "License": "Apache-2.0 (NOOA)"
+      },
+      "quickFacts": [
+        {
+          "label": "Coalition",
+          "value": "Open Secure AI Alliance (OSAIA)"
+        },
+        {
+          "label": "Founding members",
+          "value": "50+ including NVIDIA, Microsoft, IBM, Red Hat, Cisco, CrowdStrike, Palo Alto Networks, Hugging Face, Linux Foundation, Palantir"
+        },
+        {
+          "label": "Notably absent",
+          "value": "OpenAI, Anthropic, Google"
+        },
+        {
+          "label": "NVIDIA contribution",
+          "value": "NOOA agent framework on GitHub (Apache-2.0)"
+        },
+        {
+          "label": "Microsoft contribution",
+          "value": "MDASH multi-model agentic scanning harness"
+        },
+        {
+          "label": "IBM + Red Hat contribution",
+          "value": "Lightwell for signed patches across open-source supply chains"
+        },
+        {
+          "label": "Hugging Face contribution",
+          "value": "Safetensors weights format"
+        }
+      ],
+      "explainer": {
+        "tagline": "A cross-industry alliance to give cyber defenders open AI models and agent frameworks they can inspect, run, and modify.",
+        "whatIsIt": "The Open Secure AI Alliance (OSAIA) is a 50+ member coalition launched by NVIDIA on July 27 to build and share open tools for defending software and AI agents. Founding members span cloud, security, and AI research: Microsoft, IBM, Red Hat, Cisco, CrowdStrike, Palo Alto Networks, Hugging Face, Palantir, Siemens, HPE, Databricks, and the Linux Foundation among others.",
+        "howItWorks": "Members contribute production-grade open code that any defender can adopt. NVIDIA opened NOOA (Labs Object-Oriented Agents), a Python framework for building and auditing AI agents, on GitHub under Apache-2.0. Microsoft added MDASH, a multi-model agentic scanning harness for finding exploitable bugs. IBM and Red Hat contributed Lightwell for distributing digitally signed patches across open-source supply chains. Hugging Face brought Safetensors, and HPE brought SPIFFE/SPIRE zero-trust identity for agents.",
+        "whyItMatters": "Enterprise security teams have relied on closed AI stacks they cannot inspect. OSAIA gives defenders open alternatives they can run inside their own perimeters — inspect the weights, adapt the agent code, audit every prompt. The absence of OpenAI, Anthropic, and Google from the founding roster underlines the split: the labs holding the strongest closed models sit outside the alliance built to secure them.",
+        "forWho": "security engineers, platform teams, and AI infrastructure operators",
+        "tryIt": "https://github.com/NVIDIA-NeMo/labs-OO-Agents"
+      },
+      "faq": [
+        {
+          "q": "Which companies founded the Open Secure AI Alliance?",
+          "a": "The Open Secure AI Alliance launched with 50+ founding partners including NVIDIA, Microsoft, IBM, Red Hat, Cisco, CrowdStrike, Palo Alto Networks, Hugging Face, Palantir, Siemens, HPE, Cloudflare, Databricks, Elastic, LangChain, Nous Research, Reflection AI, Salesforce, ServiceNow, Snowflake, and the Linux Foundation."
+        },
+        {
+          "q": "Why are OpenAI, Anthropic, and Google not part of OSAIA?",
+          "a": "The three leading closed-model labs — OpenAI, Anthropic, and Google — are not listed among the Open Secure AI Alliance's founding partners. NVIDIA framed the alliance around defenders having open models they can inspect and adapt, which is at odds with the closed-weights approach those three labs favor for their frontier systems."
+        },
+        {
+          "q": "What is NOOA and where can developers get it?",
+          "a": "NOOA (NVIDIA Labs Object-Oriented Agents) is a model-agnostic Python framework that represents an AI agent as a single Python class. NVIDIA released it under Apache-2.0 on GitHub at github.com/NVIDIA-NeMo/labs-OO-Agents on July 20 and expanded it as its OSAIA contribution on July 27; the repo currently sits at 381 stars and installs directly from source."
+        },
+        {
+          "q": "What other open tools does the alliance ship at launch?",
+          "a": "OSAIA's launch bundle includes Microsoft's MDASH multi-agent security scanning harness, IBM and Red Hat's Lightwell signed-patch distribution for open-source supply chains, Hugging Face's Safetensors safe weight format, and HPE's SPIFFE/SPIRE zero-trust identity standards adapted for AI agents. All are open source and free to adopt."
+        }
+      ],
+      "image": {
+        "url": "https://blogs.nvidia.com/wp-content/uploads/2026/07/osaia-logo-garden_press-kit_1920x1080_V4.png",
+        "alt": "Logo garden showing the founding members of the Open Secure AI Alliance",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "NVIDIA Announcement",
+          "url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/"
+        },
+        {
+          "label": "NOOA Repo",
+          "url": "https://github.com/NVIDIA-NeMo/labs-OO-Agents"
+        },
+        {
+          "label": "Hacker News Report",
+          "url": "https://thehackernews.com/2026/07/nvidia-forms-37-member-open-secure-ai.html"
+        },
+        {
+          "label": "Help Net Security",
+          "url": "https://www.helpnetsecurity.com/2026/07/27/nvidia-open-secure-ai-alliance/"
+        }
+      ],
+      "publishDate": "2026-07-28T02:11:07.120Z"
+    },
+    {
+      "id": "anthropic-claude-share-google-indexed",
+      "categories": [
+        "security"
+      ],
+      "title": "Claude shared chats surfaced in Google Search — Anthropic patches missing noindex tag",
+      "org": "Anthropic",
+      "date": "2026-07-27",
+      "url": "https://hackread.com/google-indexed-claude-ai-shared-chats-results-removed/",
+      "summary": "Hundreds of shared Claude conversations were indexed by Google and Bing after a missing noindex tag on claude.ai/share pages. Exposed content included resumes, API keys, medical notes, and legal notes. Anthropic added the tag on July 27.",
+      "tags": [
+        "security",
+        "privacy",
+        "anthropic",
+        "claude",
+        "data-exposure",
+        "search-indexing",
+        "noindex"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Product",
+          "value": "Claude — shared conversation links (claude.ai/share)"
+        },
+        {
+          "label": "Issue",
+          "value": "Missing noindex meta tag let Google and Bing index shared chats"
+        },
+        {
+          "label": "First noticed",
+          "value": "Reddit post on 2026-07-25"
+        },
+        {
+          "label": "Data exposed",
+          "value": "Resumes with real names and phone numbers, API keys, crypto wallet details, medical notes, legal correspondence"
+        },
+        {
+          "label": "Anthropic fix",
+          "value": "noindex tag added; delisting largely complete by 2026-07-27"
+        },
+        {
+          "label": "Bing status",
+          "value": "Still surfacing some links after Google delisting"
+        },
+        {
+          "label": "Spokesperson",
+          "value": "Gabby Curtis (Anthropic)"
+        }
+      ],
+      "explainer": {
+        "tagline": "A missing meta tag on Claude's shared-conversation pages let Google and Bing index private chats.",
+        "whatIsIt": "Anthropic's shared-conversation feature lets Claude users publish a chat to a public claude.ai/share URL. Those pages carried no noindex directive, so once a link appeared on any public site — a tweet, a forum, a Slack export — search engines were free to crawl and rank it. A Reddit post on July 25 showed that site:claude.ai/share returned hundreds of strangers' conversations.",
+        "howItWorks": "Anthropic's robots.txt blocks crawlers from discovering share URLs on their own, but a bare noindex tag was missing from the share page itself. Once a URL leaked onto any indexable site, Google and Bing indexed the target. Researchers found conversations containing resumes with real names and phone numbers, API keys, crypto wallet details, a lawyer's notes on an ethics case, medical diagnoses, and internal company planning documents.",
+        "whyItMatters": "This is a class of privacy failure users cannot easily audit — the chat was shared, so nothing looked wrong, but the audience quietly expanded to anyone typing the right Google query. Anthropic spokesperson Gabby Curtis stressed the company does not send search engines chat directories or sitemaps; the exposure came from users sharing links publicly. Anthropic added the noindex tag on July 27 and Google delisting is largely complete, but cached copies, screenshots, and third-party scrapes gathered during the window are permanent."
+      },
+      "faq": [
+        {
+          "q": "How did Google index Claude's shared chats?",
+          "a": "Claude's public share pages (claude.ai/share/...) shipped without a noindex meta tag. Anthropic's robots.txt blocked crawlers from discovering URLs on their own, but once a share link appeared on any public page — a tweet, forum post, or Slack export — Google and Bing crawled and indexed the target. Users could then find strangers' chats with site:claude.ai/share."
+        },
+        {
+          "q": "What kind of data was exposed in the indexed Claude chats?",
+          "a": "Indexed Claude conversations included resumes with real names and phone numbers, API keys, cryptocurrency wallet details, a lawyer's notes on a potential ethics case, medical information including diagnoses and treatments, and internal corporate planning documents and strategic briefs. Roughly 600 conversations were seen indexed before Anthropic's fix landed."
+        },
+        {
+          "q": "Did Anthropic fix the Claude shared-chat indexing bug?",
+          "a": "Yes. Anthropic added the missing noindex meta tag on July 27, 2026, and by that afternoon Google had begun delisting Claude share URLs — a site:claude.ai/share query now returns no results. Bing was still surfacing some links after the Google fix, and cached copies, screenshots, and third-party scrapes captured during the exposure window remain outside anyone's control."
+        },
+        {
+          "q": "Should I delete or unpublish my Claude shared conversations?",
+          "a": "If you shared a Claude conversation, Anthropic's fix stops new search-engine indexing but does not delete the underlying share URL. Anyone who saved or bookmarked a link can still open it until you flip that specific conversation from Public back to Private inside Claude. Review your shared chats and unshare any that contain personal data, credentials, or sensitive work."
+        }
+      ],
+      "image": {
+        "url": "https://hackread.com/wp-content/uploads/2026/07/google-indexed-claude-ai-shared-chats-results-removed.jpg",
+        "alt": "Article header illustration for the Claude shared chats indexing incident",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "HackRead Report",
+          "url": "https://hackread.com/google-indexed-claude-ai-shared-chats-results-removed/"
+        },
+        {
+          "label": "Android Authority Report",
+          "url": "https://www.androidauthority.com/shared-claude-chats-on-google-search-3691594/"
+        },
+        {
+          "label": "Cybersecurity News",
+          "url": "https://cybersecuritynews.com/claude-ai-shared-chats/"
+        },
+        {
+          "label": "Decrypt: Publishing Silently",
+          "url": "https://decrypt.co/374412/anthropic-share-button-quietly-publishing-claude-chats-google"
+        }
+      ],
+      "publishDate": "2026-07-28T02:11:07.120Z"
+    },
     {
       "id": "moonshot-kimi-k3-open-weights",
       "categories": [

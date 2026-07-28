@@ -26059,6 +26059,46 @@
         "tool",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260728t021107z",
+      "timestamp": "2026-07-28T02:11:07.120Z",
+      "source": "github-actions-sweep",
+      "summary": "Two major items shipped in the 72h window: NVIDIA's Open Secure AI Alliance with 50+ open-source security partners, and the Claude shared-chats search-indexing incident that Anthropic patched on July 27. Everything else fresh (Kimi K3, Anthropic open-weights position, MAI-Cyber-1-Flash, Cohere North Automations, Muse Spark 1.1) is already in the feed; Cognizant/Anthropic and Runway Media Router failed the ecosystem gate and the 72h cap respectively.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "nvidia-open-secure-ai-alliance",
+          "title": "Open Secure AI Alliance — 50-company coalition open-sources AI security tools",
+          "category": "ecosystem",
+          "note": "Foundation-move ecosystem event with concrete open-source releases (NOOA, MDASH, Lightwell, Safetensors, SPIFFE/SPIRE) — clears ecosystem gate on dev-action test."
+        },
+        {
+          "id": "anthropic-claude-share-google-indexed",
+          "title": "Claude shared chats surfaced in Google Search — Anthropic patches missing noindex tag",
+          "category": "security",
+          "note": "Multi-outlet security incident (HackRead, TweakTown, Cybernews, Android Authority, GBHackers, Decrypt, EasternHerald) with confirmed vendor response and reproducible URL scheme."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "dataset",
+        "algorithm",
+        "paper",
+        "benchmark",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }
