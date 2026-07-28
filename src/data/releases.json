@@ -1,8 +1,171 @@
 {
-  "generatedAt": "2026-07-28T12:05:30.361Z",
+  "generatedAt": "2026-07-28T14:08:38.881Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "affaan-m-ecc-2-1-0",
+      "categories": [
+        "repo",
+        "tool"
+      ],
+      "title": "ECC 2.1.0 — Plan Canvas turns terminal agent plans into a clickable browser review",
+      "org": "ECC",
+      "date": "2026-07-27",
+      "url": "https://github.com/affaan-m/ECC/releases/tag/v2.1.0",
+      "summary": "ECC 2.1.0, the 234k-star cross-harness agent system for Claude Code, Cursor, and Codex, adds Plan Canvas (annotate agent plans in the browser), a Kimi Code harness target, and self-hosted GPUs via Itô.",
+      "tags": [
+        "repo",
+        "tool",
+        "ecc",
+        "agent-harness",
+        "claude-code",
+        "codex",
+        "cursor",
+        "opencode",
+        "kimi-code",
+        "plan-canvas",
+        "release-notes"
+      ],
+      "importance": "major",
+      "metrics": {
+        "stars": "234k+",
+        "agents": "67",
+        "skills": "281"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "affaan-m (open source)"
+        },
+        {
+          "label": "Version",
+          "value": "v2.1.0"
+        },
+        {
+          "label": "Released",
+          "value": "2026-07-27"
+        },
+        {
+          "label": "License",
+          "value": "MIT"
+        },
+        {
+          "label": "Install",
+          "value": "npm install -g ecc-universal"
+        },
+        {
+          "label": "Catalog",
+          "value": "67 agents · 281 skills · 94 command shims"
+        },
+        {
+          "label": "Harnesses",
+          "value": "Claude Code, Codex, Cursor, OpenCode, Hermes, Kimi Code, OpenClaw"
+        }
+      ],
+      "explainer": {
+        "tagline": "A 234k-star agent harness adds a browser plan-review canvas, a Kimi Code target, and self-hosted GPUs.",
+        "whatIsIt": "ECC 2.1.0 ships Plan Canvas, a browser view of the plan an agent just wrote. You click any element or highlight text to attach numbered annotations, then chat with the agent from a side rail while the run continues in the terminal. The release also adds a Kimi Code install target, Hermes and OpenClaw targets, and self-hosted compute through Itô GPUs.",
+        "howItWorks": "Plan Canvas is a loopback-only local server that renders the plan file with Mermaid diagrams, tables, and task lists; edits to the plan file live-reload the page. The canvas speaks JSON, so any harness can drive it. The new ecc.session.v1 adapter layer lets ECC install into Kimi Code the same way it installs into Claude Code, and `ecc ito find` discovers open GPU capacity through Itô with read-only, guarded handoff.",
+        "whyItMatters": "Reviewing an agent plan in raw terminal markdown is the friction step for most ECC users. Pointing at the paragraph you disagree with, instead of re-typing it, cuts a round trip out of every plan-then-execute loop. The new install targets mean the same skills library now runs from Kimi Code and Hermes, and Itô compute lets teams keep sensitive agent runs off shared inference endpoints.",
+        "forWho": "Developers running Claude Code, Cursor, Codex, or OpenCode day-to-day.",
+        "tryIt": "npm install -g ecc-universal"
+      },
+      "faq": [
+        {
+          "q": "Is ECC free?",
+          "a": "ECC is MIT-licensed and free for public repositories on the OSS installer. A Pro tier at $19 per active developer seat adds private-repo coverage and the GitHub App workflow; Enterprise adds governance and policy packs."
+        },
+        {
+          "q": "Which coding agents can ECC drive?",
+          "a": "ECC 2.1.0 supports Claude Code, Codex, Cursor, OpenCode, Gemini, Zed, GitHub Copilot, and now Hermes, Kimi Code, and OpenClaw as install targets. One skills library plus the ecc.session.v1 adapter lets the same 281 skills run across every harness."
+        },
+        {
+          "q": "What does the Kimi harness target add?",
+          "a": "Passing --target kimi installs ECC directly into Kimi Code, so Moonshot's coding harness picks up the 67-agent, 281-skill catalog and the AgentShield security scanner without a manual copy step."
+        },
+        {
+          "q": "How is Itô self-hosted compute different from the OpenAI or Anthropic APIs?",
+          "a": "Itô is a marketplace of GPU capacity that ECC discovers with ecc ito find. Runs use open-source models against your own compute pool with a read-only, guarded handoff, so prompts and diffs stay off shared inference endpoints."
+        }
+      ],
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/affaan-m/ECC",
+        "alt": "affaan-m/ECC repository card — 234k-star agent harness for Claude Code, Codex, Cursor, and OpenCode",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Release Notes",
+          "url": "https://github.com/affaan-m/ECC/releases/tag/v2.1.0"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/affaan-m/ECC"
+        },
+        {
+          "label": "Homepage",
+          "url": "https://ecc.tools/"
+        }
+      ],
+      "publishDate": "2026-07-28T14:08:38.881Z"
+    },
+    {
+      "id": "humanlayer-opus-5-slopcodebench",
+      "categories": [
+        "article"
+      ],
+      "title": "Opus 5 scores 24% on SlopCodeBench — Humanlayer flags 93% of the code",
+      "org": "Humanlayer",
+      "date": "2026-07-27",
+      "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md",
+      "summary": "Dex Horthy, founder of Humanlayer, benchmarks Claude Opus 5 on SlopCodeBench and finds a 24% strict pass rate, nearly 5× more code than Opus 4.8, and quality warnings on 93% of the output.",
+      "tags": [
+        "article",
+        "humanlayer",
+        "dex-horthy",
+        "claude-opus-5",
+        "slopcodebench",
+        "coding-agents",
+        "benchmark",
+        "code-quality",
+        "context-engineering"
+      ],
+      "importance": "notable",
+      "author": {
+        "name": "Dex Horthy",
+        "handle": "@dexhorthy",
+        "profileUrl": "https://github.com/dexhorthy",
+        "avatarUrl": "https://github.com/dexhorthy.png"
+      },
+      "explainer": {
+        "tagline": "An independent third-party benchmark of Claude Opus 5's coding quality lands with a critical read.",
+        "whatIsIt": "Humanlayer's Dex Horthy ran Claude Opus 5 through SlopCodeBench, a benchmark that feeds a coding agent requirements in sequential checkpoints instead of dumping the full spec up front. Opus 5 cleared 4 of the 17 checkpoints across three problems — a 24% strict pass rate.",
+        "howItWorks": "SlopCodeBench measures how well a model absorbs new requirements without dragging past defects forward. Each checkpoint adds a change on top of the previous version of the code, so a small regression in checkpoint 2 fails everything after it. Horthy also tracked complexity metrics, warning counts, and total code volume per problem.",
+        "whyItMatters": "The Opus 5 launch page led on higher scores at coding, so the SlopCodeBench read is a useful counterweight. Opus 5 wrote almost five times as much code as Opus 4.8 per problem, and 93% of that code triggered quality warnings — with complexity climbing across checkpoints. For developers deciding whether to make Opus 5 their default coding agent, the concrete failure mode is a starting point.",
+        "forWho": "Developers evaluating Opus 5 for agentic coding, benchmark authors."
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/41b12d1f3c54cae9f1215d1afbbcaa37eb846b8624fef19c072a3678e287e61a/humanlayer/advanced-context-engineering-for-coding-agents",
+        "alt": "GitHub card for humanlayer/advanced-context-engineering-for-coding-agents — SlopCodeBench Opus 5 write-up",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "The Write-Up",
+          "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md"
+        },
+        {
+          "label": "Author",
+          "url": "https://github.com/dexhorthy"
+        },
+        {
+          "label": "Humanlayer",
+          "url": "https://www.humanlayer.dev/"
+        }
+      ],
+      "publishDate": "2026-07-28T14:08:38.881Z"
+    },
     {
       "id": "kwaipilot-kat-coder-v2-5-dev",
       "categories": [

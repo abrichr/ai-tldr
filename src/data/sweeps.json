@@ -26181,6 +26181,45 @@
         "ecosystem",
         "article"
       ]
+    },
+    {
+      "id": "sweep-20260728t140838z",
+      "timestamp": "2026-07-28T14:08:38.881Z",
+      "source": "github-actions-sweep",
+      "summary": "Two adds — ECC v2.1.0 (234k-star agent harness with browser Plan Canvas, Kimi Code target, and Itô GPUs) and Humanlayer's Dex Horthy on Opus 5 vs SlopCodeBench (24% strict pass, 93% code flagged). Anthropic/OpenAI/Google/Meta/xAI/Mistral/Cohere/Moonshot/DeepSeek quiet in the last 72h; Health-in-ChatGPT (Jul 23), Gemini 3.6 Flash / Cyber (Jul 21), Solar-Open2-250B (Jul 22), and NVIDIA Cosmos-H-Dreams (HF upload Jul 21) all past the 72h cap. No fresh YouTube videos in the RSS scan. No qualifying bio/pharma/neuro release.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "affaan-m-ecc-2-1-0",
+          "title": "ECC 2.1.0 — Plan Canvas turns terminal agent plans into a clickable browser review",
+          "category": "repo",
+          "note": "GitHub-trending #5 (~234k stars, +458 today). Real v2.1.0 tag published 2026-07-27T18:10Z on affaan-m/ECC. Adds Plan Canvas + Kimi Code target + Itô compute; catalog grows from 64/261/84 to 67/281/94 vs v2.0.0."
+        },
+        {
+          "id": "humanlayer-opus-5-slopcodebench",
+          "title": "Opus 5 scores 24% on SlopCodeBench — Humanlayer flags 93% of the code",
+          "category": "article",
+          "note": "HN #2 (343 pts, 15h ago). Commit history shows the file was authored 2026-07-27 by dexhorthy. Independent third-party benchmark of Opus 5 — not a re-announcement of the Anthropic launch already in the feed."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "algorithm",
+        "ecosystem"
+      ]
     }
   ]
 }
