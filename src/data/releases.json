@@ -1,8 +1,118 @@
 {
-  "generatedAt": "2026-07-28T02:11:07.120Z",
+  "generatedAt": "2026-07-28T05:20:43.598Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "kwaipilot-kat-coder-v2-5-dev",
+      "categories": [
+        "model",
+        "repo"
+      ],
+      "title": "KAT-Coder-V2.5-Dev — Kwaipilot's 35B open-weight agentic coding MoE",
+      "org": "Kwaipilot",
+      "date": "2026-07-26",
+      "url": "https://huggingface.co/Kwaipilot/KAT-Coder-V2.5-Dev",
+      "summary": "Kwaipilot dropped KAT-Coder-V2.5-Dev on Hugging Face under Apache 2.0. The 35B/3B-active MoE, built on Qwen3.6-35B-A3B, scores 69.4% on SWE-bench Verified and targets real repo work.",
+      "tags": [
+        "kat-coder",
+        "kwaipilot",
+        "kuaishou",
+        "coding-agent",
+        "open-weights",
+        "moe",
+        "apache-2-0",
+        "qwen",
+        "swe-bench",
+        "agentic-coding"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Params (total)": "35B",
+        "Params (active)": "3B",
+        "SWE-bench Verified": "69.4%"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Kwaipilot (Kuaishou)"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        },
+        {
+          "label": "Architecture",
+          "value": "MoE, 35B total / 3B active"
+        },
+        {
+          "label": "Base model",
+          "value": "Qwen3.6-35B-A3B"
+        },
+        {
+          "label": "Training data",
+          "value": "100,000+ verifiable repo environments, 12 languages"
+        },
+        {
+          "label": "Availability",
+          "value": "Open weights on Hugging Face; API via StreamLake for Pro variant"
+        },
+        {
+          "label": "Paper",
+          "value": "arXiv:2607.05471 (KAT-Coder-V2.5 Technical Report)"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is KAT-Coder-V2.5-Dev free to use?",
+          "a": "KAT-Coder-V2.5-Dev is released under Apache 2.0 on Hugging Face, so anyone can download the weights, run them locally, and use the model commercially without paying Kwaipilot. The stronger closed KAT-Coder-V2.5-Pro variant is API-only and served via Kuaishou's StreamLake product."
+        },
+        {
+          "q": "How does KAT-Coder-V2.5-Dev compare to the Pro version?",
+          "a": "KAT-Coder-V2.5-Dev is the open-weight sibling of KAT-Coder-V2.5-Pro. The Dev variant scores 69.4% on SWE-bench Verified and 41.02% on Terminal-Bench 2.1, while the closed Pro variant tops PinchBench at 94.9 and ranks second on SWE-Bench Pro behind Claude Opus 4.8."
+        },
+        {
+          "q": "What base model was KAT-Coder-V2.5-Dev built on?",
+          "a": "KAT-Coder-V2.5-Dev is post-trained on Qwen3.6-35B-A3B, Alibaba's mixture-of-experts model with 35B total and 3B active parameters. Kwaipilot kept the base architecture and applied the KAT-V2.5 SFT plus reinforcement-learning recipe used for the closed Pro model."
+        },
+        {
+          "q": "What is KAT-Coder-V2.5-Dev trained to do?",
+          "a": "KAT-Coder-V2.5-Dev is an agentic coding model designed to work inside real, executable repositories instead of emitting single-turn snippets. Kwaipilot trained it on more than 100,000 verifiable repo environments across 12 languages using AutoBuilder for setup and asymmetric PPO for reinforcement learning."
+        }
+      ],
+      "links": [
+        {
+          "label": "Model card",
+          "url": "https://huggingface.co/Kwaipilot/KAT-Coder-V2.5-Dev"
+        },
+        {
+          "label": "Technical report",
+          "url": "https://arxiv.org/abs/2607.05471"
+        },
+        {
+          "label": "Coverage (MarkTechPost)",
+          "url": "https://www.marktechpost.com/2026/07/26/kwaikat-team-releases-kat-coder-v2-5-an-agentic-coding-model-trained-on-100000-verifiable-repository-environments/"
+        },
+        {
+          "label": "Kwaipilot org",
+          "url": "https://huggingface.co/Kwaipilot"
+        }
+      ],
+      "explainer": {
+        "tagline": "Kwaipilot opens the weights of a 35B/3B-active MoE tuned to act inside real code repositories, not just autocomplete a snippet.",
+        "whatIsIt": "KAT-Coder-V2.5-Dev is an open-weight agentic coding model from Kwaipilot, the AI4SE team at Kuaishou. The Dev variant is a mixture-of-experts model with 35B total and 3B active parameters, published on Hugging Face under Apache 2.0. It is the open sibling of the closed KAT-Coder-V2.5-Pro that Kwaipilot serves through StreamLake.",
+        "howItWorks": "Built on Qwen3.6-35B-A3B, the model is post-trained with the KAT-V2.5 recipe: supervised fine-tuning plus reinforcement learning with asymmetric PPO and a three-tiered reward. Kwaipilot's AutoBuilder tool reconstructs 100,000+ executable repositories across 12 languages, and KwaiClawEnv synthesizes multi-step tool-use trajectories the agent then trains against.",
+        "whyItMatters": "Open-weight coding models have crowded the mid-tier of SWE-bench Verified, and KAT-Coder-V2.5-Dev's 69.4% score puts it near the top of that pack without an API bill. Teams that need an agent to open files, run tests, and iterate in a real repo can now do so on their own hardware under an Apache 2.0 license.",
+        "forWho": "coding-agent builders, open-source infra teams, and self-hosters who want a permissively-licensed 35B MoE for repo-level automation",
+        "tryIt": "huggingface-cli download Kwaipilot/KAT-Coder-V2.5-Dev"
+      },
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/Kwaipilot/KAT-Coder-V2.5-Dev.png",
+        "alt": "Hugging Face social card for the Kwaipilot KAT-Coder-V2.5-Dev model",
+        "fit": "cover"
+      },
+      "publishDate": "2026-07-28T05:20:43.598Z"
+    },
     {
       "id": "nvidia-open-secure-ai-alliance",
       "categories": [

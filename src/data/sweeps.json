@@ -26099,6 +26099,37 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260728t052043z",
+      "timestamp": "2026-07-28T05:20:43.598Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Moonshot, Cohere, Z.ai, GitHub trending, HF models/papers/datasets, HN top 30, and the 8 YouTube creator feeds. Added Kwaipilot KAT-Coder-V2.5-Dev, a fresh Apache-2.0 35B/3B MoE coding model with a technical report and multi-outlet coverage; nothing else in the 72h window cleared the bar.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "kwaipilot-kat-coder-v2-5-dev",
+          "title": "KAT-Coder-V2.5-Dev — Kwaipilot's 35B open-weight agentic coding MoE",
+          "category": "model",
+          "note": "Open-weight release, 42 min ago on HF (Apache-2.0), technical report on arXiv 2607.05471, covered by MarkTechPost on 2026-07-26, listed on OpenRouter and Kilo.ai — clears 2-of-N easily."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "ecosystem"
+      ]
     }
   ]
 }
