@@ -2614,10 +2614,10 @@
             {
               "name": "Kimi K3",
               "slug": "kimi-k3",
-              "blurb": "Moonshot's 2.8T-parameter MoE flagship (Stable LatentMoE, ~16 of 896 experts active) with native text/vision/video and a 1M-token context, released July 2026. Live via the Kimi API and app; full weights announced for release by 2026-07-27.",
+              "blurb": "Moonshot's 2.8T-parameter MoE flagship (Stable LatentMoE, ~16 of 896 experts active) with native text/vision/video and a 1M-token context, released 2026-07-16 via the Kimi API and app; open MXFP4 weights published on Hugging Face 2026-07-26 under the Kimi K3 License.",
               "tags": [
                 "frontier",
-                "proprietary",
+                "open-weights",
                 "reasoning",
                 "coding",
                 "multimodal",
@@ -2625,7 +2625,7 @@
                 "agentic"
               ],
               "contextWindow": "1M",
-              "license": "Weights due 2026-07-27",
+              "license": "Kimi K3 License",
               "date": "2026-07-16",
               "rich": true,
               "current": true
