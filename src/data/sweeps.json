@@ -26155,6 +26155,32 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260728t120530z",
+      "timestamp": "2026-07-28T12:05:30.361Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, xAI, Mistral, Cohere, Moonshot, DeepSeek, Z.ai, Qwen), GitHub trending, HN front page, HF models/datasets/papers, YouTube RSS (8 channels), the bio/pharma/neuro lane (Nature Medicine, STAT News, Recursion/Insilico/AbSci, Neuralink/Synchron, FDA clearances) and tier-1 press. Nothing new qualifies in the ≤72h window: the frontier labs already shipped a big wave July 22–27 (Opus 5, Kimi K3 weights, Cohere North Automations, Anthropic open-weights position, MAI-Cyber-1-Flash) and all are in the feed; GLM 5.2 (Jun 16), Solar Open 2 250B (Jul 23), Poolside Laguna-S-2.1 (Jul 21), Inkling (Jul 14), Fara1.5 (May 21), Unlimited-OCR (Jun 22) are all outside the 72h cap; YouTube RSS returned an empty array; Fermion Neutrino-1 8B (Jul 27) sits at 100 HN points, below the ≥150 bar and not on HF top 15; the Amazon Nova wind-down is single-outlet Business Insider reporting unconfirmed by Amazon; bio/pharma/neuro lane surfaced only proprietary FDA clearances (Aidoc CT triage Jul 25, AIRS SwiftMR Jul 21) with no released model or code. Empty sweep is the correct outcome.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "ecosystem",
+        "article"
+      ]
     }
   ]
 }
