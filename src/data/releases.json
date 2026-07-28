@@ -1,8 +1,120 @@
 {
-  "generatedAt": "2026-07-28T14:08:38.881Z",
+  "generatedAt": "2026-07-28T16:13:23.942Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "amazon-nova-wind-down-jul28",
+      "categories": [
+        "ecosystem",
+        "model"
+      ],
+      "title": "Amazon puts Nova Premier, Omni, Reel and Canvas in maintenance mode",
+      "org": "Amazon",
+      "date": "2026-07-28",
+      "url": "https://the-decoder.com/amazon-reportedly-scales-back-its-nova-ai-models-and-bets-on-a-new-frontier-research-team/",
+      "summary": "Amazon halts active development on Nova Premier, Nova Omni, Nova Reel and Nova Canvas, moving them to keep-the-lights-on mode. A new Frontier Model Research team under Pieter Abbeel takes the flagship push.",
+      "tags": [
+        "amazon",
+        "aws",
+        "amazon-nova",
+        "bedrock",
+        "model-deprecation",
+        "pieter-abbeel",
+        "frontier-model-research",
+        "ecosystem",
+        "reinvent-2026"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Amazon"
+        },
+        {
+          "label": "Models wound down",
+          "value": "Nova Premier, Nova Omni, Nova Reel (video), Nova Canvas (image)"
+        },
+        {
+          "label": "Still supported",
+          "value": "Nova 2 Sonic, Nova 2 Lite, Nova Forge, Nova Act"
+        },
+        {
+          "label": "Status of wound-down models",
+          "value": "Available in \"keep the lights on\" maintenance mode"
+        },
+        {
+          "label": "Replacement team",
+          "value": "Frontier Model Research (FMR), led by Pieter Abbeel"
+        },
+        {
+          "label": "Next flagship",
+          "value": "New foundation model due at Amazon re:Invent, late 2026"
+        },
+        {
+          "label": "Reported by",
+          "value": "Business Insider, then Reuters, The Decoder, Yahoo Finance"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which Amazon Nova models are being wound down?",
+          "a": "Amazon is halting active development on Nova Premier, Nova Omni, the Nova Reel video model and the Nova Canvas image model. These four stay available on Bedrock in a \"keep the lights on\" mode for existing customers, but they will not get new features or upgrades."
+        },
+        {
+          "q": "Which Amazon Nova models are still being developed?",
+          "a": "Amazon says it is still investing in Nova 2 Sonic, Nova 2 Lite, Nova Forge and Nova Act. Nova 2 Sonic is the speech-to-speech model, Nova 2 Lite is the small text model, Nova Forge helps customers train custom models on Bedrock, and Nova Act drives Amazon's browser agent."
+        },
+        {
+          "q": "Who is leading Amazon's new AI push?",
+          "a": "Pieter Abbeel now runs a group called Frontier Model Research inside Amazon. Abbeel joined through Amazon's acquisition of robotics startup Covariant. The team is taking the engineers and compute that used to build Nova Premier and Omni to build a new flagship model."
+        },
+        {
+          "q": "When will Amazon show the new flagship model?",
+          "a": "Amazon plans to introduce its next foundation model at re:Invent, its annual cloud conference in Las Vegas in late 2026. Until then, Bedrock customers who need a stronger model than Nova 2 Lite can call other Bedrock options like Anthropic's Claude family."
+        },
+        {
+          "q": "What should Bedrock customers do now?",
+          "a": "Existing calls to Nova Premier, Omni, Reel and Canvas keep working, so nothing breaks today. But because the four wound-down models will not get upgrades, teams building new features should plan a migration to Nova 2, Nova Forge, a Claude model on Bedrock, or wait for the re:Invent frontier launch."
+        }
+      ],
+      "explainer": {
+        "tagline": "Amazon's high-end Nova models stop getting updates while a new Frontier Model Research team, led by Pieter Abbeel, takes over the flagship push.",
+        "whatIsIt": "Amazon is winding down four Nova AI models — Nova Premier, Nova Omni, Nova Reel and Nova Canvas — and moving them into a \"keep the lights on\" state on Bedrock. The models remain callable for existing customers, but active development is stopping. Nova 2 Sonic, Nova 2 Lite, Nova Forge and Nova Act keep being developed as normal.",
+        "howItWorks": "The change is organizational, not a code change. Amazon has pulled engineers and compute away from the Nova flagship line and moved them to a new group called Frontier Model Research. Pieter Abbeel, who joined via the Covariant acquisition, runs the group. Amazon plans to reveal a new frontier foundation model at re:Invent later in 2026.",
+        "whyItMatters": "Nova was Amazon's answer to Claude, GPT and Gemini. Freezing Premier, Omni, Reel and Canvas admits Amazon lost that flagship race and is starting over. For Bedrock customers, the practical read is clear: the four wound-down models are safe to keep calling but not safe to invest new features in — plan the migration now.",
+        "forWho": "AWS/Bedrock developers, AI platform teams, enterprise architects picking a first-party model.",
+        "tryIt": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-nova.html"
+      },
+      "image": {
+        "url": "https://the-decoder.com/wp-content/uploads/2026/07/amazon_logo.png",
+        "alt": "Amazon logo, illustrating Amazon's shift away from its Nova AI model family",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "The Decoder Report",
+          "url": "https://the-decoder.com/amazon-reportedly-scales-back-its-nova-ai-models-and-bets-on-a-new-frontier-research-team/"
+        },
+        {
+          "label": "Reuters via Yahoo Finance",
+          "url": "https://finance.yahoo.com/technology/ai/articles/amazon-winds-down-most-flagship-103406019.html"
+        },
+        {
+          "label": "TrendingTopics Analysis",
+          "url": "https://www.trendingtopics.eu/amazon-scales-back-its-own-ai-models-to-focus-on-infra-openai-and-anthropic/"
+        },
+        {
+          "label": "24/7 Wall St",
+          "url": "https://247wallst.com/investing/2026/07/28/amazon-is-killing-most-of-nova-is-its-200-billion-ai-bet-still-alive/"
+        },
+        {
+          "label": "Amazon Nova on Bedrock",
+          "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-nova.html"
+        }
+      ],
+      "publishDate": "2026-07-28T16:13:23.942Z"
+    },
     {
       "id": "affaan-m-ecc-2-1-0",
       "categories": [

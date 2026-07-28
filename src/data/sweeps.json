@@ -26220,6 +26220,42 @@
         "algorithm",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260728t161323z",
+      "timestamp": "2026-07-28T16:13:23.942Z",
+      "source": "github-actions-sweep",
+      "summary": "Added 1 ecosystem/major: Amazon wound down four Nova AI models (Premier, Omni, Reel, Canvas) to maintenance while a new Frontier Model Research team under Pieter Abbeel takes over the flagship push. Broad multi-outlet coverage on 2026-07-28 with clear Bedrock developer impact. Searched lab blogs (Anthropic, OpenAI 403, DeepMind, Meta, Mistral, Cohere, Qwen, DeepSeek, Z.ai), GitHub trending, HF trending models/papers, HN front page + Show HN, Simon Willison, plus bio/neuro/pharma queries and tier-1 press. Most fresh candidates already exist in the feed (Opus 5, Kimi K3, Gemini 3.6, Cohere North Automations, Anthropic open-weights position, MAI-Cyber-1-Flash) or fell outside the 72h window (Poolside Laguna S 2.1 Jul 21, Upstage Solar Open 2 Jul 22, DeepMind Gemini 3.5 Flash Cyber Jul 21, OpenAI/Hugging Face sandbox escape Jul 21-22, DeepMind bioresilience Jul 16, Baidu Unlimited-OCR Jun 23, Microsoft Fara1.5 May 21). No fresh YouTube uploads from the 8 tracked creators. Bio/neuro lane surfaced only stale items (AIRS SwiftMR FDA Jul 21, NVIDIA protein-binder work with no dated release). No papers cleared the 2-of-N bar; no dataset/benchmark/tutorial qualifiers.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "amazon-nova-wind-down-jul28",
+          "title": "Amazon puts Nova Premier, Omni, Reel and Canvas in maintenance mode",
+          "category": "ecosystem",
+          "note": "Ecosystem-major, first sweep add: Amazon halts development on Nova Premier/Omni/Reel/Canvas, moves them to keep-the-lights-on mode on Bedrock, and forms a Frontier Model Research team under Pieter Abbeel; new flagship due at re:Invent 2026. Passes ecosystem gate test (concrete dev action: migrate off the wound-down models). Sourced from Business Insider report, echoed by Reuters, The Decoder, Yahoo Finance, TrendingTopics, 24/7 Wall St, all dated 2026-07-28."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "ecosystem",
+        "repo",
+        "tool",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "video",
+        "article",
+        "security",
+        "resource",
+        "tutorial"
+      ]
     }
   ]
 }
