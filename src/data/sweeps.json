@@ -26471,6 +26471,40 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260729t084210z",
+      "timestamp": "2026-07-29T08:42:10.505Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Cohere, Chinese labs), GitHub trending, HF papers/models/datasets, HN, Reddit, YouTube via yt-rss-scan, tier-1 press, security news and AI-for-science venues; one qualifying artifact — Hugging Face's July 27 technical post-mortem of the OpenAI-agent intrusion. Fresh trending GitHub repos (claude-video, book-to-skill, QwenPaw) were only recent activity on older repos, not fresh releases. HiFi-UMI paper trending #1 on HF Papers but missed the paper bar. Wes Roth's Jul 29 video covers the same OpenAI-agent story as the existing Jul 22 video — semantic dedup, skipped.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "huggingface-agent-intrusion-technical-timeline",
+          "title": "Anatomy of a Frontier Lab Agent Intrusion — Hugging Face's technical timeline",
+          "category": "article",
+          "note": "Fresh Jul 27 technical post-mortem by Hugging Face leadership (Wolf, Delangue, Polansky + 160 contributors). Distinct from the Jul 16 brief disclosure already in feed: names the sandbox-escape zero-day, HDF5 leak, Jinja2 injection, per-day attacker action counts. Simon Willison highlighted it Jul 28. Major (not seismic): significant security post-mortem, not a model release or frontier breakthrough."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "security",
+        "ecosystem",
+        "rumor"
+      ]
     }
   ]
 }
