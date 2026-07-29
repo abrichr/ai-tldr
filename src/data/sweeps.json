@@ -26583,6 +26583,44 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260729t172132z",
+      "timestamp": "2026-07-29T17:21:32.809Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Google DeepMind's Lyria 3.5 music model (2026-07-29 Flow Music launch) and a fresh Fireship video on Claude Opus 5. Checked lab blogs, GitHub trending, HF models/datasets/papers, HN top 30 and the YouTube RSS scan; Upstage Solar Open 2 (7d old) and Microsoft Fara1.5-27B (May 21 release) failed the 72h cap, The Stack v3 was already in the feed as huggingface-the-stack-v3 (dupe canonical URL), and no HN AI-security item cleared the 2-of-N bar this pass.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "google-deepmind-lyria-3-5",
+          "title": "Lyria 3.5 — Google DeepMind's new music model in free Flow Music",
+          "category": "model",
+          "note": "Google DeepMind's newest music model, announced 2026-07-29 in Flow Music; frontier-lab audio release with fresh product surface (free tier)."
+        },
+        {
+          "id": "fireship-anthropic-opus-5-indie-hacker-jul29",
+          "title": "Fireship — 'Did Anthropic just kill the indie hacker...?' on Claude Opus 5",
+          "category": "video",
+          "note": "Fireship (top-tier creator, whole 8-channel RSS scan) on Anthropic Opus 5; uploaded 2026-07-29 16:33 UTC, ~30 min before sweep; not a semantic dupe of the existing Opus 5 release per the video-item exception."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "dataset",
+        "video",
+        "repo",
+        "paper",
+        "tool",
+        "algorithm",
+        "security",
+        "article"
+      ]
     }
   ]
 }

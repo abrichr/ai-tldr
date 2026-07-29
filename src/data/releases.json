@@ -1,8 +1,156 @@
 {
-  "generatedAt": "2026-07-29T14:12:40.256Z",
+  "generatedAt": "2026-07-29T17:21:32.809Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "google-deepmind-lyria-3-5",
+      "categories": [
+        "model"
+      ],
+      "title": "Lyria 3.5 — Google DeepMind's new music model in free Flow Music",
+      "org": "Google DeepMind",
+      "date": "2026-07-29",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/lyria-3-5/",
+      "summary": "Google DeepMind announced Lyria 3.5, its new text-to-music model, and started rolling it out in Google Flow Music. Google says the upgrade improves melodic structure, lyric writing, vocal expression, and creative control over tempo and length.",
+      "tags": [
+        "model",
+        "music-generation",
+        "text-to-music",
+        "lyria",
+        "google-deepmind",
+        "flow-music",
+        "generative-audio"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "Google DeepMind's new music model — richer melodies, clearer vocals, longer songs in the free Flow Music app.",
+        "whatIsIt": "Lyria 3.5 is Google DeepMind's newest text-to-music model. It writes full songs from a prompt — melody, backing, and vocals — inside Google Flow Music, the free creative studio at flowmusic.google. It joins the wider Lyria family that also includes Lyria RealTime and Magenta RealTime.",
+        "howItWorks": "The 3.5 update focuses on four things Google names in the announcement: richer melodic structure, better lyric writing with structural awareness, more expressive and emotional vocals, and finer control over tempo and duration. DeepMind's Lyria technology page describes the family as producing tracks up to about three minutes long across multiple genres.",
+        "whyItMatters": "For hobby creators, Lyria 3.5 raises the ceiling on what a free music tool can generate — from short loops toward full-length arrangements with expressive vocals. It sharpens Google's answer to Suno and Udio and pushes DeepMind's audio research closer to a mass-market product.",
+        "forWho": "musicians, creators, hobbyists",
+        "tryIt": "flowmusic.google"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Google DeepMind"
+        },
+        {
+          "label": "Version",
+          "value": "Lyria 3.5"
+        },
+        {
+          "label": "Available in",
+          "value": "Google Flow Music (flowmusic.google)"
+        },
+        {
+          "label": "Price",
+          "value": "Free"
+        },
+        {
+          "label": "Song length",
+          "value": "Up to ~3 minutes"
+        },
+        {
+          "label": "Family",
+          "value": "Lyria, Lyria RealTime, Magenta RealTime"
+        },
+        {
+          "label": "Announced",
+          "value": "July 29, 2026"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What is Lyria 3.5?",
+          "a": "Lyria 3.5 is Google DeepMind's new text-to-music model. It writes complete songs — melody, instrumentation, and vocals — from a text prompt, and it rolled out on July 29, 2026 inside Google Flow Music, DeepMind's free creative studio for music."
+        },
+        {
+          "q": "Where can I try Lyria 3.5?",
+          "a": "Lyria 3.5 is available inside Google Flow Music at flowmusic.google, Google's free music creation product. It is not offered as a standalone API in the announcement; you use it through Flow Music's prompt interface to write, refine, and export tracks."
+        },
+        {
+          "q": "Is Lyria 3.5 free to use?",
+          "a": "Yes. The announcement says Lyria 3.5 is rolling out in Google Flow Music, which is a free product. Google's wider Flow creative suite has paid tiers for video and image work, but the Lyria 3.5 music launch is described as accessible via flowmusic.google at no cost."
+        },
+        {
+          "q": "What is new in Lyria 3.5 compared to earlier Lyria models?",
+          "a": "Google names four upgrades for Lyria 3.5: richer melodic structure, better lyric writing with structural awareness, more expressive vocals, and finer creative control over tempo and duration. It sits alongside Lyria RealTime and Magenta RealTime in DeepMind's Lyria family."
+        },
+        {
+          "q": "Can Lyria 3.5 generate vocals?",
+          "a": "Yes. Google's announcement highlights vocals as one of the four areas Lyria 3.5 improves, calling out more expression, emotion, realism, and pronunciation accuracy. DeepMind's Lyria technology page also notes control over vocal style across genres and languages."
+        }
+      ],
+      "image": {
+        "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Lyria3.5_social.max-1440x810.png",
+        "alt": "Google DeepMind Lyria 3.5 announcement card, Google Flow Music branding",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/lyria-3-5/"
+        },
+        {
+          "label": "Lyria at DeepMind",
+          "url": "https://deepmind.google/technologies/lyria/"
+        },
+        {
+          "label": "Google Flow",
+          "url": "https://labs.google/flow"
+        }
+      ],
+      "publishDate": "2026-07-29T17:21:32.809Z"
+    },
+    {
+      "id": "fireship-anthropic-opus-5-indie-hacker-jul29",
+      "categories": [
+        "video"
+      ],
+      "title": "Fireship — 'Did Anthropic just kill the indie hacker...?' on Claude Opus 5",
+      "org": "Fireship",
+      "date": "2026-07-29",
+      "url": "https://www.youtube.com/watch?v=jxGJT1weu4w",
+      "summary": "Fireship's new video argues that Anthropic's Claude Opus 5 release may be squeezing the indie hacker playbook. Uploaded 2026-07-29, the take frames Opus 5 as a step-change in agentic coding that eats into what small solo builders sell.",
+      "tags": [
+        "video",
+        "fireship",
+        "claude-opus-5",
+        "anthropic",
+        "indie-hacker",
+        "agentic-coding"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Fireship on Claude Opus 5 — Anthropic's new flagship and whether it kills the indie hacker dream.",
+        "whatIsIt": "Fireship's fresh take on Claude Opus 5, Anthropic's new default model. The video description opens with 'Anthropic just dropped Opus 5 and it may be killing the indie hacker dream — let's dive in.'",
+        "howItWorks": "Fireship walks through what Opus 5 changes for solo developers and small teams, in the channel's usual fast, opinionated style. The angle is developer economics: how much of the indie hacker's coding edge is left once a single flagship model can plan, code, and ship a small SaaS.",
+        "whyItMatters": "Fireship's videos are a fast temperature check on how frontier releases land with working developers. This one frames Opus 5 as the moment agentic coding starts to eat the indie SaaS playbook rather than assist it.",
+        "forWho": "solo developers, indie hackers"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/jxGJT1weu4w/hqdefault.jpg",
+        "alt": "Fireship YouTube thumbnail for 'Did Anthropic just kill the indie hacker...?'",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=jxGJT1weu4w"
+        },
+        {
+          "label": "Fireship channel",
+          "url": "https://www.youtube.com/@Fireship"
+        }
+      ],
+      "author": {
+        "name": "Fireship",
+        "profileUrl": "https://www.youtube.com/@Fireship"
+      },
+      "publishDate": "2026-07-29T17:21:32.809Z"
+    },
     {
       "id": "two-minute-papers-kimi-k3-jul29",
       "categories": [
