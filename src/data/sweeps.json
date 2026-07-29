@@ -26551,6 +26551,38 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260729t141240z",
+      "timestamp": "2026-07-29T14:12:40.256Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched Anthropic/OpenAI/DeepMind/Meta/Mistral/xAI/Cohere/Moonshot/Qwen/DeepSeek lab blogs, GitHub trending, HuggingFace papers/models, HN front page, Simon Willison, plus a bio/pharma/neuro active-search pass; every ≤72h release already lives in the feed (Anthropic open-weights position, Gemini 3.6 Flash, Kimi K3, KAT-Coder V2.5, Solar Open 2, Nanbeige 4.2-3B, Baidu Unlimited-OCR, Cohere North Automations, Alibaba open-code-review, Superpowers v6, Mage-VL, MCP 2026-07-28, Codex Security, OpenAI/Modal rogue-agent incident, Simon Willison posts). Only fresh, non-duplicate item: Two Minute Papers' 1-hour-old Kimi K3 economics breakdown. LearnVector (Andrew Ng, 235 pts HN) failed the ecosystem gate — pre-product, product ship targeted early 2027. OpenDDE and FlashKDA outside the 72h window.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "two-minute-papers-kimi-k3-jul29",
+          "title": "Two Minute Papers: 'Kimi K3 Just Broke The Economics Of AI'",
+          "category": "video",
+          "note": "Fresh video (1h old) from a listed creator covering Kimi K3 — per prompt, creator breakdowns of an existing release are their own item and do NOT semantic-dupe against the K3 model entries."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "article",
+        "paper",
+        "algorithm",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }

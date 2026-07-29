@@ -1,8 +1,64 @@
 {
-  "generatedAt": "2026-07-29T12:13:13.791Z",
+  "generatedAt": "2026-07-29T14:12:40.256Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "two-minute-papers-kimi-k3-jul29",
+      "categories": [
+        "video"
+      ],
+      "title": "Two Minute Papers: 'Kimi K3 Just Broke The Economics Of AI'",
+      "org": "Two Minute Papers",
+      "date": "2026-07-29",
+      "url": "https://www.youtube.com/watch?v=Xj-QdEUxJkE",
+      "summary": "Károly Zsolnai-Fehér walks through Moonshot's Kimi K3 — the 2.8T open-weights MoE that has reset what a frontier-class model costs to train and serve — for a general engineering audience.",
+      "tags": [
+        "two-minute-papers",
+        "youtube",
+        "video",
+        "kimi-k3",
+        "moonshot",
+        "open-weights",
+        "mixture-of-experts",
+        "moe",
+        "karoly-zsolnai-feher",
+        "explainer"
+      ],
+      "importance": "notable",
+      "links": [
+        {
+          "label": "Watch",
+          "url": "https://www.youtube.com/watch?v=Xj-QdEUxJkE"
+        },
+        {
+          "label": "Two Minute Papers on YouTube",
+          "url": "https://www.youtube.com/channel/UCbfYPyITQ-7l4upoX8nvctg"
+        },
+        {
+          "label": "Kimi K3 on Hugging Face",
+          "url": "https://huggingface.co/moonshotai/Kimi-K3"
+        }
+      ],
+      "image": {
+        "url": "https://i.ytimg.com/vi/Xj-QdEUxJkE/hqdefault.jpg",
+        "alt": "Two Minute Papers thumbnail for 'Kimi K3 Just Broke The Economics Of AI'.",
+        "fit": "cover",
+        "credit": "Two Minute Papers / YouTube"
+      },
+      "explainer": {
+        "tagline": "Two Minute Papers explains why Moonshot's 2.8T open-weights Kimi K3 shifts the cost floor for frontier-tier models.",
+        "whatIsIt": "'Kimi K3 Just Broke The Economics Of AI' is Károly Zsolnai-Fehér's July 29 breakdown of Moonshot's Kimi K3 release — a 2.8T-parameter mixture-of-experts model that shipped open-weights on Hugging Face with 1M-token context, aimed at a general engineering audience rather than researchers.",
+        "howItWorks": "The video frames Kimi K3 against the closed frontier — walking through the model's mixture-of-experts routing, its published training-compute footprint, and the open-weights release strategy — to explain why open labs can now match closed flagships on major benchmarks without a matching hardware bill.",
+        "whyItMatters": "Two Minute Papers is where many engineers and non-specialists first meet frontier model launches, and Kimi K3's economics claim reshapes the build-vs-buy math for teams that assumed only closed labs could ship at this scale. Making the cost side legible helps teams re-evaluate whether an open-weights deployment is now a serious option.",
+        "forWho": "Engineers, tech leads, and curious viewers deciding whether to bet on open-weights frontier models."
+      },
+      "author": {
+        "name": "Two Minute Papers",
+        "profileUrl": "https://www.youtube.com/channel/UCbfYPyITQ-7l4upoX8nvctg"
+      },
+      "publishDate": "2026-07-29T14:12:40.256Z"
+    },
     {
       "id": "openai-rogue-agent-modal-jul28",
       "categories": [
