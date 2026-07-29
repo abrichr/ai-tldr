@@ -26437,6 +26437,40 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260729t053634z",
+      "timestamp": "2026-07-29T05:36:34.009Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, Google DeepMind, Meta, Mistral, xAI, Cohere, Chinese frontier labs), GitHub trending, HF models/papers/datasets, HN top 30, YouTube RSS (all 8 channels 404/500 today), plus neuro/clinical/pharma lane. Added Microsoft Mage-VL — 4B codec-native multimodal model, Apache-2.0, HF Papers top spot, released 2026-07-26.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "microsoft-mage-vl",
+          "title": "Microsoft Mage-VL — 4B codec-native multimodal cuts video tokens by 75%",
+          "category": "model",
+          "note": "Included: arXiv 2607.24904 submitted 2026-07-27 (used as canonical date), HF upload 2026-07-26, #5 on HF Papers with 776 upvotes, Apache-2.0 weights, top-lab (Microsoft), fundamentally new capability (codec-native visual tokenizer). Not seismic — a research foundation model, not a flagship LLM or SOTA frontier model."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "paper",
+        "algorithm",
+        "repo",
+        "tool",
+        "dataset",
+        "video",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }

@@ -1,8 +1,121 @@
 {
-  "generatedAt": "2026-07-29T02:13:01.922Z",
+  "generatedAt": "2026-07-29T05:36:34.009Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "microsoft-mage-vl",
+      "categories": [
+        "model",
+        "paper",
+        "algorithm"
+      ],
+      "title": "Microsoft Mage-VL — 4B codec-native multimodal cuts video tokens by 75%",
+      "org": "Microsoft",
+      "date": "2026-07-27",
+      "url": "https://microsoft.github.io/Mage/vl/",
+      "summary": "Mage-VL pairs a from-scratch codec-native visual encoder with a Qwen3-4B backbone. It keeps anchor-frame patches, drops 75% of predicted-frame tokens, and runs video inference up to 3.5x faster. Apache-2.0 weights on Hugging Face.",
+      "tags": [
+        "model",
+        "paper",
+        "algorithm",
+        "multimodal",
+        "vision-language",
+        "video",
+        "streaming",
+        "microsoft",
+        "mage-vl",
+        "codec",
+        "apache-2",
+        "open-weights"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Parameters": "4B",
+        "Visual token cut": ">75%",
+        "Video speedup": "up to 3.5x"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Microsoft"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0 (Mage-ViT encoder: MIT)"
+        },
+        {
+          "label": "Parameters",
+          "value": "4B (Mage-ViT + Qwen3-4B-Instruct)"
+        },
+        {
+          "label": "Modalities",
+          "value": "Image, video (H.264/HEVC + DCVC-RT), streaming commentary"
+        },
+        {
+          "label": "Visual token cut",
+          "value": ">75% vs baselines"
+        },
+        {
+          "label": "Video inference",
+          "value": "up to 3.5x faster wall-clock"
+        },
+        {
+          "label": "Availability",
+          "value": "Open weights on Hugging Face + code on GitHub"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Mage-VL open source?",
+          "a": "Yes. Microsoft released Mage-VL under Apache-2.0 with weights on Hugging Face at microsoft/Mage-VL and inference code at github.com/microsoft/Mage. The paired Mage-ViT visual encoder ships under MIT so it can be reused separately."
+        },
+        {
+          "q": "How does Mage-VL compare to Qwen3-VL-4B and Phi-4-MM?",
+          "a": "Microsoft's technical report shows Mage-VL matches Qwen3-VL-4B and Phi-4-MM on static image benchmarks and posts strong gains on video understanding and 2D/3D spatial reasoning, while running up to 3.5x faster on video thanks to its codec-aligned token compression."
+        },
+        {
+          "q": "What does 'codec-native' actually mean for Mage-VL?",
+          "a": "Mage-VL's tokenizer mirrors how modern video codecs allocate bits: it keeps every anchor (I) frame patch and only retains predicted-frame (P) patches where the codec itself spends bits. That codec-aligned sparsity drops visual-token count by more than 75% while preserving spatio-temporal context."
+        },
+        {
+          "q": "What can Mage-VL do in streaming mode?",
+          "a": "Mage-VL couples the vision-language model with a frozen-backbone cognition gate that emits commentary only when an event fires. Microsoft reports state-of-the-art TimVal, F1, ROC-AUC and PR-AUC on SoccerNet streaming and shows generalization to real 2026 World Cup broadcasts."
+        }
+      ],
+      "explainer": {
+        "tagline": "Mage-VL treats a video like a codec — keep anchor frames, drop most predicted-frame patches, and cut visual tokens by 75%.",
+        "whatIsIt": "Mage-VL is Microsoft's new 4B multimodal foundation model that pairs a from-scratch codec-native visual encoder called Mage-ViT with a Qwen3-4B-Instruct language backbone. A single Apache-2.0 checkpoint handles static images, offline video reasoning, traditional codec video (H.264/HEVC), neural codec video (DCVC-RT), and event-gated streaming commentary.",
+        "howItWorks": "The Mage-ViT encoder is trained from scratch and mirrors the structure of modern video codecs. Every anchor (I) frame patch is kept, but only the predicted-frame (P) patches where the codec itself allocated bits are retained. On top, a frozen-backbone cognition gate decides when a new event happens and lets Mage-VL emit low-latency streaming commentary rather than talking continuously.",
+        "whyItMatters": "Cutting visual tokens by more than 75% means Mage-VL can process long or live video without ballooning context length or GPU cost. Microsoft reports up to 3.5x wall-clock speedups on video versus baselines while matching Qwen3-VL-4B and Phi-4-MM on image tasks, which puts real-time video perception within reach of modest hardware.",
+        "forWho": "multimodal researchers, video-AI and robotics engineers",
+        "tryIt": "huggingface.co/microsoft/Mage-VL"
+      },
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/microsoft/Mage-VL.png",
+        "alt": "Mage-VL model card banner on Hugging Face",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Project Page",
+          "url": "https://microsoft.github.io/Mage/vl/"
+        },
+        {
+          "label": "Model Weights",
+          "url": "https://huggingface.co/microsoft/Mage-VL"
+        },
+        {
+          "label": "Paper (arXiv)",
+          "url": "https://arxiv.org/abs/2607.24904"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/microsoft/Mage"
+        }
+      ],
+      "publishDate": "2026-07-29T05:36:34.009Z"
+    },
     {
       "id": "mcp-spec-2026-07-28",
       "categories": [
