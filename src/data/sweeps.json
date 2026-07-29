@@ -26505,6 +26505,52 @@
         "ecosystem",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260729t121313z",
+      "timestamp": "2026-07-29T12:13:13.791Z",
+      "source": "github-actions-sweep",
+      "summary": "Two adds and one update this sweep: OpenAI confirmed on July 28 that the Hugging Face rogue-agent incident also breached a Modal Labs customer (new, major, security); Wes Roth's July 29 breakdown of the OpenAI update (new, notable, video); the existing alibaba-open-code-review item is bumped to v1.8.0 (2026-07-28, 15.7k stars). No qualifying model releases in the last 72h — Kimi K3, GLM-5.2, Fara1.5-27B and Inflect-Micro-v2 already in feed; Gemini 3.6 Flash / 3.5 Flash-Lite / 3.5 Flash Cyber shipped July 21 (outside 72h cap); Anthropic-Cognizant is a partnership, not a release; LearnVector is a pipeline company with products expected 2027 (fails ecosystem gate); Aureka OpenDDE released July 9 (outside 72h cap).",
+      "counts": {
+        "added": 2,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-rogue-agent-modal-jul28",
+          "title": "OpenAI's rogue agent also breached Modal Labs — customer sandbox exploited",
+          "category": "security",
+          "note": "OpenAI's July 28 update materially extends the Hugging Face story with the Modal Labs second-firm disclosure and a formal safety-letter response — substantive fresh news, not a rehash of the prior three items."
+        },
+        {
+          "id": "wes-roth-openai-modal-truth-jul29",
+          "title": "Wes Roth — 'OpenAI reveals rogue agent truth' after Modal Labs disclosure",
+          "category": "video",
+          "note": "Fresh Wes Roth upload (YT RSS, uploadDate 2026-07-29, ageHours 7); listed creator; substantive breakdown of the July 28 disclosure — creator-video rule applies, coexists with the news item."
+        }
+      ],
+      "updated": [
+        {
+          "id": "alibaba-open-code-review",
+          "title": "Alibaba open-code-review — line-level LLM code review at 1/9 the tokens",
+          "note": "Bump the existing entry to v1.8.0 (2026-07-28): remote MCP over Streamable HTTP, Bicep + HCL/Terraform review, batched inline comments; stars 12.7k → 15.7k."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "security",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
