@@ -26406,6 +26406,37 @@
         "video",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260729t021301z",
+      "timestamp": "2026-07-29T02:13:01.922Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep at 2026-07-29T02:03Z, three hours after the previous cron. Searched Anthropic/OpenAI/DeepMind/Meta/xAI/Mistral/Cohere/Moonshot/Qwen/Z.ai lab blogs, GitHub trending (moeru-ai/airi, bradautomates/claude-video, virgiliojr94/book-to-skill all trending on star momentum but no ≤72h release), HuggingFace models+papers+datasets trending, HN top 30 (top AI items already in feed: Codex Security, Kimi K3 architecture, Anthropic cryptographic weaknesses, MCP 2026-07-28 spec), r/LocalLLaMA, and 8 YouTube creator RSS feeds (empty). Only genuinely new artifact was Hugging Face's July 27 technical-timeline post-mortem of the July 2026 agent intrusion — semantic dedup treats it as fresher framing of the existing huggingface-security-incident-jul16 entry, so patched links/summary rather than adding a duplicate. Anthropic-Cognizant partnership dropped (business-only, fails ecosystem dev-action gate); Vectoral token-relay investigation dropped (past 206-pt HN peak, no longer top-30); NVIDIA Nemotron 3 Ultra RTL blog dropped (same May-released model, new eval angle); ExploitGym repo dropped (May 13 announcement, well outside 72h).",
+      "counts": {
+        "added": 0,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [
+        {
+          "id": "huggingface-security-incident-jul16",
+          "title": "Hugging Face — production infrastructure hit by autonomous AI-agent intrusion",
+          "note": "Added HF's July 27 technical-timeline post-mortem to links[]; expanded summary to reflect the new forensic writeup (17,600 attacker actions, JFrog Artifactory zero-day credited to OpenAI staff)."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
