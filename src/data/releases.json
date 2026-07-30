@@ -1,8 +1,315 @@
 {
-  "generatedAt": "2026-07-30T19:30:30.578Z",
+  "generatedAt": "2026-07-30T21:16:31.037Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "microsoft-echoverse",
+      "categories": [
+        "paper",
+        "algorithm",
+        "benchmark"
+      ],
+      "title": "Microsoft Echoverse — deep, evolving environments train a 9B computer-use agent within 14 points of GPT-5.4",
+      "org": "Microsoft Research",
+      "date": "2026-07-30",
+      "url": "https://www.microsoft.com/en-us/research/blog/echoverse-deep-evolving-environments-for-computer-use-agents/",
+      "summary": "Echoverse is Microsoft Research's co-evolutionary training loop for computer-use agents. Synthetic environments, task graders, and the model improve together across 12 worlds and lift a 9B model from 36.5% to 67.1% average, within 14 points of GPT-5.4.",
+      "tags": [
+        "paper",
+        "algorithm",
+        "benchmark",
+        "computer-use-agent",
+        "reinforcement-learning",
+        "synthetic-environments",
+        "microsoft-research",
+        "echoverse",
+        "agent-training",
+        "open-code",
+        "mit-license"
+      ],
+      "importance": "major",
+      "metrics": {
+        "9B agent average": "36.5% → 67.1%",
+        "Training worlds": "12",
+        "Gap to GPT-5.4": "within 14 pts"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Microsoft Research (AI Frontiers Lab)"
+        },
+        {
+          "label": "Artifact",
+          "value": "Training framework + 12 co-evolving environments"
+        },
+        {
+          "label": "Code",
+          "value": "github.com/microsoft/Echoverse (MIT)"
+        },
+        {
+          "label": "Dataset",
+          "value": "huggingface.co/datasets/microsoft/Echoverse (722 tasks, 6 envs)"
+        },
+        {
+          "label": "Tech report",
+          "value": "aka.ms/echoverse-techreport (PDF)"
+        },
+        {
+          "label": "Baseline lift",
+          "value": "9B model 36.5% → 67.1% average"
+        },
+        {
+          "label": "Zero-shot transfer",
+          "value": "WebVoyager 66.5 → 71.5, Online-Mind2Web 40.5 → 43.4"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How is Echoverse different from static computer-use benchmarks like WebArena?",
+          "a": "Echoverse's environments EVOLVE alongside the agent — task graders, world dynamics, and difficulty curve up together, so a policy cannot memorise a fixed set. Microsoft reports zero-shot transfer to held-out real-web suites (WebVoyager 66.5→71.5, Online-Mind2Web 40.5→43.4), which is the signal that the co-evolutionary loop produces general skill, not overfit trajectories."
+        },
+        {
+          "q": "What can I actually download from Microsoft's Echoverse release?",
+          "a": "Echoverse ships the training framework (github.com/microsoft/Echoverse, MIT-licensed) and a public Hugging Face dataset (microsoft/Echoverse) covering 722 tasks across six environment families — datepicker, nested-filter, email, customer support and two capability-focused worlds. The 22-page tech report at aka.ms/echoverse-techreport documents the training loop, EchoBank grader, and results."
+        },
+        {
+          "q": "How does an Echoverse-trained 9B compare to GPT-5.4 on computer-use tasks?",
+          "a": "After co-evolutionary training, Microsoft's 9B model averages 67.1% across Echoverse's 12 worlds — within 14 points of GPT-5.4 at 80.7% — and passes GPT-5.4 outright on the EchoBank held-out set and the nested-filter environment. On WebVoyager and Online-Mind2Web the same weights transfer zero-shot, showing the gains are not benchmark-specific."
+        },
+        {
+          "q": "Who is Echoverse aimed at?",
+          "a": "Teams building computer-use agents — open-source coders, enterprise RPA vendors, and academic RL groups who cannot afford GPT-5-tier per-token training. Echoverse hands them a reproducible synthetic curriculum plus a grader that verifies real database state after each step, so a small model can be pushed toward large-model behaviour without proprietary web logs."
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "Echoverse average (12 worlds)",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "9B base",
+              "score": 36.5
+            },
+            {
+              "name": "9B + Echoverse",
+              "score": 67.1,
+              "highlight": true
+            },
+            {
+              "name": "GPT-5.4",
+              "score": 80.7
+            }
+          ],
+          "source": "https://www.microsoft.com/en-us/research/blog/echoverse-deep-evolving-environments-for-computer-use-agents/"
+        }
+      ],
+      "explainer": {
+        "tagline": "Echoverse's environments, graders and agent all improve together, taking a 9B computer-use policy from 36.5% to 67.1%.",
+        "whatIsIt": "Echoverse is Microsoft Research's co-evolutionary training framework for computer-use agents. Twelve synthetic worlds — email, datepicker, nested filters, customer support and two capability-focused environments among them — grow harder in step with the model, and the training code plus a Hugging Face dataset of 722 tasks ship under MIT.",
+        "howItWorks": "Instead of freezing a benchmark, the environment, its task grader and the model are updated in a shared loop. Each step's outcome is checked against the underlying database, so reinforcement signal is grounded rather than judged by another LLM. The training worlds level up when the agent starts to solve them, keeping the curriculum ahead of the policy.",
+        "whyItMatters": "A 9B model trained inside Echoverse averages 67.1% across the 12 worlds, up from 36.5%, and lands within 14 points of GPT-5.4 while transferring zero-shot to WebVoyager (66.5→71.5) and Online-Mind2Web (40.5→43.4). Small open agents finally have a way to close the gap on proprietary flagships without buying browser logs.",
+        "forWho": "computer-use agent teams, RL researchers, RPA vendors",
+        "tryIt": "git clone github.com/microsoft/Echoverse"
+      },
+      "image": {
+        "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2026/07/PraxisWorld-TWLIFB-1200x627-1.jpg",
+        "alt": "Microsoft Research Echoverse blog banner — evolving environments for computer-use agents",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.microsoft.com/en-us/research/blog/echoverse-deep-evolving-environments-for-computer-use-agents/"
+        },
+        {
+          "label": "Tech Report (PDF)",
+          "url": "https://aka.ms/echoverse-techreport"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/microsoft/Echoverse"
+        },
+        {
+          "label": "HF Dataset",
+          "url": "https://huggingface.co/datasets/microsoft/Echoverse"
+        },
+        {
+          "label": "MSR Publication Page",
+          "url": "https://www.microsoft.com/en-us/research/publication/echoverse-deep-evolving-environments-for-training-computer-use-agents-at-scale/"
+        }
+      ],
+      "publishDate": "2026-07-30T21:16:31.037Z"
+    },
+    {
+      "id": "microsoft-evolib",
+      "categories": [
+        "paper",
+        "algorithm"
+      ],
+      "title": "Microsoft EvoLib — test-time learning turns agent trajectories into an evolving skill library",
+      "org": "Microsoft Research",
+      "date": "2026-07-30",
+      "url": "https://www.microsoft.com/en-us/research/blog/evolib-turning-experience-into-evolving-knowledge/",
+      "summary": "EvoLib gives a deployed agent a growing library of skills and reflective insights, built only from its own runs. Similar entries are consolidated, low-utility ones fade, and the base model is never fine-tuned — published as an MIT repo and an arXiv paper.",
+      "tags": [
+        "paper",
+        "algorithm",
+        "test-time-learning",
+        "agent-memory",
+        "continual-learning",
+        "microsoft-research",
+        "evolib",
+        "reflection",
+        "open-code",
+        "mit-license"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Microsoft Research (Redmond, Montréal, Health Futures)"
+        },
+        {
+          "label": "Artifact",
+          "value": "Test-time learning framework + open repo"
+        },
+        {
+          "label": "Code",
+          "value": "github.com/microsoft/EvoLib (MIT)"
+        },
+        {
+          "label": "Paper",
+          "value": "arXiv:2605.14477 — 'Test-Time Learning with an Evolving Library'"
+        },
+        {
+          "label": "Domains tested",
+          "value": "Math reasoning, code under efficiency constraints, long-horizon agent tasks"
+        },
+        {
+          "label": "Base model change",
+          "value": "None — no gradient updates, no external supervision"
+        },
+        {
+          "label": "Access",
+          "value": "Ships behind Azure AI Foundry Labs — open code + arXiv"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What does EvoLib actually add to a deployed agent?",
+          "a": "EvoLib gives the agent a persistent library of modular skills and short reflective insights that it writes for itself from its own inference trajectories. Similar entries are merged into more general forms and each entry is re-weighted by long-term usefulness, so the library keeps improving between runs without any fine-tuning of the base model."
+        },
+        {
+          "q": "How is EvoLib different from a standard retrieval-augmented memory?",
+          "a": "Standard RAG memories only grow: every trajectory gets stored and retrieved by similarity, and stale or misleading entries dilute quality. EvoLib actively consolidates duplicates into more general skills and downweights entries whose long-term utility falls, closer to an evolving library than a log — which is why Microsoft calls it test-time LEARNING, not test-time memory."
+        },
+        {
+          "q": "What tasks did Microsoft evaluate EvoLib on?",
+          "a": "The EvoLib paper reports gains across math reasoning, code generation under strict efficiency constraints, and long-horizon agentic tasks, beating top retrieval-memory baselines and test-time-scaling baselines across most of the compute range. Curves are qualitative in the blog; the arXiv preprint (2605.14477) has the full tables and ablations."
+        },
+        {
+          "q": "How do I try EvoLib today?",
+          "a": "Clone github.com/microsoft/EvoLib — the MIT-licensed code implements the evolving library on top of a standard LLM inference loop. Microsoft also ships EvoLib in Azure AI Foundry Labs for teams that want a managed environment; the underlying method is open so on-prem or self-hosted deployments are straightforward."
+        }
+      ],
+      "explainer": {
+        "tagline": "EvoLib turns every inference trajectory into a library entry, then consolidates duplicates and prunes low-utility skills — no fine-tuning.",
+        "whatIsIt": "EvoLib is Microsoft Research's test-time learning framework. A deployed agent writes short skills and reflective notes from its own runs into a persistent library, and the library itself is updated between calls — similar entries merge, low-utility entries fade, and the base LLM is never touched. Code is MIT on GitHub.",
+        "howItWorks": "Two operators run alongside inference. A consolidator finds near-duplicate skills or notes and rewrites them as one more general entry, and a utility re-weighter tracks how much each entry actually improves later trajectories, decaying entries that stop being useful. The result is a library that grows in coverage while shrinking in redundancy.",
+        "whyItMatters": "Fine-tuning a frontier model to add a skill is expensive and often regresses others. EvoLib gives a deployed agent a way to keep learning on the job — math reasoning, efficient code and long-horizon planning — while beating retrieval-memory and test-time-scaling baselines. Enterprises can ship one base model and let each deployment specialise itself.",
+        "forWho": "agent teams, applied research groups, enterprise LLM ops",
+        "tryIt": "git clone github.com/microsoft/EvoLib"
+      },
+      "image": {
+        "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2026/07/EvoLib-TWLIFB-1200x627-1-scaled.jpg",
+        "alt": "Microsoft Research EvoLib blog banner — turning experience into evolving knowledge",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.microsoft.com/en-us/research/blog/evolib-turning-experience-into-evolving-knowledge/"
+        },
+        {
+          "label": "Paper (arXiv)",
+          "url": "https://arxiv.org/abs/2605.14477"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/microsoft/EvoLib"
+        },
+        {
+          "label": "MSR Publication Page",
+          "url": "https://www.microsoft.com/en-us/research/publication/test-time-learning-with-an-evolving-library/"
+        },
+        {
+          "label": "Azure AI Foundry Labs",
+          "url": "https://ai.azure.com/labs"
+        }
+      ],
+      "publishDate": "2026-07-30T21:16:31.037Z"
+    },
+    {
+      "id": "wes-roth-abacus-supercomputer-jul30",
+      "categories": [
+        "video"
+      ],
+      "title": "Wes Roth — 'I tested Abacus's new SUPERCOMPUTER... (INSANE)'",
+      "org": "Wes Roth",
+      "date": "2026-07-30",
+      "url": "https://www.youtube.com/watch?v=J3MHGRAqms0",
+      "summary": "Wes Roth spins up Abacus AI's SuperComputer — a $10/month persistent cloud environment for agents — and walks through what the always-on box does when Hermes and Claw are wired into 2 vCPU, 8 GB RAM and a real HTTPS endpoint.",
+      "tags": [
+        "video",
+        "youtube",
+        "wes-roth",
+        "abacus-ai",
+        "supercomputer",
+        "agent-infrastructure",
+        "cloud-sandbox",
+        "hermes",
+        "claw"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Wes Roth tests Abacus's SuperComputer — a $10/month persistent VM that lets AI agents build, host and run cloud apps 24/7.",
+        "whatIsIt": "Wes Roth's new video takes Abacus AI's SuperComputer for a full spin. The product is a $10/month always-on Linux environment with 2 vCPU, 8 GB RAM, persistent disk and terminal/SSH/HTTPS access that Abacus's Hermes and Claw agents can drive to build, host and operate cloud apps or local LLMs.",
+        "howItWorks": "Wes Roth walks through the SuperComputer console, hands the box to an agent, and shows it install services, expose an HTTPS endpoint and keep them running when the browser is closed. The demo covers the agent loop, the persistent filesystem and how the SuperComputer sits next to Abacus's existing ChatLLM, DeepAgent and CodeLLM products.",
+        "whyItMatters": "Most agent runtimes are ephemeral — close the tab and the sandbox is gone. Abacus's SuperComputer is one of the first mass-market persistent VMs priced at $10/month, and Wes Roth is where a lot of AI-tool viewers decide whether to buy in. A tour from him usually moves signups the next day.",
+        "forWho": "AI-tool watchers, indie builders shopping for an always-on agent sandbox",
+        "tryIt": "Watch the video, then visit supercomputer.abacus.ai"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/J3MHGRAqms0/hqdefault.jpg",
+        "alt": "Wes Roth YouTube thumbnail — testing Abacus AI SuperComputer",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=J3MHGRAqms0"
+        },
+        {
+          "label": "Wes Roth Channel",
+          "url": "https://www.youtube.com/channel/UCqcbQf6yw5KzRoDDcZ_wBSw"
+        },
+        {
+          "label": "Abacus SuperComputer",
+          "url": "https://supercomputer.abacus.ai/"
+        },
+        {
+          "label": "Abacus Help Doc",
+          "url": "https://abacus.ai/help/chatllm-ai-super-assistant/supercomputer"
+        }
+      ],
+      "author": {
+        "name": "Wes Roth",
+        "profileUrl": "https://www.youtube.com/channel/UCqcbQf6yw5KzRoDDcZ_wBSw"
+      },
+      "publishDate": "2026-07-30T21:16:31.037Z"
+    },
     {
       "id": "openai-gpt-5-6-price-cut-jul30",
       "categories": [

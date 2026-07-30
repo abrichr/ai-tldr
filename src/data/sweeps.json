@@ -26968,6 +26968,49 @@
         "repo",
         "dataset"
       ]
+    },
+    {
+      "id": "sweep-20260730t211631z",
+      "timestamp": "2026-07-30T21:16:31.037Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Microsoft Research's Echoverse (co-evolutionary training for computer-use agents, MIT code + HF dataset) and EvoLib (test-time learning framework with MIT code + arXiv) from today's MSR blog, plus a fresh Wes Roth video reviewing Abacus AI's SuperComputer. Skipped: Baidu Unlimited-OCR (2026-06-22, outside 72h), Poolside Laguna-S-2.1 (2026-07-21, outside 72h), HF speech-to-speech (no new release), Google Science One (paper + project page only, no released code — 'no papers alone'), Anthropic×Cognizant partnership and Meta assistive-robotics case study (no dev-facing artifact), and Bottleneck Labs GPT-5.6-Sol (already in feed). Bio/neuro/pharma lane returned nothing within 72h.",
+      "counts": {
+        "added": 3,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "microsoft-echoverse",
+          "title": "Microsoft Echoverse — deep, evolving environments train a 9B computer-use agent within 14 points of GPT-5.4",
+          "category": "paper",
+          "note": "Fresh MSR blog 2026-07-30 with MIT repo, HF dataset (722 tasks), and a technical report showing 9B agent 36.5→67.1% inside Echoverse and zero-shot transfer to WebVoyager/Online-Mind2Web. Clears 'no papers alone' via released code + dataset."
+        },
+        {
+          "id": "microsoft-evolib",
+          "title": "Microsoft EvoLib — test-time learning turns agent trajectories into an evolving skill library",
+          "category": "paper",
+          "note": "Fresh MSR blog 2026-07-30 with MIT repo + arXiv paper (2605.14477). Test-time learning method that consolidates skills and re-weights by utility; second-outlet pickup (windowsnews.ai) plus MSR + Azure Foundry Labs listing."
+        },
+        {
+          "id": "wes-roth-abacus-supercomputer-jul30",
+          "title": "Wes Roth — 'I tested Abacus's new SUPERCOMPUTER... (INSANE)'",
+          "category": "video",
+          "note": "Fresh (uploaded 0h ago, RSS-confirmed freshFor72hBar:true) video from a listed creator reviewing an existing Abacus AI product. Category is `video`; 72h bar applies to upload date, not the underlying product per the video-category rule."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "paper",
+        "algorithm",
+        "benchmark",
+        "video",
+        "model",
+        "repo",
+        "tool",
+        "dataset"
+      ]
     }
   ]
 }
