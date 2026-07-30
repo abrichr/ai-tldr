@@ -1,8 +1,231 @@
 {
-  "generatedAt": "2026-07-30T13:54:25.659Z",
+  "generatedAt": "2026-07-30T15:59:38.159Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "google-deepmind-gemini-robotics-2",
+      "categories": [
+        "model",
+        "tool"
+      ],
+      "title": "Gemini Robotics 2 — DeepMind's new humanoid model controls the full body",
+      "org": "Google DeepMind",
+      "date": "2026-07-30",
+      "url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
+      "summary": "Gemini Robotics 2 is Google DeepMind's next humanoid model. It controls a full humanoid body from feet to fingertips, coordinates multi-robot teams, and adapts to a new robot in a few hours with under 200 examples. Apptronik, Boston Dynamics, and Agile Robots are the launch partners.",
+      "tags": [
+        "gemini-robotics-2",
+        "google-deepmind",
+        "robotics",
+        "humanoid",
+        "whole-body-control",
+        "vla",
+        "multi-robot"
+      ],
+      "importance": "major",
+      "metrics": {
+        "whole-body task success": "45.7%–76.3%",
+        "adaptation examples": "<200",
+        "partner robots": "Apptronik · Boston Dynamics · Agile Robots"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Google DeepMind"
+        },
+        {
+          "label": "Models",
+          "value": "Gemini Robotics 2 (VLA) + Gemini Robotics ER 2"
+        },
+        {
+          "label": "What's new",
+          "value": "Whole-body humanoid control, feet to fingertips"
+        },
+        {
+          "label": "Dexterity",
+          "value": "22-DoF hands, grippers, tying knots"
+        },
+        {
+          "label": "Partner robots",
+          "value": "Apptronik, Boston Dynamics, Agile Robots"
+        },
+        {
+          "label": "Availability",
+          "value": "ER 2 on AI Studio; VLA + On-Device via waitlist"
+        },
+        {
+          "label": "Adaptation",
+          "value": "New robot in hours with <200 examples"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How is Gemini Robotics 2 different from Gemini Robotics 1.5?",
+          "a": "Gemini Robotics 2 moves beyond the upper-body table-top skills of Gemini Robotics 1.5. The new model controls the full humanoid — walking, crouching, stretching, and reaching — with multi-finger hands that can tie knots and seal ziplock bags. It also lets several robots plan and act together on one task."
+        },
+        {
+          "q": "Which robots does Gemini Robotics 2 support?",
+          "a": "Google DeepMind names three launch partners for Gemini Robotics 2: Apptronik, Boston Dynamics, and Agile Robots. The model can adapt to a new bi-arm or humanoid embodiment in a few hours, typically with fewer than 200 example demonstrations, so more robot platforms can be added later."
+        },
+        {
+          "q": "Can developers try Gemini Robotics 2 today?",
+          "a": "Gemini Robotics ER 2, the orchestration brain, is live on Google AI Studio and in private preview on the Gemini Enterprise Agent Platform. The whole-body VLA and On-Device 2 models are behind a Trusted Tester waitlist, so most developers cannot deploy Gemini Robotics 2 on their own robots yet."
+        },
+        {
+          "q": "What tasks does Gemini Robotics 2 actually finish?",
+          "a": "DeepMind reports Gemini Robotics 2 hits 45.7%–76.3% success on whole-body manipulation tasks and 74.2%–89.6% with parallel grippers, with multi-finger dexterity between 32% and 92% depending on the task. Demos include screwing in a light bulb, tying knots, folding clothes, and two robots handing objects across a shared workspace."
+        }
+      ],
+      "explainer": {
+        "tagline": "DeepMind's new humanoid brain walks, crouches, and ties knots — and coordinates two robots at once.",
+        "whatIsIt": "Gemini Robotics 2 is a Vision-Language-Action model that steers a whole humanoid instead of only the arms. Google DeepMind pairs it with Gemini Robotics ER 2, a higher-level 'brain' that plans and calls tools. Partners for the launch are Apptronik, Boston Dynamics, and Agile Robots.",
+        "howItWorks": "Whole-body control lets Gemini Robotics 2 send coordinated commands from feet to fingertips, driving 22-DoF hands or simpler grippers. ER 2 handles long-horizon planning, moment-finding on live video (91.3% accuracy), and hand-off between multiple robots. New embodiments are adapted with under 200 example demonstrations in a few hours.",
+        "whyItMatters": "Humanoid startups have had brains that can talk and arms that can grip, but rarely one model that can crouch, walk, reach, and dexterously manipulate through a single API. Gemini Robotics 2 pushes the frontier lab into full-body control at the same moment Apptronik Apollo and Boston Dynamics Atlas are hitting factory floors.",
+        "forWho": "Robotics teams and humanoid startups",
+        "tryIt": "Gemini Robotics ER 2 in Google AI Studio; whole-body VLA via the Trusted Tester waitlist."
+      },
+      "image": {
+        "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-robotics-2__blog__cover.width-1300.png",
+        "alt": "Apptronik humanoid robot controlled by Gemini Robotics 2 reaching to manipulate objects on a table",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/"
+        },
+        {
+          "label": "Developer Blog (ER 2)",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/"
+        },
+        {
+          "label": "Model Page",
+          "url": "https://deepmind.google/models/gemini-robotics/"
+        },
+        {
+          "label": "Safety Report (PDF)",
+          "url": "https://storage.googleapis.com/deepmind-media/gemini-robotics/Gemini-Robotics-2-Safety.pdf"
+        },
+        {
+          "label": "Try in AI Studio",
+          "url": "https://aistudio.google.com/"
+        }
+      ],
+      "publishDate": "2026-07-30T15:59:38.159Z"
+    },
+    {
+      "id": "different-ai-openwork",
+      "categories": [
+        "repo",
+        "tool"
+      ],
+      "title": "OpenWork — open-source Claude Cowork alternative hits 18.5K stars",
+      "org": "Different AI",
+      "date": "2026-07-30",
+      "url": "https://github.com/different-ai/openwork",
+      "summary": "OpenWork is a MIT-licensed desktop app that lets teams share AI skills, MCP servers, and workflows across Claude Code, Cursor, and Codex. Different AI shipped OpenWork v0.18.12 on July 30 with new Knoppers channel-native chat and elevated Developer mode.",
+      "tags": [
+        "openwork",
+        "different-ai",
+        "opencode",
+        "claude-cowork",
+        "mcp",
+        "coding-agents",
+        "team-workspace",
+        "open-source"
+      ],
+      "importance": "major",
+      "metrics": {
+        "GitHub stars": "18,475",
+        "stars today": "+916",
+        "latest release": "v0.18.12"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Different AI (Openwork Labs)"
+        },
+        {
+          "label": "License",
+          "value": "MIT (Fair Source for /ee enterprise dir)"
+        },
+        {
+          "label": "Latest release",
+          "value": "v0.18.12, July 30 2026"
+        },
+        {
+          "label": "Runs on",
+          "value": "macOS, Windows, Linux desktop app"
+        },
+        {
+          "label": "Works with",
+          "value": "Claude Code, Cursor, Codex via MCP"
+        },
+        {
+          "label": "Model support",
+          "value": "50+ LLMs with bring-your-own API keys"
+        },
+        {
+          "label": "Team pricing",
+          "value": "First 5 seats free, then $10/seat/month"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How is OpenWork different from Claude Cowork?",
+          "a": "OpenWork ships as an MIT-licensed desktop app that runs entirely on the user's own machine, while Claude Cowork is Anthropic's hosted product tied to Claude. OpenWork lets teams bring 50+ LLM API keys and share skills across Claude Code, Cursor, and Codex through MCP, so no single vendor owns the workspace."
+        },
+        {
+          "q": "Is OpenWork free?",
+          "a": "The OpenWork desktop app is free and open source under MIT, and stays free for personal use. The Team Starter plan gives the first 5 seats free, then charges $10 per seat per month for shared skills, an Extension Marketplace, and the OpenWork Den control plane; enterprise pricing includes SSO and on-prem inference."
+        },
+        {
+          "q": "Which coding agents does OpenWork integrate with?",
+          "a": "OpenWork connects to Claude Code, Cursor, and Codex through a Model Context Protocol server, so a skill authored in OpenWork appears in each agent as a tool. The July 30 v0.18.12 release adds channel-native chat elements and elevated Developer mode for building richer OpenWork Apps on top of that MCP surface."
+        },
+        {
+          "q": "Where does OpenWork run and store data?",
+          "a": "OpenWork runs as a local desktop app on macOS, Windows, and Linux, so files stay on the user's machine unless a team opts into OpenWork Cloud. Different AI also offers a self-hosted enterprise deployment with the /ee directory under a Fair Source License, kept separate from the MIT-licensed core."
+        }
+      ],
+      "explainer": {
+        "tagline": "OpenWork ships an MIT-licensed desktop workspace that shares AI skills across Claude Code, Cursor, and Codex.",
+        "whatIsIt": "OpenWork is a free desktop app from Different AI (Openwork Labs) that packages skills, MCP servers, and AI workflows into shareable units. Teammates import a workspace with one link and get the same tools inside Claude Code, Cursor, or Codex — no terminal setup required.",
+        "howItWorks": "An MCP server routes calls between the desktop client and the connected agents, and Openwork Den acts as the control plane for skill publishing and team permissions. Users bring their own API keys for 50+ LLMs, and the July 30 v0.18.12 release adds a Knoppers channel proposal stack for chat-native UI elements plus elevated Developer mode.",
+        "whyItMatters": "Claude Cowork made shared AI workspaces mainstream, but locked teams to one vendor and cloud. OpenWork pulls the same collaboration shape into an open desktop app that respects local files, works with any agent, and hit 18.5K GitHub stars — including +916 today — as teams look for a Cowork substitute they can self-host.",
+        "forWho": "Engineering teams and open-source shops that share AI workflows across multiple coding agents",
+        "tryIt": "Download at openworklabs.com/download"
+      },
+      "image": {
+        "url": "https://openworklabs.com/og-image-clean.png",
+        "alt": "OpenWork desktop app screenshot showing shared AI skills across coding agents",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/different-ai/openwork"
+        },
+        {
+          "label": "v0.18.12 Release",
+          "url": "https://github.com/different-ai/openwork/releases/tag/v0.18.12"
+        },
+        {
+          "label": "Landing Page",
+          "url": "https://openworklabs.com/"
+        },
+        {
+          "label": "Download",
+          "url": "https://openworklabs.com/download"
+        },
+        {
+          "label": "Docs",
+          "url": "https://openworklabs.com/docs"
+        }
+      ],
+      "publishDate": "2026-07-30T15:59:38.159Z"
+    },
     {
       "id": "xai-grok-voice-think-fast-2",
       "categories": [

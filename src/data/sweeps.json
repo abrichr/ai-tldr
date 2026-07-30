@@ -26867,6 +26867,46 @@
         "dataset",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260730t155938z",
+      "timestamp": "2026-07-30T15:59:38.159Z",
+      "source": "github-actions-sweep",
+      "summary": "Two adds: Google DeepMind's Gemini Robotics 2 (July 30) brings whole-body humanoid control with Apptronik/Boston Dynamics/Agile Robots as launch partners; OpenWork (v0.18.12, July 30), an MIT desktop app that's an open-source Claude Cowork alternative, trending on GitHub with 18.5K stars (+916 today). Also scanned Anthropic, OpenAI, Meta, xAI, Mistral, Cohere, Moonshot, Qwen, Z.ai, HN top 30, HuggingFace models/papers, Simon Willison, and 8 YouTube creator RSS feeds; nothing else fresh cleared the bar (top HF trending models and today's YouTube uploads already in feed; ChatGPT Voice on Work/Codex expands the existing openai-chatgpt-voice-desktop item, not a new ship).",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "google-deepmind-gemini-robotics-2",
+          "title": "Gemini Robotics 2 — DeepMind's new humanoid model controls the full body",
+          "category": "model",
+          "note": "DeepMind blog post published 2026-07-30 (today). Frontier lab in first-pass source list. Two related model announcements same day (Gemini Robotics 2 whole-body VLA + Gemini Robotics ER 2 orchestrator) — combined into one release item to avoid inflation. Distinct from existing deepmind-gemini-robotics-er-1-6 (prior version)."
+        },
+        {
+          "id": "different-ai-openwork",
+          "title": "OpenWork — open-source Claude Cowork alternative hits 18.5K stars",
+          "category": "repo",
+          "note": "On GitHub daily trending with +916 stars today (>500 in 7d bar cleared), plus fresh v0.18.12 release stamped 2026-07-30 08:30 UTC. Distinct from existing anthropic-cowork-mobile-web (that item is Anthropic's Claude Cowork itself); this is the open-source alternative."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "article",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
