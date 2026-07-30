@@ -1,8 +1,66 @@
 {
-  "generatedAt": "2026-07-30T02:15:28.405Z",
+  "generatedAt": "2026-07-30T05:04:28.507Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "matthew-green-anthropic-cryptanalysis-jul29",
+      "categories": [
+        "article"
+      ],
+      "title": "Matthew Green — Anthropic's HAWK attack is real, the AES result is not",
+      "org": "Matthew Green",
+      "date": "2026-07-29",
+      "url": "https://blog.cryptographyengineering.com/2026/07/29/some-notes-about-anthropics-new-results/",
+      "summary": "Johns Hopkins cryptographer Matthew Green reads Anthropic's Claude Mythos cryptanalysis. He calls the HAWK attack a real break with running code in hours, and calls the AES improvement a small step that still needs 2^105 chosen plaintexts.",
+      "tags": [
+        "matthew-green",
+        "cryptography",
+        "cryptanalysis",
+        "hawk",
+        "aes",
+        "post-quantum",
+        "claude-mythos",
+        "anthropic",
+        "expert-critique",
+        "explainer",
+        "johns-hopkins"
+      ],
+      "importance": "notable",
+      "links": [
+        {
+          "label": "Full Article",
+          "url": "https://blog.cryptographyengineering.com/2026/07/29/some-notes-about-anthropics-new-results/"
+        },
+        {
+          "label": "Anthropic Research",
+          "url": "https://www.anthropic.com/research/discovering-cryptographic-weaknesses"
+        },
+        {
+          "label": "About the Author",
+          "url": "https://blog.cryptographyengineering.com/about-me/"
+        }
+      ],
+      "explainer": {
+        "tagline": "Matthew Green splits Anthropic's cryptanalysis in two — the HAWK attack is a real break, the AES result is a small step.",
+        "whatIsIt": "Matthew Green's July 29 post 'Some notes about Anthropic's new results' walks a cryptographer through the two attacks Anthropic released with Claude Mythos on July 27. Green agrees the HAWK attack is a real cryptanalytic break and pushes back on the AES claim.",
+        "howItWorks": "The HAWK attack, Green explains, uses lattice tools that were already 'lying around' and applies them thoroughly enough to halve HAWK's security bits and ship working code that runs in hours. The AES side, by contrast, is a constant-factor improvement on a 2013 paper — 2^89 cipher operations and 2^105 chosen plaintexts, well outside anything practical.",
+        "whyItMatters": "Green's read tells cryptographers where to actually pay attention. HAWK is a post-quantum signature candidate; halving its security bits before deployment strengthens the ongoing PQC transition. Green also warns that AI cryptanalysis needs human verification: a model spitting out an apparent result does not make the result real.",
+        "forWho": "cryptographers, security engineers, and post-quantum standards followers",
+        "tryIt": "Read: blog.cryptographyengineering.com/2026/07/29/some-notes-about-anthropics-new-results"
+      },
+      "image": {
+        "url": "https://blog.cryptographyengineering.com/wp-content/uploads/2026/07/anthropic.jpg",
+        "alt": "Anthropic logo illustration featured on Matthew Green's cryptography blog",
+        "fit": "contain"
+      },
+      "author": {
+        "name": "Matthew Green",
+        "handle": "@matthew_d_green",
+        "profileUrl": "https://blog.cryptographyengineering.com/about-me/"
+      },
+      "publishDate": "2026-07-30T05:04:28.507Z"
+    },
     {
       "id": "openai-chatgpt-academic-researchers",
       "categories": [

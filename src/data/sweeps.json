@@ -26736,6 +26736,39 @@
         "ecosystem",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260730t050428z",
+      "timestamp": "2026-07-30T05:04:28.507Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic Cognizant partnership fails ecosystem gate; DeepMind and Meta July 27 items already in feed), GitHub trending (airi/openwork/speech-to-speech are persistent projects with no fresh release; jcode already in feed), HuggingFace models and datasets trending (Kimi K3, Solar-Open2, Laguna S 2.1, Fara1.5, Baidu Unlimited-OCR, KAT-Coder, Nanbeige, Inflect-Micro already in feed; Moonshot PerceptionBench initial commit dates to 2026-07-27 so 72h cap is uncertain), HN top 30 (Turbo Fieldfare, Anatomy of a Frontier Lab Agent Intrusion, Kimi K3 already in feed; Superlogical is pre-launch; LLM Honeypot is parody), influential voices (Simon Willison recent posts cover items already in feed), and the bio/neuro/pharma science lane (Perimeter Claire FDA PMA is March 2026, AIRS SwiftMR clearance is April 2026, no fresh released artifact). Added one Matthew Green cryptography article that expert-critiques Anthropic's July 27 HAWK and AES results — an influential voice weighing in on a release already in the feed, which the article/video dedup exception allows.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "matthew-green-anthropic-cryptanalysis-jul29",
+          "title": "Matthew Green — Anthropic's HAWK attack is real, the AES result is not",
+          "category": "article",
+          "note": "Fresh July 29 article by Johns Hopkins cryptographer Matthew Green — expert critique of Anthropic's Claude Mythos HAWK and AES results, front-paged on HN. Influential voice on a fresh release; passes the article inclusion bar."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "paper",
+        "ecosystem"
+      ]
     }
   ]
 }
