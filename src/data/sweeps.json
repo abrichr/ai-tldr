@@ -26931,6 +26931,43 @@
         "repo",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260730t193030z",
+      "timestamp": "2026-07-30T19:30:30.578Z",
+      "source": "github-actions-sweep",
+      "summary": "Two new items: OpenAI's July 30 GPT-5.6 Luna / Terra price cut (major — Luna 80% off, Terra 20% off, Sol unchanged) and Bottleneck Labs' Saul experiment showing GPT-5.6 Sol losing $447 running a real iOS app in 24 hours (showcase). Gemini Robotics ER 2 (Jul 30) skipped as semantic dupe of the Gemini Robotics 2 launch already in the feed (same package, ER 2 named in that item's quickFacts). All 4 fresh YouTube videos in yt-rss-scan already in feed. Anthropic Cognizant partnership + open-weights position (Jul 27) skipped as services/opinion, not shipped artifacts.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-gpt-5-6-price-cut-jul30",
+          "title": "GPT-5.6 Luna cut 80%, Terra 20% — OpenAI drops API prices three weeks after launch",
+          "category": "model",
+          "note": "Fresh 2026-07-30 OpenAI announcement, 308 pts on HN in 2 hours, confirmed via Yahoo Finance. Concrete new API prices — Luna and Terra get 80% / 20% cuts."
+        },
+        {
+          "id": "bottleneck-labs-saul-gpt-5-6-experiment",
+          "title": "GPT-5.6 Sol ran a real iOS business — Bottleneck Labs' Saul agent lost $447 in a day",
+          "category": "showcase",
+          "note": "132 pts on HN, published 2026-07-30. Real dollar experiment giving GPT-5.6 Sol a live iOS app; distinct from the Andon Labs Vending-Bench 2 Opus 5 result already in the feed."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "video",
+        "tool",
+        "paper",
+        "showcase",
+        "ecosystem",
+        "repo",
+        "dataset"
+      ]
     }
   ]
 }
