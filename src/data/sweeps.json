@@ -26907,6 +26907,30 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260730t173356z",
+      "timestamp": "2026-07-30T17:33:56.660Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, DeepSeek, Qwen, Google Research), GitHub trending, HuggingFace models/datasets/papers, HN front page + newest, Simon Willison, and all 8 YouTube channels via yt-rss-scan. All 4 fresh videos (Sam Witteveen ThinkingCap, Fireship Anthropic, Two Minute Papers Kimi K3, Wes Roth OpenAI rogue agent) are already in the feed. Anthropic's Jul 27 open-weights position post is policy commentary with no dev action (fails ecosystem gate). Cohere North Automations (Jul 27) is 3+ days old and lacks a 48h lab-blog/tier-1 signal. Kimi K3, TurboVLA, Turbo Fieldfare, Mythos cryptography, Modal/OpenAI intrusion, MCP 2026-07-28, ChatGPT for Academic Researchers, Opus 5 all already covered. LongCat-2.0 (Jul 6) and Huawei CodeArts Agent (Jul 24) both older than 72h. GPT-5.6 (Jul 9) and Gemini 3.6 Flash (Jul 21) also outside 72h. Nothing new qualifies.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "video",
+        "article",
+        "paper",
+        "dataset",
+        "repo",
+        "ecosystem"
+      ]
     }
   ]
 }
