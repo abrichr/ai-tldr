@@ -1,8 +1,73 @@
 {
-  "generatedAt": "2026-07-30T05:04:28.507Z",
+  "generatedAt": "2026-07-30T08:23:14.965Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "h-embodvis-turbovla",
+      "categories": [
+        "paper",
+        "algorithm",
+        "repo"
+      ],
+      "title": "TurboVLA — 0.2B robot policy runs at 32 Hz on RTX 4090 in under 1 GB VRAM",
+      "org": "HUST + Huawei",
+      "date": "2026-07-29",
+      "url": "https://arxiv.org/abs/2607.27205",
+      "summary": "TurboVLA is a 0.2B-parameter vision-language-action model that swaps the usual V→L→A pipeline for a direct V+L→A path, hitting 97.7% on LIBERO at 32 Hz on an RTX 4090 with under 1 GB VRAM.",
+      "tags": [
+        "paper",
+        "algorithm",
+        "vision-language-action",
+        "vla",
+        "robotics",
+        "embodied-ai",
+        "libero",
+        "edge-inference",
+        "huawei",
+        "hust",
+        "apache-2-0"
+      ],
+      "importance": "notable",
+      "metrics": {
+        "Params": "0.2B",
+        "VRAM": "<1 GB",
+        "Rate": "32 Hz",
+        "LIBERO avg": "97.7%"
+      },
+      "explainer": {
+        "tagline": "A tiny vision-language-action model that keeps up with a real robot on a gaming GPU.",
+        "whatIsIt": "TurboVLA is an open-source vision-language-action model for robot manipulation from Huazhong University of Science and Technology and Huawei. The 0.2B-parameter policy runs at 32 Hz on a single RTX 4090 in under 1 GB of VRAM, and posts 97.7% average success on the LIBERO benchmark.",
+        "howItWorks": "Most VLAs route the camera through a large language model before predicting an action (V→L→A). TurboVLA drops that path and encodes vision and language in parallel, exchanges information through a lightweight bidirectional cross-attention block, and predicts action chunks with a compact decoder. Inference is 31.2 ms per step, so the loop keeps up with a 30 Hz control rate on a consumer GPU.",
+        "whyItMatters": "Real-time robot control usually needs a workstation-grade GPU or a distilled policy. TurboVLA runs the full policy in real time on a laptop-class card with room to spare, which lowers the bar for hobbyist and university robotics groups that already have a 40-series GPU. The paper also reports 60.2% on RoboTwin 2.0 bimanual tasks.",
+        "forWho": "Robotics researchers and hobbyists running LIBERO / RoboTwin on a single RTX-40 GPU.",
+        "tryIt": "git clone https://github.com/H-EmbodVis/TurboVLA"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/H-EmbodVis/TurboVLA",
+        "alt": "TurboVLA repository card on GitHub showing the project title and a real-time robot manipulation demo.",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "arXiv paper",
+          "url": "https://arxiv.org/abs/2607.27205"
+        },
+        {
+          "label": "Code (GitHub)",
+          "url": "https://github.com/H-EmbodVis/TurboVLA"
+        },
+        {
+          "label": "Project page",
+          "url": "https://h-embodvis.github.io/TurboVLA/"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.27205"
+        }
+      ],
+      "publishDate": "2026-07-30T08:23:14.965Z"
+    },
     {
       "id": "matthew-green-anthropic-cryptanalysis-jul29",
       "categories": [

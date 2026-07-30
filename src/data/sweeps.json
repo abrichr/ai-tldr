@@ -26769,6 +26769,40 @@
         "paper",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260730t082314z",
+      "timestamp": "2026-07-30T08:23:14.965Z",
+      "source": "github-actions-sweep",
+      "summary": "Feed already covers the Kimi K3 aftermath (Sebastian Raschka + Doubleword), the Anthropic Mythos cryptanalysis and Matthew Green rebuttal, MCP 2026-07-28, Microsoft Mage-VL, NVIDIA Agent Toolkit + ModelExpress, and the three fresh YouTube videos from Fireship / Two Minute Papers / Wes Roth. Only new qualifier this sweep: TurboVLA, a 0.2B VLA released 2026-07-29 (arXiv + Apache-2.0 code + demo, HF Papers top 10). Anthropic/OpenAI/DeepMind/Meta/Mistral/Cohere/xAI have no unshipped news in the 72h window; Chinese labs quiet after WAIC; bio/pharma lane empty this pass.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "h-embodvis-turbovla",
+          "title": "TurboVLA — 0.2B robot policy runs at 32 Hz on RTX 4090 in under 1 GB VRAM",
+          "category": "paper",
+          "note": "arXiv v1 dropped 2026-07-29; Apache-2.0 repo with training + eval code + real-world demo; #1 on HF Papers today with 80 upvotes. Paper 2-of-N: public code (Apache-2.0, active) + runnable demo (video + full training/eval)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "video",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
