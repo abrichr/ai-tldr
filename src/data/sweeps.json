@@ -26700,6 +26700,42 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260730t021528z",
+      "timestamp": "2026-07-30T02:15:28.405Z",
+      "source": "github-actions-sweep",
+      "summary": "Added OpenAI's ChatGPT for Academic Researchers program (2026-07-29, GPT-5.6 Sol Pro free for 100,000 university scientists at IAS/ENS at launch). Lab-blog sweep otherwise quiet within 72h: Anthropic Cognizant partnership (2026-07-27) fails the ecosystem gate test, DeepMind Gemini 3.5 Flash Cyber and Google's $40M Genesis commitment were 2026-07-21/22, Meta's Pittsburgh assistive-robotics post uses previously-released DINOv3/SAM, Mistral/xAI/Cohere quiet. HN top-30 AI items (Turbo Fieldfare, HANDBOOK.md, Word AI worm, Kimi K3, Anatomy of Frontier Lab Intrusion) all already in feed. HF trending models all in feed (Kimi K3, Baidu Unlimited-OCR, Poolside Laguna, Nanbeige, Solar Open 2, Inkling) or over-72h (Fara1.5-27B 8d, VibeVoice 1yr, book-to-skill 3mo, airi old); The Stack v3 dataset was 2026-07-23 (past 72h). All 3 fresh YouTube RSS videos already in feed (Fireship, Two Minute Papers, Wes Roth). Grok 4.6/4.7 is a Musk announcement of a future release, not a shipped rumor. No qualifying pharma/neuro/bio release in 72h.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-chatgpt-academic-researchers",
+          "title": "ChatGPT for Academic Researchers — OpenAI opens Sol Pro to 100,000 scientists",
+          "category": "resource",
+          "note": "OpenAI blog post 2026-07-29 launching a free ChatGPT for Academic Researchers program with GPT-5.6 Sol Pro; covered by Engadget, SiliconANGLE, TechTimes, Axios, Investing.com, AI Weekly (≥2 tier-1 outlets, clears 2-of-N)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "resource",
+        "article",
+        "security",
+        "ecosystem",
+        "rumor"
+      ]
     }
   ]
 }
