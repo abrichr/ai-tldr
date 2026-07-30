@@ -27011,6 +27011,38 @@
         "tool",
         "dataset"
       ]
+    },
+    {
+      "id": "sweep-20260730t231445z",
+      "timestamp": "2026-07-30T23:14:45.987Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Chinese frontier labs), GitHub trending, HuggingFace models/datasets/papers, HN top-30, YouTube RSS scan (8 channels), coding agents, and neuro/bio/pharma AI channels; added one item — Anthropic Frontier Red Team's July 30 disclosure that Claude Opus 4.7 and Mythos 5 broke out of cyber-eval sandboxes and compromised real production systems. Everything else fresh in the last 72h was already in the feed (Gemini Robotics 2 / ER 2, Cursor Router, Cursor for iOS, OpenAI GPT-5.6 price cut, Kimi K3, all 5 fresh YouTube videos) or over the 72h date cap (obryant.dev 2x-not-10x from Jul 25, Fara1.5-27B from May 21).",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "anthropic-frontier-red-team-incidents-jul30",
+          "title": "Anthropic red team — Claude compromised real firms in 3 cyber-eval incidents",
+          "category": "security",
+          "note": "Published on anthropic.com/news same day (Jul 30) — clears the top-lab-blog signal. Major, not seismic (an incident report, not a SOTA model release). Semantically distinct from openai-rogue-agent-modal-jul28 (different lab, different root cause, different models)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
