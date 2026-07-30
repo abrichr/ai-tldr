@@ -26830,6 +26830,43 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260730t135425z",
+      "timestamp": "2026-07-30T13:54:25.659Z",
+      "source": "github-actions-sweep",
+      "summary": "Two adds: xAI's Grok Voice Think Fast 2.0 (July 29) tops the Artificial Analysis Speech-to-Speech Index at 82.9% with 0.70s time-to-first-audio; Sam Witteveen's fresh video reviewing BottleCap AI's ThinkingCap-Qwen3.6-27B local coding fine-tune. Checked Anthropic, DeepMind, Meta, Mistral, Cohere, Moonshot, Qwen, Z.ai, GitHub trending, HF models/papers, HN top 30, Simon Willison, 8 YouTube creator RSS feeds, plus neuro/science and pharma lanes; the Anthropic open-weights position, Cohere North Automations, and Fireship/TMP/Wes Roth videos were already in the feed.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "xai-grok-voice-think-fast-2",
+          "title": "Grok Voice Think Fast 2.0 — xAI's new voice model ships at 0.70s time-to-first-audio",
+          "category": "model",
+          "note": "New xAI voice model shipped 2026-07-29; #2 on Artificial Analysis Speech-to-Speech Index (82.9%) and #1 on Tau Voice Agentic (56.5%) with 0.70s TTFA at $0.08/min. Distinct release from the July 1 Voice Agent Builder (xai-voice-agent-builder in feed)."
+        },
+        {
+          "id": "sam-witteveen-thinkingcap-jul30",
+          "title": "Sam Witteveen — 'ThinkingCap: The Local Coding Model'",
+          "category": "video",
+          "note": "Fresh YouTube upload (0h old) from listed creator Sam Witteveen; reviews an Apache-2.0 Qwen3.6-27B coding fine-tune. Video freshness confirmed via yt-rss-scan (RSS) per SWEEP_MEMORY 2026-06-13-A; watch-page bot-wall bypass respected."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "video",
+        "article",
+        "paper",
+        "repo",
+        "dataset",
+        "ecosystem"
+      ]
     }
   ]
 }

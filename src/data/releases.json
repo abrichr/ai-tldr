@@ -1,8 +1,213 @@
 {
-  "generatedAt": "2026-07-30T11:57:30.530Z",
+  "generatedAt": "2026-07-30T13:54:25.659Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "xai-grok-voice-think-fast-2",
+      "categories": [
+        "model",
+        "tool"
+      ],
+      "title": "Grok Voice Think Fast 2.0 — xAI's new voice model ships at 0.70s time-to-first-audio",
+      "org": "xAI",
+      "date": "2026-07-29",
+      "url": "https://x.ai/news/grok-voice-think-fast-2",
+      "summary": "Grok Voice Think Fast 2.0 is xAI's new speech-to-speech model. It scores 82.9% on the Artificial Analysis Speech-to-Speech Index (up from 75.7%), lands at 0.70s time-to-first-audio, and costs $0.08 per minute of audio.",
+      "tags": [
+        "model",
+        "voice-model",
+        "speech-to-speech",
+        "xai",
+        "grok",
+        "voice-agent",
+        "audio-ai",
+        "voice-api"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Speech-to-Speech Index": "82.9%",
+        "Time to first audio": "0.70s",
+        "Price": "$0.08/min"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "xAI"
+        },
+        {
+          "label": "Version",
+          "value": "Grok Voice Think Fast 2.0"
+        },
+        {
+          "label": "Architecture",
+          "value": "Single speech-to-speech model"
+        },
+        {
+          "label": "Price",
+          "value": "$0.08 / minute of audio"
+        },
+        {
+          "label": "Availability",
+          "value": "xAI API + Voice Agent Builder"
+        },
+        {
+          "label": "API alias switch",
+          "value": "grok-voice-latest routes to 2.0 on 2026-08-05"
+        },
+        {
+          "label": "Predecessor",
+          "value": "Think Fast 1.0 (75.7% on Speech-to-Speech Index)"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "Artificial Analysis Speech-to-Speech Index",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Grok Voice Think Fast 2.0",
+              "score": 82.9,
+              "highlight": true
+            },
+            {
+              "name": "GPT-Realtime-2.1",
+              "score": 79.1
+            },
+            {
+              "name": "Grok Voice Think Fast 1.0",
+              "score": 75.7
+            },
+            {
+              "name": "Gemini 3.1 Flash",
+              "score": 69.5
+            }
+          ],
+          "source": "https://x.ai/news/grok-voice-think-fast-2"
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "Audio",
+            "price": "$0.08",
+            "unit": "/ minute",
+            "note": "API + Voice Agent Builder"
+          }
+        ],
+        "source": "https://x.ai/news/grok-voice-think-fast-2"
+      },
+      "faq": [
+        {
+          "q": "How does Grok Voice Think Fast 2.0 compare to Think Fast 1.0?",
+          "a": "Grok Voice Think Fast 2.0 raises the Artificial Analysis Speech-to-Speech Index score from 75.7% to 82.9% and cuts time-to-first-audio from 1.25 seconds to 0.70 seconds. xAI says the model uses about 60% fewer reasoning tokens per turn while sounding more natural in conversation."
+        },
+        {
+          "q": "How much does Grok Voice Think Fast 2.0 cost?",
+          "a": "Grok Voice Think Fast 2.0 is billed at $0.08 per minute of audio for both input and output. It is available through xAI's API and the Grok Voice Agent Builder, so developers can pipe it directly into custom voice agents without switching platforms."
+        },
+        {
+          "q": "When does grok-voice-latest switch to Think Fast 2.0?",
+          "a": "Applications that call the grok-voice-latest alias will be routed to Grok Voice Think Fast 2.0 automatically starting August 5, 2026. Teams that want to pin the older Think Fast 1.0 behavior must pass the explicit v1.0 model ID before that date."
+        },
+        {
+          "q": "How does Think Fast 2.0 handle noisy audio?",
+          "a": "xAI reports transcription accuracy 1.5 to 2.0 times higher than Deepgram Nova 3 and ElevenLabs Scribe v2 across 24 languages, and about 10 times higher than those baselines in heavy background noise. Real-world tests on Starlink's phone support line showed higher sales and support scores."
+        }
+      ],
+      "explainer": {
+        "tagline": "xAI's next-gen voice model tops the Artificial Analysis Speech-to-Speech leaderboard at sub-second latency.",
+        "whatIsIt": "Grok Voice Think Fast 2.0 is xAI's second-generation speech-to-speech voice model. It replaces Think Fast 1.0 (75.7% on the Artificial Analysis Speech-to-Speech Index) with a version that scores 82.9%, ranking #2 overall and #1 on Tau Voice for Agentic Performance (56.5%). It runs as one end-to-end model, not a stitched STT-LLM-TTS pipeline.",
+        "howItWorks": "Parallel reasoning happens alongside speech generation, which is what keeps time-to-first-audio at 0.70 seconds — down from 1.25s in v1.0. Reinforcement learning was tuned toward shorter, less filler-heavy replies, cutting reasoning tokens by about 60% per turn. Transcription is 1.5–2.0× more accurate than Deepgram Nova 3 and ElevenLabs Scribe v2 across 24 languages, and roughly 10× more accurate in noisy conditions.",
+        "whyItMatters": "Voice agents live or die on latency and interruption handling; sub-second time-to-first-audio in Grok Voice Think Fast 2.0 puts xAI ahead of OpenAI's GPT-Realtime-2.1 (79.1%) and Google's Gemini 3.1 Flash (69.5%) on the leaderboard while pricing at $0.08 per minute. Starlink already A/B-tested it on its phone support line and saw higher conversion.",
+        "forWho": "voice-agent builders, contact-center teams, developers on the xAI API",
+        "tryIt": "Call model id `grok-voice-think-fast-2` on the xAI API or in Voice Agent Builder"
+      },
+      "image": {
+        "url": "https://x.ai/images/news/grok-voice-think-fast-2.webp",
+        "alt": "xAI Grok Voice Think Fast 2.0 announcement graphic",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://x.ai/news/grok-voice-think-fast-2"
+        },
+        {
+          "label": "Voice Agent Builder",
+          "url": "https://x.ai/news/grok-voice-agent-builder"
+        },
+        {
+          "label": "Artificial Analysis Post",
+          "url": "https://x.com/ArtificialAnlys/status/2082528987272957960"
+        },
+        {
+          "label": "Coverage: TestingCatalog",
+          "url": "https://www.testingcatalog.com/spacexai-launches-grok-voice-think-fast-2-0-on-agent-builder/"
+        }
+      ],
+      "publishDate": "2026-07-30T13:54:25.659Z"
+    },
+    {
+      "id": "sam-witteveen-thinkingcap-jul30",
+      "categories": [
+        "video"
+      ],
+      "title": "Sam Witteveen — 'ThinkingCap: The Local Coding Model'",
+      "org": "Sam Witteveen",
+      "date": "2026-07-30",
+      "url": "https://www.youtube.com/watch?v=m1gQu9ApmRQ",
+      "summary": "Sam Witteveen walks through ThinkingCap-Qwen3.6-27B, BottleCap AI's Apache-2.0 fine-tune of Qwen3.6-27B that keeps benchmark scores while cutting reasoning tokens by about 46%, aimed at local coding on a single 24 GB GPU.",
+      "tags": [
+        "video",
+        "youtube",
+        "sam-witteveen",
+        "thinkingcap",
+        "qwen3.6",
+        "coding-model",
+        "local-llm",
+        "open-weights",
+        "efficient-inference"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Sam Witteveen benchmarks ThinkingCap-Qwen3.6-27B for local coding — same accuracy, roughly half the thinking tokens.",
+        "whatIsIt": "Sam Witteveen's new video reviews ThinkingCap-Qwen3.6-27B, an Apache-2.0 fine-tune of Alibaba's Qwen3.6-27B released by BottleCap AI on July 13. The model targets developers running a local coding assistant on a single 24 GB GPU and is published on Hugging Face for direct download.",
+        "howItWorks": "ThinkingCap trains the base Qwen3.6-27B checkpoint with a reward that credits shorter, sufficient reasoning traces instead of only correctness. The result is roughly 46% fewer reasoning tokens on average across evaluation domains, with LiveCodeBench going up 3.6 points to 84.3% and GPQA-Diamond staying within 1.6 points of the base at 83.8%.",
+        "whyItMatters": "Local coding assistants are gated on tokens-per-second and VRAM budget; cutting thinking tokens in half at the same accuracy makes ThinkingCap a drop-in replacement for a Qwen3.6-27B loop running on a single RTX 4090 or 3090. Sam Witteveen's channel is where a lot of local-LLM builders decide what to try next.",
+        "forWho": "local-LLM builders, indie coding-agent developers",
+        "tryIt": "Watch the video, then pull `bottlecapai/ThinkingCap-Qwen3.6-27B` from Hugging Face"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/m1gQu9ApmRQ/hqdefault.jpg",
+        "alt": "Sam Witteveen ThinkingCap local coding model YouTube thumbnail",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=m1gQu9ApmRQ"
+        },
+        {
+          "label": "Sam Witteveen Channel",
+          "url": "https://www.youtube.com/channel/UC55ODQSvARtgSyc8ThfiepQ"
+        },
+        {
+          "label": "ThinkingCap on Hugging Face",
+          "url": "https://huggingface.co/bottlecapai/ThinkingCap-Qwen3.6-27B"
+        },
+        {
+          "label": "BottleCap AI Announcement",
+          "url": "https://bottlecapai.com/post/thinkingcap-qwen3-6-27b/"
+        }
+      ],
+      "author": {
+        "name": "Sam Witteveen",
+        "profileUrl": "https://www.youtube.com/channel/UC55ODQSvARtgSyc8ThfiepQ"
+      },
+      "publishDate": "2026-07-30T13:54:25.659Z"
+    },
     {
       "id": "h-embodvis-turbovla",
       "categories": [
