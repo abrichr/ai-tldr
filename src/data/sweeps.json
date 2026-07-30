@@ -26803,6 +26803,33 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260730t115730z",
+      "timestamp": "2026-07-30T11:57:30.530Z",
+      "source": "github-actions-sweep",
+      "summary": "Nothing new qualified. Every fresh (<72h) release surfaced during discovery is already in the feed: Anthropic's open-weights position and Opus 5, Google's Gemini 3.6 Flash and Lyria 3.5, Moonshot's Kimi K3 (2.8T weights and downstream coverage), Microsoft's agent governance toolkit, and the three latest YouTube uploads (Fireship, Two Minute Papers on Kimi K3, Wes Roth on the OpenAI rogue-agent). Kimi K3-256k on HN is a pricing/quota tier of the same K3 weights (semantic dupe). Superlogical is not an AI product, the LLM Honeypot HN post is a satirical parody site, Fara1.5-27B (May 21) and Aureka OpenDDE (Jul 7) are older than 72h. Science.org's 'AI startups barely publishing research' passed HN traction but the primary source 403s to CI, so it cannot be sourced without hallucination.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
