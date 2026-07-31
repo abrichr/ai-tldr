@@ -1750,23 +1750,24 @@
               "contextWindow": "1M",
               "license": "MIT",
               "date": "2026-04-24",
-              "current": true,
               "rich": true
             },
             {
               "name": "DeepSeek-V4-Flash",
               "slug": "deepseek-v4-flash",
-              "blurb": "Smaller, faster V4 tier: 284B total / 13B active MoE, 1M-token context, MIT-licensed. Cheapest tier at $0.14/M input (miss) / $0.28/M output; legacy…",
+              "blurb": "Smaller, faster V4 tier: 284B total / 13B active MoE, 1M-token context, MIT-licensed. Cheapest tier at $0.14/M input (miss) / $0.28/M output. Re-post-trained V4-Flash-0731 checkpoint entered official public beta on 2026-07-31 with upgraded agent scores (Terminal-Bench 2.1 82.7).",
               "tags": [
                 "open-weights",
                 "reasoning",
                 "frontier",
                 "long-context",
-                "on-device"
+                "on-device",
+                "agentic"
               ],
               "license": "MIT",
-              "date": "2026-04-24",
-              "rich": true
+              "date": "2026-07-31",
+              "rich": true,
+              "current": true
             }
           ]
         },

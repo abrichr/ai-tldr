@@ -25,7 +25,8 @@
   "overview": [
     "DeepSeek-V4-Flash is the smaller, faster, and cheaper of the two models in DeepSeek's V4 series, released as a preview on 24 April 2026 alongside the larger DeepSeek-V4-Pro. It is a Mixture-of-Experts language model with 284 billion total parameters, of which 13 billion are activated per token, and it natively supports a one-million-token context window with up to 384K tokens of output.",
     "Like the Pro tier, DeepSeek-V4-Flash uses a Hybrid Attention Architecture that combines Compressed Sparse Attention and Heavily Compressed Attention. DeepSeek reports that in the 1M-token setting it needs only about 27% of the single-token inference FLOPs and 10% of the KV cache of DeepSeek-V3.2, which is what makes such a long context affordable. The model was pre-trained on more than 32 trillion tokens, runs in mixed FP4/FP8 precision (FP4 for MoE experts), and exposes three reasoning-effort modes: Non-think, Think High, and Think Max. DeepSeek says Flash in its Max mode approaches the reasoning quality of V4-Pro when given a larger thinking budget.",
-    "All weights are published on Hugging Face under the MIT License, so DeepSeek-V4-Flash is free for commercial use, fine-tuning, and self-hosting via vLLM, SGLang, or quantized GGUF builds in Ollama and LM Studio. On the DeepSeek API the legacy deepseek-chat and deepseek-reasoner aliases now route to Flash's non-thinking and thinking modes, and DeepSeek positions it as a low-cost agentic and coding workhorse at $0.14 per million input tokens."
+    "All weights are published on Hugging Face under the MIT License, so DeepSeek-V4-Flash is free for commercial use, fine-tuning, and self-hosting via vLLM, SGLang, or quantized GGUF builds in Ollama and LM Studio. On the DeepSeek API the legacy deepseek-chat and deepseek-reasoner aliases were retired on 2026-07-24 after having routed to Flash's non-thinking and thinking modes, and DeepSeek positions Flash as a low-cost agentic and coding workhorse at $0.14 per million input tokens.",
+    "On 2026-07-31 the `deepseek-v4-flash` API entered official public beta on a re-post-trained checkpoint DeepSeek released as DeepSeek-V4-Flash-0731. The checkpoint keeps the same architecture and parameter count as the April preview but reports substantially stronger agent scores — Terminal-Bench 2.1 82.7, DSBench-FullStack 68.7, Cybergym 76.7, Toolathlon Verified 70.3, DeepSWE 54.4, and NL2Repo 54.2, tested with the DeepSeek Harness minimal mode at max effort. The official V4-Flash natively supports the Responses API format and is specifically adapted for OpenAI Codex; DeepSeek says the official release of V4-Pro will follow."
   ],
   "strengths": [
     "Open MIT-licensed weights, free for commercial use, fine-tuning, and local deployment via vLLM, SGLang, Ollama, or LM Studio",
@@ -50,6 +51,16 @@
       "label": "DeepSeek-V4 Preview Release announcement",
       "url": "https://api-docs.deepseek.com/news/news260424",
       "kind": "announcement"
+    },
+    {
+      "label": "DeepSeek API Change Log (V4-Flash-0731 official public beta, 2026-07-31)",
+      "url": "https://api-docs.deepseek.com/updates",
+      "kind": "official"
+    },
+    {
+      "label": "DeepSeek Codex integration guide",
+      "url": "https://api-docs.deepseek.com/quick_start/agent_integrations/codex",
+      "kind": "api-docs"
     },
     {
       "label": "DeepSeek API pricing",
@@ -84,13 +95,19 @@
       "date": "2026-04-24"
     },
     {
-      "version": "DeepSeek-V4-Flash",
+      "version": "DeepSeek-V4-Flash (0731 official public beta)",
       "slug": "deepseek-v4-flash",
-      "date": "2026-04-24",
+      "date": "2026-07-31",
+      "note": "Re-post-trained checkpoint (V4-Flash-0731); same architecture/size as the April preview.",
       "current": true
+    },
+    {
+      "version": "DeepSeek-V4-Flash (April preview)",
+      "date": "2026-04-24",
+      "note": "Original open-weight preview released alongside V4-Pro."
     }
   ],
-  "status": "Preview",
+  "status": "Public beta (official release). Re-post-trained DeepSeek-V4-Flash-0731 checkpoint took over the `deepseek-v4-flash` alias on 2026-07-31. Pro tier still ships at its April 24 checkpoint.",
   "contextWindow": "1M",
   "maxOutput": "384K",
   "parameters": "284B total · 13B active",
@@ -144,6 +161,48 @@
       "unit": "%",
       "max": 100,
       "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash"
+    },
+    {
+      "name": "Terminal-Bench 2.1 (V4-Flash-0731)",
+      "score": 82.7,
+      "unit": "%",
+      "max": 100,
+      "source": "https://api-docs.deepseek.com/updates"
+    },
+    {
+      "name": "NL2Repo (V4-Flash-0731)",
+      "score": 54.2,
+      "unit": "%",
+      "max": 100,
+      "source": "https://api-docs.deepseek.com/updates"
+    },
+    {
+      "name": "Cybergym (V4-Flash-0731)",
+      "score": 76.7,
+      "unit": "%",
+      "max": 100,
+      "source": "https://api-docs.deepseek.com/updates"
+    },
+    {
+      "name": "DeepSWE (V4-Flash-0731)",
+      "score": 54.4,
+      "unit": "%",
+      "max": 100,
+      "source": "https://api-docs.deepseek.com/updates"
+    },
+    {
+      "name": "Toolathlon Verified (V4-Flash-0731)",
+      "score": 70.3,
+      "unit": "%",
+      "max": 100,
+      "source": "https://api-docs.deepseek.com/updates"
+    },
+    {
+      "name": "DSBench-FullStack (V4-Flash-0731)",
+      "score": 68.7,
+      "unit": "%",
+      "max": 100,
+      "source": "https://api-docs.deepseek.com/updates"
     }
   ],
   "pricing": {
@@ -176,6 +235,10 @@
     {
       "q": "How much does the DeepSeek-V4-Flash API cost?",
       "a": "Per DeepSeek's official pricing page, DeepSeek-V4-Flash costs $0.14 per 1M input tokens on a cache miss and $0.28 per 1M output tokens. Cache hits drop the input price to about $0.0028 per 1M tokens, making repeated-context workloads very cheap."
+    },
+    {
+      "q": "What is DeepSeek-V4-Flash-0731?",
+      "a": "DeepSeek-V4-Flash-0731 is a re-post-trained checkpoint of DeepSeek-V4-Flash that took over the `deepseek-v4-flash` API alias on 2026-07-31, moving the model from preview to official public beta. DeepSeek's change log notes it keeps the same architecture and parameter count as the April preview and was only re-post-trained, reporting large agent-benchmark gains — Terminal-Bench 2.1 82.7, DSBench-FullStack 68.7, Cybergym 76.7, Toolathlon Verified 70.3, DeepSWE 54.4, and NL2Repo 54.2 — plus native Responses API support and a Codex integration. The API calling method is unchanged."
     }
   ]
 }
