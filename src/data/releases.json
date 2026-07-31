@@ -1,8 +1,139 @@
 {
-  "generatedAt": "2026-07-31T02:18:33.298Z",
+  "generatedAt": "2026-07-31T06:53:36.875Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "deepseek-v4-flash-0731",
+      "categories": [
+        "model"
+      ],
+      "title": "DeepSeek V4-Flash goes official — 0731 hits 82.7 on Terminal Bench 2.1",
+      "org": "DeepSeek",
+      "date": "2026-07-31",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+      "summary": "DeepSeek V4-Flash exits preview with a re-post-trained checkpoint on the same 284B MoE, hitting 82.7 on Terminal Bench 2.1, 76.7 on Cybergym, and 68.7 on DSBench-FullStack. Input pricing stays at $0.14 per million tokens.",
+      "importance": "major",
+      "tags": [
+        "deepseek",
+        "deepseek-v4-flash",
+        "moe",
+        "model-release",
+        "agent",
+        "coding",
+        "open-weight",
+        "api",
+        "china"
+      ],
+      "metrics": {
+        "Terminal Bench 2.1": "82.7",
+        "DSBench-FullStack": "68.7"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "DeepSeek"
+        },
+        {
+          "label": "Model name",
+          "value": "deepseek-v4-flash-0731"
+        },
+        {
+          "label": "Architecture",
+          "value": "284B MoE, 13B active"
+        },
+        {
+          "label": "Input price",
+          "value": "$0.14 / 1M tokens"
+        },
+        {
+          "label": "Output price",
+          "value": "$0.28 / 1M tokens"
+        },
+        {
+          "label": "Availability",
+          "value": "API public beta"
+        },
+        {
+          "label": "License",
+          "value": "MIT (open weights)"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is DeepSeek V4-Flash 0731 a brand-new model?",
+          "a": "DeepSeek V4-Flash 0731 keeps the same 284B mixture-of-experts architecture as V4-Flash-preview — the team only re-ran post-training. The change targets agent behaviour, and the checkpoint now scores 82.7 on Terminal Bench 2.1, 76.7 on Cybergym, and 54.4 on DeepSWE."
+        },
+        {
+          "q": "How much does DeepSeek V4-Flash 0731 cost?",
+          "a": "DeepSeek V4-Flash costs $0.14 per million input tokens on a cache miss, $0.0028 per million on a cache hit, and $0.28 per million output tokens. Pricing is unchanged from the preview and remains among the cheapest ways to call a top-lab open-weight model at agent quality."
+        },
+        {
+          "q": "Does DeepSeek V4-Flash 0731 work with the Codex CLI?",
+          "a": "DeepSeek V4-Flash 0731 natively speaks the Responses API format and is tuned for the Codex adapter, so tools that expect the OpenAI Responses interface can slot it in without a shim. The API endpoint stays the same — set the model name to `deepseek-v4-flash`."
+        },
+        {
+          "q": "What did DeepSeek use to score the new numbers?",
+          "a": "DeepSeek benchmarked V4-Flash 0731 with the DeepSeek Harness in minimal mode, max effort level, top-p 0.95, and temperature 1.0. DeepSeek says the harness will be released soon, so third parties can reproduce the scores themselves."
+        },
+        {
+          "q": "Does this update also change V4-Pro?",
+          "a": "No — the 0731 update only refreshes the V4-Flash API. DeepSeek V4-Pro and the app/web models are unchanged. Teams already using V4-Pro or the DeepSeek app will not see any behaviour shift from this release."
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "Input (cache miss)",
+            "price": "$0.14",
+            "unit": "/ 1M tokens"
+          },
+          {
+            "plan": "Input (cache hit)",
+            "price": "$0.0028",
+            "unit": "/ 1M tokens"
+          },
+          {
+            "plan": "Output",
+            "price": "$0.28",
+            "unit": "/ 1M tokens"
+          }
+        ],
+        "source": "https://api-docs.deepseek.com/quick_start/pricing"
+      },
+      "explainer": {
+        "tagline": "DeepSeek graduates V4-Flash from preview to official with a re-post-trained checkpoint tuned for agents.",
+        "whatIsIt": "DeepSeek V4-Flash 0731 is the official public-beta release of DeepSeek's 284B mixture-of-experts model, replacing the earlier V4-Flash-preview API endpoint. It shares the same architecture and parameter count as the preview but ships a re-post-trained checkpoint focused on agent workloads.",
+        "howItWorks": "The 0731 checkpoint keeps V4-Flash's 284B/13B-active MoE unchanged and re-runs only the post-training pass on agent-flavoured data. Responses API support is native, and Codex compatibility is baked in so tools that expect OpenAI's Responses interface work without a shim.",
+        "whyItMatters": "Open-weight agent models keep closing the gap with closed-source options, and V4-Flash at $0.14 in / $0.28 out per million tokens is a fraction of most agent-tier APIs. The jump to 82.7 on Terminal Bench 2.1 and 68.7 on DSBench-FullStack lets teams run harder tool-using workloads at Flash prices.",
+        "forWho": "coding-agent builders, cost-conscious API users",
+        "tryIt": "Set `model: 'deepseek-v4-flash'` against `https://api.deepseek.com`."
+      },
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/deepseek-ai/DeepSeek-V4-Flash.png",
+        "alt": "DeepSeek V4-Flash model card social thumbnail on Hugging Face",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Update Notes",
+          "url": "https://api-docs.deepseek.com/updates"
+        },
+        {
+          "label": "Model Card",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash"
+        },
+        {
+          "label": "DeepSeek Homepage",
+          "url": "https://www.deepseek.com/en"
+        },
+        {
+          "label": "API Pricing",
+          "url": "https://api-docs.deepseek.com/quick_start/pricing"
+        }
+      ],
+      "publishDate": "2026-07-31T06:52:04.091Z"
+    },
     {
       "id": "gcc-ai-policy-2026",
       "categories": [

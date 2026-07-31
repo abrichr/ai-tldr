@@ -27077,6 +27077,72 @@
         "benchmark",
         "algorithm"
       ]
+    },
+    {
+      "id": "sweep-20260731t065204z",
+      "timestamp": "2026-07-31T06:52:04.091Z",
+      "source": "github-actions-sweep",
+      "summary": "Added the DeepSeek V4-Flash 0731 official release (out of preview) with re-post-trained agent-focused checkpoint. All other lab blogs (Anthropic, OpenAI, Google DeepMind, Meta, xAI, Mistral, Cohere, Qwen, Moonshot) had nothing new in the last 72h. YouTube RSS returned only two Wes Roth uploads already in the feed. GitHub trending and HF trending items were dupes or older, and no biomedical/neuro release cleared the 2-of-N bar.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "deepseek-v4-flash-0731",
+          "title": "DeepSeek V4-Flash goes official — 0731 hits 82.7 on Terminal Bench 2.1",
+          "category": "model",
+          "note": "DeepSeek's 2026-07-31 official V4-Flash release — same 284B/13B-active MoE as the preview, re-post-trained for agents; hits 82.7 Terminal Bench 2.1, 76.7 Cybergym, 68.7 DSBench-FullStack; price unchanged at $0.14 in / $0.28 out; passes bar as fresh top-lab open-weight ship."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem"
+      ]
+    },
+    {
+      "id": "sweep-20260731t065336z",
+      "timestamp": "2026-07-31T06:53:36.875Z",
+      "source": "github-actions-sweep",
+      "summary": "Same-sweep touch-up: trimmed the deepseek-v4-flash-0731 summary to 232 chars to clear finalize-sweep's summary-length soft warn. No new discovery items.",
+      "counts": {
+        "added": 0,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [
+        {
+          "id": "deepseek-v4-flash-0731",
+          "title": "DeepSeek V4-Flash goes official — 0731 hits 82.7 on Terminal Bench 2.1",
+          "note": "Trim summary from 256 to <=240 chars per schema soft rule."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }
