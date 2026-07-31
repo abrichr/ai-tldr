@@ -27260,6 +27260,32 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260731t192308z",
+      "timestamp": "2026-07-31T19:23:08.954Z",
+      "source": "github-actions-sweep",
+      "summary": "Empty sweep. Checked Anthropic/OpenAI/DeepMind/Meta/Mistral/Cohere/DeepSeek/Zhipu/Qwen blogs, HF models+papers, GitHub trending, HN front page, Simon Willison, TechCrunch AI, and all 8 YouTube RSS feeds. Every fresh candidate (Anthropic red-team incidents, Chrome+Big Sleep bugfix, DeepSeek V4-Flash 0731, GPT-5.6 price cut, Gemini Robotics 2/ER-2, Lyria 3.5, and all 5 fresh videos from Fireship/Two Minute Papers/Wes Roth×2/Sam Witteveen) was already in the feed from prior sweeps. The one net-new RSS video (Sam Witteveen 'AMD Ryzen AI Halo', 2h old) has an identical title to sam-witteveen-ryzen-ai-halo-jul21 and is a semantic near-dupe. LLM 0.32rc2 is a minor incremental release candidate. No fresh Nature/Nature-Medicine or specialist bio/neuro/pharma release cleared the 2-of-N bar. Zero-add is the correct result.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "article",
+        "security",
+        "ecosystem",
+        "dataset",
+        "benchmark"
+      ]
     }
   ]
 }
