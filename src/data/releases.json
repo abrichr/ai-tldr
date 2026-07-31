@@ -1,8 +1,501 @@
 {
-  "generatedAt": "2026-07-31T06:53:36.875Z",
+  "generatedAt": "2026-07-31T10:50:22.767Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "thinking-machines-inkling-small",
+      "categories": [
+        "model"
+      ],
+      "title": "Inkling-Small — Thinking Machines' 276B open model matches Inkling at 1/4 the size",
+      "org": "Thinking Machines Lab",
+      "date": "2026-07-30",
+      "url": "https://thinkingmachines.ai/news/inkling-small/",
+      "summary": "Thinking Machines released Inkling-Small under Apache 2.0: a 276B-parameter MoE with 12B active, 1M-token context, and multimodal inputs. Scores 80.2% on SWE-bench Verified and 95.5% on AIME 2026.",
+      "tags": [
+        "thinking-machines",
+        "inkling",
+        "inkling-small",
+        "mixture-of-experts",
+        "open-weights",
+        "apache-2",
+        "multimodal",
+        "long-context",
+        "reasoning",
+        "coding-agent",
+        "tinker",
+        "huggingface"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Thinking Machines Lab"
+        },
+        {
+          "label": "Parameters",
+          "value": "276B total, 12B active (MoE)"
+        },
+        {
+          "label": "Architecture",
+          "value": "42-layer decoder, 256 experts (6+2 routing)"
+        },
+        {
+          "label": "Context window",
+          "value": "1M tokens"
+        },
+        {
+          "label": "Inputs",
+          "value": "Text, image, audio"
+        },
+        {
+          "label": "License",
+          "value": "Apache 2.0 (open weights)"
+        },
+        {
+          "label": "Availability",
+          "value": "Hugging Face, Tinker Playground, Tinker API fine-tuning"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How does Inkling-Small compare to the full Inkling model?",
+          "a": "Inkling-Small matches Inkling on most benchmarks despite having a quarter of the total parameters (276B vs 975B). It even edges Inkling on SWE-bench Verified (80.2% vs 77.6%) and Terminal Bench 2.1 (64.7% vs 63.8%), while trailing slightly on factuality. The full model still leads on the Artificial Analysis Intelligence Index (41 vs 40)."
+        },
+        {
+          "q": "Where can I run Inkling-Small locally?",
+          "a": "Inkling-Small weights are on Hugging Face under `thinkingmachines/Inkling-Small` (BF16) and `thinkingmachines/Inkling-Small-NVFP4` (4-bit). Unsloth has published GGUF conversions that run locally on 128 GB RAM. Hugging Face Inference Endpoints achieves up to 160 tokens/sec on the reference stack."
+        },
+        {
+          "q": "How much does the Tinker API cost for Inkling-Small?",
+          "a": "Inkling-Small runs on the Tinker API at $1.20 per 1M output tokens. Fine-tuning on your own data is available through the same API, and chat with text, image, and audio inputs is free in the Tinker Playground."
+        },
+        {
+          "q": "Is Inkling-Small really the strongest open model in its size class?",
+          "a": "Thinking Machines and Artificial Analysis both call it the leading US open-weights release for its size — it scores 40 on the AA Intelligence Index and beats similarly-sized peers on SWE-bench, AIME, GPQA Diamond, and MMMU Pro. Larger open models like Kimi K3 (2.8T) still top the raw leaderboard."
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "SWE-bench Verified",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Inkling-Small (276B/12B)",
+              "score": 80.2,
+              "highlight": true
+            },
+            {
+              "name": "Inkling (975B/41B)",
+              "score": 77.6
+            }
+          ],
+          "source": "https://thinkingmachines.ai/news/inkling-small/"
+        },
+        {
+          "name": "AIME 2026",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Inkling-Small",
+              "score": 95.5,
+              "highlight": true
+            }
+          ],
+          "source": "https://thinkingmachines.ai/news/inkling-small/"
+        },
+        {
+          "name": "GPQA Diamond",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Inkling-Small",
+              "score": 89.5,
+              "highlight": true
+            }
+          ],
+          "source": "https://thinkingmachines.ai/news/inkling-small/"
+        },
+        {
+          "name": "Terminal Bench 2.1",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Inkling-Small",
+              "score": 64.7,
+              "highlight": true
+            },
+            {
+              "name": "Inkling",
+              "score": 63.8
+            }
+          ],
+          "source": "https://thinkingmachines.ai/news/inkling-small/"
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "Tinker API output",
+            "price": "$1.20",
+            "unit": "/ 1M tokens"
+          },
+          {
+            "plan": "Tinker Playground",
+            "price": "$0",
+            "note": "Free chat with text, image, audio"
+          },
+          {
+            "plan": "Open weights",
+            "price": "$0",
+            "note": "Apache 2.0 on Hugging Face"
+          }
+        ],
+        "source": "https://thinkingmachines.ai/news/inkling-small/"
+      },
+      "explainer": {
+        "tagline": "A 276B MoE with 12B active parameters that ships full Apache-2.0 weights and matches its 4x-larger sibling.",
+        "whatIsIt": "Inkling-Small is a mixture-of-experts model with 276B total parameters and 12B active per token, released under Apache 2.0 with full weights on Hugging Face. It handles text, image, and audio input, has a 1M-token context window, and reports variable thinking effort at inference time.",
+        "howItWorks": "The architecture uses a 42-layer decoder with 256 experts, routing each token to six specialised experts plus two shared ones. Encoder-free multimodal handling relies on dMel spectrograms for audio and 40×40 pixel patches for vision. Training used NVIDIA GB300 NVL72 systems, and weights ship in BF16 and NVFP4 formats.",
+        "whyItMatters": "Inkling-Small closes most of the gap to the 975B Inkling — 80.2% vs 77.6% on SWE-bench Verified and 64.7% vs 63.8% on Terminal Bench 2.1 — at roughly a quarter of the size. That makes a frontier-class multimodal reasoning model runnable on a single 128 GB Mac Studio via Unsloth's GGUF quantisation, and cheap enough on Tinker ($1.20 per 1M output tokens) for teams to fine-tune on private data.",
+        "forWho": "developers wanting a top-tier open MoE they can fine-tune or self-host",
+        "tryIt": "huggingface.co/thinkingmachines/Inkling-Small"
+      },
+      "image": {
+        "url": "https://thinkingmachines.ai/news/inkling-small/images/cover-social-inkling-small-post.png",
+        "alt": "Thinking Machines Inkling-Small announcement cover graphic",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://thinkingmachines.ai/news/inkling-small/"
+        },
+        {
+          "label": "Hugging Face",
+          "url": "https://huggingface.co/thinkingmachines/Inkling-Small"
+        },
+        {
+          "label": "HF Blog",
+          "url": "https://huggingface.co/blog/thinkingmachines-inkling"
+        },
+        {
+          "label": "Artificial Analysis",
+          "url": "https://artificialanalysis.ai/articles/thinking-machines-has-released-inkling-the-new-leading-u-s-open-weights-model"
+        }
+      ],
+      "publishDate": "2026-07-31T10:50:22.767Z"
+    },
+    {
+      "id": "google-deepmind-gemini-robotics-er-2",
+      "categories": [
+        "model"
+      ],
+      "title": "Gemini Robotics ER 2 — the planning brain that watches video and coordinates robots",
+      "org": "Google DeepMind",
+      "date": "2026-07-30",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/",
+      "summary": "Gemini Robotics ER 2 handles high-level reasoning for robots: continuous video, multi-step task planning, tool orchestration, and multi-robot coordination. Hits 91.3% on moment-finding and 57.4% on progress classification.",
+      "tags": [
+        "google-deepmind",
+        "gemini",
+        "gemini-robotics",
+        "gemini-robotics-er-2",
+        "embodied-ai",
+        "robotics",
+        "vision-language-action",
+        "multi-robot",
+        "video-understanding",
+        "task-planning"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Google DeepMind"
+        },
+        {
+          "label": "Role",
+          "value": "High-level planning brain paired with Gemini Robotics 2 VLA"
+        },
+        {
+          "label": "Inputs",
+          "value": "Continuous video + language + robot state"
+        },
+        {
+          "label": "New capabilities",
+          "value": "Real-time video understanding, multi-robot coordination, tool orchestration"
+        },
+        {
+          "label": "Progress classification",
+          "value": "57.4% accuracy across 5 progress levels"
+        },
+        {
+          "label": "Moment-finding",
+          "value": "91.3% accuracy, 0.96s mean absolute distance"
+        },
+        {
+          "label": "Availability",
+          "value": "Gemini API + Google AI Studio, sample code on GitHub"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How is Gemini Robotics ER 2 different from Gemini Robotics 2?",
+          "a": "Gemini Robotics 2 is a Vision-Language-Action (VLA) model that directly moves a humanoid's joints. Gemini Robotics ER 2 sits above it as the embodied-reasoning brain: it plans the multi-step task, watches video for progress, decides which VLA or API to call, and coordinates multiple robots in a shared scene. The two are designed to be paired."
+        },
+        {
+          "q": "What does the video understanding actually enable?",
+          "a": "Gemini Robotics ER 2 ingests a live video stream and tracks task progress across five discrete levels, hitting 57.4% classification accuracy. It also finds critical moments in the stream with 91.3% accuracy and a mean absolute distance of 0.96 seconds, so the robot can catch a spill, notice a misplaced part, or self-correct mid-task instead of blindly running the plan."
+        },
+        {
+          "q": "How do I try Gemini Robotics ER 2 today?",
+          "a": "Gemini Robotics ER 2 is exposed through the Gemini API and Google AI Studio, with a robotics-overview page and a Python samples repo at github.com/google-gemini/robotics-samples. Google DeepMind pairs it with the underlying Gemini Robotics 2 VLA for full-body humanoid control shown in the accompanying blog post."
+        },
+        {
+          "q": "How does it handle multiple robots?",
+          "a": "Gemini Robotics ER 2 lets diverse robots — humanoids, arms, mobile platforms — share a semantic map of the scene and reason jointly about who does what. DeepMind demos two different robots collaborating on the same task without hardcoded coordination rules, using ER 2 as the shared planner."
+        }
+      ],
+      "explainer": {
+        "tagline": "DeepMind's embodied-reasoning brain plans multi-step robot work, watches the video, and orchestrates multiple robots at once.",
+        "whatIsIt": "Gemini Robotics ER 2 is Google DeepMind's high-level embodied-reasoning model — the successor to Gemini Robotics-ER 1.6. It chats with humans, understands the physical world, plans multi-step tasks, and orchestrates other tools (including Vision-Language-Action models and APIs) so a robot can carry the plan out.",
+        "howItWorks": "The ER 2 model ingests a continuous video feed alongside language and robot state, then tracks progress across five discrete levels and flags critical moments in the stream (57.4% and 91.3% accuracy respectively in DeepMind's tests). It calls out to a paired VLA — such as Gemini Robotics 2 — to execute low-level motion, and shares a semantic scene understanding so multiple heterogeneous robots can coordinate on the same task.",
+        "whyItMatters": "Splitting the robot stack into a Gemini Robotics 2 VLA for motion and a Gemini Robotics ER 2 brain for reasoning lets developers upgrade one without retraining the other. The step-change in video understanding also means robots can self-correct mid-task instead of failing quietly, and multi-robot support opens the door to warehouse and home scenarios that need more than one machine cooperating.",
+        "forWho": "robotics developers building agent stacks on Gemini",
+        "tryIt": "ai.google.dev/gemini-api/docs/robotics-overview"
+      },
+      "image": {
+        "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-robotics-2__blog__cover.width-1300.png",
+        "alt": "Gemini Robotics ER 2 cover graphic on the Google blog",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/"
+        },
+        {
+          "label": "API Docs",
+          "url": "https://ai.google.dev/gemini-api/docs/robotics-overview"
+        },
+        {
+          "label": "Samples Repo",
+          "url": "https://github.com/google-gemini/robotics-samples"
+        }
+      ],
+      "publishDate": "2026-07-31T10:50:22.767Z"
+    },
+    {
+      "id": "minimax-h3",
+      "categories": [
+        "model",
+        "tool"
+      ],
+      "title": "MiniMax H3 — open-weights video model does 2K, 15s, and native stereo sound",
+      "org": "MiniMax",
+      "date": "2026-07-31",
+      "url": "https://www.minimax.io/blog/minimax-h3",
+      "summary": "MiniMax launched H3, a full-modal video model that generates 15-second 2K clips with synchronized stereo audio. It edits video, transfers motion, and MiniMax says weights will drop on Hugging Face within days.",
+      "tags": [
+        "minimax",
+        "minimax-h3",
+        "video-generation",
+        "text-to-video",
+        "multimodal",
+        "audio-generation",
+        "chinese-labs",
+        "open-weights",
+        "hailuo"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "MiniMax (Shanghai)"
+        },
+        {
+          "label": "Model",
+          "value": "H3 (Hailuo 3.0), full-modal video"
+        },
+        {
+          "label": "Output",
+          "value": "Up to 15s clips, native 2K (2560×1440), 24 FPS"
+        },
+        {
+          "label": "Audio",
+          "value": "Native synchronised stereo sound, voice + SFX"
+        },
+        {
+          "label": "Inputs per request",
+          "value": "Up to 9 images + 3 video clips + 3 audio tracks"
+        },
+        {
+          "label": "Availability",
+          "value": "MiniMax API and hosted providers; open weights promised within days"
+        },
+        {
+          "label": "Price vs peers",
+          "value": "Under 1/3 of mainstream 2K video pricing"
+        }
+      ],
+      "faq": [
+        {
+          "q": "When will the MiniMax H3 weights actually be downloadable?",
+          "a": "MiniMax says weights will land on Hugging Face within days of the July 31 announcement, following the same open-weights pattern it used for M2 and M3. The model is already usable through the MiniMax API and hosted providers such as fal.ai while the open release finishes."
+        },
+        {
+          "q": "What can MiniMax H3 do besides text-to-video?",
+          "a": "MiniMax H3 unifies text-to-image, text-to-video, text-to-audio, video editing, and motion transfer in one model — no task-specific model swap. A single request can mix up to nine reference images, three video clips, and three audio tracks, letting users transfer motion from a reference clip or restyle an existing video from a prompt."
+        },
+        {
+          "q": "How does MiniMax H3 compare on price?",
+          "a": "MiniMax says H3's per-second 2K price is under a third of what mainstream rivals charge, and its 768p tier is under half the cost of competing 720p offerings. That aligns with the company's earlier LLM strategy of undercutting Chinese and Western frontier peers on token cost."
+        },
+        {
+          "q": "How is MiniMax H3 doing this at 2K in one model?",
+          "a": "MiniMax H3 uses a new H3-VAE tokenizer that MiniMax says gives a 4× gain in effective sequence length, and compresses long contextual prompts from roughly 100K tokens down to about 4K. That lets one model handle 15-second 2K generations with stereo audio without splitting into separate stages."
+        }
+      ],
+      "explainer": {
+        "tagline": "A single open-weights video model does 2K clips, stereo audio, editing, and motion transfer up to 15 seconds long.",
+        "whatIsIt": "MiniMax H3 (Hailuo 3.0) is a full-modal video generation model from the Shanghai lab MiniMax. It generates up to 15-second video at native 2K resolution with synchronized stereo audio, and unifies text-to-image, text-to-video, text-to-audio, video editing, and motion transfer inside one model.",
+        "howItWorks": "The new H3-VAE tokenizer gives MiniMax roughly a 4× gain in effective sequence length, and long contextual prompts compress from ~100K tokens down to ~4K. A single H3 request accepts up to nine reference images, three video clips, and three audio tracks as context, so users can restyle a clip, transfer motion from a reference, or generate voice and sound effects in one call.",
+        "whyItMatters": "Open, weight-available video generation at 2K with native audio has not existed before at this quality level — most rivals either cap out at 720p, drop audio, or lock the weights behind a proprietary API. MiniMax is also pricing 2K generation at under a third of mainstream competitors and says weights will hit Hugging Face within days, which puts real pressure on Runway, Kling, and Sora clones.",
+        "forWho": "creators, ad agencies, and video-app builders wanting open 2K video with audio",
+        "tryIt": "hailuoai.video (H3 preview) via the MiniMax API"
+      },
+      "image": {
+        "url": "https://file.cdn.minimax.io/public/e5727d3f-3d6e-455c-9ddc-1300c1a131ba.jpg",
+        "alt": "MiniMax H3 official launch cover image",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.minimax.io/blog/minimax-h3"
+        },
+        {
+          "label": "Reuters",
+          "url": "https://kfgo.com/2026/07/30/chinas-minimax-releases-h3-video-model/"
+        },
+        {
+          "label": "IndexBox Coverage",
+          "url": "https://www.indexbox.io/blog/minimax-unveils-h3-video-generation-model-with-open-weights/"
+        },
+        {
+          "label": "Pandaily",
+          "url": "https://pandaily.com/minimax-h3-open-source-full-modal-jul2026"
+        }
+      ],
+      "publishDate": "2026-07-31T10:50:22.767Z"
+    },
+    {
+      "id": "insilico-ddd-benchmark",
+      "categories": [
+        "benchmark",
+        "tool"
+      ],
+      "title": "Insilico DDD Benchmark — Nature-Portfolio-cited yardstick for drug-discovery AI",
+      "org": "Insilico Medicine",
+      "date": "2026-07-30",
+      "url": "https://www.biospace.com/press-releases/insilico-medicine-launches-the-industrys-first-drug-discovery-and-development-ddd-benchmark-as-a-service-to-evaluate-frontier-ai-and-foundation-models-on-real-world-science",
+      "summary": "Insilico Medicine launched the Drug Discovery and Development (DDD) Benchmark as a Service: 300+ decontaminated tasks plus end-to-end candidate-nomination runs, with a public leaderboard at dddbench.insilico.com.",
+      "tags": [
+        "insilico-medicine",
+        "ddd-benchmark",
+        "drug-discovery",
+        "pharma-ai",
+        "molecular-design",
+        "computational-chemistry",
+        "target-identification",
+        "foundation-model",
+        "evaluation",
+        "leaderboard"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Insilico Medicine"
+        },
+        {
+          "label": "Portal",
+          "value": "dddbench.insilico.com"
+        },
+        {
+          "label": "Suite 1",
+          "value": "Drug Discovery Foundations — 300+ decontaminated evaluations"
+        },
+        {
+          "label": "Suite 2",
+          "value": "Drug Candidate Essentials — end-to-end hit → preclinical candidate"
+        },
+        {
+          "label": "Coverage",
+          "value": "Disease biology, molecular property prediction, retrosynthesis, structure-based design, clinical dev"
+        },
+        {
+          "label": "Access",
+          "value": "Any org with a chat-completions API; private assessments + verified leaderboard placement"
+        },
+        {
+          "label": "Anchored on",
+          "value": "12+ years of Insilico's validated programs (31 preclinical candidates)"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Why does drug-discovery AI need its own benchmark?",
+          "a": "Insilico argues that most public AI benchmarks are contaminated: frontier models score highly by memorising test questions that leaked into training data, then fail on real preclinical candidate decisions. The DDD Benchmark uses out-of-distribution test sets and decontaminated public data drawn from Insilico's own 12+ years of validated programs, so contamination cannot pump the score."
+        },
+        {
+          "q": "What exactly does the DDD Benchmark measure?",
+          "a": "DDD ships two suites. Drug Discovery Foundations runs 300+ evaluations across disease biology, molecular property prediction and optimisation, retrosynthesis, structure-based design, and clinical development. Drug Candidate Essentials scores an end-to-end program from hit identification through preclinical candidate nomination, anchored to Insilico's real pipeline (which has nominated 31 preclinical candidates and put Rentosertib/ISM001-055 into Phase III)."
+        },
+        {
+          "q": "Who can submit to the DDD leaderboard?",
+          "a": "The DDD Benchmark is a Benchmark-as-a-Service — any organization with a model accessible through a standard chat-completions API can request an assessment. Insilico offers private evaluations, verified score reports, and optional placement on the public leaderboard at dddbench.insilico.com."
+        }
+      ],
+      "explainer": {
+        "tagline": "The first standardised, decontaminated leaderboard that scores frontier AI on real drug-discovery work, from disease biology to preclinical candidate nomination.",
+        "whatIsIt": "The DDD Benchmark is a Benchmark-as-a-Service from Insilico Medicine that scores frontier and foundation models on real drug-discovery tasks. It runs on a two-suite design — Drug Discovery Foundations for component skills and Drug Candidate Essentials for end-to-end programs — with a public leaderboard hosted at dddbench.insilico.com.",
+        "howItWorks": "Drug Discovery Foundations runs 300+ evaluations across disease biology, molecular property prediction, retrosynthesis, structure-based design, and clinical development, using out-of-distribution test sets and rigorously decontaminated public data. Drug Candidate Essentials assesses whether a model can carry a program from hit identification through preclinical candidate nomination, anchored to Insilico's own 12+ years of validated pipeline work.",
+        "whyItMatters": "Existing AI benchmarks for chemistry and biology are frequently contaminated, so an LLM can look great and still fail the real preclinical decisions a pharma team cares about. Insilico's DDD Benchmark uses out-of-distribution test sets pulled from actual industry programs — including its 31 nominated preclinical candidates and the Phase-III Rentosertib — giving buyers of foundation-model drug-discovery tools a like-for-like scorecard.",
+        "forWho": "pharma R&D leaders, foundation-model teams targeting biology, and evaluators comparing drug-discovery AI",
+        "tryIt": "dddbench.insilico.com"
+      },
+      "image": {
+        "url": "https://static.biospace.com/dims4/default/d32393a/2147483647/strip/true/crop/1120x630+40+0/resize/1440x810!/quality/90/?url=https%3A%2F%2Fk1-prod-biospace.s3.us-east-2.amazonaws.com%2Fbrightspot%2Fcc%2F88%2Fa9fddaf440db946b77e1d45d2e26%2Fbiospace-5.png",
+        "alt": "Insilico Medicine DDD Benchmark press release cover on BioSpace",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "BioSpace Release",
+          "url": "https://www.biospace.com/press-releases/insilico-medicine-launches-the-industrys-first-drug-discovery-and-development-ddd-benchmark-as-a-service-to-evaluate-frontier-ai-and-foundation-models-on-real-world-science"
+        },
+        {
+          "label": "Benchmark Portal",
+          "url": "https://dddbench.insilico.com"
+        },
+        {
+          "label": "EurekAlert",
+          "url": "https://www.eurekalert.org/news-releases/1124169"
+        },
+        {
+          "label": "News-Medical",
+          "url": "https://www.news-medical.net/news/20260730/Insilico-unveils-standardized-evaluation-framework-to-validate-AI-driven-drug-discovery-models.aspx"
+        }
+      ],
+      "publishDate": "2026-07-31T10:50:22.767Z"
+    },
     {
       "id": "deepseek-v4-flash-0731",
       "categories": [

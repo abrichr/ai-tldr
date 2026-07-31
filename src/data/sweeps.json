@@ -27143,6 +27143,58 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260731t105022z",
+      "timestamp": "2026-07-31T10:50:22.767Z",
+      "source": "github-actions-sweep",
+      "summary": "Four fresh releases within 72h: Thinking Machines Inkling-Small (276B MoE, Apache 2.0), Google DeepMind Gemini Robotics ER 2, MiniMax H3 open-weights 2K video model, and Insilico Medicine's DDD Benchmark for drug-discovery AI. All 5 fresh YouTube videos were already in the feed.",
+      "counts": {
+        "added": 4,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "thinking-machines-inkling-small",
+          "title": "Inkling-Small — Thinking Machines' 276B open model matches Inkling at 1/4 the size",
+          "category": "model",
+          "note": "Trending #13 on HF models (~10h ago), covered by Artificial Analysis + HF blog + Simon Willison; official Thinking Machines news post dated Jul 30, meets 72h cap."
+        },
+        {
+          "id": "google-deepmind-gemini-robotics-er-2",
+          "title": "Gemini Robotics ER 2 — the planning brain that watches video and coordinates robots",
+          "category": "model",
+          "note": "Separate model from the Gemini Robotics 2 VLA already in feed; ER 2 is the embodied-reasoning brain, blog dated Jul 30, official DeepMind announcement + API docs + samples repo."
+        },
+        {
+          "id": "minimax-h3",
+          "title": "MiniMax H3 — open-weights video model does 2K, 15s, and native stereo sound",
+          "category": "model",
+          "note": "Reuters + Bloomberg (paywalled) + Pandaily + IndexBox coverage of the Jul 31 launch; MiniMax is on our lab-blog scan list and H3 is a frontier open-weights video model with pricing under a third of peers."
+        },
+        {
+          "id": "insilico-ddd-benchmark",
+          "title": "Insilico DDD Benchmark — Nature-Portfolio-cited yardstick for drug-discovery AI",
+          "category": "benchmark",
+          "note": "Bio/pharma lane pick — Insilico Medicine (on our pharma AI list) launched a first-of-kind drug-discovery benchmark Jul 30, covered by BioSpace + EurekAlert + News-Medical.net + Manila Times; leaderboard portal is live."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "article",
+        "paper",
+        "dataset",
+        "benchmark",
+        "algorithm",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }
