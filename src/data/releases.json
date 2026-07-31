@@ -1,8 +1,119 @@
 {
-  "generatedAt": "2026-07-30T23:14:45.987Z",
+  "generatedAt": "2026-07-31T02:18:33.298Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "gcc-ai-policy-2026",
+      "categories": [
+        "ecosystem"
+      ],
+      "title": "GCC bans AI-generated patches — LLM code declined, test cases exempt",
+      "org": "GCC Steering Committee",
+      "date": "2026-07-29",
+      "url": "https://gcc.gnu.org/pipermail/gcc/2026-July/248628.html",
+      "summary": "The GCC steering committee will decline any legally significant patches that contain or derive from LLM-generated code. Test cases are exempt, and using an LLM for research, review, or bug reports is still allowed.",
+      "tags": [
+        "gcc",
+        "gnu",
+        "ai-policy",
+        "open-source",
+        "compilers",
+        "code-contributions",
+        "llm-provenance",
+        "assisted-by"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "GCC will decline patches with significant LLM output, with a narrow test-case exception and no restriction on using AI for research or review.",
+        "whatIsIt": "The GCC steering committee has adopted an AI policy that refuses any legally significant contribution containing or derived from LLM-generated content. GCC applies the GNU project's usual copyright threshold of roughly 15 lines of code or text to decide what counts as legally significant. Smaller AI-assisted contributions may still be accepted if they are clearly marked.",
+        "howItWorks": "David Edelsohn announced the policy on the GCC mailing list on July 29, 2026, on behalf of the steering committee. Reviewers must reject patches above the 15-line threshold that came from an LLM. Maintainers keep discretion to accept LLM-generated test cases even when they cross that line. Smaller AI-assisted patches must be flagged in the commit message, mirroring the Linux kernel's earlier `Assisted-by:` convention. Using LLMs for research, code analysis, bug reports, and patch review remains allowed as long as no LLM output ships in the tree.",
+        "whyItMatters": "GCC is one of the most-used compilers in the world, so its rule sets a reference point for other GNU and open-source projects deciding how to handle AI-authored patches. Contributors who lean on LLMs now need to either stay below the 15-line bar, restrict AI use to test cases, or keep the AI in a research or review role. The steering committee plans to revisit the policy in early 2027.",
+        "forWho": "GCC contributors, GNU maintainers, open-source project leads writing AI-contribution rules",
+        "tryIt": "https://gcc.gnu.org/pipermail/gcc/2026-July/248628.html"
+      },
+      "quickFacts": [
+        {
+          "label": "Announced",
+          "value": "July 29, 2026"
+        },
+        {
+          "label": "Announcer",
+          "value": "GCC Steering Committee (via David Edelsohn)"
+        },
+        {
+          "label": "Blocked",
+          "value": "Patches with LLM-generated content above the GNU legally-significant threshold (~15 lines)"
+        },
+        {
+          "label": "Exception",
+          "value": "LLM-generated test cases, at maintainer discretion"
+        },
+        {
+          "label": "Still allowed",
+          "value": "LLMs for research, analysis, bug reports, and patch review"
+        },
+        {
+          "label": "Marking",
+          "value": "Smaller AI-assisted patches must be clearly marked in the commit message"
+        },
+        {
+          "label": "Review",
+          "value": "Policy to be revisited in early 2027"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What counts as a legally significant AI contribution to GCC?",
+          "a": "GCC's AI policy uses the GNU project's existing copyright threshold, which treats roughly 15 lines of code or text as the point where a contribution becomes legally significant. Patches above that line count that came from an LLM will be declined. Below that bar, AI-assisted work may still be merged if it is clearly marked in the commit message."
+        },
+        {
+          "q": "Can I use an LLM at all when working on GCC?",
+          "a": "Yes. GCC's policy allows LLMs for research, code analysis, bug discovery and reporting, and patch review, so long as no LLM output ends up in a submitted patch. Contributors can still use AI as a reading assistant or a triage aid, but any code, comment, or documentation over the ~15-line threshold must be human-written."
+        },
+        {
+          "q": "Why does GCC treat test cases differently?",
+          "a": "The GCC steering committee gave maintainers discretion to accept legally significant test cases generated in whole or in part by an LLM. Tests are largely mechanical and easy to review against known-good behavior, so the copyright risk is lower and the productivity gain from generating them is high. Non-test contributions get the stricter default."
+        },
+        {
+          "q": "How does GCC's rule compare to other open-source projects?",
+          "a": "The GCC rule sits alongside the Linux kernel's earlier `Assisted-by:` tag requirement and stricter no-AI stances from projects like NetBSD. GCC allows more than a full ban but less than the Linux kernel's tag-and-ship approach: significant LLM code is out, small AI-assisted work must be marked, and test-case exceptions are up to each maintainer."
+        },
+        {
+          "q": "When will GCC revisit this policy?",
+          "a": "The steering committee described the policy as interim and plans to review it in early 2027. That review will consider how AI code-generation and provenance tooling have evolved, how the marking rule is working in practice, and whether the test-case carve-out should be widened or narrowed. Until then, the July 29 rules stand."
+        }
+      ],
+      "image": {
+        "url": "https://www.phoronix.net/image.php?id=2026&image=gnu_ai",
+        "alt": "GNU head silhouette next to a stylised AI chip, illustrating GCC's new AI-contribution rules",
+        "fit": "cover",
+        "credit": "Phoronix"
+      },
+      "links": [
+        {
+          "label": "GCC mailing list post",
+          "url": "https://gcc.gnu.org/pipermail/gcc/2026-July/248628.html"
+        },
+        {
+          "label": "LWN write-up",
+          "url": "https://lwn.net/Articles/1086041/"
+        },
+        {
+          "label": "Phoronix coverage",
+          "url": "https://www.phoronix.com/news/GCC-Declining-AI-Contributions"
+        },
+        {
+          "label": "Slashdot discussion",
+          "url": "https://news.slashdot.org/story/26/07/29/2217254/gcc-adopts-policy-rejecting-significant-ai-generated-code"
+        },
+        {
+          "label": "Hacker News thread",
+          "url": "https://news.ycombinator.com/item?id=49047839"
+        }
+      ],
+      "publishDate": "2026-07-31T02:18:33.298Z"
+    },
     {
       "id": "anthropic-frontier-red-team-incidents-jul30",
       "categories": [

@@ -27043,6 +27043,40 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260731t021833z",
+      "timestamp": "2026-07-31T02:18:33.298Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched Anthropic/OpenAI/DeepMind/Meta/Mistral/xAI/Cohere/Moonshot/DeepSeek blogs, HN top 30, GitHub trending, HF models/datasets/papers, YouTube RSS (8 creators), Simon Willison, and the biomedical/neuro science lane. Only one new item cleared the bar: the GCC steering committee's AI-code-contribution policy (HN 243pts, LWN + Phoronix + Slashdot). Every fresh RSS video was already in the feed; every fresh lab-blog release (GPT-5.6 price cut, Anthropic red-team, Gemini Robotics 2, Grok Voice, Lyria 3.5, ChatGPT for Academic Researchers, Andon Vending-Bench 2) was already ingested.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "gcc-ai-policy-2026",
+          "title": "GCC bans AI-generated patches — LLM code declined, test cases exempt",
+          "category": "ecosystem",
+          "note": "Ecosystem-primary: concrete developer action (GCC contributors cannot submit legally significant LLM patches; must mark small AI-assisted work). HN top 30 with 243 points, covered by LWN, Phoronix, and Slashdot within 48h. First open-source foundation compiler to set an explicit LLM-code-provenance rule, so it sets a reference point for other GNU projects. Cap-of-1 ecosystem primary respected."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "dataset",
+        "video",
+        "article",
+        "ecosystem",
+        "security",
+        "benchmark",
+        "algorithm"
+      ]
     }
   ]
 }
