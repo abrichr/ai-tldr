@@ -27221,6 +27221,45 @@
         "ecosystem",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260731t175547z",
+      "timestamp": "2026-07-31T17:55:47.979Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Google's Chrome AI vulnerability-hunting post (Big Sleep + Gemini agents patched 1,072 bugs in Chrome 149/150, HN 417 pts + TechCrunch + Bleeping Computer) and OpenAI's ARC-AGI-3 harness study (GPT-5.6 Sol from 13.3% to 38.3% with two Responses API settings). YouTube RSS scan returned six ≤72h videos — all already in the feed; one Sam Witteveen re-upload on the same Ryzen AI Halo topic skipped.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "google-chrome-ai-security-jul30",
+          "title": "Chrome fixed 1,072 bugs with AI — Google's Big Sleep found a 13-year sandbox escape",
+          "category": "security",
+          "note": "Google Security blog post (Jul 30) covered by TechCrunch and Bleeping Computer, on HN front page with 417 pts. Real technical impact: named AI agents, concrete bug counts, 13-year sandbox escape."
+        },
+        {
+          "id": "openai-arc-agi-3-two-settings-jul29",
+          "title": "OpenAI: two API settings tripled GPT-5.6 Sol on ARC-AGI-3 — 13.3% to 38.3%",
+          "category": "benchmark",
+          "note": "OpenAI Research blog post (Jul 29). Multiple outlets (The Decoder, MLQ, remio, Gigazine). Substantive methodological finding: harness settings triple benchmark scores on the most-watched reasoning eval."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }

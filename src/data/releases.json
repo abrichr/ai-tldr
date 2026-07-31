@@ -1,8 +1,223 @@
 {
-  "generatedAt": "2026-07-31T14:07:48.625Z",
+  "generatedAt": "2026-07-31T17:55:47.979Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "google-chrome-ai-security-jul30",
+      "categories": [
+        "security",
+        "article"
+      ],
+      "title": "Chrome fixed 1,072 bugs with AI — Google's Big Sleep found a 13-year sandbox escape",
+      "org": "Google",
+      "date": "2026-07-30",
+      "url": "https://blog.google/security/chrome-stronger-with-every-update/",
+      "summary": "Google says Chrome 149 and 150 fixed 1,072 security bugs in June — more than the last 23 versions combined. Big Sleep, a joint Google, DeepMind, and Project Zero agent, plus a Gemini-driven scanner did most of the finding.",
+      "tags": [
+        "google",
+        "chrome",
+        "security",
+        "cybersecurity",
+        "big-sleep",
+        "gemini",
+        "project-zero",
+        "vulnerability-discovery",
+        "ai-safety",
+        "browser-security"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Google (Chrome + DeepMind + Project Zero)"
+        },
+        {
+          "label": "Bugs fixed",
+          "value": "1,072 in Chrome 149 + 150"
+        },
+        {
+          "label": "Prior baseline",
+          "value": "1,036 bugs across the last 23 versions"
+        },
+        {
+          "label": "AI agents",
+          "value": "Big Sleep (V8 + graphics) and a Gemini vulnerability agent"
+        },
+        {
+          "label": "Notable find",
+          "value": "Sandbox escape latent for 13+ years"
+        },
+        {
+          "label": "Published",
+          "value": "July 30, 2026"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How many Chrome security bugs did AI help fix?",
+          "a": "Google's Big Sleep and Gemini-powered agents helped Chrome patch 1,072 security bugs in Chrome 149 and 150, both shipped in June 2026. That single two-version run beats the 1,036 bugs Google fixed across the previous 23 milestone releases over roughly two years."
+        },
+        {
+          "q": "What are Big Sleep and the Gemini vulnerability agent?",
+          "a": "Big Sleep is a joint Google, DeepMind, and Project Zero AI agent that hunts memory-safety bugs in V8 and the graphics stack. The second system is a Gemini-based agent harness Google built in early 2026 to scan the broader Chromium codebase with higher efficiency and lower false-positive rates."
+        },
+        {
+          "q": "What was the 13-year Chrome vulnerability the AI found?",
+          "a": "One AI-discovered flaw was a sandbox escape that would let a compromised Chrome renderer trick the browser into reading local files. Google says the bug had 'quietly survived in our codebase for more than 13 years' before an AI agent surfaced it in the Chromium source."
+        },
+        {
+          "q": "Does Chrome still need human review?",
+          "a": "Yes — Google says its engineers still validate, triage, and land every AI-suggested fix. The AI's role is to speed up finding and preemptively patching bugs, not to ship code unattended; Chrome director of engineering Doug Turner says the goal is to 'outpace our adversaries' by fixing issues before attackers exploit them."
+        }
+      ],
+      "links": [
+        {
+          "label": "Google Blog",
+          "url": "https://blog.google/security/chrome-stronger-with-every-update/"
+        },
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/30/google-says-it-fixed-more-chrome-bugs-in-june-than-over-the-past-two-years-thanks-to-ai/"
+        },
+        {
+          "label": "Bleeping Computer",
+          "url": "https://www.bleepingcomputer.com/news/google/google-says-ai-helped-chrome-fix-1-072-security-bugs-in-two-releases/"
+        }
+      ],
+      "explainer": {
+        "tagline": "AI agents patched more Chrome security bugs in June than the browser fixed across its last two years of releases.",
+        "whatIsIt": "Google shipped 1,072 security fixes across Chrome 149 and 150 this June — most of them surfaced by two AI vulnerability-hunting agents. One is Big Sleep, a joint Google, DeepMind, and Project Zero project that focuses on V8 and the graphics stack. The other is a newer Gemini-based agent harness Google built in early 2026 to scan the wider Chromium codebase.",
+        "howItWorks": "Big Sleep, launched with DeepMind and Project Zero in 2025, runs fuzz-and-reason loops on Chrome's most attacker-facing code and reports concrete memory-safety issues. The Gemini agent walks Chromium's broader tree, filtering for lower false positives so engineers spend less time triaging noise. Google says AI is also now used to validate, triage, and draft fixes, a workflow that used to take 5–30 minutes per report and relied entirely on human security engineers.",
+        "whyItMatters": "Chrome runs on billions of devices, so unpatched browser bugs are among the most abused attack surfaces on the internet. Doing the last 23 releases' worth of fixing in two point releases means Chrome is closing off attacker footholds faster than the traditional human-only pipeline could. One AI-found flaw — a sandbox escape that would leak local files to a compromised renderer — had hidden in the code for more than 13 years.",
+        "forWho": "browser security engineers, Chrome enterprise admins, and anyone tracking how AI agents plug into real production security work",
+        "tryIt": "Update Chrome via chrome://settings/help — the fixes ship in the stable 149 and 150 milestones"
+      },
+      "image": {
+        "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Screenshot_2026-07-17_at_5.00.43PM.width-1300.png",
+        "alt": "Google blog header for Chrome AI security update",
+        "fit": "cover"
+      },
+      "publishDate": "2026-07-31T17:55:47.979Z"
+    },
+    {
+      "id": "openai-arc-agi-3-two-settings-jul29",
+      "categories": [
+        "benchmark",
+        "article"
+      ],
+      "title": "OpenAI: two API settings tripled GPT-5.6 Sol on ARC-AGI-3 — 13.3% to 38.3%",
+      "org": "OpenAI",
+      "date": "2026-07-29",
+      "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/",
+      "summary": "OpenAI reran GPT-5.6 Sol on ARC-AGI-3's public task set with two Responses API settings — retained reasoning and compaction — turned on. Score jumped from 13.3% to 38.3% and used about one-sixth as many output tokens.",
+      "tags": [
+        "openai",
+        "gpt-5-6",
+        "gpt-5-6-sol",
+        "arc-agi-3",
+        "benchmark",
+        "harness",
+        "responses-api",
+        "compaction",
+        "retained-reasoning",
+        "evaluation"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenAI"
+        },
+        {
+          "label": "Model",
+          "value": "GPT-5.6 Sol"
+        },
+        {
+          "label": "Benchmark",
+          "value": "ARC-AGI-3 public task set"
+        },
+        {
+          "label": "Score change",
+          "value": "13.3% → 38.3%"
+        },
+        {
+          "label": "Output tokens",
+          "value": "~6x fewer"
+        },
+        {
+          "label": "Settings enabled",
+          "value": "Retained reasoning + compaction"
+        },
+        {
+          "label": "Published",
+          "value": "July 29, 2026"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What are retained reasoning and compaction in the OpenAI Responses API?",
+          "a": "Retained reasoning keeps GPT-5.6 Sol's private chain-of-thought across steps in a task instead of throwing it away after each response. Compaction summarizes older context when the running history overflows the window, rather than truncating and losing whatever fell out. Both are Responses API options ChatGPT and Codex already use by default."
+        },
+        {
+          "q": "Why did ARC-AGI-3 score GPT-5.6 Sol so low at first?",
+          "a": "The official ARC-AGI-3 harness discarded GPT-5.6 Sol's private reasoning after every move and dropped older actions once history exceeded the window. GPT-5.6 Sol therefore kept restarting its train of thought mid-puzzle, so its 13.3% score reflected the harness's rules more than the model's real reasoning ability, OpenAI argues."
+        },
+        {
+          "q": "Does this mean ARC-AGI-3 numbers can't be compared across models?",
+          "a": "OpenAI's takeaway is that ARC-AGI-3 measures the model plus the technical setup around it, not the model alone. Runs that differ in whether reasoning traces are kept or truncated can produce very different scores — so a fair comparison requires publishing which harness settings each entry used, not just the top-line percentage."
+        },
+        {
+          "q": "How can developers enable the same two settings?",
+          "a": "The two flags live in OpenAI's Responses API and are the defaults inside ChatGPT and Codex. Third-party evaluators calling GPT-5.6 Sol directly need to opt into the same Responses API behavior — keeping reasoning between turns and enabling automatic context compaction — to see similar gains on multi-step agent tasks like ARC-AGI-3."
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "ARC-AGI-3 (public task set)",
+          "results": [
+            {
+              "name": "GPT-5.6 Sol (official harness)",
+              "score": 13.3
+            },
+            {
+              "name": "GPT-5.6 Sol (retained reasoning + compaction)",
+              "score": 38.3,
+              "highlight": true
+            }
+          ],
+          "source": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/"
+        }
+      ],
+      "links": [
+        {
+          "label": "The Decoder",
+          "url": "https://the-decoder.com/openai-claims-gpt-5-6-sol-beats-opus-5-on-arc-agi-3-with-its-latest-api-and-two-additional-settings/"
+        },
+        {
+          "label": "Gigazine coverage",
+          "url": "https://gigazine.net/gsc_news/en/20260731-how-enabling-two-settings-tripled-arc-agi-3-benchmark/"
+        },
+        {
+          "label": "Remio summary",
+          "url": "https://www.remio.ai/post/openai-says-two-api-settings-tripled-gpt-5-6-sols-arc-agi-3-score"
+        }
+      ],
+      "explainer": {
+        "tagline": "GPT-5.6 Sol jumped from 13.3% to 38.3% on ARC-AGI-3's public task set once OpenAI turned on the same Responses API settings ChatGPT already uses.",
+        "whatIsIt": "OpenAI's post argues that ARC-AGI-3 scores heavily depend on the surrounding harness, not the model alone. With the official evaluation, GPT-5.6 Sol scored 13.3% on the public task set. With two settings — retained reasoning and compaction — enabled through the OpenAI Responses API, the same model scored 38.3% and burned roughly one-sixth as many output tokens per game.",
+        "howItWorks": "Retained reasoning preserves GPT-5.6 Sol's private chain-of-thought across steps of a task instead of erasing it after each move. Compaction summarizes older context when history overflows the window rather than truncating it. The official ARC-AGI-3 harness did neither, so the model kept losing its own scratchwork mid-puzzle and had to restart its reasoning constantly. Both settings are on by default inside ChatGPT and Codex.",
+        "whyItMatters": "ARC-AGI-3 is one of the highest-signal reasoning benchmarks in the AI industry, and a 3x swing from a harness tweak reframes what those numbers mean. OpenAI's implicit ask is that benchmark tables report the harness used, not just the model — otherwise a chart is silently ranking eval setups. The blog also gives developers a concrete recipe to squeeze better multi-step agent performance out of GPT-5.6 Sol.",
+        "forWho": "AI evaluators, benchmark maintainers, and developers building agentic workflows on GPT-5.6 Sol",
+        "tryIt": "In the OpenAI Responses API, keep prior reasoning items across turns and enable context compaction — the same defaults ChatGPT uses"
+      },
+      "image": {
+        "url": "https://images.ctfassets.net/kftzwdyauwt9/3lr743fXRey8lYJgiaReEo/80b223beba7cf8fcd4108d533741a56b/ARC-AGI-3_art-card_16x9.png",
+        "alt": "ARC-AGI-3 art card from the OpenAI blog post",
+        "fit": "cover"
+      },
+      "publishDate": "2026-07-31T17:55:47.979Z"
+    },
     {
       "id": "thinking-machines-inkling-small",
       "categories": [
