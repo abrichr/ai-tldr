@@ -27286,6 +27286,35 @@
         "dataset",
         "benchmark"
       ]
+    },
+    {
+      "id": "sweep-20260731t210900z",
+      "timestamp": "2026-07-31T21:09:00.052Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched Anthropic/OpenAI/DeepMind/Meta/Mistral/xAI/Moonshot/DeepSeek/Zhipu/Qwen lab blogs, GitHub trending (daily + new-since-Jul-20), HuggingFace models/datasets/papers trending, HN top 30, Simon Willison, StatNews AI, and 8 YouTube creator RSS feeds. Everything qualifying in the 72h window is already in the feed: Anthropic Frontier Red Team incidents, GPT-5.6 Luna/Terra price cut, DeepSeek V4-Flash 0731, Sam Witteveen ThinkingCap, Fireship Opus 5, Two Minute Papers on Kimi K3, Wes Roth OpenAI Modal, Wes Roth Abacus, and Hugging Face's Stack v3. The one candidate I initially drafted (The Stack v3, uploaded ~5h ago) is a URL collision with existing huggingface-the-stack-v3. Below the bar: Qwen-UI-Agent paper trends on HF but no released code (fails 2-of-N); Simon Willison llm 0.32rc2 is a release candidate with a small openai-endpoint feature; new Sam Witteveen AMD Ryzen AI Halo video re-treads the July 21 entry (padding risk); openclaude-improved is a generic CLI coding agent below the trending bar. Tailscale HF-intrusion post responds to the July 16 breach, outside the 72h cap.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "dataset",
+        "repo",
+        "tool",
+        "paper",
+        "algorithm",
+        "video",
+        "article",
+        "benchmark",
+        "security",
+        "ecosystem",
+        "tutorial",
+        "resource"
+      ]
     }
   ]
 }
