@@ -27195,6 +27195,32 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260731t140748z",
+      "timestamp": "2026-07-31T14:07:48.625Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, Qwen, Moonshot, DeepSeek, Z.ai, MiniMax), GitHub trending, HN top 30 + newest, HuggingFace models/datasets/papers, Simon Willison, Interconnects, and the science-lane queries (medical imaging FDA, neural decoding, pharma AI). Every ≤72h qualifying item was already in the feed (Anthropic Frontier Red Team + HAWK cryptography, DeepSeek V4-Flash-0731, OpenAI GPT-5.6 price cut, DeepMind Gemini Robotics 2 / ER 2 / Lyria 3.5, MiniMax H3, Thinking Machines Inkling-Small, xAI Grok Voice Think Fast 2, Insilico DDD Benchmark, plus all 5 fresh YouTube videos). Marginal candidates dropped: GitHub Stacked PRs (not AI-native), CTGT distillation paper (145 pts, below 150 HN bar), Metis memory model (35 stars, niche org), Poolside Laguna-S 2.1 + Gemini 3.5 Flash Cyber + AIRS SwiftMR clearance (all >72h old), Grok 4.6 preview (Musk roadmap tweet, no ship). Zero-add sweep.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "article",
+        "security",
+        "ecosystem",
+        "rumor"
+      ]
     }
   ]
 }
