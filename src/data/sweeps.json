@@ -27521,6 +27521,40 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260801t171232z",
+      "timestamp": "2026-08-01T17:12:32.107Z",
+      "source": "github-actions-sweep",
+      "summary": "Cron sweep at 2026-08-01T16:57Z. Scanned lab blogs (Anthropic, OpenAI, DeepMind, Meta, xAI, Mistral, plus DeepSeek/Zhipu/MiniMax/Moonshot/Qwen), GitHub trending, HuggingFace models+datasets+papers, HN top 30, r/LocalLLaMA, 8 YouTube creators via yt-rss-scan, coding agents (Cursor/Claude Code/Windsurf/Cline), and the bio/neuro/pharma lane (Nature.com AI+ML, Nature Medicine, EurekAlert, Isomorphic/Recursion/Insilico/AbSci, hemispheric.ai). All 4 fresh YouTube videos already in feed; all top HN AI posts already in feed; Amazon Nova wind-down and OpenAI ChatGPT-for-researchers already covered. NeuroVFM already in feed. Adding one item: the Munich Regional Court's July 31 ruling against Suno for copyright infringement — a genuine EU regulatory precedent that changes what AI music vendors must license.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "gema-suno-munich-copyright-jul31",
+          "title": "Suno loses copyright case to GEMA — Munich court rules AI music training infringed",
+          "category": "ecosystem",
+          "note": "Munich I Regional Court ruled Suno's v3.5/v4 models memorized 6 GEMA-catalog songs during training; injunction + damages + revenue disclosure. Second German AI-training precedent after OpenAI Nov 2025. Distinct from suno-hack-jul15 (data breach) and germany-munich-google-ai-overviews-jun9 (defamation, not training)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }

@@ -1,8 +1,117 @@
 {
-  "generatedAt": "2026-08-01T15:05:41.693Z",
+  "generatedAt": "2026-08-01T17:12:32.107Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "gema-suno-munich-copyright-jul31",
+      "categories": [
+        "ecosystem",
+        "security"
+      ],
+      "title": "Suno loses copyright case to GEMA — Munich court rules AI music training infringed",
+      "org": "Munich Regional Court",
+      "date": "2026-07-31",
+      "url": "https://musically.com/2026/07/31/german-collecting-society-gema-wins-its-copyright-infringement-lawsuit-against-suno/",
+      "summary": "The Munich Regional Court ruled Suno's AI music models memorized six protected GEMA songs during training, including 'Rasputin', 'Daddy Cool' and 'Mambo No. 5'. Suno must pay damages and disclose revenue; it plans to appeal.",
+      "tags": [
+        "regulation",
+        "copyright",
+        "training-data",
+        "germany",
+        "munich",
+        "gema",
+        "suno",
+        "ai-music",
+        "music-generation",
+        "ecosystem"
+      ],
+      "importance": "major",
+      "image": {
+        "url": "https://musically.com/wp-content/uploads/2026/06/SUNO-logo-on-a-mobile-Jun-2026-e1782472416308.png",
+        "alt": "Suno logo displayed on a mobile phone screen",
+        "fit": "contain",
+        "credit": "Music Ally"
+      },
+      "links": [
+        {
+          "label": "Music Ally Report",
+          "url": "https://musically.com/2026/07/31/german-collecting-society-gema-wins-its-copyright-infringement-lawsuit-against-suno/"
+        },
+        {
+          "label": "Music Week Coverage",
+          "url": "https://www.musicweek.com/publishing/read/gema-wins-court-ruling-on-breach-of-copyright-by-ai-music-firm-suno/094644"
+        },
+        {
+          "label": "The Star Report",
+          "url": "https://www.thestar.com.my/tech/tech-news/2026/07/31/german-court-rules-ai-music-firm-suno-broke-copyright-rules"
+        },
+        {
+          "label": "Music Times Analysis",
+          "url": "https://www.musictimes.com/articles/112465/20260731/german-court-rules-suno-infringed-gema-case.htm"
+        }
+      ],
+      "explainer": {
+        "tagline": "First German ruling that AI music training on copyrighted songs is illegal — Suno must pay damages, disclose revenue, and stop distributing infringing outputs.",
+        "whatIsIt": "A ruling from Munich I Regional Court issued on July 31, 2026 in favor of GEMA, Germany's music-rights collective, against Suno, the US AI music platform. Judge Elke Schwager found Suno's v3.5 and v4 models memorized six protected works — including 'Rasputin', 'Daddy Cool', and 'Mambo No. 5' — during training. The court granted injunctive relief, disclosure of revenue, and damages.",
+        "howItWorks": "Both German and US copyright law were applied: Suno trained its models on GEMA-repertoire recordings in the US, then reproduced them when generating audio in Europe. Judge Schwager wrote that the songs are 'reproducibly contained in the defendant's models' — enough to make each generation an infringement, not fair use. Suno must now disclose infringement-linked revenue so damages can be calculated.",
+        "whyItMatters": "This is the second German precedent that says an AI trained without a license infringes when it reproduces protected works, after GEMA won a similar case against OpenAI in November 2025. Any AI music company shipping in the EU now faces the same theory of liability, which likely pushes providers toward paid licensing deals or cleared-catalog training data. Suno plans to appeal, calling the ruling a 'fundamental mischaracterization' of its technology.",
+        "forWho": "AI music startups, rights holders, EU AI legal teams, model licensing negotiators"
+      },
+      "quickFacts": [
+        {
+          "label": "Court",
+          "value": "Munich I Regional Court"
+        },
+        {
+          "label": "Ruling date",
+          "value": "2026-07-31"
+        },
+        {
+          "label": "Judge",
+          "value": "Elke Schwager"
+        },
+        {
+          "label": "Plaintiff",
+          "value": "GEMA (German music collective)"
+        },
+        {
+          "label": "Defendant",
+          "value": "Suno Inc."
+        },
+        {
+          "label": "Models named",
+          "value": "Suno v3.5 and v4"
+        },
+        {
+          "label": "Named works",
+          "value": "Rasputin, Daddy Cool, Mambo No. 5 (6 total)"
+        },
+        {
+          "label": "Remedy",
+          "value": "Injunction + damages + revenue disclosure"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much will Suno pay in damages?",
+          "a": "The Munich ruling does not set a sum yet. GEMA must first receive Suno's revenue disclosure tied to the infringing generations, and damages are then calculated from that data. Suno has said it will appeal, which will delay any payout."
+        },
+        {
+          "q": "Does this ruling only affect Germany?",
+          "a": "The court applied both US copyright law (for the training) and German law (for the reproduction inside Europe). That combination means any AI music model that trained on GEMA-repertoire tracks and serves outputs in Germany is exposed — regardless of where the company is based. GEMA won a similar case against OpenAI in November 2025."
+        },
+        {
+          "q": "What must Suno do now?",
+          "a": "Under the injunction, Suno cannot continue generating outputs that reproduce the six named GEMA works. Suno must also hand over revenue records so damages can be calculated. Suno has said it will appeal and 'evaluate all available options' before complying."
+        },
+        {
+          "q": "How does this compare to the OpenAI case?",
+          "a": "GEMA won a parallel Munich Regional Court ruling against OpenAI in November 2025, over ChatGPT reproducing German song lyrics. The Suno ruling extends the same 'training-then-reproduction is infringement' theory from text to audio, closing a gap that AI music platforms had relied on."
+        }
+      ],
+      "publishDate": "2026-08-01T17:12:32.107Z"
+    },
     {
       "id": "google-earth-nano-banana-pull-jul31",
       "categories": [
