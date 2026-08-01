@@ -1,8 +1,107 @@
 {
-  "generatedAt": "2026-08-01T20:49:43.360Z",
+  "generatedAt": "2026-08-01T23:07:51.897Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "deephealth-breast-ultrasound-fda",
+      "categories": [
+        "model",
+        "tool"
+      ],
+      "title": "DeepHealth Breast Ultrasound — FDA clears RadNet AI for automated lesion reads",
+      "org": "DeepHealth (RadNet)",
+      "date": "2026-07-30",
+      "url": "https://www.itnonline.com/content/ai-powered-breast-ultrasound-receives-fda-clearance",
+      "summary": "The FDA granted 510(k) clearance to DeepHealth Breast Ultrasound, an AI that detects, characterizes, and drafts reports for breast lesions from ultrasound scans. RadNet cites 98%-plus lesion localization, +8% cancer sensitivity, and 37% less radiologist time.",
+      "tags": [
+        "healthcare",
+        "clinical-ai",
+        "medical-imaging",
+        "radiology",
+        "diagnostics",
+        "breast-cancer",
+        "ultrasound",
+        "fda-cleared",
+        "deephealth",
+        "radnet",
+        "see-mode"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "DeepHealth (RadNet subsidiary)"
+        },
+        {
+          "label": "Product",
+          "value": "DeepHealth Breast Ultrasound (See-Mode SMART-B)"
+        },
+        {
+          "label": "FDA clearance",
+          "value": "510(k) K260303"
+        },
+        {
+          "label": "Announced",
+          "value": "July 30, 2026"
+        },
+        {
+          "label": "Availability",
+          "value": "Commercially available in the US"
+        },
+        {
+          "label": "Reimbursement",
+          "value": "Category III CPT (quantitative ultrasound)"
+        }
+      ],
+      "metrics": {
+        "Lesion localization": ">98%",
+        "Cancer sensitivity uplift": "+8%",
+        "Radiologist time saved": "37%"
+      },
+      "explainer": {
+        "tagline": "AI that reads breast ultrasounds now has FDA sign-off, and RadNet is rolling it out across its US imaging centers.",
+        "whatIsIt": "DeepHealth Breast Ultrasound is an AI application that helps radiologists read breast ultrasound scans. The software finds candidate lesions in the image, describes each one in standard clinical language, and drafts a structured report the radiologist reviews and signs. It is DeepHealth's commercial name for the See-Mode SMART-B system.",
+        "howItWorks": "Running on top of a normal ultrasound study, DeepHealth Breast Ultrasound detects suspicious regions and characterizes their shape, margins, and echogenicity — the same features graders already use to score a lesion. It then pre-fills a structured report so the radiologist edits rather than authors from a blank page. RadNet-cited numbers: greater than 98% accuracy in localizing lesions, an 8 percentage point uplift in cancer-detection sensitivity, and 37% less interpretation time per study.",
+        "whyItMatters": "Breast ultrasound reads are slow, subjective, and central to catching cancers that mammography misses in dense tissue. Now that DeepHealth Breast Ultrasound has 510(k) clearance and Category III CPT reimbursement, US practices can bill for it starting immediately. RadNet says it will roll the tool out across the roughly 700,000 breast ultrasound studies its network reads each year by the end of 2026.",
+        "forWho": "Radiologists reading breast ultrasound; imaging centers under Category III CPT",
+        "tryIt": "https://www.itnonline.com/content/ai-powered-breast-ultrasound-receives-fda-clearance"
+      },
+      "faq": [
+        {
+          "q": "Is DeepHealth Breast Ultrasound available now?",
+          "a": "Yes — DeepHealth Breast Ultrasound is commercially available in the United States as of the FDA 510(k) clearance on July 30, 2026. It is eligible for reimbursement under a Category III CPT code for quantitative ultrasound tissue characterization, and RadNet plans to roll it out across its imaging centers by year-end 2026."
+        },
+        {
+          "q": "How accurate is DeepHealth's breast ultrasound AI?",
+          "a": "DeepHealth cites three headline numbers for DeepHealth Breast Ultrasound: greater than 98% accuracy in localizing breast lesions, an 8 percentage point increase in cancer-detection sensitivity when radiologists read with the software, and a 37% reduction in interpretation time. The figures come from DeepHealth's own studies submitted with the 510(k)."
+        },
+        {
+          "q": "How is this different from a mammography AI?",
+          "a": "DeepHealth Breast Ultrasound analyzes ultrasound scans, not mammograms. Ultrasound is the follow-up modality for dense breast tissue where mammograms miss tumors, so a separate FDA clearance is needed. DeepHealth already ships SmartMammo for mammography; the July 30, 2026 clearance covers the ultrasound side of the same workflow."
+        },
+        {
+          "q": "Who built the technology behind DeepHealth Breast Ultrasound?",
+          "a": "The software is the commercial version of the SMART-B device from See-Mode, which is now marketed by RadNet's DeepHealth subsidiary. DeepHealth submitted it to the FDA as 510(k) K260303 and cleared it under the DeepHealth Breast Ultrasound name for the US market."
+        }
+      ],
+      "image": {
+        "url": "https://ml.globenewswire.com/Resource/Download/b8473709-04f0-4b5c-b856-bab20d7d6c80",
+        "alt": "DeepHealth logo on a purple background, announcing FDA clearance for its AI-powered breast ultrasound software",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "ITN Coverage",
+          "url": "https://www.itnonline.com/content/ai-powered-breast-ultrasound-receives-fda-clearance"
+        },
+        {
+          "label": "Wire Release",
+          "url": "https://www.manilatimes.net/2026/07/31/tmt-newswire/globenewswire/deephealth-receives-fda-clearance-for-ai-powered-breast-ultrasound/2395495"
+        }
+      ],
+      "publishDate": "2026-08-01T23:07:51.897Z"
+    },
     {
       "id": "simonw-smevals-jul31",
       "categories": [

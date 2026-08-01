@@ -27616,6 +27616,40 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260801t230751z",
+      "timestamp": "2026-08-01T23:07:51.897Z",
+      "source": "github-actions-sweep",
+      "summary": "Added one qualifying release in the 72h window: DeepHealth Breast Ultrasound FDA 510(k) clearance (July 30). All eight lab blogs quiet on new releases; DeepSeek V4-Flash 0731, Kimi K3, MiniMax H3, Gemini Robotics ER 2, Inkling-Small, OpenAI Astra, Chrome Big Sleep, Anthropic red team, GEMA/Suno ruling already in feed. YouTube RSS scan surfaced three fresh videos, all three already ingested (Sam Witteveen x2, Wes Roth). Microsoft Flint (HN 242) already in feed; no fresh Flint release in 72h. Cohere EU CoP signing dropped as ecosystem-gate failure (no dev action).",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "deephealth-breast-ultrasound-fda",
+          "title": "DeepHealth Breast Ultrasound — FDA clears RadNet AI for automated lesion reads",
+          "category": "model",
+          "note": "FDA 510(k) K260303 clearance July 30, 2026 for AI that reads breast ultrasound. RadNet says commercially available now with Category III CPT reimbursement, network-wide deployment by end of 2026. Only fresh AI-for-science clearance in the 72h window."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "ecosystem",
+        "security",
+        "article"
+      ]
     }
   ]
 }
