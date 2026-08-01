@@ -7,7 +7,7 @@
   "lineTitle": "GPT (Flagship / Thinking)",
   "tagline": "OpenAI's balanced mid-tier GPT-5.6 model, priced at half of Sol for everyday business work.",
   "seoTitle": "GPT-5.6 Terra — OpenAI's Balanced Mid-Tier Model",
-  "metaDescription": "GPT-5.6 Terra is the balanced mid-tier model in OpenAI's July 2026 GPT-5.6 series, matching GPT-5.5-level quality at $2.50/$15 per 1M tokens.",
+  "metaDescription": "GPT-5.6 Terra is the balanced mid-tier model in OpenAI's July 2026 GPT-5.6 series, priced at $2/$12 per 1M tokens after a July 30 20% cut.",
   "releaseDate": "2026-07-09",
   "status": "Available",
   "contextWindow": "1.05M",
@@ -27,11 +27,11 @@
   ],
   "overview": [
     "GPT-5.6 Terra is the balanced mid-tier model in OpenAI's GPT-5.6 series, first shown as a limited preview on June 26, 2026 and publicly released on July 9, 2026 alongside the flagship Sol and the smaller Luna. OpenAI positions Terra as a production workhorse aimed at everyday business tasks such as customer support, document analysis, and high-volume application work.",
-    "Terra accepts text and image input, supports a 1,050,000-token context window with up to 128,000 output tokens, and carries a February 16, 2026 knowledge cutoff. OpenAI describes it as competitive with GPT-5.5 while being 2x cheaper, priced at $2.50 per 1M input tokens and $15.00 per 1M output tokens.",
+    "Terra accepts text and image input, supports a 1,050,000-token context window with up to 128,000 output tokens, and carries a February 16, 2026 knowledge cutoff. OpenAI describes it as competitive with GPT-5.5 while being cheaper; on July 30, 2026 OpenAI cut Terra's headline pricing by 20%, from $2.50 / $15.00 to $2.00 per 1M input tokens and $12.00 per 1M output tokens, citing efficiency gains from GPT-5.6's own use in optimizing OpenAI's production stack.",
     "In the GPT-5.6 naming system, the number identifies the generation and the tier names — Sol, Terra, Luna — identify durable capability tiers that can advance on their own cadence."
   ],
   "strengths": [
-    "GPT-5.5-level quality at roughly half the input and output cost",
+    "GPT-5.5-level quality at roughly half the input and output cost — $2.00 input / $12.00 output per 1M tokens after the July 30, 2026 cut",
     "Reasoning-model architecture with text and image input",
     "Ships with the GPT-5.6 series safety stack for production deployments",
     "Positioned as a balanced workhorse for high-volume, everyday business tasks"
@@ -51,10 +51,11 @@
     }
   ],
   "pricing": {
-    "input": "$2.50",
-    "output": "$15.00",
+    "input": "$2.00",
+    "output": "$12.00",
     "unit": "/ 1M tokens",
-    "source": "https://openai.com/index/previewing-gpt-5-6-sol/"
+    "note": "Reduced from $2.50 / $15.00 on July 30, 2026 (20% price cut). OpenAI attributes the reduction to efficiency gains from using GPT-5.6 internally to rewrite production code.",
+    "source": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/"
   },
   "apis": [
     {
@@ -80,6 +81,16 @@
       "kind": "api-docs"
     },
     {
+      "label": "Advancing the price-performance frontier with GPT-5.6 (OpenAI, July 30, 2026)",
+      "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+      "kind": "announcement"
+    },
+    {
+      "label": "OpenAI cuts prices for two of its GPT-5.6 AI models (CNBC, July 30, 2026)",
+      "url": "https://www.cnbc.com/2026/07/30/open-ai-price-cut-gpt.html",
+      "kind": "review"
+    },
+    {
       "label": "A preview of GPT-5.6 Sol, Terra, and Luna (OpenAI Help Center)",
       "url": "https://help.openai.com/en/articles/20001325-a-preview-of-gpt-56-sol-terra-and-luna",
       "kind": "official"
@@ -102,7 +113,7 @@
     },
     {
       "q": "How much does GPT-5.6 Terra cost?",
-      "a": "GPT-5.6 Terra is priced at $2.50 per 1M input tokens and $15.00 per 1M output tokens — roughly half the per-token cost of GPT-5.6 Sol and about 2x cheaper than GPT-5.5 while offering competitive quality."
+      "a": "As of July 30, 2026, GPT-5.6 Terra is priced at $2.00 per 1M input tokens and $12.00 per 1M output tokens — a 20% cut from its launch pricing of $2.50 / $15.00. OpenAI attributes the reduction to efficiency gains from using GPT-5.6 to rewrite production code."
     },
     {
       "q": "How does GPT-5.6 Terra compare to Sol and Luna?",
