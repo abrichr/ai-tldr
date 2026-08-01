@@ -27590,6 +27590,32 @@
         "ecosystem",
         "tutorial"
       ]
+    },
+    {
+      "id": "sweep-20260801t204943z",
+      "timestamp": "2026-08-01T20:49:43.360Z",
+      "source": "github-actions-sweep",
+      "summary": "Empty sweep. Prior cron ran ~1.5h ago at 19:08Z and captured everything up to that point. Checked Anthropic news (only the 07-30 red-team post, already in feed), Meta AI blog (nothing 07-30/31 or 08-01), Google DeepMind blog (only Gemini Robotics ER 2, in feed), Simon Willison's blog (top 5 posts all already in feed: OpenAI Astra ten-math, DeepSeek V4-Flash-0731, stateless MCP, smevals), YouTube RSS scan for 8 creator channels (all 3 fresh videos — Sam Witteveen AMD Ryzen AI Halo, Wes Roth Abacus, Sam Witteveen ThinkingCap — already in feed), HN top 30 (nothing new AI-related besides items already in feed), HF trending models (Solar-Open2-250B is 11 days old — outside 72h cap; all others already in feed), GitHub daily trending (microsoft/TRELLIS.2 is 7 months old; bytedance/deer-flow is 15 months old — not new releases). Microsoft Flint hit HN #22 at 235 pts but v0.4.0 released 2026-07-24, 8 days ago — outside 72h. Cursor forum posts about pricing are user complaints, not shipped items. Nothing qualifies in the ≤72h window.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "article",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }
