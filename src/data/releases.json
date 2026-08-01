@@ -1,8 +1,71 @@
 {
-  "generatedAt": "2026-08-01T06:33:04.800Z",
+  "generatedAt": "2026-08-01T10:07:43.054Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "simonw-stateless-mcp-jul31",
+      "categories": [
+        "article"
+      ],
+      "title": "Simon Willison — Stateless MCP spawns mcp-explorer and datasette-mcp",
+      "org": "Simon Willison",
+      "date": "2026-07-31",
+      "url": "https://simonwillison.net/2026/Jul/31/stateless-mcp/",
+      "summary": "Simon Willison walks through MCP 2.0's stateless transport, calls it the biggest change since the protocol shipped, and open-sources two new demos — mcp-explorer for probing servers and datasette-mcp for exposing SQLite over the new spec.",
+      "tags": [
+        "simon-willison",
+        "mcp",
+        "model-context-protocol",
+        "mcp-2",
+        "stateless-transport",
+        "mcp-explorer",
+        "datasette-mcp",
+        "datasette",
+        "protocol",
+        "article"
+      ],
+      "importance": "notable",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://simonwillison.net/2026/Jul/31/stateless-mcp/"
+        },
+        {
+          "label": "mcp-explorer",
+          "url": "https://github.com/simonw/mcp-explorer"
+        },
+        {
+          "label": "datasette-mcp",
+          "url": "https://github.com/datasette/datasette-mcp"
+        },
+        {
+          "label": "MCP 2026-07-28 spec",
+          "url": "https://modelcontextprotocol.io/specification/2026-07-28"
+        }
+      ],
+      "explainer": {
+        "tagline": "Simon Willison argues MCP 2.0's stateless transport is the biggest spec change since launch, and ships two demos to prove it.",
+        "whatIsIt": "Simon Willison's July 31 post is a roughly 2,100-word walkthrough of the Model Context Protocol 2026-07-28 revision — 'MCP 2.0' — plus two open-source companion projects he built while playing with the new transport: mcp-explorer, a probe for MCP servers, and datasette-mcp, an adapter that exposes any Datasette instance over MCP.",
+        "howItWorks": "The new spec drops the long-lived HTTP+SSE session model in favor of stateless calls that each carry their own context — closer to a normal HTTP API than the earlier connect-and-hold design. Willison uses that shift to build mcp-explorer as a plain client that can be pointed at any server and inspect its tools, and datasette-mcp as a wrapper that turns Datasette's read-only query API into an MCP-compliant surface consumable by Claude, LLM CLI, and other MCP clients.",
+        "whyItMatters": "MCP has been notoriously hard to reason about because of its long-lived state; the stateless variant means an MCP server can now be a normal HTTP handler you deploy anywhere, which is what MCP needed to make the leap from Anthropic's ecosystem to general infrastructure. When someone with Willison's profile ships both a well-argued explainer and two working tools on the same day, it materially accelerates how many people can pick the protocol up.",
+        "forWho": "Developers evaluating MCP for their own products or trying to expose an existing data source to Claude and other MCP clients.",
+        "tryIt": "pip install mcp-explorer  # then point it at any MCP 2.0 endpoint"
+      },
+      "image": {
+        "url": "https://raw.githubusercontent.com/simonw/til/refs/heads/main/llms/claude-add-custom-connector-dialog.webp",
+        "alt": "Claude's add-custom-connector dialog — the entry point for stateless MCP servers Simon Willison writes about.",
+        "fit": "contain",
+        "credit": "Simon Willison"
+      },
+      "author": {
+        "name": "Simon Willison",
+        "handle": "@simonw",
+        "profileUrl": "https://simonwillison.net/",
+        "avatarUrl": "https://github.com/simonw.png"
+      },
+      "publishDate": "2026-08-01T10:07:43.054Z"
+    },
     {
       "id": "sqliteai-waste",
       "categories": [

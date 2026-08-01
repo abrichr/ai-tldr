@@ -27390,6 +27390,39 @@
         "ecosystem",
         "algorithm"
       ]
+    },
+    {
+      "id": "sweep-20260801t100743z",
+      "timestamp": "2026-08-01T10:07:43.054Z",
+      "source": "github-actions-sweep",
+      "summary": "One add after a broad zero-pad sweep: Simon Willison's Jul 31 stateless-MCP walkthrough plus two open-source companion tools (mcp-explorer, datasette-mcp). Cursor's iPad launch (Jul 29) is real but rolled just past the 72h cap; other candidates (Two Minute Papers Kimi K3, Fireship Opus 5, Sam Witteveen Ryzen AI Halo, Baidu Unlimited-OCR, Microsoft Flint, GLM-5.2) were already in the feed.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "simonw-stateless-mcp-jul31",
+          "title": "Simon Willison — Stateless MCP spawns mcp-explorer and datasette-mcp",
+          "category": "article",
+          "note": "Simon Willison — an influential-voices author — publishes a substantive ~2,100-word walkthrough of the MCP 2026-07-28 stateless-transport spec and open-sources two working companion tools (mcp-explorer, datasette-mcp) on the same day."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }
