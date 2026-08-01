@@ -27481,6 +27481,46 @@
         "article",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260801t150541z",
+      "timestamp": "2026-08-01T15:05:41.693Z",
+      "source": "github-actions-sweep",
+      "summary": "Two adds: Google pulled the Nano Banana image-generation feature from Google Earth one day after launch after users produced fake satellite scenes (multi-outlet security/policy story), and Sam Witteveen posted a hands-on video of AMD's Ryzen AI Halo local-LLM developer platform. Anthropic/OpenAI/Meta/Mistral/xAI/DeepMind lab blogs had nothing else fresh in the 72h window; HF trending, GitHub trending, HN top 30, and the 8 YouTube creator feeds all cross-checked against existing feed.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "google-earth-nano-banana-pull-jul31",
+          "title": "Google Earth pulls Nano Banana — AI satellite image tool killed one day after launch",
+          "category": "security",
+          "note": "Multi-outlet (TechCrunch, Engadget, Futurism, The National) tier-1 security/policy story with concrete artifact removal; passes ecosystem gate test (developers can no longer use the feature) but scoped as security-primary since the news is misuse, not funding."
+        },
+        {
+          "id": "sam-witteveen-amd-ryzen-ai-halo-jul31",
+          "title": "Sam Witteveen — 'AMD Ryzen AI Halo'",
+          "category": "video",
+          "note": "Fresh (22h) YouTube upload from listed creator; RSS-verified freshFor72hBar; topic is real substantive AI hardware (AMD Ryzen AI Halo, launched July 6, 2026, 128 GB unified memory for local LLM inference)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }

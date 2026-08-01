@@ -1,8 +1,174 @@
 {
-  "generatedAt": "2026-08-01T13:13:12.535Z",
+  "generatedAt": "2026-08-01T15:05:41.693Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "google-earth-nano-banana-pull-jul31",
+      "categories": [
+        "security",
+        "tool"
+      ],
+      "title": "Google Earth pulls Nano Banana — AI satellite image tool killed one day after launch",
+      "org": "Google",
+      "date": "2026-07-31",
+      "url": "https://techcrunch.com/2026/07/31/google-nixes-its-earth-ai-feature-one-day-after-launch-amid-criticism-it-would-spread-misinformation/",
+      "summary": "Google rolled back the Nano Banana image-generation tool in Google Earth on July 31, one day after launch, after users produced fabricated satellite scenes — a blast crater in Los Angeles, a flooded U.S. Capitol, protestors near Mountain View.",
+      "tags": [
+        "google",
+        "google-earth",
+        "nano-banana",
+        "image-generation",
+        "misinformation",
+        "deepfake",
+        "content-policy",
+        "synthid",
+        "ai-safety",
+        "security"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Feature",
+          "value": "Nano Banana image generation in Google Earth (web)"
+        },
+        {
+          "label": "Maker",
+          "value": "Google"
+        },
+        {
+          "label": "Launched",
+          "value": "2026-07-30"
+        },
+        {
+          "label": "Pulled",
+          "value": "2026-07-31 (about one day later)"
+        },
+        {
+          "label": "Reason",
+          "value": "Users generated fake satellite scenes that violated policy"
+        },
+        {
+          "label": "Provenance",
+          "value": "SynthID watermarks; BBC Verify found checks could be bypassed"
+        },
+        {
+          "label": "Status",
+          "value": "Rolled back while Google works on stronger guardrails"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What did the Google Earth Nano Banana tool do?",
+          "a": "Nano Banana was an AI image-generation feature added to Google Earth's web version that let users produce fabricated satellite-style imagery of any location on the globe. The generated scenes were geospatially anchored to real coordinates, inheriting the credibility of Google Earth's map."
+        },
+        {
+          "q": "Why did Google pull the feature so quickly?",
+          "a": "Within a day of launch, users shared misuse examples — a fake blast crater in Los Angeles, a flooded U.S. Capitol, fabricated protestors near Google's Mountain View campus, fake refugee camps and warzone scenes. Google said the shared images 'appear to violate our policies' and rolled the feature back to work on stronger guardrails."
+        },
+        {
+          "q": "Weren't the images watermarked with SynthID?",
+          "a": "Every image the Nano Banana tool produced carried an invisible SynthID watermark that Google's Gemini chatbot and Google Lens can flag as AI-generated. BBC Verify testing showed the check could still be circumvented in some cases, and external AI-detection tools missed some outputs, so the watermark alone did not stop the misuse."
+        },
+        {
+          "q": "Is Google Earth's Nano Banana feature coming back?",
+          "a": "Google says the rollback is temporary and that it is 'implementing stronger guardrails' before relaunching. The company did not name a return date or specify which restrictions will change. Nano Banana 2, the underlying model, remains available in other Google products."
+        }
+      ],
+      "explainer": {
+        "tagline": "Google added an AI image generator to Google Earth on Thursday, then pulled it on Friday after users faked satellite scenes.",
+        "whatIsIt": "Nano Banana in Google Earth was an image-generation feature in the web version of Google Earth that let users create AI-generated satellite-style scenes anchored to any real location. It launched on July 30, 2026 and Google rolled it back one day later on July 31 after misuse examples spread online.",
+        "howItWorks": "The tool ran Google's Nano Banana 2 image model against a chosen Google Earth location, produced a fake satellite-style image, and embedded an invisible SynthID watermark. Users then shared screenshots on social media — where the SynthID mark travels with the image but is not visible, so a casual viewer only sees a plausible-looking satellite photo tied to a real map coordinate.",
+        "whyItMatters": "Nano Banana in Google Earth is a live case study in how quickly a well-resourced AI feature can turn into a misinformation channel: launched by the most trusted map on the internet, pulled by the same team within 24 hours. It sets a marker for what other geospatial and satellite AI products can and can't ship without hard guardrails.",
+        "forWho": "AI product and policy teams, OSINT analysts, geospatial developers",
+        "tryIt": "Feature is disabled in Google Earth. Nano Banana 2 remains available in other Google products."
+      },
+      "image": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/07/Screenshot-2026-07-31-at-12.31.10-PM.png?resize=1200,670",
+        "alt": "Screenshot of Google Earth's Nano Banana AI image generation feature",
+        "fit": "cover",
+        "credit": "TechCrunch"
+      },
+      "links": [
+        {
+          "label": "TechCrunch report",
+          "url": "https://techcrunch.com/2026/07/31/google-nixes-its-earth-ai-feature-one-day-after-launch-amid-criticism-it-would-spread-misinformation/"
+        },
+        {
+          "label": "Engadget: Google rolls back Earth AI tools",
+          "url": "https://www.engadget.com/2228142/google-rolls-back-the-needless-ai-generation-tools-it-added-to-google-earth/"
+        },
+        {
+          "label": "Futurism: misuse breakdown",
+          "url": "https://futurism.com/artificial-intelligence/google-pulls-down-google-earth-ai-feature"
+        },
+        {
+          "label": "The National coverage",
+          "url": "https://www.thenationalnews.com/future/technology/2026/07/31/google-earth-removes-ai-feature/"
+        }
+      ],
+      "publishDate": "2026-08-01T15:05:41.693Z"
+    },
+    {
+      "id": "sam-witteveen-amd-ryzen-ai-halo-jul31",
+      "categories": [
+        "video"
+      ],
+      "title": "Sam Witteveen — 'AMD Ryzen AI Halo'",
+      "org": "Sam Witteveen",
+      "date": "2026-07-31",
+      "url": "https://www.youtube.com/watch?v=mk53NPT4LPg",
+      "summary": "Sam Witteveen takes AMD's Ryzen AI Halo developer kit — the $3,999 mini-workstation built around the Ryzen AI Max+ 395 and 128 GB of unified memory — through hands-on local-LLM tests aimed at models that don't fit on a single consumer GPU.",
+      "tags": [
+        "video",
+        "youtube",
+        "sam-witteveen",
+        "amd",
+        "ryzen-ai-halo",
+        "ryzen-ai-max-395",
+        "local-llm",
+        "hardware",
+        "npu",
+        "rocm"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Sam Witteveen puts AMD's $3,999 Ryzen AI Halo developer platform to work as a local-LLM box.",
+        "whatIsIt": "Sam Witteveen's new video covers AMD's Ryzen AI Halo — the $3,999 pocket-sized developer platform AMD started shipping to reviewers in July 2026, built on the Zen 5 Ryzen AI Max+ 395 processor, an XDNA 2 NPU, a 40-CU Radeon 8060S iGPU, and 128 GB of LPDDR5x-8000 unified memory that the CPU and GPU share.",
+        "howItWorks": "The Ryzen AI Halo's unified 128 GB memory pool lets a developer load large language models that would not fit on any single consumer discrete GPU. AMD's documented figures for the box put a 20-billion-parameter model at around 20 tokens/second on the XDNA 2 NPU at about 35 watts, with ROCm and a pre-validated software stack handling the deployment on Windows and Linux.",
+        "whyItMatters": "For local-LLM developers, Ryzen AI Halo is the first mainstream 128 GB unified-memory workstation aimed squarely at LLM inference rather than gaming — a direct competitor to Apple's high-memory M-series machines and NVIDIA-based workstation towers, and Sam Witteveen's channel is one of the main places local-LLM builders decide which hardware to actually buy.",
+        "forWho": "local-LLM developers, on-prem AI engineers, indie coding-agent builders",
+        "tryIt": "Watch the video, then check AMD's Ryzen AI Halo product page for developer-kit availability"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/mk53NPT4LPg/hqdefault.jpg",
+        "alt": "Sam Witteveen AMD Ryzen AI Halo review YouTube thumbnail",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=mk53NPT4LPg"
+        },
+        {
+          "label": "Sam Witteveen Channel",
+          "url": "https://www.youtube.com/channel/UC55ODQSvARtgSyc8ThfiepQ"
+        },
+        {
+          "label": "Ryzen AI Halo benchmark review",
+          "url": "https://www.compute-market.com/blog/amd-ryzen-ai-halo-review-2026"
+        },
+        {
+          "label": "Local LLMs on Strix Halo guide",
+          "url": "https://codersera.com/blog/amd-strix-halo-ryzen-ai-max-local-llm-setup-2026/"
+        }
+      ],
+      "author": {
+        "name": "Sam Witteveen",
+        "profileUrl": "https://www.youtube.com/channel/UC55ODQSvARtgSyc8ThfiepQ"
+      },
+      "publishDate": "2026-08-01T15:05:41.693Z"
+    },
     {
       "id": "openai-astra-ten-math-advances",
       "categories": [
