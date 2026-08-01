@@ -27454,6 +27454,33 @@
         "tool",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260801t131312z",
+      "timestamp": "2026-08-01T13:13:12.535Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero adds. Searched Anthropic/OpenAI/DeepMind/Meta/xAI/Mistral/Cohere/Moonshot/DeepSeek/z.ai lab blogs (only Anthropic red-team Jul 30 fresh, already in feed as anthropic-frontier-red-team-incidents-jul30; Cohere EU Code signing fails ecosystem gate — no dev action), GitHub trending (TRELLIS.2 is Dec 2025 → 72h fail; huggingface/speech-to-speech no new release; bytedance/deer-flow already covered by deerflow-2), HF models trending (Kimi K3, DeepSeek V4-Flash-0731, GLM-5.2, Inkling-Small, KAT-Coder-V2.5-Dev, Nanbeige4.2-3B, baidu Unlimited-OCR, Mage-VL, Fara1.5-27B all already in feed), HF papers top 10 (AskChem, Qwen-UI-Agent, Metis, PhiZero all paper-only, fail 2-of-N bar with no code + no HN traction), HN top 30 (Flint, WASTE Kimi K3, OpenAI ten-advances, qm all already in feed), 8 YouTube creator channels (Sam Witteveen 'AMD Ryzen AI Halo' is a YouTube Short → drop per no-Shorts rule; Wes Roth Abacus, Sam Witteveen ThinkingCap, Fireship Anthropic Opus 5, Two Minute Papers Kimi K3 all exact URL dupes), and AI-for-science lane (BCI/clinical/imaging/pharma queries returned nothing with a released artifact + code + 72h date). OpenAI SynthID-for-audio Jul 31 dropped: openai.com/index/* returns 403 from CI and no alternate primary source verifiable this run (zero-hallucination). Nothing shipped in the last 72h that clears the inclusion bar and isn't already in the feed.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "ecosystem",
+        "article",
+        "security"
+      ]
     }
   ]
 }
