@@ -27555,6 +27555,41 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260801t190729z",
+      "timestamp": "2026-08-01T19:07:29.594Z",
+      "source": "github-actions-sweep",
+      "summary": "Added smevals, Simon Willison's small eval suite built with Jesse Vincent's Prime Radiant lab (Jul 31). Lab blogs quiet — Anthropic's only ≤72h post (red team incidents) is already in the feed; Meta, Mistral, Moonshot, x.ai, cohere, qwen, deepseek had nothing new-and-substantive within the window. HN AI top post (Microsoft Flint) was first released Jun 28 — past 72h cap. TRELLIS.2 and huggingface/speech-to-speech trending on stars but the repos are months old. Gemini 3.5 Flash Cyber and Google's Genesis Mission commitment are both Jul 21–22, past the cap. All three fresh YouTube videos from yt-rss-scan were already in the feed.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "simonw-smevals-jul31",
+          "title": "smevals — Simon Willison and Prime Radiant ship a small eval suite",
+          "category": "article",
+          "note": "New Python eval framework announced 2026-07-31 by Simon Willison (influential-voice) with Jesse Vincent's Prime Radiant lab. MIT, repo prime-radiant-inc/smevals. Both author and artifact are verified; qualifies as an article from a named influential voice + a shipped tool."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "security",
+        "ecosystem",
+        "tutorial"
+      ]
     }
   ]
 }

@@ -1,8 +1,65 @@
 {
-  "generatedAt": "2026-08-01T17:12:32.107Z",
+  "generatedAt": "2026-08-01T19:07:29.594Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "simonw-smevals-jul31",
+      "categories": [
+        "article",
+        "tool"
+      ],
+      "title": "smevals — Simon Willison and Prime Radiant ship a small eval suite",
+      "org": "Simon Willison",
+      "author": {
+        "name": "Simon Willison",
+        "handle": "@simonw",
+        "profileUrl": "https://simonwillison.net/",
+        "avatarUrl": "https://github.com/simonw.png"
+      },
+      "date": "2026-07-31",
+      "url": "https://simonwillison.net/2026/Jul/31/smevals/",
+      "summary": "smevals is a small Python eval framework Simon Willison built with Jesse Vincent's Prime Radiant lab. It runs YAML-defined tasks across model/prompt/harness configs, then graders score the outputs and a web app browses the results.",
+      "tags": [
+        "evals",
+        "python",
+        "cli",
+        "prompts",
+        "harnesses",
+        "simon-willison",
+        "prime-radiant",
+        "open-source",
+        "mit-license"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "A small, opinionated eval suite from Simon Willison and Jesse Vincent's Prime Radiant lab for testing models, prompts, and harnesses.",
+        "whatIsIt": "smevals is a Python CLI that runs eval suites defined as directories of YAML configuration plus executable scripts. Simon Willison and Jesse Vincent's Prime Radiant lab built the framework, and Simon calls this his third iteration on the shape — 'it feels right to me'. Each eval bundles tasks that measure a specific capability such as text-to-SQL, spec-satisfaction, or 'draw a pelican riding a bicycle'.",
+        "howItWorks": "The framework has a small vocabulary: evals contain tasks; runs execute those tasks against a chosen model or model-plus-harness config; graders then score the outputs, with checks and checkers as the underlying assertions. smevals deliberately separates running from grading, so a run can be regraded later without re-invoking the model. A built-in web app browses the leaderboard of runs and grades.",
+        "whyItMatters": "Public eval frameworks target big benchmarks. smevals fills the inner loop most builders actually need: quickly compare two prompts, two harnesses, or two model versions on a task you care about, without wiring a bespoke harness each time. It comes from a trusted voice with a track record of small, sharp Python tools, and MIT-licensed on GitHub.",
+        "tryIt": "uvx smevals docs"
+      },
+      "image": {
+        "url": "https://static.simonwillison.net/static/2026/smevals-report.webp",
+        "alt": "Screenshot of the smevals web UI showing a haiku benchmark leaderboard with runs, grades, and graders",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Simon's Announcement",
+          "url": "https://simonwillison.net/2026/Jul/31/smevals/"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/prime-radiant-inc/smevals"
+        },
+        {
+          "label": "Prime Radiant Post",
+          "url": "https://primeradiant.com/blog/2026/smevals.html"
+        }
+      ],
+      "publishDate": "2026-08-01T19:07:29.594Z"
+    },
     {
       "id": "gema-suno-munich-copyright-jul31",
       "categories": [
