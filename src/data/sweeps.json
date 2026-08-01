@@ -27315,6 +27315,41 @@
         "tutorial",
         "resource"
       ]
+    },
+    {
+      "id": "sweep-20260801t022616z",
+      "timestamp": "2026-08-01T02:26:16.150Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, xAI, Qwen, Moonshot, DeepSeek, z.ai), GitHub trending, HuggingFace models/papers, HN top 30, YouTube RSS across 8 creators, and the biomedical / neuro / pharma lane (Nature.com, neurosciencenews.com, STAT, Insilico/Recursion/AbSci/Schrödinger). One qualifying add: Y Combinator open-sourced its internal multi-agent harness QM (MIT, 2.1k stars in 3 days, top-2 on HN with 472 points). Everything else recent was already in the feed (DeepSeek V4-Flash 0731, Anthropic red-team incidents, Kimi K3, GPT-5.6 price cut, Inkling-Small, Gemini Robotics ER 2) or failed the bar (marginal repos outside 72h, papers with no code, Sam Witteveen re-upload).",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "y-combinator-qm-agent-harness",
+          "title": "QM — Y Combinator open-sources the multi-agent harness it runs internally",
+          "category": "repo",
+          "note": "MIT-licensed multi-agent harness Y Combinator uses internally, open-sourced 2026-07-31; created 2 days ago, 2.1k stars, #2 on HN with 472 points — the harness/tool space rarely gets first-party YC releases."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "repo",
+        "tool",
+        "model",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "security",
+        "article",
+        "benchmark",
+        "tutorial",
+        "ecosystem"
+      ]
     }
   ]
 }

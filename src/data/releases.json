@@ -1,8 +1,117 @@
 {
-  "generatedAt": "2026-07-31T21:09:00.052Z",
+  "generatedAt": "2026-08-01T02:26:16.150Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "y-combinator-qm-agent-harness",
+      "categories": [
+        "repo",
+        "tool"
+      ],
+      "title": "QM — Y Combinator open-sources the multi-agent harness it runs internally",
+      "org": "Y Combinator",
+      "date": "2026-07-31",
+      "url": "https://github.com/yc-software/qm",
+      "summary": "QM is an MIT-licensed multiplayer agent harness Y Combinator built for its own staff, released July 31, 2026. Each employee gets a scoped Slack + web workspace and can swap between Pi, OpenCode, Codex, and Claude Code without vendor lock-in.",
+      "tags": [
+        "agent-harness",
+        "multi-agent",
+        "y-combinator",
+        "open-source",
+        "slack",
+        "typescript",
+        "opencode",
+        "claude-code",
+        "codex",
+        "mit-license"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Y Combinator"
+        },
+        {
+          "label": "License",
+          "value": "MIT"
+        },
+        {
+          "label": "Language",
+          "value": "TypeScript (Node + Fastify + Postgres)"
+        },
+        {
+          "label": "Supported harnesses",
+          "value": "Pi, OpenCode, Codex, Claude Code"
+        },
+        {
+          "label": "Interfaces",
+          "value": "Slack + web app"
+        },
+        {
+          "label": "Security postures",
+          "value": "Strict, Auto, Dangerous"
+        },
+        {
+          "label": "Install",
+          "value": "npm exec --package=@yc-software/qm@latest -- qm init"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What does QM stand for?",
+          "a": "QM is short for quartermaster, the naval role responsible for coordination and keeping order belowdecks. Y Combinator picked the name because QM does the same thing for a company's agents: each person and channel gets its own scoped memory, files, keychain view, permissions, crons, and durable sandbox, coordinated through one central core."
+        },
+        {
+          "q": "Which models can QM run?",
+          "a": "QM is harness-agnostic and ships with adapters for Pi, OpenCode, Codex, and Claude Code — all four drive the same core loop, so a deployment can switch models per user or per room without changing the surrounding infrastructure. Y Combinator says this design was deliberate so no deployment gets locked into a single vendor."
+        },
+        {
+          "q": "How is QM different from an existing personal agent like Claude Code?",
+          "a": "Personal agents assume one user; QM assumes a whole company. Each employee has an isolated workspace with their own memory, files, credentials, and sandbox, but the same identity works in shared Slack channels and projects. Admins set org-level policy, a security posture, and which harnesses and models are available."
+        },
+        {
+          "q": "How do I deploy QM?",
+          "a": "QM is self-hosted in your own cloud account. Run `npm exec --yes --package=@yc-software/qm@latest -- qm init . --org <slug> --target <fly-or-aws>` and the CLI scaffolds an org-owned deployment repository, provisions Postgres for durable state, and optionally wires up the Slack plugin. The core runs TypeScript on Node with Fastify."
+        },
+        {
+          "q": "What are QM's three security postures?",
+          "a": "QM ships with Strict (human approval required for every tool call), Auto (the default, with content screening applied), and Dangerous (no screening — the agent acts freely). The agent always acts as the person it's working for, with their credentials and permissions, so posture choice determines how much human review each turn gets."
+        }
+      ],
+      "explainer": {
+        "tagline": "Y Combinator's in-house multi-agent harness, now open-sourced under MIT — one core, four backends, Slack + web from day one.",
+        "whatIsIt": "QM is a self-hostable agent harness that Y Combinator built for its own accounting, legal, events, and engineering teams and released under MIT on July 31, 2026. It gives every employee a personal, scoped agent workspace that also shows up as a collaborator in Slack channels and projects — the same identity across both surfaces.",
+        "howItWorks": "A generic TypeScript core (Node + Fastify + Postgres) runs the agent loop through pluggable model backends — Pi, OpenCode, Codex, or Claude Code all drive the same loop. Each user and each Slack room has its own scoped memory, files, keychain view, permissions, crons, and durable sandbox. A small fixed tool surface includes an `execute` tool that runs commands in that scope's sandbox, so installed packages persist between turns.",
+        "whyItMatters": "Most open agent harnesses ship a single-user experience; QM is one of the first to treat multi-tenant company deployment as the primary case, with admin controls, three security postures (Strict / Auto / Dangerous), and shared skills as first-class features. That fills a gap for startups that want internal agents but don't want to build the orchestration, sandbox, and Slack plumbing themselves.",
+        "forWho": "Startup engineering and ops teams building internal AI tooling on their own infrastructure.",
+        "tryIt": "npm exec --yes --package=@yc-software/qm@latest -- qm init . --org <slug> --target <fly-or-aws>"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/609bfafef0069b49b1fb85d8e1d498d6c10c7c5a86000da1a28e8f79741a24cd/yc-software/qm",
+        "alt": "GitHub social card for the yc-software/qm repository — a multiplayer agent harness for work",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/yc-software/qm"
+        },
+        {
+          "label": "QM Landing Page",
+          "url": "https://qm.ycombinator.com"
+        },
+        {
+          "label": "Hacker News Discussion",
+          "url": "https://news.ycombinator.com/item?id=49126604"
+        },
+        {
+          "label": "StartupHub Coverage",
+          "url": "https://www.startuphub.ai/ai-news/artificial-intelligence/2026/yc-qm-agent-harness-a-collaborative-ai-shift"
+        }
+      ],
+      "publishDate": "2026-08-01T02:26:16.150Z"
+    },
     {
       "id": "google-chrome-ai-security-jul30",
       "categories": [
