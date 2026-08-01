@@ -27423,6 +27423,37 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260801t112203z",
+      "timestamp": "2026-08-01T11:22:03.041Z",
+      "source": "github-actions-sweep",
+      "summary": "Added OpenAI's Astra ten-proofs release — the model's first public showing, cracking ten decade-plus-old open problems in math and theoretical CS with machine-checkable Lean 4 certificates on GitHub. Every other ≤72h candidate (Gemini 3.6 Flash, Gemini Robotics 2, Lyria 3.5, Anthropic cybersecurity evals, Thinking Machines Inkling-Small, WASTE/Kimi K3, Chrome AI security, DeepSeek V4-Flash, Microsoft Flint, YC QM harness, Fireship/TMP/Wes Roth/Sam Witteveen videos) was already in the feed.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-astra-ten-math-advances",
+          "title": "OpenAI Astra cracks 10 open math problems — Lean proofs on GitHub",
+          "category": "paper",
+          "note": "OpenAI blog + openai/ten-proofs (Apache-2.0, 61★, created today) + HN front page (128 pts) + Bubeck X thread — clears 2-of-N, fresh today, no semantic dupe. Frontier reasoning demo but Astra itself not released, so major not seismic."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "paper",
+        "algorithm",
+        "video",
+        "article",
+        "tool",
+        "ecosystem"
+      ]
     }
   ]
 }

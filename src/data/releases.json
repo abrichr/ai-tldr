@@ -1,8 +1,111 @@
 {
-  "generatedAt": "2026-08-01T10:07:43.054Z",
+  "generatedAt": "2026-08-01T11:22:03.041Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openai-astra-ten-math-advances",
+      "categories": [
+        "paper",
+        "algorithm",
+        "repo"
+      ],
+      "title": "OpenAI Astra cracks 10 open math problems — Lean proofs on GitHub",
+      "org": "OpenAI",
+      "date": "2026-08-01",
+      "url": "https://openai.com/index/ten-advances-in-mathematics/",
+      "summary": "OpenAI's Astra model solved 10 open problems in math and theoretical CS — from sharper sphere-packing bounds to a disproof of Connes' rigidity conjecture. Lean 4 proofs shipped on GitHub, generated for under $2,000 in Sol API tokens.",
+      "tags": [
+        "astra",
+        "openai",
+        "mathematics",
+        "theoretical-computer-science",
+        "lean4",
+        "formal-verification",
+        "theorem-proving",
+        "reasoning",
+        "sphere-packing",
+        "coding-theory",
+        "group-theory"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "Astra, OpenAI's next flagship model, cracked 10 open math and CS problems and shipped Lean-verified proofs for each.",
+        "whatIsIt": "Astra is OpenAI's next flagship model, first shown publicly by proving 10 problems in math and theoretical computer science that have stood open for at least a decade — most for far longer. The targets span high-dimensional geometry, coding theory, arithmetic circuit complexity, group theory, operator algebras, quantum complexity, lattice cryptography, and extremal combinatorics.",
+        "howItWorks": "For each problem, the model writes a full mathematical argument then formalizes every step in Lean 4. The release ships every proof as a checkable Lean certificate plus a chain-of-thought walkthrough, so mathematicians can verify each step against Lean's kernel instead of taking the model's word for it. OpenAI researcher Sebastien Bubeck says the entire batch cost under $2,000 in Sol API tokens.",
+        "whyItMatters": "Formal-proof AI cracking questions like non-sofic groups or the Cohn-Elkies sphere-packing threshold is a first for a general-purpose model — these are results human researchers have wrestled with for years. Because every proof compiles under Lean, an auditor can reject the entire chain if a single line lies. That short-circuits the usual 'the AI might be hallucinating' worry for mathematics research.",
+        "forWho": "mathematicians, formal-verification researchers, and AI reasoning teams",
+        "tryIt": "git clone https://github.com/openai/ten-proofs"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenAI"
+        },
+        {
+          "label": "Model",
+          "value": "Astra (internal preview)"
+        },
+        {
+          "label": "Format",
+          "value": "Blog announcement + Lean 4 certificates on GitHub"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0 (proofs repo)"
+        },
+        {
+          "label": "Proofs shipped",
+          "value": "10"
+        },
+        {
+          "label": "Total cost",
+          "value": "Under $2,000 at Sol API prices"
+        },
+        {
+          "label": "Availability",
+          "value": "Astra not yet released; proofs are public"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Astra available to the public?",
+          "a": "Astra is described as OpenAI's next flagship model but is not yet publicly available. Only the ten formal proofs, along with Lean 4 certificates and chain-of-thought walkthroughs, are shipping in this release. The proofs live in the openai/ten-proofs repository under the Apache-2.0 license."
+        },
+        {
+          "q": "How can readers verify the Astra proofs?",
+          "a": "Each of the ten Astra proofs ships as a Lean 4 file that anyone can machine-check against Lean's kernel. If the file compiles clean, the mathematical result is formally verified. That removes the usual 'AI might be hallucinating' worry — a broken step in the argument would fail the Lean typecheck."
+        },
+        {
+          "q": "What kinds of open problems did Astra solve?",
+          "a": "The ten Astra targets span high-dimensional geometry (sharper sphere-packing upper bounds meeting the Cohn-Elkies threshold), coding theory (stronger bounds on binary and spherical codes), operator algebras (a disproof of Connes' rigidity conjecture), group theory (a non-sofic group construction), plus results in arithmetic circuit complexity, lattice cryptography, and extremal combinatorics."
+        },
+        {
+          "q": "How much did it cost to generate the ten proofs?",
+          "a": "OpenAI researcher Sebastien Bubeck says the total token cost to solve all ten Astra problems was under $2,000 at Sol API prices. That figure is cheaper than a single human research month and is one of the reasons the release is being framed as a preview of what Astra can do for research."
+        }
+      ],
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/openai/ten-proofs",
+        "alt": "GitHub social card for the openai/ten-proofs repository — Lean certificates for ten Astra proofs",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://openai.com/index/ten-advances-in-mathematics/"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/openai/ten-proofs"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49132058"
+        }
+      ],
+      "publishDate": "2026-08-01T11:22:03.041Z"
+    },
     {
       "id": "simonw-stateless-mcp-jul31",
       "categories": [
