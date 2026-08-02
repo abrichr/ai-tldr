@@ -27816,6 +27816,39 @@
         "ecosystem",
         "algorithm"
       ]
+    },
+    {
+      "id": "sweep-20260802t150708z",
+      "timestamp": "2026-08-02T15:07:08.734Z",
+      "source": "github-actions-sweep",
+      "summary": "One add: Nathan Lambert's Aug 2 Interconnects essay 'Latest open artifacts #23' pushing back on the open-model consolidation thesis. Checked lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, x.ai, Cohere, Qwen, DeepSeek, Moonshot, z.ai), GitHub trending, HF trending models/datasets/papers, HN top 30, Simon Willison, Karpathy, The Batch, TechCrunch AI, plus the bio/pharma/neuro lane (Nature ML, STAT). All 3 fresh YouTube RSS videos already in the feed; Simon Willison's Aug 1 math post is semantic dup of the Astra items already covered.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "interconnects-open-artifacts-23-aug2",
+          "title": "Nathan Lambert: 'Open artifacts #23' — open-model consolidation isn't happening",
+          "category": "article",
+          "note": "Fresh Aug 2 Interconnects essay from Nathan Lambert (on the influential-voices list) making the substantive claim that consolidation predicted for 2026 isn't happening and open-model diversification is the actual pattern — with 10 concrete releases from the past month cited."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }

@@ -1,8 +1,63 @@
 {
-  "generatedAt": "2026-08-02T13:20:55.003Z",
+  "generatedAt": "2026-08-02T15:07:08.734Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "interconnects-open-artifacts-23-aug2",
+      "categories": [
+        "article"
+      ],
+      "title": "Nathan Lambert: 'Open artifacts #23' — open-model consolidation isn't happening",
+      "org": "Interconnects AI",
+      "date": "2026-08-02",
+      "url": "https://www.interconnects.ai/p/latest-open-artifacts-23-laguna-s21",
+      "summary": "Nathan Lambert's Interconnects #23 argues consolidation predicted for 2026 isn't happening. Instead more labs — Thinking Machines' Inkling, Tencent's Hy3, Poolside's Laguna S 2.1 — keep training strong open models.",
+      "tags": [
+        "open-models",
+        "open-weights",
+        "nathan-lambert",
+        "interconnects",
+        "article",
+        "essay",
+        "commentary",
+        "landscape",
+        "inkling",
+        "kimi-k3",
+        "laguna"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Interconnects #23 argues the open-model field is widening, not consolidating — more labs are training strong open models than predicted.",
+        "whatIsIt": "Nathan Lambert and Florian Brand's Aug 2 Interconnects essay catalogs about ten open-model releases from the past month and pushes back on the consolidation thesis. The read: labs are treating token production as a business, and open-model diversity is growing, not shrinking.",
+        "howItWorks": "Interconnects #23 walks through each recent release — Thinking Machines' Inkling (975B-A41B multimodal MoE), Tencent's Hy3 (295B-A21B, Apache 2.0), Poolside's Laguna S 2.1 (118B-A8B, fits on a DGX Spark), Meituan's LongCat-2.0 (1.6T on Ascend 910s), AMD's Instella-MoE (16B-A3B on Instinct cards), Swiss AI's Apertus v1.5 70B, and Motif-3-Beta (314B-A13B) — showing labs spread across the U.S., China, Europe, and specialty accelerators.",
+        "whyItMatters": "The essay pushes back on the 'consolidation is inevitable' storyline that has framed AI in 2025-26. If Nathan Lambert is right, open-model diversification is the actual pattern — more labs entering the field, more geographies training frontier open weights, and the Pareto frontier widening rather than compressing.",
+        "forWho": "open-source AI followers, ML researchers, infra leads"
+      },
+      "image": {
+        "url": "https://substackcdn.com/image/fetch/$s_!RSM6!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7a71a4f9-5ac5-447e-82ff-899915627512_2048x1152.jpeg",
+        "alt": "Interconnects: Latest open artifacts #23 header image",
+        "fit": "contain",
+        "credit": "Interconnects / Nathan Lambert"
+      },
+      "links": [
+        {
+          "label": "Read on Interconnects",
+          "url": "https://www.interconnects.ai/p/latest-open-artifacts-23-laguna-s21"
+        },
+        {
+          "label": "Interconnects",
+          "url": "https://www.interconnects.ai/"
+        }
+      ],
+      "author": {
+        "name": "Nathan Lambert",
+        "handle": "natolambert",
+        "profileUrl": "https://www.interconnects.ai/",
+        "avatarUrl": "https://github.com/natolambert.png"
+      },
+      "publishDate": "2026-08-02T15:07:08.734Z"
+    },
     {
       "id": "wafer-kimi-k3-mi355x-jul31",
       "categories": [
