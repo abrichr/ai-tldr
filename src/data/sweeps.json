@@ -27889,6 +27889,34 @@
         "article",
         "algorithm"
       ]
+    },
+    {
+      "id": "sweep-20260802t191407z",
+      "timestamp": "2026-08-02T19:14:07.038Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep at 2026-08-02T19:04Z. Searched lab blogs (Anthropic/OpenAI/DeepMind/Meta/xAI/Mistral/Cohere/Moonshot/DeepSeek/Z.ai/MiniMax/Google Research/Microsoft Research), GitHub trending, HF trending models/datasets/papers, HN front page, r/LocalLLaMA, 8 YouTube channels (RSS scan returned 4 fresh videos — all already ingested), AINews smol.ai, Simon Willison, Latent.Space, Interconnects, and the bio/neuro/pharma lane (Hemispheric, Recursion, Insilico, AbSci, Isomorphic, Neuralink, Nature/Lancet/npj, STAT, Endpoints, ITN, Diagnostic Imaging). Every in-window candidate (Anthropic Frontier Red Team, Microsoft Echoverse/EvoLib, Google Gemini Robotics 2/ER 2, DeepSeek V4-Flash-0731, Thinking Machines Inkling-Small, MiniMax H3, OpenAI GPT-5.6 price cut / Astra math / ChatGPT for Academic Researchers, Simon Willison stateless-MCP/smevals/open-letters, ByteDance Seedance 2.5, Baidu Unlimited-OCR, KAT-Coder, Inflect-Micro, Insilico DDD, DeepHealth Breast Ultrasound, Kimi K3 items, GLM 5.2 items, all 4 fresh YouTube videos, xAI Grok Voice, GCC AI patch ban, Suno GEMA, Google Earth Nano Banana pull) is already in the feed. Sub-bar items dropped: Cohere signing EU Code of Practice (ecosystem gate fails — no concrete dev action), Google Research Science One Framework (paper announcement >48h old, no open-source implementation code, no HN traction, fails 2-of-N paper bar), Cursor cloud-agent post-mortem (internal-tooling stats post, not a public product), Simon Willison datasette-apps 0.2a0 (niche personal utility). Empty sweep is the correct outcome — the padding scars (SWEEP_MEMORY 2026-04-28-B/C/D) forbid stretching to fill slots.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem",
+        "rumor"
+      ]
     }
   ]
 }
