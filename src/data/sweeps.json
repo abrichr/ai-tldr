@@ -27943,6 +27943,32 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260802t230041z",
+      "timestamp": "2026-08-02T23:00:41.737Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Checked Anthropic/OpenAI/DeepMind/Meta/Mistral/Cohere/Moonshot/DeepSeek/Google Research lab blogs, GitHub trending, HF trending models and top papers, HN front-page top 30, TechCrunch AI, STAT News, Fierce Pharma AI, neurosciencenews.com and Nature AI subjects, plus the 8-channel YouTube RSS scan and voices (Simon Willison, Karpathy, Interconnects, Cohere blog). All 3 fresh YouTube videos are already in the feed (Two Minute Papers, Wes Roth, Sam Witteveen). Anthropic Jul 30 red-team incidents, Google Earth Nano Banana pull, Simon's open-letters recap and the OpenAI Astra math items are already covered. Google Research announced ScientistOne on Jul 30 (arxiv paper + generated-artifacts repo, 44 stars) but the arXiv is dated May 25, the framework code itself is not released, no HN pickup, no coverage by Simon/Interconnects/TLDR/The Batch — it does not clear the 2-of-N paper bar. Nscale/Anyscale is an M&A with no dev-action change (ecosystem-gate fail), Siri paywall is Cook musing (no product), Smallest.ai is funding, Cohere EU Code of Practice is a regulatory signing. Nothing new cleared the 72h/inclusion bar.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "article",
+        "paper",
+        "algorithm",
+        "dataset",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
