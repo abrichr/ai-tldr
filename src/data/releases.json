@@ -1,8 +1,66 @@
 {
-  "generatedAt": "2026-08-02T11:22:37.685Z",
+  "generatedAt": "2026-08-02T13:20:55.003Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "wafer-kimi-k3-mi355x-jul31",
+      "categories": [
+        "showcase"
+      ],
+      "title": "Wafer runs Kimi K3 on AMD MI355X — 48 tok/s/$, 45% more per dollar than B300",
+      "org": "Wafer",
+      "date": "2026-07-31",
+      "url": "https://wafer.ai/blog/kimi-k3-mi355x",
+      "summary": "Wafer engineer Ian Ye benchmarks Moonshot's 2.8T Kimi K3 on AMD MI355X with sglang and block-diffusion speculative decoding. MI355X hits 952 tok/s/node and 48 tok/s/$ vs 33 tok/s/$ on NVIDIA B300.",
+      "tags": [
+        "kimi-k3",
+        "amd",
+        "mi355x",
+        "nvidia-blackwell",
+        "b300",
+        "b200",
+        "inference",
+        "sglang",
+        "speculative-decoding",
+        "block-diffusion",
+        "showcase",
+        "wafer",
+        "moonshot"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Kimi K3's 2.8T weights fit on eight MI355X cards and serve at 48 tokens per dollar — 1.45x the B300, 6.9x the B200.",
+        "whatIsIt": "Wafer, a Y Combinator-backed inference company, has published a benchmark of Moonshot's 2.8T Kimi K3 on AMD MI355X GPUs. The team compares eight-GPU MI355X (TP8), eight-GPU B300 (TP8+DCP8), and two-node sixteen-GPU B200 (TP16) setups on the same 1M-context model.",
+        "howItWorks": "Kimi K3 needs over 1.5TB of VRAM before its 1M-token KV cache, which just fits on eight MI355X cards (288GB each). Wafer served it through sglang with RadixArk's Kimi-K3-DSpark block-diffusion draft model for speculative decoding, plus AITER MLA kernel padding fixes that lift cold-prefill by 2 to 3 times.",
+        "whyItMatters": "At AMD's typical $2.50/GPU-hr, MI355X delivers 48 tok/s/$ against 33 tok/s/$ on B300 and 7 tok/s/$ on B200. For teams already running open weights at trillion-plus scale, this is the second Wafer post in a month showing frontier inference on AMD at a real cost advantage — CUDA lock-in on the biggest MoEs keeps loosening.",
+        "forWho": "inference-cost-sensitive teams, AMD hardware evaluators, Kimi K3 deployers"
+      },
+      "image": {
+        "url": "https://www.wafer.ai/assets/images/og-image.png",
+        "alt": "Wafer blog header for Kimi K3 on AMD MI355X performance-per-dollar benchmark.",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Blog Post",
+          "url": "https://wafer.ai/blog/kimi-k3-mi355x"
+        },
+        {
+          "label": "Prior GLM-5.2 Post",
+          "url": "https://www.wafer.ai/blog/glm52-amd"
+        },
+        {
+          "label": "Kimi K3 Model Card",
+          "url": "https://huggingface.co/moonshotai/Kimi-K3"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49141073"
+        }
+      ],
+      "publishDate": "2026-08-02T13:20:55.003Z"
+    },
     {
       "id": "eu-ai-act-article50-aug2",
       "categories": [

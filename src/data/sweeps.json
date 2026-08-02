@@ -27783,6 +27783,39 @@
         "benchmark",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260802t132055z",
+      "timestamp": "2026-08-02T13:20:55.003Z",
+      "source": "github-actions-sweep",
+      "summary": "One add: Wafer's Kimi K3 on AMD MI355X benchmark (154 points on HN). Searched lab blogs (Anthropic/OpenAI/DeepMind/Meta/xAI/Mistral/Qwen/Moonshot/DeepSeek/Cohere), GitHub trending, HF trending models/datasets/papers, HN top 30, TechCrunch AI, and the bio/neuro/pharma lane (Nature ML, STAT, BCI, pharma AI). All 4 fresh YouTube RSS videos and every other candidate already covered in the feed.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "wafer-kimi-k3-mi355x-jul31",
+          "title": "Wafer runs Kimi K3 on AMD MI355X — 48 tok/s/$, 45% more per dollar than B300",
+          "category": "showcase",
+          "note": "Follow-up to the existing wafer-glm-5-2-amd-jul3 item, same treatment: engineering benchmark showing frontier open-weight model on AMD MI355X. 154 pts on HN, 73 comments; distinct model, distinct write-up, distinct authorship (Ian Ye)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "showcase",
+        "article",
+        "ecosystem",
+        "algorithm"
+      ]
     }
   ]
 }
