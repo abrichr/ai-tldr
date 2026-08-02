@@ -1,8 +1,109 @@
 {
-  "generatedAt": "2026-08-02T06:39:11.905Z",
+  "generatedAt": "2026-08-02T09:59:23.184Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "wes-roth-openai-astra-math-aug2",
+      "categories": [
+        "video"
+      ],
+      "title": "Wes Roth — 'OpenAI's Astra JUST solved math...'",
+      "org": "Wes Roth",
+      "date": "2026-08-02",
+      "url": "https://www.youtube.com/watch?v=TjUxBdiut1k",
+      "summary": "Wes Roth walks through OpenAI's new claim that an internal Astra model cracked ten long-standing open math problems, spending under $2,000 in tokens per problem and publishing Lean 4 proofs on GitHub.",
+      "tags": [
+        "video",
+        "youtube",
+        "wes-roth",
+        "openai",
+        "astra",
+        "mathematics",
+        "lean",
+        "reasoning",
+        "explainer"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Wes Roth breaks down OpenAI's Astra math result — ten open problems, Lean proofs on GitHub, and what mathematicians think.",
+        "whatIsIt": "Wes Roth's new video unpacks OpenAI's Astra math announcement. The internal Astra model reportedly cracked ten long-standing open problems in analysis, combinatorics and number theory, with token costs under $2,000 per problem and machine-checked Lean 4 proofs posted to GitHub.",
+        "howItWorks": "Roth reads through OpenAI's write-up, shows the Lean proofs and the problem list, and pulls in reactions from Terence Tao and other mathematicians on how AI-assisted proof-writing is starting to touch open research questions rather than textbook exercises.",
+        "whyItMatters": "The Astra math result is the first time a frontier lab has claimed serious open-problem wins with proofs anyone can rerun, and Wes Roth is where a lot of AI viewers form their first take. His breakdown is the version most of the audience will actually watch instead of reading OpenAI's report.",
+        "forWho": "AI-tool viewers, ML-curious math and CS students",
+        "tryIt": "Watch the video, then browse OpenAI's Lean proofs on GitHub"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/TjUxBdiut1k/hqdefault.jpg",
+        "alt": "Wes Roth YouTube thumbnail — OpenAI Astra solves math",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=TjUxBdiut1k"
+        },
+        {
+          "label": "Wes Roth Channel",
+          "url": "https://www.youtube.com/channel/UCqcbQf6yw5KzRoDDcZ_wBSw"
+        }
+      ],
+      "author": {
+        "name": "Wes Roth",
+        "profileUrl": "https://www.youtube.com/channel/UCqcbQf6yw5KzRoDDcZ_wBSw"
+      },
+      "publishDate": "2026-08-02T09:59:23.184Z"
+    },
+    {
+      "id": "simon-willison-open-letters-aug2",
+      "categories": [
+        "article"
+      ],
+      "title": "Simon Willison — three open letters split AI labs on open weights and safety",
+      "org": "Simon Willison",
+      "date": "2026-08-02",
+      "url": "https://simonwillison.net/2026/Aug/2/open-letters/",
+      "summary": "Simon Willison compares three AI open letters shipped in two weeks: Microsoft plus 235 co-signers defending open weights, Anthropic pushing back on distillation, and 1,324 lab staff asking governments to slow automated AI research.",
+      "tags": [
+        "article",
+        "simon-willison",
+        "open-weights",
+        "ai-policy",
+        "ai-safety",
+        "anthropic",
+        "microsoft",
+        "openai",
+        "governance"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Simon Willison reads three back-to-back AI open letters and maps where Microsoft, Anthropic and 1,324 lab employees actually disagree.",
+        "whatIsIt": "Simon Willison's post walks through three open letters published between July 24 and July 28: 'Open Weights and American AI Leadership' organised by Microsoft with 235 co-signers including NVIDIA, Amazon, Y Combinator and OpenAI; Anthropic's solo 'Our Position on Open-Weights Models'; and 'Pacing the Frontier', signed by 1,324 frontier-lab employees.",
+        "howItWorks": "Willison quotes each letter, contrasts the arguments (broad-community safety review vs. distillation risk vs. government-supported pacing), and notes who is conspicuously absent — Anthropic did not sign the Microsoft letter and released its own two days later. He then folds in Dario Amodei's public position and the recent 'Claude Code writes 80% of Anthropic's code' data point as context for the pacing letter.",
+        "whyItMatters": "The three letters are the clearest split so far between the open-weights camp and the safety-cautious camp inside frontier AI, and any US or EU rulemaking on model distribution over the next year will be shaped by which side lawmakers listen to. Willison's synthesis is one of the first serious side-by-side reads that isn't tied to a signatory."
+      },
+      "image": {
+        "url": "https://github.com/simonw.png",
+        "alt": "Simon Willison blog"
+      },
+      "links": [
+        {
+          "label": "Read on simonwillison.net",
+          "url": "https://simonwillison.net/2026/Aug/2/open-letters/"
+        },
+        {
+          "label": "Simon Willison's Blog",
+          "url": "https://simonwillison.net/"
+        }
+      ],
+      "author": {
+        "name": "Simon Willison",
+        "handle": "simonw",
+        "profileUrl": "https://simonwillison.net/",
+        "avatarUrl": "https://github.com/simonw.png"
+      },
+      "publishDate": "2026-08-02T09:59:23.184Z"
+    },
     {
       "id": "bytedance-seedance-2-5",
       "categories": [

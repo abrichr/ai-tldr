@@ -27710,6 +27710,45 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260802t095923z",
+      "timestamp": "2026-08-02T09:59:23.184Z",
+      "source": "github-actions-sweep",
+      "summary": "Two adds: a Wes Roth video breaking down OpenAI's Astra math result (uploaded 1h ago) and a Simon Willison post analysing the three back-to-back AI open letters from Microsoft, Anthropic and 1,324 lab employees. Anthropic/DeepMind/Meta/Mistral/Moonshot/Qwen/DeepSeek/z.ai either quiet or last shipped outside the 72h window; HN top 30, github-trending daily, HF trending models/datasets/papers, and the bio/pharma/neuro lane produced no fresh items clearing the 2-of-N bar.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "wes-roth-openai-astra-math-aug2",
+          "title": "Wes Roth — 'OpenAI's Astra JUST solved math...'",
+          "category": "video",
+          "note": "Fresh (1h) Wes Roth video breaking down the OpenAI Astra open-math-problems announcement — creator video is its own item under the video-dedup exception."
+        },
+        {
+          "id": "simon-willison-open-letters-aug2",
+          "title": "Simon Willison — three open letters split AI labs on open weights and safety",
+          "category": "article",
+          "note": "Substantive Simon Willison post (2026-08-02) synthesising three fresh AI open letters — Simon is on the influential-voices list."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "video",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
