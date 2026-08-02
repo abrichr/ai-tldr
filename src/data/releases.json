@@ -1,8 +1,160 @@
 {
-  "generatedAt": "2026-08-02T15:07:08.734Z",
+  "generatedAt": "2026-08-02T17:14:36.318Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "apple-bug-bounty-ai-slop-cap-aug2",
+      "categories": [
+        "security",
+        "ecosystem"
+      ],
+      "title": "Apple caps bug-bounty submissions — AI-slop reports buried a real $200K macOS flaw",
+      "org": "Apple",
+      "date": "2026-08-02",
+      "url": "https://the-decoder.com/a-real-macos-flaw-worth-200k-went-unreported-because-apples-bug-bounty-inbox-was-full-of-ai-slop/",
+      "summary": "The Financial Times reports Apple added a per-researcher submission cap and 30-day cool-off on its Feedback Assistant bug-bounty channel after a flood of AI-generated reports blocked Italy-based Bynario from reporting a real macOS flaw.",
+      "tags": [
+        "security",
+        "apple",
+        "bug-bounty",
+        "vulnerability-disclosure",
+        "ai-slop",
+        "macos",
+        "feedback-assistant",
+        "bynario",
+        "cve-2026-43760",
+        "ai-safety",
+        "ecosystem"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Reported by",
+          "value": "Financial Times, 2026-08-02"
+        },
+        {
+          "label": "Channel affected",
+          "value": "Apple Feedback Assistant bug-bounty submissions"
+        },
+        {
+          "label": "New rule",
+          "value": "Per-researcher submission cap + 30-day cool-off period"
+        },
+        {
+          "label": "Case in point",
+          "value": "Bynario (Italy) blocked from reporting a Screen Sharing / VNC macOS flaw"
+        },
+        {
+          "label": "CVE assigned",
+          "value": "CVE-2026-43760 (fixed in macOS Tahoe 26.6)"
+        },
+        {
+          "label": "Estimated market value",
+          "value": "$100,000–$200,000 on the grey market (Bynario CEO)"
+        },
+        {
+          "label": "Apple's own AI use",
+          "value": "Apple uses Anthropic and OpenAI models to find bugs; latest update shipped 5x more fixes than usual"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What exactly is Apple's new bug-bounty submission cap?",
+          "a": "Apple's Feedback Assistant tool now limits how many reports a single security researcher can file, and adds a 30-day cool-off period once the cap is hit. Researchers can request a higher quota, but the default rate-limit is meant to slow the deluge of AI-generated 'vulnerability' reports Apple staff spent months triaging."
+        },
+        {
+          "q": "Why did Apple introduce the cap now?",
+          "a": "According to the Financial Times, Apple's bug-bounty inbox is being overwhelmed by low-quality AI-generated reports with hallucinated flaws. The cap is Apple's attempt to protect reviewer time, but the same cap also blocks legitimate researchers — Italian startup Bynario says it could not file a real macOS Screen Sharing / VNC exploit until Apple was contacted directly."
+        },
+        {
+          "q": "How serious was the macOS bug that got blocked?",
+          "a": "Bynario found a Screen Sharing / VNC authentication weakness that could be built into a working exploit granting root-level command execution. Apple has since assigned CVE-2026-43760, shipped a fix in macOS Tahoe 26.6, and reached out to Bynario. CEO Alfredo Pesoli estimates the flaw's grey-market value at $100,000 to $200,000."
+        },
+        {
+          "q": "What should security researchers do about the new cap?",
+          "a": "Serious researchers can still contact Apple to request a higher submission quota, and the Apple Security Bounty terms describe an escalation path for high-severity findings. For AI-assisted reporting, expect Apple to keep tightening filters and ask reporters to attach reproducible proofs-of-concept rather than model-generated write-ups."
+        }
+      ],
+      "explainer": {
+        "tagline": "Apple's bug-bounty inbox filled up with AI-generated 'flaws,' so Apple capped submissions — and then a real macOS root exploit couldn't get through.",
+        "whatIsIt": "Apple has quietly added a per-researcher submission cap and a 30-day cool-off period on its Feedback Assistant bug-bounty channel, according to a Financial Times investigation reported on August 2. The change is Apple's response to a rising tide of AI-written vulnerability reports that hallucinate flaws and swallow reviewer time.",
+        "howItWorks": "Apple's Feedback Assistant tool is the official pipeline for security researchers to send potential vulnerabilities. Under the new rules, a single reporter who trips the cap has to wait 30 days (or request a quota bump) before filing again. The problem: the same rate-limit doesn't distinguish between an AI-generated fake report and a Bynario-caliber engineer with a real root exploit — as shown by CVE-2026-43760 sitting unreported until Apple was tapped on the shoulder.",
+        "whyItMatters": "Apple's bug bounty is one of the industry's flagship coordinated-disclosure programs. If AI-generated reports can effectively DDoS the intake channel, other vendors will hit the same wall — and 'AI slop' becomes a real vulnerability class of its own. Meanwhile, Apple itself is running Anthropic and OpenAI models internally to hunt bugs (its latest updates shipped five times more fixes than usual), so the incentive to keep the channel open is asymmetric.",
+        "forWho": "iOS/macOS security researchers, bug-bounty program owners, vulnerability-disclosure policy people.",
+        "tryIt": "If you've hit the Feedback Assistant cap on a real bug, request a higher quota via Apple Security Bounty rather than resubmitting through the same choke point."
+      },
+      "image": {
+        "url": "https://the-decoder.com/wp-content/uploads/2026/07/apple_logo_neon_green.png",
+        "alt": "Neon green Apple logo illustrating a bug-bounty overload story",
+        "fit": "cover",
+        "credit": "The Decoder"
+      },
+      "links": [
+        {
+          "label": "The Decoder coverage",
+          "url": "https://the-decoder.com/a-real-macos-flaw-worth-200k-went-unreported-because-apples-bug-bounty-inbox-was-full-of-ai-slop/"
+        },
+        {
+          "label": "Financial Times summary (The News PK mirror)",
+          "url": "https://www.thenews.com.pk/latest/1411035-apple-imposes-limits-on-ai-generated-security-reports-ft-says"
+        },
+        {
+          "label": "Tech Edition analysis",
+          "url": "https://www.techedt.com/ai-uncovers-apple-security-flaws-faster-than-apple-can-review-them"
+        }
+      ],
+      "publishDate": "2026-08-02T17:14:36.318Z"
+    },
+    {
+      "id": "two-minute-papers-copying-humans-aug2",
+      "categories": [
+        "video"
+      ],
+      "title": "Two Minute Papers — 'AI Learns Why Copying Humans Isn't Enough'",
+      "org": "Two Minute Papers",
+      "date": "2026-08-02",
+      "url": "https://www.youtube.com/watch?v=8B05cy3UuSE",
+      "summary": "Two Minute Papers' latest episode walks through a paper on why pure imitation learning tops out — and what agents that go beyond behavioural cloning learn instead.",
+      "tags": [
+        "video",
+        "two-minute-papers",
+        "imitation-learning",
+        "reinforcement-learning",
+        "agents",
+        "research-explainer"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Károly Zsolnai-Fehér explains why AI systems that only copy human demonstrations plateau — and what to do about it.",
+        "whatIsIt": "Two Minute Papers' newest video, 'AI Learns Why Copying Humans Isn't Enough,' unpacks a paper on the limits of imitation learning — the trick of training agents by cloning recorded human behaviour. The video runs Károly Zsolnai-Fehér's usual side-by-side clips of policies learned from demonstrations versus policies that go further.",
+        "howItWorks": "Behavioural cloning turns human trajectories into supervised training data: given this state, output that action. The video walks through why that plateaus — off-distribution states, compounding error, missing recovery behaviours — and shows what happens when the agent adds its own feedback signal on top of the demonstrations.",
+        "whyItMatters": "Imitation learning is the default recipe for humanoid robots, self-driving stacks, and increasingly agentic assistants trained on human traces. This Two Minute Papers episode is a quick, visual entry point to the failure mode every team hits once demos alone stop scaling, and the paper it summarises points at where the next round of fixes is coming from.",
+        "forWho": "Robotics and RL practitioners, agent-training teams, ML students getting into imitation learning."
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/8B05cy3UuSE/hqdefault.jpg",
+        "alt": "Two Minute Papers episode 'AI Learns Why Copying Humans Isn't Enough' thumbnail",
+        "fit": "cover",
+        "credit": "Two Minute Papers"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=8B05cy3UuSE"
+        },
+        {
+          "label": "Two Minute Papers channel",
+          "url": "https://www.youtube.com/@TwoMinutePapers"
+        }
+      ],
+      "author": {
+        "name": "Two Minute Papers",
+        "handle": "@TwoMinutePapers",
+        "profileUrl": "https://www.youtube.com/@TwoMinutePapers"
+      },
+      "publishDate": "2026-08-02T17:14:36.318Z"
+    },
     {
       "id": "interconnects-open-artifacts-23-aug2",
       "categories": [

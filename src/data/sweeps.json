@@ -27849,6 +27849,46 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260802t171436z",
+      "timestamp": "2026-08-02T17:14:36.318Z",
+      "source": "github-actions-sweep",
+      "summary": "Two items: Apple's new Feedback Assistant submission cap after AI-slop bug reports drowned out a real $200K macOS flaw (Aug 2, Financial Times), and a fresh Two Minute Papers explainer on why imitation learning plateaus (Aug 2). The Unit 42 DeepSeek + Hermes Agent autonomous-attack report was strong news but its Jul 30 publish timestamp puts it outside the 72h date cap — dropped rather than fudged (SWEEP_MEMORY 2026-04-28-E). Lab-blog first pass (Anthropic/OpenAI/DeepMind/Meta/Mistral/Cohere/xAI/Qwen/Moonshot/DeepSeek) surfaced nothing new inside the window that wasn't already covered; HN top 30, GitHub trending, HF models/datasets/papers, and the YouTube RSS scan produced only the two items above.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "apple-bug-bounty-ai-slop-cap-aug2",
+          "title": "Apple caps bug-bounty submissions — AI-slop reports buried a real $200K macOS flaw",
+          "category": "security",
+          "note": "Financial Times August 2 investigation echoed on Techmeme, The Decoder, Digital Trends, Tech Edition, The News PK; concrete Apple policy change (submission cap + 30-day cool-off) with a named case (Bynario / CVE-2026-43760); direct action for every iOS/macOS security researcher."
+        },
+        {
+          "id": "two-minute-papers-copying-humans-aug2",
+          "title": "Two Minute Papers — 'AI Learns Why Copying Humans Isn't Enough'",
+          "category": "video",
+          "note": "From yt-rss-scan (uploaded 2026-08-02T15:01Z, ageHours ≈ 2); channel is on the required creator list; no prior Two Minute Papers entry with this videoId; imitation-learning explainer, not a promo or Short."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "security",
+        "ecosystem",
+        "article",
+        "algorithm"
+      ]
     }
   ]
 }
