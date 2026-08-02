@@ -27749,6 +27749,40 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260802t112237z",
+      "timestamp": "2026-08-02T11:22:37.685Z",
+      "source": "github-actions-sweep",
+      "summary": "Sweep of 2026-08-02 UTC: added the EU AI Act Article 50 transparency-rules enforcement kicking in today across the EU (450M-user single market). Lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, x.ai, Qwen, DeepSeek, Moonshot) had no new posts in the 72h window; GitHub trending, HF trending models and papers, HN top 30, Simon Willison, Interconnects, Karpathy all quiet or already covered. All 4 fresh YouTube RSS videos were already in the feed. Wafer's Kimi K3 on MI355X blog post was borderline — Wafer's prior GLM-5.2 on AMD post is already in the feed and this is the same pattern with a different model, so it was left as semantic-similar padding.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "eu-ai-act-article50-aug2",
+          "title": "EU AI Act Article 50 takes effect — chatbots must disclose, deepfakes labeled",
+          "category": "ecosystem",
+          "note": "EU AI Act transparency rules (Article 50) begin enforcement today. Concrete developer action: chatbots serving EU users must add in-chat AI disclosure, generative-AI providers must mark outputs, deployers must label deepfakes — backed by €15M / 3%-turnover fines. Primary source is the European Commission's own Digital Strategy announcement (published July 31, 2026) plus press release IP_26_1714. Ecosystem-primary because it is a regulatory change with direct technical consequences (compliance code, UI disclosure, content watermarking) — passes the ecosystem gate test. First and only ecosystem-primary item this sweep."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "dataset",
+        "algorithm",
+        "video",
+        "article",
+        "ecosystem",
+        "benchmark",
+        "security"
+      ]
     }
   ]
 }

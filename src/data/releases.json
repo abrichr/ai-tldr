@@ -1,8 +1,108 @@
 {
-  "generatedAt": "2026-08-02T09:59:23.184Z",
+  "generatedAt": "2026-08-02T11:22:37.685Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "eu-ai-act-article50-aug2",
+      "categories": [
+        "ecosystem"
+      ],
+      "title": "EU AI Act Article 50 takes effect — chatbots must disclose, deepfakes labeled",
+      "org": "European Commission",
+      "date": "2026-08-02",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august",
+      "summary": "EU AI Act transparency rules start applying August 2 across the 450M-user single market. Chatbots must tell users they are AI, generative-AI providers must mark outputs machine-readably, and deployers must label deepfakes.",
+      "tags": [
+        "eu-ai-act",
+        "article-50",
+        "transparency",
+        "chatbots",
+        "deepfakes",
+        "ai-regulation",
+        "gpai",
+        "compliance",
+        "european-commission",
+        "ecosystem"
+      ],
+      "importance": "major",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/1280px-Flag_of_Europe.svg.png",
+        "alt": "Flag of Europe — 12 gold stars in a circle on a blue field",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
+        },
+        {
+          "label": "Press release",
+          "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1714"
+        },
+        {
+          "label": "AI Act framework",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+        }
+      ],
+      "explainer": {
+        "tagline": "The EU AI Act's Article 50 transparency rules begin enforcement today across the EU single market.",
+        "whatIsIt": "EU AI Act Article 50 requires interactive AI systems to tell users they are talking to AI, generative-AI providers to mark synthetic output machine-readably, and deployers to label deepfakes of real people. The rules apply from August 2, 2026 to any provider or deployer serving users in the EU.",
+        "howItWorks": "Article 50 splits transparency into three sub-obligations. 50.1 requires chatbot disclosure to appear in the chat surface itself, not buried in terms of service. 50.2 requires machine-readable marks on AI-generated text, image, audio and video output. 50.4 requires deployers to disclose synthetic media of real people and events, unless human editorial review applies.",
+        "whyItMatters": "Any company running a chatbot or shipping AI-generated content for EU users now faces a legal disclosure duty backed by fines up to €15M or 3% of global annual turnover. The AI Office also gains full penalty authority over general-purpose AI model providers today, closing the one-year enforcement grace period that began August 2, 2025.",
+        "forWho": "developers and platforms serving EU users",
+        "tryIt": "Read the Commission announcement and the AI Act framework page linked above"
+      },
+      "quickFacts": [
+        {
+          "label": "Effective date",
+          "value": "August 2, 2026"
+        },
+        {
+          "label": "Framework",
+          "value": "Regulation (EU) 2024/1689"
+        },
+        {
+          "label": "Scope",
+          "value": "EU single market (~450M users)"
+        },
+        {
+          "label": "Article",
+          "value": "50 (transparency)"
+        },
+        {
+          "label": "Max fine",
+          "value": "€15M or 3% of global turnover"
+        },
+        {
+          "label": "Enforcement",
+          "value": "AI Office plus national authorities"
+        },
+        {
+          "label": "High-risk rules",
+          "value": "Deferred to December 2, 2027"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Who has to comply with EU AI Act Article 50 transparency rules?",
+          "a": "Article 50 applies to any provider or deployer of an AI system that serves users in the European Union, regardless of where the company is headquartered. Chatbot operators, generative-AI providers, and anyone deploying AI-generated public content for EU users must comply from August 2, 2026."
+        },
+        {
+          "q": "What are the penalties for missing the Article 50 deadline?",
+          "a": "Non-compliance with EU AI Act transparency rules can bring fines of up to 15 million euros or 3% of a company's total worldwide annual turnover for the preceding financial year, whichever is greater. The AI Office can also demand technical documentation, evaluate models, and require corrective measures."
+        },
+        {
+          "q": "Are high-risk AI system rules also taking effect on August 2, 2026?",
+          "a": "No. Under the Digital Omnibus deal reached in May 2026, the most demanding high-risk AI obligations — conformity assessments, CE marking, and documentation for Annex III systems in employment, education, credit scoring, and law enforcement — were pushed to December 2, 2027. Only Article 50 transparency and AI Office GPAI penalty enforcement go live today."
+        },
+        {
+          "q": "What does chatbot disclosure look like in practice?",
+          "a": "Article 50.1 requires the disclosure to appear in the chat surface itself, not tucked away in terms of service. Users must be clearly informed they are dealing with an AI system rather than a human. A visible in-chat notice or badge shown before or during the interaction is the intended pattern."
+        }
+      ],
+      "publishDate": "2026-08-02T11:22:37.685Z"
+    },
     {
       "id": "wes-roth-openai-astra-math-aug2",
       "categories": [
