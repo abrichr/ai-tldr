@@ -27917,6 +27917,32 @@
         "ecosystem",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260802t205552z",
+      "timestamp": "2026-08-02T20:55:52.479Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic/OpenAI/DeepMind/Meta/Mistral/xAI/Cohere/Qwen/DeepSeek/Moonshot/Zhipu/MiniMax/ByteDance), GitHub trending, HuggingFace models+papers+datasets, HN top 30, coding-agent changelogs, Simon Willison / Nathan Lambert / Karpathy, bio/pharma sources (Nature AI, StatNews, Endpoints, Lancet DH, Recursion, Insilico), and all 8 YouTube creator RSS feeds. All 4 fresh YouTube videos already in feed. Two candidates surfaced: OpenAI ChatGPT for Academic Researchers (dated 2026-07-30 = 92h, over 72h cap) and California SB 942 taking effect (regulatory, no tier-1 press coverage, parallel to already-in-feed EU AI Act Article 50 item). Neither cleared the bar. Prior sweep 2h ago added the aug2 slate (Apple bug-bounty AI slop, EU AI Act Article 50, Interconnects #23, Two Minute Papers, Wes Roth Astra, Simon Willison open letters) so the well was already emptied.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
