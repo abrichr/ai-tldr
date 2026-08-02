@@ -1,8 +1,109 @@
 {
-  "generatedAt": "2026-08-01T23:07:51.897Z",
+  "generatedAt": "2026-08-02T02:14:59.532Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "bytedance-seedance-2-5",
+      "categories": [
+        "model"
+      ],
+      "title": "Seedance 2.5 — ByteDance's video model doubles to 30 seconds per generation",
+      "org": "ByteDance Seed",
+      "date": "2026-07-31",
+      "url": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "summary": "ByteDance released Seedance 2.5, a video model that generates 30-second clips in one take and accepts up to 30 images, 10 videos, and 10 audio clips as references, with timestamp-level editing.",
+      "tags": [
+        "bytedance",
+        "seedance",
+        "video-generation",
+        "multimodal",
+        "text-to-video",
+        "image-to-video",
+        "audio-to-video"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "ByteDance's Seed lab doubles single-take video generation to 30 seconds with 50-asset multimodal referencing.",
+        "whatIsIt": "Seedance 2.5 is ByteDance's new video generation model, released July 31, 2026. It generates 30 seconds of high-quality video in a single pass, doubling the 15-second limit of Seedance 2.0. It accepts up to 30 images, 10 video clips, and 10 audio clips as reference material per input, and supports multi-round extension for coherent longer sequences.",
+        "howItWorks": "The model builds on Seedance 2.0's unified audio-video architecture and adds precise controls: timestamp-level editing lets creators target specific parts of a clip, and a green-screen mode plus reference-based editing handle localized changes without regenerating the whole video. Reference assets guide characters, scenes, camera perspective, and audio simultaneously.",
+        "whyItMatters": "For creators, Seedance 2.5 removes the two biggest limits of short-form AI video: length and multi-asset consistency. A 30-second single take with 50 reference assets covers most ad, storyboard, and short-film workflows in one call. It ships as OpenAI's Sora video product is discontinued, making Chinese video models the practical default for many teams.",
+        "forWho": "video creators, ad agencies, film pre-production teams",
+        "tryIt": "Available on Jimeng AI and Doubao Pro; API access coming via BytePlus ModelArk."
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "ByteDance Seed"
+        },
+        {
+          "label": "Type",
+          "value": "Video generation model"
+        },
+        {
+          "label": "Max duration",
+          "value": "30 seconds per generation"
+        },
+        {
+          "label": "Reference inputs",
+          "value": "Up to 30 images, 10 videos, 10 audio clips"
+        },
+        {
+          "label": "Availability",
+          "value": "Jimeng AI, Doubao Pro"
+        },
+        {
+          "label": "API",
+          "value": "Coming soon via BytePlus ModelArk"
+        },
+        {
+          "label": "License",
+          "value": "Proprietary"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How is Seedance 2.5 different from Seedance 2.0?",
+          "a": "Seedance 2.5 doubles the single-take duration from 15 seconds to 30 seconds and raises the reference-asset ceiling to 50 total (30 images, 10 videos, 10 audio clips) per input. It also adds timestamp-level editing and a green-screen mode for localized changes, and refines image quality to reduce plastic-looking artifacts."
+        },
+        {
+          "q": "Can I use Seedance 2.5 today?",
+          "a": "Seedance 2.5 is rolling out on Jimeng AI and the Pro tier of ByteDance's Doubao consumer platform. Programmatic API access is coming to Volcano Engine's BytePlus ModelArk, with a launch expected roughly a week after the public rollout. It is not open source and no weights are released."
+        },
+        {
+          "q": "How does Seedance 2.5 compare to Kling, Veo, and Sora?",
+          "a": "Seedance 2.5's 30-second single-take pushes past Kuaishou's Kling 3.0 at 15 seconds and Google's Veo 3.1 at 8 seconds. OpenAI's Sora product line was discontinued in March 2026, so among mainstream video generators Seedance 2.5 currently offers the longest single-pass generation for reference-conditioned video."
+        },
+        {
+          "q": "Does Seedance 2.5 handle audio?",
+          "a": "Yes. Seedance 2.5 keeps Seedance 2.0's unified audio-video architecture, so the model generates video and audio together in one pass and accepts up to 10 audio clips as reference inputs. This lets creators drive lip-sync, voice, and score from real recordings rather than editing sound onto a silent clip afterward."
+        }
+      ],
+      "image": {
+        "url": "https://technode.com/wp-content/uploads/2026/07/videoframe_0-scaled.png",
+        "alt": "Frame from a Seedance 2.5 generated video clip",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5"
+        },
+        {
+          "label": "TechNode Coverage",
+          "url": "https://technode.com/2026/07/31/bytedance-launches-seedance-2-5-video-generation-model/"
+        },
+        {
+          "label": "Xenospectrum Analysis",
+          "url": "https://xenospectrum.com/en/seedance-2-5-video-editing/"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49138302"
+        }
+      ],
+      "publishDate": "2026-08-02T02:14:59.532Z"
+    },
     {
       "id": "deephealth-breast-ultrasound-fda",
       "categories": [

@@ -27650,6 +27650,39 @@
         "security",
         "article"
       ]
+    },
+    {
+      "id": "sweep-20260802t021459z",
+      "timestamp": "2026-08-02T02:14:59.532Z",
+      "source": "github-actions-sweep",
+      "summary": "Added 1 major item: Seedance 2.5, ByteDance Seed's video generation model that doubles single-take duration to 30 seconds and accepts 50 multimodal reference assets. Scanned lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, DeepSeek, Qwen, Moonshot, Z.ai, MiniMax, ByteDance), GitHub trending, HuggingFace models/datasets/papers, HN top 30, YouTube RSS (3 videos returned, all already in feed), Simon Willison, TechCrunch AI, and the AI-for-science lane (neuro/pharma/clinical). Most fresh items were already in the feed from the prior sweep 3h earlier.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "bytedance-seedance-2-5",
+          "title": "Seedance 2.5 — ByteDance's video model doubles to 30 seconds per generation",
+          "category": "model",
+          "note": "ByteDance official Seed lab announcement 2026-07-31 + 183-point HN post + TechNode + Xenospectrum + BigGo Finance coverage. Real capability jump (15s to 30s single-take, 50-asset multimodal referencing) from a top Chinese lab; ships as Sora is discontinued."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "video",
+        "article",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }
