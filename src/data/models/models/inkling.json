@@ -30,7 +30,7 @@
   "overview": [
     "Inkling is Thinking Machines Lab's first foundation model, released on July 15, 2026. It is a sparse Mixture-of-Experts transformer with 975B total parameters and 41B active per token, trained on roughly 45 trillion tokens of text, images, audio, and video.",
     "The model reasons natively over text, images, and audio (audio is ingested as dMel spectrograms, images as 40×40-pixel patches via an hMLP encoder), supports a 1M-token context, and exposes a controllable thinking-effort dial between 0.2 and 0.99 so users can trade token spend against answer quality.",
-    "Full weights are published on Hugging Face under Apache-2.0 (BF16 and NVFP4 checkpoints, the latter tuned for NVIDIA Blackwell). A smaller Inkling-Small preview (276B total · 12B active) uses the same recipe at lower cost. Thinking Machines positions Inkling explicitly as \"not the strongest overall model available today\" — it is meant as a customization base for the company's Tinker fine-tuning platform rather than a leaderboard-topping frontier model."
+    "Full weights are published on Hugging Face under Apache-2.0 (BF16 and NVFP4 checkpoints, the latter tuned for NVIDIA Blackwell). A smaller Inkling-Small (276B total · 12B active) was released on July 30, 2026 under the same license, at roughly a quarter of Inkling's size and 3x cheaper per output token on Tinker. Thinking Machines positions Inkling explicitly as \"not the strongest overall model available today\" — it is meant as a customization base for the company's Tinker fine-tuning platform rather than a leaderboard-topping frontier model."
   ],
   "strengths": [
     "Fully open weights under Apache-2.0, downloadable and commercially usable without a bespoke license",
@@ -219,11 +219,17 @@
   ],
   "versionHistory": [
     {
+      "version": "Inkling-Small",
+      "slug": "inkling-small",
+      "date": "2026-07-30",
+      "note": "Efficient 276B / 12B-active sibling — comparable performance to Inkling at a quarter of the size, 3x cheaper output on Tinker.",
+      "current": true
+    },
+    {
       "version": "Inkling",
       "slug": "inkling",
       "date": "2026-07-15",
-      "note": "First release — 975B / 41B-active MoE, Apache-2.0.",
-      "current": true
+      "note": "First release — 975B / 41B-active MoE, Apache-2.0."
     }
   ]
 }

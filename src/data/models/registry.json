@@ -4523,8 +4523,25 @@
         {
           "id": "inkling",
           "title": "Inkling",
-          "blurb": "Thinking Machines' first foundation model: a natively multimodal, Apache-2.0 sparse Mixture-of-Experts released July 15, 2026 as an open-weight base for customization on the Tinker platform.",
+          "blurb": "Thinking Machines' first foundation family: natively multimodal, Apache-2.0 sparse Mixture-of-Experts open-weight models for customization on the Tinker platform — Inkling (July 2026) and the smaller, cheaper Inkling-Small (July 30 2026).",
           "versions": [
+            {
+              "name": "Inkling-Small",
+              "slug": "inkling-small",
+              "blurb": "Apache-2.0 open-weight MoE released July 30, 2026: 276B total / 12B active — about a quarter of Inkling's size, comparable performance, and $1.20 per 1M output tokens on Tinker (vs $4.05 for Inkling).",
+              "tags": [
+                "open-weights",
+                "multimodal",
+                "reasoning",
+                "long-context",
+                "agentic"
+              ],
+              "contextWindow": "1M",
+              "license": "Apache-2.0",
+              "date": "2026-07-30",
+              "current": true,
+              "rich": true
+            },
             {
               "name": "Inkling",
               "slug": "inkling",
@@ -4539,7 +4556,6 @@
               "contextWindow": "1M",
               "license": "Apache-2.0",
               "date": "2026-07-15",
-              "current": true,
               "rich": true
             }
           ]
