@@ -25,6 +25,7 @@ export function Subscribe() {
 
       if (res.ok || res.status === 201) {
         track("subscribe:submit", { ok: true });
+        window.gtag_report_conversion?.();
         setStatus("success");
         setEmail("");
       } else {
