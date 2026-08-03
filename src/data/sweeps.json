@@ -28056,6 +28056,36 @@
         "dataset",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260803t144647z",
+      "timestamp": "2026-08-03T14:46:47.508Z",
+      "source": "github-actions-sweep",
+      "summary": "Update-only sweep: MiniMax H3 open weights landed on Hugging Face on Aug 2 (existing minimax-h3 entry patched with License row, HF repo link, ComfyUI day-0 detail, and refreshed FAQ/summary). No qualifying newItems in the 72h window — YouTube RSS (4 fresh vids) all already in the feed; Anthropic newsroom quiet since Jul 30 (JFrog SQLite CVE story is Jul 30, outside 72h); OpenAI blog 403 but web search shows Astra math + open-letters + Two Minute Papers coverage already ingested; DeepMind/Meta/Mistral/x.ai blogs quiet; HN top stories all covered (Qwen 3.8-Max, MiniMax H3, JFrog SQLite); HuggingFace papers Aug 3 top 15 hit no 2-of-N; GitHub trending held no new AI/ML repos; Kimi K3 open weights were Jul 26 (outside 72h); no fresh bio/neuro/pharma releases cleared the bar.",
+      "counts": {
+        "added": 0,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [
+        {
+          "id": "minimax-h3",
+          "title": "MiniMax H3 — open-weights video model does 2K, 15s, and native stereo sound",
+          "note": "MiniMax H3 open weights landed on Hugging Face at MiniMaxAI/MiniMax-H3 on Aug 2 under the MiniMax Community License (33B params, ~13B AdaLN branches skippable). ComfyUI shipped day-0 support with pruning down to 42.5 GB VRAM, enabling local inference on an RTX 3060. Adds Parameters + License rows, updates Availability, refreshes summary + FAQ + explainer to reflect self-hostable status, and adds HF repo + ComfyUI blog to links."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }

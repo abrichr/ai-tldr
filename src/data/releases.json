@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T11:27:25.066Z",
+  "generatedAt": "2026-08-03T14:46:47.508Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
@@ -2282,7 +2282,7 @@
       "org": "MiniMax",
       "date": "2026-07-31",
       "url": "https://www.minimax.io/blog/minimax-h3",
-      "summary": "MiniMax launched H3, a full-modal video model that generates 15-second 2K clips with synchronized stereo audio. It edits video, transfers motion, and MiniMax says weights will drop on Hugging Face within days.",
+      "summary": "MiniMax H3 generates 15-second 2K clips with synchronized stereo audio in one model. Open weights are now live on Hugging Face under the MiniMax Community License, and ComfyUI shipped day-0 support for local inference.",
       "tags": [
         "minimax",
         "minimax-h3",
@@ -2305,20 +2305,20 @@
           "value": "H3 (Hailuo 3.0), full-modal video"
         },
         {
+          "label": "Parameters",
+          "value": "33B (about 13B AdaLN branches skippable for inference)"
+        },
+        {
           "label": "Output",
-          "value": "Up to 15s clips, native 2K (2560×1440), 24 FPS"
+          "value": "Up to 15s clips, native 2K (2560×1440), 24 FPS with stereo audio"
         },
         {
-          "label": "Audio",
-          "value": "Native synchronised stereo sound, voice + SFX"
-        },
-        {
-          "label": "Inputs per request",
-          "value": "Up to 9 images + 3 video clips + 3 audio tracks"
+          "label": "License",
+          "value": "MiniMax H3 Community License"
         },
         {
           "label": "Availability",
-          "value": "MiniMax API and hosted providers; open weights promised within days"
+          "value": "MiniMax API, hosted providers, and open weights on Hugging Face (Aug 2)"
         },
         {
           "label": "Price vs peers",
@@ -2327,8 +2327,8 @@
       ],
       "faq": [
         {
-          "q": "When will the MiniMax H3 weights actually be downloadable?",
-          "a": "MiniMax says weights will land on Hugging Face within days of the July 31 announcement, following the same open-weights pattern it used for M2 and M3. The model is already usable through the MiniMax API and hosted providers such as fal.ai while the open release finishes."
+          "q": "Are the MiniMax H3 weights actually downloadable?",
+          "a": "Yes. MiniMax H3 open weights landed on Hugging Face at MiniMaxAI/MiniMax-H3 on Aug 2, 2026 under the MiniMax H3 Community License. The full model is 33B parameters, and roughly 13B of AdaLN branches can be skipped at inference. ComfyUI shipped day-0 support and quantized checkpoints for local use."
         },
         {
           "q": "What can MiniMax H3 do besides text-to-video?",
@@ -2339,17 +2339,21 @@
           "a": "MiniMax says H3's per-second 2K price is under a third of what mainstream rivals charge, and its 768p tier is under half the cost of competing 720p offerings. That aligns with the company's earlier LLM strategy of undercutting Chinese and Western frontier peers on token cost."
         },
         {
+          "q": "Can I run MiniMax H3 on a consumer GPU?",
+          "a": "With ComfyUI's day-0 support, MiniMax H3 can run on a single RTX 3060. ComfyUI pruned roughly 40% of the modulation weights and quantized to fp8/int8, dropping the memory footprint from 123.6 GB to 42.5 GB and enabling local inference on consumer hardware, though generation is slow at that end of the range."
+        },
+        {
           "q": "How is MiniMax H3 doing this at 2K in one model?",
           "a": "MiniMax H3 uses a new H3-VAE tokenizer that MiniMax says gives a 4× gain in effective sequence length, and compresses long contextual prompts from roughly 100K tokens down to about 4K. That lets one model handle 15-second 2K generations with stereo audio without splitting into separate stages."
         }
       ],
       "explainer": {
         "tagline": "A single open-weights video model does 2K clips, stereo audio, editing, and motion transfer up to 15 seconds long.",
-        "whatIsIt": "MiniMax H3 (Hailuo 3.0) is a full-modal video generation model from the Shanghai lab MiniMax. It generates up to 15-second video at native 2K resolution with synchronized stereo audio, and unifies text-to-image, text-to-video, text-to-audio, video editing, and motion transfer inside one model.",
+        "whatIsIt": "MiniMax H3 (Hailuo 3.0) is a full-modal video generation model from the Shanghai lab MiniMax. It generates up to 15-second video at native 2K resolution with synchronized stereo audio, and unifies text-to-image, text-to-video, text-to-audio, video editing, and motion transfer inside one 33B-parameter model.",
         "howItWorks": "The new H3-VAE tokenizer gives MiniMax roughly a 4× gain in effective sequence length, and long contextual prompts compress from ~100K tokens down to ~4K. A single H3 request accepts up to nine reference images, three video clips, and three audio tracks as context, so users can restyle a clip, transfer motion from a reference, or generate voice and sound effects in one call.",
-        "whyItMatters": "Open, weight-available video generation at 2K with native audio has not existed before at this quality level — most rivals either cap out at 720p, drop audio, or lock the weights behind a proprietary API. MiniMax is also pricing 2K generation at under a third of mainstream competitors and says weights will hit Hugging Face within days, which puts real pressure on Runway, Kling, and Sora clones.",
+        "whyItMatters": "Open, weight-available video generation at 2K with native audio has not existed before at this quality level — most rivals either cap out at 720p, drop audio, or lock the weights behind a proprietary API. With weights now live on Hugging Face under the MiniMax Community License and ComfyUI's day-0 pruned build fitting on an RTX 3060, MiniMax puts real pressure on Runway, Kling, and Sora clones.",
         "forWho": "creators, ad agencies, and video-app builders wanting open 2K video with audio",
-        "tryIt": "hailuoai.video (H3 preview) via the MiniMax API"
+        "tryIt": "huggingface.co/MiniMaxAI/MiniMax-H3 (open weights) or hailuoai.video (hosted)"
       },
       "image": {
         "url": "https://file.cdn.minimax.io/public/e5727d3f-3d6e-455c-9ddc-1300c1a131ba.jpg",
@@ -2362,16 +2366,20 @@
           "url": "https://www.minimax.io/blog/minimax-h3"
         },
         {
+          "label": "HuggingFace Weights",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3"
+        },
+        {
+          "label": "ComfyUI Day-0",
+          "url": "https://blog.comfy.org/p/minimax-h3-day-0-support-in-comfyui"
+        },
+        {
           "label": "Reuters",
           "url": "https://kfgo.com/2026/07/30/chinas-minimax-releases-h3-video-model/"
         },
         {
           "label": "IndexBox Coverage",
           "url": "https://www.indexbox.io/blog/minimax-unveils-h3-video-generation-model-with-open-weights/"
-        },
-        {
-          "label": "Pandaily",
-          "url": "https://pandaily.com/minimax-h3-open-source-full-modal-jul2026"
         }
       ],
       "publishDate": "2026-07-31T10:50:22.767Z"
