@@ -28019,6 +28019,43 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260803t112725z",
+      "timestamp": "2026-08-03T11:27:25.066Z",
+      "source": "github-actions-sweep",
+      "summary": "Sweep landed 1 seismic Qwen release plus 1 Two Minute Papers video: Qwen3.8-Max is now GA with a published benchmark table (86.6 Terminal-Bench 2.1, 92.6 GPQA Diamond), $2/$6 per-1M pricing, and open weights next week; Two Minute Papers covers the newly-official DeepSeek V4-Flash 0731. Anthropic newsroom, OpenAI (403), Meta AI, Mistral quiet in the last 72h; GitHub trending held existing repos, HF Papers top 10 hit no 2-of-N; no fresh bio/neuro/pharma releases cleared the bar.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "alibaba-qwen-3-8-max-official",
+          "title": "Qwen3.8-Max — Alibaba's 2.4T flagship ships official with a full benchmark table",
+          "category": "model",
+          "note": "Qwen3.8-Max GA on 2026-08-03: HN top of front page (636 pts), full benchmark table published (Terminal-Bench 2.1 86.6, GPQA Diamond 92.6, SWE-bench Pro 67.7, FrontierSWE 73.5), standard pricing set ($2/$6 per 1M tokens), open weights next week. Named flagship + top lab + community talk now → seismic under the SOTA/frontier-tech rule. Separate from qwen-3-8-max-preview (July 19), which described the pre-benchmark preview state."
+        },
+        {
+          "id": "two-minute-papers-another-deepseek-moment-aug3",
+          "title": "Two Minute Papers — 'Another DeepSeek Moment Has Arrived'",
+          "category": "video",
+          "note": "Uploaded ~1h before sweep by a listed creator (RSS-scan freshFor72hBar:true). Video by a listed creator is its own item under the video exception even though DeepSeek V4-Flash is already in the feed."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "video",
+        "repo",
+        "tool",
+        "article",
+        "paper",
+        "dataset",
+        "ecosystem"
+      ]
     }
   ]
 }
