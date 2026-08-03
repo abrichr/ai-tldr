@@ -28150,6 +28150,41 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260803t210841z",
+      "timestamp": "2026-08-03T21:08:41.924Z",
+      "source": "github-actions-sweep",
+      "summary": "Quiet 72h across the top labs — no new Anthropic/OpenAI/DeepMind/Meta/Mistral/xAI/Cohere posts, and the three fresh YouTube uploads were already in the feed. Adds one rumor: TestingCatalog's MAI-Realtime scoop, Microsoft's first native full-duplex voice model spotted in the MAI Playground on Aug 2.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "microsoft-mai-realtime-rumor-aug2",
+          "title": "MAI-Realtime rumor — Microsoft's full-duplex voice model hidden in MAI Playground",
+          "category": "rumor",
+          "note": "TestingCatalog (Alexey Shabanov, track record for MS/Google preview leaks) discovered MAI-Realtime as a hidden entry in Microsoft's MAI Playground on Aug 2; a bidirectional voice model with 17 languages, two named voices, and tool-use, unannounced by Microsoft — meets the rumor bar (named journalist + insider access + leaked interface details)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "rumor",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "article",
+        "security",
+        "ecosystem",
+        "dataset",
+        "algorithm",
+        "benchmark"
+      ]
     }
   ]
 }
