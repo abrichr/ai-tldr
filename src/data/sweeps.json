@@ -28185,6 +28185,34 @@
         "algorithm",
         "benchmark"
       ]
+    },
+    {
+      "id": "sweep-20260803t230618z",
+      "timestamp": "2026-08-03T23:06:18.023Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta), GitHub trending, HuggingFace models/papers, HN front page, YouTube RSS (8 channels), Simon Willison, plus tier-1 press. All three fresh YouTube videos (Two Minute Papers x2, Wes Roth Astra math) are already in the feed. Anthropic quiet since 2026-07-30 (Claude cybersecurity incidents), Meta quiet since 2026-07-27, DeepMind's Gemini Robotics ER 2 and Lyria 3.5 already covered. Simon Willison's Aug 2-3 open-letters + Crawshaw devtools posts already in feed; condense-json 1.0 and datasette-apps 0.2a0 are narrow Simon-project releases below the 2-of-N bar. OpenAI Sarah Friar pricing-cut post (GPT-5.6 Luna 80% cut) dates to 2026-07-31 which is >72h before the sweep timestamp (2026-08-03T22:59Z) — rejected on the hard 72h cap. Microsoft Project Perception public preview (Aug 3) was not corroborated on HN or GeekWire (only surfaced on a fan forum) — dropped for source thinness rather than shipped without primary confirmation. No qualifying new items this sweep.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "ecosystem",
+        "security",
+        "rumor"
+      ]
     }
   ]
 }
