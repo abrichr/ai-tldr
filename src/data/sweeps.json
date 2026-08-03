@@ -27993,6 +27993,32 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260803t070441z",
+      "timestamp": "2026-08-03T07:04:41.383Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Scanned lab blogs (Anthropic, DeepMind, Meta AI, Mistral, Cohere, DeepSeek; OpenAI/xAI/z.ai 403/404), GitHub trending daily, HuggingFace trending models + top papers, HN front-page top 30, Techmeme AI, Simon Willison (Aug 1-2 posts), Scientific American, neurosciencenews.com, and all 8 YouTube creator channels via yt-rss-scan. Only fresh RSS video (Two Minute Papers 'AI Learns Why Copying Humans Isn't Enough', 15h old) is already in feed. HN #1 today is 'Qwen3.8-Max: A New Bar for Coding and Cowork' (419 pts, links qwen.ai/blog?id=qwen3.8) but this is same-item as existing qwen-3-8-max-preview — the July 19 preview announcement still trending. Bloomberg's Aug 3 Qwen coverage points to the same model. Other near-misses skipped: Ling-3.0-Flash (Jul 26, 8d old > 72h), DeepMind Bioresilience approach (Jul 16, policy statement not a release), BitNet-on-6502 (June, blog project), Scientific American crypto proofs (Jul 31 edge of 72h but paper alone, no code/HN, doesn't clear 2-of-N), Cohere EU Code signing (Jul 27 + regulatory, already skipped prior sweep), Fields Medalist joining OpenAI (HR, not a release), Zvi Substack analysis (commentary on already-covered incidents). Nothing else in the 72h window met the inclusion bar.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "article",
+        "dataset",
+        "benchmark",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
