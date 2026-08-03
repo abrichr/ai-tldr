@@ -1,8 +1,123 @@
 {
-  "generatedAt": "2026-08-03T14:46:47.508Z",
+  "generatedAt": "2026-08-03T17:56:18.830Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "comfy-org-minimax-h3-day0",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "MiniMax H3 Day-0 Support in ComfyUI — 2K video generation on an RTX 3060",
+      "org": "Comfy-Org",
+      "date": "2026-08-03",
+      "url": "https://blog.comfy.org/p/minimax-h3-day-0-support-in-comfyui",
+      "summary": "Comfy-Org shipped native ComfyUI support for MiniMax H3 on launch day, with pruned and quantized weights that cut memory from 123.6 GB to 42.5 GB so the open video model runs on a consumer RTX 3060.",
+      "tags": [
+        "comfyui",
+        "minimax",
+        "minimax-h3",
+        "video-generation",
+        "open-weights",
+        "workflow-templates",
+        "quantization",
+        "vram-offloading",
+        "day-0-support"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Day-0 ComfyUI workflows plus a pruned + quantized H3 that fits on an RTX 3060.",
+        "whatIsIt": "Comfy-Org's Day-0 integration for MiniMax H3 lands native workflow templates for text-to-video, image-to-video, first-and-last-frame control, and reference-to-video, all inside ComfyUI. The release ships alongside a pruned and quantized model repo on Hugging Face so the omni-modal H3 stack works out of the box in local Comfy graphs.",
+        "howItWorks": "The Comfy build applies pruning and quantization that shrink H3's memory footprint from 123.6 GB in full precision down to 42.5 GB, a 66% reduction. Dynamic VRAM offloading then lets consumer GPUs like the RTX 3060 run the model by paging weights between GPU memory and system RAM during each generation step.",
+        "whyItMatters": "H3 generates up to 15-second clips at 2K resolution with native stereo audio, and the ComfyUI path removes the two biggest blockers to local use: workflow plumbing and VRAM. Creators who already live in Comfy can drop in the templates and generate video plus audio on hardware they own, without paying for a hosted API.",
+        "forWho": "ComfyUI users and local video-generation creators",
+        "tryIt": "huggingface.co/Comfy-Org/MiniMax-H3"
+      },
+      "image": {
+        "url": "https://substackcdn.com/image/fetch/$s_!w-S9!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F67ff80a9-2436-4749-a553-5f6c8c77e23c_1920x1080.png",
+        "alt": "MiniMax H3 workflow inside ComfyUI showing video-generation nodes",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://blog.comfy.org/p/minimax-h3-day-0-support-in-comfyui"
+        },
+        {
+          "label": "Model Weights",
+          "url": "https://huggingface.co/Comfy-Org/MiniMax-H3"
+        },
+        {
+          "label": "Workflow Templates",
+          "url": "https://github.com/Comfy-Org/workflow_templates"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49156111"
+        }
+      ],
+      "publishDate": "2026-08-03T17:56:18.830Z"
+    },
+    {
+      "id": "crawshaw-devtools-open-source-aug2",
+      "categories": [
+        "article"
+      ],
+      "title": "David Crawshaw — 'Devtools must be open source' in the age of coding agents",
+      "org": "David Crawshaw",
+      "date": "2026-08-02",
+      "url": "https://blog.exe.dev/devtools-must-be-open-source",
+      "summary": "Tailscale co-founder David Crawshaw argues coding agents flip the economics of open source: an agent can now read a codebase and patch it for a user, so closed devtools like Claude Code lose their edge to forkable ones.",
+      "tags": [
+        "coding-agents",
+        "open-source",
+        "developer-tools",
+        "personalization",
+        "essay",
+        "claude-code",
+        "opinion"
+      ],
+      "importance": "notable",
+      "author": {
+        "name": "David Crawshaw",
+        "handle": "@crawshaw",
+        "profileUrl": "https://github.com/crawshaw",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/161319?v=4"
+      },
+      "explainer": {
+        "tagline": "Coding agents flip the open-source calculus: any user can now fork and patch the tools they use daily.",
+        "whatIsIt": "In 'Devtools must be open source', Tailscale co-founder David Crawshaw argues that AI coding agents have made personalized software practical for the first time. When an agent can read a codebase, apply a patch, and keep it in sync with upstream, the practical value of the 'freedom to modify' finally lands with ordinary developers.",
+        "howItWorks": "Crawshaw's core claim: individual devs used to lack time or context to customize their tools, so open source and closed source felt equivalent day to day. Agents change that by absorbing the compilation, code-reading, and rebasing work. That makes source access the deciding feature, and closed products like Claude Code lose ground to forkable open alternatives.",
+        "whyItMatters": "The essay reframes what 'personalized software' means in an agent-driven workflow: teams that pick closed devtools now trade away the ability to have their agents adapt those tools to internal quirks. It hit Hacker News at #1 with 230-plus points inside a day and was amplified by Simon Willison, signalling the argument is landing across the coding-agent audience.",
+        "forWho": "Developer-tool builders and buyers, coding-agent teams",
+        "tryIt": "blog.exe.dev/devtools-must-be-open-source"
+      },
+      "image": {
+        "url": "https://blog.exe.dev/static/og-card.png",
+        "alt": "Devtools must be open source — essay cover from exe.dev",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Essay",
+          "url": "https://blog.exe.dev/devtools-must-be-open-source"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49156111"
+        },
+        {
+          "label": "Simon Willison Notes",
+          "url": "https://simonwillison.net/2026/Aug/3/devtools-must-be-open-source-exedev/"
+        },
+        {
+          "label": "Author",
+          "url": "https://github.com/crawshaw"
+        }
+      ],
+      "publishDate": "2026-08-03T17:56:18.830Z"
+    },
     {
       "id": "alibaba-qwen-3-8-max-official",
       "categories": [

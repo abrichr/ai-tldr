@@ -28086,6 +28086,43 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260803t175618z",
+      "timestamp": "2026-08-03T17:56:18.830Z",
+      "source": "github-actions-sweep",
+      "summary": "Two additions this sweep: Comfy-Org's Day-0 MiniMax H3 workflow templates (HN #2, 164 pts) and David Crawshaw's 'Devtools must be open source' essay (HN #1, 235 pts, amplified by Simon Willison). Lab blogs quiet — Anthropic latest Jul 30, DeepMind's fresh posts already in feed, Mistral last shipped Jul 9, Meta last shipped Jul 27, xAI/OpenAI blog pages blocked from CI (verified via HN + secondary sources). YouTube RSS returned 3 videos all already in feed. HuggingFace trending models were all covered. No fresh AI-for-science release with a shipped artifact passed the 72h + 2-of-N bar.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "comfy-org-minimax-h3-day0",
+          "title": "MiniMax H3 Day-0 Support in ComfyUI — 2K video generation on an RTX 3060",
+          "category": "tool",
+          "note": "HN #2 (164 pts) on 2026-08-03; Comfy-Org integration release with new Hugging Face weights and workflow templates — distinct from the existing minimax-h3 launch entry (different maker, different artifact, not a semantic dupe)."
+        },
+        {
+          "id": "crawshaw-devtools-open-source-aug2",
+          "title": "David Crawshaw — 'Devtools must be open source' in the age of coding agents",
+          "category": "article",
+          "note": "HN #1 (235 pts) on 2026-08-03 for a 2026-08-02 essay by a named influential voice (David Crawshaw, Tailscale co-founder), amplified by Simon Willison's linkblog. Clears the article 2-of-N bar."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "tool",
+        "repo",
+        "article",
+        "model",
+        "video",
+        "paper",
+        "dataset",
+        "security"
+      ]
     }
   ]
 }
