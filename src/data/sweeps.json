@@ -27969,6 +27969,30 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260803t022223z",
+      "timestamp": "2026-08-03T02:22:23.507Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Checked lab blogs (Anthropic, OpenAI, DeepMind, Meta AI, Mistral, Qwen), GitHub trending, HuggingFace models/papers, HN top 30, all 8 YouTube creator channels via yt-rss-scan, Simon Willison, Interconnects, Techmeme, The Decoder, and Korean/Chinese lab feeds. All fresh signals within 72h already covered: Apple bug-bounty AI-slop cap, EU AI Act Article 50, Simon Willison open letters, OpenAI Astra math advances, DeepSeek V4-Flash-0731, and every fresh video from RSS (Two Minute Papers, Wes Roth, Sam Witteveen — all already in feed). Notable near-misses skipped for date: LG K-EXAONE 2.0 750B (Jul 31 HF upload, 74h old), Google AI Studio mobile-app cancellation (Jul 31, 74h old), Palo Alto Unit 42 DeepSeek autonomous-attack report (Jul 30, ~96h old). Nothing else meeting the 2-of-N inclusion bar shipped in the 72h window.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
