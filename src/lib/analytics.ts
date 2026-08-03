@@ -5,6 +5,7 @@ declare global {
     umami?: {
       track: (name: string, data?: Record<string, unknown>) => void;
     };
+    gtag_report_conversion?: (url?: string) => boolean;
   }
 }
 
