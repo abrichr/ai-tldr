@@ -1,8 +1,116 @@
 {
-  "generatedAt": "2026-08-04T17:51:26.423Z",
+  "generatedAt": "2026-08-04T19:39:22.588Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "warp-agent-cli",
+      "categories": [
+        "tool"
+      ],
+      "title": "Warp Agent CLI — the Warp coding agent goes standalone in any terminal",
+      "org": "Warp",
+      "date": "2026-08-04",
+      "url": "https://www.warp.dev/blog/introducing-the-warp-agent-cli-coding-agent",
+      "summary": "Warp Agent CLI is a standalone install of Warp's multi-model coding agent for Ghostty, iTerm 2, VS Code, and Windows/Mac terminals, with session multiplexing, remote handoff, and BYO-key support.",
+      "tags": [
+        "coding-agent",
+        "cli",
+        "terminal",
+        "warp",
+        "multi-agent",
+        "byok",
+        "ghostty",
+        "iterm",
+        "vscode",
+        "multiplexer"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Warp"
+        },
+        {
+          "label": "Availability",
+          "value": "Standalone CLI for Mac, Linux, Windows"
+        },
+        {
+          "label": "Terminals supported",
+          "value": "Ghostty, iTerm 2, VS Code, Windows Terminal, Mac Terminal"
+        },
+        {
+          "label": "Subscription",
+          "value": "$18 / month, includes $20 inference credit"
+        },
+        {
+          "label": "Ad-hoc credits",
+          "value": "From $10"
+        },
+        {
+          "label": "BYO key",
+          "value": "Free tier with own OpenAI-compatible endpoint"
+        },
+        {
+          "label": "Install (Mac/Linux)",
+          "value": "curl -fsSL https://app.warp.dev/download/agent-cli | bash"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Do I still need the Warp Terminal to use Warp Agent CLI?",
+          "a": "No. Warp Agent CLI is a standalone binary that runs inside any terminal — Ghostty, iTerm 2, VS Code's integrated terminal, Windows Terminal, or Apple's default Terminal — while still using the same multi-model agent that ships with the Warp Terminal app."
+        },
+        {
+          "q": "How much does Warp Agent CLI cost?",
+          "a": "Warp Agent CLI is included in the $18/month Warp subscription, which comes with $20 of inference credit. Ad-hoc credits start at $10, and there is a free tier if you bring your own OpenAI-compatible API key or SuperGrok endpoint instead of Warp's inference."
+        },
+        {
+          "q": "Can Warp Agent CLI run inside vim, sqlite, or python REPL?",
+          "a": "Yes. Warp Agent CLI's multiplexing architecture natively supports full-screen and interactive apps — vim, gdb, htop, sqlite, and python REPL run inside an agent session without breaking the terminal, so the agent can drive interactive programs the same way a human would."
+        },
+        {
+          "q": "How is Warp Agent CLI different from Claude Code or OpenAI Codex CLI?",
+          "a": "Warp Agent CLI supports multiple model backends with an auto-router that picks a model per task instead of pinning one, adds multi-agent orchestration with subagent delegation, and can hand a session off to a cloud agent. It can also wrap other harnesses like Claude Code or Codex."
+        },
+        {
+          "q": "Does Warp Agent CLI work with remote machines over SSH?",
+          "a": "Yes. Warp Agent CLI runs a remote agent without installing the binary on the remote host — you keep one local install, connect over SSH, and the agent works against the remote filesystem and shell, so servers and dev containers don't need per-machine setup."
+        }
+      ],
+      "explainer": {
+        "tagline": "Warp's multi-model coding agent ships as a standalone CLI you can drop into any terminal, with multiplexing, remote handoff, and BYO keys.",
+        "whatIsIt": "Warp Agent CLI takes the coding agent that was previously locked inside the Warp Terminal app and packages it as a standalone binary. The install works in Ghostty, iTerm 2, VS Code's integrated terminal, Windows Terminal, and Apple's default Terminal — the same multi-model agent, no Warp Terminal required.",
+        "howItWorks": "A native multiplexing layer built on Warp's terminal infrastructure keeps agent sessions persistent across directory switches and pipes full-screen apps like vim, gdb, and sqlite through without breaking. An auto-router picks a model per task from a mix of frontier and open-weight endpoints, and subagents can be delegated to or handed off to a cloud agent for long-running work.",
+        "whyItMatters": "Warp Agent CLI removes the lock-in that kept teams on the Warp Terminal to use its agent, and gives Claude Code, Codex CLI, and Cursor a same-shape competitor that runs anywhere. The BYO-key free tier and $10 ad-hoc credit floor also lower the try-cost for developers who don't want another $18/month subscription.",
+        "forWho": "coding-agent users on Ghostty, iTerm 2, VS Code, or Windows who don't want to switch terminals to try Warp's agent",
+        "tryIt": "curl -fsSL https://app.warp.dev/download/agent-cli | bash"
+      },
+      "image": {
+        "url": "https://cdn.sanity.io/images/1ygbk6d0/production/e0bead02c24e74b9b0fe8c3a57f7ab48df02ce94-1920x1080.png",
+        "alt": "Warp Agent CLI running inside a terminal window",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.warp.dev/blog/introducing-the-warp-agent-cli-coding-agent"
+        },
+        {
+          "label": "Install script",
+          "url": "https://app.warp.dev/download/agent-cli"
+        },
+        {
+          "label": "Docs",
+          "url": "https://docs.warp.dev/"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/warpdotdev/warp"
+        }
+      ],
+      "publishDate": "2026-08-04T19:39:22.588Z"
+    },
     {
       "id": "ryanzhou-deepseek-v4-flash-mi300x",
       "categories": [

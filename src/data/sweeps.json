@@ -28389,6 +28389,37 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260804t193922z",
+      "timestamp": "2026-08-04T19:39:22.588Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched Anthropic/OpenAI/DeepMind/Meta/xAI/Mistral/Cohere/Qwen/DeepSeek lab blogs, github-trending, HuggingFace models/papers/datasets, HN top 30, 8 YouTube creator channels, and the AI-for-science lane (neuro/bio/pharma). Almost every fresh candidate was already in the feed (Shieldstral, Qwen3.8-Max, DeepSeek V4-Flash-0731, Astra, MiniMax H3, NeuroVFM, all 4 fresh YouTube videos). Added one new item: Warp's Agent CLI standalone release.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "warp-agent-cli",
+          "title": "Warp Agent CLI — the Warp coding agent goes standalone in any terminal",
+          "category": "tool",
+          "note": "Warp released the Warp Terminal's coding agent as a standalone CLI on 2026-08-04 for use in Ghostty/iTerm 2/VS Code/Windows terminals — first appearance of the standalone Warp Agent in the feed, distinct from the existing OpenWarp fork and the AGPL client open-sourcing items."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "article",
+        "paper",
+        "dataset",
+        "ecosystem"
+      ]
     }
   ]
 }
