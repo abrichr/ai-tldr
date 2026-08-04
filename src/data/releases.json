@@ -1,8 +1,163 @@
 {
-  "generatedAt": "2026-08-04T08:37:32.376Z",
+  "generatedAt": "2026-08-04T14:31:46.761Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "mistral-shieldstral-1-0",
+      "categories": [
+        "model",
+        "tool"
+      ],
+      "title": "Shieldstral 1.0 — Mistral ships a 3B open safety classifier for text and images",
+      "org": "Mistral AI",
+      "date": "2026-08-04",
+      "url": "https://mistral.ai/news/shieldstral",
+      "summary": "Shieldstral 1.0 is Mistral's 3B open-weights safety classifier that reads a plain-language policy at inference and rates text or images as safe or unsafe. Fits in a 16GB GPU, Apache 2.0, matches models 7x its size on benchmarks.",
+      "tags": [
+        "mistral",
+        "shieldstral",
+        "safety",
+        "content-moderation",
+        "safety-classifier",
+        "multimodal",
+        "open-weights",
+        "apache-2.0",
+        "policy-adaptive",
+        "trust-and-safety"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Parameters": "3B",
+        "VLGuard F1": "97.7%",
+        "WildGuardTest F1": "88.1%"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Mistral AI"
+        },
+        {
+          "label": "Parameters",
+          "value": "3B (based on Ministral-3-3B-Base)"
+        },
+        {
+          "label": "License",
+          "value": "Apache 2.0"
+        },
+        {
+          "label": "Modalities",
+          "value": "Text, image, and text+image"
+        },
+        {
+          "label": "Runs on",
+          "value": "One 16GB NVIDIA GPU (BF16, vLLM 0.26+)"
+        },
+        {
+          "label": "Context window",
+          "value": "32K tokens"
+        },
+        {
+          "label": "Availability",
+          "value": "Weights on Hugging Face, docs public preview"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "WildGuardTest (prompt safety, F1)",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Shieldstral 1.0 3B",
+              "score": 88.1,
+              "highlight": true
+            }
+          ],
+          "source": "https://huggingface.co/mistralai/Shieldstral-1.0-3B"
+        },
+        {
+          "name": "VLGuard (multimodal safety, F1)",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Shieldstral 1.0 3B",
+              "score": 97.7,
+              "highlight": true
+            }
+          ],
+          "source": "https://huggingface.co/mistralai/Shieldstral-1.0-3B"
+        },
+        {
+          "name": "WildGuardTest (refusal detection, F1)",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Shieldstral 1.0 3B",
+              "score": 90.3,
+              "highlight": true
+            }
+          ],
+          "source": "https://huggingface.co/mistralai/Shieldstral-1.0-3B"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How is Shieldstral different from a fixed content filter?",
+          "a": "Shieldstral takes the safety policy as a plain-language prompt at inference time rather than hard-coding it during training. Teams can rewrite a policy in a text file and re-run the classifier without collecting new data or fine-tuning, which fixed filters cannot do."
+        },
+        {
+          "q": "Is Shieldstral free to use commercially?",
+          "a": "Yes. Shieldstral 1.0 is released under Apache 2.0 on Hugging Face, so it can be downloaded, self-hosted, and used commercially at no cost. Mistral does not require an API key or paid tier for the open weights."
+        },
+        {
+          "q": "What hardware does Shieldstral need to run?",
+          "a": "Shieldstral 1.0 fits in one 16GB NVIDIA GPU in BF16 precision, and Mistral recommends vLLM 0.26 or newer for deployment. That footprint puts it inside a single consumer or entry-cloud card rather than requiring a multi-GPU node."
+        },
+        {
+          "q": "What does Shieldstral classify?",
+          "a": "Shieldstral handles prompt classification, response moderation, refusal detection, toxicity detection, and image safety across text-only, image-only, and text+image inputs. It supports 12 languages and outputs a calibrated safety score from a single forward pass."
+        },
+        {
+          "q": "How does Shieldstral compare to bigger safety models?",
+          "a": "Mistral reports Shieldstral 1.0 matches or beats safety classifiers up to 7x its size, including 97.7% F1 on the VLGuard multimodal benchmark and 88.1% F1 on the WildGuardTest prompt-safety benchmark. Full comparisons are on the model card and in the arXiv report."
+        }
+      ],
+      "explainer": {
+        "tagline": "A 3B open-weights safety classifier that reads a plain-language policy at inference, rates text or images, and fits in a 16GB GPU.",
+        "whatIsIt": "Shieldstral 1.0 is a compact safety classifier from Mistral for content moderation across text and images. Instead of learning one fixed rule set at training time, the model reads a plain-language policy at inference and answers a yes/no question about whether a piece of content violates it. Weights are open on Hugging Face under Apache 2.0.",
+        "howItWorks": "The team frames moderation as a binary question-answering task, unifying dozens of safety datasets into one 54 million-sample training set. The 3B parameter model, built on Ministral-3-3B-Base, takes the policy plus the content and returns a calibrated yes/no probability in one forward pass. A shared interface handles text-only, image-only, and text+image inputs; a 32K context window covers long chats.",
+        "whyItMatters": "Teams that deploy LLMs usually stitch together bigger, black-box moderation models and pay per call to change one rule. Shieldstral lets a trust and safety team rewrite a policy in a text file and re-run the classifier locally on one GPU, with Apache 2.0 rights to modify it. Mistral reports Shieldstral matches or beats models up to 7x its size on standard safety benchmarks.",
+        "forWho": "trust and safety teams, LLM app builders",
+        "tryIt": "huggingface.co/mistralai/Shieldstral-1.0-3B"
+      },
+      "image": {
+        "url": "https://mistral.ai/cms-media/api/media/file/Thumbnail-Model%3DShieldstral.jpg",
+        "alt": "Mistral Shieldstral 1.0 announcement thumbnail",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://mistral.ai/news/shieldstral"
+        },
+        {
+          "label": "Model (Hugging Face)",
+          "url": "https://huggingface.co/mistralai/Shieldstral-1.0-3B"
+        },
+        {
+          "label": "Technical Report",
+          "url": "https://arxiv.org/abs/2607.25857"
+        },
+        {
+          "label": "Model Card Docs",
+          "url": "https://docs.mistral.ai/models/model-cards/shieldstral-1-0"
+        }
+      ],
+      "publishDate": "2026-08-04T14:31:46.761Z"
+    },
     {
       "id": "cloudflare-workers-ai-kimi-glm-fp8",
       "categories": [

@@ -28323,6 +28323,40 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260804t143146z",
+      "timestamp": "2026-08-04T14:31:46.761Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Shieldstral 1.0, Mistral's new 3B open-weights safety classifier for text and images with an arXiv report and a Hugging Face model card. Verified quiet across Anthropic, OpenAI, DeepMind, Meta, xAI news pages; no other lab release, HN top item, HF paper, or trending repo cleared the 72h + 2-of-N bar.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "mistral-shieldstral-1-0",
+          "title": "Shieldstral 1.0 — Mistral ships a 3B open safety classifier for text and images",
+          "category": "model",
+          "note": "Fresh top-lab release (Mistral, 2026-08-04) with named model, Apache 2.0 open weights on Hugging Face, arXiv technical report, and public docs — clears the 72h cap and lab-blog signal. Major tier: safety classifier, not a flagship LLM."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "algorithm",
+        "dataset",
+        "video",
+        "article",
+        "security",
+        "ecosystem",
+        "rumor"
+      ]
     }
   ]
 }
