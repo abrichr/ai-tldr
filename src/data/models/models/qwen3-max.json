@@ -77,6 +77,16 @@
   ],
   "versionHistory": [
     {
+      "version": "Qwen3.8-Max",
+      "slug": "qwen3-8-max",
+      "date": "2026-08-03"
+    },
+    {
+      "version": "Qwen3.8-Max-Preview",
+      "slug": "qwen3-8-max-preview",
+      "date": "2026-07-19"
+    },
+    {
       "version": "Qwen3.7-Max",
       "slug": "qwen3-7-max",
       "date": "2026-05"

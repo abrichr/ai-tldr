@@ -1,0 +1,205 @@
+{
+  "slug": "qwen3-8-max",
+  "name": "Qwen3.8-Max",
+  "maker": "alibaba",
+  "makerTitle": "Alibaba (Qwen)",
+  "line": "qwen-max",
+  "lineTitle": "Qwen-Max",
+  "tagline": "Alibaba's August 2026 Qwen-Max flagship: a 2.4T-parameter multimodal MoE with a 1M-token context, priced at $2 / $6 per million tokens.",
+  "seoTitle": "Qwen3.8-Max: Alibaba's 2.4T Multimodal Flagship",
+  "metaDescription": "Qwen3.8-Max is Alibaba's Qwen-Max flagship released August 3, 2026 — a 2.4T-parameter multimodal MoE (95B active) with 1M-token context, at $2/$6 per MTok.",
+  "releaseDate": "2026-08-03",
+  "status": "Generally available",
+  "license": "Proprietary (API). Open weights for Qwen3.8-Max and a companion Qwen3.8-27B checkpoint were announced by Alibaba for release the week of August 10, 2026; the weight license had not been published at launch.",
+  "openWeights": false,
+  "modalities": [
+    "Text",
+    "Image",
+    "Video"
+  ],
+  "contextWindow": "1M",
+  "maxOutput": "131,072 tokens",
+  "parameters": "2.4 trillion total · 95 billion active (sparse Mixture-of-Experts)",
+  "architecture": "Sparse Mixture-of-Experts. Alibaba positions Qwen3.8-Max as its first Qwen model above one trillion parameters to natively accept text, image, and video inputs.",
+  "tags": [
+    "frontier",
+    "proprietary",
+    "multimodal",
+    "reasoning",
+    "long-context",
+    "agentic"
+  ],
+  "overview": [
+    "Qwen3.8-Max is the August 2026 flagship of Alibaba's Qwen-Max line, generally available from August 3, 2026 through Alibaba Cloud Model Studio (also branded QwenCloud). It succeeds the July 2026 Qwen3.8-Max-Preview shown at the World Artificial Intelligence Conference in Shanghai and becomes the newest step above the text-only Qwen3.7-Max. Alibaba describes it as the most capable model in the Qwen family to date and the first Max-class Qwen released with open weights on the roadmap.",
+    "Technically, Qwen3.8-Max is a sparse Mixture-of-Experts model with 2.4 trillion total parameters and 95 billion active per token, a 1M-token context window (roughly 991K tokens of input and up to 131,072 tokens of output), and a maximum reasoning budget of about 262K tokens. It is natively multimodal — text, image, and video input — and exposes a reasoning-effort control with low, medium, and xhigh settings.",
+    "API pricing is $2.00 per million input tokens, $6.00 per million output tokens (including thinking tokens), $0.25 per million tokens for implicit cache reads, and $2.50 per million tokens for explicit cache creation. Alibaba announced that the open weights for Qwen3.8-Max and a companion Qwen3.8-27B checkpoint would follow on Hugging Face and ModelScope the week of August 10, 2026; the weight license had not been published at launch."
+  ],
+  "strengths": [
+    "Frontier multimodal reasoning: natively accepts text, image, and video input at trillion-parameter scale",
+    "Sparse MoE keeps inference cost tractable: 2.4T total parameters, 95B active per token",
+    "Very long context: 1M-token window flat-priced across the whole range, up to ~131K output tokens per request",
+    "Aggressively cheap for a frontier model: $2 input / $6 output per million tokens, with a 90% discount on cached input",
+    "Open-weight release planned for the week of August 10, 2026 — the first Max-class Qwen to open its weights",
+    "Reasoning-effort control (low / medium / xhigh) lets developers trade quality against latency and cost per request"
+  ],
+  "useCases": [
+    "Long-horizon coding agents and multi-step engineering workflows that benefit from the 1M-token context",
+    "Multimodal analysis of screenshots, images, and video alongside text prompts",
+    "Enterprise office and productivity automation that combines documents with charts or diagrams",
+    "Cost-sensitive frontier deployments where the $2 / $6 per-MTok rate and cached-input discount matter",
+    "Applications that will later self-host: teams can prototype on the API this week and swap to the open weights when they land"
+  ],
+  "benchmarks": [
+    {
+      "name": "Terminal-Bench 2.1",
+      "score": 86.6,
+      "max": 100,
+      "unit": "%",
+      "source": "https://www.marktechpost.com/2026/08/03/alibaba-qwen-releases-qwen3-8-max/"
+    },
+    {
+      "name": "PaperBench",
+      "score": 93.0,
+      "max": 100,
+      "unit": "%",
+      "source": "https://www.marktechpost.com/2026/08/03/alibaba-qwen-releases-qwen3-8-max/"
+    },
+    {
+      "name": "OmniDocBench",
+      "score": 92.1,
+      "max": 100,
+      "unit": "%",
+      "source": "https://www.marktechpost.com/2026/08/03/alibaba-qwen-releases-qwen3-8-max/"
+    },
+    {
+      "name": "DeepSWE 1.1",
+      "score": 56.6,
+      "max": 100,
+      "unit": "%",
+      "source": "https://www.marktechpost.com/2026/08/03/alibaba-qwen-releases-qwen3-8-max/"
+    }
+  ],
+  "pricing": {
+    "input": "$2.00",
+    "output": "$6.00",
+    "cachedInput": "$0.25",
+    "unit": "/ 1M tokens",
+    "note": "Output pricing includes thinking tokens generated at higher reasoning-effort settings. Explicit cache creation is $2.50 per 1M tokens; explicit cache reads are $0.17 per 1M tokens. The 1M-token context is a single flat tier — the rate does not step up at any threshold.",
+    "source": "https://apidog.com/blog/qwen-3-8-pricing/"
+  },
+  "apis": [
+    {
+      "provider": "Alibaba Cloud Model Studio",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/models",
+      "modelId": "qwen3.8-max"
+    },
+    {
+      "provider": "QwenCloud",
+      "url": "https://qwen.ai/blog?id=qwen3.8",
+      "modelId": "qwen3.8-max"
+    }
+  ],
+  "links": [
+    {
+      "label": "Qwen — Qwen3.8 official blog post",
+      "url": "https://qwen.ai/blog?id=qwen3.8",
+      "kind": "announcement"
+    },
+    {
+      "label": "Alibaba Qwen — Qwen3.8-Max launch post (@Alibaba_Qwen)",
+      "url": "https://x.com/Alibaba_Qwen/status/2084100707423289643",
+      "kind": "announcement"
+    },
+    {
+      "label": "Alizila (Alibaba) — Alibaba Unveils Qwen3.8-Max",
+      "url": "https://www.alizila.com/alibaba-unveils-qwen3-8-max-most-capable-flagship-model-to-date/",
+      "kind": "announcement"
+    },
+    {
+      "label": "Bloomberg — Alibaba drops another China AI model with breakthrough performance",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-03/alibaba-drops-another-china-ai-model-with-breakthrough-performance",
+      "kind": "announcement"
+    },
+    {
+      "label": "Alibaba Cloud Model Studio — models",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/models",
+      "kind": "official"
+    },
+    {
+      "label": "Alibaba Cloud Model Studio — pricing",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "kind": "api-docs"
+    },
+    {
+      "label": "MarkTechPost — Alibaba Qwen releases Qwen3.8-Max",
+      "url": "https://www.marktechpost.com/2026/08/03/alibaba-qwen-releases-qwen3-8-max/",
+      "kind": "benchmark"
+    },
+    {
+      "label": "apidog — Qwen 3.8 pricing explained: $2 input / $6 output",
+      "url": "https://apidog.com/blog/qwen-3-8-pricing/",
+      "kind": "api-docs"
+    },
+    {
+      "label": "Developers Digest — Qwen 3.8 Max ships: 2.4T MoE, 1M context",
+      "url": "https://www.developersdigest.tech/blog/qwen-3-8-max-release-2026",
+      "kind": "review"
+    }
+  ],
+  "faq": [
+    {
+      "q": "When was Qwen3.8-Max released?",
+      "a": "Alibaba announced the general availability of Qwen3.8-Max on August 3, 2026, on Alibaba Cloud Model Studio (also branded QwenCloud). The July 19, 2026 Qwen3.8-Max-Preview shown at the World Artificial Intelligence Conference in Shanghai was superseded by this release. Alibaba said open weights for Qwen3.8-Max and a companion Qwen3.8-27B checkpoint would follow on Hugging Face and ModelScope the week of August 10, 2026."
+    },
+    {
+      "q": "How many parameters does Qwen3.8-Max have?",
+      "a": "Qwen3.8-Max is a sparse Mixture-of-Experts model with 2.4 trillion total parameters and 95 billion active parameters per token. The active-parameter count was not disclosed at the July preview and was published with the August 3 general-availability release."
+    },
+    {
+      "q": "What is Qwen3.8-Max's context window?",
+      "a": "Qwen3.8-Max has a 1M-token context window — roughly 991,000 tokens of input and up to 131,072 tokens of output per request — priced as a single flat tier with no rate change at any threshold. Its maximum reasoning budget is about 262,000 tokens."
+    },
+    {
+      "q": "How much does Qwen3.8-Max cost?",
+      "a": "Qwen3.8-Max is $2.00 per million input tokens and $6.00 per million output tokens (including thinking tokens) on Alibaba Cloud Model Studio. Implicit cache reads are $0.25 per million tokens (a 90% discount on input), explicit cache creation is $2.50 per million, and explicit cache reads are $0.17 per million tokens."
+    },
+    {
+      "q": "Is Qwen3.8-Max open source?",
+      "a": "Not on release day. Qwen3.8-Max was proprietary and API-only on August 3, 2026, but Alibaba announced that it would release the weights of Qwen3.8-Max — along with a companion Qwen3.8-27B checkpoint — on Hugging Face and ModelScope the week of August 10, 2026. This makes it the first Max-class Qwen model with open weights on the roadmap. The weight license had not been published at launch."
+    },
+    {
+      "q": "What modalities does Qwen3.8-Max support?",
+      "a": "Qwen3.8-Max natively accepts text, image, and video input, and returns text output. Alibaba positions it as the first Qwen model above one trillion parameters to be natively multimodal."
+    }
+  ],
+  "versionHistory": [
+    {
+      "version": "Qwen3.8-Max",
+      "slug": "qwen3-8-max",
+      "date": "2026-08-03",
+      "note": "First multimodal Qwen above one trillion parameters; open-weight release scheduled for the week of August 10, 2026.",
+      "current": true
+    },
+    {
+      "version": "Qwen3.8-Max-Preview",
+      "slug": "qwen3-8-max-preview",
+      "date": "2026-07-19",
+      "note": "WAIC Shanghai preview of the 2.4T-parameter multimodal Qwen-Max flagship."
+    },
+    {
+      "version": "Qwen3.7-Max",
+      "slug": "qwen3-7-max",
+      "date": "2026-05"
+    },
+    {
+      "version": "Qwen3-Max",
+      "slug": "qwen3-max",
+      "date": "2025-09"
+    },
+    {
+      "version": "Qwen2.5-Max",
+      "slug": "qwen2-5-max",
+      "date": "2025-01-29"
+    }
+  ]
+}

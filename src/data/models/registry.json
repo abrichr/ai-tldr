@@ -2201,9 +2201,27 @@
           "blurb": "Alibaba's proprietary, API-only flagship — its largest and most capable text/reasoning model, accessible through Alibaba Cloud Model Studio.",
           "versions": [
             {
+              "name": "Qwen3.8-Max",
+              "slug": "qwen3-8-max",
+              "blurb": "Alibaba's August 2026 Qwen-Max flagship — a 2.4T-parameter multimodal MoE (95B active) with a 1M-token context, priced at $2 / $6 per million tokens; open weights scheduled for the week of August 10, 2026.",
+              "tags": [
+                "frontier",
+                "proprietary",
+                "multimodal",
+                "reasoning",
+                "long-context",
+                "agentic"
+              ],
+              "contextWindow": "1M",
+              "license": "Proprietary (open weights pending)",
+              "date": "2026-08-03",
+              "current": true,
+              "rich": true
+            },
+            {
               "name": "Qwen3.8-Max-Preview",
               "slug": "qwen3-8-max-preview",
-              "blurb": "Preview of Alibaba's next Qwen-Max flagship — a 2.4-trillion-parameter multimodal MoE model unveiled at WAIC Shanghai on 2026-07-19; open weights promised, no date set.",
+              "blurb": "WAIC Shanghai preview of Alibaba's Qwen3.8-Max flagship — a 2.4-trillion-parameter multimodal MoE model, unveiled on 2026-07-19 and superseded by the August 3, 2026 general-availability release.",
               "tags": [
                 "proprietary",
                 "multimodal",
@@ -2216,7 +2234,7 @@
             {
               "name": "Qwen3.7-Max",
               "slug": "qwen3-7-max",
-              "blurb": "Text-only reasoning agent flagship with a 1M-token context window and native extended-thinking mode, built for long-horizon agentic workloads; propri…",
+              "blurb": "Text-only reasoning agent flagship of the Qwen-Max line released in May 2026, with a 1M-token context window and native extended-thinking mode, built for long-horizon agentic workloads.",
               "tags": [
                 "proprietary",
                 "reasoning",
@@ -2226,7 +2244,6 @@
               ],
               "license": "Proprietary",
               "date": "2026-05",
-              "current": true,
               "rich": true
             },
             {

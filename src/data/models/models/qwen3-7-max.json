@@ -23,7 +23,7 @@
     "agentic"
   ],
   "overview": [
-    "Qwen3.7-Max is the current flagship of Alibaba's Qwen-Max line, announced by the Qwen team around the 2026 Alibaba Cloud Summit (May 19-21, 2026) and made available the same week through Alibaba Cloud Model Studio. It is a proprietary, closed-weight model positioned explicitly for the \"agent era\": Alibaba describes it as its most capable agent foundation to date, equally suited to writing and debugging code, automating office workflows, and sustaining long-horizon tasks that span hundreds or thousands of steps.",
+    "Qwen3.7-Max is the May 2026 flagship of Alibaba's Qwen-Max line, announced by the Qwen team around the 2026 Alibaba Cloud Summit (May 19-21, 2026) and made available the same week through Alibaba Cloud Model Studio; it was superseded within the line by Qwen3.8-Max on August 3, 2026. It is a proprietary, closed-weight model positioned explicitly for the \"agent era\": Alibaba described it as its most capable agent foundation at launch, equally suited to writing and debugging code, automating office workflows, and sustaining long-horizon tasks that span hundreds or thousands of steps.",
     "Technically, Qwen3.7-Max ships with a 1M-token context window (double the 256K of the earlier Qwen3.6 Max Preview) and a maximum output of 65,536 tokens. It is a text-only model — there is no image, audio, or video input — and uses native extended-thinking (chain-of-thought) reasoning. Its headline demonstration is a 35-hour, fully autonomous kernel-optimization run comprising over 1,000 tool calls, which Alibaba cites as evidence that the model holds coherent state across extremely long agentic horizons. It supports OpenAI- and Anthropic-compatible APIs and can be driven by external harnesses such as Claude Code.",
     "On the Artificial Analysis Intelligence Index v4.0 it scored 56.6 at launch — ranked #5 overall and the highest-placed Chinese model at the time — a 4.8-point gain over Qwen3.6 Max Preview. It posts strong coding-agent results (80.4 on SWE-Bench Verified, 69.7 on Terminal-Bench 2.0, 76.4 on MCP-Atlas) and 92.4 on GPQA Diamond. Pricing is $2.50 / $7.50 per million input/output tokens (with $0.25 cached input), and Alibaba ran a 50% launch promotion at $1.25 / $3.75. The model is also cross-listed on OpenRouter and Together AI."
   ],
@@ -91,6 +91,16 @@
     }
   ],
   "versionHistory": [
+    {
+      "version": "Qwen3.8-Max",
+      "slug": "qwen3-8-max",
+      "date": "2026-08-03"
+    },
+    {
+      "version": "Qwen3.8-Max-Preview",
+      "slug": "qwen3-8-max-preview",
+      "date": "2026-07-19"
+    },
     {
       "version": "Qwen3.7-Max",
       "slug": "qwen3-7-max",
