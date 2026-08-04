@@ -28420,6 +28420,31 @@
         "dataset",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260804t212146z",
+      "timestamp": "2026-08-04T21:21:46.072Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep: everything qualifying inside the 72h window (Qwen 3.8-Max, MiniMax H3, and the four Wes Roth / Two Minute Papers videos on Qwen, Astra, DeepSeek V4-Flash 0731 and NVIDIA humanoids) was already ingested by an earlier sweep. Anthropic Claude breach disclosure (Jul 30) and OpenAI Astra ten-proofs blog (Aug 1) both fall outside the 72h date cap. Nothing else met the inclusion bar.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "video",
+        "repo",
+        "paper",
+        "ecosystem",
+        "dataset",
+        "benchmark",
+        "article"
+      ]
     }
   ]
 }
