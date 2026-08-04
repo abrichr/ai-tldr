@@ -28241,6 +28241,41 @@
         "security",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260804t051025z",
+      "timestamp": "2026-08-04T05:10:25.480Z",
+      "source": "github-actions-sweep",
+      "summary": "Added 1 item: Interconnects' Artifacts Hub + Adoption Dashboard (Nathan Lambert + Project VAIL, Aug 3). Searched lab blogs (Anthropic/OpenAI/DeepMind/Meta/Mistral/xAI/Cohere/Qwen/DeepSeek/Moonshot/ByteDance Seed), GitHub trending, HuggingFace models/datasets/papers, HN front page, Simon Willison, Interconnects, TechCrunch AI, Cloudflare blog, YouTube RSS (all 8 channels — GitHub-Actions IPs got 404/500 across all channels, so 0 fresh videos as ship-ready records). No new model releases from the top labs in the 72h window; the Cloudflare 'Smaller/faster/safer' Kimi+GLM engineering post on HN (177 pts) had no verifiable byline authors so was skipped rather than fabricate an author for the required article field.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "interconnects-artifacts-hub-aug3",
+          "title": "Artifacts Hub — Interconnects launches open-model tracking dashboards",
+          "category": "tool",
+          "note": "Nathan Lambert (Interconnects) launched Artifacts Hub (artifactshub.ai) + Adoption Dashboard (dashboard.interconnects.ai) on Aug 3, 2026 with Project VAIL. Tracks 794 open models from 267 organizations across 23 batches, combining HF downloads, OpenRouter inference tokens, and Artificial Analysis benchmarks. Influential-voice tool release, fresh within 72h, all four URLs verified 200."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "resource",
+        "video",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }

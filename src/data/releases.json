@@ -1,8 +1,74 @@
 {
-  "generatedAt": "2026-08-04T02:03:41.067Z",
+  "generatedAt": "2026-08-04T05:10:25.480Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "interconnects-artifacts-hub-aug3",
+      "categories": [
+        "tool",
+        "resource"
+      ],
+      "title": "Artifacts Hub — Interconnects launches open-model tracking dashboards",
+      "org": "Interconnects AI",
+      "date": "2026-08-03",
+      "url": "https://www.interconnects.ai/p/introducing-our-artifacts-hub-and",
+      "summary": "Interconnects and Project VAIL launched Artifacts Hub and an Adoption Dashboard on Aug 3. The hub tracks 794 open models from 267 organizations, combining Hugging Face downloads, OpenRouter inference tokens, and Artificial Analysis benchmark scores in one filterable view.",
+      "tags": [
+        "tool",
+        "resource",
+        "open-models",
+        "interconnects",
+        "nathan-lambert",
+        "vail",
+        "huggingface",
+        "artificial-analysis",
+        "openrouter",
+        "open-source",
+        "dashboard",
+        "adoption-tracking"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Interconnects ships two free tools that track open-model releases and adoption across geographies and organizations.",
+        "whatIsIt": "Artifacts Hub is a free, curated view of the open-model ecosystem — 794 models from 267 organizations across 23 monthly batches, with performance metrics, downloads, and inference usage shown side by side. It builds on Nathan Lambert's Interconnects 'Latest open artifacts' series and was built with Project VAIL.",
+        "howItWorks": "The hub pulls model metadata from Hugging Face, layers in benchmark scores from Artificial Analysis and inference-token counts from OpenRouter, then adds curated adoption metrics. The paired Adoption Dashboard breaks download and derivative-model counts down by geography and lab, so anyone can see which regions and organizations are pulling ahead in open-weight adoption.",
+        "whyItMatters": "Tracking open-model adoption previously required stitching together Hugging Face download counts, OpenRouter usage, and eval scores from separate sites. The Artifacts Hub puts them in one filterable place so researchers can compare 267 labs at once. The Adoption Dashboard adds a geographic layer, useful for anyone watching the US-China open-weights race Nathan Lambert has been writing about.",
+        "forWho": "AI researchers, open-model analysts, journalists tracking the ecosystem.",
+        "tryIt": "https://artifactshub.ai/"
+      },
+      "image": {
+        "url": "https://substackcdn.com/image/fetch/$s_!lbEA!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdff5e29d-7c81-4f81-a64b-10d9b9bbecbc_2856x1577.png",
+        "alt": "Interconnects Artifacts Hub — open-model tracking dashboard header",
+        "fit": "cover",
+        "credit": "Interconnects / Nathan Lambert"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.interconnects.ai/p/introducing-our-artifacts-hub-and"
+        },
+        {
+          "label": "Artifacts Hub",
+          "url": "https://artifactshub.ai/"
+        },
+        {
+          "label": "Adoption Dashboard",
+          "url": "https://dashboard.interconnects.ai/"
+        },
+        {
+          "label": "Project VAIL",
+          "url": "https://projectvail.com/"
+        }
+      ],
+      "author": {
+        "name": "Nathan Lambert",
+        "handle": "natolambert",
+        "profileUrl": "https://www.interconnects.ai/",
+        "avatarUrl": "https://github.com/natolambert.png"
+      },
+      "publishDate": "2026-08-04T05:10:25.480Z"
+    },
     {
       "id": "microsoft-mai-realtime-rumor-aug2",
       "categories": [
