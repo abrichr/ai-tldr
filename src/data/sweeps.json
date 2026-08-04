@@ -28357,6 +28357,38 @@
         "ecosystem",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260804t175126z",
+      "timestamp": "2026-08-04T17:51:26.423Z",
+      "source": "github-actions-sweep",
+      "summary": "Added one item: ryanzhou's Apache-2.0 stack running DeepSeek V4-Flash unquantized on a single AMD MI300X (HN 286 pts, freshly published today). Lab blogs mostly quiet — only Mistral Shieldstral (already in feed) and an Anthropic exec-hire (not a release). All four fresh YouTube videos from the RSS scan were already in the feed. GitHub trending, HF top models, HF papers, and the bio/neuro lane produced no fresh qualifying items.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "ryanzhou-deepseek-v4-flash-mi300x",
+          "title": "DeepSeek V4-Flash on one MI300X — 168 tok/s decode, no quantization",
+          "category": "repo",
+          "note": "Repo created 2026-08-04, HN top 30 with 286 points and 62 comments; passes bar 1 (HN ≥150). Ships FP8/MXFP4/GEMM patches specific to gfx942 that vanilla vLLM lacks; runs the model unquantized in 156.67 GiB HBM. Semantic-distinct from wafer-kimi-k3-mi355x (different model + GPU) and antirez-ds4 (Apple Silicon C/Metal engine, not AMD)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "repo",
+        "showcase",
+        "tool",
+        "model",
+        "video",
+        "paper",
+        "dataset",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }

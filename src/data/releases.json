@@ -1,8 +1,67 @@
 {
-  "generatedAt": "2026-08-04T14:31:46.761Z",
+  "generatedAt": "2026-08-04T17:51:26.423Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "ryanzhou-deepseek-v4-flash-mi300x",
+      "categories": [
+        "repo",
+        "showcase",
+        "tool"
+      ],
+      "title": "DeepSeek V4-Flash on one MI300X — 168 tok/s decode, no quantization",
+      "org": "ryanzhou",
+      "date": "2026-08-04",
+      "url": "https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
+      "summary": "ryanzhou publishes a production stack that runs DeepSeek V4-Flash unquantized on a single AMD MI300X GPU. It hits 168 tok/s single-stream decode, 830 tok/s across 64 streams, and 256K validated context.",
+      "tags": [
+        "deepseek-v4-flash",
+        "amd",
+        "mi300x",
+        "rocm",
+        "vllm",
+        "inference",
+        "fp8",
+        "open-source",
+        "kernel-tuning",
+        "self-hosted"
+      ],
+      "importance": "notable",
+      "metrics": {
+        "Stars (day 1)": 64,
+        "HN points": 286,
+        "Decode": "168.6 tok/s",
+        "License": "Apache-2.0"
+      },
+      "explainer": {
+        "tagline": "Docker Compose stack that runs the full 304B DeepSeek V4-Flash unquantized on a single AMD MI300X, hitting 168 tok/s decode.",
+        "whatIsIt": "deepseek-v4-flash-mi300x is an Apache-2.0 vLLM overlay from developer ryanzhou that runs the full 304B DeepSeek V4-Flash model on one AMD MI300X GPU without weight quantization. The whole 156.67 GiB of weights fits in HBM3.",
+        "howItWorks": "The stack fixes AMD's FNUZ FP8 cache-writer for the MI300X, patches MXFP4 routing corruption that hurt tool-calling accuracy, ships 21 GEMM shapes tuned for gfx942, and pairs a 20 GB GPU KV cache with a 96 GiB CPU KV tier. DSpark speculative decoding adds probabilistic drafting with causal verification.",
+        "whyItMatters": "The MI300X has been an option on paper for months, but vanilla vLLM misbehaved on FP8 and MoE routing. This Apache-2.0 stack drops a ready-to-run Docker Compose setup that rents for about $1.99/hr on AMD Developer Cloud, giving self-hosted teams a cheaper, un-quantized alternative to NVIDIA for the flagship DeepSeek model.",
+        "forWho": "AMD GPU users, self-hosted inference teams",
+        "tryIt": "git clone https://github.com/ryanzhou/deepseek-v4-flash-mi300x"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/fe062dd43f9d925b03fc8898d6e0c18a6feb16d0acee68ba0a23d6df376984bb/ryanzhou/deepseek-v4-flash-mi300x",
+        "alt": "GitHub repository card for ryanzhou/deepseek-v4-flash-mi300x"
+      },
+      "links": [
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/ryanzhou/deepseek-v4-flash-mi300x"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49166386"
+        },
+        {
+          "label": "DeepSeek V4-Flash Model",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"
+        }
+      ],
+      "publishDate": "2026-08-04T17:51:26.423Z"
+    },
     {
       "id": "mistral-shieldstral-1-0",
       "categories": [
