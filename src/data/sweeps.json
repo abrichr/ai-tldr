@@ -28445,6 +28445,37 @@
         "benchmark",
         "article"
       ]
+    },
+    {
+      "id": "sweep-20260804t230400z",
+      "timestamp": "2026-08-04T23:04:00.737Z",
+      "source": "github-actions-sweep",
+      "summary": "One qualifying release: Liquid AI's LFM2.5-2.6B (Aug 4) — 2.6B open-weight on-device agent, 128K context, ~34T-token pretrain, day-zero llama.cpp/MLX/vLLM/SGLang/ONNX support. Anthropic/OpenAI/DeepMind/Meta/xAI/Cohere/Moonshot/Qwen/DeepSeek quiet on new models; the 4 fresh YouTube uploads and Simon Willison's newest posts were already in the feed.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "liquidai-lfm2-5-2-6b",
+          "title": "LFM2.5-2.6B — Liquid AI's 2.6B on-device agent competes with 4x-larger models",
+          "category": "model",
+          "note": "Verified today on Liquid AI's blog, HF model card, HF blog, and cross-checked against a same-day X post + AI Weekly writeup. Open weights, full training/inference numbers, five inference backends day-zero — clears major bar for a real lab shipping a real model within 72h. Not seismic (Liquid AI is not one of the top-lab list; no SOTA claim)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "video",
+        "paper",
+        "tool",
+        "article",
+        "dataset",
+        "algorithm"
+      ]
     }
   ]
 }

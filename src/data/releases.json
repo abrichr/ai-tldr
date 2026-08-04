@@ -1,8 +1,119 @@
 {
-  "generatedAt": "2026-08-04T21:21:46.072Z",
+  "generatedAt": "2026-08-04T23:04:00.737Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "liquidai-lfm2-5-2-6b",
+      "categories": [
+        "model"
+      ],
+      "title": "LFM2.5-2.6B — Liquid AI's 2.6B on-device agent competes with 4x-larger models",
+      "org": "Liquid AI",
+      "date": "2026-08-04",
+      "url": "https://www.liquid.ai/blog/lfm2-5-2-6b",
+      "summary": "Liquid AI released LFM2.5-2.6B, an open-weight 2.6B agent model trained on ~34T tokens with a 128K context. It runs 30 tok/s on a phone and 220 tok/s on Apple M5 Max, and leads Gemma-4 and Qwen3.5 on tool use and instruction following.",
+      "tags": [
+        "liquid-ai",
+        "lfm2-5",
+        "lfm",
+        "on-device",
+        "edge-ai",
+        "small-language-model",
+        "open-weights",
+        "agentic",
+        "tool-use",
+        "long-context",
+        "apple-silicon",
+        "huggingface"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Parameters": "2.6B",
+        "Context": "128K",
+        "Speed (M5 Max)": "220 tok/s"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Liquid AI"
+        },
+        {
+          "label": "Parameters",
+          "value": "2.69B (dense, 30 layers)"
+        },
+        {
+          "label": "Architecture",
+          "value": "22 double-gated conv + 8 GQA layers"
+        },
+        {
+          "label": "Context window",
+          "value": "131,072 tokens (128K)"
+        },
+        {
+          "label": "Training data",
+          "value": "~34T tokens, 16 languages"
+        },
+        {
+          "label": "License",
+          "value": "LFM Open License 1.0 (Apache-2.0 based, revenue cap $10M)"
+        },
+        {
+          "label": "Availability",
+          "value": "Open weights on Hugging Face; llama.cpp, MLX, vLLM, SGLang, ONNX"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much does LFM2.5-2.6B cost to use?",
+          "a": "LFM2.5-2.6B is free to download and run under Liquid AI's LFM Open License 1.0, which is based on Apache 2.0. Companies with annual revenue under $10M USD may use it commercially at no cost; larger companies must contact Liquid AI for a commercial license. There is no hosted API tier."
+        },
+        {
+          "q": "How does LFM2.5-2.6B compare to Gemma-4 and Qwen3.5?",
+          "a": "LFM2.5-2.6B leads every instruction-following benchmark Liquid AI tested and beats Gemma-4 5.1B and Qwen3.5 4.7B on tool use, trailing only Qwen3.5-9B on one BFCLv4 subtest. It lags Qwen3.5-9B on math (AIME25 51.87 vs 56.07) and code (LiveCodeBench 59.41 vs 69.86) — Qwen3.5-9B is 3.6x larger."
+        },
+        {
+          "q": "What hardware can run LFM2.5-2.6B?",
+          "a": "LFM2.5-2.6B fits in under 2.5 GB and runs at 30 tok/s on modern phones, 113 tok/s on an AMD Ryzen AI Max+, 220 tok/s on an Apple M5 Max CPU, and ~15K tok/s at high concurrency on an H100 GPU. Data never leaves the device."
+        },
+        {
+          "q": "Which inference frameworks support it?",
+          "a": "LFM2.5-2.6B ships with day-zero support for llama.cpp (GGUF), Apple MLX, vLLM, SGLang, and ONNX. Base and instruction-tuned checkpoints are on Hugging Face under LiquidAI/LFM2.5-2.6B, and a WebGPU browser demo runs entirely client-side."
+        }
+      ],
+      "explainer": {
+        "tagline": "A 2.6B open-weight agent that plans, calls tools, and runs entirely on phones, laptops, and robots.",
+        "whatIsIt": "LFM2.5-2.6B is Liquid AI's new 2.6B-parameter open-weight language model, built for agentic workflows that run entirely on-device. It ships with base and instruction-tuned checkpoints on Hugging Face, a 128K context window, and support for 16 languages.",
+        "howItWorks": "The 30-layer hybrid stacks 22 double-gated convolution blocks with 8 grouped-query attention layers, pre-trained on ~34T tokens. Post-training turns the base into an agent through supervised fine-tuning, per-domain teacher distillation, multi-domain on-policy distillation, and a final agentic reinforcement-learning stage.",
+        "whyItMatters": "LFM2.5-2.6B lets developers deploy planning, tool calling, and multi-step reasoning without a cloud round-trip — 30 tok/s on a phone and 220 tok/s on an M5 Max CPU — while beating Gemma-4 and Qwen3.5 4.7B on tool use and instruction following. Data stays on the device and the marginal cost per run is essentially zero.",
+        "forWho": "developers shipping local agents on phones, laptops, or robots",
+        "tryIt": "huggingface.co/LiquidAI/LFM2.5-2.6B"
+      },
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/LiquidAI/LFM2.5-2.6B.png",
+        "alt": "Liquid AI LFM2.5-2.6B model card social thumbnail on Hugging Face",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.liquid.ai/blog/lfm2-5-2-6b"
+        },
+        {
+          "label": "HF Blog",
+          "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-2-6b"
+        },
+        {
+          "label": "Model (base + instruct)",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-2.6B"
+        },
+        {
+          "label": "License",
+          "url": "https://www.liquid.ai/lfm-license"
+        }
+      ],
+      "publishDate": "2026-08-04T23:04:00.737Z"
+    },
     {
       "id": "warp-agent-cli",
       "categories": [
