@@ -1,8 +1,217 @@
 {
-  "generatedAt": "2026-08-04T05:10:25.480Z",
+  "generatedAt": "2026-08-04T08:37:32.376Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "cloudflare-workers-ai-kimi-glm-fp8",
+      "categories": [
+        "tool",
+        "article"
+      ],
+      "title": "Cloudflare Workers AI — FP8 doubles Kimi K2.6 context, INT4 cuts GLM 5.2 40%",
+      "org": "Cloudflare",
+      "date": "2026-08-03",
+      "url": "https://blog.cloudflare.com/smaller-faster-safer-models/",
+      "summary": "Cloudflare quantized two of the biggest models on Workers AI. FP8 KV cache doubles Kimi K2.6 context from 686K to 1.37M tokens; INT4 weights shrink GLM 5.2 from 705 GB to 421 GB and speed decode up to 55%.",
+      "tags": [
+        "cloudflare",
+        "workers-ai",
+        "kimi-k2-6",
+        "glm-5-2",
+        "quantization",
+        "fp8",
+        "int4",
+        "kv-cache",
+        "inference",
+        "moonshot",
+        "zhipu",
+        "moe"
+      ],
+      "importance": "major",
+      "metrics": {
+        "kimi-context": "686K → 1.37M tokens",
+        "glm-checkpoint": "705 GB → 421 GB"
+      },
+      "quickFacts": [
+        {
+          "label": "Vendor",
+          "value": "Cloudflare"
+        },
+        {
+          "label": "Service",
+          "value": "Workers AI"
+        },
+        {
+          "label": "Change",
+          "value": "FP8 KV cache + INT4 weights"
+        },
+        {
+          "label": "Kimi K2.6 context",
+          "value": "686K → 1.37M tokens"
+        },
+        {
+          "label": "Kimi K2.6 throughput",
+          "value": "+41% at 64 concurrent"
+        },
+        {
+          "label": "GLM 5.2 checkpoint",
+          "value": "705 GB → 421 GB"
+        },
+        {
+          "label": "GLM 5.2 decode speed",
+          "value": "+55% at low concurrency"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much cheaper are Kimi K2.6 calls on Cloudflare Workers AI now?",
+          "a": "Cloudflare says the FP8 KV cache work drops Kimi K2.6 serving cost roughly 30% at 64 concurrent requests, on top of a 41% throughput gain and a context window that doubles from 686,000 to 1.37 million tokens. Existing Workers AI callers see the change with no code edits."
+        },
+        {
+          "q": "Do developers need to change any code?",
+          "a": "No. The FP8 KV cache and INT4 weight compression are backend changes on Cloudflare Workers AI, so every existing call to Kimi K2.6 or GLM 5.2 picks up the longer context, higher throughput, and lower cost automatically. The API surface stays the same."
+        },
+        {
+          "q": "How much accuracy is lost from FP8 and INT4?",
+          "a": "Cloudflare frames both as effectively lossless for these two models. New cache integrity checks add under 1% throughput and latency overhead as part of the quantization pipeline, and Cloudflare shipped the change after internal validation against the BF16 and 8-bit checkpoints."
+        },
+        {
+          "q": "Which other Workers AI models get the same treatment?",
+          "a": "Cloudflare's post targets Kimi K2.6 and GLM 5.2 specifically because both are large mixture-of-experts models where quantization pays off most. Cloudflare has previously shipped BF16 exponent compression via Unweight for smaller LLMs, but this post covers only the two frontier open models."
+        }
+      ],
+      "explainer": {
+        "tagline": "FP8 KV cache and INT4 weights land on Workers AI, doubling context and shrinking checkpoints for Kimi K2.6 and GLM 5.2.",
+        "whatIsIt": "Cloudflare quantized how Workers AI serves two of the biggest open MoE models. Kimi K2.6's KV cache now runs at FP8 instead of BF16 — that alone doubles the context window and cuts serving cost. GLM 5.2's weights compress from 8-bit to 4-bit, shrinking each checkpoint from 705 GB to 421 GB per GPU.",
+        "howItWorks": "The FP8 KV cache trade halves per-token memory during attention, so the same GPUs hold twice as many tokens — Kimi K2.6 jumps from 686,000 to 1.37 million. GLM 5.2's INT4 weight compression frees GPU memory for 1.18 million tokens of KV cache per card and speeds decode up to 55% at low concurrency. Added cache integrity checks cost under 1% throughput.",
+        "whyItMatters": "Anyone calling Kimi K2.6 or GLM 5.2 on Workers AI now gets longer context, faster responses, and roughly 30% lower cost — with no code change. Two of the biggest open models get cheaper to serve at scale on the same hardware.",
+        "forWho": "developers using Workers AI",
+        "tryIt": "https://developers.cloudflare.com/workers-ai/models/"
+      },
+      "image": {
+        "url": "https://blog.cloudflare.com/_emdash/api/media/file/01KZ1Q04GM9SA4QGPGPKWJQSJ6.png",
+        "alt": "Cloudflare Workers AI header for Kimi and GLM quantization work",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Cloudflare blog post",
+          "url": "https://blog.cloudflare.com/smaller-faster-safer-models/"
+        },
+        {
+          "label": "Workers AI models",
+          "url": "https://developers.cloudflare.com/workers-ai/models/"
+        },
+        {
+          "label": "HN discussion",
+          "url": "https://news.ycombinator.com/item?id=49158581"
+        }
+      ],
+      "publishDate": "2026-08-04T08:37:32.376Z"
+    },
+    {
+      "id": "swiftlet-qwen-metal",
+      "categories": [
+        "repo",
+        "tool"
+      ],
+      "title": "Swiftlet — 80B Qwen runs in 4.3 GB on a Mac, 35B on an iPhone",
+      "org": "leonickson1",
+      "date": "2026-08-03",
+      "url": "https://github.com/leonickson1/Swiftlet",
+      "summary": "Swiftlet is an Apache-2.0 Swift and Metal runtime that streams routed MoE experts from disk on demand. It runs Qwen3-Next and Qwen3.5/3.6 hybrid MoE models on Apple hardware — 80B in 4.3 GB peak RAM on a Mac, 35B in about 2.5 GB on an iPhone 17.",
+      "tags": [
+        "swiftlet",
+        "apple",
+        "metal",
+        "swift",
+        "on-device",
+        "qwen",
+        "moe",
+        "mixture-of-experts",
+        "streaming",
+        "iphone",
+        "mac",
+        "local-llm",
+        "apache-2",
+        "repo"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Swift and Metal runtime that runs Qwen 35B on an iPhone and 80B on a Mac by streaming MoE experts from local storage.",
+        "whatIsIt": "Swiftlet is an Apache-2.0 project from developer leonickson1 that hosts Qwen3-Next and Qwen3.5/3.6 hybrid MoE models on Apple devices. The trick: only a small dense core sits in RAM, and the routed mixture-of-experts weights stream from local storage as tokens need them.",
+        "howItWorks": "Every token routes through a small subset of experts, so Swiftlet only needs the active experts in memory. The routed weights stream from disk on demand while a small dense core stays resident — Swiftlet drops an 80B footprint from tens of gigabytes of RAM to about 4.3 GB peak, at the cost of extra storage I/O.",
+        "whyItMatters": "MoE models of this size have needed workstations or servers. Swiftlet makes a 35B model feasible on an iPhone 17 at about 2.5 GB peak RAM and ~1 token/second, and 80B feasible on a consumer Mac at 4.3 GB RAM and 4.5–5 tokens/second decode. No cloud call, no data leaves the device.",
+        "forWho": "iOS and macOS developers, on-device AI hobbyists",
+        "tryIt": "git clone https://github.com/leonickson1/Swiftlet"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/aee21e068307c0f774c8adad0bb967e3ad2569a03b0cb9952ba041d64d71199a/leonickson1/Swiftlet",
+        "alt": "Swiftlet GitHub repository social card"
+      },
+      "links": [
+        {
+          "label": "GitHub repo",
+          "url": "https://github.com/leonickson1/Swiftlet"
+        },
+        {
+          "label": "HN discussion",
+          "url": "https://news.ycombinator.com/item?id=49158333"
+        }
+      ],
+      "publishDate": "2026-08-04T08:37:32.376Z"
+    },
+    {
+      "id": "wes-roth-qwen-crashed-industry",
+      "categories": [
+        "video"
+      ],
+      "title": "Wes Roth — 'QWEN just CRASHED the industry'",
+      "org": "Wes Roth",
+      "date": "2026-08-04",
+      "url": "https://www.youtube.com/watch?v=bjmbKdFOW_I",
+      "summary": "Wes Roth's take on Alibaba's Aug 3 Qwen3.8-Max launch — the 2.4T MoE flagship Alibaba positioned against Anthropic Fable 5, with open-weight siblings promised for next week.",
+      "tags": [
+        "video",
+        "wes-roth",
+        "qwen",
+        "qwen3-8-max",
+        "alibaba",
+        "moe",
+        "frontier-model",
+        "open-weights"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Wes Roth walks through Alibaba's Qwen3.8-Max launch and what a 2.4T MoE flagship with open-weight siblings means for the model market.",
+        "whatIsIt": "A fresh AI-news breakdown from Wes Roth reacting to Alibaba's Aug 3 launch of Qwen3.8-Max — a 2.4-trillion-parameter mixture-of-experts flagship that accepts text, image, and video as input. Roth's channel covers frontier AI announcements for a general developer audience.",
+        "howItWorks": "The video reacts to Alibaba's own launch materials for Qwen3.8-Max, including the announced benchmark table where Alibaba positions the new flagship against Anthropic Fable 5 and Moonshot Kimi K3. Alibaba has also promised open weights for a smaller Qwen3.8-27B sibling within the following week.",
+        "whyItMatters": "Qwen3.8-Max is the biggest Qwen model to date and the first Max-class Qwen positioned as a Fable 5 competitor. A Wes Roth explainer surfaces the news to viewers who don't track Alibaba's China-first launches, and previews the Qwen3.8-27B open-weights drop that follows.",
+        "forWho": "AI-news viewers, developers tracking Chinese frontier labs",
+        "tryIt": "https://www.youtube.com/watch?v=bjmbKdFOW_I"
+      },
+      "author": {
+        "name": "Wes Roth",
+        "profileUrl": "https://www.youtube.com/@WesRoth"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/bjmbKdFOW_I/hqdefault.jpg",
+        "alt": "Wes Roth video thumbnail for QWEN just CRASHED the industry",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=bjmbKdFOW_I"
+        },
+        {
+          "label": "Wes Roth channel",
+          "url": "https://www.youtube.com/@WesRoth"
+        }
+      ],
+      "publishDate": "2026-08-04T08:37:32.376Z"
+    },
     {
       "id": "interconnects-artifacts-hub-aug3",
       "categories": [

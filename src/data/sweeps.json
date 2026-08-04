@@ -28276,6 +28276,53 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260804t083732z",
+      "timestamp": "2026-08-04T08:37:32.376Z",
+      "source": "github-actions-sweep",
+      "summary": "Added 3 items: Cloudflare Workers AI FP8/INT4 quantization for Kimi K2.6 and GLM 5.2 (major), the Swiftlet Apache-2.0 Metal runtime that streams Qwen MoE experts on iPhone and Mac (notable repo), and Wes Roth's breakdown of Alibaba's Qwen3.8-Max launch (notable video). Anthropic/OpenAI/DeepMind/Meta/Mistral/Cohere blogs quiet in the last 72h; Qwen3.8-Max already covered; MAI-Cyber-1-Flash already in feed; two other HN candidates dropped (LLMs reward expertise from July 24 fails 72h, Ankur Sethi opinion piece is not a release).",
+      "counts": {
+        "added": 3,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "cloudflare-workers-ai-kimi-glm-fp8",
+          "title": "Cloudflare Workers AI — FP8 doubles Kimi K2.6 context, INT4 cuts GLM 5.2 40%",
+          "category": "tool",
+          "note": "HN 210 pts + Cloudflare blog Aug 3 — clear inclusion. Real infra change devs feel immediately."
+        },
+        {
+          "id": "swiftlet-qwen-metal",
+          "title": "Swiftlet — 80B Qwen runs in 4.3 GB on a Mac, 35B on an iPhone",
+          "category": "repo",
+          "note": "Show HN 156 pts + Apache-2.0 repo pushed Aug 3 — clears HN top-30 bar. Distinct from WASTE (that's Kimi K3 via NVMe on laptop; this is Qwen 3-Next / 3.5 / 3.6 MoE via Metal on iPhone and Mac)."
+        },
+        {
+          "id": "wes-roth-qwen-crashed-industry",
+          "title": "Wes Roth — 'QWEN just CRASHED the industry'",
+          "category": "video",
+          "note": "Fresh video (4h) from listed creator, subject is Qwen3.8-Max. Semantic dedup exception applies (creator video coexists with the release entry per Hard Rule 3)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "rumor",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
