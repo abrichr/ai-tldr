@@ -1,8 +1,155 @@
 {
-  "generatedAt": "2026-08-05T17:37:13.985Z",
+  "generatedAt": "2026-08-05T19:33:56.209Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "google-deepmind-hassabis-chair-aug5",
+      "categories": [
+        "ecosystem"
+      ],
+      "title": "Google DeepMind restructure — Hassabis moves to Chair, Jeff Dean departs",
+      "org": "Google",
+      "date": "2026-08-05",
+      "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+      "summary": "Sundar Pichai moves Demis Hassabis from Google DeepMind CEO to Chair and Alphabet Chief Scientist. Jeff Dean leaves Google after 27 years to start Discovery Loop with Oriol Vinyals and Sanjay Ghemawat.",
+      "tags": [
+        "deepmind",
+        "google-deepmind",
+        "leadership",
+        "restructure",
+        "hassabis",
+        "jeff-dean",
+        "discovery-loop",
+        "kavukcuoglu"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Old role (Hassabis)",
+          "value": "CEO, Google DeepMind"
+        },
+        {
+          "label": "New role (Hassabis)",
+          "value": "Chair, Google DeepMind + Alphabet Chief Scientist"
+        },
+        {
+          "label": "New DeepMind SVP",
+          "value": "Koray Kavukcuoglu (former CTO, 13 years)"
+        },
+        {
+          "label": "Jeff Dean's next act",
+          "value": "Discovery Loop (public benefit corporation)"
+        },
+        {
+          "label": "Co-founders",
+          "value": "Sanjay Ghemawat, Quoc Le, Oriol Vinyals"
+        },
+        {
+          "label": "Google's stake",
+          "value": "Founding investor + Cloud partner"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Demis Hassabis still involved with Google DeepMind?",
+          "a": "Demis Hassabis stays at Google DeepMind as Chair and takes an additional role as Chief Scientist of parent company Alphabet. Sundar Pichai says the move frees Hassabis to focus on AGI strategy and Isomorphic Labs rather than day-to-day operations, which pass to former CTO Koray Kavukcuoglu."
+        },
+        {
+          "q": "Who is now running Google DeepMind day-to-day?",
+          "a": "Koray Kavukcuoglu takes over as Senior VP of Google DeepMind and reports directly to Sundar Pichai. Kavukcuoglu joined the lab 13 years ago, started its deep learning team, and led work on WaveNet and DQN. He now oversees Gemini model development, frontier AI research, and the Gemini app and developer teams."
+        },
+        {
+          "q": "What is Discovery Loop and who founded it?",
+          "a": "Discovery Loop is a new public benefit corporation founded by Jeff Dean, Sanjay Ghemawat, Quoc Le, and Oriol Vinyals — four Google veterans who together shaped TensorFlow, AlphaFold, Gemini, MapReduce, and BigTable. The company builds AI systems that run thousands of parallel experiments to automate machine-learning research first, then broader science and engineering problems."
+        },
+        {
+          "q": "Does Google keep any stake in Discovery Loop?",
+          "a": "Google is a founding investor in Discovery Loop, its Cloud provider, and a research partner focused on ML systems and infrastructure. The financial terms of Google's stake in Discovery Loop are not disclosed, but the arrangement lets the new company use Google's compute while running as an independent public benefit corporation."
+        }
+      ],
+      "explainer": {
+        "tagline": "Google reshuffles its AI leadership: Hassabis to Chair, Jeff Dean out after 27 years to launch Discovery Loop.",
+        "whatIsIt": "Google DeepMind's biggest leadership change since the 2023 Brain-DeepMind merger. Sundar Pichai promotes Demis Hassabis from CEO of Google DeepMind to Chair of the lab and Chief Scientist of Alphabet. Longtime CTO Koray Kavukcuoglu takes over daily operations as SVP.",
+        "howItWorks": "Kavukcuoglu now runs Gemini model development, frontier AI research, and the Gemini app and developer teams under the new structure. Hassabis focuses on AGI strategy and continues to lead Isomorphic Labs. Jeff Dean, Sanjay Ghemawat, Quoc Le, and Oriol Vinyals leave to found Discovery Loop, a public benefit corporation that automates ML and science experiments using frontier models.",
+        "whyItMatters": "The Google DeepMind restructure moves the lab from founder-led operations to an executive team, and pulls four of Google's most senior AI researchers into a new independent lab. Discovery Loop backed by Google Cloud sits alongside Ineffable Intelligence and other ex-DeepMind spinouts, and further fragments frontier AI talent across new labs.",
+        "forWho": "AI industry watchers, Google Cloud customers, and open-model researchers tracking talent moves at the frontier."
+      },
+      "image": {
+        "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/super-g_1.width-1300.jpg",
+        "alt": "Google's super-G logo on a colorful gradient background — the header image on Sundar Pichai's DeepMind restructure post."
+      },
+      "links": [
+        {
+          "label": "Google Announcement",
+          "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/"
+        },
+        {
+          "label": "Discovery Loop",
+          "url": "https://www.discoveryloop.com/"
+        },
+        {
+          "label": "The Decoder Report",
+          "url": "https://the-decoder.com/google-deepmind-loses-both-its-ceo-and-chief-scientist-as-demis-hassabis-and-jeff-dean-step-down-simultaneously/"
+        },
+        {
+          "label": "9to5Google Details",
+          "url": "https://9to5google.com/2026/08/05/demis-hassabis-deepmind/"
+        }
+      ],
+      "publishDate": "2026-08-05T19:33:56.209Z"
+    },
+    {
+      "id": "two-minute-papers-billion-dollar-ai-race-aug5",
+      "categories": [
+        "video"
+      ],
+      "title": "Two Minute Papers — 'The Billion Dollar AI Race Just Broke'",
+      "org": "Two Minute Papers",
+      "date": "2026-08-05",
+      "url": "https://www.youtube.com/watch?v=ppQh4Tc9BmM",
+      "summary": "Two Minute Papers walks through Alibaba's Qwen3.8-Max — a 2.4T-parameter MoE that clears the price-performance frontier days after launch. Károly Zsolnai-Fehér frames it as the latest jolt to the US-China AI race.",
+      "tags": [
+        "two-minute-papers",
+        "video",
+        "qwen",
+        "qwen-3-8-max",
+        "alibaba",
+        "open-weights",
+        "china-ai"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Two Minute Papers on Qwen3.8-Max: 'the billion dollar AI race just broke'.",
+        "whatIsIt": "A fresh Two Minute Papers episode from Károly Zsolnai-Fehér that unpacks Alibaba's Qwen3.8-Max release. The video walks through the 2.4T-parameter MoE model, its benchmark showing, and why Chinese open-weights labs keep undercutting closed US frontier labs on price.",
+        "howItWorks": "Zsolnai-Fehér pulls the numbers from Alibaba's release page, compares Qwen3.8-Max scores against Claude Fable 5 and GPT-5.6, and highlights the $2/$6 per-million-token API pricing plus the promised open-weight drop. Standard Two Minute Papers pace — dense visuals, three-minute run, one 'what a time to be alive'.",
+        "whyItMatters": "The Two Minute Papers audience of ~1.6M subscribers is where many practitioners first hear about new frontier models. The episode signals just how quickly Qwen3.8-Max became the talk of the AI research community and reinforces the week's 'China caught up' narrative."
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/ppQh4Tc9BmM/hqdefault.jpg",
+        "alt": "Two Minute Papers thumbnail — 'The Billion Dollar AI Race Just Broke'.",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=ppQh4Tc9BmM"
+        },
+        {
+          "label": "Channel",
+          "url": "https://www.youtube.com/channel/UCbfYPyITQ-7l4upoX8nvctg"
+        },
+        {
+          "label": "Related — Qwen3.8-Max release",
+          "url": "https://qwen.ai/blog?id=qwen3.8"
+        }
+      ],
+      "author": {
+        "name": "Two Minute Papers",
+        "profileUrl": "https://www.youtube.com/channel/UCbfYPyITQ-7l4upoX8nvctg"
+      },
+      "publishDate": "2026-08-05T19:33:56.209Z"
+    },
     {
       "id": "cloudflare-os",
       "categories": [

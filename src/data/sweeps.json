@@ -28646,6 +28646,43 @@
         "security",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260805t193356z",
+      "timestamp": "2026-08-05T19:33:56.209Z",
+      "source": "github-actions-sweep",
+      "summary": "Google DeepMind restructure lands (Hassabis to Chair, Jeff Dean departs for Discovery Loop) and a fresh Two Minute Papers video on Qwen3.8-Max ships. Lab blogs otherwise quiet.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "google-deepmind-hassabis-chair-aug5",
+          "title": "Google DeepMind restructure — Hassabis moves to Chair, Jeff Dean departs",
+          "category": "ecosystem",
+          "note": "Aug 5 leadership shakeup at Google DeepMind — Hassabis to Chair, Jeff Dean leaves after 27 years to start Discovery Loop with three other veterans. Covered by Bloomberg, Axios, CNBC, 9to5Google; on HN front page with 170 pts. Discovery Loop landing page also on HN with 325 pts. One combined ecosystem-primary item respects the 1-per-sweep cap."
+        },
+        {
+          "id": "two-minute-papers-billion-dollar-ai-race-aug5",
+          "title": "Two Minute Papers — 'The Billion Dollar AI Race Just Broke'",
+          "category": "video",
+          "note": "Fresh (5h) Two Minute Papers video on Qwen3.8-Max (which is already in the feed) — video exception applies, creator's take is its own item."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "ecosystem",
+        "video",
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "article",
+        "dataset"
+      ]
     }
   ]
 }
