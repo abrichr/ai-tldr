@@ -28510,6 +28510,32 @@
         "ecosystem",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260805t084001z",
+      "timestamp": "2026-08-05T08:40:01.181Z",
+      "source": "github-actions-sweep",
+      "summary": "Quiet 72h window (2026-08-02→08-05). Searched lab blogs (Anthropic, DeepMind, Meta AI, Mistral, Moonshot, DeepSeek), YouTube RSS (all 8 creator channels — 4 fresh videos, all already in the feed: Wes Roth×2, Two Minute Papers×2), GitHub trending (all trending repos are ≥5 months old — Agent-Reach, strix, hermes-agent, loopx), HF models/datasets/papers, HN top 30 + page 2, Simon Willison's blog, and the bio/neuro/pharma lane (Nature Medicine, thelancet/landig, FDA clearances). Nothing new qualified: Anthropic's only Aug 4 post was a Chief Global Affairs Officer hire (fails ecosystem dev-action gate), Google DeepMind and Meta AI last shipped mid-July (already in feed), Mistral Shieldstral already in feed, Simon Willison's Aug 4 LLM 0.32 already in feed, Claude Code 2.1.221/2.1.222 are small point releases below the bar, OpenAI's Aug 4 ChatGPT paste handling + K-12 education plugins are minor, GLM-5.5 is still only rumored. Two borderline HN posts failed cleanly: Sean Goedecke's 'LLMs reward expertise' (1,351 HN pts) was published Jul 24 — 12 days old, fails 72h cap; Deepgrove Maple-Preview (106 HN pts) is below the ≥150-pt HN threshold. Empty sweep is the right call.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "rumor",
+        "ecosystem",
+        "benchmark"
+      ]
     }
   ]
 }
