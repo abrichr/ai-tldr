@@ -28718,6 +28718,38 @@
         "security",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260805t230244z",
+      "timestamp": "2026-08-05T23:02:44.093Z",
+      "source": "github-actions-sweep",
+      "summary": "One structural add: Discovery Loop, the new AI-for-science lab from Jeff Dean, Sanjay Ghemawat, Oriol Vinyals, and Quoc Le. Lab blogs (Anthropic, DeepMind, Meta, Mistral, xAI), GitHub trending, HuggingFace models/papers/datasets, HN top 30, YouTube RSS, and the science lane all scanned; nothing else in the last 72h met the bar — Anthropic's post was a corporate hire, Muse Code 1.2 / Cloudflare OS / Cloudflare Computer / Google DeepMind restructure / all four fresh YouTube videos were already in the feed, and no fresh biomedical or neuro AI release qualified.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "discovery-loop-jeff-dean-aug5",
+          "title": "Discovery Loop — Jeff Dean and 3 Google leaders launch AI-for-science lab",
+          "category": "ecosystem",
+          "note": "Aug 5 launch of a new AI-for-science lab by four senior Google researchers; ≥6 tier-1 outlets and HN #1 (503 pts / 308 comments); clears the ecosystem gate as a genuine lab spinout with named founders and a technical mission (automate ML research), not a funding round or valuation note."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }

@@ -1,8 +1,124 @@
 {
-  "generatedAt": "2026-08-05T21:12:49.460Z",
+  "generatedAt": "2026-08-05T23:02:44.093Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "discovery-loop-jeff-dean-aug5",
+      "categories": [
+        "ecosystem"
+      ],
+      "title": "Discovery Loop — Jeff Dean and 3 Google leaders launch AI-for-science lab",
+      "org": "Discovery Loop",
+      "date": "2026-08-05",
+      "url": "https://discoveryloop.com/",
+      "summary": "Discovery Loop is a new AI research lab from Jeff Dean, Sanjay Ghemawat, Oriol Vinyals, and Quoc Le, all leaving Google. The public benefit corporation aims to automate scientific and engineering research, starting with machine learning itself.",
+      "tags": [
+        "discovery-loop",
+        "jeff-dean",
+        "sanjay-ghemawat",
+        "oriol-vinyals",
+        "quoc-le",
+        "google",
+        "spinout",
+        "ai-for-science",
+        "automl",
+        "public-benefit-corporation",
+        "radical-ventures",
+        "khosla-ventures",
+        "alphabet"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Founders",
+          "value": "Jeff Dean, Sanjay Ghemawat, Oriol Vinyals, Quoc Le"
+        },
+        {
+          "label": "Structure",
+          "value": "Delaware public benefit corporation"
+        },
+        {
+          "label": "Backers",
+          "value": "Radical Ventures, Khosla Ventures, Kleiner Perkins, Lightspeed, Doerr Capital, Alphabet"
+        },
+        {
+          "label": "Mission",
+          "value": "Automate scientific and engineering research with AI"
+        },
+        {
+          "label": "First focus",
+          "value": "Machine learning research and engineering itself"
+        },
+        {
+          "label": "Cloud partner",
+          "value": "Google Cloud"
+        },
+        {
+          "label": "Announced",
+          "value": "August 5, 2026"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Who is founding Discovery Loop?",
+          "a": "Discovery Loop is co-founded by four senior Google AI figures: Jeff Dean (chief scientist and Google Brain co-founder), Sanjay Ghemawat (Google senior fellow behind MapReduce and Bigtable), Oriol Vinyals (VP of research at Google DeepMind and a Gemini technical lead), and Quoc Le (Google Brain co-founder and AutoML-Zero scientist). All four are leaving Google to build the new lab."
+        },
+        {
+          "q": "What will Discovery Loop actually do?",
+          "a": "Discovery Loop will automate experimental loops in scientific research, using AI to run many experiments in parallel and iterate faster than sequential human work. The first target is machine learning research and engineering itself; longer-term goals include hardware design, drug discovery, and clean energy problems. Founders describe recursive self-improvement — AI that builds more capable AI — as an explicit aim."
+        },
+        {
+          "q": "Who is backing Discovery Loop?",
+          "a": "Discovery Loop's initial round is co-led by Radical Ventures and Khosla Ventures, with participation from Kleiner Perkins, Lightspeed, and Doerr Capital. Alphabet, Google's parent company, is a founding investor and Google Cloud is the lab's cloud partner. The funding amount has not been publicly disclosed."
+        },
+        {
+          "q": "How does Discovery Loop differ from Google DeepMind?",
+          "a": "Google DeepMind stays intact under Demis Hassabis (now chair) and continues frontier model work. Discovery Loop is a separate public benefit corporation focused on automating the scientific process itself rather than building general-purpose assistants. Alphabet backs both, so this is a portfolio expansion, not a split — Google keeps the model franchise while a new lab pursues automated research."
+        },
+        {
+          "q": "Can I work at Discovery Loop?",
+          "a": "Discovery Loop's website invites applications for research and engineering roles, with hiring listed through jobs.ashbyhq.com/Discovery-Loop. The team is small at launch and framed as building a new research organization from scratch. No product or public API has shipped; the immediate opening is joining the founding staff, not using a released tool."
+        }
+      ],
+      "links": [
+        {
+          "label": "Company site",
+          "url": "https://discoveryloop.com/"
+        },
+        {
+          "label": "TechCrunch coverage",
+          "url": "https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/"
+        },
+        {
+          "label": "GeekWire profile",
+          "url": "https://www.geekwire.com/2026/the-startup-idea-that-convinced-a-uw-computer-science-legend-to-leave-google-after-27-years/"
+        },
+        {
+          "label": "Wilson Sonsini release",
+          "url": "https://www.wsgr.com/en/insights/wilson-sonsini-advises-discovery-loop-on-launch-and-initial-funding.html"
+        },
+        {
+          "label": "Quartz report",
+          "url": "https://qz.com/jeff-dean-google-chief-scientist-discovery-loop-startup-080526"
+        }
+      ],
+      "explainer": {
+        "tagline": "Four senior Google AI figures leave to found a public benefit lab that will automate scientific research.",
+        "whatIsIt": "Discovery Loop is a new AI research company launching August 5, 2026 with Jeff Dean, Sanjay Ghemawat, Oriol Vinyals, and Quoc Le as co-founders. The company is a Delaware public benefit corporation and its stated goal is to automate the experimental loops that drive science and engineering. First focus is machine learning research and engineering itself.",
+        "howItWorks": "The founding pitch describes running many experiments in parallel and using AI to iterate on the results, rather than the sequential human loop that has traditionally paced discovery. Recursive self-improvement — AI systems that improve themselves without human involvement — is called out as an explicit direction. Google Cloud is the launch cloud partner, and Alphabet joins Radical Ventures, Khosla Ventures, Kleiner Perkins, Lightspeed, and Doerr Capital in the initial round.",
+        "whyItMatters": "Losing Jeff Dean and Sanjay Ghemawat, plus a DeepMind VP and Google Brain co-founder, is the largest single AI-research talent move Google has seen in a decade. It also gives the AI-for-science space a new well-funded frontier lab alongside Isomorphic, Anthropic, and EvolutionaryScale. For researchers, there is now a fourth serious home for large-scale AutoML and self-improving-AI work.",
+        "forWho": "ML researchers, AI-for-science teams, and anyone tracking frontier-lab structure",
+        "tryIt": "Apply at jobs.ashbyhq.com/Discovery-Loop or read the founders' note at discoveryloop.com"
+      },
+      "image": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-1197130647.jpg?resize=1200,800",
+        "alt": "Jeff Dean speaking on stage — TechCrunch cover photo for Discovery Loop announcement",
+        "fit": "cover",
+        "credit": "TechCrunch / Getty Images"
+      },
+      "publishDate": "2026-08-05T23:02:44.093Z"
+    },
     {
       "id": "meta-muse-code-spark-1-2",
       "categories": [
