@@ -28536,6 +28536,50 @@
         "ecosystem",
         "benchmark"
       ]
+    },
+    {
+      "id": "sweep-20260805t121028z",
+      "timestamp": "2026-08-05T12:10:28.791Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Maple-Preview (DeepGrove's 20B ternary MoE, MIT, 218 tok/s on M4), TencentDB Agent Memory v2.0 (Tencent Cloud team memory hub for coding agents, MIT), and Earendil's HN-top article on Pi's minimalist harness. Lab blogs quiet outside the previously covered Mistral Shieldstral; DeepMind/OpenAI/Meta/Anthropic no shipped-in-last-72h items; YouTube RSS returned only videos already in the feed.",
+      "counts": {
+        "added": 3,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "deepgrove-maple-preview",
+          "title": "Maple-Preview — 20B ternary MoE trained from scratch, 218 tok/s on a Mac mini",
+          "category": "model",
+          "note": "20B-A1B ternary MoE, MIT, uploaded to HF ~15h ago; trending on HN with 139 pts (Show HN); native ternary training + Apple Silicon focus is the technical hook."
+        },
+        {
+          "id": "tencentdb-agent-memory-v2",
+          "title": "TencentDB Agent Memory v2.0 — team-level memory hub for AI coding agents",
+          "category": "repo",
+          "note": "v2.0.0 released 2026-08-03 per release notes; 14.6K stars, +1.9K today on github-trending; MIT; Anthropic + OpenAI dual-endpoint proxy is the concrete developer action."
+        },
+        {
+          "id": "earendil-pi-minimalism-aug4",
+          "title": "Earendil — 'Pi's minimalism is its advantage' when frontier models get smarter",
+          "category": "article",
+          "note": "HN front page (413 pts) 2026-08-04; author of the Pi coding agent (84K stars); Databricks benchmark result is the substantive claim."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark"
+      ]
     }
   ]
 }

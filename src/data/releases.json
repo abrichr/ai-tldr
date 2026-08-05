@@ -1,8 +1,271 @@
 {
-  "generatedAt": "2026-08-05T08:40:01.181Z",
+  "generatedAt": "2026-08-05T12:10:28.791Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "deepgrove-maple-preview",
+      "categories": [
+        "model",
+        "repo"
+      ],
+      "title": "Maple-Preview — 20B ternary MoE trained from scratch, 218 tok/s on a Mac mini",
+      "org": "DeepGrove",
+      "date": "2026-08-04",
+      "url": "https://huggingface.co/deepgrove/maple-preview",
+      "summary": "DeepGrove releases Maple-Preview, a 20B mixture-of-experts model trained natively in ternary weights (not post-quantized). MIT-licensed, 1B active per token, 24 layers, 256 experts with 8 active, 5.31 GB checkpoint, 218 tok/s decode on M4.",
+      "tags": [
+        "model",
+        "open-weights",
+        "moe",
+        "ternary",
+        "reasoning",
+        "mlx",
+        "apple-silicon",
+        "on-device",
+        "mit",
+        "deepgrove",
+        "maple"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Parameters": "20B total / 1B active",
+        "Experts": "256 (top-8)",
+        "Decode (M4)": "218 tok/s",
+        "Checkpoint": "5.31 GB"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "DeepGrove"
+        },
+        {
+          "label": "License",
+          "value": "MIT"
+        },
+        {
+          "label": "Parameters",
+          "value": "20B total, 1B active"
+        },
+        {
+          "label": "Architecture",
+          "value": "24-layer MoE, 256 experts, top-8 routing"
+        },
+        {
+          "label": "Attention",
+          "value": "3:1 SWA-512 to global, 131K context"
+        },
+        {
+          "label": "Quantization",
+          "value": "Ternary (native, {-α, 0, +α})"
+        },
+        {
+          "label": "Decode speed",
+          "value": "218 tok/s on M4 Mac mini (Flash-head)"
+        }
+      ],
+      "explainer": {
+        "tagline": "A 20B mixture-of-experts model trained in ternary from day one, small enough to run on a laptop.",
+        "whatIsIt": "Maple-Preview from DeepGrove is a 20-billion-parameter mixture-of-experts language model where the weights are ternary — every parameter is one of three values, {-α, 0, +α}. Only about 1B parameters activate per token. The whole checkpoint is 5.31 GB, so it fits inside the memory of a laptop or an iPhone.",
+        "howItWorks": "Unlike most low-precision models, Maple was trained directly in ternary form rather than converted from a full-precision checkpoint. It uses a 24-layer stack with 256 experts and top-8 routing, and a 3:1 mix of sliding-window (512 tokens) and global attention. A companion MLX fork, mlx-lm-deepgrove, streams and packs weights as 2-bit tensors so the 38 GB bf16 source never needs to fit in RAM.",
+        "whyItMatters": "Native ternary training is the design that finally makes 20B-class reasoning models practical on a phone or a Mac mini — 218 tok/s on M4, up to 395 tok/s on M5 Pro with Flash-head. It also gives developers an MIT-licensed base for on-device agents that need reasoning without a cloud round-trip.",
+        "forWho": "on-device developers, MLX users, reasoning-model researchers",
+        "tryIt": "pip install mlx-lm-deepgrove; huggingface-cli download deepgrove/maple-preview"
+      },
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/deepgrove/maple-preview.png",
+        "alt": "Maple-Preview model card banner on Hugging Face",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Model on Hugging Face",
+          "url": "https://huggingface.co/deepgrove/maple-preview"
+        },
+        {
+          "label": "MLX Inference Repo",
+          "url": "https://github.com/deepgrove-ai/mlx-lm-deepgrove"
+        },
+        {
+          "label": "Show HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49173984"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What does 20B-A1B mean for Maple-Preview?",
+          "a": "Maple-Preview has 20 billion total parameters but only about 1 billion activate for any given token. That is the point of a mixture-of-experts design: a router picks a small subset of experts per token, so inference cost tracks the active count, not the full 20B."
+        },
+        {
+          "q": "How is Maple-Preview different from a 2-bit quantized model?",
+          "a": "Maple-Preview was trained natively in ternary weights ({-α, 0, +α}) from day one, not converted afterwards. DeepGrove argues that post-hoc quantization loses accuracy because the model was optimized for higher precision, while training in the target precision keeps quality intact at the same footprint."
+        },
+        {
+          "q": "What license is Maple-Preview released under?",
+          "a": "Maple-Preview is MIT-licensed. Both the model weights on Hugging Face and the mlx-lm-deepgrove inference fork on GitHub carry MIT, so commercial use, fine-tuning, and redistribution are all permitted with attribution."
+        },
+        {
+          "q": "How fast can Maple-Preview run locally?",
+          "a": "Reported decode speeds are 218 tokens per second on an M4 Mac mini and 395 tokens per second on an M5 Pro with the Flash-head optimization enabled. The 5.31 GB checkpoint fits comfortably on Apple Silicon laptops and, per DeepGrove's post, on an iPhone as well."
+        }
+      ],
+      "publishDate": "2026-08-05T12:10:28.791Z"
+    },
+    {
+      "id": "tencentdb-agent-memory-v2",
+      "categories": [
+        "repo",
+        "tool"
+      ],
+      "title": "TencentDB Agent Memory v2.0 — team-level memory hub for AI coding agents",
+      "org": "Tencent Cloud",
+      "date": "2026-08-03",
+      "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+      "summary": "Tencent Cloud open-sources v2.0 of TencentDB Agent Memory, an MIT-licensed hub that turns team conversations, docs, and code into four reusable assets (Chat, Skill, Wiki, CodeGraph) shared across agents via Anthropic and OpenAI endpoints.",
+      "tags": [
+        "repo",
+        "tool",
+        "agent",
+        "memory",
+        "coding-agent",
+        "open-source",
+        "mit",
+        "tencent",
+        "claude-code"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Stars": "14.6K",
+        "License": "MIT"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Tencent Cloud"
+        },
+        {
+          "label": "Version",
+          "value": "v2.0.0"
+        },
+        {
+          "label": "Released",
+          "value": "2026-08-03"
+        },
+        {
+          "label": "License",
+          "value": "MIT"
+        },
+        {
+          "label": "Memory types",
+          "value": "Chat Memory, Skill, Wiki, CodeGraph"
+        },
+        {
+          "label": "Endpoints",
+          "value": "Anthropic and OpenAI-compatible"
+        },
+        {
+          "label": "SDKs",
+          "value": "TypeScript, Python"
+        }
+      ],
+      "explainer": {
+        "tagline": "A shared memory layer that lets a team's coding agents keep learning from each other's work.",
+        "whatIsIt": "TencentDB Agent Memory is a self-hostable server that stores four kinds of reusable memory for AI agents: Chat Memory (preferences and history), Skill (workflows harvested from past tasks), Wiki (structured docs with relationships), and CodeGraph (an indexed view of a code repo). Version 2.0.0, released 2026-08-03, is MIT-licensed on GitHub with 14.6K stars.",
+        "howItWorks": "Raw agent conversations flow through layered extraction (L0–L3) that promotes them into the four asset types. A Memory Proxy in front of the hub speaks both Anthropic and OpenAI protocols, so Claude Code, Codex, and any OpenAI-compatible agent can pull from and write to the same team knowledge base without special SDKs.",
+        "whyItMatters": "Agent memory has been per-user and per-session; TencentDB Agent Memory pushes it to the team level so a workflow one developer's agent works out becomes reusable by the whole team's agents. v2.0 adds scheduled CodeGraph sync, forced skill archiving, and an admin dashboard, turning the tool from a demo into something a company can actually deploy.",
+        "forWho": "engineering teams running fleets of coding agents, self-hosted AI platform ops",
+        "tryIt": "git clone https://github.com/TencentCloud/TencentDB-Agent-Memory && ./start-all.sh"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/954c877bf059207b48c4a91289b0635016bc2516598c9a837df68f59bfd92367/TencentCloud/TencentDB-Agent-Memory",
+        "alt": "TencentDB Agent Memory GitHub repository social card",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory"
+        },
+        {
+          "label": "v2.0.0 Release Notes",
+          "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory/releases/tag/v2.0.0"
+        },
+        {
+          "label": "License",
+          "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory/blob/main/LICENSE"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What is new in TencentDB Agent Memory v2.0?",
+          "a": "TencentDB Agent Memory v2.0 adds four production-ready features on top of the beta: Skill forced archiving so critical procedures cannot silently drift out, CodeGraph scheduled sync that keeps the code index current, bilingual switching in the admin panel, and expanded admin asset management for the four memory types."
+        },
+        {
+          "q": "Can Claude Code and Codex both use TencentDB Agent Memory?",
+          "a": "Yes. The Memory Proxy in front of the hub exposes both Anthropic and OpenAI-compatible endpoints, so Claude Code, OpenAI Codex, and any agent that speaks either protocol can read from and write to the same shared memory pool without a bespoke SDK."
+        },
+        {
+          "q": "Is TencentDB Agent Memory open source?",
+          "a": "Yes. TencentDB Agent Memory is released under the MIT license. Docker images ship for multiple architectures, and the ./start-all.sh script boots the full stack (memory server, proxy, admin panel, initial admin credentials) so a team can self-host without depending on any Tencent Cloud service."
+        },
+        {
+          "q": "What are the four memory asset types?",
+          "a": "Chat Memory keeps user preferences and interaction history; Skill captures reusable workflows extracted from finished tasks; Wiki structures documentation as interlinked pages; and CodeGraph indexes code symbols, call relationships, and impact analysis so an agent can reason about a repository the same way a senior engineer would."
+        }
+      ],
+      "publishDate": "2026-08-05T12:10:28.791Z"
+    },
+    {
+      "id": "earendil-pi-minimalism-aug4",
+      "categories": [
+        "article"
+      ],
+      "title": "Earendil — 'Pi's minimalism is its advantage' when frontier models get smarter",
+      "org": "Earendil",
+      "date": "2026-08-04",
+      "url": "https://earendil.com/posts/pi-autoresearch-and-databricks/",
+      "summary": "Earendil argues Pi's coding agent — sub-1,000-token prompt, four tools, MIT — outscored heavier harnesses in Databricks' internal tests at a third of the context per turn, and explains why minimalism wins as frontier models get smarter.",
+      "tags": [
+        "article",
+        "coding-agent",
+        "pi",
+        "context-engineering",
+        "harness-design",
+        "databricks",
+        "earendil"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "The Pi author on why a four-tool coding agent is beating heavier harnesses inside Databricks.",
+        "whatIsIt": "In this post from 2026-08-04, Earendil, the author of the MIT-licensed Pi coding agent, explains a Databricks-internal comparison where Pi outscored fatter harnesses at higher accuracy and lower cost. Pi ships with just four tools and a system prompt plus tool definitions under 1,000 tokens.",
+        "howItWorks": "Earendil credits three design choices: keep the harness surface tiny so the model reasons over it, let users extend Pi with their own tools instead of pre-bundling agents, and lean on cache- and context-aware turn management. In the Databricks run Pi used roughly 3× less context per turn while matching or beating pass rates.",
+        "whyItMatters": "The post lands as the coding-agent market debates whether harness scaffolding or model capability drives quality. Earendil's argument — as frontier models get smarter, elaborate scaffolding earns less and taxes context more — sets up the design brief for the next wave of coding CLIs and helps explain Pi's 84K-star trajectory."
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/fb7ab6445b0780b4125340ed2e00a1c726f9da2e4af6a6785e9106e60c174d3d/earendil-works/pi",
+        "alt": "Pi coding agent GitHub repository social card",
+        "fit": "cover"
+      },
+      "author": {
+        "name": "Earendil",
+        "profileUrl": "https://earendil.com/"
+      },
+      "links": [
+        {
+          "label": "Full Post",
+          "url": "https://earendil.com/posts/pi-autoresearch-and-databricks/"
+        },
+        {
+          "label": "Pi on GitHub",
+          "url": "https://github.com/earendil-works/pi"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49176038"
+        }
+      ],
+      "publishDate": "2026-08-05T12:10:28.791Z"
+    },
     {
       "id": "simonw-llm-0-32-aug4",
       "categories": [
