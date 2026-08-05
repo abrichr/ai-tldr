@@ -28580,6 +28580,37 @@
         "algorithm",
         "benchmark"
       ]
+    },
+    {
+      "id": "sweep-20260805t140205z",
+      "timestamp": "2026-08-05T14:02:05.992Z",
+      "source": "github-actions-sweep",
+      "summary": "Added @cloudflare/computer — Cloudflare's new agent runtime with a Durable-Object virtual filesystem plus isolate and Linux-container backends (Aug 3 lab blog + on GitHub trending). Every other Aug 3-5 candidate we found — Qwen3.8-Max, Shieldstral, Maple-Preview, LFM2.5-2.6B, Warp Agent CLI, LLM 0.32, TencentDB Agent Memory v2.0, and all three fresh YouTube videos (Wes Roth Qwen, Two Minute Papers DeepSeek Moment, Two Minute Papers NVIDIA copying humans) — is already in the feed, so this is a small sweep by design.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "cloudflare-computer",
+          "title": "Cloudflare Computer — agent runtime routes work between isolates and containers",
+          "category": "tool",
+          "note": "Aug 3 Cloudflare lab blog. Official Cloudflare org repo, MIT, 1.8k stars, GitHub trending TypeScript. Novel design: Durable-Object SQLite virtual FS shared across a Workers isolate and a Linux container via FUSE; AI-SDK-compatible tool interface. No feed collision — cloudflare-workers-ai-kimi-glm-fp8 (Aug 3) covers Workers AI quantization, different product."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "tool",
+        "repo",
+        "model",
+        "video",
+        "paper",
+        "article",
+        "dataset",
+        "benchmark"
+      ]
     }
   ]
 }

@@ -1,8 +1,119 @@
 {
-  "generatedAt": "2026-08-05T12:10:28.791Z",
+  "generatedAt": "2026-08-05T14:02:05.992Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "cloudflare-computer",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "Cloudflare Computer — agent runtime routes work between isolates and containers",
+      "org": "Cloudflare",
+      "date": "2026-08-03",
+      "url": "https://blog.cloudflare.com/cloudflare-computer/",
+      "summary": "@cloudflare/computer gives AI agents a virtual filesystem in a Durable Object plus two execution backends: a fast Workers isolate for most tasks, and a full Linux container for anything that needs npm or native binaries.",
+      "tags": [
+        "cloudflare",
+        "agents",
+        "agent-runtime",
+        "virtual-filesystem",
+        "durable-objects",
+        "workers",
+        "containers",
+        "isolates",
+        "ai-sdk",
+        "typescript",
+        "mit-license",
+        "preview"
+      ],
+      "importance": "major",
+      "metrics": {
+        "GitHub stars": "1.8k",
+        "License": "MIT"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Cloudflare"
+        },
+        {
+          "label": "Package",
+          "value": "@cloudflare/computer"
+        },
+        {
+          "label": "Install",
+          "value": "npm install @cloudflare/computer"
+        },
+        {
+          "label": "License",
+          "value": "MIT"
+        },
+        {
+          "label": "Storage",
+          "value": "SQLite in a Durable Object, FUSE-mounted"
+        },
+        {
+          "label": "Backends",
+          "value": "Workers isolate, isolate shell, Linux container"
+        },
+        {
+          "label": "Status",
+          "value": "Preview — APIs unstable"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How does Cloudflare Computer decide when to use an isolate versus a container?",
+          "a": "Cloudflare Computer targets the Workers isolate for the 90%+ of agent work that only touches files, git, JavaScript, or a headless browser. It falls back to a full Linux container when a step needs npm, a native binary, or something that only works in a standard Linux userland."
+        },
+        {
+          "q": "What is the virtual filesystem in Cloudflare Computer built on?",
+          "a": "Cloudflare Computer stores the agent's files in SQLite inside a Durable Object, which is Cloudflare's stateful edge primitive. That same SQLite state is projected into the container via a FUSE mount, so both the isolate and the container see the same files."
+        },
+        {
+          "q": "Is Cloudflare Computer production-ready today?",
+          "a": "No. The @cloudflare/computer package is marked preview only, with unstable APIs and design subject to change. It ships under the MIT license on GitHub so teams can try it and give feedback, but Cloudflare is explicit that it should not be used for production workloads yet."
+        },
+        {
+          "q": "How does Cloudflare Computer plug into an AI model?",
+          "a": "Cloudflare Computer exposes an AI-SDK-compatible toolkit with read, write, edit, ls, and exec tools. A model picks the tools like it would any other, and Computer routes each call to either the isolate or the container automatically, so the agent code does not have to reason about placement."
+        }
+      ],
+      "explainer": {
+        "tagline": "Cloudflare's new agent runtime pairs a Durable-Object virtual filesystem with a fast isolate and a fallback Linux container.",
+        "whatIsIt": "@cloudflare/computer is a new open-source runtime that gives an AI agent its own computer — a persistent virtual filesystem plus two ways to run code. The design comes from Cloudflare's own work on coding agents: most agent steps are cheap file or JavaScript work that should not pay container startup, but some steps genuinely need a full Linux box.",
+        "howItWorks": "The runtime keeps the agent's files in SQLite inside a Durable Object, then projects that state into either backend on demand. A Workers isolate handles the fast path — including a bash mode that translates shell into JavaScript with the just-bash library. When a step needs npm or a native binary, the same SQLite state is FUSE-mounted into a Linux container so the files line up on both sides.",
+        "whyItMatters": "Cloudflare Computer removes the choice of container-per-agent versus isolate-only that has forced other agent platforms into a corner. Teams get container-grade capability where it matters and isolate-grade cost and latency everywhere else, with the same file layout across both. It also gives Cloudflare a credible answer to the sandbox-runtime layer that OpenAI, Anthropic, and E2B ship today.",
+        "forWho": "developers building coding agents on Cloudflare Workers",
+        "tryIt": "npm install @cloudflare/computer"
+      },
+      "image": {
+        "url": "https://blog.cloudflare.com/_emdash/api/media/file/01KZ0Q5WSFNF56H4SS5SERCGQ1.png",
+        "alt": "Cloudflare Computer announcement banner — Your agent needs a computer, not a container",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://blog.cloudflare.com/cloudflare-computer/"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/cloudflare/computer"
+        },
+        {
+          "label": "Cloudflare Agents",
+          "url": "https://blog.cloudflare.com/agents-on-cloudflare/"
+        },
+        {
+          "label": "Local tracing",
+          "url": "https://blog.cloudflare.com/local-tracing/"
+        }
+      ],
+      "publishDate": "2026-08-05T14:02:05.992Z"
+    },
     {
       "id": "deepgrove-maple-preview",
       "categories": [
