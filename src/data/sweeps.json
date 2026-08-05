@@ -28683,6 +28683,41 @@
         "article",
         "dataset"
       ]
+    },
+    {
+      "id": "sweep-20260805t211249z",
+      "timestamp": "2026-08-05T21:12:49.460Z",
+      "source": "github-actions-sweep",
+      "summary": "Meta ships Muse Code, a terminal coding agent co-trained with a new Muse Spark 1.2 model, on macOS and Linux at the same $1.25/$4.25 pay-as-you-go pricing as 1.1. Lab blogs, GitHub/HN/HF, YouTube, and the bio/neuro/pharma lane checked; only Meta cleared the 72h bar with something not already in the feed.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "meta-muse-code-spark-1-2",
+          "title": "Muse Code + Muse Spark 1.2 — Meta ships a terminal coding agent",
+          "category": "model",
+          "note": "Meta Superintelligence Labs shipped Muse Code + Muse Spark 1.2 on 2026-08-05 — top-lab terminal coding agent, pricing verified from primary source, comparable coverage from 9to5Mac, Unite.AI, CNBC, and SQ Magazine (all Aug 5). Semantic-dedup: distinct from meta-muse-spark-1-1 (that was the 1.1 API launch on Jul 9; this is the 1.2 co-trained model + new Muse Code agent)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "video",
+        "article",
+        "ecosystem",
+        "security",
+        "rumor"
+      ]
     }
   ]
 }

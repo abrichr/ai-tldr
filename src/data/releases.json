@@ -1,8 +1,141 @@
 {
-  "generatedAt": "2026-08-05T19:33:56.209Z",
+  "generatedAt": "2026-08-05T21:12:49.460Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "meta-muse-code-spark-1-2",
+      "categories": [
+        "model",
+        "tool"
+      ],
+      "title": "Muse Code + Muse Spark 1.2 — Meta ships a terminal coding agent",
+      "org": "Meta Superintelligence Labs",
+      "date": "2026-08-05",
+      "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+      "summary": "Muse Code is Meta's new terminal coding agent, powered by a co-trained Muse Spark 1.2 model. It runs on macOS and Linux, keeps a local event log so long tasks survive crashes, and ships /plan, /grill, /goal skills at $1.25/$4.25 per million tokens.",
+      "tags": [
+        "meta",
+        "meta-superintelligence-labs",
+        "msl",
+        "muse-code",
+        "muse-spark-1-2",
+        "coding-agent",
+        "terminal",
+        "model-release",
+        "tool-release",
+        "meta-model-api"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Muse Spark 1.2 input price": "$1.25 / 1M tokens",
+        "Muse Spark 1.2 output price": "$4.25 / 1M tokens"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Meta Superintelligence Labs"
+        },
+        {
+          "label": "Products",
+          "value": "Muse Code (terminal agent), Muse Spark 1.2 (model)"
+        },
+        {
+          "label": "Install",
+          "value": "curl -fsSL https://dev.meta.ai/install.sh | bash"
+        },
+        {
+          "label": "Platforms",
+          "value": "macOS and Linux (no Windows, no GUI)"
+        },
+        {
+          "label": "Availability",
+          "value": "Public beta; Muse Spark 1.2 in Muse Code and Meta Model API"
+        },
+        {
+          "label": "Bundled skills",
+          "value": "/plan, /grill, /goal"
+        },
+        {
+          "label": "Benchmarks reported",
+          "value": "Terminal-Bench 2.1, DeepSWE 1.1, Meta Internal Coding Bench, GDPval"
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "Input (pay-as-you-go)",
+            "price": "$1.25",
+            "unit": "/ 1M tokens"
+          },
+          {
+            "plan": "Output (pay-as-you-go)",
+            "price": "$4.25",
+            "unit": "/ 1M tokens"
+          },
+          {
+            "plan": "Contributor tier",
+            "price": "~10x lower",
+            "note": "in exchange for sharing session data with Meta"
+          }
+        ],
+        "source": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2"
+      },
+      "faq": [
+        {
+          "q": "How is Muse Code different from Claude Code and OpenAI Codex?",
+          "a": "Muse Code is a terminal-only tool, with no GUI, that Meta co-trained end to end with Muse Spark 1.2 so the model and the harness share the same instruction format. It bundles /plan, /grill, and /goal skills, runs async background sub-agents, and installs with a single curl command on macOS or Linux."
+        },
+        {
+          "q": "How much does Muse Spark 1.2 cost on the Meta Model API?",
+          "a": "Muse Spark 1.2 stays at $1.25 per million input tokens and $4.25 per million output tokens on the pay-as-you-go tier — the same headline price as Muse Spark 1.1. A separate contributor tier is more than ten times cheaper for developers who agree to share their session data with Meta."
+        },
+        {
+          "q": "Is Muse Spark 1.2 faster on coding than Muse Spark 1.1?",
+          "a": "Meta reports gains for Muse Spark 1.2 on Terminal-Bench 2.1, DeepSWE 1.1, GDPval, and its internal coding benchmark, and highlights a 24-hour GPU-kernel-optimization run of 1,000+ tool calls. Meta explicitly says it is not claiming benchmark superiority over Claude Code or OpenAI Codex."
+        },
+        {
+          "q": "Does Muse Code run on Windows?",
+          "a": "Muse Code does not run on Windows at launch. The install script targets macOS and Linux, and there is no graphical application — the agent lives entirely in the terminal, which limits it to developers on those two operating systems for now."
+        },
+        {
+          "q": "What happens if the terminal crashes mid-task?",
+          "a": "Muse Code writes a local event log of every step, so a crashed or restarted session can replay to the same state without losing plan, tool calls, or intermediate reasoning. Meta says the same log lets async background sub-agents run alongside the main agent inside a single session."
+        }
+      ],
+      "explainer": {
+        "tagline": "Meta's new Muse Code coding agent lives in the terminal and ships with a co-trained Muse Spark 1.2 model.",
+        "whatIsIt": "Muse Code is a new terminal-based coding agent from Meta Superintelligence Labs. It plans changes, writes code, and validates results across large repositories from a shell prompt on macOS and Linux, with no GUI. Muse Code installs with one curl command from dev.meta.ai and comes bundled with three built-in skills: /plan, /grill, and /goal.",
+        "howItWorks": "Muse Spark 1.2 was co-trained with Muse Code on long-horizon coding tasks, including whole-repository generation, so the model and the harness share one instruction format. The agent keeps a local event log for every tool call, which lets a crashed session replay to the exact same state and lets async background sub-agents run inside one session. Meta demonstrated the model optimizing GPU kernels over 1,000+ tool calls in a 24-hour run.",
+        "whyItMatters": "Muse Code puts Meta directly against Claude Code and OpenAI Codex on the terminal-agent turf where coding customers live. Muse Spark 1.2 stays at $1.25 input and $4.25 output per million tokens on the Meta Model API, well under Claude Opus 5, and a contributor tier drops that price more than tenfold for developers willing to share session data.",
+        "forWho": "backend and infra developers who live in the terminal",
+        "tryIt": "curl -fsSL https://dev.meta.ai/install.sh | bash"
+      },
+      "image": {
+        "url": "https://research.meta.ai/social-preview/introducing-muse-code-and-muse-spark-1-2",
+        "alt": "Meta's Muse Code + Muse Spark 1.2 announcement social preview",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2"
+        },
+        {
+          "label": "Install page",
+          "url": "https://dev.meta.ai"
+        },
+        {
+          "label": "9to5Mac coverage",
+          "url": "https://9to5mac.com/2026/08/05/meta-launches-muse-code-ai-coding-agent-for-macos-and-linux/"
+        },
+        {
+          "label": "Unite.AI analysis",
+          "url": "https://www.unite.ai/meta-ships-muse-code-coding-agent-with-co-trained-muse-spark-1-2-model/"
+        }
+      ],
+      "publishDate": "2026-08-05T21:12:49.460Z"
+    },
     {
       "id": "google-deepmind-hassabis-chair-aug5",
       "categories": [
