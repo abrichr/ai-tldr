@@ -1,8 +1,120 @@
 {
-  "generatedAt": "2026-08-04T23:04:00.737Z",
+  "generatedAt": "2026-08-05T05:10:19.307Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "simonw-llm-0-32-aug4",
+      "categories": [
+        "tool",
+        "article"
+      ],
+      "title": "LLM 0.32 — Simon Willison's CLI ships reasoning traces and server-side tools",
+      "org": "Simon Willison",
+      "date": "2026-08-04",
+      "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/",
+      "summary": "Simon Willison releases LLM 0.32, the stable version of his Python CLI for language models. It streams reasoning traces to stderr, uses OpenAI's Responses API for interleaved reasoning, and adds provider-hosted tools like WebSearch and CodeInterpreter.",
+      "tags": [
+        "llm-cli",
+        "simon-willison",
+        "datasette",
+        "python",
+        "open-source",
+        "developer-tools",
+        "reasoning",
+        "tool-use",
+        "openai-responses",
+        "server-side-tools",
+        "sqlite"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Simon Willison"
+        },
+        {
+          "label": "Version",
+          "value": "0.32"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        },
+        {
+          "label": "Install",
+          "value": "pip install -U llm"
+        },
+        {
+          "label": "Default model",
+          "value": "GPT-5.6 Luna (was GPT-4o mini)"
+        },
+        {
+          "label": "New server-side tools",
+          "value": "WebSearch, CodeInterpreter, WebFetch, CodeExecution, AnthropicMCP"
+        },
+        {
+          "label": "Backwards-compatible",
+          "value": "Yes — old prompt= calls still work"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How do you install LLM 0.32?",
+          "a": "LLM 0.32 installs from PyPI with `pip install -U llm` or via `uv tool install llm`. Simon Willison ships the tool as a Python CLI and library under Apache-2.0 on GitHub at simonw/llm; the release page is at github.com/simonw/llm/releases/tag/0.32 with the full changelog on the Datasette docs site."
+        },
+        {
+          "q": "What are the new server-side tools in LLM 0.32?",
+          "a": "LLM 0.32 exposes provider-hosted tools that run on the model provider's servers, not the local machine. OpenAI models get WebSearch and CodeInterpreter; Claude models get WebSearch, WebFetch, CodeExecution, and AnthropicMCP. Users add them at the command line with `-T websearch` or similar, and the model can call them mid-turn without extra local setup."
+        },
+        {
+          "q": "What changed in the LLM 0.32 log format?",
+          "a": "LLM 0.32 replaces the old duplicated JSON logging with a content-addressed SQLite message store modelled on Git. Each message is stored once and referenced by hash, so appended conversations no longer re-serialise the whole history. `llm logs` transparently reads both the legacy tables and the new schema, and full-text search plus model and tool filtering work across both."
+        },
+        {
+          "q": "How does LLM 0.32 differ from the 0.32a0 alpha released in April?",
+          "a": "The April 0.32a0 alpha shipped the backwards-compatible refactor to message arrays and typed streaming parts. Stable 0.32 keeps that base and adds the OpenAI Responses API path, streamed reasoning traces to stderr, the WebSearch/CodeInterpreter server-side tools, the content-addressed SQLite log store, `llm.PauseChain` for human-in-the-loop tool approval, and switches the default model to GPT-5.6 Luna."
+        }
+      ],
+      "explainer": {
+        "tagline": "The de-facto Python CLI for LLMs turns its 0.32 alpha into a stable release, with reasoning traces, provider tools, and a Git-style log store.",
+        "whatIsIt": "LLM 0.32 is the stable release of Simon Willison's open-source Python command-line tool and library for talking to language models. The stable version lands four months after the 0.32a0 alpha and adds streamed reasoning traces, OpenAI's Responses API, server-side tools like WebSearch and CodeInterpreter, and a new content-addressed SQLite log store. GPT-5.6 Luna is now the default model.",
+        "howItWorks": "Reasoning-capable OpenAI models now default to the `/v1/responses` endpoint, which lets reasoning interleave with tool calls across a chain. Reasoning summaries stream to standard error so the main output stays clean for piping; `-R/--hide-reasoning` suppresses them. Tool calls each get a unique `tool_call_id`, and tools can raise `llm.PauseChain` to pause a chain and hand off to a human. The log store keys every message by hash so appended conversations no longer duplicate JSON.",
+        "whyItMatters": "LLM is the plumbing under thousands of indie scripts, plugins, and one-off automations against frontier models. Server-side tools mean a single `llm -T websearch` flag now buys a working web-search-and-answer pipeline with no local scaffolding. The pause-for-approval hook and the new log schema turn LLM into a viable base for longer agent loops without a separate framework.",
+        "forWho": "Python developers writing CLI scripts against frontier LLMs, plugin authors, agent tinkerers",
+        "tryIt": "pip install -U llm && llm 'summarise this' -T websearch"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/simonw/llm/releases/tag/0.32",
+        "alt": "GitHub release page for simonw/llm version 0.32",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Simon Willison Blog",
+          "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/"
+        },
+        {
+          "label": "Release Notes",
+          "url": "https://github.com/simonw/llm/releases/tag/0.32"
+        },
+        {
+          "label": "Changelog",
+          "url": "https://llm.datasette.io/en/stable/changelog.html"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/simonw/llm"
+        }
+      ],
+      "author": {
+        "name": "Simon Willison",
+        "handle": "@simonw",
+        "profileUrl": "https://simonwillison.net",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/9599?v=4"
+      },
+      "publishDate": "2026-08-05T05:10:19.307Z"
+    },
     {
       "id": "liquidai-lfm2-5-2-6b",
       "categories": [

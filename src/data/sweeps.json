@@ -28476,6 +28476,40 @@
         "dataset",
         "algorithm"
       ]
+    },
+    {
+      "id": "sweep-20260805t051019z",
+      "timestamp": "2026-08-05T05:10:19.307Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic/OpenAI/DeepMind/Meta/Mistral/xAI/DeepSeek/Moonshot/Qwen/Zhipu/Cohere), GitHub trending, HuggingFace models/papers/datasets, HN front page, Simon Willison, Interconnects, YouTube RSS (all 8 channels returned 404 from CI runner), and neuro/pharma AI queries. Only qualifying ≤72h release was Simon Willison's LLM 0.32 stable — most Aug 4-5 activity was already in the feed (Mistral Shieldstral, Qwen3.8-Max, Grok Voice) or fell outside the 72h window (OpenAI GPT-5.6 Luna/Terra price cut Jul 30, Anthropic Tino Cuéllar hire fails ecosystem gate).",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "simonw-llm-0-32-aug4",
+          "title": "LLM 0.32 — Simon Willison's CLI ships reasoning traces and server-side tools",
+          "category": "tool",
+          "note": "Simon Willison ships stable LLM 0.32 four months after 0.32a0 alpha; adds reasoning traces, OpenAI Responses API, WebSearch/CodeInterpreter server-side tools, and a Git-style content-addressed SQLite log store. Precedent for alpha + stable both landing: simonw-sqlite-utils-4-0-rc2-jul5 and simonw-sqlite-utils-4-0-jul7 are both in the feed."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "tool",
+        "article",
+        "model",
+        "repo",
+        "paper",
+        "dataset",
+        "video",
+        "algorithm",
+        "benchmark",
+        "ecosystem",
+        "rumor"
+      ]
     }
   ]
 }
