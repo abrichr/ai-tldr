@@ -28611,6 +28611,41 @@
         "dataset",
         "benchmark"
       ]
+    },
+    {
+      "id": "sweep-20260805t173713z",
+      "timestamp": "2026-08-05T17:37:13.985Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs, GitHub trending, HuggingFace models/datasets/papers, HN top 30, 8 YouTube feeds, Simon Willison, and neuro/pharma/clinical-AI channels. Anthropic (only a Chief Global Affairs Officer hire, corporate news), OpenAI/DeepMind/Meta/xAI/Cohere quiet on releases; Mistral Shieldstral, DeepSeek V4-Flash 0731, Qwen Image 3.0, MiniMax H3, LFM2.5-2.6B, Superpowers v6, TencentDB Agent Memory v2 and two of three fresh YouTube videos already in the feed. One qualifying new release: Cloudflare OS, an Apache-2.0 agent workspace platform (HN 304 pts, GitHub cloudflare/cloudflare-os).",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "cloudflare-os",
+          "title": "Cloudflare OS — open agent workspace for building internal apps on your company data",
+          "category": "tool",
+          "note": "Aug 5 2026 launch post on blog.cloudflare.com; open-source Apache-2.0 on github.com/cloudflare/cloudflare-os (~1.3k stars); HN 304 pts; distinct from cloudflare-computer (that item is the low-level runtime, this is the multi-user workspace platform)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "article",
+        "benchmark",
+        "ecosystem",
+        "security",
+        "rumor"
+      ]
     }
   ]
 }

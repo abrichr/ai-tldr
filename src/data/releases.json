@@ -1,8 +1,122 @@
 {
-  "generatedAt": "2026-08-05T14:02:05.992Z",
+  "generatedAt": "2026-08-05T17:37:13.985Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "cloudflare-os",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "Cloudflare OS — open agent workspace for building internal apps on your company data",
+      "org": "Cloudflare",
+      "date": "2026-08-05",
+      "url": "https://blog.cloudflare.com/cloudflare-os/",
+      "summary": "Cloudflare OS is an Apache-2.0 agent workspace that lets non-engineers chat with a workspace to research, draft documents, and spin up full-stack apps grounded in company systems. Runs in the customer's own Cloudflare account.",
+      "tags": [
+        "cloudflare",
+        "cloudflare-os",
+        "agents",
+        "agent-workspace",
+        "internal-tools",
+        "workers",
+        "durable-objects",
+        "mcp",
+        "open-source",
+        "apache-2-0"
+      ],
+      "importance": "major",
+      "metrics": {
+        "GitHub stars": "1,283",
+        "License": "Apache-2.0"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Cloudflare"
+        },
+        {
+          "label": "What it is",
+          "value": "Open-source agent workspace platform"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        },
+        {
+          "label": "Repo",
+          "value": "github.com/cloudflare/cloudflare-os"
+        },
+        {
+          "label": "Hosted app",
+          "value": "os.cloudflare.app"
+        },
+        {
+          "label": "Runs on",
+          "value": "Cloudflare Workers, Durable Objects, Dynamic Workers"
+        },
+        {
+          "label": "Availability",
+          "value": "Deploy into your own Cloudflare account"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How is Cloudflare OS different from Cloudflare Computer?",
+          "a": "Cloudflare OS is the end-user workspace where employees chat with agents, build apps, and share documents; Cloudflare Computer is the lower-level runtime that gives an individual agent a virtual filesystem and execution backends. OS sits above Computer's building blocks and adds the multi-user interface, Gatekeeper access controls, and shareable apps."
+        },
+        {
+          "q": "How does Cloudflare OS reach a company's internal systems?",
+          "a": "Cloudflare OS connects to internal systems through two paths: Gatekeepers, which are service-specific Cloudflare Workers that mediate access to each system, and Model Context Protocol servers. All AI requests route through Cloudflare AI Gateway so the customer picks the model, tracks cost, and applies its own policy."
+        },
+        {
+          "q": "What does the Apache-2.0 license actually allow?",
+          "a": "Cloudflare OS ships under Apache-2.0 on GitHub as cloudflare/cloudflare-os, so a customer can fork it, modify it, and run it in their own Cloudflare account without contacting Cloudflare. Cloudflare also runs the hosted version at os.cloudflare.app and lists Presidio and Happy Cog as partners for enterprise customisation."
+        },
+        {
+          "q": "Do agents in Cloudflare OS actually build working apps?",
+          "a": "Yes. Users ask the workspace agent to build a full-stack app; the client and server code run as Dynamic Workers with SQLite databases, and each app is private by default with capability-based sharing. The launch post shows sales dashboards, deal-tracking tools, and internal reporting apps assembled the same way."
+        }
+      ],
+      "explainer": {
+        "tagline": "Cloudflare's open-source answer to internal chat-plus-app platforms, built on Workers and released under Apache-2.0.",
+        "whatIsIt": "Cloudflare OS is an open-source workspace platform launched by Cloudflare on 5 August 2026 that lets non-engineers converse with agents to research topics, draft documents and slides, and stand up small internal apps grounded in their company's own data. It ships as the cloudflare/cloudflare-os repository under Apache-2.0 and also runs as a hosted service at os.cloudflare.app.",
+        "howItWorks": "Under the hood, Cloudflare OS runs on Cloudflare Workers with Durable Objects for per-user state and Dynamic Workers plus SQLite for generated apps. Access to internal systems flows through Gatekeepers (service-specific Workers) and Model Context Protocol portals; every model call routes through Cloudflare's AI Gateway, so the customer chooses the model and controls spend.",
+        "whyItMatters": "Cloudflare OS pushes the internal-agent stack out of proprietary consoles and into a repo any team can fork. Capability-based access controls and Gatekeepers give security teams a real story for sharing outputs without leaking source data, and running everything in the customer's own Cloudflare account avoids sending internal context to a third-party SaaS.",
+        "forWho": "Enterprise platform teams and IT groups building internal AI apps",
+        "tryIt": "git clone https://github.com/cloudflare/cloudflare-os"
+      },
+      "image": {
+        "url": "https://blog.cloudflare.com/_emdash/api/media/file/01KZ7PN06AYFEQJN4FBVAE8WHH.png",
+        "alt": "Cloudflare OS announcement graphic showing an agent workspace on Cloudflare Workers",
+        "fit": "cover",
+        "credit": "Cloudflare"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://blog.cloudflare.com/cloudflare-os/"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/cloudflare/cloudflare-os"
+        },
+        {
+          "label": "Hosted App",
+          "url": "https://os.cloudflare.app/"
+        },
+        {
+          "label": "MCP Portals Docs",
+          "url": "https://developers.cloudflare.com/cloudflare-one/access-controls/ai-controls/mcp-portals/"
+        },
+        {
+          "label": "AI Gateway",
+          "url": "https://developers.cloudflare.com/ai-gateway/"
+        }
+      ],
+      "publishDate": "2026-08-05T17:37:13.985Z"
+    },
     {
       "id": "cloudflare-computer",
       "categories": [
