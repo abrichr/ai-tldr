@@ -28836,6 +28836,31 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260806t083308z",
+      "timestamp": "2026-08-06T08:33:08.160Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Prior 05:27Z sweep already ingested every ≤72h release the search surfaced today — Muse Code + Muse Spark 1.2, Cloudflare OS and Cloudflare Computer, Mistral Shieldstral, the Google DeepMind restructure (Hassabis to Chair) and Jeff Dean's Discovery Loop spin-out, Neon Castform, Zed 1.14 sandboxing, Prime Agent, plus the Two Minute Papers and Wes Roth videos covering Qwen3.8-Max and DeepSeek V4-Flash-0731. Searched lab blogs (Anthropic, Meta, Mistral, DeepMind, x.ai, OpenAI), GitHub trending, HF trending models + top papers, HN top 30, YouTube RSS across 8 creator channels, and the neuro/med/pharma lane (STAT News, Nature AI, BCI queries) — nothing else met the 72h + inclusion-bar. bio-lane note: Brain2Qwerty Nature Neuroscience paper (Aug 3) is a peer-reviewed write-up of Meta's June release with no new released code, so it's a finding not a release — 'no papers alone' applies.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "algorithm",
+        "article",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }
