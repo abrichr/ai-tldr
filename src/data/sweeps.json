@@ -28899,6 +28899,47 @@
         "ecosystem",
         "article"
       ]
+    },
+    {
+      "id": "sweep-20260806t143052z",
+      "timestamp": "2026-08-06T14:30:52.966Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic/OpenAI/DeepMind/Meta/Mistral/Cohere/xAI/Qwen/Moonshot/DeepSeek/Z.ai/MiniMax), GitHub trending, HuggingFace models/papers/datasets, HN top 30 + Show HN, 8 YouTube creator RSS feeds, tier-1 press (Verge/Ars/TechCrunch/Register/TheNewStack), and the AI-for-science lane (Nature/STAT/EurekAlert/pharma/neuro blogs). Added LoopX 0.4.1 (trending durable-state kernel for coding agents) and Astro triagebot-action (Cloudflare + Astro ship an AI issue-triage GitHub Action, 85% issue reduction). Skipped Two Minute Papers + Wes Roth YouTube uploads (already in feed) and Fireship's Bitcoin video (off-topic). Everything else in the 72h window (Muse Code, Prime Agent, Cloudflare Computer/OS, Castform, LFM2.5, Shieldstral, MiniMax H3, Qwen3.8-Max, DeepHealth breast-ultrasound FDA clearance, Rovo exfil, AISI incident, Cursor Astro-triage coverage on TheNewStack) is already covered. NVIDIA NOOA is out of the 72h date bar (v0.0.8 shipped 2026-07-30).",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "loopx-0-4-1",
+          "title": "LoopX 0.4.1 — durable state kernel for long-running coding agents",
+          "category": "repo",
+          "note": "Trending Python state-kernel for long-running coding agents (2654 stars total, 854 gained today). MIT license. v0.4.1 shipped 2026-08-04 — persistent Todo routes, goal-continuation contracts, quota-aware auto-wake. Clear GitHub-trending signal, real ship, in-window."
+        },
+        {
+          "id": "astro-triagebot-action",
+          "title": "Astro triagebot-action — AI issue triage drops Astro's open-issue count 85%",
+          "category": "tool",
+          "note": "Cloudflare blog (2026-08-04) authored by Matthew Phillips (Astro co-founder) announcing the open-sourcing of Astro's own AI issue-triage GitHub Action. Concrete result: 200+ open issues → ~30 (~85% reduction). Uses the Flue open agent framework. Real developer artifact + case study — passes the ecosystem/tool gate."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "security",
+        "ecosystem",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "rumor"
+      ]
     }
   ]
 }

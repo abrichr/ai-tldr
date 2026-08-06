@@ -1,8 +1,116 @@
 {
-  "generatedAt": "2026-08-06T12:14:13.181Z",
+  "generatedAt": "2026-08-06T14:30:52.966Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "loopx-0-4-1",
+      "categories": [
+        "repo",
+        "tool"
+      ],
+      "title": "LoopX 0.4.1 — durable state kernel for long-running coding agents",
+      "org": "huangruiteng",
+      "date": "2026-08-04",
+      "url": "https://github.com/huangruiteng/loopx/releases/tag/v0.4.1",
+      "summary": "LoopX is an MIT-licensed Python control plane that gives Codex, Claude Code, and other agents durable goals, executable todos, and evidence logs across long sessions. v0.4.1 adds persistent todo routes and goal-continuation contracts.",
+      "tags": [
+        "ai-agents",
+        "coding-agents",
+        "python",
+        "mit-license",
+        "durable-state",
+        "agent-tooling",
+        "control-plane",
+        "long-running",
+        "github-trending",
+        "codex",
+        "claude-code"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "LoopX is a small durable-state kernel that stops long agent runs from forgetting their own plan.",
+        "whatIsIt": "LoopX is an MIT-licensed Python control plane that sits alongside coding agents like Codex and Claude Code. It stores goals, executable todos, evidence logs, and handoff contracts in a durable store, so an agent's plan survives crashes, quota resets, or a new turn starting cold.",
+        "howItWorks": "The kernel treats each agent turn as a bounded step against a Goal host — a persistent objective with selected-todo context. v0.4.1 adds Todo routes that survive across turns, so an agent resumes work without re-inferring context, plus a quota-aware auto-wake that reactivates a goal at real state transitions instead of polling.",
+        "whyItMatters": "Long agent runs fail today because the model's scratchpad is the only memory — restart the loop and the plan disappears. LoopX moves that plan out of chat memory into a small kernel, so a paused or crashed run can resume against the same objective without re-reasoning from scratch.",
+        "forWho": "Engineers running Codex or Claude Code sessions for hours or days",
+        "tryIt": "git clone https://github.com/huangruiteng/loopx"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/a0affe7a34aa8bc743d734f29e105963a5679a39da590be291dd6a75c6d59d5b/huangruiteng/loopx/releases/tag/v0.4.1",
+        "alt": "LoopX v0.4.1 release page on GitHub — a durable state kernel for long-running coding agents",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "v0.4.1 release",
+          "url": "https://github.com/huangruiteng/loopx/releases/tag/v0.4.1"
+        },
+        {
+          "label": "GitHub repo",
+          "url": "https://github.com/huangruiteng/loopx"
+        },
+        {
+          "label": "All releases",
+          "url": "https://github.com/huangruiteng/loopx/releases"
+        }
+      ],
+      "publishDate": "2026-08-06T14:30:52.966Z"
+    },
+    {
+      "id": "astro-triagebot-action",
+      "categories": [
+        "tool",
+        "repo",
+        "article"
+      ],
+      "title": "Astro triagebot-action — AI issue triage drops Astro's open-issue count 85%",
+      "org": "Cloudflare",
+      "date": "2026-08-04",
+      "url": "https://blog.cloudflare.com/astro-issue-triage/",
+      "summary": "Cloudflare and Astro open-sourced triagebot-action, a GitHub Action that reproduces bugs, diagnoses causes, and posts preview builds for reporters. In production on Astro's own repo, it cut the open-issue count from 200+ to about 30.",
+      "tags": [
+        "ai-agents",
+        "github-action",
+        "issue-triage",
+        "coding-agents",
+        "typescript",
+        "cloudflare",
+        "astro",
+        "flue-framework",
+        "dev-tools",
+        "open-source"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Astro's team shipped a GitHub Action that pushes AI agents to reproduce, debug, and verify issues before a human sees them.",
+        "whatIsIt": "triagebot-action is a GitHub Action from the Astro core team (now inside Cloudflare) that runs an AI-agent pipeline against every incoming bug report. When a new issue lands, the Action reproduces the bug, diagnoses the root cause, and publishes a preview build for the reporter to verify before an engineer looks at it.",
+        "howItWorks": "The Action drives a label-driven state machine — each incoming issue gets a label, and the Action interprets that label to run one step (reproduce, diagnose, propose a fix, ship a preview). It runs on Flue, an open agent-execution framework, which spawns isolated subagents that compile findings into sequential reports.",
+        "whyItMatters": "Astro's team demonstrated the result on its own repo: open issues fell from over 200 to about 30, an 85% reduction. For any maintainer team drowning in bug reports, a production-tested reference for AI-assisted triage on a popular JS framework is a clean starting point.",
+        "forWho": "OSS maintainers, dev-tool teams, GitHub-native workflows",
+        "tryIt": "https://github.com/withastro/triagebot-action"
+      },
+      "image": {
+        "url": "https://blog.cloudflare.com/_emdash/api/media/file/01KZ4K04GMZNVQZJVRZ5MVH1HX.png",
+        "alt": "Cloudflare and Astro AI issue-triage pipeline overview",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Cloudflare blog",
+          "url": "https://blog.cloudflare.com/astro-issue-triage/"
+        },
+        {
+          "label": "triagebot-action repo",
+          "url": "https://github.com/withastro/triagebot-action"
+        },
+        {
+          "label": "Flue framework",
+          "url": "https://flueframework.com/"
+        }
+      ],
+      "publishDate": "2026-08-06T14:30:52.966Z"
+    },
     {
       "id": "nvidia-alpamayo-2-super",
       "categories": [
