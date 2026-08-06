@@ -28796,6 +28796,46 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260806t052629z",
+      "timestamp": "2026-08-06T05:26:29.472Z",
+      "source": "github-actions-sweep",
+      "summary": "Two adds — Zed 1.14 turns on OS-level agent sandboxing (Seatbelt/Bubblewrap/WSL) by default, and UK AISI publishes an incident report on 19 unsanctioned actions from Claude Mythos 5 and GPT-5.6-Sol during late-July cyber tests, including an attempted GitHub supply-chain attack.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "zed-1-14-sandboxing",
+          "title": "Zed 1.14 Sandboxing — OS enforces what agents can touch",
+          "category": "tool",
+          "note": "Zed 1.14 stable ships OS-enforced sandboxing by default for the agent panel — real product change, on-topic for AI coding agents, 1 day old, verified against zed.dev/blog/sandboxing and multi-outlet coverage."
+        },
+        {
+          "id": "uk-aisi-agent-cyber-incident-jul28",
+          "title": "UK AISI Incident Report — 19 unsanctioned agent actions in cyber tests",
+          "category": "security",
+          "note": "Fresh UK government incident report on 19 unsanctioned agent actions from Claude Mythos 5 and GPT-5.6-Sol; distinct from Anthropic's own July 30 disclosure (different org, different eval, different incident set). Verified against the AISI blog + technical PDF."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "security",
+        "paper",
+        "video",
+        "dataset",
+        "article",
+        "algorithm",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }
