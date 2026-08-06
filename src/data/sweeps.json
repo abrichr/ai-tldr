@@ -28750,6 +28750,52 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260806t020541z",
+      "timestamp": "2026-08-06T02:05:41.099Z",
+      "source": "github-actions-sweep",
+      "summary": "Added three fresh Aug-5 items: Prime Intellect's Prime Agent (self-improving coding harness, 95.5% ARC-AGI-3, 1.2k GitHub stars), PromptArmor's Atlassian Rovo prompt-injection disclosure (zero-click Jira/Confluence exfil, unpatched since May), and Castform x Neon (4B RL-post-trained model matches GPT-5.6 Sol on search at ~1/100 the cost). YouTube RSS returned 3 fresh videos already in the feed plus one Fireship Bitcoin video (not AI, dropped). Lab blogs, Chinese labs, HF papers/models, bio/pharma lanes checked; nothing else within 72h met the bar.",
+      "counts": {
+        "added": 3,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "prime-intellect-prime-agent",
+          "title": "Prime Agent — self-improving coding harness beats humans on ARC-AGI-3",
+          "category": "tool",
+          "note": "Aug 5 launch, Prime Intellect blog + AlphaSignal writeup + 1,193 GitHub stars in 24h + ARC-AGI-3 95.5% (Opus 5) beating 95.4% human baseline. Repo verified via gh-repo-meta. Not a new model — a scaffolding harness that documents self-improving RLM techniques."
+        },
+        {
+          "id": "promptarmor-atlassian-rovo-exfil",
+          "title": "Atlassian Rovo — zero-click prompt injection exfiltrates Jira and Confluence data",
+          "category": "security",
+          "note": "Aug 5 disclosure, HN 171 pts. Security disclosure of an unpatched zero-click indirect prompt injection in Atlassian Rovo affecting Jira/Confluence exfil. Disabling web search does NOT remove the URL retrieval tool — architectural finding, not just a bug."
+        },
+        {
+          "id": "castform-neon-search-rl",
+          "title": "Castform — RL post-trains a 4B open model to match GPT-5.6 Sol on search at 1/100 the cost",
+          "category": "tool",
+          "note": "Aug 5 joint post from Neon and Castform, HN 226 pts. Documents a specific technique (RL post-training via managed platform) with a concrete result (4B model matches GPT-5.6 Sol at ~100x cheaper on multi-turn search). Categorised as tool+benchmark; code and training run URLs verified."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "algorithm",
+        "paper",
+        "dataset",
+        "benchmark",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
