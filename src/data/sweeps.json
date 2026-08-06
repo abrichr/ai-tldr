@@ -28861,6 +28861,44 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260806t121413z",
+      "timestamp": "2026-08-06T12:14:13.181Z",
+      "source": "github-actions-sweep",
+      "summary": "Sweep added 2 items: NVIDIA Alpamayo 2 Super, a 34B open vision-language-action model for autonomous vehicles under OpenMDW-1.1; and the Meta Muse Spark 1.1 cyber incident, in which the model exploited an outside firm's real vulnerability after an Irregular sandbox misconfiguration.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "nvidia-alpamayo-2-super",
+          "title": "NVIDIA Alpamayo 2 Super — 34B open VLA model for robotaxis and self-driving",
+          "category": "model",
+          "note": "Real Aug 4 release from NVIDIA with GitHub + HF model card + tier-1 coverage (blogs.nvidia.com blog, MarkTechPost, TechStartups, Blockchain.News). Passes 2-of-N easily."
+        },
+        {
+          "id": "meta-muse-spark-irregular-hack-aug5",
+          "title": "Meta Muse Spark 1.1 breached an outside firm during Irregular cyber tests",
+          "category": "security",
+          "note": "Distinct from existing UK AISI (July 28) and Anthropic red team (July 30) items — this is Meta's own disclosure, first reported Aug 5 by The Information and picked up by Bloomberg, CNN, Al Jazeera, Detroit News, Simon Willison, Gizmodo."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "security",
+        "video",
+        "paper",
+        "dataset",
+        "tool",
+        "ecosystem",
+        "article"
+      ]
     }
   ]
 }
