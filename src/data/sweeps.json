@@ -28940,6 +28940,45 @@
         "benchmark",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260807t000647z",
+      "timestamp": "2026-08-07T00:06:47.880Z",
+      "source": "github-actions-sweep",
+      "summary": "Two Aug-6 major-lab consumer updates: OpenAI retuned GPT-5.6 Sol in ChatGPT (68% fewer factual errors, new reasoning slider, unlimited free chats on Luna) and Google turned Ask Maps into a Gemini agent that orders food on Square/Toast, books hotels, and buys event tickets. Scanned lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, x.ai, z.ai), GitHub trending, HuggingFace models/papers/datasets, HN front page top 30, YouTube RSS (4 fresh videos — 2 already in feed, 1 non-AI Bitcoin story, 1 AI Explained video with unverifiable content), and the AI-for-science lane; no other item cleared the 72h bar with verifiable content.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-gpt-5-6-sol-chatgpt-aug6",
+          "title": "ChatGPT ships smarter GPT-5.6 Sol — new reasoning slider, unlimited free chats",
+          "category": "model",
+          "note": "OpenAI Aug 6 blog post plus TechCrunch and 9to5Mac coverage; tier-1 press ≥2 outlets, top-lab, product-shipping-today; major (not seismic — model retune + product update, not a new SOTA base model)."
+        },
+        {
+          "id": "google-ask-maps-agentic-aug6",
+          "title": "Google Ask Maps — Gemini agent orders food, books hotels, and buys event tickets",
+          "category": "tool",
+          "note": "Google Aug 6 official blog post plus TechCrunch, 9to5Google, Engadget, Gizmodo, The Next Web coverage; first Google agent to take real consumer actions (food/hotels/tickets); major (consumer product update, not a new SOTA model)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "paper",
+        "dataset",
+        "video",
+        "article",
+        "showcase",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }

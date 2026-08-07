@@ -1,8 +1,228 @@
 {
-  "generatedAt": "2026-08-06T14:30:52.966Z",
+  "generatedAt": "2026-08-07T00:06:47.880Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openai-gpt-5-6-sol-chatgpt-aug6",
+      "categories": [
+        "model",
+        "tool"
+      ],
+      "title": "ChatGPT ships smarter GPT-5.6 Sol — new reasoning slider, unlimited free chats",
+      "org": "OpenAI",
+      "date": "2026-08-06",
+      "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
+      "summary": "OpenAI retuned GPT-5.6 Sol in ChatGPT for more direct answers with 68% fewer factual errors than GPT-5.5-Instant, added a slider that controls reasoning depth for Plus and Pro, and gave Free users unlimited text chats on GPT-5.6 Luna.",
+      "tags": [
+        "openai",
+        "chatgpt",
+        "gpt-5-6-sol",
+        "gpt-5-6-luna",
+        "model-update",
+        "reasoning-slider",
+        "free-tier",
+        "unlimited-chats",
+        "product-update"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Factual errors vs GPT-5.5 Instant": "68% fewer",
+        "Free-tier text chats": "unlimited",
+        "Free-tier default model": "GPT-5.6 Luna",
+        "ChatGPT weekly users": "1 billion"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenAI"
+        },
+        {
+          "label": "Updated model",
+          "value": "GPT-5.6 Sol (in ChatGPT)"
+        },
+        {
+          "label": "New free-tier default",
+          "value": "GPT-5.6 Luna, unlimited text chats"
+        },
+        {
+          "label": "New control",
+          "value": "Reasoning slider on web, mobile, desktop"
+        },
+        {
+          "label": "Unified experience",
+          "value": "Instant and Thinking merged into one"
+        },
+        {
+          "label": "Availability",
+          "value": "Plus and Pro now; Free and Go rolling out this week"
+        },
+        {
+          "label": "Not changed",
+          "value": "GPT-5.6 Sol in Codex and ChatGPT Work"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What changed in GPT-5.6 Sol in ChatGPT?",
+          "a": "OpenAI retuned GPT-5.6 Sol for everyday chat: more direct answers, tighter formatting, less unnecessary detail, and stronger reliability on dates, numbers, rules, sources, and assumptions. OpenAI reports 68% fewer factual errors than GPT-5.5-Instant on finance, medical, and legal evaluations."
+        },
+        {
+          "q": "How does the new reasoning slider work?",
+          "a": "The reasoning slider lets Plus and Pro subscribers pick how much thought GPT-5.6 Sol puts into each answer. Keep it low for quick questions and raise it for research, coding, or planning. The slider ships on web, mobile, and desktop and replaces the old split between Instant and Thinking."
+        },
+        {
+          "q": "What do Free users get?",
+          "a": "Free and Go users move to GPT-5.6 Luna as the default and get unlimited text chats. A new Think button on ChatGPT triggers deeper reasoning for harder questions. Separate limits still apply for files, images, voice, and image generation. OpenAI reports 62% fewer factual errors on Luna versus the model it replaces."
+        },
+        {
+          "q": "Does this change GPT-5.6 Sol in Codex or ChatGPT Work?",
+          "a": "No. The improvements target GPT-5.6 Sol as used inside ChatGPT for chat. GPT-5.6 Sol in Codex and in ChatGPT Work is not affected by this update, so coding and enterprise agent behavior stays where it was."
+        },
+        {
+          "q": "How do I get the new Sol and the slider?",
+          "a": "The upgraded GPT-5.6 Sol and the reasoning slider are rolling out immediately to ChatGPT Plus and Pro subscribers across web, mobile, and desktop. Free and Go users receive the Luna default and unlimited text chats over the following week as the rollout expands."
+        }
+      ],
+      "explainer": {
+        "tagline": "OpenAI retuned GPT-5.6 Sol in ChatGPT, added a reasoning slider, and made text chats unlimited for Free users.",
+        "whatIsIt": "ChatGPT's default paid model, GPT-5.6 Sol, now gives more direct answers with tighter formatting and 68% fewer factual errors on finance, medical, and legal checks than GPT-5.5-Instant. Plus and Pro subscribers also gain a slider that controls how much thinking Sol puts into each answer, and Free users move to GPT-5.6 Luna with unlimited text chats.",
+        "howItWorks": "OpenAI merged ChatGPT's Instant and Thinking modes into one experience powered by GPT-5.6 Sol, then exposed the old choice as a slider on web, mobile, and desktop. Free and Go users get GPT-5.6 Luna as the default, a new Think button for deeper reasoning on hard questions, and no cap on text chats. GPT-5.6 Sol inside Codex and ChatGPT Work is untouched by this update.",
+        "whyItMatters": "The retuned Sol answers everyday questions with fewer hedge words and fewer bad facts, which is the exact complaint most ChatGPT users bring up. The reasoning slider lets paid users trade latency for depth without switching models, and unlimited free chats on Luna land as OpenAI passes 1 billion weekly ChatGPT users.",
+        "forWho": "ChatGPT users across Free, Plus and Pro plans",
+        "tryIt": "https://chatgpt.com"
+      },
+      "image": {
+        "url": "https://images.ctfassets.net/kftzwdyauwt9/5ufNl1zzui8XrAogWs5j89/13fdcb619e5f1e31a3efd34f425477ac/Art_Card_16x9__1_.png",
+        "alt": "OpenAI announcement art for the improved GPT-5.6 Sol update in ChatGPT",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "TechCrunch coverage",
+          "url": "https://techcrunch.com/2026/08/06/openai-brings-unlimited-chatgpt-text-chats-to-free-users/"
+        },
+        {
+          "label": "9to5Mac coverage",
+          "url": "https://9to5mac.com/2026/08/06/openai-updating-chatgpt-with-a-smarter-gpt-5-6-sol-and-unlimited-free-chats/"
+        },
+        {
+          "label": "Try ChatGPT",
+          "url": "https://chatgpt.com"
+        }
+      ],
+      "publishDate": "2026-08-07T00:06:47.880Z"
+    },
+    {
+      "id": "google-ask-maps-agentic-aug6",
+      "categories": [
+        "tool",
+        "showcase"
+      ],
+      "title": "Google Ask Maps — Gemini agent orders food, books hotels, and buys event tickets",
+      "org": "Google",
+      "date": "2026-08-06",
+      "url": "https://blog.google/products-and-platforms/products/maps/order-food-in-ask-maps/",
+      "summary": "Ask Maps, Google Maps's Gemini assistant, now assembles takeout carts on Square and Toast, compares hotel prices, buys event tickets, and reads a user's Gmail and Calendar. Agentic actions launch in the US; Ask Maps hits 150+ countries.",
+      "tags": [
+        "google",
+        "google-maps",
+        "ask-maps",
+        "gemini",
+        "agent",
+        "ai-agent",
+        "food-ordering",
+        "hotel-booking",
+        "event-tickets",
+        "personal-intelligence",
+        "consumer-ai"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Google"
+        },
+        {
+          "label": "Product",
+          "value": "Ask Maps, the Gemini-powered chat inside Google Maps"
+        },
+        {
+          "label": "New actions",
+          "value": "Order food, book hotels, buy event tickets"
+        },
+        {
+          "label": "Food partners",
+          "value": "Square and Toast (Uber Eats coming soon)"
+        },
+        {
+          "label": "Personal Intelligence",
+          "value": "Connects Gmail and Calendar; off by default"
+        },
+        {
+          "label": "Agentic rollout",
+          "value": "United States first, expanding later"
+        },
+        {
+          "label": "Ask Maps expansion",
+          "value": "Australia, Brazil, Canada, Indonesia, Japan, Mexico, 150+ countries in English"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What can Ask Maps do now that it could not do before?",
+          "a": "Ask Maps can take multi-step consumer actions from one sentence: order takeout by adding dishes to a cart on Square or Toast, compare real-time hotel prices then hand off to a booking partner, and buy tickets for nearby comedy or live-music events. A new live transit widget also shows minute-by-minute delays."
+        },
+        {
+          "q": "Which food-delivery platforms does Ask Maps support?",
+          "a": "Ask Maps places orders through Square and Toast at launch, adding requested dishes directly to a cart on the partner site before the user confirms payment. Google says Uber Eats support is coming soon. Ask Maps factors in saved places and dietary preferences when it picks a restaurant."
+        },
+        {
+          "q": "What is Personal Intelligence in Ask Maps?",
+          "a": "Personal Intelligence lets Ask Maps read a user's Gmail and Google Calendar to tailor recommendations, so a hotel search can factor in a flight time or a dinner reservation already on the calendar. Google keeps Personal Intelligence off by default; users must opt in per account."
+        },
+        {
+          "q": "Where is the update available?",
+          "a": "The agentic food, hotel, and event actions launch in the United States first. The core Ask Maps assistant is rolling out to Australia, Brazil, Canada, Indonesia, Japan and Mexico, plus more than 150 countries in English. Personal Intelligence and the live transit widget follow the wider Ask Maps rollout."
+        },
+        {
+          "q": "How does Ask Maps compare to Google's AI Mode in Search?",
+          "a": "Ask Maps runs the Gemini agent inside Google Maps and focuses on place-based tasks — restaurants along a route, hotels near a venue, events in a city. Google's AI Mode in Search is a broader agentic search interface. The Maps update pushes agentic commerce into the app people already use to find places."
+        }
+      ],
+      "explainer": {
+        "tagline": "Google Maps' Ask Maps assistant can now order food, book hotels and buy event tickets in one sentence.",
+        "whatIsIt": "Ask Maps is the Gemini-powered chat inside Google Maps. From today it does more than answer questions: it can order takeout on Square or Toast, compare hotel prices and hand off to a booking partner, buy tickets to nearby events, and pull context from Gmail and Google Calendar when the user opts in through a feature Google calls Personal Intelligence.",
+        "howItWorks": "The Ask Maps agent handles multi-step consumer requests in natural language, assembling a restaurant cart on a partner platform before the user pays, and checking real-time hotel availability across booking sites. A separate live transit widget streams minute-by-minute delays on buses, trains, subways and ferries, and conversation memory keeps context across sessions when history is on.",
+        "whyItMatters": "This is the first Google product where an AI agent takes real consumer actions at scale — spending money on food, hotels and tickets from a single Maps prompt. It lands the same week Google Search's AI Mode also pushed further into agentic bookings, signalling that Gemini agents are moving from answers to transactions in the apps people already use daily.",
+        "forWho": "Google Maps users in the US and 150+ English-speaking countries",
+        "tryIt": "Open Google Maps and tap Ask Maps"
+      },
+      "image": {
+        "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Ask_Maps_hero.width-1300.png",
+        "alt": "Google's Ask Maps hero image showing the Gemini-powered assistant in Google Maps",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://blog.google/products-and-platforms/products/maps/order-food-in-ask-maps/"
+        },
+        {
+          "label": "TechCrunch coverage",
+          "url": "https://techcrunch.com/2026/08/06/google-maps-adds-agentic-features-including-food-ordering-and-hotel-bookings/"
+        },
+        {
+          "label": "9to5Google details",
+          "url": "https://9to5google.com/2026/08/06/google-ask-maps-global/"
+        },
+        {
+          "label": "Engadget coverage",
+          "url": "https://www.engadget.com/2231441/google-maps-ask-maps-expansion/"
+        }
+      ],
+      "publishDate": "2026-08-07T00:06:47.880Z"
+    },
     {
       "id": "loopx-0-4-1",
       "categories": [
