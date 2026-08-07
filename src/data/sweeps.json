@@ -29019,6 +29019,39 @@
         "algorithm",
         "benchmark"
       ]
+    },
+    {
+      "id": "sweep-20260807t054128z",
+      "timestamp": "2026-08-07T05:41:28.762Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Ant Group's Ling-3.0-flash (124B/5.1B-active MoE, MIT license, hybrid Kimi Delta + Gated MLA attention) — weights landed on Hugging Face Aug 5, HF trending, multi-outlet coverage. Everything else on the fresh side was already in feed (Anthropic Fable 5 biology safeguards, GPT-5.6 Sol, WeatherNext Cyclones, Shieldstral, Meta Muse Spark hack). YouTube RSS all 404/500 in CI — no fresh videos surfaced. HN top 30 AI slots dominated by GPT-5.6 Sol (in feed) and the AMD-Taalas acquisition (fails ecosystem gate — no developer action today). HF Papers (all Aug-7 arXiv-only, no code+demo+traction combos). Specialist bio/neuro channels (Arc Institute, Isomorphic Labs, Nature AI) quiet in the 72h window.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "inclusionai-ling-3-0-flash",
+          "title": "Ling-3.0-flash — Ant Group opens 124B MoE with 5.1B active params under MIT",
+          "category": "model",
+          "note": "Weights open-sourced Aug 5 by inclusionAI (Ant Group). 124B total / 5.1B active MoE with hybrid Kimi Delta + Gated MLA attention. MIT license, HF trending, benchmarks published on model card (SWE-Bench Pro 56.6, AIME 2026 93.2). Clears bar via HF trending + multi-outlet press coverage."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }

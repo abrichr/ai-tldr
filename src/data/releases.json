@@ -1,8 +1,121 @@
 {
-  "generatedAt": "2026-08-07T02:30:42.165Z",
+  "generatedAt": "2026-08-07T05:41:28.762Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "inclusionai-ling-3-0-flash",
+      "categories": [
+        "model"
+      ],
+      "title": "Ling-3.0-flash — Ant Group opens 124B MoE with 5.1B active params under MIT",
+      "org": "Ant Group (inclusionAI)",
+      "date": "2026-08-05",
+      "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash",
+      "summary": "Ling-3.0-flash is Ant Group's 124B open-weight MoE with only 5.1B params active per token. Hybrid Kimi Delta + Gated MLA attention, 56.6 on SWE-Bench Pro, MIT-licensed weights on Hugging Face.",
+      "tags": [
+        "model",
+        "open-weights",
+        "moe",
+        "hybrid-attention",
+        "ant-group",
+        "inclusionai",
+        "ling-3-0-flash",
+        "mit-license",
+        "reasoning",
+        "coding",
+        "kimi-delta-attention",
+        "long-context",
+        "chinese-labs"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "A 124B open-weight MoE that runs like a 5B model — Ant Group ships it under MIT.",
+        "whatIsIt": "Ling-3.0-flash is Ant Group's newest open-weight MoE model, released by their inclusionAI arm. It has 124 billion total parameters but activates only 5.1 billion per token, so it runs closer to a 5B model on hardware while pulling from a much larger expert pool. Weights landed on Hugging Face on August 5, 2026 under an MIT license.",
+        "howItWorks": "The model swaps most standard attention for a hybrid stack — 35 layers of Kimi Delta Attention (a linear attention variant) paired with 7 layers of Gated Multi-head Latent Attention in a 5:1 pattern. The MoE routes each token to 8 of 512 experts plus one shared expert. Ling-3.0-flash was trained in context stages of 8K, then 32K, then 256K tokens.",
+        "whyItMatters": "The hybrid linear attention combined with SGLang HiCache and Mooncake tiered caching cuts Time-To-First-Token by 60-80% on long inputs, so an agent scanning a large codebase stays snappy. With just 5.1B active params, teams can self-host a strong reasoning model without paying flagship-scale compute costs.",
+        "forWho": "teams self-hosting a strong coding and reasoning model",
+        "tryIt": "huggingface.co/inclusionAI/Ling-3.0-flash (SGLang or the inclusionAI vLLM fork; temperature 0.6, top_p 0.95)"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Ant Group (inclusionAI)"
+        },
+        {
+          "label": "Total parameters",
+          "value": "124B"
+        },
+        {
+          "label": "Active per token",
+          "value": "5.1B"
+        },
+        {
+          "label": "Architecture",
+          "value": "MoE (512 experts, 8 active + 1 shared)"
+        },
+        {
+          "label": "Attention",
+          "value": "Hybrid — 35 KDA + 7 Gated MLA layers (5:1)"
+        },
+        {
+          "label": "Context window",
+          "value": "256K tokens"
+        },
+        {
+          "label": "License",
+          "value": "MIT"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How is Ling-3.0-flash different from other 100B+ open-weight models?",
+          "a": "Ling-3.0-flash mixes linear attention (Kimi Delta) with standard attention in a 5:1 ratio, trained that way from scratch. Ant Group says this cuts Time-To-First-Token by 60-80% on long prompts when paired with SGLang HiCache and Mooncake caching. Combined with its 5.1B active params, it targets long-context agent workloads without flagship compute cost."
+        },
+        {
+          "q": "What benchmark scores has Ant Group published for Ling-3.0-flash?",
+          "a": "Ant Group's model card reports 56.6 on SWE-Bench Pro, 93.2 on AIME 2026, 87 on HMMT February 2026, and 72.4 on SWE-Bench Multilingual. All figures come from the release page — no independent audit exists yet at open-weights launch."
+        },
+        {
+          "q": "How do you run Ling-3.0-flash locally?",
+          "a": "Ling-3.0-flash runs on SGLang or a custom vLLM fork published by inclusionAI. Recommended sampling is temperature 0.6, top_p 0.95, top_k 20. The full BF16 checkpoint is 255GB; an FP8 variant at 128GB is also on Hugging Face for smaller GPU setups."
+        },
+        {
+          "q": "Was Ling-3.0-flash available before the open-weights release?",
+          "a": "Yes, but only through hosted APIs. From July 23 to August 3, 2026 Ling-3.0-flash was free on OpenRouter, Vercel AI Gateway and Kilo. Ant Group open-sourced the weights on August 5 under an MIT license, so anyone can now self-host or fine-tune."
+        }
+      ],
+      "metrics": {
+        "Total params": "124B",
+        "Active params": "5.1B",
+        "SWE-Bench Pro": "56.6",
+        "AIME 2026": "93.2"
+      },
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/inclusionAI/Ling-3.0-flash.png",
+        "alt": "Hugging Face model card thumbnail for inclusionAI Ling-3.0-flash",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Model Card",
+          "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash"
+        },
+        {
+          "label": "FP8 Weights",
+          "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-fp8"
+        },
+        {
+          "label": "Launch Post",
+          "url": "https://blog.kilo.ai/p/announcing-ling-30-flash-free-on"
+        },
+        {
+          "label": "Analysis",
+          "url": "https://www.digitalapplied.com/blog/ling-3-0-flash-ant-group-efficiency-moe"
+        }
+      ],
+      "publishDate": "2026-08-07T05:41:28.762Z"
+    },
     {
       "id": "google-deepmind-weathernext-cyclones",
       "categories": [
