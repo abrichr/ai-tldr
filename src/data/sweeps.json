@@ -29132,6 +29132,41 @@
         "ecosystem",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260807t105601z",
+      "timestamp": "2026-08-07T10:56:01.107Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Kitesurf, Cloudflare's new agent-first browser built on Workers V8 isolates (Aug 6). Checked lab blogs (Anthropic/OpenAI/DeepMind/Meta/Mistral/Cohere/Qwen/Moonshot/DeepSeek quiet or already ingested — Fable 5 biology safeguards, WeatherNext Cyclones, Muse Code, Shieldstral 1.0, DeepSeek V4-Flash-0731, MiniMax H3, Ling-3.0-flash, LFM2.5-2.6B all in feed), GitHub trending (Tencent Agent Memory, Cloudflare Computer, LoopX, addyosmani/agent-skills, mattpocock/skills, obra/superpowers, DeepSeek-Reasonix already ingested), HF models/papers/datasets (VoiceChat-11B is Jul 29 → outside 72h), HN front page (AMD/Taalas, GPT-5.6 Sol, scalex all in feed), YouTube RSS scan (only fresh video is already ingested as two-minute-papers-deepmind-trick-aug7), and bio/neuro/pharma lane (no ≤72h qualifying artifact — Insilico rentosertib and Isomorphic-J&J are trial/deal news, not releases). One Cloudflare-launch-week item stood out as a distinct new artifact with concrete benchmarks; MCP v2 is a rebrand of the existing mcp-spec-2026-07-28 item, AI Search 'easier' is an update to the existing April item, WebMCP and Agentic Internet are abstract vision pieces — all deduped out.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "cloudflare-kitesurf",
+          "title": "Kitesurf — Cloudflare's agent-first browser runs in V8 isolates on Workers",
+          "category": "tool",
+          "note": "Cloudflare's Aug 6 launch-week reveal of a purpose-built agent browser running in V8 isolates on Workers. Published benchmarks vs Chromium (3.1–3.8x less CPU, 4.7–7x less memory), passes 215k+ WPT tests, public playground live at kitesurf.cloudflare.app, trending on HN. Distinct artifact — not covered by existing Cloudflare Computer/OS/AI Search/MCP entries."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "video",
+        "article",
+        "rumor",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
