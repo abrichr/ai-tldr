@@ -29098,6 +29098,40 @@
         "benchmark",
         "article"
       ]
+    },
+    {
+      "id": "sweep-20260807t085958z",
+      "timestamp": "2026-08-07T08:59:58.270Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, xAI, Mistral, Cohere, DeepSeek, Qwen, Z.ai), GitHub trending, HF models/papers/datasets, HN front page, r/LocalLLaMA, 8 YouTube creators, coding-agent changelogs (Cursor, Claude Code), and the biomedical/neuro/pharma lane. Everything ≤72h that met the bar was already in the feed (Anthropic Fable 5 safeguards, OpenAI GPT-5.6 Sol, DeepMind WeatherNext Cyclones, Google Ask Maps, Ling-3.0-flash, AMD/Taalas, LoopX 0.4.1, Astro triagebot, NVIDIA Alpamayo, Two Minute Papers 'Billion Dollar AI Race', AI Explained 'out of control'); Mistral Shieldstral (Aug 4) and MiniMax-H3 weights (Aug 3) are already in the feed from prior sweeps. Adding the fresh Two Minute Papers video on DeepMind's Gemma 4 training trick (uploaded 08:22Z today, verified via channel RSS).",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "two-minute-papers-deepmind-trick-aug7",
+          "title": "Two Minute Papers — DeepMind's Gemma 4 training trick 'everyone should copy'",
+          "category": "video",
+          "note": "Fresh (0.5h) upload from listed creator Two Minute Papers, reviewing a training technique from the Gemma 4 technical report — video is its own item per the video-dedup exception (creator breakdown ≠ semantic dupe of the underlying release)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "article",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "ecosystem",
+        "rumor"
+      ]
     }
   ]
 }

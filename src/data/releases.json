@@ -1,8 +1,62 @@
 {
-  "generatedAt": "2026-08-07T07:28:03.180Z",
+  "generatedAt": "2026-08-07T08:59:58.270Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "two-minute-papers-deepmind-trick-aug7",
+      "categories": [
+        "video"
+      ],
+      "title": "Two Minute Papers — DeepMind's Gemma 4 training trick 'everyone should copy'",
+      "org": "Two Minute Papers",
+      "date": "2026-08-07",
+      "url": "https://www.youtube.com/watch?v=vO6SWG-jxvE",
+      "summary": "Károly Zsolnai-Fehér walks through a training technique from DeepMind's Gemma 4 technical report that he argues every lab should adopt, using the 2B–31B multimodal model family as the case study.",
+      "tags": [
+        "youtube",
+        "two-minute-papers",
+        "video-explainer",
+        "deepmind",
+        "gemma-4",
+        "training",
+        "open-weights",
+        "multimodal"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Two Minute Papers picks apart a DeepMind training trick from the Gemma 4 report and argues everyone should copy it.",
+        "whatIsIt": "The Two Minute Papers episode 'DeepMind's AI Trick Everyone Should Copy' is a fresh video from Károly Zsolnai-Fehér that unpacks a training technique highlighted in Google DeepMind's Gemma 4 Technical Report (arXiv 2607.02770).",
+        "howItWorks": "Two Minute Papers walks through the paper's key ablations on the 2.3B–31B Gemma 4 family — a mix of dense and Mixture-of-Experts models with a unified encoder-free 12B variant — and isolates the training step Zsolnai-Fehér flags as the 'trick everyone should copy'.",
+        "whyItMatters": "Because Gemma 4 is open-weight and its recipe is now public, any lab or open-source group training a new model can lift the technique directly — the video is a fast way for practitioners to catch the specific move before deciding whether it's worth reading the 200-plus-author report end-to-end.",
+        "forWho": "ML engineers, open-model trainers, and researchers tracking Gemma 4's methodology"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/vO6SWG-jxvE/hqdefault.jpg",
+        "alt": "Two Minute Papers thumbnail for 'DeepMind's AI Trick Everyone Should Copy'",
+        "fit": "cover"
+      },
+      "author": {
+        "name": "Two Minute Papers",
+        "handle": "@TwoMinutePapers",
+        "profileUrl": "https://www.youtube.com/@TwoMinutePapers"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=vO6SWG-jxvE"
+        },
+        {
+          "label": "Two Minute Papers channel",
+          "url": "https://www.youtube.com/@TwoMinutePapers"
+        },
+        {
+          "label": "Gemma 4 Technical Report (arXiv)",
+          "url": "https://arxiv.org/abs/2607.02770"
+        }
+      ],
+      "publishDate": "2026-08-07T08:59:58.270Z"
+    },
     {
       "id": "amd-acquires-taalas-aug6",
       "categories": [
