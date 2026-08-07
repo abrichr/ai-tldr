@@ -29198,6 +29198,33 @@
         "paper",
         "dataset"
       ]
+    },
+    {
+      "id": "sweep-20260807t145718z",
+      "timestamp": "2026-08-07T14:57:18.987Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Anthropic (Aug 7 Fable 5 biology safeguards) already in feed. OpenAI news throttled 403 in CI; Aug 4 third-party cyber evaluations post is semantically covered by openai-black-hat-message-board-aug5, uk-aisi-agent-cyber-incident-jul28, and meta-muse-spark-irregular-hack-aug5. DeepMind, Meta, Mistral (Shieldstral Aug 4 in feed), xAI (Grok Voice Think Fast 2.0 in feed), Qwen/DeepSeek/Baidu — no fresh ≤72h releases past the bar. GitHub trending dominated by awesome-lists / skill-packs (skipped per rules) and Prime Agent already in feed. HN top 30: AMD-Taalas + GPT-5.6 Sol posts already in feed. HF trending: MiniMax H3, DeepGrove Maple-Preview, DeepSeek V4-Flash, Kimi K3 all in feed. HF Papers had no candidate that also cleared the 2-of-N bar (paper + code + traction). Bio/neuro/pharma lane: STAT News Aug 5-7 all commentary/regulatory, no released model; no ≤72h Nature Medicine COMPASS-class release with code; no fresh BCI / FDA / pharma model announcement. YouTube RSS returned 5 fresh videos: 3 already in feed (Two Minute Papers Aug 7 + Aug 5, AI Explained Aug 6), 2 off-topic (Wes Roth 'AI just killed Crypto' and Fireship Coldcard/Bitcoin hack — crypto news, not AI). Empty sweep is success — the bar held.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
