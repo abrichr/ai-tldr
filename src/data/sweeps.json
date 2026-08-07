@@ -29252,6 +29252,39 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260807t190031z",
+      "timestamp": "2026-08-07T19:00:31.983Z",
+      "source": "github-actions-sweep",
+      "summary": "Added one major security/ecosystem item: OpenAI announced on Aug 7 that it is slowing development of its upcoming Astra frontier model after internal evaluations could not rule out 'critical' cyber capabilities under its Preparedness Framework — the first frontier lab to pause a model over cyber risk. Scanned lab blogs (Anthropic/OpenAI/DeepMind/Meta/xAI/Mistral/Qwen/MiniMax), GitHub trending, HuggingFace models/papers, HN top 30, r/LocalLLaMA and the AI-for-science lane (BCI/medical-imaging/pharma queries); Anthropic's only fresh post was the Fable 5 biology safeguards item already in the feed, DeepMind's WeatherNext Cyclones already added, all fresh YouTube uploads either already added or off-topic (Fireship's Bitcoin item non-AI, Wes Roth clickbait unverifiable), MiniMax H3 and DeepSeek V4 Flash both older than 72h, no qualifying new bio/neuro/pharma release in-window.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-astra-cyber-pause-aug7",
+          "title": "OpenAI slows Astra — first pause of a frontier model over cyber capabilities",
+          "category": "security",
+          "note": "Aug 7 OpenAI post + Axios exclusive + multi-outlet pickup (Bloomberg, Yahoo Finance, Seeking Alpha); first frontier lab to slow a model over cyber risk; developer/researcher action is concrete (Astra timelines slip, new preparedness gating precedent)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "security",
+        "ecosystem",
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "article"
+      ]
     }
   ]
 }
