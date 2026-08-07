@@ -1,8 +1,227 @@
 {
-  "generatedAt": "2026-08-07T00:06:47.880Z",
+  "generatedAt": "2026-08-07T02:30:42.165Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "google-deepmind-weathernext-cyclones",
+      "categories": [
+        "model",
+        "repo",
+        "paper"
+      ],
+      "title": "WeatherNext Cyclones — DeepMind's Nature-published model adds a day of warning",
+      "org": "Google DeepMind",
+      "date": "2026-08-06",
+      "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
+      "summary": "WeatherNext Cyclones matches the National Hurricane Center on cyclone track, intensity, and wind structure with a day of extra lead time. DeepMind published the result in Nature and open-sourced three model variants on GitHub.",
+      "tags": [
+        "google-deepmind",
+        "weathernext",
+        "weathernext-2",
+        "weathernext-cyclones",
+        "weather-forecasting",
+        "climate",
+        "nature",
+        "open-weights",
+        "apache-2",
+        "science",
+        "cyclones",
+        "hurricanes",
+        "ai-for-science"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "A neural cyclone forecaster that matches operational models one day sooner and ships open under Apache-2.0.",
+        "whatIsIt": "WeatherNext Cyclones is a diffusion-based ensemble model from Google DeepMind that predicts a tropical cyclone's track, intensity, and wind structure directly from atmospheric data. Alongside the paper, DeepMind released three variants — WeatherNext Cyclones, WeatherNext 2, and WeatherNext 2-mini — on GitHub under Apache-2.0. The mini version runs on a single TPU in a free Colab notebook.",
+        "howItWorks": "Trained on roughly 20 terabytes of global atmospheric reanalysis data plus about 5,000 historical storms from the IBTrACS database, the model generates 1,000-member ensembles at 28x28 km resolution — a hundred times coarser than physics-based systems but faster and, per the Nature paper, more skillful on cyclone metrics. During the 2025 hurricane season it helped the National Hurricane Center flag Hurricane Melissa's rapid intensification and Jamaica landfall.",
+        "whyItMatters": "An extra 24 hours of warning is roughly a decade of meteorological progress delivered in a single release, according to DeepMind's evaluation. Forecasters at the NHC, the UK Met Office, CIRA and NOAA's NWS/NCEP evaluated the model, and the open-source release lets any research group reproduce or fine-tune it — a rare combination for a frontier weather system.",
+        "forWho": "climate scientists, meteorologists, disaster-response teams, AI-for-science researchers",
+        "tryIt": "github.com/google-deepmind/weathernext"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Google DeepMind"
+        },
+        {
+          "label": "Models released",
+          "value": "WeatherNext Cyclones, WeatherNext 2, WeatherNext 2-mini"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        },
+        {
+          "label": "Publication",
+          "value": "Nature (Aug 6, 2026)"
+        },
+        {
+          "label": "Ensemble size",
+          "value": "1,000 members"
+        },
+        {
+          "label": "Resolution",
+          "value": "28 x 28 km"
+        },
+        {
+          "label": "Training data",
+          "value": "~20 TB atmospheric reanalysis + ~5,000 historical storms (IBTrACS)"
+        },
+        {
+          "label": "Evaluators",
+          "value": "NHC, UK Met Office, CIRA, NOAA NWS/NCEP"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Where can I download WeatherNext?",
+          "a": "WeatherNext Cyclones, WeatherNext 2, and the compact WeatherNext 2-mini are on GitHub at google-deepmind/weathernext under Apache-2.0. WeatherNext 2-mini runs on a single TPU in a free Colab notebook, so you can try inference without setting up hardware."
+        },
+        {
+          "q": "How much better is WeatherNext at cyclone forecasting?",
+          "a": "DeepMind reports that WeatherNext Cyclones delivers an average of 24 hours or more of lead-time advantage over leading operational models for cyclone track, intensity, and wind structure. Put simply, its three-day forecast matches what prior systems needed four days to produce."
+        },
+        {
+          "q": "Is this the same model as the WeatherNext 2 released in November 2025?",
+          "a": "No. WeatherNext Cyclones is a new, cyclone-focused variant whose results are the subject of the August 2026 Nature paper. WeatherNext 2 — the general-purpose forecasting model DeepMind operationalized in October 2025 — is being released alongside it, together with WeatherNext 2-mini for lightweight use."
+        },
+        {
+          "q": "Did WeatherNext ever help issue a real hurricane warning?",
+          "a": "Yes. During the 2025 Atlantic season the model assisted the National Hurricane Center on Hurricane Melissa, predicting rapid intensification and the Jamaica landfall in time for the NHC to issue an advance warning. The paper cites this as the first operational use of an AI cyclone model at that agency."
+        },
+        {
+          "q": "Who evaluated WeatherNext before this release?",
+          "a": "DeepMind worked with the National Hurricane Center, the Cooperative Institute for Research in the Atmosphere at Colorado State, the UK Met Office, and NOAA's National Weather Service and NCEP. The Nature paper compares WeatherNext against these agencies' operational models on storms from 2023 through 2025."
+        }
+      ],
+      "image": {
+        "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/WN-cyclones_header_blog_16x9_bleed.max-1440x810.png",
+        "alt": "Illustrated tropical cyclone swirl labeled WeatherNext Cyclones on a blue background",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "DeepMind Announcement",
+          "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/"
+        },
+        {
+          "label": "Google Blog",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/weathernext-2-cyclones/"
+        },
+        {
+          "label": "Nature Paper",
+          "url": "https://www.nature.com/articles/s41586-026-10953-2"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/google-deepmind/weathernext"
+        }
+      ],
+      "publishDate": "2026-08-07T02:30:42.165Z"
+    },
+    {
+      "id": "anthropic-fable-5-biology-safeguards-aug7",
+      "categories": [
+        "model",
+        "security"
+      ],
+      "title": "Claude Fable 5 loosens biology safeguards — 85% fewer over-blocks in day-to-day use",
+      "org": "Anthropic",
+      "date": "2026-08-07",
+      "url": "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards",
+      "summary": "Anthropic retrained Fable 5's biology safety classifier so everyday health, education, and clinical questions get answered directly instead of routed to Opus 5. Biology fallbacks fell about 85%; dual-use virology, toxicology, and molecular design stay blocked.",
+      "tags": [
+        "anthropic",
+        "claude",
+        "claude-fable-5",
+        "safety-classifier",
+        "biology",
+        "healthcare",
+        "clinical-ai",
+        "safety",
+        "policy-update",
+        "dual-use",
+        "false-positives"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "Anthropic rewrote Fable 5's biology guardrails so ordinary health and education questions get the frontier model, not the fallback.",
+        "whatIsIt": "Anthropic shipped an update to the safety classifier that decides which Claude Fable 5 replies get routed away from the flagship model and answered by Opus 5 instead. The new classifier is tuned to stop over-blocking everyday biology — health questions, class material, and clinical workflows for medical professionals — while still refusing dual-use requests in virology, toxicology, and molecular design.",
+        "howItWorks": "The classifier's constitution was refined with input from biology experts and retrained on updated data covering both benign and potentially harmful queries. That let Anthropic move the decision boundary without giving up its safety margin, so Fable 5 answers directly in the many cases the old classifier had been sending to the more conservative Opus 5 fallback.",
+        "whyItMatters": "Users on the Claude apps had reported Fable 5 refusing plain medical questions or handing them off to a weaker model. The retrained classifier reports about 85% fewer biology-related fallbacks, plus 67% fewer on Claude.ai, 55% on Cowork, 17% on Claude Code, and 7% on the Claude Platform — a substantial quality lift for clinicians, students, and health-adjacent developers without weakening the bioweapon-relevant refusals Anthropic keeps in place.",
+        "forWho": "clinicians, biology students, health-adjacent developers, anyone hit by a false biology refusal on Claude",
+        "tryIt": "The updated classifier is live for all users on Claude.ai, Cowork, Claude Code, and the Claude Platform."
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Anthropic"
+        },
+        {
+          "label": "Model affected",
+          "value": "Claude Fable 5"
+        },
+        {
+          "label": "Change",
+          "value": "Safety-classifier retrain (biology)"
+        },
+        {
+          "label": "Biology fallbacks",
+          "value": "~85% reduction"
+        },
+        {
+          "label": "Claude.ai fallbacks",
+          "value": "67% reduction"
+        },
+        {
+          "label": "Cowork fallbacks",
+          "value": "55% reduction"
+        },
+        {
+          "label": "Claude Code fallbacks",
+          "value": "17% reduction"
+        },
+        {
+          "label": "Still blocked",
+          "value": "Dual-use virology, toxicology, molecular design"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What actually changed in Claude Fable 5?",
+          "a": "Anthropic did not release a new Fable 5 checkpoint. It retrained the biology safety classifier that sits in front of the model, so Fable 5 now answers many biology questions it previously routed to the slower Opus 5 fallback. Everyday health, education, and clinical queries are the main beneficiaries."
+        },
+        {
+          "q": "Does Claude still refuse dangerous biology questions?",
+          "a": "Yes. Anthropic explicitly kept the Fable 5 refusals on dual-use topics — virology synthesis routes, toxicology weaponization, and molecular design for biothreats — and says the retrained classifier keeps a safety margin on that boundary. The change is aimed at false positives, not the bioweapon-relevant floor."
+        },
+        {
+          "q": "How large is the reduction across each Claude product?",
+          "a": "Anthropic reports biology-related fallbacks dropped roughly 85%. Broken out by surface, fallback rates fell about 67% on Claude.ai, 55% on Cowork, 17% on Claude Code, and 7% on the Claude Platform. The bigger cuts land where consumer chat traffic is concentrated."
+        },
+        {
+          "q": "Do I need to do anything to use the new behavior?",
+          "a": "No. The classifier update is server-side, so any Fable 5 request through Claude.ai, Cowork, Claude Code, or the Claude Platform picks up the new routing automatically. Existing API integrations do not need to change model IDs or parameters."
+        }
+      ],
+      "image": {
+        "url": "https://www.anthropic.com/api/opengraph-illustration?name=Node%20Bird&backgroundColor=heather",
+        "alt": "Anthropic Node Bird illustration on a heather background for the Fable 5 safeguards update",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
+        },
+        {
+          "label": "Anthropic News",
+          "url": "https://www.anthropic.com/news"
+        }
+      ],
+      "publishDate": "2026-08-07T02:30:42.165Z"
+    },
     {
       "id": "openai-gpt-5-6-sol-chatgpt-aug6",
       "categories": [

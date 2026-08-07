@@ -28979,6 +28979,46 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260807t023042z",
+      "timestamp": "2026-08-07T02:30:42.165Z",
+      "source": "github-actions-sweep",
+      "summary": "Two adds: DeepMind's Nature-published WeatherNext Cyclones with three open-sourced variants under Apache-2.0, and Anthropic's Fable 5 biology-safeguard retrain that cuts over-blocks about 85% while keeping dual-use refusals. Skipped AMD-Taalas acquisition (M&A, no shipped artifact today; ecosystem cap) and Cohere-Waterloo partnership (org news, not a release). Muse Code/Spark 1.2, MiniMax H3, Cloudflare Computer, LoopX 0.4.1, GPT-5.6 Sol chat update already in feed.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "google-deepmind-weathernext-cyclones",
+          "title": "WeatherNext Cyclones — DeepMind's Nature-published model adds a day of warning",
+          "category": "model",
+          "note": "Nature paper Aug 6, 2026 (s41586-026-10953-2) plus Apache-2.0 GitHub release of three model variants — frontier-tech breakthrough from a top lab, evaluated with NHC/UK Met Office/CIRA/NOAA. Confirmed via deepmind.google, blog.google, github.com/google-deepmind/weathernext (6.7k stars)."
+        },
+        {
+          "id": "anthropic-fable-5-biology-safeguards-aug7",
+          "title": "Claude Fable 5 loosens biology safeguards — 85% fewer over-blocks in day-to-day use",
+          "category": "model",
+          "note": "Anthropic top-lab post published today (Aug 7). Concrete numbers: 85% biology fallback reduction plus per-surface breakdown. Product change with real user impact — passes ecosystem gate (developers/clinicians immediately get different behavior)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "paper",
+        "security",
+        "ecosystem",
+        "tool",
+        "video",
+        "article",
+        "dataset",
+        "algorithm",
+        "benchmark"
+      ]
     }
   ]
 }
