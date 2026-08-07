@@ -1,0 +1,213 @@
+{
+  "slug": "muse-spark-1-2",
+  "name": "Muse Spark 1.2",
+  "maker": "meta",
+  "makerTitle": "Meta",
+  "line": "muse-spark",
+  "lineTitle": "Muse Spark",
+  "tagline": "Meta Superintelligence Labs' coding-focused upgrade to Muse Spark 1.1 — 1M-token context, tuned for long-horizon software work, released August 2026 as the model behind Muse Code.",
+  "seoTitle": "Muse Spark 1.2 — Meta's Coding-Focused Muse Spark",
+  "metaDescription": "Muse Spark 1.2 is Meta's coding-focused upgrade to Muse Spark 1.1: a 1M-token multimodal reasoning model at $1.25/$4.25 per 1M tokens, released Aug 5, 2026.",
+  "releaseDate": "2026-08-05",
+  "status": "Generally available",
+  "license": "Proprietary",
+  "openWeights": false,
+  "modalities": [
+    "Text",
+    "Vision"
+  ],
+  "contextWindow": "1M",
+  "parameters": "Undisclosed",
+  "tags": [
+    "frontier",
+    "proprietary",
+    "reasoning",
+    "multimodal",
+    "agentic",
+    "long-context",
+    "coding"
+  ],
+  "overview": [
+    "Muse Spark 1.2 is Meta Superintelligence Labs' coding-focused upgrade to Muse Spark 1.1, released on August 5, 2026. It is the model behind Muse Code, Meta's new terminal coding agent, and improves on Muse Spark 1.1 across code generation, complex debugging, codebase understanding, and end-to-end developer workflows through a self-improvement training loop and co-training with Muse Code.",
+    "The model keeps Muse Spark 1.1's 1,048,576-token context window and multimodal inputs (text, images, video and PDFs, text out), and is priced identically at $1.25 per million input tokens and $4.25 per million output tokens on the Meta Model API, with cached input at $0.15 per million tokens. Meta says the model is optimized for long-horizon software engineering — whole-repository generation and multi-step tool use across thousands of tool calls.",
+    "In Meta's launch charts, Muse Spark 1.2 places second on Terminal-Bench 2.1 (82.9%) and second on Meta's Internal Coding Bench (70.6%), behind Claude Opus 5 on both, and third on DeepSWE 1.1 (59.3%) behind Claude Opus 5 and GPT-5.6 Terra. Meta evaluated it alongside Claude Opus 5, GPT-5.6 Terra, Gemini 3.6 Flash and Grok 4.5."
+  ],
+  "strengths": [
+    "Long-horizon coding: substantial improvements on multi-step software tasks — Meta's KDA GPU kernel case study runs 1,000+ tool calls in a single session",
+    "Second on Meta's Terminal-Bench 2.1 (82.9%) behind Claude Opus 5, ahead of GPT-5.6 Terra, Grok 4.5, and Gemini 3.6 Flash",
+    "1M-token context window (1,048,576 tokens), unchanged from Muse Spark 1.1",
+    "Same $1.25/$4.25 per million-token pricing as Muse Spark 1.1, with $0.15/M cached input — no long-context premium",
+    "Multimodal inputs: text, images, video and PDFs"
+  ],
+  "useCases": [
+    "Reach for it when driving Muse Code or another terminal coding agent through whole-repository changes, large refactors, and long tool-call loops.",
+    "Reach for it for long-horizon developer workflows where the 1M-token window and context management matter — big codebases, long test/debug traces.",
+    "Reach for it as a cheaper coding alternative to Claude Opus 5 or GPT-5.6 Terra when the coding-benchmark gap is acceptable at roughly a quarter of the price."
+  ],
+  "benchmarks": [
+    {
+      "name": "Terminal-Bench 2.1 (Muse Code, agentic terminal coding)",
+      "score": 82.9,
+      "unit": "%",
+      "max": 100,
+      "source": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2"
+    },
+    {
+      "name": "DeepSWE 1.1 (Muse Code, long-horizon coding)",
+      "score": 59.3,
+      "unit": "%",
+      "max": 100,
+      "source": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2"
+    },
+    {
+      "name": "Meta Internal Coding Bench",
+      "score": 70.6,
+      "unit": "%",
+      "max": 100,
+      "source": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2"
+    }
+  ],
+  "comparisonFigures": [
+    {
+      "url": "/models-media/muse-spark-1-2-cmp-1.png",
+      "alt": "Meta's Terminal-Bench 2.1 comparison chart: Claude Opus 5 (max) with Claude Code 86.7%, Muse Spark 1.2 with Muse Code 82.9%, GPT-5.6 Terra (max) with Codex 81.8%, Grok 4.5 (high) with Grok Build 81.6%, Gemini 3.6 Flash (high) with Antigravity CLI 78.9%, Muse Spark 1.1 with mini-swe-agent 76.2%.",
+      "caption": "Terminal-Bench 2.1 (Meta's harness, each model paired with its own agent).",
+      "credit": "Meta AI Research",
+      "source": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2"
+    },
+    {
+      "url": "/models-media/muse-spark-1-2-cmp-2.png",
+      "alt": "Meta's DeepSWE 1.1 comparison chart: Claude Opus 5 (max) with Claude Code 65.0%, GPT-5.6 Terra (max) with Codex 64.8%, Muse Spark 1.2 with Muse Code 59.3%, Grok 4.5 (high) with Grok Build 56.6%, Muse Spark 1.1 with mini-swe-agent 53.0%, Gemini 3.6 Flash (high) with Antigravity CLI 40.0%.",
+      "caption": "DeepSWE 1.1 (long-horizon coding, each model with its own agent).",
+      "credit": "Meta AI Research",
+      "source": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2"
+    },
+    {
+      "url": "/models-media/muse-spark-1-2-cmp-3.png",
+      "alt": "Meta's Internal Coding Bench comparison chart: Claude Opus 5 (max) 79.4%, Muse Spark 1.2 70.6%, Muse Spark 1.1 68.3%, GPT-5.6 Terra (max) 65.4%, Gemini 3.6 Flash (high) 63.9%.",
+      "caption": "Meta Internal Coding Bench.",
+      "credit": "Meta AI Research",
+      "source": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2"
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Muse Spark 1.2 vs peers as published by Meta at launch — each frontier coding model paired with its own agent harness (Claude Code, Muse Code, Codex, Grok Build, Antigravity CLI, mini-swe-agent).",
+    "models": [
+      "Muse Spark 1.2 (Muse Code)",
+      "Claude Opus 5 (Claude Code, max)",
+      "GPT-5.6 Terra (Codex, max)",
+      "Grok 4.5 (Grok Build, high)",
+      "Gemini 3.6 Flash (Antigravity CLI, high)",
+      "Muse Spark 1.1 (mini-swe-agent)"
+    ],
+    "subject": 0,
+    "rows": [
+      {
+        "benchmark": "Terminal-Bench 2.1",
+        "unit": "%",
+        "scores": [82.9, 86.7, 81.8, 81.6, 78.9, 76.2]
+      },
+      {
+        "benchmark": "DeepSWE 1.1",
+        "unit": "%",
+        "scores": [59.3, 65.0, 64.8, 56.6, 40.0, 53.0]
+      },
+      {
+        "benchmark": "Meta Internal Coding Bench",
+        "unit": "%",
+        "scores": [70.6, 79.4, 65.4, null, 63.9, 68.3]
+      }
+    ],
+    "source": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2"
+  },
+  "pricing": {
+    "input": "$1.25",
+    "output": "$4.25",
+    "cachedInput": "$0.15",
+    "unit": "/ 1M tokens",
+    "note": "Meta Model API pricing on the standard tier (no long-context premium); also available in Muse Code and via OpenRouter.",
+    "source": "https://openrouter.ai/meta/muse-spark-1.2"
+  },
+  "apis": [
+    {
+      "provider": "Meta Model API",
+      "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+      "modelId": "muse-spark-1.2"
+    },
+    {
+      "provider": "OpenRouter",
+      "url": "https://openrouter.ai/meta/muse-spark-1.2",
+      "modelId": "meta/muse-spark-1.2"
+    }
+  ],
+  "links": [
+    {
+      "label": "Introducing Muse Code and Muse Spark 1.2 (Meta AI Research)",
+      "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+      "kind": "announcement"
+    },
+    {
+      "label": "Muse Spark 1.2 API pricing & providers (OpenRouter)",
+      "url": "https://openrouter.ai/meta/muse-spark-1.2",
+      "kind": "api-docs"
+    },
+    {
+      "label": "Muse Spark 1.2 — independent benchmarks (Artificial Analysis)",
+      "url": "https://artificialanalysis.ai/models/muse-spark-1-2",
+      "kind": "benchmark"
+    },
+    {
+      "label": "Muse Spark 1.2 article & scores (Artificial Analysis)",
+      "url": "https://artificialanalysis.ai/articles/muse-spark-1-2",
+      "kind": "review"
+    },
+    {
+      "label": "Meta enters the AI coding wars with Muse Spark 1.2 and Muse Code (VentureBeat)",
+      "url": "https://venturebeat.com/orchestration/meta-enters-the-ai-coding-wars-with-muse-spark-1-2-and-muse-code-with-persistent-async-background-agents",
+      "kind": "review"
+    }
+  ],
+  "faq": [
+    {
+      "q": "When was Muse Spark 1.2 released?",
+      "a": "Meta Superintelligence Labs released Muse Spark 1.2 on August 5, 2026, alongside Muse Code, its terminal coding agent. It is available on the Meta Model API and inside Muse Code."
+    },
+    {
+      "q": "How much does Muse Spark 1.2 cost?",
+      "a": "On the Meta Model API's standard tier, Muse Spark 1.2 is priced at $1.25 per million input tokens, $4.25 per million output tokens, and $0.15 per million cached input tokens — the same rate as Muse Spark 1.1, with no long-context premium."
+    },
+    {
+      "q": "What is the context window of Muse Spark 1.2?",
+      "a": "Muse Spark 1.2 has a 1,048,576-token (1M) context window, unchanged from Muse Spark 1.1. Inputs can be text, images, video and PDFs; output is text."
+    },
+    {
+      "q": "How does Muse Spark 1.2 compare to Claude Opus 5 and GPT-5.6 Terra?",
+      "a": "In Meta's own launch charts (each model paired with its own agent), Muse Spark 1.2 with Muse Code scores 82.9% on Terminal-Bench 2.1 — second behind Claude Opus 5 (86.7% with Claude Code) and ahead of GPT-5.6 Terra (81.8% with Codex). On DeepSWE 1.1 it is third at 59.3%, behind Opus 5 (65.0%) and GPT-5.6 Terra (64.8%)."
+    },
+    {
+      "q": "Is Muse Spark 1.2 open source?",
+      "a": "No. Like Muse Spark 1.1, Muse Spark 1.2 is proprietary and closed-weight — a departure from Meta's open Llama line. Access is through the Meta Model API and Muse Code."
+    }
+  ],
+  "versionHistory": [
+    {
+      "version": "Muse Spark 1.2",
+      "slug": "muse-spark-1-2",
+      "date": "2026-08-05",
+      "current": true,
+      "note": "Coding-focused update behind Muse Code — improvements in code generation, debugging, codebase understanding, and long-horizon developer workflows."
+    },
+    {
+      "version": "Muse Spark 1.1",
+      "slug": "muse-spark-1-1",
+      "date": "2026-07-09",
+      "note": "Adds multi-agent orchestration, 1M-token context management, computer use; Meta Model API in public preview at $1.25/$4.25 per 1M tokens."
+    },
+    {
+      "version": "Muse Spark",
+      "slug": "muse-spark",
+      "date": "2026-04-08",
+      "note": "First model from Meta Superintelligence Labs — small, fast, natively multimodal reasoner that leads on health."
+    }
+  ]
+}

@@ -218,6 +218,12 @@
   ],
   "versionHistory": [
     {
+      "version": "Muse Spark 1.2",
+      "slug": "muse-spark-1-2",
+      "date": "2026-08-05",
+      "note": "Coding-focused update behind Muse Code — improvements in code generation, debugging, codebase understanding, and long-horizon developer workflows."
+    },
+    {
       "version": "Muse Spark 1.1",
       "slug": "muse-spark-1-1",
       "date": "2026-07-09",

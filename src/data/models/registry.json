@@ -1506,6 +1506,25 @@
           "blurb": "Meta Superintelligence Labs' first proprietary, closed-weight frontier reasoning model, built on a new stack and served on Meta AI.",
           "versions": [
             {
+              "name": "Muse Spark 1.2",
+              "slug": "muse-spark-1-2",
+              "blurb": "Coding-focused upgrade to Muse Spark 1.1 (Aug 2026), tuned for long-horizon software work and the model behind Muse Code; keeps 1M context and $1.25/$4.25 per MTok pricing.",
+              "tags": [
+                "proprietary",
+                "reasoning",
+                "agentic",
+                "multimodal",
+                "frontier",
+                "long-context",
+                "coding"
+              ],
+              "contextWindow": "1M",
+              "license": "Proprietary",
+              "date": "2026-08-05",
+              "rich": true,
+              "current": true
+            },
+            {
               "name": "Muse Spark 1.1",
               "slug": "muse-spark-1-1",
               "blurb": "Agentic upgrade to Muse Spark, released July 2026: 1M-token context with active compaction, multi-agent orchestration, computer use, and Meta's first paid API at $1.25/$4.25 per MTok.",
@@ -1521,8 +1540,7 @@
               "contextWindow": "1M",
               "license": "Proprietary",
               "date": "2026-07-09",
-              "rich": true,
-              "current": true
+              "rich": true
             },
             {
               "name": "Muse Spark",
