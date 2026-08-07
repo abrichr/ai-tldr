@@ -1,8 +1,110 @@
 {
-  "generatedAt": "2026-08-07T10:56:01.107Z",
+  "generatedAt": "2026-08-07T13:07:23.357Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "hark-handoff",
+      "categories": [
+        "tool"
+      ],
+      "title": "Hark Handoff — browser-use agent predicts the next click, not the next token",
+      "org": "Hark",
+      "date": "2026-08-05",
+      "url": "https://hark.com/articles/introducing-hark-handoff",
+      "summary": "Hark opened a research preview of Handoff, a browser-use agent that runs in a dedicated virtual computer and drives sites without APIs — Target, Walmart, OpenTable, LinkedIn. Hark says it tops the OM2W benchmark and costs less than a tenth of the token price of GPT-5.4 or Opus 4.8.",
+      "tags": [
+        "hark",
+        "handoff",
+        "browser-agent",
+        "computer-use",
+        "agent",
+        "research-preview",
+        "waitlist",
+        "om2w"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Hark ($700M Series A, May 2026)"
+        },
+        {
+          "label": "Product",
+          "value": "Handoff browser-use agent"
+        },
+        {
+          "label": "Access",
+          "value": "Research preview — waitlist at hark.com"
+        },
+        {
+          "label": "Runs in",
+          "value": "Dedicated virtual computer per user"
+        },
+        {
+          "label": "Objective",
+          "value": "Predicts the next action (click, keystroke), not the next token"
+        },
+        {
+          "label": "Pricing claim",
+          "value": "<1/10 the token price of GPT-5.4 and Opus 4.8"
+        },
+        {
+          "label": "Benchmark claim",
+          "value": "Top score on OM2W (per Hark)"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How is Hark Handoff different from ChatGPT's Operator or Claude computer use?",
+          "a": "Hark Handoff is trained to predict the next action — a click at a coordinate or a keystroke into a field — rather than the next token, which is the standard objective for GPT-5.4 or Opus 4.8. Hark says that shift is what lets Handoff drive real sites at less than one-tenth the token cost of those general-purpose models."
+        },
+        {
+          "q": "What sites can Hark Handoff actually use?",
+          "a": "Hark says Handoff navigates real consumer sites without official APIs, including Target, Walmart, OpenTable, and LinkedIn, by watching the page and predicting the next interaction. Each session runs in a dedicated virtual computer, so the agent has its own browser state instead of hijacking the user's."
+        },
+        {
+          "q": "Can I try Hark Handoff today?",
+          "a": "Hark Handoff is a research preview as of 5 August 2026 — access is gated by a waitlist at hark.com and the company says wider availability will land 'later this summer'. No public pricing or free tier has been announced yet."
+        },
+        {
+          "q": "Is Hark a real company or a stealth startup?",
+          "a": "Hark is a well-funded AI startup that closed a $700M Series A in May 2026 and now says it is 'building the most advanced personal intelligence in the world'. Handoff is its first shipped agent product, ahead of a broader personal-intelligence platform teased on hark.com."
+        }
+      ],
+      "explainer": {
+        "tagline": "Hark's first agent runs in its own virtual computer and is trained to predict the next click instead of the next token.",
+        "whatIsIt": "Hark Handoff is a browser-use agent that Hark opened in research preview on August 5, 2026. Each session gets its own virtual computer, and the agent drives real sites — Target, Walmart, OpenTable, LinkedIn — through the pixels and DOM instead of a public API.",
+        "howItWorks": "The model is trained to predict the next action a user would take on a page — a mouse click at a coordinate, a keystroke into a field — rather than the next token in a stream, which is the standard objective for GPT-5.4 or Opus 4.8. Hark says that action-first objective is why Handoff can navigate sites it has never seen before with less scaffolding.",
+        "whyItMatters": "Hark claims Handoff tops the OM2W browser-agent benchmark and runs at less than a tenth of the per-token price of GPT-5.4 and Opus 4.8, backed by a $700M Series A from May 2026. If those numbers hold, computer-use agents move from experimental Operator/Computer-Use demos toward a price point where teams can put an autonomous browser in front of real workflows.",
+        "forWho": "product teams and researchers evaluating browser-use agents",
+        "tryIt": "https://hark.com/#sign-up"
+      },
+      "image": {
+        "url": "https://cdn.sanity.io/images/w2mhvsaj/production/6dd31643694b8c3c04116527a6961262a2ab04a2-1200x630.jpg?fm=webp&w=1200&q=75",
+        "alt": "Introducing Hark Handoff — a browser-use agent that predicts the next click",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://hark.com/articles/introducing-hark-handoff"
+        },
+        {
+          "label": "TechCrunch coverage",
+          "url": "https://techcrunch.com/2026/08/05/hark-previews-its-browser-use-agent-for-completing-tasks/"
+        },
+        {
+          "label": "Yahoo Finance press release",
+          "url": "https://finance.yahoo.com/technology/ai/articles/hark-announces-handoff-world-best-150000649.html"
+        },
+        {
+          "label": "Waitlist",
+          "url": "https://hark.com/#sign-up"
+        }
+      ],
+      "publishDate": "2026-08-07T13:07:23.357Z"
+    },
     {
       "id": "cloudflare-kitesurf",
       "categories": [

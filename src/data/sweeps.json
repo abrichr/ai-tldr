@@ -29167,6 +29167,37 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260807t130723z",
+      "timestamp": "2026-08-07T13:07:23.357Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Hark's Handoff browser-use agent (research preview, action-first objective, claims OM2W SOTA at <1/10 the token cost of GPT-5.4/Opus 4.8, backed by the $700M Series A already logged). Mistral's Shieldstral 3B safety classifier was a candidate but is already in the feed as mistral-shieldstral-1-0. Otherwise scanned lab blogs, GitHub trending, HF, HN, Reddit, tier-1 press, and the 8 YouTube channels; nothing else fresh cleared the 72h bar and 2-of-N signals.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "hark-handoff",
+          "title": "Hark Handoff — browser-use agent predicts the next click, not the next token",
+          "category": "tool",
+          "note": "Well-funded startup product ship on Aug 5 with TechCrunch + Yahoo Finance/press-release + AI Weekly + superintelligencenews + Las Vegas Sun coverage; own announcement post on hark.com. Waitlist is live at hark.com; still a preview so importance capped at major. Distinct from the existing hark-700m-series-a-personal-ai (that was the funding round in May — this is the actual first product ship)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "security",
+        "tool",
+        "video",
+        "repo",
+        "article",
+        "paper",
+        "dataset"
+      ]
     }
   ]
 }
