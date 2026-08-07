@@ -29225,6 +29225,33 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260807t165522z",
+      "timestamp": "2026-08-07T16:55:22.829Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched Anthropic/OpenAI/DeepMind/Meta/Mistral/Cohere/Qwen/Moonshot/DeepSeek blogs, GitHub trending (top 30), HuggingFace models+datasets+papers trending, HN top 30, all 8 YouTube creator RSS feeds, Simon Willison, Nature Medicine + pharma AI channels. Every qualifying candidate was already in the feed (Anthropic Fable 5 biology aug7; OpenAI GPT-5.6 Sol/Luna aug6 — same event as the Free rollout; DeepMind WeatherNext Cyclones aug6; AMD/Taalas aug6; Cloudflare Kitesurf; TMP DeepMind aug7 videoId vO6SWG-jxvE; AI Explained aug6; TMP Billion-Dollar aug5; Mistral Shieldstral aug4; LiquidAI LFM2.5-2.6B aug4; Ling-3.0-flash; MiniMax H3; deepgrove/maple; PrimeIntellect prime-agent; The Stack v3; addyosmani/agent-skills; mattpocock/skills; obra/superpowers). HF Papers top-10 are all fresh arXiv preprints with no confirmed code+traction (fails 2-of-N). Fireship + Wes Roth videos were off-topic (bitcoin/crypto). Cohere posted only a Waterloo talent partnership (no product ship, fails inclusion bar). Nature Medicine's 3D visual foundation model perspective is dated 2026-08-03 → outside the 72h window. No qualifying ≤72h release met the bar.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "article",
+        "algorithm",
+        "security",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }
