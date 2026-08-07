@@ -29285,6 +29285,32 @@
         "benchmark",
         "article"
       ]
+    },
+    {
+      "id": "sweep-20260807t223701z",
+      "timestamp": "2026-08-07T22:37:01.932Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched Anthropic/OpenAI/DeepMind/Meta/Mistral/Cohere/xAI/Qwen/DeepSeek/Moonshot lab blogs, GitHub trending, HF models+datasets+papers, HN top-30, all 8 YouTube channels, and bio/neuro sources (Isomorphic, Arc, Lancet Digital Health, EurekAlert). Everything fresh (Anthropic Fable 5 biology safeguards, DeepMind WeatherNext Cyclones, Google Ask Maps, ChatGPT GPT-5.6 Sol, AMD-Taalas, Cloudflare Kitesurf, Meta Muse Spark 1.1 breach, Two Minute Papers Gemma-4-trick, AI Explained out-of-control, Ling-3.0-flash, OpenAI Astra cyber pause) is already in the feed. Oracle OpenJDK ban (Aug 3, ~108h) and DeepSeek V4-Flash ARC eval (Jul 31) both fail the 72h cap. Databricks coding-costs blog is fresh but sits below the HN 150-point bar and is not a top-lab post. Wes Roth 'AI killed Crypto' is off-topic. No qualifying ≤72h releases.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
