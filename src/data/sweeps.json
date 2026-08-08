@@ -29558,6 +29558,41 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260808t183710z",
+      "timestamp": "2026-08-08T18:37:10.571Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Moonshot, Qwen, Z.ai), GitHub trending, HuggingFace models/datasets/papers, HN front page + Show HN, all 8 YouTube creator feeds, the AI-for-science lane (STAT News, Nature, neurosciencenews, FDA/BCI/pharma queries) and tier-1 press. Almost everything fresh was already in the feed (Astra cyber pause, Fable 5 biology safeguards, WeatherNext, Kitesurf, Agent Plugins 1.0, AMD/Taalas, Genesis). Only new qualifying item: Bloomberg's report on OpenAI's doughnut-shaped ChatGPT speaker.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-chatgpt-speaker-rumor",
+          "title": "OpenAI's ChatGPT speaker — Bloomberg reports a $300–$400 doughnut device",
+          "category": "rumor",
+          "note": "Bloomberg (6 Aug) detailed OpenAI's first ChatGPT smart speaker — doughnut form factor, $300–$400, 2027 launch; picked up by Fortune, MacRumors, Fast Company, Thurrott and Cult of Mac, and no existing feed item covers it (openai-codex-micro is a separate Codex macro pad)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "dataset",
+        "video",
+        "article",
+        "rumor",
+        "security",
+        "ecosystem",
+        "benchmark",
+        "algorithm"
+      ]
     }
   ]
 }

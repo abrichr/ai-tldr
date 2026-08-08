@@ -1,8 +1,63 @@
 {
-  "generatedAt": "2026-08-08T16:35:56.568Z",
+  "generatedAt": "2026-08-08T18:37:10.571Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openai-chatgpt-speaker-rumor",
+      "categories": [
+        "rumor"
+      ],
+      "title": "OpenAI's ChatGPT speaker — Bloomberg reports a $300–$400 doughnut device",
+      "org": "OpenAI",
+      "date": "2026-08-06",
+      "url": "https://www.macrumors.com/2026/08/06/openai-chatgpt-speaker/",
+      "summary": "Bloomberg reports that OpenAI's first ChatGPT smart speaker is a doughnut-shaped, screen-free device about the size of a hockey puck. It runs on a battery, carries a camera and microphones, and would cost $300 to $400.",
+      "tags": [
+        "openai",
+        "chatgpt",
+        "hardware",
+        "smart-speaker",
+        "consumer-devices",
+        "jony-ive",
+        "lovefrom",
+        "rumor",
+        "bloomberg"
+      ],
+      "importance": "rumor",
+      "metrics": {
+        "Reported price": "$300–$400",
+        "Expected launch": "2027"
+      },
+      "explainer": {
+        "tagline": "Bloomberg says OpenAI's first ChatGPT speaker is a portable metal doughnut with a camera, moving parts, and a $300–$400 price.",
+        "whatIsIt": "A doughnut-shaped ChatGPT speaker roughly the size of a hockey puck is OpenAI's first smart speaker, according to a Bloomberg report published on 6 August 2026. The device has no screen, is made of metal, runs on a battery, and is small enough to carry from room to room in one hand. Bloomberg puts the price at $300 to $400, with a full launch in 2027. OpenAI has not announced the product, so an official launch event or product page is what would confirm it.",
+        "howItWorks": "Speaker grilles, microphones, a camera, and extra sensors are what let the device hear the room and take in what is around it, Bloomberg reports, so ChatGPT can use that context when it answers. Lights show when the speaker is listening, and parts that move on their own signal when it is replying. The reporting says the model behind the speaker is meant to learn a user's habits over time.",
+        "whyItMatters": "Selling a $300–$400 ChatGPT speaker would put OpenAI directly against the Amazon Echo and Google Nest for the first time, in a home-device market it has never sold into. Jony Ive's LoveFrom design studio did the hardware, so this is also the first concrete shape of OpenAI's move into its own devices. Thurrott notes that Apple's trade-secret lawsuit against OpenAI leaves the timing unclear.",
+        "forWho": "AI hardware watchers and consumer-device developers"
+      },
+      "image": {
+        "url": "https://thurrott-assets.nyc3.digitaloceanspaces.com/web/wp-content/uploads/sites/2/2026/02/openai-logo.jpg",
+        "alt": "OpenAI logo, used to illustrate reporting on the company's first ChatGPT smart speaker",
+        "fit": "contain",
+        "credit": "Thurrott.com"
+      },
+      "links": [
+        {
+          "label": "Fortune Report",
+          "url": "https://fortune.com/2026/08/07/openai-device-300-dollar-donut/"
+        },
+        {
+          "label": "Thurrott Details",
+          "url": "https://www.thurrott.com/a-i/340215/new-details-emerge-on-openais-first-smart-speaker"
+        },
+        {
+          "label": "Cult Of Mac",
+          "url": "https://www.cultofmac.com/news/openais-first-smart-speaker-bizarre-doughnut-design"
+        }
+      ],
+      "publishDate": "2026-08-08T18:37:10.571Z"
+    },
     {
       "id": "agent-plugins-1-0-0",
       "categories": [
