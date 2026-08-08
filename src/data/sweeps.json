@@ -29311,6 +29311,39 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260808t011530z",
+      "timestamp": "2026-08-08T01:15:30.114Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic/Meta/DeepMind/Mistral/Cohere/Moonshot/DeepSeek/Qwen), GitHub trending, HF models/datasets/papers, HN top 30 + Show HN, 8 YouTube feeds, Simon Willison, plus tier-1 press. Added one new benchmark: Databricks' OfficeQA Pro V2 (Aug 6). MiniMax H3 fell outside the 72h cap (Aug 3); DeepSeek V4 Flash 0731 and Kimi K3 also past the cap; fresh Two Minute Papers + AI Explained videos already in the feed; Wes Roth's fresh video was crypto-focused; Oracle OpenJDK AI ban dated Aug 3 misses the 72h cap.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "databricks-officeqa-pro-v2",
+          "title": "OfficeQA Pro V2 — Databricks grounded-reasoning benchmark over 120K Treasury pages",
+          "category": "benchmark",
+          "note": "Aug 6 Databricks Research blog + Hugging Face dataset + open-source evaluator (172-star Apache-2.0 repo); 11-team Grounded Reasoning Cup backed by OpenAI/Anthropic/Google DeepMind gives multi-source signal. Clears 2-of-N for benchmark items and fills the long-dormant benchmark/dataset lane."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "benchmark",
+        "paper",
+        "algorithm",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }

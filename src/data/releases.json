@@ -1,8 +1,119 @@
 {
-  "generatedAt": "2026-08-07T22:37:01.932Z",
+  "generatedAt": "2026-08-08T01:15:30.114Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "databricks-officeqa-pro-v2",
+      "categories": [
+        "benchmark",
+        "dataset"
+      ],
+      "title": "OfficeQA Pro V2 — Databricks grounded-reasoning benchmark over 120K Treasury pages",
+      "org": "Databricks",
+      "date": "2026-08-06",
+      "url": "https://www.databricks.com/blog/introducing-officeqa-pro-v2-new-benchmark-enterprise-grounded-reasoning",
+      "summary": "OfficeQA Pro V2 asks 90 hard questions that each need answers stitched from about 7 U.S. Treasury PDFs. Out-of-the-box frontier agents average 26% accuracy; the winning Grounded Reasoning Cup team hit 63.3%.",
+      "tags": [
+        "benchmark",
+        "dataset",
+        "databricks",
+        "rag",
+        "grounded-reasoning",
+        "enterprise",
+        "document-qa",
+        "agent-evaluation",
+        "apache-2-0"
+      ],
+      "importance": "major",
+      "metrics": {
+        "questions": "90",
+        "corpus": "~1,400 PDFs / ~120K pages",
+        "sources per question": "6.7 avg",
+        "baseline agent accuracy": "26%",
+        "cup winner accuracy": "63.3%"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Databricks AI Research"
+        },
+        {
+          "label": "Partners",
+          "value": "USAFacts, U.S. Treasury"
+        },
+        {
+          "label": "Corpus",
+          "value": "U.S. Accounts of Receipts & Expenditures, 1793–2024"
+        },
+        {
+          "label": "Questions",
+          "value": "90, avg 6.7 source docs each"
+        },
+        {
+          "label": "License",
+          "value": "CC-BY-SA 4.0 (data), Apache-2.0 (code)"
+        },
+        {
+          "label": "Availability",
+          "value": "Public on Hugging Face + GitHub"
+        },
+        {
+          "label": "What's new",
+          "value": "V2 corpus spans 233 years; 74% of questions need 4+ sources (vs 62% in V1)"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How does OfficeQA Pro V2 differ from V1?",
+          "a": "OfficeQA Pro V2 swaps V1's Treasury Bulletins for the 233-year Accounts of Receipts and Expenditures corpus and raises the reasoning bar: 74% of questions now need four or more source documents, up from 62% in V1. The average answer stitches evidence from 6.7 PDFs."
+        },
+        {
+          "q": "How well do frontier coding agents do on OfficeQA Pro V2?",
+          "a": "Baseline agents built on Claude Opus 4.8, Claude Fable 5, GPT-5.5, and GPT-5.6 Sol averaged 26% accuracy out of the box. Grounded Reasoning Cup teams averaged 41.1%, and the winning entry reached 63.3% — showing agent-harness design matters as much as the underlying model."
+        },
+        {
+          "q": "Where can I download the benchmark and run the evaluator?",
+          "a": "OfficeQA Pro V2 lives on Hugging Face at huggingface.co/datasets/databricks/officeqa-pro-v2 (14 GB: 1,435 PDFs plus parsed JSONs) and the evaluator is on GitHub at github.com/databricks/officeqa. Data is CC-BY-SA 4.0; the reward code is Apache-2.0."
+        },
+        {
+          "q": "What was the Grounded Reasoning Cup?",
+          "a": "The Grounded Reasoning Cup was OfficeQA's inaugural agent-evaluation competition. Eleven academic teams built agents against a held-out corpus, backed by OpenAI, Anthropic, and Google DeepMind. Databricks used the results to size V2's difficulty against production-quality systems, not just off-the-shelf ones."
+        }
+      ],
+      "explainer": {
+        "tagline": "A public benchmark where agents must answer analytical questions by finding and combining evidence across thousands of long PDFs.",
+        "whatIsIt": "OfficeQA Pro V2 is a Databricks-built grounded-reasoning benchmark with 90 questions that require stitching evidence from about 7 U.S. Treasury PDFs each. The corpus covers 233 years of federal accounting (1793–2024), roughly 120,000 pages, so agents can't guess from memory or a single retrieved chunk.",
+        "howItWorks": "Each question in OfficeQA Pro V2 was written by expert humans using Databricks' asynth pipeline, which forces multi-document evidence chains. The evaluator on GitHub grades responses with fuzzy matching for numeric answers, and the answer keys stay gated on Hugging Face to keep them out of web-crawling training pipelines.",
+        "whyItMatters": "Enterprise buyers keep asking whether frontier agents can actually reason across a company's document trove. OfficeQA Pro V2 says: often no. Baseline coding agents scored 26% on it, while a Cup-winning custom harness reached 63.3% — a 37-point gap that shows retrieval and orchestration design still matter more than raw model size.",
+        "forWho": "RAG builders, enterprise ML teams, agent framework authors",
+        "tryIt": "git clone https://github.com/databricks/officeqa"
+      },
+      "image": {
+        "url": "https://www.databricks.com/sites/default/files/2026-08/2026-08-Blog-Introducing-OfficeQA-Pro-V2-A-New-Benchmark-for-Enterprise-Grounded-Reasoning-OG-1200x628-2x.png",
+        "alt": "Databricks blog banner for OfficeQA Pro V2 benchmark launch",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.databricks.com/blog/introducing-officeqa-pro-v2-new-benchmark-enterprise-grounded-reasoning"
+        },
+        {
+          "label": "Hugging Face Dataset",
+          "url": "https://huggingface.co/datasets/databricks/officeqa-pro-v2"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/databricks/officeqa"
+        },
+        {
+          "label": "Prior arXiv Paper",
+          "url": "https://arxiv.org/abs/2603.08655"
+        }
+      ],
+      "publishDate": "2026-08-08T01:15:30.114Z"
+    },
     {
       "id": "openai-astra-cyber-pause-aug7",
       "categories": [
