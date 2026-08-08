@@ -861,3 +861,52 @@ alone" rule isn't landing — reinforce it, do NOT lower the bar.
 **Bars unchanged:** 72h cap, "no papers alone" rule, 2-of-N for paper-shaped items, ≤1–2 per sweep cap. A pipeline deal, funding, or finding-paper with no released code still does NOT qualify.
 
 **Status:** Applied. Watch next ~10 crons: expect occasional pharma AI items (new model releases, FDA-cleared AI diagnostics, clinical-stage AI readouts) WITH pharma domain hashtags. If pharma company blogs are 404ing, skip and update the URL. Do NOT lower the inclusion bar if items are rare — pharma AI releases are infrequent by nature; an empty pharma lane is correct.
+
+## 2026-08-08-A — sweep + registry agents moved to Opus 5; MUST use the `[1m]` variant
+
+**Trigger:** User: "update gh action model to opus 5".
+
+**Change:** `--model claude-opus-4-7` → `--model "claude-opus-5[1m]"` at three call
+sites — `update-releases.yml` attempt 1 (L132) and attempt 2/retry (L179), and
+`maintain-registry.yml` (L108). The three Sonnet workflows (`daily-digest`,
+`propose-release`, `agent-request`) were deliberately left on
+`claude-sonnet-4-6`.
+
+**The trap — do NOT drop the `[1m]` suffix.** Verified locally with the Claude
+Code CLI (2.1.162), reading `modelUsage[...].contextWindow` out of
+`--output-format json`:
+
+| model string | context window |
+| --- | --- |
+| `claude-opus-4-7` (outgoing) | 1,000,000 |
+| `claude-opus-5` (bare) | **200,000** |
+| `claude-opus-5[1m]` | 1,000,000 |
+
+Bare `claude-opus-5` would have silently cut the sweep's context **5×** versus
+the model it replaced. The sweep runs `--max-turns 6000` with heavy WebFetch
+across every lane, so 200K is a real regression, not a theoretical one. The
+value is quoted in YAML so the shell can't glob-expand the `[1m]` brackets.
+
+**How to re-verify after any future model bump** (do this before trusting a
+cron):
+
+```bash
+claude --model "<id>" --output-format json -p "Reply with exactly: PONG"
+```
+
+Check `modelUsage` echoes the ID you asked for and `contextWindow` is
+1000000. Always run a known-bogus ID (e.g. `claude-opus-7`) as a negative
+control to prove the check discriminates instead of silently falling back.
+
+**Second gotcha worth knowing:** a bad model ID returns `api_error_status: 404`
+and `is_error: true` but the CLI still **exits 0**. So a wrong model may not
+turn the workflow step red — it can look like a quiet no-op sweep instead. A
+green cron alone does NOT prove the model resolved; check the run log or the
+committed output.
+
+**Status:** Applied and locally validated. NOT yet exercised through
+`anthropics/claude-code-action@v1` itself — the untested link is whether the
+action's own arg parsing preserves `[1m]`. Watch the first cron after this
+lands: if the sweep commits nothing AND the log shows a 404 model error, the
+suffix didn't survive the action; fall back to bare `claude-opus-5` and accept
+200K, or find the action's quoting form.

@@ -129,7 +129,7 @@ jobs:
             Read `prompts/update-releases.md` and follow it exactly.
             Do NOT commit or push — the next workflow step does that.
           claude_args: |
-            --model claude-opus-4-7
+            --model "claude-opus-5[1m]"
             --verbose
             --max-turns 6000
             --permission-mode acceptEdits
@@ -176,7 +176,7 @@ jobs:
             distinctly in /log. Do NOT commit or push — the next
             workflow step does that.
           claude_args: |
-            --model claude-opus-4-7
+            --model "claude-opus-5[1m]"
             --verbose
             --max-turns 6000
             --permission-mode acceptEdits
