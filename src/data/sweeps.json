@@ -29344,6 +29344,30 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260808t032857z",
+      "timestamp": "2026-08-08T03:28:57.645Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, Google DeepMind, Meta, Mistral, Cohere, xAI), GitHub trending, HF trending models/papers, HN top 30, Simon Willison, TechCrunch AI, YouTube RSS across 8 creator channels, plus the bio/pharma/neuro lane (BCI, medical imaging, drug discovery searches). Nothing new qualified since the 01:15Z sweep 2h ago: MiniMax-H3 announced Jul 31 / weights Aug 3 (>72h); Oracle's OpenJDK AI-code ban dates to April 2026 (>72h); DOE Genesis Open Models portal opened today but sat at HN 128pts with no tier-1 press, DOE isn't a listed top lab; Databricks 'Managing AI Coding Costs' is a strategy article and Databricks isn't in the influential-voices list; the addyosmani/mattpocock/obra agent-skills repos are 2026-02-created or older (surging stars, not fresh releases); all 5 fresh YouTube videos (TMP DeepMind, Wes Roth, AI Explained, Fireship, TMP billion-dollar) are either already in the feed or off-topic; Simon Willison's Aug 7 OpenAI-HF-attack timeline analysis is already linked from the existing openai-black-hat-message-board-aug5 entry; no qualifying bio/pharma/neuro release in 72h. Anthropic/OpenAI/DeepMind/Mistral quiet on new artifacts.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "article",
+        "paper",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
