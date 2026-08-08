@@ -29483,6 +29483,41 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260808t144304z",
+      "timestamp": "2026-08-08T14:43:04.856Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Qwen, DeepSeek, Moonshot), GitHub trending, HuggingFace models/papers/datasets, HN top 30, 8 YouTube creator feeds, and the AI-for-science lane (BCI, pharma, Nature Medicine, npj Digital Medicine). Only one ≤72h item cleared the bar: the DOE Genesis Open Models Initiative (US DOE + Arcee opened a science-AI contribution portal, HN 286 pts). Two fresh Wes Roth videos dropped as content unverifiable (vague titles, one crypto-framed); Two Minute Papers Aug 7 video already in feed. HF/GitHub trending was dominated by items already covered (Prime Agent, MiniMax H3, DeepSeek V4-Flash, LFM2.5, Maple-Preview) or outside 72h (Stack v3 Aug 3, NVIDIA Nemotron VoiceChat Aug 3).",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "doe-genesis-open-models-portal",
+          "title": "Genesis Open Models — DOE opens contribution portal for open-weight science AI",
+          "category": "ecosystem",
+          "note": "US DOE opened Argonne-hosted Genesis Open Models portal Aug 7; HN 286 pts; first industry partner Arcee AI with Genesis-Science-1; concrete developer action = submit training data, evals, or fine-tuning environments before Aug 14 / Aug 25 deadlines."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "ecosystem",
+        "article",
+        "security",
+        "rumor"
+      ]
     }
   ]
 }

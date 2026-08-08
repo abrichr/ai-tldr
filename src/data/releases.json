@@ -1,8 +1,110 @@
 {
-  "generatedAt": "2026-08-08T12:41:59.846Z",
+  "generatedAt": "2026-08-08T14:43:04.856Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "doe-genesis-open-models-portal",
+      "categories": [
+        "ecosystem",
+        "resource"
+      ],
+      "title": "Genesis Open Models — DOE opens contribution portal for open-weight science AI",
+      "org": "US Department of Energy",
+      "date": "2026-08-07",
+      "url": "https://genesisopenmodels.anl.gov/",
+      "summary": "The US Department of Energy opened a portal at Argonne inviting universities, labs, and companies to contribute data, benchmarks, and workflows to Genesis-Science-1 and future open-weight science models.",
+      "tags": [
+        "ecosystem",
+        "resource",
+        "doe",
+        "genesis-open-models",
+        "genesis-mission",
+        "argonne-national-lab",
+        "arcee-ai",
+        "open-weights",
+        "science-ai",
+        "foundation-model",
+        "us-government"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Program",
+          "value": "US DOE Genesis Open Models Initiative"
+        },
+        {
+          "label": "First model",
+          "value": "Genesis-Science-1 (with Arcee AI)"
+        },
+        {
+          "label": "Portal",
+          "value": "genesisopenmodels.anl.gov"
+        },
+        {
+          "label": "Host lab",
+          "value": "Argonne National Laboratory"
+        },
+        {
+          "label": "Foundation-stage deadline",
+          "value": "August 14, 2026"
+        },
+        {
+          "label": "Post-training deadline",
+          "value": "August 25, 2026"
+        },
+        {
+          "label": "Contribution cadence",
+          "value": "Rolling, every ~3 months"
+        }
+      ],
+      "explainer": {
+        "tagline": "The Genesis Open Models Initiative — a US DOE program hosted at Argonne — invites the research community to contribute to open-weight AI models built for science.",
+        "whatIsIt": "Genesis Open Models is a new US Department of Energy program that gathers open-weight foundation models targeted at scientific work — materials, biology, fusion, earth systems, and high-energy physics. Arcee AI is the first industry partner, and the first model in the program is Genesis-Science-1. A DOE-hosted contribution portal at genesisopenmodels.anl.gov opened on August 7, 2026.",
+        "howItWorks": "The portal runs two contribution tracks. Foundation-stage submissions — scientific text, code, documentation, and structured technical collections for pretraining, midtraining, or context extension — are due August 14, 2026, with a delivery deadline of August 28. Post-training submissions — supervised fine-tuning examples, workflow environments, RL tasks, held-out evaluations, rubrics, tests, and verifiers — are due August 25, with delivery by September 14. Applicants pick a track, describe the scientific work, name the experts available to support it, and state the proposed terms of use.",
+        "whyItMatters": "Open-weight foundation models tuned for science have been rare, and no national program has invited the broader research community to jointly shape them. Genesis Open Models moves that work into shared public infrastructure — a domain dataset, a benchmark, or a fine-tuning recipe can now feed a US government science model instead of sitting behind a lab paywall. Rolling three-month windows mean the door does not close after August.",
+        "forWho": "US and international university labs, national labs, scientific nonprofits, and companies with high-quality science data or evals",
+        "tryIt": "Apply at https://genesisopenmodels.anl.gov/ (Foundation-stage deadline Aug 14; Post-training Aug 25)"
+      },
+      "image": {
+        "url": "https://genesisopenmodels.anl.gov/wp-content/uploads/sites/134/2026/07/Logo-lockup-transparent.png",
+        "alt": "Genesis Open Models Initiative logo lockup with the US Department of Energy and Argonne National Laboratory",
+        "fit": "contain"
+      },
+      "faq": [
+        {
+          "q": "Who can contribute to Genesis Open Models?",
+          "a": "The Genesis Open Models portal accepts submissions from universities, national laboratories, companies, scientific nonprofits, and research organizations. Contributions must be scientific and technical materials with transparent provenance — high-quality data, benchmarks, workflow environments, or expert time — and applicants must state the proposed terms of use up front."
+        },
+        {
+          "q": "What is Genesis-Science-1?",
+          "a": "Genesis-Science-1 is the first open-weight foundation model in the Genesis Open Models program, developed by Arcee AI in partnership with the US Department of Energy. When Genesis-Science-1 ships, Arcee has committed to releasing the model weights, a technical report, and public demonstration artifacts, and the model targets scientific computing workflows with a reproducible record of its work."
+        },
+        {
+          "q": "When can I contribute if I miss the August deadlines?",
+          "a": "Genesis Open Models runs on rolling contribution windows every three months, so the August 14 and August 25 deadlines are only the first round of 2026. A missed deadline pushes a contribution to the next window rather than out of the program, and DOE also accepts rolling inquiries from infrastructure providers offering additional training or evaluation capacity."
+        },
+        {
+          "q": "How is this different from the DOE Genesis Mission announced in December 2025?",
+          "a": "Genesis Open Models is the community-facing arm of the broader Genesis Mission, which DOE launched in December 2025 with 24 industry partners and formalized in February 2026 as the Genesis Mission Consortium. The Open Models Initiative is the newly opened public portal for submitting training data, evals, and other artifacts — the first Genesis Mission program that invites contributions from the wider research community."
+        }
+      ],
+      "links": [
+        {
+          "label": "Genesis Open Models Portal",
+          "url": "https://genesisopenmodels.anl.gov/"
+        },
+        {
+          "label": "Arcee Genesis-Science-1",
+          "url": "https://www.arcee.ai/science-1"
+        },
+        {
+          "label": "HN Discussion (286 pts)",
+          "url": "https://news.ycombinator.com/item?id=49216946"
+        }
+      ],
+      "publishDate": "2026-08-08T14:43:04.856Z"
+    },
     {
       "id": "anthropic-claude-code-self-hosted-aug6",
       "categories": [
