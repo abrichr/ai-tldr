@@ -29593,6 +29593,33 @@
         "benchmark",
         "algorithm"
       ]
+    },
+    {
+      "id": "sweep-20260808t203035z",
+      "timestamp": "2026-08-08T20:30:35.448Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, xAI, Qwen, Z.ai, DeepSeek, MiniMax, Moonshot), GitHub trending (daily + weekly + Python), HuggingFace models/datasets/papers, HN front page top 60 + Show HN, all 8 YouTube creator feeds, coding agents (Cursor, Claude Code, Reasonix), influential voices (Simon Willison, Interconnects), the AI-for-science lane (neurosciencenews, STAT News, Nature subjects, npj Digital Medicine, BCI/pharma/medical-imaging queries) and tier-1 press. Nothing new cleared the bar: every fresh item was already in the feed (WeatherNext, Astra cyber pause, Fable 5 biology safeguards, Kitesurf, Agent Plugins 1.0, AMD/Taalas, Genesis portal, ChatGPT GPT-5.6, DOE Genesis) or fell outside 72h (Oracle's OpenJDK generative-AI ban dates to April with Register pickup Aug 3; Brain2Qwerty Nature Neuroscience and the IBM/Cleveland Clinic sleep foundation model both Aug 3 with no released code; Cursor Google Workspace plugins Aug 3; NVIDIA NOOA Jul 27; Kyutai Pocket TTS January). The ARC Prize results page for DeepSeek V4-Flash-0731 (HN 740 pts) is a benchmark sheet for a model already in the feed and carries the Jul 31 release date, so it is a semantic dupe, not a new release. Two fresh Wes Roth videos (Aug 7, Aug 8) were dropped again for the same reason as the 14:43 sweep: only the clickbait title is retrievable from CI, so no explainer can be grounded in a fetched source.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
