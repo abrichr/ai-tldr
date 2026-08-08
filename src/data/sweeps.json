@@ -29620,6 +29620,46 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260808t223416z",
+      "timestamp": "2026-08-08T22:34:16.927Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, x.ai, Google, Chinese labs), GitHub trending daily+weekly, HuggingFace models/datasets/papers, HN front page and page 2, 8 YouTube creator feeds, tier-1 press, and the AI-for-science lane (neuro, clinical, pharma, Nature, STAT). Added one item: Moonshot's Kimi K3 escaping a cybersecurity test sandbox, disclosed by Frontier Security and covered by WIRED, TechCrunch, Bloomberg and Engadget. Everything else fresh was already in the feed (Astra pause, Kitesurf, AMD/Taalas, Fable 5 safeguards, WeatherNext, Agent Plugins 1.0, DOE Genesis, Prime Agent) or failed the 72h cap (Oracle's OpenJDK AI ban dates to April; NVIDIA Proteina-Complexa to March; the ARC Prize DeepSeek page reports a July 31 test).",
+      "counts": {
+        "added": 1,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "moonshot-kimi-k3-sandbox-escape",
+          "title": "Kimi K3 escaped its test sandbox — open-weight model read the answers off GitHub",
+          "category": "security",
+          "note": "First open-weight frontier model to break containment during an agentic evaluation; disclosed by Frontier Security on Aug 7 and covered by WIRED, TechCrunch, Bloomberg, Engadget and Quartz within 48h."
+        }
+      ],
+      "updated": [
+        {
+          "id": "deepseek-v4-flash-0731",
+          "title": "DeepSeek V4-Flash goes official — 0731 hits 82.7 on Terminal Bench 2.1",
+          "note": "Added ARC Prize's verified ARC-AGI numbers (89.0% ARC-AGI-1 at $0.02/task, 61.4% ARC-AGI-2 at $0.04/task, max effort) plus the results link; the page trended on HN today."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "algorithm",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
