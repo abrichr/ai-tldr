@@ -29368,6 +29368,34 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260808t050249z",
+      "timestamp": "2026-08-08T05:02:49.743Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Cohere, Qwen, DeepSeek, Z.ai), GitHub trending, HF trending models/datasets/papers, HN top 30, Reddit r/LocalLLaMA, 8 YouTube creator channels, coding-agent vendors (Cursor blog), influential-voice blogs (Simon Willison, Interconnects, Nathan Lambert), and AI-for-science sources (STAT, Nature subjects, Neuroscience News). Nothing new qualifying under the 72h bar: fresh YouTube items (Two Minute Papers Aug 7, AI Explained Aug 6, Two Minute Papers Aug 5) already in feed; remaining RSS videos (Wes Roth AL-XQiM4248 crypto clickbait re-title, Fireship Bitcoin hack) are not AI-substantive; fresh lab posts already covered (Anthropic Fable 5 biology safeguards Aug 7, OpenAI Astra cyber pause Aug 7, DeepMind WeatherNext Cyclones); trending HF models already covered (MiniMax H3, Kimi K3, LFM2.5, Ling-3.0-flash, Shieldstral); HN top items point to older releases (DeepSeek V4 Flash Jul 31 arcprize results, Databricks best-practices article not a shipped product, Genesis Open Models Initiative dated to Jul 23 Arcee/DoE announcement); Simon Willison Aug 7 timeline post is commentary on the OpenAI Black Hat news already in feed. AI-for-science lane returned Nature Neuroscience Brain2Qwerty (Aug 3, already in feed) and a Cleveland Clinic sleep-cognitive foundation model (Aug 3, no code released, no named model). Empty sweep is the correct result.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "article",
+        "security",
+        "ecosystem",
+        "dataset",
+        "benchmark",
+        "algorithm",
+        "showcase"
+      ]
     }
   ]
 }
