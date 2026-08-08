@@ -29456,6 +29456,33 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260808t124159z",
+      "timestamp": "2026-08-08T12:41:59.846Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, xAI, Mistral, Cohere, Qwen, Moonshot, DeepSeek, z.ai, MiniMax, Baidu, ByteDance), GitHub trending, HuggingFace models/datasets/papers, HN top 30, r/LocalLLaMA, tier-1 press (Verge, Ars, TechCrunch, The Information, Stratechery), the AI-for-science lane (Neuroscience News, Nature AI/ML subjects, STAT, Endpoints, FiercePharma, Insilico, Recursion, Isomorphic, Arc, Lancet Digital Health), and all 8 YouTube creator channels via yt-rss-scan. Every qualifying candidate was already covered in the feed within the last ~48h: Anthropic Fable 5 biology safeguards, DeepMind WeatherNext Cyclones, Cloudflare Kitesurf, OpenAI GPT-5.6 Sol unlimited chats, Meta Muse Code + Spark 1.2, Google Ask Maps agentic, Hark Handoff, OpenAI Astra cyber pause, Black Hat rogue-agents story, DeepSeek V4-Flash 0731, Prime Agent, LiquidAI LFM2.5-2.6B, MiniMax H3, mattpocock/skills, addyosmani/agent-skills. Two fresh Wes Roth videos (C9WoQrslPMM 'it JUST got so much worse...' and AL-XQiM4248 'AI just killed Crypto...') are reactive clickbait rehashing already-covered stories (Astra pause, Black Hat rogue agents, Mythos rumor, quantum-vs-encryption) — no substantive new AI-release content, so skipped to avoid padding. Fireship's crypto-wallet-hack video is off-topic. DoE/Argonne Genesis Open Models portal is a research-cohort program whose Aug 6 contribution deadline has already closed and ships no artifact yet. Zero-add sweep is the correct answer.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "security",
+        "algorithm",
+        "paper",
+        "dataset",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }
