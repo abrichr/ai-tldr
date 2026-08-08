@@ -29429,6 +29429,33 @@
         "ecosystem",
         "article"
       ]
+    },
+    {
+      "id": "sweep-20260808t103356z",
+      "timestamp": "2026-08-08T10:33:56.971Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta AI, Mistral, Cohere, x.ai, Qwen), GitHub trending, HuggingFace (models, datasets, papers), HN front page + newest, Simon Willison, and all 8 YouTube creator RSS feeds. Every fresh (≤72h) qualifying release surfaced was ALREADY in the feed: WeatherNext Cyclones (google-deepmind-weathernext-cyclones), Claude Fable 5 biology safeguards (anthropic-fable-5-biology-safeguards-aug7), AI Explained 'out of control' video, Two Minute Papers Aug 7 video, OpenAI Astra cyber pause, Databricks OfficeQA Pro V2. Non-qualifying candidates: Oracle OpenJDK AI ban (policy predates 72h window; HN discussion is fresh but the release isn't), Databricks 'Managing AI Coding Costs' article (references Omnigent, released mid-June, >72h old), DOE Genesis Open Models portal (portal-only announcement, first model Genesis-Science-1 released July 23), Simon Willison OpenAI/HF timeline (semantic dupe of the existing openai-black-hat-message-board-aug5 item), Wes Roth crypto/recap videos (speculative, not a shipped release). Zero-add sweep.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }
