@@ -1,8 +1,220 @@
 {
-  "generatedAt": "2026-08-08T14:43:04.856Z",
+  "generatedAt": "2026-08-08T16:35:56.568Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "agent-plugins-1-0-0",
+      "categories": [
+        "ecosystem",
+        "tool",
+        "repo"
+      ],
+      "title": "Agent Plugins 1.0.0 — one plugin format across Cursor, Copilot and ChatGPT",
+      "org": "Agent Plugins",
+      "date": "2026-08-06",
+      "url": "https://agent-plugins.org/",
+      "summary": "Agent Plugins 1.0.0 is an open standard for packaging agent skills and MCP servers into one portable folder. Amazon, Cursor, Microsoft, OpenAI and Vercel maintain it, and ChatGPT, Codex, GitHub Copilot, Kiro and VS Code already read it.",
+      "tags": [
+        "agent-plugins",
+        "mcp",
+        "agent-skills",
+        "standards",
+        "interoperability",
+        "developer-tools",
+        "vercel",
+        "cursor",
+        "openai",
+        "microsoft",
+        "amazon",
+        "google",
+        "vs-code",
+        "github-copilot"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Spec repo stars": 659
+      },
+      "quickFacts": [
+        {
+          "label": "Spec version",
+          "value": "1.0.0"
+        },
+        {
+          "label": "Released",
+          "value": "August 6, 2026"
+        },
+        {
+          "label": "Core maintainers",
+          "value": "Amazon, Cursor, Microsoft, OpenAI, Vercel"
+        },
+        {
+          "label": "Supported clients",
+          "value": "ChatGPT, Codex, Cursor, GitHub Copilot, Kiro, VS Code"
+        },
+        {
+          "label": "Package layout",
+          "value": "plugin.json + skills/ + mcp.json"
+        },
+        {
+          "label": "License",
+          "value": "CC-BY-4.0 (spec), Apache-2.0 (schemas and code)"
+        },
+        {
+          "label": "Governance",
+          "value": "Community-governed, run by a Technical Steering Committee"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which AI coding tools support Agent Plugins today?",
+          "a": "Agent Plugins is read by six clients at launch: ChatGPT, Codex, Cursor, GitHub Copilot, Kiro and VS Code. Each client keeps control of how a plugin is installed, distributed and surfaced to users, so support means the client can load the same folder, not that every client behaves identically once it does."
+        },
+        {
+          "q": "Is Google a maintainer of Agent Plugins?",
+          "a": "Google announced on August 6, 2026 that it joined Agent Plugins as a core maintainer, represented on the Technical Steering Committee by Kevin Hou of Google DeepMind. Google already ships two plugins in the format: its Agents CLI, which carries skills for building and deploying agents, and the Data Agent Kit for BigQuery, Spanner and Cloud SQL."
+        },
+        {
+          "q": "How is Agent Plugins different from MCP?",
+          "a": "MCP defines how an agent talks to an external tool or data source. Agent Plugins is a layer above that: it defines the folder you ship, bundling MCP server declarations in mcp.json together with Agent Skills under skills/. Agent Plugins does not replace MCP, it packages MCP servers and skills together so both travel as one unit."
+        },
+        {
+          "q": "Can a plugin still carry client-specific settings?",
+          "a": "Yes. Agent Plugins reserves reverse-domain namespaces, such as com.example.client/, for anything one client needs and others do not. The portable parts stay in the fixed locations every client understands, so a plugin can hold extras for one tool without breaking in the rest."
+        }
+      ],
+      "explainer": {
+        "tagline": "One directory format packages agent skills and MCP servers so the same folder runs in any supporting client.",
+        "whatIsIt": "Agent Plugins 1.0.0 fixes a single directory format for shipping agent extensions: a plugin.json manifest at the root, a skills/ folder, and an mcp.json file. Vercel published the release on August 6, 2026, with Amazon, Cursor, Microsoft and OpenAI alongside it on the steering committee. The same folder can be copied into any client that supports the spec.",
+        "howItWorks": "Each skill sits in its own subdirectory under skills/, using the SKILL.md layout the Agent Skills specification already defines, with optional scripts/ and references/ folders next to it. MCP servers are declared in mcp.json, and every entry carries an explicit type. Anything a single client needs goes in a reverse-domain namespace, which keeps the portable parts of a plugin in places every client knows how to find.",
+        "whyItMatters": "Anyone building agent extensions has had to maintain a separate package for each tool that might load it. A plugin written to this spec covers six clients at once, so the duplicate codebases go away. The spec is deliberately small: it says nothing about plugin stores or security, and each client still decides installation, distribution and policy for itself.",
+        "forWho": "developers who ship agent skills and MCP servers",
+        "tryIt": "https://github.com/agentplugins/agent-plugins-spec"
+      },
+      "image": {
+        "url": "https://agent-plugins.org/og/image.png",
+        "alt": "Agent Plugins specification banner",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Vercel Announcement",
+          "url": "https://vercel.com/changelog/introducing-agent-plugins-1-0-0"
+        },
+        {
+          "label": "Spec Repo",
+          "url": "https://github.com/agentplugins/agent-plugins-spec"
+        },
+        {
+          "label": "Google Blog",
+          "url": "https://developers.googleblog.com/agent-plugins-package-your-skills-tools-and-more/"
+        },
+        {
+          "label": "The Register",
+          "url": "https://www.theregister.com/devops/2026/08/07/ai-titans-to-tidy-agent-frontier-with-plugin-prescription/5285017"
+        }
+      ],
+      "publishDate": "2026-08-08T16:35:56.568Z"
+    },
+    {
+      "id": "databricks-ai-coding-costs-aug7",
+      "categories": [
+        "article"
+      ],
+      "title": "Databricks on cutting AI coding bills — routing beats rationing",
+      "org": "Databricks",
+      "author": {
+        "name": "Patrick Wendell",
+        "profileUrl": "https://github.com/pwendell",
+        "avatarUrl": "https://github.com/pwendell.png"
+      },
+      "date": "2026-08-07",
+      "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
+      "summary": "Databricks explains how it holds down AI coding costs with four levers: efficient models, flexible model choice, smart request routing, and less token overhead. Unity AI Gateway and the Apache-2.0 Omnigent harness do the work.",
+      "tags": [
+        "databricks",
+        "ai-coding-costs",
+        "model-routing",
+        "unity-ai-gateway",
+        "omnigent",
+        "coding-agents",
+        "governance",
+        "developer-tools",
+        "token-costs"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Publisher",
+          "value": "Databricks"
+        },
+        {
+          "label": "Published",
+          "value": "August 7, 2026"
+        },
+        {
+          "label": "Cost levers",
+          "value": "Efficient models, model flexibility, request routing, token overhead"
+        },
+        {
+          "label": "Smart Router savings",
+          "value": "Over 30% lower average task cost"
+        },
+        {
+          "label": "Gateway",
+          "value": "Unity AI Gateway, GA since August 4, 2026"
+        },
+        {
+          "label": "Client-side harness",
+          "value": "Omnigent, Apache-2.0"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Omnigent open source?",
+          "a": "Omnigent is an Apache-2.0 licensed meta-harness for building and running AI agents, published at omnigent.ai with source on GitHub. Omnigent sits above individual harnesses such as Claude Code, Codex and Pi, so a team can compose them, control them with policies, and collaborate in real time. The project describes itself as alpha and built in the open."
+        },
+        {
+          "q": "What does Unity AI Gateway do?",
+          "a": "Unity AI Gateway is the Databricks governance layer for AI traffic, generally available since August 4, 2026. Unity AI Gateway centralizes access to model providers, attributes spend across models, teams and applications, enforces hard spend caps, and logs requests. Databricks offers access to Anthropic, OpenAI, Gemini, Kimi and GLM models through a single-query API."
+        },
+        {
+          "q": "Does spending less mean limiting what developers can use?",
+          "a": "Databricks argues the opposite. The post's position is that exponential growth in AI coding costs is a solvable engineering and governance problem, addressed by better model selection and routing rather than by restricting developer access. Databricks reports it held quality roughly level with its most expensive model while paying less per task."
+        },
+        {
+          "q": "How solid are the savings numbers in the post?",
+          "a": "Databricks labels the per-technique ranges in its summary table as directional and based on an informal survey, not a controlled benchmark. The Smart Router and token-trimming results are reported as measured outcomes with no observed quality degradation, so treat the table as a guide to which lever to pull rather than a promise of a specific number."
+        }
+      ],
+      "explainer": {
+        "tagline": "Databricks argues runaway AI coding spend is an engineering problem, not a bill you have to accept.",
+        "whatIsIt": "Databricks published a breakdown on August 7, 2026 of how it keeps the cost of AI coding tools under control across its own engineering organisation. The post walks through four levers, from picking efficient models to cutting the tokens a request wastes. Patrick Wendell and four co-authors write that exponential cost growth is a solvable engineering and governance problem.",
+        "howItWorks": "Two pieces of infrastructure carry the plan. Unity AI Gateway sits in front of the model providers and handles access, budget tracking, configuration and logging, with Smart Router choosing a model per task. Omnigent sits on the developer side as a meta-harness, showing one interface while dispatching each request to whichever underlying harness fits, so a team can change models without changing how people work.",
+        "whyItMatters": "The approach saves money without taking tools away from developers, which is the usual reaction to a large AI bill. Routing each task to a cheaper model held quality roughly level with the most expensive option, and trimming token overhead cut generated tokens nearly in half with no quality drop the team could see. Anyone watching an AI coding budget climb now has a written account of which levers actually moved the number.",
+        "forWho": "engineering leaders paying for AI coding tools"
+      },
+      "image": {
+        "url": "https://www.databricks.com/sites/default/files/2026-08/2026-08-blog-managing-coding-costs.png",
+        "alt": "Databricks blog header for managing AI coding costs at scale",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Unity AI Gateway GA",
+          "url": "https://www.databricks.com/blog/unity-ai-gateway-generally-available"
+        },
+        {
+          "label": "Omnigent",
+          "url": "https://omnigent.ai/"
+        },
+        {
+          "label": "Omnigent Docs",
+          "url": "https://docs.databricks.com/aws/en/omnigent/"
+        }
+      ],
+      "publishDate": "2026-08-08T16:35:56.568Z"
+    },
     {
       "id": "doe-genesis-open-models-portal",
       "categories": [

@@ -29518,6 +29518,46 @@
         "security",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260808t163556z",
+      "timestamp": "2026-08-08T16:35:56.568Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Agent Plugins 1.0.0, the cross-vendor standard for packaging agent skills and MCP servers, and the Databricks engineering post on cutting AI coding costs. Lab blogs were quiet: Anthropic, DeepMind, Meta, Mistral and Cohere had nothing new inside 72h that wasn't already in the feed, and HF trending, GitHub trending and the AI-for-science lane produced nothing that cleared the bar.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "agent-plugins-1-0-0",
+          "title": "Agent Plugins 1.0.0 — one plugin format across Cursor, Copilot and ChatGPT",
+          "category": "ecosystem",
+          "note": "Cross-vendor spec released 2026-08-06 by Vercel with Amazon, Cursor, Microsoft and OpenAI as core maintainers; Google joined the same day; six clients already load it, and the concrete developer action is shipping one plugin folder instead of a package per client."
+        },
+        {
+          "id": "databricks-ai-coding-costs-aug7",
+          "title": "Databricks on cutting AI coding bills — routing beats rationing",
+          "category": "article",
+          "note": "HN front page at 283 points within 72h, with verified numbers from a company running AI coding at scale and two named artifacts (Unity AI Gateway, Apache-2.0 Omnigent)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }
