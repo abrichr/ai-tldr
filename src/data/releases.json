@@ -1,8 +1,108 @@
 {
-  "generatedAt": "2026-08-08T05:02:49.743Z",
+  "generatedAt": "2026-08-08T08:50:25.173Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "anthropic-claude-code-self-hosted-aug6",
+      "categories": [
+        "tool"
+      ],
+      "title": "Claude Code self-hosted environments — Anthropic runs sessions on your own compute",
+      "org": "Anthropic",
+      "date": "2026-08-06",
+      "url": "https://claude.com/blog/run-claude-code-sessions-on-your-own-compute",
+      "summary": "Anthropic opened a public beta for Claude Code cloud sessions to run on infrastructure the customer controls. Repos, build artifacts, and secrets stay on the org's machines; prompts and responses still route to Anthropic for inference.",
+      "tags": [
+        "anthropic",
+        "claude-code",
+        "self-hosted",
+        "enterprise",
+        "compliance",
+        "public-beta",
+        "coding-agent"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Anthropic"
+        },
+        {
+          "label": "Product",
+          "value": "Claude Code self-hosted environments"
+        },
+        {
+          "label": "Status",
+          "value": "Public beta"
+        },
+        {
+          "label": "Plans",
+          "value": "Claude Team and Enterprise"
+        },
+        {
+          "label": "Excluded",
+          "value": "Zero Data Retention accounts"
+        },
+        {
+          "label": "Runner modes",
+          "value": "Fixed or on-demand"
+        },
+        {
+          "label": "Repository support",
+          "value": "GitHub at launch"
+        }
+      ],
+      "metrics": {
+        "plans": "Team + Enterprise",
+        "runner_modes": "Fixed + on-demand"
+      },
+      "explainer": {
+        "tagline": "Claude Code cloud sessions can now run on runners you provision, keeping code and secrets on your infrastructure.",
+        "whatIsIt": "Claude Code self-hosted environments let a Team or Enterprise organization host Claude Code cloud sessions on servers inside its own network instead of Anthropic's cloud. A session started from the web, mobile, desktop, terminal, or a scheduled routine picks up a runner that the organization deployed, then reads its internal services, databases, and registries as if it were a local developer. The feature is a public beta and off by default; ZDR accounts are excluded at launch.",
+        "howItWorks": "Self-hosted environments introduce runners — long-lived processes that pick up a queued session and start a Claude Code process for it. Runners come in two modes: fixed, where a set number stay up and share sessions, or on-demand, where an orchestrator starts runners as sessions arrive and shuts them down when the work is done. Repository checkouts, build artifacts, secrets, and any files a session creates or modifies stay on the customer's machines. Conversation content — prompts, responses, and tool results — still travels to Anthropic for inference and is stored so a session can continue across surfaces. All connections are outbound HTTPS; Anthropic never opens a connection back into the customer network.",
+        "whyItMatters": "Self-hosted environments fix the two things enterprise buyers kept flagging about Claude Code cloud sessions: touching internal services without exposing them to the public internet, and keeping source code and build artifacts on machines under the organization's control. Teams can pre-install compilers, SDKs, and internal tools so a session starts ready to build, and pipe every session through the same identity, logging, and network policies the rest of the engineering fleet already uses.",
+        "forWho": "Regulated enterprises, security-conscious platform teams, and any org whose codebase or internal services could not previously leave the corporate network.",
+        "tryIt": "Enable self-hosted environments in the Claude Code cloud-environments admin page (Team or Enterprise), then deploy a runner — full setup at https://code.claude.com/docs/en/self-hosted-environments."
+      },
+      "faq": [
+        {
+          "q": "Which Claude plans can use Claude Code self-hosted environments?",
+          "a": "Claude Code self-hosted environments are limited to Claude Team and Enterprise plans and remain off by default. Organizations using the Zero Data Retention (ZDR) setting cannot enable the feature at launch, and it is not yet available for sessions routed through Bedrock, Google Cloud Agent Platform, or Microsoft Foundry."
+        },
+        {
+          "q": "What data stays on my infrastructure and what still goes to Anthropic?",
+          "a": "With Claude Code self-hosted environments, repository checkouts, build artifacts, secrets, and any files a session creates or modifies stay on machines the organization provisions. The conversation itself — prompts, responses, and tool results — still travels to Anthropic for inference, and the session transcript is stored so the session can be resumed across surfaces."
+        },
+        {
+          "q": "How do runner modes work?",
+          "a": "Claude Code self-hosted environments deploy runners in one of two modes. Fixed mode keeps a set number of long-lived runners up and distributes sessions across them. On-demand mode uses an orchestrator to watch the queue and start a fresh runner when a session arrives, then shut it down when the session finishes."
+        },
+        {
+          "q": "Which source hosts and Claude surfaces are supported at launch?",
+          "a": "At the public beta launch, Claude Code self-hosted environments support GitHub as the repository source. The Claude Tag review workflow, Claude Security, and Code Review surfaces are not yet routed through self-hosted runners; Anthropic notes those integrations are still to come."
+        }
+      ],
+      "image": {
+        "url": "https://www.unite.ai/wp-content/uploads/2026/08/claude-code-self-hosted-environments-public-beta.png",
+        "alt": "Diagram of a Claude Code cloud session routed to a customer-hosted runner that reads internal services and returns artifacts locally."
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://claude.com/blog/run-claude-code-sessions-on-your-own-compute"
+        },
+        {
+          "label": "Documentation",
+          "url": "https://code.claude.com/docs/en/self-hosted-environments"
+        },
+        {
+          "label": "Coverage (Unite.AI)",
+          "url": "https://www.unite.ai/claude-code-sessions-can-now-run-on-infrastructure-your-team-controls/"
+        }
+      ],
+      "publishDate": "2026-08-08T08:50:25.173Z"
+    },
     {
       "id": "databricks-officeqa-pro-v2",
       "categories": [

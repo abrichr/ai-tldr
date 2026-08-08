@@ -29396,6 +29396,39 @@
         "algorithm",
         "showcase"
       ]
+    },
+    {
+      "id": "sweep-20260808t085025z",
+      "timestamp": "2026-08-08T08:50:25.173Z",
+      "source": "github-actions-sweep",
+      "summary": "One addition: Anthropic's public beta of Claude Code self-hosted environments (Aug 6). Nearly every other Aug 5–7 story surfaced this pass was already in the feed — Meta Muse Spark 1.2, Prime Agent, Google DeepMind reshuffle (Hassabis→Chair), Cloudflare Computer/OS/Kitesurf, LFM2.5, Discovery Loop, Two Minute Papers/AI Explained videos, Anthropic Fable 5 biology safeguards, GPT-5.6 Sol, Grok Build history. Grok 4.6 held back: no xAI blog, model card, or benchmarks published yet.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "anthropic-claude-code-self-hosted-aug6",
+          "title": "Claude Code self-hosted environments — Anthropic runs sessions on your own compute",
+          "category": "tool",
+          "note": "Aug 6 public-beta of self-hosted Claude Code environments (Team + Enterprise). Repo checkouts and secrets stay on customer infra; inference still routes to Anthropic. Not covered by any existing anthropic-claude-code-* item — those track CLI version bumps (2.1.219), Cowork mobile/web, biology safeguards, etc. Runner-mode + orchestrator design is a distinct enterprise capability."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "ecosystem",
+        "article"
+      ]
     }
   ]
 }
