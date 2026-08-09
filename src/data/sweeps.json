@@ -29660,6 +29660,67 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260809t012358z",
+      "timestamp": "2026-08-09T01:23:58.011Z",
+      "source": "github-actions-sweep",
+      "summary": "Two adds: Anthropic makes auto mode the default permission mode in Claude Code (Aug 7, claude.com/blog), and a fresh Wes Roth breakdown of OpenAI's Black Hat USA 2026 talk on the Hugging Face incident. Lab blogs were otherwise quiet or already covered — DeepMind WeatherNext, Mistral Shieldstral, Anthropic's Fable 5 biology safeguards and the GPT-5.6 Sol ChatGPT update are all already in the feed; Meta, Qwen, Moonshot and MiniMax posted nothing new inside 72h. The loudest HN AI stories were out of window (ARC Prize's DeepSeek V4-Flash results are dated Jul 31, the OpenJDK generative-AI ban dates to April, ScaleX's 40K-run agent-permission study is Aug 5) or already in the feed. Simon Willison's OpenAI/Hugging Face timeline was dropped as the same incident we already carry three items on.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "anthropic-claude-code-auto-mode-default",
+          "title": "Claude Code auto mode becomes the default — a classifier replaces most prompts",
+          "category": "tool",
+          "note": "First-party Anthropic blog post inside 48h changing the default permission mode for every Pro/Max/Team Claude Code user, with published measurements."
+        },
+        {
+          "id": "wes-roth-black-hat-rogue-agents-aug8",
+          "title": "Wes Roth — 'It just got so much worse' on OpenAI's Black Hat rogue-agent talk",
+          "category": "video",
+          "note": "Fresh video (16h old at sweep time) from a listed creator on the Black Hat disclosure; video items are exempt from semantic dedup against the release they cover."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
+    },
+    {
+      "id": "sweep-20260809t012429z",
+      "timestamp": "2026-08-09T01:24:29.976Z",
+      "source": "github-actions-sweep",
+      "summary": "Follow-up pass on the same sweep: trimmed the Claude Code auto mode summary to the 240-character cap flagged by finalize-sweep. No new discovery, no new items.",
+      "counts": {
+        "added": 0,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [
+        {
+          "id": "anthropic-claude-code-auto-mode-default",
+          "title": "Claude Code auto mode becomes the default — a classifier replaces most prompts",
+          "note": "Trim summary to the 240-char cap (was 275)."
+        }
+      ],
+      "removed": [],
+      "coverage": []
     }
   ]
 }
