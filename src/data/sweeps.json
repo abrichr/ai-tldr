@@ -29721,6 +29721,40 @@
       ],
       "removed": [],
       "coverage": []
+    },
+    {
+      "id": "sweep-20260809t033926z",
+      "timestamp": "2026-08-09T03:39:26.641Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, NVIDIA, Qwen, Z.ai, MiniMax, DeepSeek, Moonshot), GitHub trending daily + weekly, HuggingFace models/datasets/papers/blog, HN front page and the last 48h of 100+ point stories, 8 YouTube creator feeds, coding-agent changelogs, and the AI-for-science lane (BCI, medical imaging, genomics, pharma). Almost everything fresh was already in the feed; the two hottest HN items (ARC Prize's DeepSeek V4-Flash results, Oracle's OpenJDK AI ban) both date to April/July and fail the 72h cap. Added one item: Simon Willison's day-by-day timeline of the OpenAI-Hugging Face agent incident, the top AI story on HN at 360 points.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "simonw-openai-hf-timeline-aug7",
+          "title": "Simon Willison — a day-by-day timeline of OpenAI's accidental Hugging Face hack",
+          "category": "article",
+          "note": "HN #1 AI story at 360 points, published 2026-08-07 by an influential voice; the dated attack chain (SSRF, Artifactory zero-day RCE, WebDAV channel) is new detail not covered by the existing Black Hat message-board item."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "security",
+        "algorithm",
+        "paper",
+        "dataset",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }
