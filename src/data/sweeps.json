@@ -30039,6 +30039,33 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260809t223329z",
+      "timestamp": "2026-08-09T22:33:29.537Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. The 72h cap on `date` puts the floor at 2026-08-07, and four sweeps earlier today (14:43Z, 16:40Z, 18:41Z, 20:33Z) already ingested everything that shipped Aug 7-9. Searched lab blogs (Anthropic: only Fable 5 biology safeguards, already in feed; DeepMind: only WeatherNext, in feed; Meta and Google Research: nothing in August; Mistral: Shieldstral Aug 4, in feed and past the cap; Cohere: a Waterloo talent partnership, not a release; Moonshot/Kimi: nothing since February; OpenAI API changelog: newest entry Aug 5, past the cap), GitHub trending daily and weekly, HuggingFace models/datasets/papers, the HN front page plus the Algolia >120-point feed for Aug 7-9, all 8 YouTube creator feeds, the Claude Code and Cursor changelogs, tier-1 press (TechCrunch, The Register, NVIDIA), and the full AI-for-science lane (dated BCI/neural-decoding, FDA medical-imaging, drug-discovery and single-cell genomics queries plus STAT News, hemispheric.ai, Nature and Lancet Digital Health). Everything fresh was already present or failed a bar: all three fresh YouTube videos are already ingested (same video IDs), The Stack v3 dataset trending on HF shipped 2026-07-23, the ARC Prize DeepSeek V4-Flash results page that hit 779 points on HN is dated 2026-07-31, Harvey's Legal Agent Benchmark repo dates to May 6, Qwen-Image-3.0 and Seedance 2.5 are both already in the feed, and DeepSeek-Reasonix plus t3code only shipped nightly/patch releases on an already-covered tool. OpenAI's NextSlide acquisition and NVIDIA's Armenia AI factory are M&A and infrastructure with no developer action, and the Atlas shutdown that landed today is already covered by openai-atlas-sunset-jul9 including its Aug 9 deprecation date.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
