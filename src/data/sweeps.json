@@ -29912,6 +29912,45 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260809t144306z",
+      "timestamp": "2026-08-09T14:43:06.355Z",
+      "source": "github-actions-sweep",
+      "summary": "Two adds: xAI's Grok Imagine Image 2.0 image model (region-level editing, second on both Arena boards) and Ai2's open TutorMoments benchmark plus dataset for AI tutors. Lab blogs were otherwise quiet — Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, ByteDance Seed had nothing new inside 72h; HN's top AI stories (DeepSeek V4-Flash ARC results, Oracle's OpenJDK AI ban) are all older than the date cap or already in the feed; GitHub trending was skill-packs and long-lived repos; all four fresh YouTube videos were already ingested.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "xai-grok-imagine-image-2",
+          "title": "Grok Imagine Image 2.0 — xAI's image model adds region-level editing",
+          "category": "model",
+          "note": "New image model from a top lab, shipped 2026-08-07, covered by multiple AI outlets, with verified Arena Elo numbers and a live official announcement page."
+        },
+        {
+          "id": "allenai-tutormoments",
+          "title": "TutorMoments — Ai2 benchmark tests when an AI tutor should hold back",
+          "category": "benchmark",
+          "note": "Genuine shipped artifact — open benchmark plus CC BY 4.0 dataset and Apache-2.0 code from Ai2, published 2026-08-07; fills the under-covered benchmark/dataset lane."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "article",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }

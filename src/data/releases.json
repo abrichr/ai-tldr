@@ -1,8 +1,215 @@
 {
-  "generatedAt": "2026-08-09T12:48:07.302Z",
+  "generatedAt": "2026-08-09T14:43:06.355Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "xai-grok-imagine-image-2",
+      "categories": [
+        "model",
+        "tool"
+      ],
+      "title": "Grok Imagine Image 2.0 — xAI's image model adds region-level editing",
+      "org": "xAI",
+      "date": "2026-08-07",
+      "url": "https://x.ai/news/grok-imagine-image-2",
+      "summary": "Grok Imagine Image 2.0 is xAI's new image generation and editing model, live as Grok's Quality Mode on web, iOS and Android. It adds a magic wand tool, segmentation, background removal and up to five reference images.",
+      "tags": [
+        "xai",
+        "grok",
+        "image-generation",
+        "image-editing",
+        "text-to-image",
+        "multimodal",
+        "model-release"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Reference images": "Up to 5",
+        "Aspect ratios": 9
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "xAI"
+        },
+        {
+          "label": "Availability",
+          "value": "grok.com/imagine, iOS and Android apps"
+        },
+        {
+          "label": "Mode",
+          "value": "Grok Quality Mode"
+        },
+        {
+          "label": "API",
+          "value": "Coming soon, no date given"
+        },
+        {
+          "label": "Editing tools",
+          "value": "Magic wand, segmentation, background removal"
+        },
+        {
+          "label": "Reference images",
+          "value": "Up to 5 per generation"
+        },
+        {
+          "label": "Pricing",
+          "value": "Not disclosed"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "Image Edit Arena",
+          "unit": " Elo",
+          "max": 1500,
+          "results": [
+            {
+              "name": "GPT-Image-2",
+              "score": 1463
+            },
+            {
+              "name": "Grok Imagine Image 2 (low)",
+              "score": 1439,
+              "highlight": true
+            }
+          ],
+          "source": "https://the-decoder.com/xais-imagine-image-2-0-lands-just-behind-openais-gpt-image-2-in-arena-benchmarks/"
+        },
+        {
+          "name": "Text-to-Image Arena",
+          "unit": " Elo",
+          "max": 1500,
+          "results": [
+            {
+              "name": "GPT-Image-2",
+              "score": 1380
+            },
+            {
+              "name": "Grok Imagine Image 2 (low)",
+              "score": 1320,
+              "highlight": true
+            }
+          ],
+          "source": "https://the-decoder.com/xais-imagine-image-2-0-lands-just-behind-openais-gpt-image-2-in-arena-benchmarks/"
+        }
+      ],
+      "explainer": {
+        "tagline": "xAI's new image model treats editing as a first-class feature, not an add-on.",
+        "whatIsIt": "Grok Imagine Image 2.0 adds region-level editing to xAI's image model: a magic wand that changes only the spot you point at, segmentation that selects a precise area, and background removal that exports a subject with transparency. It runs as Grok's Quality Mode on grok.com/imagine and in the Grok iOS and Android apps. API access is announced but not available yet.",
+        "howItWorks": "Instead of regenerating a whole picture on every request, the model edits the region you select and leaves the rest alone. It can take up to five reference images in one generation, so a character, location or prop keeps the same look across a set of images. Smart resize reflows a finished image into any of nine aspect ratios, and templates cover common jobs such as product shots, headshots, e-commerce images and game assets.",
+        "whyItMatters": "Designers and marketers usually lose the rest of the image when they ask a model to fix one part of it. Region-level edits and multi-image references make Grok Imagine Image 2.0 usable for repeat work — the same character across a comic, the same product across a catalogue — without re-rolling the prompt until it matches. On the Arena leaderboards it sits second in both image editing and text-to-image, behind OpenAI's GPT-Image-2.",
+        "forWho": "designers, marketers, game artists",
+        "tryIt": "https://grok.com/imagine"
+      },
+      "faq": [
+        {
+          "q": "Is there an API for Grok Imagine Image 2.0?",
+          "a": "No. xAI says API access for Grok Imagine Image 2.0 is coming soon but has given no date. For now the model is reachable only through Grok's Quality Mode on the web at grok.com/imagine and inside the Grok apps for iOS and Android, so it cannot yet be wired into an automated pipeline."
+        },
+        {
+          "q": "How does Grok Imagine Image 2.0 compare to GPT-Image-2?",
+          "a": "Grok Imagine Image 2.0 places second on both Arena leaderboards, behind OpenAI's GPT-Image-2. The faster low variant scores 1,439 Elo in the Image Edit Arena against GPT-Image-2's 1,463, and 1,320 in the Text-to-Image Arena against 1,380. The gap is small in editing and wider in plain text-to-image."
+        },
+        {
+          "q": "How much does Grok Imagine Image 2.0 cost?",
+          "a": "xAI has not published prices for Grok Imagine Image 2.0. The model ships as Quality Mode inside Grok on the web and in the mobile apps, so access follows whatever Grok plan a user is already on. With no API yet, there is also no per-image or per-token rate to quote."
+        },
+        {
+          "q": "Can Grok Imagine Image 2.0 keep the same character across several images?",
+          "a": "Yes. Grok Imagine Image 2.0 accepts up to five reference images in a single generation, which lets it hold a character, location, prop or visual style steady across a set. Templates for product variations, headshots, icons, character sprites and emojis are built around that same repeat-use case."
+        }
+      ],
+      "image": {
+        "url": "https://media.x.ai/v1/website/imagine_image_2-b3560597.jpg",
+        "alt": "xAI Grok Imagine Image 2.0 announcement artwork",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://x.ai/news/grok-imagine-image-2"
+        },
+        {
+          "label": "Arena Results",
+          "url": "https://the-decoder.com/xais-imagine-image-2-0-lands-just-behind-openais-gpt-image-2-in-arena-benchmarks/"
+        },
+        {
+          "label": "Feature Breakdown",
+          "url": "https://www.unite.ai/xai-ships-grok-imagine-image-2-0-with-precise-editing-and-a-top-arena-ranking/"
+        },
+        {
+          "label": "Launch Coverage",
+          "url": "https://www.testingcatalog.com/xai-launches-imagine-image-2-0-in-grok-quality-mode/"
+        }
+      ],
+      "publishDate": "2026-08-09T14:43:06.355Z"
+    },
+    {
+      "id": "allenai-tutormoments",
+      "categories": [
+        "benchmark",
+        "dataset",
+        "repo"
+      ],
+      "title": "TutorMoments — Ai2 benchmark tests when an AI tutor should hold back",
+      "org": "Ai2",
+      "date": "2026-08-07",
+      "url": "https://allenai.org/blog/tutormoments",
+      "summary": "TutorMoments is an open benchmark from Ai2 that scores whether a language model knows when to help a struggling student and when to step back. It ships with 462 annotated math tutoring transcripts and Apache-2.0 code.",
+      "tags": [
+        "ai2",
+        "allenai",
+        "benchmark",
+        "dataset",
+        "evaluation",
+        "education",
+        "ai-tutor",
+        "open-data"
+      ],
+      "importance": "notable",
+      "metrics": {
+        "Transcripts": 462,
+        "Annotated moments": "1,500+",
+        "Teacher annotators": 27
+      },
+      "explainer": {
+        "tagline": "An open benchmark that grades AI tutors on restraint, not just correctness.",
+        "whatIsIt": "TutorMoments scores a language model on a judgment call teachers make constantly: give the student more support, or push them to keep thinking. Ai2 built it from 462 de-identified math tutoring transcripts covering U.S. grades 2 through 7, with more than 1,500 key moments marked up by 27 experienced math teachers. The dataset, the code and a technical report are all public.",
+        "howItWorks": "The benchmark is replay-based. Teachers picked the exact points in a real session where a tutor had to choose between adding a scaffold and pushing for rigor, then recorded what the human tutor did and how well it worked. A model is dropped into those same moments and graded on three axes — appropriate scaffolding, appropriate rigor, and avoiding over-scaffolding — against the human record.",
+        "whyItMatters": "Most tutoring evaluations reward a model for being helpful, which is exactly the wrong instinct when a student learns by struggling. Ai2 found that seven tested models, including Claude Opus 4.8, GPT 5.5 and Gemini 2.5 Pro, tend to over-help and rarely push for deeper thinking, and that an evaluation-aware prompt explaining the trade-off improves all of them. Anyone building a study assistant now has a public yardstick for that failure mode.",
+        "forWho": "education AI teams, eval researchers",
+        "tryIt": "git clone https://github.com/allenai/tutormoments"
+      },
+      "image": {
+        "url": "https://www.datocms-assets.com/64837/1785990304-tutormoments-blog-draft-google-docs-image-1.png",
+        "alt": "Ai2 TutorMoments benchmark for evaluating AI math tutors",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://allenai.org/blog/tutormoments"
+        },
+        {
+          "label": "Leaderboard",
+          "url": "https://tutormoments.allen.ai/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/allenai/tutormoments"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/allenai/tutormoments-preview"
+        },
+        {
+          "label": "Tech Report",
+          "url": "https://tutormoments.allen.ai/static/paper/tutormoments-preview.pdf"
+        }
+      ],
+      "publishDate": "2026-08-09T14:43:06.355Z"
+    },
     {
       "id": "simonw-raccoon-heist-codex-aug7",
       "categories": [
