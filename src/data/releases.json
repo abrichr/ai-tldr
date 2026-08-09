@@ -1,8 +1,114 @@
 {
-  "generatedAt": "2026-08-09T03:39:26.641Z",
+  "generatedAt": "2026-08-09T05:15:25.396Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "anthropic-claude-code-cross-session-messaging",
+      "categories": [
+        "tool"
+      ],
+      "title": "Claude Code cross-session messaging — one session can message another",
+      "org": "Anthropic",
+      "date": "2026-08-07",
+      "url": "https://code.claude.com/docs/en/cross-session-messaging",
+      "summary": "Claude Code v2.1.224 lets one of your sessions send a plain-text message to another, so a finding in one terminal reaches the session it affects. Two new tools, ListAgents and SendMessage, do the work. Runs on macOS and Linux.",
+      "tags": [
+        "claude-code",
+        "anthropic",
+        "coding-agent",
+        "developer-tools",
+        "multi-agent",
+        "cli",
+        "macos",
+        "linux"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "One Claude Code session can now send a short written message to another, instead of you re-explaining the same thing in each terminal.",
+        "whatIsIt": "Cross-session messaging lets one Claude Code session deliver a written message to another session you are running. Claude picks the target and writes the text itself, so you never call the tools by hand — you just say what the other session needs to know. A message is plain text only, never the sender's conversation history or files.",
+        "howItWorks": "Two tools do the work: ListAgents finds the sessions Claude can reach, and SendMessage delivers to one of them by name. On the same machine each session binds its own Unix socket, and the text never leaves the computer. A message to one of your sessions on another machine, or to Claude Code on the web, travels through Anthropic servers over that machine's Remote Control connection. The receiving Claude reads it between tool calls, so a running tool is never cut off.",
+        "whyItMatters": "Developers who keep several terminals open on one repo no longer have to repeat a breaking change in each of them: a migration or long test run can report back on its own. Permission boundaries stay per session — an incoming message never counts as your approval, cannot change settings or CLAUDE.md, and any command text in it arrives as plain text rather than running.",
+        "forWho": "developers running several coding-agent sessions at once",
+        "tryIt": "claude --version   # needs 2.1.224 or later, then run /list-agents"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Anthropic"
+        },
+        {
+          "label": "Version",
+          "value": "Claude Code v2.1.224 or later"
+        },
+        {
+          "label": "Platforms",
+          "value": "macOS and Linux, including WSL 2; not native Windows"
+        },
+        {
+          "label": "New tools",
+          "value": "ListAgents and SendMessage"
+        },
+        {
+          "label": "Payload",
+          "value": "Plain text only — no history, no files"
+        },
+        {
+          "label": "Same-machine route",
+          "value": "Per-session socket, never via Anthropic servers"
+        },
+        {
+          "label": "Settings",
+          "value": "crossSessionInbound, isolatePeerMachines, dialogExpiry"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which platforms and providers support Claude Code cross-session messaging?",
+          "a": "Cross-session messaging runs on macOS and Linux, including Linux inside WSL 2, and is not offered on native Windows. Anthropic also lists four providers where it is unavailable: Amazon Bedrock, Claude Platform on AWS, Google Cloud's Agent Platform, and Microsoft Foundry. Type /list-agents, also spelled /peers, to check whether a given session has the feature."
+        },
+        {
+          "q": "Can a message from another Claude Code session approve a permission prompt?",
+          "a": "No. Claude Code tells the receiving session that a message came from another session rather than from you, so it never counts as consent and cannot answer a pending permission prompt. The receiving Claude is also instructed never to change permission settings, CLAUDE.md, or other configuration because another session asked, and slash commands in the text arrive as plain text."
+        },
+        {
+          "q": "How do I turn cross-session messaging off?",
+          "a": "Receiving and sending are separate controls in Claude Code. Set crossSessionInbound to refuse and Claude Code drops inbound messages without delivering them. To stop this session sending or listing, add permission deny rules naming SendMessage and ListAgents. Administrators can combine both in managed settings to switch the feature off for a whole organization."
+        },
+        {
+          "q": "Does a message between two Claude Code sessions travel through Anthropic's servers?",
+          "a": "Only when it leaves the machine. Between two sessions on the same computer, Claude Code delivers over a per-session socket that never touches Anthropic servers. A message to one of your sessions on another machine, or on Claude Code on the web, goes through Anthropic servers. Setting isolatePeerMachines to true requires your approval before anything leaves the machine."
+        },
+        {
+          "q": "Can two Claude Code sessions get stuck messaging each other in a loop?",
+          "a": "Claude Code rate-limits repeated messages per sender, drops identical repeats that arrive within a short window, and caps accepted messages waiting to be read at 50 per session, so a loop between two sessions stops on its own. Held messages are capped separately at 100, and the oldest are dropped past that."
+        }
+      ],
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/anthropics/claude-code",
+        "alt": "GitHub repository card for anthropics/claude-code",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Documentation",
+          "url": "https://code.claude.com/docs/en/cross-session-messaging"
+        },
+        {
+          "label": "Release v2.1.224",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.224"
+        },
+        {
+          "label": "Tools Reference",
+          "url": "https://code.claude.com/docs/en/tools-reference"
+        },
+        {
+          "label": "9to5Mac Report",
+          "url": "https://9to5mac.com/2026/08/07/claude-code-now-lets-sessions-talk-to-each-other-on-macos/"
+        }
+      ],
+      "publishDate": "2026-08-09T05:15:25.396Z"
+    },
     {
       "id": "simonw-openai-hf-timeline-aug7",
       "categories": [

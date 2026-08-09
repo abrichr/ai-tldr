@@ -29755,6 +29755,40 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260809t051525z",
+      "timestamp": "2026-08-09T05:15:25.396Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, x.ai, Qwen, DeepSeek, Z.ai, MiniMax), GitHub trending daily and weekly, HuggingFace models/datasets/papers, HN front page plus newest, tier-1 press, and the bio/neuro/pharma science lane. Added one item: Claude Code cross-session messaging (v2.1.224, 2026-08-07). The Stanford/Arc Institute Evo phage-design paper in Science was strong but published 2026-08-06, outside the 72h cap. Three of four fresh YouTube videos were already in the feed; the fourth had no verifiable description to ground an explainer. Everything else dated 07-08 Aug was either already covered (GPT-5.6 Sol update, Agent Plugins 1.0.0, TencentDB Agent Memory v2), older than 72h (Pokee-Isaac 28B, Cursor Router, Anthropic chip team, GPT-5.6 Luna price cut), or M&A/corporate news that fails the ecosystem gate (OpenAI acquiring NextSlide).",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "anthropic-claude-code-cross-session-messaging",
+          "title": "Claude Code cross-session messaging — one session can message another",
+          "category": "tool",
+          "note": "Shipped feature on Anthropic's official docs domain, tagged release v2.1.224 on 2026-08-07, on the HN front page and covered by 9to5Mac and MacRumors; distinct from the auto-mode and self-hosted-environments items already in the feed."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem",
+        "algorithm"
+      ]
     }
   ]
 }
