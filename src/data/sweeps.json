@@ -30005,6 +30005,40 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260809t203325z",
+      "timestamp": "2026-08-09T20:33:25.549Z",
+      "source": "github-actions-sweep",
+      "summary": "Quiet sweep: lab blogs (Anthropic, DeepMind, Meta, Mistral, Cohere, Google Research) had nothing new inside 72h that was not already in the feed, GitHub trending and HF models/datasets/papers surfaced only items we already carry, and the HN front page had no AI story above 100 points. Added one item: a fresh Wes Roth video on the $116M Coldcard bitcoin hack and the AI-run audit sprint that followed.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "wes-roth-ai-crypto-exploits-aug7",
+          "title": "Wes Roth — 'AI just killed Crypto' on the $116M Coldcard bitcoin hack",
+          "category": "video",
+          "note": "Fresh (35h at draft time) video from a listed creator on an AI-security story the feed has not covered at all — AI models finding real exploitable bugs at scale; underlying facts verified against Fortune and Forbes."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }

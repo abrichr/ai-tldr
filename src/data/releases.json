@@ -1,8 +1,69 @@
 {
-  "generatedAt": "2026-08-09T18:41:48.515Z",
+  "generatedAt": "2026-08-09T20:33:25.549Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "wes-roth-ai-crypto-exploits-aug7",
+      "categories": [
+        "video",
+        "security"
+      ],
+      "title": "Wes Roth — 'AI just killed Crypto' on the $116M Coldcard bitcoin hack",
+      "org": "Wes Roth",
+      "date": "2026-08-07",
+      "url": "https://www.youtube.com/watch?v=AL-XQiM4248",
+      "summary": "Wes Roth's August 7 video covers the Coldcard hardware-wallet hack, where a weak recovery-phrase flaw let attackers take 1,816 bitcoin worth nearly $116 million, and the AI-run security audit that followed it.",
+      "tags": [
+        "video",
+        "wes-roth",
+        "youtube",
+        "ai-security",
+        "security-audit",
+        "vulnerability-discovery",
+        "bitcoin",
+        "coldcard",
+        "kimi-k3",
+        "moonshot"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Wes Roth's August 7 video on the Coldcard bitcoin hack and the AI-run audit sprint that came after it.",
+        "whatIsIt": "Wes Roth published 'AI just killed Crypto... (INSANE)' on August 7, 2026, about the theft from Coldcard hardware wallets. Roth frames the hack as the same wave of AI-found software vulnerabilities now reaching crypto, and links it back to two stories he covered earlier: Scott Aaronson's warning that AI and quantum computing threaten the encryption crypto rests on, and the OpenAI agents that escaped their sandbox and reached Hugging Face.",
+        "howItWorks": "The Coldcard flaw goes back to a 2021 software update. Block's report, quoted by Fortune, says the devices stopped using strong, unpredictable randomness to build recovery phrases and switched to a shortcut that follows patterns, so attackers could guess the phrases without ever touching a device. Thieves took 1,816 bitcoin from more than 5,200 addresses across four waves, starting with 1,083 bitcoin — about $70.2 million — drained in 41 minutes on July 30.",
+        "whyItMatters": "Cheap frontier models can now read large codebases and find real bugs faster than volunteer maintainers can patch them, which is the shift the Coldcard case makes concrete. Forbes reports that a 16-person volunteer group called the Bitcoin Red Team, funded by OpenSats and spending about $10,000 a day on compute, pointed Moonshot's open-weight Kimi K3 at almost 400 bitcoin projects and found nearly 5,000 vulnerabilities in 24 hours, including 85 critical and 635 high-severity bugs. The same speed is available to attackers, so any project sitting on old, unaudited code is on a much shorter clock.",
+        "forWho": "security engineers and AI-safety watchers",
+        "tryIt": "https://www.youtube.com/watch?v=AL-XQiM4248"
+      },
+      "author": {
+        "name": "Wes Roth",
+        "profileUrl": "https://www.youtube.com/channel/UCqcbQf6yw5KzRoDDcZ_wBSw"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/AL-XQiM4248/hqdefault.jpg",
+        "alt": "Wes Roth video thumbnail on the Coldcard bitcoin wallet hack and AI-found vulnerabilities",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=AL-XQiM4248"
+        },
+        {
+          "label": "Wes Roth Channel",
+          "url": "https://www.youtube.com/channel/UCqcbQf6yw5KzRoDDcZ_wBSw"
+        },
+        {
+          "label": "Fortune on the Hack",
+          "url": "https://fortune.com/2026/08/03/bitcoin-owners-116-million-hack-coldcard-coinkite-exploit/"
+        },
+        {
+          "label": "Forbes: Bitcoin Red Team",
+          "url": "https://www.forbes.com/sites/digital-assets/2026/08/08/situation-is-extremely-bad-bitcoin-braced-for-more-critical-exploits-after-10000-price-per-day-ai-warning/"
+        }
+      ],
+      "publishDate": "2026-08-09T20:33:25.549Z"
+    },
     {
       "id": "xai-grok-imagine-image-2",
       "categories": [
