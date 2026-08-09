@@ -29824,6 +29824,33 @@
         "algorithm",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260809t084634z",
+      "timestamp": "2026-08-09T08:46:34.993Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Qwen, DeepSeek, Z.ai, MiniMax, Moonshot, ByteDance), GitHub trending daily + weekly, HuggingFace models/datasets/papers, HN front page + Show HN + Algolia by-date, 8 YouTube creator feeds, the AI-for-science lane (Nature, STAT News, neurosciencenews, npj Digital Medicine, Lancet Digital Health, Isomorphic/Recursion/Insilico/Arc/EvolutionaryScale) and tier-1 press. Everything fresh that clears the bar is already in the feed: WeatherNext Cyclones, Claude Code cross-session messaging + auto-mode default, Simon Willison's OpenAI/Hugging Face timeline, the OpenAI Astra cyber pause, Fable 5 biology safeguards, Databricks AI coding costs, Cloudflare Kitesurf, and 3 of the 4 fresh creator videos. Everything else failed the 72h cap on its real release date (The Stack v3 shipped 2026-07-23, the Oracle OpenJDK generative-AI ban was published in April 2026, the ARC Prize DeepSeek V4-Flash verification was 2026-07-31, and the viral skill-pack repos reverse-skill / book-to-skill / swarm-forge / google-skills were all created in March-May 2026 and only trended this week), was a paper with no 2-of-N support (AgentOPSD's repo has 17 stars, no demo, no HN or newsletter pickup), or was press/M&A with no shipped artifact (OpenAI's NextSlide acquisition, the STAT clinical-AI policy pieces). Anthropic, Meta, Mistral, xAI, Qwen and Moonshot all posted nothing new in the window.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "ecosystem",
+        "article",
+        "security"
+      ]
     }
   ]
 }
