@@ -1,0 +1,66 @@
+{
+  "slug": "pipecat",
+  "name": "Pipecat",
+  "repo": "pipecat-ai/pipecat",
+  "homepage": "https://docs.pipecat.ai",
+  "category": "agents",
+  "categoryTitle": "Agents & Automation",
+  "subcategory": "general-agents",
+  "subcategoryTitle": "Agent Frameworks & Builders",
+  "tagline": "Build real-time voice and multimodal agents from composable pipelines",
+  "seoTitle": "Pipecat: Real-Time Voice & Multimodal AI Agents",
+  "metaDescription": "Pipecat is an open-source Python framework for real-time voice and multimodal agents, composing STT, LLM, TTS and transports into pipelines you can hand off and fan out.",
+  "overview": [
+    "Pipecat is an open-source Python framework for building real-time voice and multimodal conversational agents, maintained by Daily and the community under a BSD-2-Clause license. It orchestrates audio and video, AI services, transports and conversation pipelines, so the code you write is the part that makes your agent distinctive rather than the media plumbing underneath.",
+    "The unit of composition is a pipeline, and every pipeline is an agent. You can run a single voice agent or build a full multi-agent system where specialists hand off to each other, fan out in parallel, or run as sidecar workers over a shared bus — locally, or distributed across processes and machines. Latency is the design constraint throughout: transports include WebRTC (Daily, LiveKit, Vonage, or Pipecat's own SmallWebRTCTransport), WebSockets, WhatsApp, and telephony serializers for Twilio, Telnyx, Plivo, Exotel, Genesys and Vonage.",
+    "Services are pluggable across every layer — more than twenty speech-to-text providers, a similar range of LLMs, a long list of text-to-speech engines, and speech-to-speech models such as OpenAI Realtime, Gemini Multimodal Live, AWS Nova Sonic, Grok Voice Agent and Ultravox. Around the core sit Pipecat Flows for structured conversations, client SDKs for JavaScript, React, React Native, Swift, Kotlin, C++ and ESP32, the Voice UI Kit, the Whisker debugger and the Tail terminal dashboard."
+  ],
+  "features": [
+    "Voice-first design that integrates speech recognition, text-to-speech and conversation handling out of the box.",
+    "Composable pipelines: build complex behavior from modular processors, and treat each pipeline as an agent.",
+    "Multi-agent ready — compose agents with handoff, parallel fan-out, sidecar workers, or distributed deployments over a shared bus.",
+    "A wide service catalog across STT, LLM, TTS, speech-to-speech, video avatars, memory, vision and image generation, swappable without rewriting the pipeline.",
+    "Real-time transports including WebRTC, WebSockets, WhatsApp and telephony serializers for major carriers.",
+    "Audio processing utilities such as Silero VAD and Krisp Viva, Koala, ai-coustics and RNNoise noise filters.",
+    "OpenTelemetry and Sentry integrations for tracing and metrics, plus the Whisker real-time pipeline debugger.",
+    "Client SDKs for JavaScript, React, React Native, Swift, Kotlin, C++ and ESP32, so one agent serves web, mobile and hardware."
+  ],
+  "gettingStarted": {
+    "intro": "Pipecat is a Python package (3.11 minimum, 3.12+ recommended) installed with uv. The quickest path is the bundled CLI, which scaffolds a runnable phone or web/mobile bot; you can also add the module to an existing project and wire the pipeline yourself.",
+    "steps": [
+      {
+        "heading": "Install uv",
+        "body": "Pipecat's install and CLI flows are built around uv, so install it first.",
+        "code": "curl -LsSf https://astral.sh/uv/install.sh | sh",
+        "lang": "bash"
+      },
+      {
+        "heading": "Scaffold a project with the CLI",
+        "body": "The Pipecat CLI ships with the pipecat-ai package. Install it as a uv tool, then run the interactive initializer to create a new phone or web/mobile bot. `pipecat init quickstart` starts from the quickstart template.",
+        "code": "uv tool install \"pipecat-ai[cli]\"\npipecat init",
+        "lang": "bash"
+      },
+      {
+        "heading": "Or add the module to an existing project",
+        "body": "Only the core framework is installed by default to keep things lightweight. Add extras for the third-party services your pipeline uses, then copy the example environment file and fill in your API keys.",
+        "code": "uv init my-pipecat-app\ncd my-pipecat-app\nuv add pipecat-ai\nuv add \"pipecat-ai[option,...]\"\ncp env.example .env",
+        "lang": "bash"
+      },
+      {
+        "heading": "Develop against the repo",
+        "body": "To hack on Pipecat itself, clone it, sync the dev group with all extras (skipping the ones that need system libraries), and install the pre-commit hooks.",
+        "code": "git clone https://github.com/pipecat-ai/pipecat.git\ncd pipecat\nuv sync --group dev --all-extras --no-extra gstreamer --no-extra local\nuv run pre-commit install\nuv run pytest",
+        "lang": "bash"
+      }
+    ]
+  },
+  "useCases": [
+    "Build streaming voice assistants that hold a natural back-and-forth conversation over WebRTC or WebSockets.",
+    "Put an agent on the phone through Twilio, Telnyx, Plivo or Vonage for intake, support lines and guided flows.",
+    "Design structured, stateful dialogs with Pipecat Flows when a conversation needs predefined or dynamically generated paths.",
+    "Compose a multi-agent system where a triage agent hands off to specialists, or fan work out in parallel across pipelines.",
+    "Ship voice to hardware and mobile with the ESP32, Swift, Kotlin and React Native client SDKs against one server-side agent."
+  ],
+  "language": "Python",
+  "license": "BSD-2-Clause"
+}

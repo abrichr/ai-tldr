@@ -1,0 +1,251 @@
+{
+  "slug": "shieldstral-1-0-3b",
+  "name": "Shieldstral 1.0 3B",
+  "maker": "mistral",
+  "makerTitle": "Mistral AI",
+  "line": "shieldstral",
+  "lineTitle": "Shieldstral",
+  "tagline": "Policy-adaptive 3B multimodal safety classifier from Mistral, released August 4, 2026 — Apache-2.0 weights, text and image moderation in a single forward pass.",
+  "seoTitle": "Shieldstral 1.0 3B — Mistral Open Safety Classifier",
+  "metaDescription": "Shieldstral 1.0 3B is Mistral's Apache-2.0 multimodal safety classifier: it judges text and images against natural-language policies at inference time in 16GB VRAM.",
+  "releaseDate": "2026-08-04",
+  "status": "Generally available",
+  "license": "Apache-2.0",
+  "openWeights": true,
+  "modalities": [
+    "Text",
+    "Vision"
+  ],
+  "contextWindow": "32K",
+  "parameters": "3B",
+  "architecture": "Ministral-3-3B-Base-2512 backbone with a native Pixtral vision encoder; single-token yes/no classification head",
+  "tags": [
+    "open-weights",
+    "multimodal",
+    "on-device"
+  ],
+  "overview": [
+    "Shieldstral 1.0 3B is Mistral AI's compact multimodal safety classifier, announced on August 4, 2026 under the Apache 2.0 license. Instead of predicting a fixed taxonomy of harm categories, it evaluates content against a safety policy written in plain natural language and supplied at inference time, so one checkpoint can be re-targeted to a new policy without retraining.",
+    "The model is built on the Ministral-3-3B-Base-2512 backbone with a native Pixtral vision encoder, and moderates text-only, image-only, and text+image content through one shared interface. Each call is framed as a binary question-answering task — a fixed system message plus an adaptive user message carrying an `<Instruct>` framing, a yes/no `<Query>`, and the `<Document>` to judge. The verdict comes from a single forward pass that emits one `yes`/`no` token, whose renormalised probability is a continuous safety score you can threshold rather than a discrete label.",
+    "Mistral trained the model on sequences of up to 32k tokens; it theoretically supports a 256k context window, but Mistral recommends staying within the training range. It covers 12 languages — English, French, Spanish, German, Italian, Portuguese, Dutch, Chinese, Japanese, Korean, Arabic and Russian — and fits in 16GB of VRAM in BF16, so it runs on a single GPU. Weights are on Hugging Face at `mistralai/Shieldstral-1.0-3B` and can be served with vLLM (≥ 0.26.0, the recommended path), llama.cpp, SGLang or Transformers, and fine-tuned with Axolotl."
+  ],
+  "strengths": [
+    "Policy-adaptive: moderation criteria are free-form natural-language questions passed at inference time, so novel policies need no retraining",
+    "One interface for text-only, image-only and text+image moderation, including prompts, responses and full prompt–response pairs",
+    "Returns a continuous, thresholdable safety score from a single forward pass rather than a discrete label",
+    "Apache-2.0 open weights, usable commercially, running in 16GB of VRAM in BF16 on a single GPU",
+    "Sets the best published multimodal-moderation scores on the model card (97.7 F1 on VLGuard, 81.8 on UnsafeBench) against guard models up to 4× its size"
+  ],
+  "useCases": [
+    "Reach for it to screen user prompts and model responses in real time against a product-specific policy you can edit as prose instead of retraining a classifier.",
+    "Reach for it when moderation has to cover images and mixed text+image content with the same guard model, not a separate vision pipeline.",
+    "Reach for it for refusal detection — telling apart a genuine answer from a model declining — in evaluation and safety-testing harnesses.",
+    "Reach for it on edge or low-resource deployments where a 16GB single-GPU guardrail is the budget."
+  ],
+  "benchmarks": [
+    {
+      "name": "HarmBench (prompt classification)",
+      "score": 99.4,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/mistralai/Shieldstral-1.0-3B"
+    },
+    {
+      "name": "WildGuardTest (prompt classification)",
+      "score": 88.1,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/mistralai/Shieldstral-1.0-3B"
+    },
+    {
+      "name": "ToxicChat (prompt classification)",
+      "score": 84.1,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/mistralai/Shieldstral-1.0-3B"
+    },
+    {
+      "name": "Aegis v2 (response classification)",
+      "score": 87.2,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/mistralai/Shieldstral-1.0-3B"
+    },
+    {
+      "name": "PolyGuard Prompt (multilingual)",
+      "score": 84.6,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/mistralai/Shieldstral-1.0-3B"
+    },
+    {
+      "name": "XSTest (refusal detection)",
+      "score": 94.6,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/mistralai/Shieldstral-1.0-3B"
+    },
+    {
+      "name": "VLGuard (multimodal safety)",
+      "score": 97.7,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/mistralai/Shieldstral-1.0-3B"
+    },
+    {
+      "name": "UnsafeBench (multimodal safety)",
+      "score": 81.8,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/mistralai/Shieldstral-1.0-3B"
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Safety-classification F1 (%) as published on the Shieldstral model card — Shieldstral-3B vs open guard models up to 7× its size.",
+    "models": [
+      "Shieldstral-3B",
+      "GPT-OSS-Safeguard-20B",
+      "Qwen3Guard-8B",
+      "Nemotron-3.5-Content-Safety-4B",
+      "LlamaGuard-4-12B",
+      "ShieldGemma-9B"
+    ],
+    "subject": 0,
+    "rows": [
+      {
+        "benchmark": "WildGuardTest (prompt)",
+        "unit": "%",
+        "scores": [88.1, 87.3, 88.2, 84.4, 74.3, 46.0]
+      },
+      {
+        "benchmark": "ToxicChat (prompt)",
+        "unit": "%",
+        "scores": [84.1, 79.8, 75.6, 72.2, 51.0, 62.4]
+      },
+      {
+        "benchmark": "Aegis v2 (prompt)",
+        "unit": "%",
+        "scores": [86.2, 84.4, 84.6, 86.3, 71.5, 65.8]
+      },
+      {
+        "benchmark": "HarmBench (prompt)",
+        "unit": "%",
+        "scores": [99.4, 94.5, 99.3, 96.1, 97.9, 50.2]
+      },
+      {
+        "benchmark": "OpenAI Moderation (prompt)",
+        "unit": "%",
+        "scores": [81.4, 84.0, 74.7, 74.7, 73.9, 78.6]
+      },
+      {
+        "benchmark": "WildGuardTest (response)",
+        "unit": "%",
+        "scores": [80.4, 80.7, 79.6, 77.6, 66.8, 34.5]
+      },
+      {
+        "benchmark": "HarmBench (response)",
+        "unit": "%",
+        "scores": [87.0, 88.2, 86.8, 85.3, 82.8, 52.3]
+      },
+      {
+        "benchmark": "BeaverTails (response)",
+        "unit": "%",
+        "scores": [85.0, 83.8, 85.9, 83.3, 69.8, 54.0]
+      },
+      {
+        "benchmark": "XSTest Harm (response)",
+        "unit": "%",
+        "scores": [93.5, 93.8, 92.9, 86.9, 89.0, 80.6]
+      },
+      {
+        "benchmark": "Aegis v2 (response)",
+        "unit": "%",
+        "scores": [87.2, 75.2, 86.2, 84.9, 64.7, 59.7]
+      },
+      {
+        "benchmark": "Qwen3GuardTest (response)",
+        "unit": "%",
+        "scores": [82.9, 85.0, 84.2, 80.0, 60.6, 38.7]
+      },
+      {
+        "benchmark": "PolyGuard Prompt (multilingual)",
+        "unit": "%",
+        "scores": [84.6, 83.0, 84.3, 80.5, 62.1, 33.8]
+      },
+      {
+        "benchmark": "PolyGuard Response (multilingual)",
+        "unit": "%",
+        "scores": [78.3, 80.0, 78.1, 75.3, 54.6, 31.8]
+      },
+      {
+        "benchmark": "RTP-LX Prompt (multilingual)",
+        "unit": "%",
+        "scores": [70.3, 83.9, 67.3, 86.1, 43.9, 36.7]
+      },
+      {
+        "benchmark": "RTP-LX Completion (multilingual)",
+        "unit": "%",
+        "scores": [93.5, 94.6, 93.9, 95.9, 66.5, 79.0]
+      }
+    ],
+    "source": "https://huggingface.co/mistralai/Shieldstral-1.0-3B"
+  },
+  "links": [
+    {
+      "label": "Introducing Shieldstral (Mistral AI)",
+      "url": "https://mistral.ai/news/shieldstral/",
+      "kind": "announcement"
+    },
+    {
+      "label": "Shieldstral-1.0-3B model card on Hugging Face",
+      "url": "https://huggingface.co/mistralai/Shieldstral-1.0-3B",
+      "kind": "model-card"
+    },
+    {
+      "label": "Shieldstral technical report (arXiv)",
+      "url": "https://arxiv.org/abs/2607.25857",
+      "kind": "paper"
+    },
+    {
+      "label": "Mistral models overview (docs)",
+      "url": "https://docs.mistral.ai/getting-started/models/models_overview",
+      "kind": "api-docs"
+    },
+    {
+      "label": "Mistral AI",
+      "url": "https://mistral.ai/",
+      "kind": "official"
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is Shieldstral 1.0 3B?",
+      "a": "Shieldstral 1.0 3B is Mistral AI's policy-adaptive multimodal safety classifier, released on August 4, 2026 under Apache 2.0. It is a 3B-parameter model built on Ministral-3-3B-Base-2512 with a native Pixtral vision encoder that judges text, images, and text+image content against a moderation policy written in natural language and supplied at inference time."
+    },
+    {
+      "q": "How is Shieldstral different from other guard models?",
+      "a": "Most guardrail models hard-code a taxonomy of harm categories into their weights. Shieldstral instead takes the policy as part of the input and reduces moderation to a binary yes/no question, so a single checkpoint adapts to new or product-specific policies without retraining. It also returns a continuous, thresholdable safety score from one forward pass rather than a discrete label."
+    },
+    {
+      "q": "How well does Shieldstral score against larger guard models?",
+      "a": "On Mistral's published model card Shieldstral-3B reports 99.4 F1 on HarmBench prompt classification (vs 94.5 for GPT-OSS-Safeguard-20B), 84.1 on ToxicChat, 87.2 on Aegis v2 response classification, and 84.6 on PolyGuard Prompt. On multimodal safety it leads with 97.7 F1 on VLGuard and 81.8 on UnsafeBench, ahead of OmniGuard-7B (88.5 / 72.6) and LlamaGuard-4-12B (59.9 / 30.8)."
+    },
+    {
+      "q": "What hardware does Shieldstral need?",
+      "a": "The BF16 checkpoint fits in 16GB of VRAM, so it runs on a single GPU. Mistral recommends serving it with vLLM 0.26.0 or later (`vllm serve mistralai/Shieldstral-1.0-3B --max-model-len 32768`); llama.cpp, SGLang and Transformers are also supported, and Axolotl can fine-tune it."
+    },
+    {
+      "q": "What context window and languages does Shieldstral support?",
+      "a": "It was trained on sequences of up to 32k tokens and theoretically supports 256k, though Mistral recommends staying inside the 32k training range. It covers 12 languages: English, French, Spanish, German, Italian, Portuguese, Dutch, Chinese, Japanese, Korean, Arabic and Russian."
+    }
+  ],
+  "versionHistory": [
+    {
+      "version": "Shieldstral 1.0 3B",
+      "slug": "shieldstral-1-0-3b",
+      "date": "2026-08-04",
+      "note": "First Shieldstral release — 3B policy-adaptive multimodal safety classifier, Apache-2.0.",
+      "current": true
+    }
+  ]
+}

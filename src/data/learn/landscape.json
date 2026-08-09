@@ -2652,6 +2652,14 @@
        "detail": true
       },
       {
+       "name": "DeerFlow",
+       "slug": "deerflow",
+       "repo": "bytedance/deer-flow",
+       "homepage": "https://deerflow.tech",
+       "description": "ByteDance's open-source super agent harness built on LangGraph: skills, sub-agents, sandboxes, a filesystem and long-term memory for long-horizon research, coding and content tasks.",
+       "detail": true
+      },
+      {
        "name": "STORM",
        "slug": "storm",
        "repo": "stanford-oval/storm",
@@ -2874,6 +2882,14 @@
        "description": "A Python framework for building realtime, server-side voice agents that combine speech-to-text, an LLM, and text-to-speech with WebRTC and telephony.",
        "detail": true,
        "logo": "/tools-logos/gh-livekit.png"
+      },
+      {
+       "name": "Pipecat",
+       "slug": "pipecat",
+       "repo": "pipecat-ai/pipecat",
+       "homepage": "https://docs.pipecat.ai",
+       "description": "Open-source Python framework for real-time voice and multimodal agents, wiring STT, LLM, TTS and transports into composable pipelines that can hand off and fan out.",
+       "detail": true
       },
       {
        "name": "TEN Framework",

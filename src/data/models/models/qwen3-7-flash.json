@@ -1,0 +1,118 @@
+{
+  "slug": "qwen3-7-flash",
+  "name": "Qwen3.7-Flash",
+  "maker": "alibaba",
+  "makerTitle": "Alibaba (Qwen)",
+  "line": "qwen-flash",
+  "lineTitle": "Qwen-Flash (vision-language)",
+  "tagline": "Alibaba's cheapest Qwen3.7 vision-language tier, released July 2026 — 1M-token context, text/image/video input, priced for high-volume agent traffic.",
+  "seoTitle": "Qwen3.7-Flash: Specs, Pricing & Context Window",
+  "metaDescription": "Qwen3.7-Flash is Alibaba's low-cost Qwen3.7 vision-language tier: 1M-token context, text, image and video input, and tiered Model Studio pricing from ¥0.2 per 1M.",
+  "releaseDate": "2026-07",
+  "status": "Generally available",
+  "license": "Proprietary (API-only)",
+  "openWeights": false,
+  "modalities": [
+    "Text",
+    "Vision",
+    "Video"
+  ],
+  "contextWindow": "1M",
+  "maxOutput": "131,072 tokens",
+  "tags": [
+    "proprietary",
+    "multimodal",
+    "long-context",
+    "agentic"
+  ],
+  "overview": [
+    "Qwen3.7-Flash is the Flash tier of Alibaba's Qwen3.7 native vision-language series, published on Alibaba Cloud Model Studio with the snapshot `qwen3.7-flash-2026-07-15` and listed on OpenRouter from July 27, 2026. Alibaba describes the 3.7 Flash models as comprehensively enhancing multimodal understanding and agent execution over 3.6-Flash, with stronger foundational multimodal ability, better object recognition, and improved real-world perception and spatial intelligence — including in multimodal agent scenarios such as Search Agent and CI Agent.",
+    "It takes text, image and video as input and returns text. The context window is 1,000,000 tokens, with a maximum input of 991,808 tokens (983,616 in thinking mode), a maximum output of 131,072 tokens, and a chain-of-thought budget of up to 262,144 tokens. Model Studio exposes function calling, structured outputs, prefix completion, context caching, batch inference and (in most regions) web search; fine-tuning is not supported.",
+    "The model is served from Model Studio in the Beijing, Singapore, Tokyo, Frankfurt and US (Virginia) regions through OpenAI-compatible, Anthropic-compatible and DashScope endpoints, and is resold through gateways such as OpenRouter. Pricing is tiered by prompt length, which makes it the cost floor of the Qwen3.7 line for high-volume multimodal and sub-agent workloads."
+  ],
+  "strengths": [
+    "1M-token context with text, image and video input at the cheapest tier of the Qwen3.7 line",
+    "Tuned for multimodal agent execution — Alibaba calls out Search Agent and CI Agent scenarios over 3.6-Flash",
+    "Stronger object recognition, real-world perception and spatial intelligence than the 3.6 Flash generation",
+    "Function calling, structured outputs, context caching and batch inference available on Model Studio",
+    "Served from five Model Studio regions via OpenAI-compatible, Anthropic-compatible and DashScope endpoints"
+  ],
+  "useCases": [
+    "Reach for it as the cheap sub-agent or fan-out worker behind a more expensive planner model when the work is high-volume.",
+    "Reach for it for screenshot, document and video understanding pipelines where per-token cost dominates the bill.",
+    "Reach for it for long-context multimodal retrieval and summarisation that has to stay inside one 1M-token request.",
+    "Reach for it for batch-mode classification and extraction over large image or video corpora."
+  ],
+  "pricing": {
+    "input": "¥0.2",
+    "output": "¥0.8",
+    "unit": "/ 1M tokens",
+    "note": "Alibaba Cloud Model Studio list price in the Beijing region for prompts up to 32K tokens; ¥0.6 / ¥2.4 for 32K–256K and ¥1.2 / ¥4.8 for 256K–1M. Singapore-region rates are ¥0.225 / ¥0.974 at the ≤32K tier. OpenRouter lists the model at $0.03 / $0.13 per 1M tokens.",
+    "source": "https://help.aliyun.com/en/model-studio/qwen3-7-flash"
+  },
+  "apis": [
+    {
+      "provider": "Alibaba Cloud Model Studio (DashScope)",
+      "modelId": "qwen3.7-flash",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/models"
+    },
+    {
+      "provider": "OpenRouter",
+      "modelId": "qwen/qwen3.7-flash",
+      "url": "https://openrouter.ai/qwen/qwen3.7-flash"
+    }
+  ],
+  "links": [
+    {
+      "label": "qwen3.7-flash model info (Alibaba Cloud Model Studio)",
+      "url": "https://help.aliyun.com/en/model-studio/qwen3-7-flash",
+      "kind": "api-docs"
+    },
+    {
+      "label": "Alibaba Cloud Model Studio — supported models",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/models",
+      "kind": "official"
+    },
+    {
+      "label": "Alibaba Cloud Model Studio — model pricing",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "kind": "api-docs"
+    },
+    {
+      "label": "Qwen3.7 Flash on OpenRouter",
+      "url": "https://openrouter.ai/qwen/qwen3.7-flash",
+      "kind": "api-docs"
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is Qwen3.7-Flash?",
+      "a": "Qwen3.7-Flash is the Flash (cost-optimised) tier of Alibaba's Qwen3.7 native vision-language series. It accepts text, image and video input, returns text, and carries a 1,000,000-token context window. Alibaba Cloud Model Studio documents it under the snapshot qwen3.7-flash-2026-07-15, and OpenRouter listed it on July 27, 2026."
+    },
+    {
+      "q": "How does Qwen3.7-Flash differ from Qwen3.6-Flash?",
+      "a": "Alibaba says the 3.7 Flash models comprehensively enhance multimodal understanding and agent execution compared with 3.6-Flash, specifically citing stronger foundational multimodal abilities, better object recognition, and improved real-world perception and spatial intelligence, with significant upgrades in multimodal agent scenarios such as Search Agent and CI Agent."
+    },
+    {
+      "q": "How much does Qwen3.7-Flash cost?",
+      "a": "Model Studio prices it by prompt length. In the Beijing region it is ¥0.2 per 1M input tokens and ¥0.8 per 1M output tokens for prompts up to 32K, rising to ¥0.6 / ¥2.4 for 32K–256K and ¥1.2 / ¥4.8 for 256K–1M. The Singapore region charges ¥0.225 / ¥0.974 at the ≤32K tier. OpenRouter lists it at $0.03 / $0.13 per 1M tokens."
+    },
+    {
+      "q": "What are Qwen3.7-Flash's token limits?",
+      "a": "The context window is 1,000,000 tokens. Maximum input is 991,808 tokens (983,616 in thinking mode), maximum output is 131,072 tokens, and the chain-of-thought budget goes up to 262,144 tokens."
+    },
+    {
+      "q": "Can Qwen3.7-Flash be fine-tuned or self-hosted?",
+      "a": "No. It is a proprietary, API-only model — no weights are published — and Alibaba Cloud Model Studio lists fine-tuning as unsupported for it in every region. It is served from Beijing, Singapore, Tokyo, Frankfurt and US (Virginia) via OpenAI-compatible, Anthropic-compatible and DashScope endpoints."
+    }
+  ],
+  "versionHistory": [
+    {
+      "version": "Qwen3.7-Flash",
+      "slug": "qwen3-7-flash",
+      "date": "2026-07",
+      "note": "Qwen3.7-generation Flash tier — 1M context, text/image/video input, snapshot qwen3.7-flash-2026-07-15.",
+      "current": true
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "deerflow",
+  "name": "DeerFlow",
+  "repo": "bytedance/deer-flow",
+  "homepage": "https://deerflow.tech",
+  "category": "agents",
+  "categoryTitle": "Agents & Automation",
+  "subcategory": "general-agents",
+  "subcategoryTitle": "Agent Frameworks & Builders",
+  "tagline": "A batteries-included super agent harness with skills, sub-agents, sandboxes and memory",
+  "seoTitle": "DeerFlow: ByteDance's Open-Source Super Agent Harness",
+  "metaDescription": "DeerFlow is ByteDance's open-source super agent harness built on LangGraph: extensible skills, sub-agents, sandboxed execution, a filesystem and long-term memory.",
+  "overview": [
+    "DeerFlow — short for Deep Exploration and Efficient Research Flow — is an open-source agent harness from ByteDance, released under the MIT license. It started life as a deep-research framework, but the community pushed it into data pipelines, slide decks, dashboards and content workflows, so the maintainers rewrote it from scratch as DeerFlow 2.0: a runtime that gives an agent the infrastructure it needs to actually finish work, rather than a framework you wire together yourself.",
+    "Built on LangGraph and LangChain, DeerFlow 2.0 ships with a filesystem, long-term memory, extensible skills, sandbox-aware execution and the ability to plan and spawn sub-agents for multi-step tasks. Skills are the extension point: each one is a Markdown module describing a workflow and its supporting resources, loaded progressively only when a task needs it so the context window stays lean. Built-in skills cover research, report generation, slide creation, web pages, and image and video generation, and you can add, replace or combine your own.",
+    "The project is model-agnostic — anything speaking an OpenAI-compatible API works, including CLI-backed providers such as Codex CLI and Claude Code — and runs as a web app, a terminal workbench (TUI), an embedded Python client, or an MCP server. Note that DeerFlow 2.0 shares no code with version 1; the original deep-research framework lives on the `main-1.x` branch."
+  ],
+  "features": [
+    "Extensible Markdown skills, loaded progressively and activatable per turn with a `/skill-name` prefix, with `allowed-tools` policies that scope what an active skill may call.",
+    "Sub-agents the lead agent can spawn on demand, each with its own scoped context, tools and termination conditions, reporting structured results back for synthesis.",
+    "Sandbox-aware execution with local, Docker/AIO and E2B sandbox providers, plus a shared filesystem for offloading intermediate results.",
+    "Long-term memory across sessions via the default local DeerMem backend, with optional mem0 and OpenViking backends.",
+    "Context engineering built in: isolated sub-agent contexts, aggressive summarization of completed sub-tasks, and manual `/compact` compaction from the composer.",
+    "Session goals (`/goal <condition>`) that persist across turns until DeerFlow judges them satisfied, plus scheduled tasks and IM channel integrations.",
+    "Tracing hooks for LangSmith, Langfuse and Monocle, and an MCP server so other clients can drive the harness."
+  ],
+  "gettingStarted": {
+    "intro": "DeerFlow needs Python 3.12+ and Node.js 22+, and is easiest to run with Docker. Clone the repo, run the setup wizard to pick an LLM provider and safety preferences, then start the services. `make doctor` verifies your setup at any point.",
+    "steps": [
+      {
+        "heading": "Clone the repository",
+        "body": "Grab the source and change into the project root — every make target runs from there.",
+        "code": "git clone https://github.com/bytedance/deer-flow.git\ncd deer-flow",
+        "lang": "bash"
+      },
+      {
+        "heading": "Run the setup wizard",
+        "body": "An interactive wizard walks you through choosing an LLM provider, an optional web-search provider, and execution/safety preferences such as sandbox mode, bash access and file-write tools. It writes a minimal config.yaml and puts your keys in .env.",
+        "code": "make setup\nmake doctor   # verify the setup and get fix hints",
+        "lang": "bash"
+      },
+      {
+        "heading": "Start the services with Docker",
+        "body": "Docker is the recommended path. Pull the sandbox image once, then start the stack with hot reload and source mounts. The app is served at http://localhost:2026 in the production flow.",
+        "code": "make docker-init    # pull the sandbox image (once)\nmake docker-start   # start services\nmake docker-logs    # follow logs",
+        "lang": "bash"
+      },
+      {
+        "heading": "Or run locally",
+        "body": "If you would rather not use Docker, check prerequisites, install backend and frontend dependencies, and run the dev server.",
+        "code": "make check     # verifies Node.js 22+, pnpm, uv, nginx\nmake install   # backend + frontend deps + pre-commit hooks\nmake dev",
+        "lang": "bash"
+      },
+      {
+        "heading": "Give the agent a goal",
+        "body": "In the web UI composer, attach a thread-scoped completion condition. DeerFlow evaluates each run against it and keeps going until the goal is met or you clear it.",
+        "code": "/goal finish the implementation and make all tests pass\n/goal          # show the active goal\n/goal clear    # clear it",
+        "lang": "text"
+      }
+    ]
+  },
+  "useCases": [
+    "Run long-horizon research that spans minutes to hours, with sub-agents fanning out over independent read-only sources and the lead agent synthesizing the result.",
+    "Turn a prompt into a deliverable — a report, a slide deck, a web page, or generated images and video — using the built-in skills rather than hand-built prompt chains.",
+    "Give a self-hosted agent a persistent memory of your stack, preferences and recurring workflows, stored locally and under your control.",
+    "Package your own team workflows as Markdown skills so an agent can pick them up progressively instead of carrying every instruction in context."
+  ],
+  "language": "Python",
+  "license": "MIT"
+}

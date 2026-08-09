@@ -2344,6 +2344,29 @@
           ]
         },
         {
+          "id": "qwen-flash",
+          "title": "Qwen-Flash (vision-language)",
+          "blurb": "Proprietary, API-only cost floor of the Qwen line — cheap vision-language models with very long context, aimed at high-volume multimodal and sub-agent traffic.",
+          "versions": [
+            {
+              "name": "Qwen3.7-Flash",
+              "slug": "qwen3-7-flash",
+              "blurb": "Qwen3.7-generation Flash tier (July 2026, snapshot qwen3.7-flash-2026-07-15): 1M-token context, text/image/video input, tuned for multimodal agents; from ¥0.2/¥0.8 per 1M tokens on Model Studio.",
+              "tags": [
+                "proprietary",
+                "multimodal",
+                "long-context",
+                "agentic"
+              ],
+              "contextWindow": "1M",
+              "license": "Proprietary",
+              "date": "2026-07",
+              "current": true,
+              "rich": true
+            }
+          ]
+        },
+        {
           "id": "qwen-open",
           "title": "Qwen (open-weight)",
           "blurb": "The flagship open-weight (Apache 2.0) family spanning edge-sized dense models to large MoE models, covering general text, reasoning and agentic use.",
@@ -3950,6 +3973,28 @@
               "date": "2026-07-02",
               "rich": true,
               "current": true
+            }
+          ]
+        },
+        {
+          "id": "shieldstral",
+          "title": "Shieldstral",
+          "blurb": "Mistral's open-weight safety-classifier line: compact guard models that moderate text and images against a natural-language policy supplied at inference time.",
+          "versions": [
+            {
+              "name": "Shieldstral 1.0 3B",
+              "slug": "shieldstral-1-0-3b",
+              "blurb": "Apache-2.0 3B multimodal safety classifier released August 4, 2026; judges text and images against natural-language policies at inference time — 99.4 F1 on HarmBench prompts, 97.7 on VLGuard, fits in 16GB VRAM.",
+              "tags": [
+                "open-weights",
+                "multimodal",
+                "on-device"
+              ],
+              "contextWindow": "32K",
+              "license": "Apache-2.0",
+              "date": "2026-08-04",
+              "current": true,
+              "rich": true
             }
           ]
         },
