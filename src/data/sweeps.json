@@ -29951,6 +29951,33 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260809t164006z",
+      "timestamp": "2026-08-09T16:40:06.670Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. The effective window is tight — the 72h cap on `date` puts the floor at 2026-08-07, and the 14:44Z sweep two hours earlier already ingested everything that shipped Aug 7-8. Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Qwen, Cohere, NVIDIA, Ai2, plus the Chinese labs via llmgateway's dated timeline), GitHub trending daily + weekly, HuggingFace models/datasets/papers, HN front page and the Algolia >100-point feed for Aug 6-9, all 8 YouTube creator feeds, The Register, TechCrunch, and the full AI-for-science lane (dated BCI/neural-decoding, medical-imaging/FDA, drug-discovery, genomics queries plus STAT News, neurosciencenews, nature.com, hemispheric.ai). Everything fresh was already present: WeatherNext, Fable 5 biology safeguards, Grok Imagine Image 2.0, Seedance 2.5, Muse Spark 1.2, Agent Plugins 1.0, Databricks coding costs, Genesis Open Models, Ai2 TutorMoments. Both HN AI stories above 500 points on Aug 7 failed a hard rule, not the taste bar: the DeepSeek V4-Flash ARC-AGI page (779 pts) is the already-listed `deepseek-v4-flash-0731` release and its ARC-AGI-2 61.4% is already in that item's metrics, and Oracle's OpenJDK generative-AI ban (531 pts) is an April 2026 policy resurfacing — the Mythos staleness scar. Firecrawl's AnyDoc + pdf-inspector stack (13.7k stars, +8.8k this week) is a real launch but dated 2026-08-06, 88h old and outside the cap. Top HF paper AgentOPSD has code but only 19 stars, no demo and no HN pickup, so it misses the 2-of-N paper bar and is also an Aug 6 submission. Of the 3 fresh YouTube videos, 2 are already in the feed and the third (Wes Roth, 'AI just killed Crypto') is a crypto/quantum-encryption episode whose description is a link list with no groundable AI claim.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
