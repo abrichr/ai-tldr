@@ -1,8 +1,136 @@
 {
-  "generatedAt": "2026-08-09T05:15:25.396Z",
+  "generatedAt": "2026-08-09T06:54:28.871Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "anthropic-managed-agents-session-budgets",
+      "categories": [
+        "tool"
+      ],
+      "title": "Claude Managed Agents get spend caps — a session pauses at its dollar budget",
+      "org": "Anthropic",
+      "date": "2026-08-07",
+      "url": "https://platform.claude.com/docs/en/release-notes/overview",
+      "summary": "Claude Managed Agents sessions can now carry a hard dollar budget. A session that reaches its cap pauses with a budget_reached stop reason instead of starting new model requests, and changing or removing the cap resumes it.",
+      "tags": [
+        "anthropic",
+        "claude",
+        "managed-agents",
+        "agents",
+        "api",
+        "cost-control",
+        "budgets",
+        "multiagent",
+        "data-residency",
+        "agent-skills"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Anthropic"
+        },
+        {
+          "label": "Surface",
+          "value": "Claude Managed Agents API (beta)"
+        },
+        {
+          "label": "Beta header",
+          "value": "managed-agents-2026-04-01"
+        },
+        {
+          "label": "Budget unit",
+          "value": "Whole US cents as a string, USD only"
+        },
+        {
+          "label": "Priced at",
+          "value": "Public list rates, not contracted rates"
+        },
+        {
+          "label": "Stop reason",
+          "value": "budget_reached"
+        },
+        {
+          "label": "Also shipped",
+          "value": "Advisor model, inference_geo, repo skills"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much can a session overspend its Claude Managed Agents budget?",
+          "a": "Claude Managed Agents checks the cap between model requests rather than mid-request, so the request already in flight runs to completion. The overshoot is bounded by one model request per thread: a session capped at 50 cents can pause with a recorded list cost of 53 cents. Anthropic describes this as expected, not a billing error."
+        },
+        {
+          "q": "What spending counts toward a Claude Managed Agents session budget?",
+          "a": "Three things make up the list cost that a Claude Managed Agents budget measures: model tokens at each served model's public list price, web searches at $10 per 1,000 searches, and session running time at $0.08 per hour. Web fetch requests carry no per-request charge and are not metered, so they report zero."
+        },
+        {
+          "q": "Can you add a budget to a Claude Managed Agents session that is already running?",
+          "a": "No. A Claude Managed Agents budget can only be attached when the session is created, and adding one to a session that started without a budget returns a 400 error. An existing cap can be changed or removed at any time, but removal is one-way: a session whose budget was removed cannot be given a new one."
+        },
+        {
+          "q": "Does a Claude Managed Agents budget use list price or a negotiated rate?",
+          "a": "Claude Managed Agents prices a session at public list rates, not at an organization's contracted price. A customer with negotiated discounts reaches the cap when the list-price total does, so the amount actually billed can be lower than the budget. Enforcement uses the exact unrounded list cost, while reported figures are rounded to whole cents."
+        },
+        {
+          "q": "How do scheduled deployments handle a Claude Managed Agents budget?",
+          "a": "A Claude Managed Agents deployment accepts the same budget object, and the cap is copied onto each session the deployment starts. The budget therefore bounds each run separately rather than the deployment's total spend. Changing a deployment's budget applies only to sessions started afterwards, and unlike a session, a deployment's budget can be cleared and set again later."
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "Web search",
+            "price": "$10",
+            "unit": "/ 1,000 searches"
+          },
+          {
+            "plan": "Session running time",
+            "price": "$0.08",
+            "unit": "/ hour"
+          },
+          {
+            "plan": "Model tokens",
+            "price": "List price",
+            "note": "Each served model's public list rate"
+          }
+        ],
+        "source": "https://platform.claude.com/docs/en/managed-agents/budgets"
+      },
+      "explainer": {
+        "tagline": "Claude Managed Agents sessions can now carry a hard dollar cap that pauses the agent instead of letting it keep spending.",
+        "whatIsIt": "Session budgets are the headline addition to Claude Managed Agents on August 7: an optional hard spend ceiling set when a session is created. The cap is written as a whole number of US cents, and once a session's spend reaches it, every thread stops before its next model request. The session goes idle rather than terminating, so its history and sandbox are kept like any other idle session's.",
+        "howItWorks": "Everything a session consumes is priced as it runs — model tokens, web searches and running time — into one figure called the list cost, which is what the cap is compared against. Because the check happens between model requests, the request in flight when the cap is crossed still finishes. A capped session reports a stop_reason of budget_reached and accepts only events that settle work already in progress; raising or removing the cap resumes the paused work automatically.",
+        "whyItMatters": "Runaway spend is the main reason teams keep long-running agents on a short leash, and a cap the platform itself enforces removes the need to babysit a session or build a custom kill switch. Scheduled deployments inherit the same cap on every run. The same August 7 update also adds an advisor model that a session's primary thread can consult mid-turn, an inference_geo setting that pins where inference runs, and automatic discovery of skills from a mounted repository's .claude/skills directory.",
+        "forWho": "teams running long-lived coding agents",
+        "tryIt": "Pass \"budget\": {\"type\": \"limit\", \"max_list_cost\": {\"amount\": \"2500\", \"currency\": \"USD\"}} when you create a session"
+      },
+      "image": {
+        "url": "https://platform.claude.com/docs/og?locale=en&path=release-notes/overview&design-rev=1",
+        "alt": "Claude Platform release notes cover card from Anthropic's developer documentation",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Release Notes",
+          "url": "https://platform.claude.com/docs/en/release-notes/overview"
+        },
+        {
+          "label": "Session Budgets",
+          "url": "https://platform.claude.com/docs/en/managed-agents/budgets"
+        },
+        {
+          "label": "Advisor Setup",
+          "url": "https://platform.claude.com/docs/en/managed-agents/multiagent-orchestration"
+        },
+        {
+          "label": "Repository Skills",
+          "url": "https://platform.claude.com/docs/en/managed-agents/skills"
+        }
+      ],
+      "publishDate": "2026-08-09T06:54:28.871Z"
+    },
     {
       "id": "anthropic-claude-code-cross-session-messaging",
       "categories": [

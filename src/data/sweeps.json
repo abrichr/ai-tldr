@@ -29789,6 +29789,41 @@
         "ecosystem",
         "algorithm"
       ]
+    },
+    {
+      "id": "sweep-20260809t065428z",
+      "timestamp": "2026-08-09T06:54:28.871Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Cohere, Qwen, DeepSeek, Z.ai), GitHub trending daily + weekly, HuggingFace models/datasets/papers, HN front page and last-24h Algolia, 8 YouTube creator feeds, tier-1 press and the AI-for-science lane. Added one item: Anthropic's Aug 7 Claude Managed Agents update, which ships hard per-session dollar budgets plus an advisor role, inference_geo pinning and repo-loaded skills. Everything else in the window was already in the feed (Fable 5 safeguards, Astra cyber pause, Kitesurf, Agent Plugins 1.0, WeatherNext Cyclones, Gemini Robotics ER 2, the Aug 7 Two Minute Papers video). Grok 4.6 was investigated and DROPPED: aggregator blogs claim an Aug 7 launch, but docs.x.ai still lists grok-4.5 as the newest model, so the claim is unverified. The Stack v3 (Jul 23) and Brain2Qwerty's Nature Neuroscience paper (Aug 3) both fall outside the 72h cap; AI2's TutorMoments benchmark and the trending skill-pack repos missed the inclusion bar.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "anthropic-managed-agents-session-budgets",
+          "title": "Claude Managed Agents get spend caps — a session pauses at its dollar budget",
+          "category": "tool",
+          "note": "Official Anthropic platform release note dated Aug 7 that ships a concrete, dev-facing control — a platform-enforced hard dollar cap on an autonomous agent session — plus three smaller Managed Agents additions, all documented with API field names."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "dataset",
+        "paper",
+        "benchmark",
+        "video",
+        "article",
+        "security",
+        "ecosystem",
+        "algorithm",
+        "rumor"
+      ]
     }
   ]
 }
