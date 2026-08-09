@@ -29877,6 +29877,41 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260809t124807z",
+      "timestamp": "2026-08-09T12:48:07.302Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, x.ai, Qwen, DeepSeek, Z.ai), GitHub trending (daily/weekly/Python), HuggingFace models/datasets/papers, HN front page + Show HN + Algolia, all 8 YouTube channels, coding-agent changelogs (Cursor, Claude Code, Windsurf, Ollama, vLLM, llama.cpp), tier-1 press and the AI-for-science lane. Only one item cleared the 72h bar: Simon Willison's one-shot Codex build of a browser game with a published cost and transcript.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "simonw-raccoon-heist-codex-aug7",
+          "title": "Moonlight & Mayhem — GPT-5.6 Sol Ultra builds a raccoon heist game in 52 minutes",
+          "category": "showcase",
+          "note": "Influential-voice showcase with a runnable artifact (playable build + public repo + full agent transcript) and hard verified numbers, giving a like-for-like GPT-5.6 Sol Ultra vs Claude Fable 5 comparison on one prompt."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "showcase",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }

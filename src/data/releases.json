@@ -1,8 +1,76 @@
 {
-  "generatedAt": "2026-08-09T10:34:51.313Z",
+  "generatedAt": "2026-08-09T12:48:07.302Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "simonw-raccoon-heist-codex-aug7",
+      "categories": [
+        "showcase",
+        "article"
+      ],
+      "title": "Moonlight & Mayhem — GPT-5.6 Sol Ultra builds a raccoon heist game in 52 minutes",
+      "org": "Simon Willison",
+      "date": "2026-08-07",
+      "url": "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/",
+      "summary": "Moonlight & Mayhem is a browser stealth game that Codex Desktop, running GPT-5.6 Sol Ultra, wrote from one prompt in 52 minutes for $23.28. Simon Willison published the code, the full agent transcript and a playable build.",
+      "tags": [
+        "showcase",
+        "coding-agents",
+        "codex",
+        "openai",
+        "gpt-5-6-sol",
+        "simon-willison",
+        "game-dev",
+        "one-shot-prompt",
+        "agent-transcript",
+        "token-cost",
+        "browser-game"
+      ],
+      "importance": "notable",
+      "metrics": {
+        "Cost": "$23.28",
+        "Build time": "52 min"
+      },
+      "explainer": {
+        "tagline": "One prompt, 52 minutes and $23.28 of tokens produced a playable three-raccoon museum heist, with the full agent transcript published.",
+        "whatIsIt": "Moonlight & Mayhem is a browser stealth game in which three raccoons rob a museum of a golden sardine. Simon Willison generated it by handing Codex Desktop, running GPT-5.6 Sol Ultra, the same one-shot prompt he had used two days earlier with Claude Fable 5. The Fable 5 attempt produced a single raccoon collecting coins and fish in a back yard; this run produced a three-character crew, staged objectives and a timer.",
+        "howItWorks": "Codex Desktop worked unattended for 52 minutes, writing the game code and calling gpt-image-2 to generate textures and art. The first pass shipped with a visual bug — each raccoon had an eyeball blown up to a giant sphere floating over its head — which Willison fixed with a follow-up prompt instead of editing code by hand. The repository keeps the complete Codex transcript next to the source.",
+        "whyItMatters": "A price and a clock now sit on this kind of agentic coding: 700.7K input tokens, 32.5M cached tokens and 148K output tokens came to $23.28 for 52 minutes of unattended work. Because the identical prompt went through Claude Fable 5 first, the two published builds give a rare like-for-like look at how far apart two frontier coding agents land on the same brief.",
+        "forWho": "developers comparing coding agents",
+        "tryIt": "Play it at https://simonw.github.io/raccoon-heist-codex/"
+      },
+      "author": {
+        "name": "Simon Willison",
+        "handle": "@simonw",
+        "profileUrl": "https://simonwillison.net/",
+        "avatarUrl": "https://github.com/simonw.png"
+      },
+      "image": {
+        "url": "https://static.simonwillison.net/static/2026/raccoon-heist-codex-poster.jpg",
+        "alt": "Poster art for Moonlight & Mayhem, a raccoon museum-heist browser game",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Write-up",
+          "url": "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/"
+        },
+        {
+          "label": "Play the Game",
+          "url": "https://simonw.github.io/raccoon-heist-codex/"
+        },
+        {
+          "label": "Code + Transcript",
+          "url": "https://github.com/simonw/raccoon-heist-codex/"
+        },
+        {
+          "label": "Claude Fable 5 Run",
+          "url": "https://simonwillison.net/2026/Aug/5/raccoon-heist/"
+        }
+      ],
+      "publishDate": "2026-08-09T12:48:07.302Z"
+    },
     {
       "id": "anthropic-managed-agents-session-budgets",
       "categories": [
