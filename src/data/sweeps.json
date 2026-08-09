@@ -29978,6 +29978,33 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260809t184148z",
+      "timestamp": "2026-08-09T18:41:48.515Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, Qwen, xAI, and the Chinese frontier labs), GitHub trending (daily/weekly/Python), HuggingFace models + datasets + papers, HN front pages for Aug 8-9, all 8 YouTube creator feeds, Cursor and Claude Code changelogs, tier-1 press, and the AI-for-science lane (STAT News, Neuroscience News, Nature subjects, Lancet Digital Health, Recursion/Insilico). Nothing cleared the bar: the three fresh YouTube videos were either already in the feed or unverifiable off-topic; every trending repo (google/skills, addyosmani/agent-skills, firecrawl/pdf-inspector, virgiliojr94/book-to-skill, zhaoxuya520/reverse-skill, TauricResearch/TradingAgents) is months old with no release event inside 72h; Harvey's Legal Agent Benchmark dates to May 6; the ChatGPT Atlas shutdown taking effect today was already covered on Jul 9; Brain2Qwerty's Nature Neuroscience paper is Aug 3 and out of window; no HF paper showed released code or a demo, so none met the 2-of-N paper bar.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
