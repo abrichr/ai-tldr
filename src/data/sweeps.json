@@ -30133,6 +30133,34 @@
         "ecosystem",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260810t052934z",
+      "timestamp": "2026-08-10T05:29:34.476Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Qwen, Moonshot, DeepSeek, Z.ai, MiniMax), GitHub trending daily + weekly, HuggingFace models/datasets/papers, HN front page + a points-ranked 72h scan, 8 YouTube creator feeds, coding-agent changelogs (Cursor, Claude Code, GitHub/Copilot, Ollama), and the AI-for-science lane (medical imaging/FDA, BCI + neural decoding, protein design + drug discovery, STAT News, Nature/npj Digital Medicine, neurosciencenews). Everything fresh that clears the bar is already in the feed: both ship-ready YouTube videos (Wes Roth C9WoQrslPMM, Two Minute Papers vO6SWG-jxvE) are already ingested, and so are WeatherNext Cyclones, the OpenAI Hugging Face timeline, DOE Genesis Open Models, Databricks AI coding costs, Claude Code auto mode, and the Atlas sunset. The only high-traction items left were stale: Oracle's OpenJDK generative-AI ban is an April 2026 policy resurfacing on HN, and GitHub Models retirement was announced 2026-07-30 — both fail the 72h cap. HF Papers topped out at 17 upvotes, and the weekly GitHub trending AI repos (firecrawl/pdf-inspector, DeepSeek-Reasonix, reverse-skill) are all months-old projects trending on pushes, not releases.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "ecosystem",
+        "article",
+        "security",
+        "algorithm",
+        "tutorial"
+      ]
     }
   ]
 }
