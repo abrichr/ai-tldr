@@ -30421,6 +30421,45 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260810t224510z",
+      "timestamp": "2026-08-10T22:45:10.581Z",
+      "source": "github-actions-sweep",
+      "summary": "Added OpenAI's $125/month Premium seats for ChatGPT Business (official announcement, August 10) and the Genians threat report on Kimsuky running local LLMs on its own C2 servers. Lab blogs were otherwise quiet or already covered: Anthropic's newest post is August 7, DeepMind's is WeatherNext, Mistral's is Shieldstral, and Meta's Muse Glimmer plus both fresh YouTube videos are already in the feed. Docker Sandboxes (612 HN points) and semantica-agi/semantica (+967 stars) were dropped for failing the 72h cap — their latest releases are August 6 and July 21. HF papers topped out at 31 upvotes and no trending dataset was fresh.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-chatgpt-business-premium-seats",
+          "title": "ChatGPT Business Premium seats — $125 a month for 5x usage, no 5-hour cap",
+          "category": "tool",
+          "note": "Official openai.com/index post dated today plus tier-1 pickup (The Register); a pricing and capacity change to a widely used business plan, so major rather than seismic."
+        },
+        {
+          "id": "genians-kimsuky-local-llm",
+          "title": "Kimsuky ran local LLMs on its own C2 servers — Genians details Operation GitPower",
+          "category": "security",
+          "note": "Primary threat-intelligence report published today by a named security firm, picked up by The Register and The Hacker News; concrete detection guidance for defenders."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "video",
+        "dataset",
+        "paper",
+        "security",
+        "article",
+        "ecosystem",
+        "benchmark"
+      ]
     }
   ]
 }

@@ -1,8 +1,236 @@
 {
-  "generatedAt": "2026-08-10T20:48:09.194Z",
+  "generatedAt": "2026-08-10T22:45:10.581Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openai-chatgpt-business-premium-seats",
+      "categories": [
+        "tool"
+      ],
+      "title": "ChatGPT Business Premium seats — $125 a month for 5x usage, no 5-hour cap",
+      "org": "OpenAI",
+      "date": "2026-08-10",
+      "url": "https://openai.com/index/premium-seats-chatgpt-business/",
+      "summary": "OpenAI is adding Premium seats to ChatGPT Business at $125 per user per month, or $100 when billed annually. A Premium seat gives 5x the usage of a $25 Standard seat and drops the five-hour usage limit.",
+      "tags": [
+        "openai",
+        "chatgpt",
+        "chatgpt-business",
+        "pricing",
+        "seats",
+        "usage-limits",
+        "codex",
+        "enterprise",
+        "saas"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenAI"
+        },
+        {
+          "label": "Plan",
+          "value": "ChatGPT Business"
+        },
+        {
+          "label": "Price (Premium)",
+          "value": "$125 / user / month"
+        },
+        {
+          "label": "Price (Premium, annual)",
+          "value": "$100 / user / month"
+        },
+        {
+          "label": "Standard seat",
+          "value": "$25 / month, $20 annual"
+        },
+        {
+          "label": "What you get",
+          "value": "5x Standard usage, no five-hour limit"
+        },
+        {
+          "label": "Availability",
+          "value": "Waitlist now, early access before general availability"
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "Premium seat",
+            "price": "$125",
+            "unit": "/ user / month"
+          },
+          {
+            "plan": "Premium seat (annual)",
+            "price": "$100",
+            "unit": "/ user / month",
+            "note": "billed annually"
+          },
+          {
+            "plan": "Standard seat",
+            "price": "$25",
+            "unit": "/ user / month"
+          },
+          {
+            "plan": "Standard seat (annual)",
+            "price": "$20",
+            "unit": "/ user / month",
+            "note": "billed annually"
+          }
+        ],
+        "source": "https://openai.com/index/premium-seats-chatgpt-business/"
+      },
+      "faq": [
+        {
+          "q": "Do I have to move my whole team to Premium seats?",
+          "a": "No. OpenAI lets Standard and Premium seats sit in the same ChatGPT Business workspace, so a company can buy Premium only for the few people who keep hitting limits. Workspace owners can upgrade or reassign a seat later as needs change, and billing, usage and spend limits stay on one page."
+        },
+        {
+          "q": "When can I actually get a Premium seat?",
+          "a": "Premium seats for ChatGPT Business are not generally available yet. OpenAI opened a waitlist on August 10, 2026 and says some customers who sign up may be selected for early access before general availability. Workspace owners join with the email tied to the account that owns the workspace."
+        },
+        {
+          "q": "What is the $100 credit offer and who qualifies?",
+          "a": "The first 10,000 eligible ChatGPT Business customers who join the Premium waitlist get $100 in workspace credits (2,500 credits) for every Premium seat they add, up to five seats or $500 total. The person signing up must be the workspace owner, and the promotion ends on August 20, 2026."
+        },
+        {
+          "q": "What happens if a Premium seat still runs out of usage?",
+          "a": "A Premium seat resets on a predictable weekly schedule rather than the five-hour window Standard seats use. If a team burns through that anyway, the ChatGPT Business workspace owner can buy shared workspace credits that the whole team draws from, so one heavy week does not stop the work."
+        }
+      ],
+      "explainer": {
+        "tagline": "OpenAI adds a $125-a-month Premium seat to ChatGPT Business, with five times the usage of a Standard seat.",
+        "whatIsIt": "Premium seats are a new, higher-capacity seat type for ChatGPT Business, announced on August 10, 2026. Each one costs $125 per user per month, or $100 per user per month billed annually, against $25 and $20 for a Standard seat. OpenAI says the top request from Business customers was a seat with more capacity built in.",
+        "howItWorks": "Five times the usage of a Standard seat is the headline change, and the five-hour usage limit goes away with it. Usage instead resets on a predictable weekly schedule. When a team runs dry, the workspace owner can top it up with shared credits, and admins mix, upgrade, reassign and monitor both seat types from a single billing view.",
+        "whyItMatters": "Most teams have two or three people who hit the ceiling while everyone else barely notices it — a marketer building a whole campaign from customer data, or a developer running Codex across a large codebase. Because both seat types live in one ChatGPT Business workspace, a company can pay the higher price for just those people instead of upgrading the entire team.",
+        "forWho": "small and mid-size teams on ChatGPT Business",
+        "tryIt": "Join the waitlist at openai.com/index/premium-seats-chatgpt-business"
+      },
+      "image": {
+        "url": "https://images.ctfassets.net/kftzwdyauwt9/1qTt5Tfbx2Uxm4KkaAlsvL/620bc01bbd5cd6346cb5ca32d9ca4715/premium-seats-seo-16x9.png?w=1600&h=900&fit=fill",
+        "alt": "OpenAI announcement graphic for Premium seats in ChatGPT Business",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://openai.com/index/premium-seats-chatgpt-business/"
+        },
+        {
+          "label": "The Register Report",
+          "url": "https://www.theregister.com/ai-and-ml/2026/08/10/hey-big-spender-openai-has-a-new-sku-just-for-you/5285727"
+        },
+        {
+          "label": "Pricing Breakdown",
+          "url": "https://cryptobriefing.com/openai-chatgpt-business-premium-seats-pricing/"
+        }
+      ],
+      "publishDate": "2026-08-10T22:45:10.581Z"
+    },
+    {
+      "id": "genians-kimsuky-local-llm",
+      "categories": [
+        "security"
+      ],
+      "title": "Kimsuky ran local LLMs on its own C2 servers — Genians details Operation GitPower",
+      "org": "Genians",
+      "date": "2026-08-10",
+      "url": "https://www.genians.co.kr/en/blog/threat_intelligence/kimsuky_ai_llm",
+      "summary": "Genians Security Center found Ollama, GPT4All and Msty installed on servers run by Kimsuky, a North Korean espionage group. The same campaign, named Operation GitPower, uses AI-written decoy PDFs as phishing lures.",
+      "tags": [
+        "security",
+        "threat-intelligence",
+        "kimsuky",
+        "north-korea",
+        "operation-gitpower",
+        "local-llm",
+        "ollama",
+        "gpt4all",
+        "rag",
+        "phishing",
+        "asyncrat",
+        "powershell",
+        "genians"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Reported by",
+          "value": "Genians Security Center"
+        },
+        {
+          "label": "Published",
+          "value": "August 10, 2026"
+        },
+        {
+          "label": "Campaign",
+          "value": "Operation GitPower"
+        },
+        {
+          "label": "Group",
+          "value": "Kimsuky, North Korea's Reconnaissance General Bureau"
+        },
+        {
+          "label": "Local model runners found",
+          "value": "Ollama, GPT4All, Msty"
+        },
+        {
+          "label": "Malware",
+          "value": "Encrypted AsyncRAT delivered over Git-based C2"
+        },
+        {
+          "label": "Targets",
+          "value": "Diplomatic missions, military, security, virtual asset sectors"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Kimsuky training its own AI models?",
+          "a": "No. Genians assessed that Kimsuky is in a phase of gathering technology and capability rather than building models of its own. The group installed off-the-shelf local model runners and experimented with retrieval-augmented generation, the Cursor editor and OpenAI's Whisper speech-to-text files, which came with a guide for pulling text out of audio."
+        },
+        {
+          "q": "Has the offline AI setup been used in real attacks yet?",
+          "a": "Genians has not confirmed the local LLM stack being run against victims. What it did observe in live attacks is the output side: decoy PDFs on virtual assets, financial investment and game development that Genians assesses were written with generative AI and sent as spear-phishing lures since 2026."
+        },
+        {
+          "q": "How does Operation GitPower relate to older Kimsuky activity?",
+          "a": "Operation GitPower is not a new standalone campaign. Genians describes it as a continuation of years of Kimsuky operations that shares key traits with the FlowerPower campaign disclosed in 2023, including the PowerShell execution framework and the heavy abuse of Git repositories, now wired into a Git-based command-and-control structure."
+        },
+        {
+          "q": "What should defenders look for if the lure documents look clean?",
+          "a": "Genians recommends behavior-based detection over document inspection. Its list covers abnormally long execution arguments inside LNK files, custom Base64 decoding, hidden PowerShell runs, scheduled tasks, calls to the GitHub Raw Contents API, personal access tokens unrelated to business work, and encrypted .NET payloads hidden behind image file extensions."
+        }
+      ],
+      "explainer": {
+        "tagline": "Genians found three offline LLM runners installed on Kimsuky's attack servers, next to AI-written phishing lures.",
+        "whatIsIt": "Operation GitPower is the name Genians Security Center gives to an ongoing Kimsuky campaign in which the North Korean group set up local LLM environments on its own infrastructure. Genians found Ollama, GPT4All and Msty installed there, along with a configured retrieval-augmented generation database and copies of OpenAI's Whisper speech-to-text files.",
+        "howItWorks": "The intrusion chain stays deliberately plain. A ZIP archive carries an LNK shortcut dressed up with a document icon and a business-sounding filename; opening it runs an obfuscated PowerShell loader. Git repositories then serve as the command-and-control channel and hand over encrypted AsyncRAT payloads disguised as image files. The AI work sits beside that chain rather than inside it.",
+        "whyItMatters": "Kimsuky used to recycle documents stolen in earlier breaches as decoys, which gave defenders a known file to fingerprint. Genians reports that since 2026 the group writes fresh ones with generative AI instead, so content-based phishing filters have far less to match against. That pushes detection toward behavior — what the LNK file and PowerShell actually do on the machine.",
+        "forWho": "security teams and threat hunters"
+      },
+      "image": {
+        "url": "https://www.genians.co.kr/hubfs/%ED%8A%B9%EC%84%B1%ED%99%94%EC%8D%B8%EB%84%A4%EC%9D%BC_480X300%20(4)-3.png",
+        "alt": "Genians threat intelligence report cover for the Kimsuky AI and local LLM analysis",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Genians Report",
+          "url": "https://www.genians.co.kr/en/blog/threat_intelligence/kimsuky_ai_llm"
+        },
+        {
+          "label": "The Hacker News",
+          "url": "https://thehackernews.com/2026/08/kimsuky-builds-offline-ai-stack-that.html"
+        },
+        {
+          "label": "The Register",
+          "url": "https://www.theregister.com/security/2026/08/10/north-korean-spies-are-running-local-llms-to-cause-ai-mischief/5285632"
+        }
+      ],
+      "publishDate": "2026-08-10T22:45:10.581Z"
+    },
     {
       "id": "anthropic-claude-riemann-zeta-bound",
       "categories": [
