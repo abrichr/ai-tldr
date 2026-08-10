@@ -30349,6 +30349,39 @@
         "ecosystem",
         "algorithm"
       ]
+    },
+    {
+      "id": "sweep-20260810t185713z",
+      "timestamp": "2026-08-10T18:57:13.977Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Google, Chinese labs), GitHub trending, HuggingFace models/datasets/papers, HN front page + newest, all 8 YouTube creator feeds, coding agents, the AI-for-science lane (neuro/clinical/pharma) and tier-1 press. Added one article: Simon Willison's read of the Claude Opus 5 system prompt on the June 2026 export controls. Everything else fresh was already in the feed (Muse Glimmer, Seedance 2.5, Muse Spark 1.2, both fresh YouTube videos) or fell outside the 72h cap (Docker Sandboxes shipped March 31, GitHub Models retired July 30, The Stack v3 landed July 23, Brain2Qwerty published August 3).",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "simonw-opus-5-export-controls-aug9",
+          "title": "Simon Willison — Claude Opus 5's system prompt covers export controls",
+          "category": "article",
+          "note": "Fresh (Aug 9) post from a listed influential voice, quoting Anthropic's own published system prompt — the first time a frontier lab has hardcoded an export-control timeline into a production model's standing instructions; no existing feed item covers the system prompt angle."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
