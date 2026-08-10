@@ -30066,6 +30066,33 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260810t012014z",
+      "timestamp": "2026-08-10T01:20:14.765Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Checked Anthropic/OpenAI/DeepMind/Meta/Mistral/xAI/Qwen/DeepSeek/Moonshot/Z.ai blogs, GitHub trending (daily + weekly Python), HuggingFace models/datasets/papers, HN front page + Show HN, all 8 YouTube creator feeds, The Register/TechCrunch/Techmeme, and the AI-for-science lane (STAT News, NeuroscienceNews, Nature subjects, BCI/pharma/FDA searches). The prior sweep ran 2.7h ago and had already ingested the Aug 7-9 window: both fresh YouTube videos (Wes Roth C9WoQrslPMM, Two Minute Papers vO6SWG-jxvE) are already in the feed, as are MiniMax H3, The Stack v3, prime-agent, WeatherNext and Claude Code auto mode. GitHub Models retirement was rejected on the 72h cap (announced 2026-07-30). Trending repos addyosmani/agent-skills, google/skills, msitarzewski/agency-agents and virgiliojr94/book-to-skill are all months-old repos re-surging, not releases. The Melbourne OpenClaw gym-booking hack had only one outlet and 39 HN points; the MEG speech-decoding paper (HF #3) has a project page but no released code, so it fails the no-papers-alone rule.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
