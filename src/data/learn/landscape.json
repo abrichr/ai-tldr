@@ -4438,8 +4438,9 @@
        "logo": "/tools-logos/gh-bloopai.png"
       },
       {
-       "name": "Apache Superset",
-       "slug": "apache-superset",
+       "name": "Superset",
+       "slug": "superset",
+       "homepage": "https://superset.sh/",
        "repo": "apache/superset",
        "description": "Open-source data exploration and visualization platform with a SQL IDE, drag-and-drop chart builder, and collaborative dashboards for querying data at scale."
       },
