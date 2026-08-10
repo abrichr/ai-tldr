@@ -4441,8 +4441,7 @@
        "name": "Superset",
        "slug": "superset",
        "homepage": "https://superset.sh/",
-       "repo": "apache/superset",
-       "description": "Open-source data exploration and visualization platform with a SQL IDE, drag-and-drop chart builder, and collaborative dashboards for querying data at scale."
+       "description": "Orchestration platform for running multiple AI coding agents in parallel across isolated Git worktrees, enabling teams to coordinate concurrent agent-driven development and review changes from a unified dashboard."
       },
       {
        "name": "conductor.build",
