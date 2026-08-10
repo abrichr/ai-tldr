@@ -30187,6 +30187,31 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260810t092043z",
+      "timestamp": "2026-08-10T09:20:43.311Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, Qwen, DeepSeek, Z.ai, MiniMax, Moonshot), GitHub trending daily + weekly, HuggingFace models/datasets/papers, HN front page and Show HN, 8 YouTube creator feeds, and the AI-for-science lane (medical imaging/FDA, BCI/neural decoding, protein and drug discovery, STAT News). Every qualifying item inside 72h is already in the feed: Claude Code auto mode default, Fable 5 biology safeguards, the OpenClaw gym hack, Seedance 2.5, The Stack v3, and both fresh creator videos (Wes Roth C9WoQrslPMM, Two Minute Papers vO6SWG-jxvE). The remaining candidates failed the bar on date, not on quality: Docker Sandboxes launched March 2026, GitHub Models retired July 30, and the ChatGPT Atlas end-of-life on August 9 is the already-tracked July 9 sunset announcement (openai-atlas-sunset-jul9). DeepSeek-Reasonix is trending hard (+4,709 stars this week) but shipped only routine v1.21-v1.22 point releases; firecrawl/pdf-inspector trends without any tagged release. Lab blogs were quiet: no Anthropic, OpenAI, DeepMind, Meta or Mistral post inside the window, and no science-lane result paired a fresh artifact with released code.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "article",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }
