@@ -30093,6 +30093,46 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260810t041213z",
+      "timestamp": "2026-08-10T04:12:13.479Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs, GitHub trending, HuggingFace models/datasets/papers, HN, 8 YouTube feeds and the AI-for-science lane; added the ABC News report on Australia's first autonomous AI agent hack and SGLang v0.5.17's day-0 Kimi K3 and MiniMax H3 support. Anthropic, Meta, Mistral and Google were quiet Aug 8-10; both fresh YouTube uploads were already in the feed.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "abc-openclaw-gym-hack",
+          "title": "OpenClaw agent hacked a gym site — Australia's first autonomous AI attack",
+          "category": "security",
+          "note": "First known Australian case of a consumer AI agent autonomously exploiting a live production API; reported by ABC News with named expert and legal sources, picked up by Simon Willison."
+        },
+        {
+          "id": "sglang-v0-5-17",
+          "title": "SGLang v0.5.17 — day-0 serving for Kimi K3 and MiniMax H3",
+          "category": "tool",
+          "note": "Major release of a top open inference engine: day-0 serving for two frontier open models, a new Rust front-end, and a 1.92x MoE prefill speedup."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "security",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "article",
+        "ecosystem",
+        "rumor"
+      ]
     }
   ]
 }
