@@ -1,8 +1,145 @@
 {
-  "generatedAt": "2026-08-10T15:05:04.028Z",
+  "generatedAt": "2026-08-10T16:57:44.512Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openai-chat-latest-snapshots-sunset-aug10",
+      "categories": [
+        "ecosystem",
+        "model"
+      ],
+      "title": "OpenAI retires gpt-5.2-chat-latest and gpt-5.3-chat-latest — GPT-5.6 Sol replaces both",
+      "org": "OpenAI",
+      "date": "2026-08-10",
+      "url": "https://developers.openai.com/api/docs/deprecations",
+      "summary": "OpenAI removes gpt-5.2-chat-latest and gpt-5.3-chat-latest from its API on August 10, 2026. Requests that name either snapshot stop working, and OpenAI names GPT-5.6 Sol as the replacement for both.",
+      "tags": [
+        "openai",
+        "gpt-5-6-sol",
+        "api-deprecation",
+        "breaking-change",
+        "model-migration",
+        "chat-latest",
+        "llm-api",
+        "ecosystem"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenAI"
+        },
+        {
+          "label": "Shutdown date",
+          "value": "Aug 10, 2026"
+        },
+        {
+          "label": "Announced",
+          "value": "May 8, 2026"
+        },
+        {
+          "label": "Retired snapshots",
+          "value": "gpt-5.2-chat-latest, gpt-5.3-chat-latest"
+        },
+        {
+          "label": "Replacement",
+          "value": "gpt-5.6-sol"
+        },
+        {
+          "label": "Replacement price",
+          "value": "$5 in / $30 out per 1M tokens"
+        },
+        {
+          "label": "Replacement context",
+          "value": "1,050,000 tokens"
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "GPT-5.6 Sol input (standard)",
+            "price": "$5.00",
+            "unit": "/ 1M tokens"
+          },
+          {
+            "plan": "GPT-5.6 Sol cached input",
+            "price": "$0.50",
+            "unit": "/ 1M tokens"
+          },
+          {
+            "plan": "GPT-5.6 Sol output (standard)",
+            "price": "$30.00",
+            "unit": "/ 1M tokens"
+          },
+          {
+            "plan": "Batch input",
+            "price": "$2.50",
+            "unit": "/ 1M tokens"
+          },
+          {
+            "plan": "Batch output",
+            "price": "$15.00",
+            "unit": "/ 1M tokens"
+          }
+        ],
+        "source": "https://developers.openai.com/api/docs/pricing"
+      },
+      "faq": [
+        {
+          "q": "What happens to API calls that still name gpt-5.2-chat-latest?",
+          "a": "After the August 10, 2026 shutdown, a request naming gpt-5.2-chat-latest or gpt-5.3-chat-latest no longer resolves to a model. OpenAI does not route the call to a newer snapshot, so any app, script, gateway config, or eval suite still pinned to those strings fails until someone changes the model name."
+        },
+        {
+          "q": "How much notice did OpenAI give before this shutdown?",
+          "a": "OpenAI announced the retirement of gpt-5.2-chat-latest and gpt-5.3-chat-latest on May 8, 2026, and shut both down on August 10, 2026 — a little over three months of notice. The two entries sit on the same public deprecations page OpenAI uses for every model and endpoint retirement."
+        },
+        {
+          "q": "Does the unversioned chat-latest alias still work?",
+          "a": "Yes. Only the pinned gpt-5.2 and gpt-5.3 snapshots are gone. OpenAI updated the unversioned chat-latest alias on August 6, 2026 to track the newest model available in ChatGPT for Plus and Pro subscribers, and still recommends a pinned model such as gpt-5.6-sol for production traffic."
+        },
+        {
+          "q": "How much does GPT-5.6 Sol cost compared with a chat snapshot?",
+          "a": "GPT-5.6 Sol is billed at $5.00 per 1M input tokens, $0.50 per 1M cached input tokens, and $30.00 per 1M output tokens on the standard tier. Batch and Flex halve the input and output rates, while Fast mode doubles them. Requests over 272K input tokens bill at 2x input and 1.5x output."
+        },
+        {
+          "q": "What else is OpenAI shutting down after this?",
+          "a": "OpenAI's deprecations page lists three more waves: legacy models including gpt-3.5-turbo and gpt-4 retire on October 23, 2026; older GPT-5 and o3 snapshots such as gpt-5-2025-08-07 retire on December 11, 2026; and legacy audio, realtime, and transcription models retire on January 20, 2027."
+        }
+      ],
+      "explainer": {
+        "tagline": "Two pinned OpenAI chat snapshots stop resolving today — anything still calling them by name breaks until the model string changes.",
+        "whatIsIt": "OpenAI shuts down the gpt-5.2-chat-latest and gpt-5.3-chat-latest API snapshots on August 10, 2026, the date it set when it announced the retirement on May 8. Both were pinned copies of the chat model that ChatGPT was serving at the time, kept around so developers could target a fixed version instead of a moving alias.",
+        "howItWorks": "A chat-latest snapshot freezes whatever model ChatGPT shipped on a given date, so behavior stays stable while the unversioned chat-latest alias keeps moving forward. Retiring the two pinned names removes them from model resolution entirely — there is no silent fallback, so the request fails rather than quietly running on a different model with different output.",
+        "whyItMatters": "A model string is usually buried in config, not code, so the teams most exposed are the ones that pinned a snapshot years ago and stopped thinking about it. OpenAI points both names at GPT-5.6 Sol, which costs $5 per 1M input and $30 per 1M output tokens and carries a 1,050,000-token context window — so the swap is one line, but output behavior and token bills will move.",
+        "forWho": "developers with production traffic pinned to OpenAI chat snapshots",
+        "tryIt": "Replace gpt-5.2-chat-latest or gpt-5.3-chat-latest with gpt-5.6-sol in your API calls and gateway config."
+      },
+      "image": {
+        "url": "https://developers.openai.com/og/api/docs/deprecations.png",
+        "alt": "OpenAI API deprecations documentation page listing retired models and shutdown dates",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Deprecations",
+          "url": "https://developers.openai.com/api/docs/deprecations"
+        },
+        {
+          "label": "GPT-5.6 Sol Model",
+          "url": "https://developers.openai.com/api/docs/models/gpt-5.6-sol"
+        },
+        {
+          "label": "API Pricing",
+          "url": "https://developers.openai.com/api/docs/pricing"
+        },
+        {
+          "label": "API Changelog",
+          "url": "https://developers.openai.com/api/docs/changelog"
+        }
+      ],
+      "publishDate": "2026-08-10T16:57:44.512Z"
+    },
     {
       "id": "sam-witteveen-muse-glimmer-aug10",
       "categories": [

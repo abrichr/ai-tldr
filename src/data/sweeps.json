@@ -30315,6 +30315,40 @@
         "ecosystem",
         "tutorial"
       ]
+    },
+    {
+      "id": "sweep-20260810t165744z",
+      "timestamp": "2026-08-10T16:57:44.512Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, Chinese labs), GitHub trending, HuggingFace models/datasets/papers/blog, HN front page and newest, tier-1 press, the AI-for-science lane and all 8 YouTube feeds. Added one item: OpenAI's gpt-5.2-chat-latest and gpt-5.3-chat-latest snapshots shut down today. Everything else fresh was already in the feed (Muse Glimmer, Claude Code auto mode, the OpenClaw gym hack, both fresh YouTube videos) or failed the 72h cap (Docker Sandboxes, The Stack v3, GitHub Models retirement, the tl;dv breach, NVIDIA Magpie TTS, semantica).",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-chat-latest-snapshots-sunset-aug10",
+          "title": "OpenAI retires gpt-5.2-chat-latest and gpt-5.3-chat-latest — GPT-5.6 Sol replaces both",
+          "category": "ecosystem",
+          "note": "Dated API shutdown taking effect today with a concrete developer action — repin the model string to gpt-5.6-sol or the call fails; same shape as the accepted deepseek-legacy-api-sunset item."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem",
+        "algorithm"
+      ]
     }
   ]
 }
