@@ -30161,6 +30161,32 @@
         "algorithm",
         "tutorial"
       ]
+    },
+    {
+      "id": "sweep-20260810t072608z",
+      "timestamp": "2026-08-10T07:26:08.304Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Qwen, DeepSeek/Zhipu/MiniMax/Baidu), GitHub trending (daily + weekly), HuggingFace models/datasets/papers, HN front page and page 2, all 8 YouTube creator feeds, tier-1 press, and the AI-for-science lane (STAT News, Nature, Lancet Digital Health, BCI/medical-imaging/drug-discovery searches). Nothing new qualified: both fresh YouTube videos (Wes Roth 'it JUST got so much worse', Two Minute Papers DeepMind) are already in the feed, Anthropic's only August post (Fable 5 biology safeguards) and Claude Code auto-mode-by-default are already in the feed, and every trending HF model (MiniMax H3, Ling-3.0-flash, LFM2.5, Shieldstral, Maple-Preview) is already covered. Rejected on the 72h cap: GitHub Models retirement (Jul 30) and GitHub Spark deprecation (Aug 4), both resurfaced by Simon Willison on Aug 9; Seedance 2.5 (Jul 31, already in feed); Docker Sandboxes (launched Mar 2026). Rejected on the bar: OpenChamber (HN 134 pts, repo from Sep 2025, no dated release), Agent-Reach / book-to-skill / semantica (older repos gaining stars, not a ship), HF papers (top item 19 upvotes, none with code + traction), OpenAI's NextSlide acquisition and the Source Foundry funding round (M&A/funding, no developer action).",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
