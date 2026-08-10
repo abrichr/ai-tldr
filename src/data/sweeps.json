@@ -30246,6 +30246,34 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260810t130441z",
+      "timestamp": "2026-08-10T13:04:41.449Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched the Anthropic/OpenAI/DeepMind/Meta/Mistral/xAI/Qwen/Moonshot/MiniMax/Z.ai lab blogs, GitHub trending, HuggingFace models+datasets+papers, the HN front page, all 8 YouTube creator feeds, Simon Willison/Interconnects, and the bio-neuro-pharma lane (Nature subjects, npj Digital Medicine, STAT News, neurosciencenews, Google Research); every qualifying item inside 72h was already in the feed (Muse Glimmer, Claude Code auto mode, Fable 5 biology safeguards, Grok Imagine Image 2.0, Seedance 2.5, Ling-3.0-flash, WeatherNext Cyclones, the Wes Roth video). The four near-misses all failed the 72h date cap, not the quality bar: Docker Sandboxes (HN #3 today at 322 points but shipped March 31), GitHub Models retirement (July 30), semantica-agi/semantica (+967 stars today but last release July 21), and the gpt-5.2/5.3-chat-latest shutdown (announced May 8).",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "article",
+        "tutorial",
+        "benchmark",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
