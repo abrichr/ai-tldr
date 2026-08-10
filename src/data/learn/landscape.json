@@ -4421,14 +4421,14 @@
        "name": "GPT-Pilot",
        "slug": "gpt-pilot",
        "repo": "Pythagora-io/gpt-pilot",
-       "homepage": "https://pythagora.ai",
+       "homepage": "https://pazi.ai",
        "description": "Autonomous AI developer that breaks down an app description into tasks, writes and runs code incrementally, and asks clarifying questions to produce a working production application."
       },
       {
        "name": "AutoDev",
        "slug": "auto-dev",
        "repo": "unit-mesh/auto-dev",
-       "homepage": "https://ide.unitmesh.cc",
+       "homepage": "https://ide.unitmesh.cc/en/intro",
        "description": "JetBrains and VS Code plugin that automates the full dev lifecycle: generates code from issue tickets, writes test plans, creates CI/CD config, and tracks changes against specs."
       },
       {
