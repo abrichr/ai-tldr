@@ -4284,15 +4284,6 @@
        "logo": "/tools-logos/gh-google-gemini.jpg"
       },
       {
-       "name": "Vibe Kanban",
-       "slug": "vibe-kanban",
-       "repo": "BloopAI/vibe-kanban",
-       "homepage": "https://www.vibekanban.com/",
-       "description": "Vibe Kanban lets you plan tasks on a kanban board, run coding agents like Claude Code and Codex in isolated workspaces, then review their diffs and ship pull requests.",
-       "detail": true,
-       "logo": "/tools-logos/gh-bloopai.png"
-      },
-      {
        "name": "Serena",
        "slug": "serena",
        "repo": "oraios/serena",
@@ -4437,6 +4428,32 @@
        "repo": "sweepai/sweep",
        "homepage": "https://sweep.dev",
        "description": "AI junior developer that converts GitHub issues into pull requests by reading the codebase, planning edits, writing incremental commits, and running CI checks automatically."
+      },
+      {
+       "name": "Vibe Kanban",
+       "slug": "vibe-kanban",
+       "repo": "BloopAI/vibe-kanban",
+       "description": "Vibe Kanban lets you plan tasks on a kanban board, run coding agents like Claude Code and Codex in isolated workspaces, then review their diffs and ship pull requests.",
+       "detail": true,
+       "logo": "/tools-logos/gh-bloopai.png"
+      },
+      {
+       "name": "Apache Superset",
+       "slug": "apache-superset",
+       "repo": "apache/superset",
+       "description": "Open-source data exploration and visualization platform with a SQL IDE, drag-and-drop chart builder, and collaborative dashboards for querying data at scale."
+      },
+      {
+       "name": "conductor.build",
+       "slug": "conductor-build",
+       "homepage": "https://conductor.build",
+       "description": "AI-powered engineering platform for automating software development lifecycle workflows and integrating AI into the delivery pipeline."
+      },
+      {
+       "name": "Nimbalyst",
+       "slug": "nimbalyst",
+       "homepage": "https://nimbalyst.com",
+       "description": "AI development tooling platform for engineering teams providing analytics and workflow automation across the software delivery lifecycle."
       }
      ]
     }
