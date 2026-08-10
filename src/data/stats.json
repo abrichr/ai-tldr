@@ -1,91 +1,91 @@
 {
-  "generatedAt": "2026-08-03",
+  "generatedAt": "2026-08-10",
   "totals": {
-    "releases": 1141,
-    "thisWeek": 54,
-    "thisMonth": 256,
-    "ossTools": 935,
-    "labs": 483,
+    "releases": 1203,
+    "thisWeek": 52,
+    "thisMonth": 259,
+    "ossTools": 940,
+    "labs": 502,
     "learnArticles": 652
   },
   "topLabs": [
     {
       "name": "Anthropic",
-      "count": 96
+      "count": 101
     },
     {
       "name": "OpenAI",
-      "count": 96
+      "count": 100
     },
     {
       "name": "Google",
-      "count": 47
+      "count": 49
     },
     {
       "name": "Simon Willison",
-      "count": 39
-    },
-    {
-      "name": "NVIDIA",
-      "count": 29
+      "count": 42
     },
     {
       "name": "Wes Roth",
-      "count": 28
+      "count": 31
+    },
+    {
+      "name": "NVIDIA",
+      "count": 30
     },
     {
       "name": "Google DeepMind",
-      "count": 22
+      "count": 23
     },
     {
       "name": "Two Minute Papers",
-      "count": 20
+      "count": 23
+    },
+    {
+      "name": "xAI",
+      "count": 19
     },
     {
       "name": "Fireship",
       "count": 18
     },
     {
-      "name": "xAI",
-      "count": 18
+      "name": "Cloudflare",
+      "count": 17
     },
     {
       "name": "Microsoft",
-      "count": 13
-    },
-    {
-      "name": "Mistral AI",
-      "count": 13
+      "count": 14
     }
   ],
   "byCategory": [
     {
       "category": "tool",
-      "count": 266
+      "count": 285
     },
     {
       "category": "model",
-      "count": 187
+      "count": 198
     },
     {
       "category": "ecosystem",
-      "count": 154
+      "count": 159
     },
     {
       "category": "article",
-      "count": 120
+      "count": 124
     },
     {
       "category": "video",
-      "count": 113
+      "count": 120
     },
     {
       "category": "security",
-      "count": 78
+      "count": 85
     },
     {
       "category": "repo",
-      "count": 71
+      "count": 75
     },
     {
       "category": "paper",
@@ -93,18 +93,18 @@
     },
     {
       "category": "showcase",
-      "count": 27
+      "count": 28
     },
     {
       "category": "benchmark",
-      "count": 25
-    },
-    {
-      "category": "resource",
-      "count": 12
+      "count": 27
     },
     {
       "category": "rumor",
+      "count": 14
+    },
+    {
+      "category": "resource",
       "count": 12
     },
     {
@@ -123,26 +123,22 @@
   "byImportance": [
     {
       "importance": "seismic",
-      "count": 17
+      "count": 18
     },
     {
       "importance": "major",
-      "count": 678
+      "count": 719
     },
     {
       "importance": "notable",
-      "count": 434
+      "count": 452
     },
     {
       "importance": "rumor",
-      "count": 12
+      "count": 14
     }
   ],
   "perWeek": [
-    {
-      "weekStart": "2026-05-11",
-      "count": 43
-    },
     {
       "weekStart": "2026-05-18",
       "count": 47
@@ -185,107 +181,111 @@
     },
     {
       "weekStart": "2026-07-27",
-      "count": 54
+      "count": 64
+    },
+    {
+      "weekStart": "2026-08-03",
+      "count": 52
     }
   ],
   "topTools": [
     {
       "name": "OpenClaw",
       "slug": "openclaw",
-      "stars": 384962,
+      "stars": 385726,
       "category": "Agents & Automation"
     },
     {
       "name": "Hermes Agent",
       "slug": "hermes-agent",
-      "stars": 224346,
+      "stars": 228073,
       "category": "Agents & Automation"
     },
     {
       "name": "n8n",
       "slug": "n8n",
-      "stars": 199095,
+      "stars": 200035,
       "category": "Agents & Automation"
     },
     {
       "name": "opencode",
       "slug": "opencode",
-      "stars": 192446,
+      "stars": 195561,
       "category": "AI Coding"
     },
     {
       "name": "AutoGPT",
       "slug": "autogpt",
-      "stars": 185775,
+      "stars": 186474,
       "category": "Agents & Automation"
     },
     {
       "name": "Ollama",
       "slug": "ollama",
-      "stars": 177626,
+      "stars": 178172,
       "category": "Models & Inference"
     },
     {
       "name": "MarkItDown",
       "slug": "markitdown",
-      "stars": 170881,
+      "stars": 172738,
       "category": "Retrieval & Knowledge (RAG)"
     },
     {
       "name": "Stable Diffusion web UI (AUTOMATIC1111)",
       "slug": "stable-diffusion-web-ui-automatic1111",
-      "stars": 164358,
+      "stars": 164464,
       "category": "Multimodal Generation"
-    },
-    {
-      "name": "Transformers",
-      "slug": "transformers",
-      "stars": 163263,
-      "category": "Models & Inference"
     },
     {
       "name": "Firecrawl",
       "slug": "firecrawl",
-      "stars": 159577,
+      "stars": 164400,
       "category": "Data & Labeling"
+    },
+    {
+      "name": "Transformers",
+      "slug": "transformers",
+      "stars": 163518,
+      "category": "Models & Inference"
     },
     {
       "name": "Langflow",
       "slug": "langflow",
-      "stars": 152764,
+      "stars": 153005,
       "category": "App UIs & Builders"
     },
     {
       "name": "Dify",
       "slug": "dify",
-      "stars": 151112,
+      "stars": 151918,
       "category": "Retrieval & Knowledge (RAG)"
     },
     {
       "name": "Open WebUI",
       "slug": "open-webui",
-      "stars": 147648,
+      "stars": 148353,
       "category": "App UIs & Builders"
     },
     {
       "name": "LangChain",
       "slug": "langchain",
-      "stars": 143258,
+      "stars": 143848,
       "category": "App Orchestration"
     },
     {
       "name": "ComfyUI",
       "slug": "comfyui",
-      "stars": 123262,
+      "stars": 125822,
       "category": "Multimodal Generation"
     }
   ],
   "velocity": {
-    "perWeekAvg": 55.5,
+    "perWeekAvg": 57.1,
     "last4Weeks": 245,
-    "prev4Weeks": 207,
-    "momentumPct": 18,
-    "frontierLast90": 490
+    "prev4Weeks": 214,
+    "momentumPct": 14,
+    "frontierLast90": 480
   },
   "labCadence": [
     {
@@ -295,7 +295,7 @@
     },
     {
       "name": "Simon Willison",
-      "releases": 39,
+      "releases": 42,
       "avgDaysBetween": 2.8
     },
     {
@@ -305,7 +305,7 @@
     },
     {
       "name": "Google",
-      "releases": 47,
+      "releases": 49,
       "avgDaysBetween": 3.3
     },
     {
@@ -315,13 +315,13 @@
     },
     {
       "name": "Wes Roth",
-      "releases": 28,
-      "avgDaysBetween": 4.1
+      "releases": 31,
+      "avgDaysBetween": 3.9
     },
     {
       "name": "Two Minute Papers",
-      "releases": 20,
-      "avgDaysBetween": 6.2
+      "releases": 23,
+      "avgDaysBetween": 5.5
     },
     {
       "name": "Fireship",
