@@ -30382,6 +30382,45 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260810t204809z",
+      "timestamp": "2026-08-10T20:48:09.194Z",
+      "source": "github-actions-sweep",
+      "summary": "Anthropic published a research version of Claude raising the Riemann zeta critical-line bound from 41.6% to 67.2% with a public Lean proof, and OpenChamber 1.18.2 shipped an agent observability panel plus Markdown-defined scheduled tasks. Checked lab blogs, GitHub trending (daily and weekly), HuggingFace models/datasets/papers, HN top stories over 72h, and all 8 YouTube creator feeds.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "anthropic-claude-riemann-zeta-bound",
+          "title": "Claude raises a Riemann zeta bound to 67.2% — Anthropic ships the Lean proof",
+          "category": "paper",
+          "note": "Frontier-tech breakthrough from a top lab, posted today on anthropic.com/research with a released Apache-2.0 Lean formalization, HN front page and heavy X discussion."
+        },
+        {
+          "id": "openchamber-1-18-2",
+          "title": "OpenChamber 1.18.2 — agent workspace adds scheduled tasks and a live panel",
+          "category": "tool",
+          "note": "v1.18.2 tagged today on an 8.1K-star MIT project that hit the HN front page at 175 points; two real features plus measured size and memory wins."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }

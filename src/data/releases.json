@@ -1,8 +1,202 @@
 {
-  "generatedAt": "2026-08-10T18:57:13.977Z",
+  "generatedAt": "2026-08-10T20:48:09.194Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "anthropic-claude-riemann-zeta-bound",
+      "categories": [
+        "paper",
+        "repo"
+      ],
+      "title": "Claude raises a Riemann zeta bound to 67.2% — Anthropic ships the Lean proof",
+      "org": "Anthropic",
+      "date": "2026-08-10",
+      "url": "https://www.anthropic.com/research/riemann-zeta",
+      "summary": "An unreleased research version of Claude raised the proven lower bound for Riemann zeta zeros on the critical line from 41.6% to 67.2%. Anthropic published the paper plus a Lean proof that passes the comparator tool.",
+      "tags": [
+        "anthropic",
+        "claude",
+        "claude-code",
+        "mathematics",
+        "number-theory",
+        "riemann-hypothesis",
+        "lean",
+        "formal-verification",
+        "proof-assistant",
+        "ai-for-science",
+        "subagents"
+      ],
+      "importance": "seismic",
+      "metrics": {
+        "New lower bound": "67.2%",
+        "Output tokens used": "31 million"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Anthropic"
+        },
+        {
+          "label": "Model",
+          "value": "Unreleased research version of Claude"
+        },
+        {
+          "label": "Result",
+          "value": "Lower bound raised from 41.6% to 67.2%"
+        },
+        {
+          "label": "Setup",
+          "value": "Two Claude Code sessions, ~60 subagents"
+        },
+        {
+          "label": "Compute",
+          "value": "31M output tokens, 2,400 shell commands"
+        },
+        {
+          "label": "Verification",
+          "value": "Lean proof passing the comparator tool"
+        },
+        {
+          "label": "Code",
+          "value": "github.com/anthropics/zeta-23-lean, Apache-2.0"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "Proven lower bound on Riemann zeta zeros on the critical line",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Claude (Anthropic, 2026)",
+              "score": 67.2,
+              "highlight": true
+            },
+            {
+              "name": "Previous published bound",
+              "score": 41.6
+            }
+          ],
+          "source": "https://www.anthropic.com/research/riemann-zeta"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Did Claude prove the Riemann hypothesis?",
+          "a": "No. Claude improved a lower bound on how many nontrivial zeros of the Riemann zeta function sit on the critical line, moving it from 41.6% to 67.2%. A full proof of the Riemann hypothesis needs 100%. Anthropic states plainly that it does not expect the techniques Claude used here to lead to proving the hypothesis itself."
+        },
+        {
+          "q": "Can I read and check Claude's proof myself?",
+          "a": "Yes. Anthropic published Claude's full paper as a PDF, an informal note explaining the result, the working transcripts, and the Lean formalization in the public repo github.com/anthropics/zeta-23-lean under Apache-2.0. The Lean version passes comparator, the standard validation tool, so the proof can be machine-checked rather than taken on trust."
+        },
+        {
+          "q": "Which Claude model did this, and can I use it?",
+          "a": "Anthropic credits an unreleased research version of Claude, so the exact model is not available in the API or in Claude apps. What is public is the method and the output: the work ran inside Claude Code across two sessions, and every artifact Claude produced has been released for anyone to inspect."
+        },
+        {
+          "q": "How much compute did the Riemann zeta result take?",
+          "a": "Claude used 31 million output tokens in total across two Claude Code sessions. Roughly 60 Claude subagents coordinated the search, running 2,400 shell commands and writing hundreds of Python scripts, including numerical checks against known zeta zeros before the final argument was written up."
+        },
+        {
+          "q": "Who verified the result besides Anthropic?",
+          "a": "Two mathematicians at Anthropic, Levent Alpöge and Ralph Furman, examined the work. Anthropic also credits Brian Conrey and Dan Goldston, two experts in this area, who reviewed the paper on short notice. The Lean formalization gives an independent machine check on top of that human review."
+        }
+      ],
+      "explainer": {
+        "tagline": "A research version of Claude moved a classical number-theory bound and left behind a machine-checkable Lean proof.",
+        "whatIsIt": "Anthropic asked an unreleased research version of Claude to attack the Riemann hypothesis. Claude did not solve it, but it raised the proven lower bound for the fraction of nontrivial zeros of the Riemann zeta function lying on the critical line from 41.6% to 67.2%. Anthropic published the paper, an informal note, the transcripts, and the Lean formalization.",
+        "howItWorks": "The search ran inside Claude Code over two sessions and 31 million output tokens. About 60 subagents coordinated the work, issuing 2,400 shell commands and writing hundreds of Python scripts, including thousands of numerical checks against known zeta zeros. Claude then wrote the argument up as a formally verifiable Lean proof, which passes comparator, the standard validation tool.",
+        "whyItMatters": "Bounds like this normally move by small amounts over decades of human work, so a jump from 41.6% to 67.2% is a concrete data point on what frontier models can now do in research mathematics. The Lean artifact matters as much as the number: it lets any mathematician machine-check the claim instead of arguing about whether a model hallucinated a step.",
+        "forWho": "mathematicians and AI researchers",
+        "tryIt": "git clone https://github.com/anthropics/zeta-23-lean"
+      },
+      "image": {
+        "url": "https://cdn.sanity.io/images/4zrzovbb/website/ca772f1b34e5b58e38694538f017d63f5dd196d9-1200x630.jpg",
+        "alt": "Anthropic research post on Claude's mathematical capabilities and the Riemann zeta function",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.anthropic.com/research/riemann-zeta"
+        },
+        {
+          "label": "Claude's Paper",
+          "url": "https://www-cdn.anthropic.com/564f962e60643842f5fcb4a17c9dbc8f608f1c37.pdf"
+        },
+        {
+          "label": "Lean Proof",
+          "url": "https://github.com/anthropics/zeta-23-lean"
+        },
+        {
+          "label": "Anthropic's Note",
+          "url": "https://www-cdn.anthropic.com/23455459f8832d06bb175cc0f88d019aed962ef8.pdf"
+        },
+        {
+          "label": "Transcripts",
+          "url": "https://www-cdn.anthropic.com/8a0d1add3c637b858a9a181e98c40e9548c3f44f.pdf"
+        }
+      ],
+      "publishDate": "2026-08-10T20:48:09.194Z"
+    },
+    {
+      "id": "openchamber-1-18-2",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "OpenChamber 1.18.2 — agent workspace adds scheduled tasks and a live panel",
+      "org": "OpenChamber",
+      "date": "2026-08-10",
+      "url": "https://github.com/openchamber/openchamber/releases/tag/v1.18.2",
+      "summary": "OpenChamber 1.18.2 adds an observability panel showing the active goal, subagents, MCP servers and context usage in one live view, plus recurring tasks defined as Markdown files in .agents/loops.",
+      "tags": [
+        "openchamber",
+        "opencode",
+        "coding-agent",
+        "agentic-development",
+        "developer-tools",
+        "open-source",
+        "mit-license",
+        "mcp",
+        "typescript",
+        "scheduled-tasks"
+      ],
+      "importance": "notable",
+      "metrics": {
+        "GitHub stars": 8135,
+        "Startup memory": "22% lower"
+      },
+      "explainer": {
+        "tagline": "OpenChamber 1.18.2 puts an agent's goal, subagents and context usage in one live panel, and lets projects schedule recurring agent tasks.",
+        "whatIsIt": "The observability panel is the headline change in OpenChamber 1.18.2. It sits next to the chat and shows the active goal, tasks, subagents, pinned context, MCP servers and context usage in a single live view, and the session list now shows how long an agent has been working. OpenChamber itself is an MIT-licensed desktop, web, mobile and VS Code workspace for running and reviewing AI coding work on top of the OpenCode agent.",
+        "howItWorks": "Recurring work in OpenChamber is defined as plain Markdown files under a project's .agents/loops directory. Opening the task list picks up file changes without a restart, and each loop task can be edited, enabled, disabled, deleted or run straight from the app. The release also splits out heavy settings and syntax-highlighting code so it loads only when needed.",
+        "whyItMatters": "Long-running agent sessions are hard to supervise once subagents and MCP servers multiply, and this release answers that with one screen instead of guesswork about what an agent is doing and how much context is left. The lazy-loading work cuts the initial web download by about 58% and startup memory by about 22%, which matters for the browser and mobile clients.",
+        "forWho": "OpenCode users running long agent sessions",
+        "tryIt": "curl -fsSL https://raw.githubusercontent.com/openchamber/openchamber/main/scripts/install.sh | bash"
+      },
+      "image": {
+        "url": "https://openchamber.dev/og-image.png",
+        "alt": "OpenChamber agentic development environment for running and reviewing AI coding work",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Release Notes",
+          "url": "https://github.com/openchamber/openchamber/releases/tag/v1.18.2"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/openchamber/openchamber"
+        },
+        {
+          "label": "Project Site",
+          "url": "https://openchamber.dev/"
+        }
+      ],
+      "publishDate": "2026-08-10T20:48:09.194Z"
+    },
     {
       "id": "simonw-opus-5-export-controls-aug9",
       "categories": [
