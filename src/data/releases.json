@@ -1,8 +1,200 @@
 {
-  "generatedAt": "2026-08-10T09:20:43.311Z",
+  "generatedAt": "2026-08-10T11:11:40.718Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "meta-muse-glimmer",
+      "categories": [
+        "model"
+      ],
+      "title": "Muse Glimmer — Meta's 30B open agentic model runs on one consumer GPU",
+      "org": "Meta",
+      "date": "2026-08-10",
+      "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+      "summary": "Muse Glimmer is Meta's 30B open-weight agentic model, released under Apache-2.0 to run locally on a single consumer GPU. It scores 75.5 on MCP Atlas and 51.2 on SWE-Bench Pro, ahead of Gemma4-31B and Qwen3.6-27B on both.",
+      "tags": [
+        "model",
+        "meta",
+        "muse-glimmer",
+        "open-weights",
+        "apache-2-0",
+        "agentic",
+        "local-llm",
+        "on-device",
+        "multimodal",
+        "tool-use",
+        "coding",
+        "quantization"
+      ],
+      "importance": "major",
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/meta-models/Muse-Glimmer-30B.png",
+        "alt": "Hugging Face model card for Meta's Muse Glimmer-30B open-weight agentic model",
+        "fit": "contain"
+      },
+      "explainer": {
+        "tagline": "A 30B open-weight agent model from Meta that plans, calls tools and recovers from its own errors on a single desktop GPU.",
+        "whatIsIt": "Muse Glimmer adds an always-on local option to Meta's Muse family: a 30B open-weight model built to act as an agent rather than just chat. It plans a task, calls tools, checks its own results and retries when a step fails. The model reads images as well as text, and Meta ships it under Apache-2.0 with the weights on Hugging Face.",
+        "howItWorks": "Training started as logit distillation from the larger Muse Spark, followed by mid-training on long-context agent traces and reinforcement-learning post-training. The 52-layer dense transformer repeats a [Local, Local, Local, Global] attention pattern over 2,048-token sliding windows and uses grouped query attention with 32 query heads and 2 KV heads, plus a ~1.8B ViT-G/14 encoder for vision. Failure recovery is native: Muse Glimmer diagnoses schema or runtime errors during a tool call and retries the step itself.",
+        "whyItMatters": "Local agents have been blocked by size, not ambition — anything good enough to run a long tool-using loop needed a datacenter. At 4-bit the Muse Glimmer weights drop under 20GB and fit in 24GB of VRAM, and speculative decoding makes generation up to 3.1x faster, so a laptop or desktop can run an agent overnight with no cloud round-trip and no per-token bill. Apache-2.0 also means teams can ship it inside their own products.",
+        "forWho": "developers building local or private AI agents",
+        "tryIt": "from_pretrained(\"meta-models/Muse-Glimmer-30B\") — or pull it in Ollama, LM Studio or vLLM"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Meta"
+        },
+        {
+          "label": "Parameters",
+          "value": "~29.6B dense, incl. 1.8B vision encoder"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        },
+        {
+          "label": "Context window",
+          "value": "131,072 tokens"
+        },
+        {
+          "label": "Runs on",
+          "value": "24GB VRAM at 4-bit (under 20GB)"
+        },
+        {
+          "label": "Availability",
+          "value": "Open weights on Hugging Face; Ollama, LM Studio, vLLM, Together AI, Fireworks AI"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "MCP Atlas",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Muse Glimmer-30B",
+              "score": 75.5,
+              "highlight": true
+            },
+            {
+              "name": "Qwen3.6-27B",
+              "score": 62.5
+            },
+            {
+              "name": "Gemma4-31B",
+              "score": 54.2
+            }
+          ],
+          "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+        },
+        {
+          "name": "SWE-Bench Pro",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Muse Glimmer-30B",
+              "score": 51.2,
+              "highlight": true
+            },
+            {
+              "name": "Qwen3.6-27B",
+              "score": 50.2
+            },
+            {
+              "name": "Gemma4-31B",
+              "score": 36.9
+            }
+          ],
+          "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+        },
+        {
+          "name": "SWE-Bench Verified",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Muse Glimmer-30B",
+              "score": 76,
+              "highlight": true
+            },
+            {
+              "name": "Qwen3.6-27B",
+              "score": 77.2
+            },
+            {
+              "name": "Gemma4-31B",
+              "score": 66.6
+            }
+          ],
+          "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+        },
+        {
+          "name": "AIME 2026",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Muse Glimmer-30B",
+              "score": 94.7,
+              "highlight": true
+            },
+            {
+              "name": "Qwen3.6-27B",
+              "score": 94.1
+            },
+            {
+              "name": "Gemma4-31B",
+              "score": 89.2
+            }
+          ],
+          "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What hardware do you need to run Muse Glimmer?",
+          "a": "Muse Glimmer targets consumer machines. The 4-bit quantized weights come in under 20GB and fit inside 24GB of VRAM with minimal loss in quality, so a single desktop GPU or a Mac with enough unified memory is enough. Speculative decoding speeds generation up to 3.1x, which is what makes a long agent loop practical locally."
+        },
+        {
+          "q": "Can you use Muse Glimmer in a commercial product?",
+          "a": "Yes. Meta released Muse Glimmer under Apache-2.0, a permissive license that allows commercial use, modification and redistribution without a separate agreement. That is a looser arrangement than the custom community licenses Meta has used on past model families, and it lets teams embed the weights directly inside a shipped product."
+        },
+        {
+          "q": "How does Muse Glimmer compare to Qwen3.6-27B?",
+          "a": "Muse Glimmer leads Qwen3.6-27B on agentic and search work — 75.5 versus 62.5 on MCP Atlas and 74.6 versus 71.1 on DeepSearch QA — and edges it on SWE-Bench Pro at 51.2 versus 50.2. Qwen3.6-27B stays ahead on SWE-Bench Verified, 77.2 to 76.0, and on MMMU Pro. The gap is widest on tool use."
+        },
+        {
+          "q": "Does Muse Glimmer accept images as input?",
+          "a": "Yes. Muse Glimmer bundles a roughly 1.8B-parameter ViT-G/14 perception encoder alongside its 52-layer text transformer, so it takes image input as well as text. The published numbers include MMMU Pro, a multimodal reasoning benchmark, where Muse Glimmer scores 74 against 75 for Qwen3.6-27B and 73 for Gemma4-31B."
+        },
+        {
+          "q": "Where can you run Muse Glimmer without hosting it yourself?",
+          "a": "Meta lists partner hosting for Muse Glimmer alongside the local runtimes. Together AI and Fireworks AI serve the model, while Ollama, LM Studio and vLLM cover on-device and self-hosted deployment. The weights and a Transformers loading example live on the Hugging Face model card under meta-models/Muse-Glimmer-30B."
+        }
+      ],
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model"
+        },
+        {
+          "label": "Model Weights",
+          "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+        },
+        {
+          "label": "Developer Docs",
+          "url": "https://developer.meta.com/ai/models/muse-glimmer/"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49241679"
+        }
+      ],
+      "publishDate": "2026-08-10T11:11:40.718Z"
+    },
     {
       "id": "abc-openclaw-gym-hack",
       "categories": [

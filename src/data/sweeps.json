@@ -30212,6 +30212,40 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260810t111140z",
+      "timestamp": "2026-08-10T11:11:40.718Z",
+      "source": "github-actions-sweep",
+      "summary": "Meta released Muse Glimmer, a 30B open-weight Apache-2.0 agentic model that runs on one consumer GPU — the only release in the window that cleared the bar. Lab blogs were otherwise quiet (Anthropic last posted Aug 7, DeepMind's WeatherNext and Mistral's Shieldstral are already in the feed, OpenAI and x.ai 403'd), the single fresh YouTube upload was already ingested, and the HN front page's other AI items (Docker Sandboxes, GitHub Models retirement, Qwen3.8-Max open weights) are all outside the 72h cap or not yet shipped.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "meta-muse-glimmer",
+          "title": "Muse Glimmer — Meta's 30B open agentic model runs on one consumer GPU",
+          "category": "model",
+          "note": "Meta's first open-weight agentic Muse model, announced today on research.meta.ai with weights on Hugging Face; HN front page plus WSJ pickup, and a full benchmark table against Gemma4-31B and Qwen3.6-27B."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }
