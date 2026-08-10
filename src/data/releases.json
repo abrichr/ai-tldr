@@ -1,8 +1,121 @@
 {
-  "generatedAt": "2026-08-10T13:04:41.449Z",
+  "generatedAt": "2026-08-10T15:05:04.028Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "sam-witteveen-muse-glimmer-aug10",
+      "categories": [
+        "video"
+      ],
+      "title": "Sam Witteveen — 'Meta's Open Weight: Muse Glimmer 30B'",
+      "org": "Sam Witteveen",
+      "date": "2026-08-10",
+      "url": "https://www.youtube.com/watch?v=Wjh6wx2dl3Q",
+      "summary": "Sam Witteveen's new video walks through Muse Glimmer, the ~29.6B Apache-2.0 agentic model Meta released today. It takes text and images, holds 131,072+ tokens of context, and fits in 17-20 GB once quantized.",
+      "tags": [
+        "video",
+        "youtube",
+        "sam-witteveen",
+        "muse-glimmer",
+        "meta",
+        "open-weights",
+        "local-llm",
+        "agentic-model",
+        "apache-2-0",
+        "multimodal"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Sam Witteveen walks through Meta's Muse Glimmer, a 30B Apache-2.0 agentic model built to run on one consumer GPU.",
+        "whatIsIt": "Muse Glimmer is the ~29.6B-parameter open-weight model Meta published on 2026-08-10, and this video is Sam Witteveen's same-day walkthrough of it. The model is Apache-2.0, takes text and images as input, and is aimed at always-on local agent work rather than cloud serving.",
+        "howItWorks": "The architecture is a dense causal transformer with a separate ~1.8B perception encoder that turns each image into up to 4,096 visual tokens. Context runs to 131,072+ tokens, and a bundled DFlash drafter does speculative decoding for a 3.1x speedup on an RTX 5090 and 1.5x-1.8x on Apple silicon.",
+        "whyItMatters": "Quantized builds bring Muse Glimmer down to 17-20 GB, so an RTX 5090 or an M4/M5 Max Mac can run the whole agent loop with no API bill. Sam Witteveen's channel is where many local-LLM builders decide what to download first, so a same-day review shapes how fast the weights spread.",
+        "forWho": "local-LLM builders, agent developers",
+        "tryIt": "Watch the video, then pull `meta-models/Muse-Glimmer-30B` from Hugging Face"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/Wjh6wx2dl3Q/hqdefault.jpg",
+        "alt": "Sam Witteveen video thumbnail on Meta's open-weight Muse Glimmer 30B model",
+        "fit": "cover"
+      },
+      "author": {
+        "name": "Sam Witteveen",
+        "profileUrl": "https://www.youtube.com/channel/UC55ODQSvARtgSyc8ThfiepQ"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Wjh6wx2dl3Q"
+        },
+        {
+          "label": "Sam Witteveen Channel",
+          "url": "https://www.youtube.com/channel/UC55ODQSvARtgSyc8ThfiepQ"
+        },
+        {
+          "label": "Meta Announcement",
+          "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model"
+        },
+        {
+          "label": "Model Card",
+          "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+        }
+      ],
+      "publishDate": "2026-08-10T15:05:04.028Z"
+    },
+    {
+      "id": "senko-code-hard-part-aug8",
+      "categories": [
+        "article"
+      ],
+      "title": "Senko Rašić — 'Code was never the hard part' is an insult to programmers",
+      "org": "Senko Rašić",
+      "date": "2026-08-08",
+      "url": "https://blog.senko.net/code-was-never-the-hard-part-is-an-insult-to-all-programmers",
+      "summary": "Senko Rašić pushes back on the line that coding is the easy part of software work. His post hit 912 points and 559 comments on Hacker News, making it the biggest AI-and-programming debate of the week.",
+      "tags": [
+        "article",
+        "opinion",
+        "ai-coding",
+        "software-engineering",
+        "developer-craft",
+        "senko-rasic",
+        "hacker-news"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "A 25-year developer argues the 'coding is easy, deciding what to build is hard' line insults the profession — and 559 HN comments followed.",
+        "whatIsIt": "Senko Rašić's post, published 2026-08-08, answers a claim that spread as AI coding tools got good: that code was never the hard part, and the real work is figuring out what to build. Rašić calls that framing an insult to programmers and takes it apart point by point.",
+        "howItWorks": "The argument runs through a set of questions. If writing code were easy, Rašić asks, why the high salaries, the hard interviews, and the shelves of computer-science textbooks? He also disputes that product decisions are obviously harder, and calls the split between technical skill and customer empathy a false choice — both matter.",
+        "whyItMatters": "Rašić does not tell developers to dismiss AI. He argues the opposite: the industry is being disrupted, and engineers stay responsible for understanding their tools and their decisions. With 912 points and 559 comments on Hacker News, the post became the week's main venue for that argument.",
+        "forWho": "software engineers, engineering managers"
+      },
+      "image": {
+        "url": "https://github.com/senko.png",
+        "alt": "Senko Rašić profile photo",
+        "fit": "cover"
+      },
+      "author": {
+        "name": "Senko Rašić",
+        "profileUrl": "https://blog.senko.net/",
+        "avatarUrl": "https://github.com/senko.png"
+      },
+      "links": [
+        {
+          "label": "Full Post",
+          "url": "https://blog.senko.net/code-was-never-the-hard-part-is-an-insult-to-all-programmers"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49222189"
+        },
+        {
+          "label": "Author on GitHub",
+          "url": "https://github.com/senko"
+        }
+      ],
+      "publishDate": "2026-08-10T15:05:04.028Z"
+    },
     {
       "id": "meta-muse-glimmer",
       "categories": [

@@ -30274,6 +30274,47 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260810t150504z",
+      "timestamp": "2026-08-10T15:05:04.028Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Sam Witteveen's same-day walkthrough of Meta's Muse Glimmer 30B and Senko Rašić's 912-point Hacker News essay on AI and programming craft. Lab blogs were quiet inside the 72h window (Anthropic last posted Aug 7, Meta's Muse Glimmer is already in the feed, Mistral Aug 4, Cohere Aug 6, DeepMind's WeatherNext Aug 6); Qwen3.8 open weights are promised but not yet on Hugging Face.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "sam-witteveen-muse-glimmer-aug10",
+          "title": "Sam Witteveen — 'Meta's Open Weight: Muse Glimmer 30B'",
+          "category": "video",
+          "note": "Fresh from yt-rss-scan (0h old, RSS-confirmed); a creator breakdown is its own item and coexists with the meta-muse-glimmer release entry per the video dedup exception."
+        },
+        {
+          "id": "senko-code-hard-part-aug8",
+          "title": "Senko Rašić — 'Code was never the hard part' is an insult to programmers",
+          "category": "article",
+          "note": "912 points / 559 comments on the HN front page — clears the inclusion bar by a wide margin, published within 72h, and no existing feed item covers this debate."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "article",
+        "paper",
+        "dataset",
+        "benchmark",
+        "algorithm",
+        "security",
+        "ecosystem",
+        "tutorial"
+      ]
     }
   ]
 }
