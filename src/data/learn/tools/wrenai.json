@@ -1,0 +1,70 @@
+{
+  "slug": "wrenai",
+  "name": "Wren AI",
+  "repo": "Canner/WrenAI",
+  "homepage": "https://www.getwren.ai",
+  "access": "open-core",
+  "category": "retrieval-knowledge",
+  "categoryTitle": "Retrieval & Knowledge (RAG)",
+  "subcategory": "rag-frameworks",
+  "subcategoryTitle": "RAG Frameworks & Platforms",
+  "tagline": "Governed text-to-SQL and dashboards for AI agents",
+  "seoTitle": "Wren AI - Open-Source Governed Text-to-SQL for Agents",
+  "metaDescription": "Wren AI is an open-source generative BI engine: it grounds agent-written SQL in a governed semantic layer and context layer across 22+ data sources.",
+  "overview": [
+    "Wren AI is an open-source generative BI (GenBI) engine that lets AI agents generate, deploy, and govern business intelligence — from a governed text-to-SQL answer through to a shareable dashboard — across more than 22 data sources. It is aimed at the gap between a raw LLM writing plausible-but-wrong SQL and a traditional BI tool that cannot be driven by an agent at all.",
+    "What makes the output trustworthy is the layer underneath the model: an open AI context layer plus a governed semantic layer (MDL) that supplies what a database schema alone cannot — business semantics, approved definitions, worked examples, memory, and the unstructured company knowledge that lives in docs, wikis, and chat threads. That knowledge is stored as versionable, evidence-linked files — semantic models, an instructions.md of company definitions, and a memory of queries that worked — so it is reviewable, diff-able, and kept in Git rather than locked inside a vendor UI.",
+    "Correctness is handled with concrete primitives rather than prompting alone: schema-aware retrieval, MDL planning, dry-plan validation, structured errors with hints, value profiling, row limits, and an eval runner. Wren is agent-driven by design — you install the CLI and a small discovery stub for your AI client (Claude Code, Cursor, Cline, Codex and others), then drive it through your existing agent. The core, SDK, and skills are Apache-2.0 licensed; row- and column-level security and access control are reserved for the Cloud and self-hosted tiers. In May 2026 the separate Wren Engine repository was merged into this one under core/, and the older Docker-based chat-first BI product was preserved on the legacy/v1 branch as Wren GenBI Classic."
+  ],
+  "features": [
+    "Governed text-to-SQL grounded in a semantic layer (MDL), with schema-aware retrieval and MDL planning",
+    "An open AI context layer that captures business definitions, examples, and memory as reviewable, Git-friendly files",
+    "Dry-plan validation, row limits, and structured errors with hints to keep agent-generated SQL inside guardrails",
+    "One-command deployment of browser-side dashboards, powered by wren-core-wasm, to your own Vercel or Cloudflare Pages account",
+    "Coverage of 22+ data sources including BigQuery, Snowflake, PostgreSQL, ClickHouse, Amazon Redshift, and Databricks",
+    "Agent-native workflow: a ~50-line discovery stub that auto-detects Claude Code, Cursor, Cline, Codex and other clients, with guides served on demand by the CLI"
+  ],
+  "gettingStarted": {
+    "intro": "Wren is agent-driven: install the CLI, install a one-file discovery stub for your AI client, then let your agent drive the rest. Workflow guides are served from inside the CLI so they always match the installed version.",
+    "steps": [
+      {
+        "heading": "Install the CLI",
+        "body": "The core package includes DuckDB. Add per-datasource and memory extras as you need them.",
+        "code": "pip install wrenai                      # core (DuckDB included)\npip install \"wrenai[postgres,memory]\"   # add per-datasource and memory extras as needed",
+        "lang": "bash"
+      },
+      {
+        "heading": "Install the discovery stub for your AI client",
+        "body": "The stub teaches your agent to fetch workflow guides via wren skills get <name> and shaped prompts via wren ask.",
+        "code": "npx skills add Canner/WrenAI            # auto-detects Claude Code, Cursor, Cline, Codex, …",
+        "lang": "bash"
+      },
+      {
+        "heading": "Ask your agent to set things up",
+        "body": "Open your agent in a project directory and ask it to connect a database — for example, \"Use Wren to set up my Postgres database.\" The agent runs wren skills get onboarding, checks your environment, creates a connection profile, scaffolds the project, and runs a first query.",
+        "code": "",
+        "lang": ""
+      },
+      {
+        "heading": "Enrich the project with business context",
+        "body": "Ask the agent to enrich the project from your raw material. It runs wren skills get enrich-context in either grill mode (one question at a time) or auto-pilot mode (it reads <project>/raw/ and proposes), writing to MDL, instructions, queries, and memory — all reviewable and Git-friendly.",
+        "code": "",
+        "lang": ""
+      },
+      {
+        "heading": "Ask questions and deploy a dashboard",
+        "body": "Ask a business question and the agent fetches MDL context, recalls similar past queries, writes governed SQL, and executes it via wren query. Ask it to turn the answer into a dashboard and it runs wren skills get genbi, builds a browser-side app from your project's context, previews it locally, and ships it to your own Vercel or Cloudflare Pages account.",
+        "code": "",
+        "lang": ""
+      }
+    ]
+  },
+  "useCases": [
+    "Let an AI agent answer business questions in SQL without letting it guess at your schema or your metric definitions",
+    "Keep business logic — definitions, enums, units, approved joins — in a reviewable, version-controlled semantic layer instead of in prompts",
+    "Turn an ad-hoc analytical answer into a shareable dashboard deployed to your own Vercel or Cloudflare Pages account",
+    "Query across a mixed warehouse estate (BigQuery, Snowflake, PostgreSQL, ClickHouse, Redshift, Databricks) through one governed interface"
+  ],
+  "language": "Python",
+  "license": "Apache-2.0"
+}

@@ -670,7 +670,7 @@
             {
               "name": "GPT-5.5 Instant",
               "slug": "gpt-5-5-instant",
-              "blurb": "New ChatGPT default; ~52% fewer hallucinations on high-stakes prompts vs GPT-5.3 Instant.",
+              "blurb": "ChatGPT default from May 5, 2026 until August 6, 2026; ~52% fewer hallucinations on high-stakes prompts vs GPT-5.3 Instant.",
               "tags": [
                 "proprietary",
                 "reasoning"

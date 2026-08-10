@@ -1,0 +1,63 @@
+{
+  "slug": "elizaos",
+  "name": "elizaOS",
+  "repo": "elizaOS/eliza",
+  "homepage": "https://elizaos.ai/",
+  "category": "agents",
+  "categoryTitle": "Agents & Automation",
+  "subcategory": "general-agents",
+  "subcategoryTitle": "Agent Frameworks & Builders",
+  "tagline": "A TypeScript runtime and product stack for autonomous AI agents",
+  "seoTitle": "elizaOS - Open-Source TypeScript AI Agent Framework",
+  "metaDescription": "elizaOS is an open-source TypeScript framework for autonomous AI agents: a model-agnostic plugin runtime plus the Eliza app, a CLI, and optional local inference.",
+  "overview": [
+    "elizaOS is an open-source TypeScript framework and product stack for autonomous AI agents. The monorepo carries the core runtime, the Eliza end-user app, the elizaos CLI, cloud services, native bridges, and a set of first-party plugins, so you can either embed the runtime in your own code or run the finished agent application on top of it.",
+    "The framework is model-agnostic and extended entirely through plugins. @elizaos/core defines the AgentRuntime, the canonical types, the message loop, and the memory and state primitives, along with the plugin contracts themselves. A plugin exports a Plugin object that can register actions, providers, evaluators, services, model handlers, routes, events, tests, and app views — which is how capabilities such as messaging connectors, browser and desktop automation, calendar and inbox domains, and wallet operations are added rather than baked into the core.",
+    "Where the model runs is a routing decision, not a lock-in. The local-inference plugin provides an on-device path whose Eliza-1 registry contains 2B, 4B, 9B, and 27B text tiers based on Gemma 4, plus local embeddings, speech, vision, and image-generation assets; hardware detection picks a supported backend, and eligible operations can run without a network connection once assets are downloaded. Eliza Cloud is optional and adds hosted model routing, deployment, and cross-device services, while direct model-provider configuration stays a first-class path. The bootable Linux and Android distributions live in a separate elizaOS/os repository."
+  ],
+  "features": [
+    "Model-agnostic AgentRuntime in @elizaos/core with typed message loop, memory, and state primitives",
+    "Plugin contracts that register actions, providers, evaluators, services, model handlers, routes, events, tests, and app views",
+    "The elizaos CLI for scaffolding, upgrading, and deploying projects and plugins",
+    "Optional on-device inference via the Eliza-1 registry (2B/4B/9B/27B text tiers based on Gemma 4, plus embeddings, speech, vision, and image assets)",
+    "Per-capability routing between local, direct-provider, and Eliza Cloud backends",
+    "The Eliza app for web, desktop, and mobile, with chat, voice, memory, knowledge, workspace connectors, and native device bridges supplied by plugins"
+  ],
+  "gettingStarted": {
+    "intro": "You can either scaffold a new project with the CLI or run the monorepo from source. The repository pins its Bun and Node versions in package.json, so install those versions first.",
+    "steps": [
+      {
+        "heading": "Install the CLI and scaffold a project",
+        "body": "The beta CLI is published as the unscoped elizaos package. Projects are deployable workspaces; plugins are reusable capability packages.",
+        "code": "bun add --global elizaos@beta\nelizaos create my-project --template project\nelizaos create plugin-example --template plugin",
+        "lang": "bash"
+      },
+      {
+        "heading": "Or run the repository from source",
+        "body": "bun install also prepares submodules, patches, and runtime artifacts. For a smaller development install that skips the large artifact bundle, use bun run install:light instead.",
+        "code": "git clone --filter=blob:none https://github.com/elizaos/eliza.git\ncd eliza\nbun install\nbun run dev",
+        "lang": "bash"
+      },
+      {
+        "heading": "Build, verify, and test",
+        "body": "The repository exposes one script per lane. bun run verify runs the package parity, dependency, type, lint, and audit gates.",
+        "code": "bun run build       # build the workspace with Turbo\nbun run verify      # package parity, dependency, type, lint, and audit gates\nbun run test        # unit/integration lane\nbun run test:e2e    # end-to-end lane\nbun run cloud:mock  # local Eliza Cloud stack with mocks",
+        "lang": "bash"
+      },
+      {
+        "heading": "Embed the runtime directly",
+        "body": "To use the runtime without the CLI or the application host, import @elizaos/core in your own TypeScript project. The scenario runner gives you executable integration coverage against a real runtime and, when configured, live models.",
+        "code": "",
+        "lang": ""
+      }
+    ]
+  },
+  "useCases": [
+    "Build a long-running autonomous agent in TypeScript without committing to one model provider",
+    "Package a capability — a connector, a tool, a domain workflow — as a reusable plugin instead of forking an agent",
+    "Run an agent whose model calls stay on-device, using the local-inference plugin's Eliza-1 tiers",
+    "Ship an end-user agent app across web, desktop, and mobile on top of a runtime you also control in code"
+  ],
+  "language": "TypeScript",
+  "license": "MIT"
+}

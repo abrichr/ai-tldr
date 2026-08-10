@@ -1,0 +1,63 @@
+{
+  "slug": "rig",
+  "name": "Rig",
+  "repo": "0xPlaygrounds/rig",
+  "homepage": "https://rig.rs",
+  "category": "orchestration",
+  "categoryTitle": "App Orchestration",
+  "subcategory": "app-frameworks",
+  "subcategoryTitle": "App Frameworks",
+  "tagline": "Build modular, scalable LLM applications in Rust",
+  "seoTitle": "Rig - Rust Framework for LLM Apps and Agents",
+  "metaDescription": "Rig is an open-source Rust library for LLM-powered apps: one unified interface over 20+ model providers and 10+ vector stores, plus an agent runtime with streaming.",
+  "overview": [
+    "Rig is a Rust library for building scalable, modular, and ergonomic LLM-powered applications. It gives you a single unified interface over more than 20 model providers and more than 10 vector store integrations, so provider choice becomes a configuration detail rather than something threaded through your application code. Alongside completion and embedding workflows it also covers transcription, audio generation, and image generation model capabilities.",
+    "The crate separates portable contracts from orchestration. rig-core holds provider-neutral messages, completion models, portable tools, and the memory and vector-store contracts along with built-in provider mappings; rig-agent holds the classic agent builder, prompt and streaming traits, typed hooks, contextual tools, extraction, and the serializable AgentRun state machine. The root rig facade re-exports both at their familiar paths, so most code only ever depends on rig. Integrations are opt-in behind one Cargo feature each — bedrock, lancedb, milvus, mongodb, fastembed, vertexai and more — which keeps builds lean.",
+    "Rig targets agentic workflows with multi-turn streaming and prompting, is fully compatible with the OpenTelemetry GenAI semantic conventions for tracing, and supports browser WASM (wasm32-unknown-unknown) for the portable core and the classic runtime. It is used in production by projects including St. Jude's proteinpaint genomics tool, Coral Protocol's Rust SDK, Nethermind, Neon's app.build V2, and the ilert incident-management platform. The README carries an explicit warning that the project ships breaking changes as it evolves, so pin your version."
+  ],
+  "features": [
+    "One unified interface over 20+ model providers and 10+ vector store integrations",
+    "Agentic workflows with multi-turn streaming and prompting, on a classic agent runtime enabled by default",
+    "Full support for completion and embedding workflows, plus transcription, audio generation, and image generation",
+    "OpenTelemetry GenAI semantic convention compatibility for tracing",
+    "Feature-gated companion crates (bedrock, lancedb, milvus, mongodb, fastembed, vertexai, candle, memory, and more) so you compile only what you use",
+    "Browser WASM (wasm32-unknown-unknown) support for the portable core and classic runtime"
+  ],
+  "gettingStarted": {
+    "intro": "Add the crate, set your provider's API key in the environment, then build an agent and prompt it. Use the root rig facade when you want feature-gated access to companion crates, or rig-core directly when you only need the core provider abstractions.",
+    "steps": [
+      {
+        "heading": "Add Rig to your project",
+        "body": "The async example below uses Tokio's macros, so enable those features too.",
+        "code": "cargo add rig\n# or: cargo add rig-core\ncargo add tokio --features macros,rt-multi-thread",
+        "lang": "bash"
+      },
+      {
+        "heading": "Build an agent and prompt it",
+        "body": "Create a provider client from the environment, give the agent a preamble, and await a prompt.",
+        "code": "use rig::prelude::*;\nuse rig::providers::openai;\n\n#[tokio::main]\nasync fn main() -> Result<(), anyhow::Error> {\n    // Create OpenAI client\n    let client = openai::Client::from_env()?;\n\n    // Create agent with a single context prompt\n    let comedian_agent = client\n        .agent(openai::GPT_5_2)\n        .preamble(\"You are a comedian here to entertain the user using humour and jokes.\")\n        .build();\n\n    // Prompt the agent and print the response\n    let response = comedian_agent.prompt(\"Entertain me!\").await?;\n\n    println!(\"{response}\");\n\n    Ok(())\n}",
+        "lang": "rust"
+      },
+      {
+        "heading": "Enable the integrations you need",
+        "body": "Each companion crate sits behind its own Cargo feature on the rig facade, and is then reachable at rig::<module>.",
+        "code": "rig = { version = \"0.36.0\", features = [\"lancedb\", \"fastembed\"] }",
+        "lang": "toml"
+      },
+      {
+        "heading": "Explore further",
+        "body": "Each crate has its own examples directory, and provider-specific integration coverage lives under tests/providers with cassette-backed tests that replay offline by default. Full guides are published at rig.rs/docs and the API reference at docs.rs/rig.",
+        "code": "",
+        "lang": ""
+      }
+    ]
+  },
+  "useCases": [
+    "Build an LLM application in Rust when you need native performance or want to stay in an existing Rust service",
+    "Swap between model providers, or run several side by side, behind one interface instead of per-vendor SDK code",
+    "Add retrieval to a Rust app using a vector store integration such as LanceDB, Milvus, or MongoDB",
+    "Instrument agent runs with OpenTelemetry GenAI traces for production observability"
+  ],
+  "language": "Rust",
+  "license": "MIT"
+}

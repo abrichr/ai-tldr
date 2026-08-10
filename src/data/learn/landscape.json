@@ -1886,6 +1886,15 @@
        "description": "An MCP server that feeds simplified Figma layout and styling data to AI coding tools like Cursor so they can implement designs accurately.",
        "detail": true,
        "logo": "/tools-logos/gh-glips.jpg"
+      },
+      {
+       "name": "Wren AI",
+       "slug": "wrenai",
+       "repo": "Canner/WrenAI",
+       "homepage": "https://www.getwren.ai",
+       "description": "An open-source generative BI engine that grounds agent-written SQL in a governed semantic layer (MDL) and an AI context layer, turning natural-language questions into validated SQL, charts, and deployable dashboards across 22+ data sources.",
+       "access": "open-core",
+       "detail": true
       }
      ]
     },
@@ -3039,6 +3048,14 @@
        "description": "CAI (Cybersecurity AI) is an open-source Python framework for building AI agents that automate offensive and defensive security tasks like recon, vulnerability discovery, and exploitation.",
        "detail": true,
        "logo": "/tools-logos/gh-aliasrobotics.png"
+      },
+      {
+       "name": "elizaOS",
+       "slug": "elizaos",
+       "repo": "elizaOS/eliza",
+       "homepage": "https://elizaos.ai/",
+       "description": "An open-source TypeScript framework and product stack for autonomous AI agents, built around a model-agnostic plugin runtime that ships with a user-facing agent app, a CLI, and optional local on-device inference.",
+       "detail": true
       }
      ]
     },
@@ -4451,6 +4468,14 @@
        "description": "An orchestration framework from deepset for building modular LLM pipelines and agents for search, RAG, and question answering.",
        "detail": true,
        "logo": "/tools-logos/gh-deepset-ai.png"
+      },
+      {
+       "name": "Rig",
+       "slug": "rig",
+       "repo": "0xPlaygrounds/rig",
+       "homepage": "https://rig.rs",
+       "description": "A Rust library for building LLM-powered applications, giving one unified interface over 20+ model providers and 10+ vector stores plus an agent runtime with streaming, tools, and OpenTelemetry GenAI tracing.",
+       "detail": true
       }
      ]
     },

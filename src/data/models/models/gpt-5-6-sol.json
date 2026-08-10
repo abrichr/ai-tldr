@@ -30,14 +30,17 @@
   "overview": [
     "GPT-5.6 Sol is the flagship model in OpenAI's GPT-5.6 series, first announced on June 26, 2026 as a limited preview to around 20 vetted partners and publicly released across the API, Codex, and ChatGPT on July 9, 2026 alongside two smaller tiers, Terra and Luna. OpenAI describes Sol as its strongest model for complex reasoning, advanced coding, agent workflows, and demanding enterprise tasks.",
     "Sol introduces a new max reasoning effort setting that gives the model more time to think, plus an ultra mode that delegates work to subagents to accelerate large, multi-step jobs. The model accepts text and image input, supports a 1,050,000-token context window with up to 128,000 output tokens, and carries a February 16, 2026 knowledge cutoff.",
-    "OpenAI positions Sol as the workhorse tier of the GPT-5.6 family — frontier intelligence for professional work — priced at $5.00 per 1M input tokens and $30.00 per 1M output tokens, the same headline rate as GPT-5.5."
+    "OpenAI positions Sol as the workhorse tier of the GPT-5.6 family — frontier intelligence for professional work — priced at $5.00 per 1M input tokens and $30.00 per 1M output tokens, the same headline rate as GPT-5.5.",
+    "On August 6, 2026 OpenAI shipped an updated Sol to ChatGPT for Plus and Pro users, adding a slider that lets the user choose how much effort ChatGPT spends on a response. OpenAI's system card distinguishes this snapshot as the 'August' version; the July version remains in use in Codex and ChatGPT Work. The August release reduces factual error rates by roughly 60% versus GPT-5.5 Instant across all three of OpenAI's hallucination prompt sets (factuality-heavy, user-flagged failures, and high-stakes medical, legal, and financial prompts), and improves on every HealthBench evaluation — most sharply on HealthBench Professional (+15.6 points) and HealthBench Hard (+8.5). Under OpenAI's Preparedness Framework the August release is treated as High capability in both Cybersecurity and Biological and Chemical domains."
   ],
   "strengths": [
     "Frontier reasoning with a new max reasoning effort tier",
     "Ultra mode that orchestrates subagents for long-horizon agentic work",
     "State-of-the-art Terminal-Bench 2.1 score for command-line coding workflows",
     "Stronger SecureBio biology and cybersecurity reasoning than GPT-5.5",
-    "Improved factuality, with fewer reported hallucinations than the prior flagship"
+    "Improved factuality, with fewer reported hallucinations than the prior flagship",
+    "August 2026 release cuts factual error rates by roughly 60% versus GPT-5.5 Instant on all three of OpenAI's hallucination prompt sets",
+    "Best-in-family health performance: 54.0 length-adjusted on HealthBench Professional, up 15.6 points on GPT-5.5 Instant"
   ],
   "useCases": [
     "Reach for it when an agentic coding task needs the most capable single model and the longest reasoning budget.",
@@ -52,6 +55,34 @@
       "unit": "%",
       "max": 100,
       "source": "https://openai.com/index/previewing-gpt-5-6-sol/"
+    },
+    {
+      "name": "HealthBench (length-adjusted, August release)",
+      "score": 55.0,
+      "unit": "",
+      "max": 100,
+      "source": "https://deploymentsafety.openai.com/gpt-5-6-august-update"
+    },
+    {
+      "name": "HealthBench Hard (length-adjusted, August release)",
+      "score": 31.4,
+      "unit": "",
+      "max": 100,
+      "source": "https://deploymentsafety.openai.com/gpt-5-6-august-update"
+    },
+    {
+      "name": "HealthBench Consensus (length-adjusted, August release)",
+      "score": 95.5,
+      "unit": "",
+      "max": 100,
+      "source": "https://deploymentsafety.openai.com/gpt-5-6-august-update"
+    },
+    {
+      "name": "HealthBench Professional (length-adjusted, August release)",
+      "score": 54.0,
+      "unit": "",
+      "max": 100,
+      "source": "https://deploymentsafety.openai.com/gpt-5-6-august-update"
     }
   ],
   "comparisonTable": {
@@ -123,6 +154,11 @@
       "kind": "model-card"
     },
     {
+      "label": "GPT-5.6 — August Updates system card (OpenAI Deployment Safety Hub, August 6, 2026)",
+      "url": "https://deploymentsafety.openai.com/gpt-5-6-august-update",
+      "kind": "model-card"
+    },
+    {
       "label": "OpenAI launches its new family of models with GPT-5.6 (TechCrunch)",
       "url": "https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/",
       "kind": "review"
@@ -149,6 +185,10 @@
     {
       "q": "What is ultra mode in GPT-5.6 Sol?",
       "a": "Ultra mode is a new setting introduced with GPT-5.6 Sol that goes beyond single-agent reasoning by delegating subtasks to subagents to accelerate complex work. Combined with the new max reasoning effort, it lets Sol invest more compute on long-horizon, multi-step problems such as agentic coding."
+    },
+    {
+      "q": "What changed in the August 2026 update to GPT-5.6 Sol?",
+      "a": "On August 6, 2026 OpenAI shipped an updated GPT-5.6 Sol to ChatGPT Plus and Pro users, replacing GPT-5.5 Instant and adding a slider that controls how much effort ChatGPT spends on a response. OpenAI reports the August version cuts factual error rates by roughly 60% versus GPT-5.5 Instant across all three of its hallucination prompt sets, and improves on all four HealthBench evaluations — 55.0 on HealthBench, 31.4 on HealthBench Hard, 95.5 on HealthBench Consensus, and 54.0 on HealthBench Professional (length-adjusted). The July version of Sol remains in use in Codex and ChatGPT Work."
     }
   ],
   "versionHistory": [
