@@ -30872,6 +30872,46 @@
       ],
       "removed": [],
       "coverage": []
+    },
+    {
+      "id": "sweep-20260811t204713z",
+      "timestamp": "2026-08-11T20:47:13.202Z",
+      "source": "github-actions-sweep",
+      "summary": "Added two items: the Semantica 0.6.5 security release (six externally reported issues, three critical, including an unauthenticated Explorer API) and the Google Developers Blog argument that Go suits AI-assisted engineering (176 points on HN). All five fresh YouTube videos from the RSS scan were already in the feed, as were Mistral's in-region inference post, Nemotron 3.5 Lightning, NeMo Switchyard, Mojo 1.0, Motif 3, SWE-Bench ProMax, The Stack v3 and the stolen-reasoning-traces research.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "semantica-0-6-5",
+          "title": "Semantica 0.6.5 — six security holes closed in the AI knowledge-graph store",
+          "category": "security",
+          "note": "Second on GitHub daily trending (+2,009 stars this week) with a same-day release fixing three critical vulnerabilities, including missing auth on all 11 Explorer API routes — a concrete upgrade-now action for anyone running it."
+        },
+        {
+          "id": "cameron-balahan-go-ai-assisted-aug11",
+          "title": "Cameron Balahan — 'Go is an ideal language for AI-assisted software engineering'",
+          "category": "article",
+          "note": "HN front page at 176 points and 226 comments, published today by Go's product lead; a contested argument about how AI-written code changes language choice."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "article",
+        "security",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }

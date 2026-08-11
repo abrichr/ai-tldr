@@ -1,8 +1,167 @@
 {
-  "generatedAt": "2026-08-11T19:06:54.263Z",
+  "generatedAt": "2026-08-11T20:47:13.202Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "semantica-0-6-5",
+      "categories": [
+        "security",
+        "repo",
+        "tool"
+      ],
+      "title": "Semantica 0.6.5 — six security holes closed in the AI knowledge-graph store",
+      "org": "Semantica",
+      "date": "2026-08-11",
+      "url": "https://github.com/semantica-agi/semantica/releases/tag/v0.6.5",
+      "summary": "Semantica 0.6.5 fixes six reported vulnerabilities, three of them critical: all 11 Explorer API routes answered without credentials, plus Cypher injection, SPARQL injection and SSRF. It also adds an embedded Oxigraph SPARQL backend.",
+      "tags": [
+        "semantica",
+        "security",
+        "vulnerability",
+        "knowledge-graph",
+        "agent-memory",
+        "sparql",
+        "cypher",
+        "ssrf",
+        "injection",
+        "python",
+        "open-source",
+        "provenance"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Semantica (semantica-agi)"
+        },
+        {
+          "label": "Version",
+          "value": "v0.6.5, August 11, 2026"
+        },
+        {
+          "label": "License",
+          "value": "MIT"
+        },
+        {
+          "label": "Fixed",
+          "value": "6 externally reported issues, 3 critical"
+        },
+        {
+          "label": "Must upgrade",
+          "value": "Anyone running the Explorer API"
+        },
+        {
+          "label": "New backend",
+          "value": "Embedded Oxigraph, in-process SPARQL 1.1"
+        },
+        {
+          "label": "Install",
+          "value": "pip install \"semantica[tripletstore-oxigraph]\""
+        }
+      ],
+      "faq": [
+        {
+          "q": "How do I turn authentication back on after upgrading Semantica?",
+          "a": "Semantica 0.6.5 adds a require_auth dependency that checks an X-API-Key request header against the SEMANTICA_API_KEY environment variable before any Explorer route runs. Set that variable in the environment where the Explorer API is served. Before this release all 11 Explorer API routers accepted requests with no credentials at all."
+        },
+        {
+          "q": "Does Semantica still need a separate graph server?",
+          "a": "Semantica 0.6.5 ships an embedded Oxigraph TripletStore backend that answers SPARQL 1.1 in-process, so a small deployment no longer has to run and secure an external triplet store. Semantica also gained an Altair Anzo backend that speaks SPARQL 1.1 over HTTP for teams that already run one. The Oxigraph path installs as an extra."
+        },
+        {
+          "q": "What changed between Semantica 0.6.0 and 0.6.5?",
+          "a": "Semantica 0.6.0, released July 21, 2026, was a functionality release: cross-backend SPARQL parity, Databricks and SQLite connectors, and seven correctness fixes in provenance and reasoning. Semantica 0.6.5 is security-led instead, pairing the six advisories with 25 or more correctness fixes and a 34-test SPARQL security suite."
+        },
+        {
+          "q": "Who found the Semantica vulnerabilities?",
+          "a": "All six issues in Semantica 0.6.5 were reported externally rather than found in-house. The published advisory for the SSRF issue, GHSA-8c7v-62gr-hj6g, credits KaifAhmad1 as the reporter. The remaining reports cover missing Explorer API authentication, Cypher injection, SPARQL injection, WebSocket origin validation, and a polynomial regular-expression denial of service."
+        }
+      ],
+      "explainer": {
+        "tagline": "Semantica shipped a security release after six outside reports, three of them rated critical.",
+        "whatIsIt": "Semantica 0.6.5 is a security release, and its headline finding is blunt: every one of the Explorer API's 11 routers used to answer requests without any credentials. Semantica itself is an MIT-licensed Python library that keeps context for AI agents in a knowledge graph and records where each fact came from. The project sits at 4,788 stars on GitHub and was the second-fastest riser on GitHub's daily trending list.",
+        "howItWorks": "A new require_auth dependency validates an X-API-Key header against the SEMANTICA_API_KEY environment variable before any Explorer route executes. Fresh validation modules sanitize node labels, property keys and IRIs at every point where a Cypher or SPARQL query gets built, covering the Neptune, Neo4j and FalkorDB backends. URL fetching now follows redirects by hand with a five-hop cap and pins the resolved IP address, and the SPARQL prefix regex was rewritten with character-disjoint quantifiers plus a 10,000-character query limit.",
+        "whyItMatters": "Any team that put the Explorer API on a network was running it open to whoever could reach it, so this is an upgrade-now release rather than a nice-to-have. The same version also removes arbitrary code execution through pickle, XML external entity handling in the RDF/XML parser, and a denial of service from unbounded graph materialization. Alongside the fixes, the embedded Oxigraph backend cuts a separate triplet-store server out of small deployments.",
+        "forWho": "teams running agent memory on a knowledge graph",
+        "tryIt": "pip install \"semantica[tripletstore-oxigraph]\""
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/semantica-agi/semantica",
+        "alt": "GitHub social card for the semantica-agi/semantica repository",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Release Notes",
+          "url": "https://github.com/semantica-agi/semantica/releases/tag/v0.6.5"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/semantica-agi/semantica"
+        },
+        {
+          "label": "Security Advisories",
+          "url": "https://github.com/semantica-agi/semantica/security/advisories"
+        }
+      ],
+      "publishDate": "2026-08-11T20:47:13.202Z"
+    },
+    {
+      "id": "cameron-balahan-go-ai-assisted-aug11",
+      "categories": [
+        "article"
+      ],
+      "title": "Cameron Balahan — 'Go is an ideal language for AI-assisted software engineering'",
+      "org": "Google Developers Blog",
+      "author": {
+        "name": "Cameron Balahan",
+        "profileUrl": "https://github.com/cameronbalahan",
+        "avatarUrl": "https://github.com/cameronbalahan.png"
+      },
+      "date": "2026-08-11",
+      "url": "https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering/",
+      "summary": "Google's Go product lead Cameron Balahan and Google Cloud's Richard Seroter argue that Go fits AI-assisted engineering because the job has moved from writing code to reviewing what a model generated.",
+      "tags": [
+        "go",
+        "golang",
+        "ai-assisted-coding",
+        "coding-agents",
+        "code-review",
+        "developer-tools",
+        "static-typing",
+        "gofmt",
+        "google"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "The Go team's case: the hard part is now reading machine-written code, and Go was designed to be read.",
+        "whatIsIt": "Cameron Balahan, Google's group product manager for Go, and Richard Seroter, chief evangelist for Google Cloud, published an argument on August 11, 2026 that Go suits AI-assisted software engineering. Their starting claim is that what matters is no longer how easy a language is to write, because a model writes most of it, but how cheap the result is to review, verify and maintain. The post is a design argument, not a product launch and not a benchmark.",
+        "howItWorks": "Four language properties carry the case. Go favors predictability and explicit structure over clever shorthand, and the built-in gofmt formatter gives every file one layout, so generated code looks the same across projects. The static type system catches invented API calls at compile time instead of at runtime. A large standard library steers a model toward maintained packages rather than outside dependencies, and the Go 1 compatibility promise means code written years ago still builds on the current toolchain.",
+        "whyItMatters": "Reframing language choice around review cost matters if a team now reads far more machine-written code than it writes by hand. Hacker News pushed back hard across 226 comments: readers noted the post offers no measurements, pointed at Uber research finding more concurrency bugs in Go than in other languages, and argued that Rust's stricter compiler gives a model even tighter guardrails. Balahan and Seroter present design reasoning, so the claim is worth weighing rather than taking as measured.",
+        "forWho": "backend teams picking a language for agent-written code"
+      },
+      "image": {
+        "url": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Go_Logo_-_Blue.2e16d0ba.fill-1200x600.png",
+        "alt": "Blue Go language logo used on the Google Developers Blog post",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Blog Post",
+          "url": "https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering/"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49261133"
+        },
+        {
+          "label": "Compatibility Promise",
+          "url": "https://go.dev/doc/go1compat"
+        }
+      ],
+      "publishDate": "2026-08-11T20:47:13.202Z"
+    },
     {
       "id": "modular-mojo-1-0",
       "categories": [
