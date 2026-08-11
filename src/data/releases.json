@@ -1,8 +1,115 @@
 {
-  "generatedAt": "2026-08-11T07:05:10.184Z",
+  "generatedAt": "2026-08-11T08:57:28.402Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "anthropic-claude-content-marking",
+      "categories": [
+        "ecosystem",
+        "tool"
+      ],
+      "title": "Claude marks its output — Anthropic adds text watermarks and C2PA file metadata",
+      "org": "Anthropic",
+      "date": "2026-08-10",
+      "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
+      "summary": "Anthropic now marks Claude output. Supported models weave an invisible watermark into generated text, and generated .svg, .png and .jpg files carry signed C2PA provenance metadata. Marking covers the API and every Claude product.",
+      "tags": [
+        "anthropic",
+        "claude",
+        "watermarking",
+        "provenance",
+        "c2pa",
+        "ai-content-detection",
+        "eu-ai-act",
+        "transparency",
+        "api"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "Claude output now carries a hidden text watermark and signed C2PA metadata on generated files.",
+        "whatIsIt": "Anthropic has started marking what Claude generates. Supported Claude models embed an imperceptible watermark inside the text itself, so the mark travels with the words when someone copies and pastes them somewhere else. Generated .svg, .png and .jpg files get signed provenance metadata instead. Models launched on or after August 2, 2026 support marking at launch, and Anthropic says it is adding marking to models it already released.",
+        "howItWorks": "The text watermark is woven into the wording as the model writes, not bolted on as a separate tag, and Anthropic says it does not change the meaning, quality or readability of the response. For files, Claude attaches signed provenance metadata that follows the C2PA open standard, so a valid signed record can show that Claude processed the file and whether someone altered that record.",
+        "whyItMatters": "EU AI Act Article 50 requires providers of generative systems to mark output in a machine-readable format that is detectable as artificially generated, and this marking is Anthropic's answer to it. The marks apply worldwide rather than only in Europe, and reach third-party hosts including AWS, Google Cloud and Microsoft Foundry, so anyone building on Claude ships marked output by default. Anthropic warns that a detected mark is not conclusive evidence and that a missing mark does not prove AI was not involved.",
+        "forWho": "developers shipping Claude output"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Anthropic"
+        },
+        {
+          "label": "Text marking",
+          "value": "Imperceptible watermark inside the text"
+        },
+        {
+          "label": "File marking",
+          "value": "Signed C2PA metadata on .svg, .png, .jpg"
+        },
+        {
+          "label": "Covered models",
+          "value": "Launched on or after August 2, 2026"
+        },
+        {
+          "label": "Where it applies",
+          "value": "API, Claude, Claude Code, Cowork, Claude Tag"
+        },
+        {
+          "label": "Third-party hosts",
+          "value": "AWS, Google Cloud, Microsoft Foundry"
+        },
+        {
+          "label": "Detection",
+          "value": "Docs promised, not yet published"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does Claude's watermark survive copying and pasting?",
+          "a": "Yes. Anthropic says the Claude text watermark is part of the text rather than separate metadata, so it travels with the words when they are copied and pasted elsewhere, and may persist through some editing. Heavy rewriting or translation can still wipe it out, so the mark is a signal rather than a guarantee."
+        },
+        {
+          "q": "Which Claude models carry the marking?",
+          "a": "Claude models launched on or after August 2, 2026 support marking at launch, according to Anthropic's help document. Anthropic adds that it is also working on models it has already released, so older Claude models should gain output marking during the transition period the EU allows. Coverage is therefore partial today and widening."
+        },
+        {
+          "q": "Can anyone detect Claude's watermark today?",
+          "a": "Not yet. Anthropic says it is working to let users and third parties detect Claude's embedded watermarks and provenance metadata, with technical documentation to follow, but no public detection tool or verification page ships with this announcement. For now the mark exists in the output without a released way for outsiders to read it."
+        },
+        {
+          "q": "Does Claude's marking apply outside the EU?",
+          "a": "Yes. The EU AI Act is the trigger, but Anthropic states marking applies to output from supported models wherever Claude is offered, worldwide. It also covers Claude served through third-party providers such as AWS, Google Cloud and Microsoft Foundry, so a US or Asian developer calling the Claude API gets the same marked output as an EU one."
+        },
+        {
+          "q": "Which file types get C2PA metadata from Claude?",
+          "a": "Anthropic lists .svg, .png and .jpg as the supported file types for signed provenance metadata, which follows the C2PA open standard. Plain text output is covered by the watermark instead. A valid signed C2PA record indicates that Claude processed the file and shows whether the provenance data was tampered with afterwards."
+        }
+      ],
+      "image": {
+        "url": "https://downloads.intercomcdn.com/i/o/lupk8zyo/792494/717b10d3ebd874823db64841659b/76f3062d78ebbb04863fb1de3ef9cca0.png",
+        "alt": "Anthropic help-center illustration for how Claude marks AI-generated content",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Anthropic Help Doc",
+          "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content"
+        },
+        {
+          "label": "The Register Report",
+          "url": "https://www.theregister.com/ai-and-ml/2026/08/11/anthropic-pledges-to-embed-watermarks-to-help-discern-ai-slop-in-sop-to-eu/5285792"
+        },
+        {
+          "label": "C2PA Standard",
+          "url": "https://c2pa.org/"
+        },
+        {
+          "label": "EU AI Act Article 50",
+          "url": "https://artificialintelligenceact.eu/article/50/"
+        }
+      ],
+      "publishDate": "2026-08-11T08:57:28.402Z"
+    },
     {
       "id": "antirez-h3-c",
       "categories": [

@@ -30611,6 +30611,40 @@
         "algorithm",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260811t085728z",
+      "timestamp": "2026-08-11T08:57:28.402Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Qwen, Moonshot, DeepSeek, MiniMax, Z.ai), GitHub trending, HuggingFace models/datasets/papers, HN top 30, 8 YouTube creator feeds and the AI-for-science lane. Added one item: Anthropic began marking Claude output with text watermarks and signed C2PA file metadata under EU AI Act Article 50. Everything else fresh on HN and HF was already in the feed (Muse Glimmer, h3.c, Needle 2, LFM2.5, SWE-Bench ProMax, Motif 3, Zuckerberg's open-AI essay); the Ouroboros self-developing coding agent paper is the top HF paper but its arXiv v1 is dated 2026-08-08, past the 72h cap, so it stays out.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "anthropic-claude-content-marking",
+          "title": "Claude marks its output — Anthropic adds text watermarks and C2PA file metadata",
+          "category": "ecosystem",
+          "note": "Official Anthropic help doc published Monday 2026-08-10, on the HN front page (162 points) and covered by The Register on 2026-08-11; concrete developer consequence — every Claude API response and generated file now ships marked."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }
