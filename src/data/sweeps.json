@@ -30499,6 +30499,40 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260811t034543z",
+      "timestamp": "2026-08-11T03:45:43.414Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Motif 3, a 314B/13.2B-active MoE opened under MIT with a same-week arXiv technical report, trending on Hugging Face papers. Lab blogs were quiet (Anthropic last posted Aug 7, DeepMind Aug 6, Mistral Aug 4, Cohere Aug 6, Meta Jul 27); GitHub trending was all older repos spiking without a fresh release; the only fresh YouTube upload was already in the feed.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "motif-3",
+          "title": "Motif 3 — a 314B open mixture-of-experts model under the MIT license",
+          "category": "model",
+          "note": "314B MoE opened under MIT with a new attention design (GDLA); technical report arXiv 2608.09119 is top-10 on Hugging Face papers trending right now, and the weights, base checkpoint and NVFP4 build all landed Aug 8-9."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "paper",
+        "repo",
+        "tool",
+        "dataset",
+        "benchmark",
+        "algorithm",
+        "video",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }

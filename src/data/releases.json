@@ -1,8 +1,191 @@
 {
-  "generatedAt": "2026-08-11T01:24:21.033Z",
+  "generatedAt": "2026-08-11T03:45:43.414Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "motif-3",
+      "categories": [
+        "model",
+        "paper"
+      ],
+      "title": "Motif 3 — a 314B open mixture-of-experts model under the MIT license",
+      "org": "Motif Technologies",
+      "date": "2026-08-09",
+      "url": "https://huggingface.co/Motif-Technologies/Motif-3",
+      "summary": "Motif 3 is a 314B mixture-of-experts model that activates 13.2B parameters per token. The weights are open under the MIT license. It scores 74.9 on Terminal-Bench 2.1 and 76.2 on SWE-Bench Verified.",
+      "tags": [
+        "model",
+        "motif-3",
+        "open-weights",
+        "mixture-of-experts",
+        "moe",
+        "mit-license",
+        "long-context",
+        "agentic",
+        "coding",
+        "attention",
+        "speculative-decoding",
+        "multilingual"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Motif Technologies"
+        },
+        {
+          "label": "Parameters",
+          "value": "314B total / 13.2B active per token"
+        },
+        {
+          "label": "Experts",
+          "value": "384 routed (top-8) + 1 shared"
+        },
+        {
+          "label": "Context window",
+          "value": "262,144 tokens (256K)"
+        },
+        {
+          "label": "Pretraining",
+          "value": "~12.5T tokens"
+        },
+        {
+          "label": "License",
+          "value": "MIT"
+        },
+        {
+          "label": "Availability",
+          "value": "Open weights on Hugging Face (bfloat16 + NVFP4)"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "Terminal-Bench 2.1",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Qwen-3.7 max",
+              "score": 75
+            },
+            {
+              "name": "Motif 3 (314B-A13B)",
+              "score": 74.9,
+              "highlight": true
+            },
+            {
+              "name": "Kimi-K2.6 (1T-A32B)",
+              "score": 65.9
+            },
+            {
+              "name": "MiniMax-3 (428B-A23B)",
+              "score": 65.2
+            },
+            {
+              "name": "DS-v4-Pro (1.6T-A49B)",
+              "score": 64
+            },
+            {
+              "name": "GLM-5.1 (744B-A40B)",
+              "score": 61.8
+            }
+          ],
+          "source": "https://huggingface.co/Motif-Technologies/Motif-3"
+        },
+        {
+          "name": "SWE-Bench Verified",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Qwen-3.7 max",
+              "score": 80.4
+            },
+            {
+              "name": "DS-v4-Pro (1.6T-A49B)",
+              "score": 77.4
+            },
+            {
+              "name": "GLM-5.1 (744B-A40B)",
+              "score": 76.4
+            },
+            {
+              "name": "Motif 3 (314B-A13B)",
+              "score": 76.2,
+              "highlight": true
+            },
+            {
+              "name": "Kimi-K2.6 (1T-A32B)",
+              "score": 76.2
+            },
+            {
+              "name": "MiniMax-3 (428B-A23B)",
+              "score": 75
+            }
+          ],
+          "source": "https://huggingface.co/Motif-Technologies/Motif-3"
+        }
+      ],
+      "explainer": {
+        "tagline": "A 314B mixture-of-experts model with a new attention design, shipped with open MIT weights and a full technical report.",
+        "whatIsIt": "Motif 3 opens 314 billion parameters under the MIT license while activating only 13.2 billion of them per token. Motif Technologies says the architecture is a fully in-house design rather than a fine-tune of an existing base model. The drop includes the instruction-tuned model, the Motif-3-Base checkpoint, an NVFP4-quantized version for smaller machines, and a technical report on arXiv.",
+        "howItWorks": "The core change is Grouped Differential Latent Attention (GDLA), which pairs grouped differential attention with the compressed key-value latent used in Multi-head Latent Attention, so the model keeps the attention behaviour while carrying a much smaller KV cache. Each of the 51 sparse layers routes a token to 8 of 384 experts plus one shared expert, and Expert-Specific PolyNorm gives every expert its own learned polynomial gate instead of a shared SiLU. A one-layer Multi-Token Prediction head lets Motif 3 speculate on its own next tokens at inference.",
+        "whyItMatters": "Agentic and terminal work is where this model lands closest to the top: 74.9 on Terminal-Bench 2.1 against 75.0 for Qwen-3.7 max, and 35.3 on the τ³-Banking agent test against 30.1 for the next best model in Motif's table. Getting there on 13.2B active parameters matters because the models it is compared against run 23B to 49B active. Teams that want a strong agentic model they can host, inspect, and modify now have another permissive option.",
+        "forWho": "self-hosting teams and agent builders",
+        "tryIt": "vllm serve \"Motif-Technologies/Motif-3\" --trust-remote-code"
+      },
+      "faq": [
+        {
+          "q": "Can Motif 3 be used commercially?",
+          "a": "Yes. Motif 3 ships under the MIT License, which places no restriction on commercial use, redistribution, or modification, and Motif Technologies publishes the weights openly on Hugging Face. That is a more permissive footing than the community and research licenses attached to several of the open models it is benchmarked against."
+        },
+        {
+          "q": "What hardware does Motif 3 need?",
+          "a": "Motif Technologies tested Motif 3 on NVIDIA B200 and H200 GPUs, and its published vLLM recipe spreads the model across eight H200s using expert parallelism plus online block-FP8 quantization. For tighter memory budgets the team also published an NVFP4-quantized checkpoint at Motif-Technologies/Motif-3-NVFP4."
+        },
+        {
+          "q": "How does Motif 3 compare to Qwen-3.7 and DeepSeek V4-Pro?",
+          "a": "On Motif's own comparison table, Motif 3 trails Qwen-3.7 max on SWE-Bench Verified (76.2 vs 80.4) and GPQA Diamond (83.4 vs 92.4), but leads it on the τ³-Banking agent test (35.3 vs 12.0) and edges DS-v4-Pro on Terminal-Bench 2.1 (74.9 vs 64.0). The pattern is agentic strength rather than raw knowledge."
+        },
+        {
+          "q": "Which languages is Motif 3 tuned for?",
+          "a": "Motif 3 is trained for English and Korean in particular. Its pretraining mix puts extra weight on Korean along with reasoning-intensive, legal, and financial data, and the tokenizer is built for a strong bytes-per-token rate across English, Korean, code, and math."
+        },
+        {
+          "q": "Does Motif 3 support speculative decoding?",
+          "a": "Yes, without a separate draft model. Motif 3 carries a built-in one-layer Multi-Token Prediction head, so it can self-speculate; the vLLM launch command enables this by passing a speculative config with num_speculative_tokens set to 1, which Motif Technologies reports as the optimal value for this model."
+        }
+      ],
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/Motif-Technologies/Motif-3.png",
+        "alt": "Hugging Face model card banner for Motif 3, a 314B mixture-of-experts language model",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Model Card",
+          "url": "https://huggingface.co/Motif-Technologies/Motif-3"
+        },
+        {
+          "label": "Technical Report",
+          "url": "https://arxiv.org/abs/2608.09119"
+        },
+        {
+          "label": "Base Checkpoint",
+          "url": "https://huggingface.co/Motif-Technologies/Motif-3-Base"
+        },
+        {
+          "label": "NVFP4 Weights",
+          "url": "https://huggingface.co/Motif-Technologies/Motif-3-NVFP4"
+        },
+        {
+          "label": "Paper Page",
+          "url": "https://huggingface.co/papers/2608.09119"
+        }
+      ],
+      "publishDate": "2026-08-11T03:45:43.414Z"
+    },
     {
       "id": "openai-gpt-5-6-cyber-daybreak-tiers",
       "categories": [
