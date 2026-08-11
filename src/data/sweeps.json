@@ -30673,6 +30673,40 @@
         "ecosystem",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260811t130348z",
+      "timestamp": "2026-08-11T13:03:48.864Z",
+      "source": "github-actions-sweep",
+      "summary": "Added ChatGPT restaurant booking via OpenTable, Resy and Yelp (10 Aug). Lab blogs were quiet: Anthropic posted once, and Meta Muse Glimmer, DeepMind WeatherNext and OpenAI GPT-5.6-Cyber are already in the feed. Ouroboros (arXiv, #3 on HF Papers), HN top Docker Sandboxes (663 pts), Macaron-V1 and Liquid AI LFM2.5-2.6B all failed the 72h cap; the one fresh YouTube video was already ingested.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-chatgpt-restaurant-booking",
+          "title": "ChatGPT books restaurant tables — OpenTable, Resy and Yelp in the chat",
+          "category": "tool",
+          "note": "ChatGPT gained real transactional booking on 10 Aug via OpenTable, Resy and Yelp; verified against Yelp's own announcement plus Android Authority coverage."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "video",
+        "article",
+        "rumor",
+        "ecosystem"
+      ]
     }
   ]
 }

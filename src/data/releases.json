@@ -1,8 +1,100 @@
 {
-  "generatedAt": "2026-08-11T10:56:19.032Z",
+  "generatedAt": "2026-08-11T13:03:48.864Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openai-chatgpt-restaurant-booking",
+      "categories": [
+        "tool"
+      ],
+      "title": "ChatGPT books restaurant tables — OpenTable, Resy and Yelp in the chat",
+      "org": "OpenAI",
+      "date": "2026-08-10",
+      "url": "https://blog.yelp.com/news/yelp-chatgpt-integration/",
+      "summary": "ChatGPT can now find and book a restaurant table without leaving the conversation. OpenAI switched on reservations with OpenTable, Resy and Yelp on 10 August 2026, and the Yelp path also lets diners join a waitlist.",
+      "tags": [
+        "chatgpt",
+        "openai",
+        "yelp",
+        "opentable",
+        "resy",
+        "agentic-commerce",
+        "reservations",
+        "assistants",
+        "consumer-ai",
+        "integrations"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenAI"
+        },
+        {
+          "label": "Launched",
+          "value": "10 August 2026"
+        },
+        {
+          "label": "Booking partners",
+          "value": "OpenTable, Resy, Yelp"
+        },
+        {
+          "label": "What you can do",
+          "value": "Book a table or join a waitlist"
+        },
+        {
+          "label": "Yelp coverage",
+          "value": "Thousands of restaurants in the US and Canada"
+        },
+        {
+          "label": "Changing a Yelp booking",
+          "value": "Done on Yelp after booking"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which booking services work inside ChatGPT?",
+          "a": "ChatGPT works with three restaurant booking partners as of 10 August 2026: OpenTable, Resy and Yelp. A diner describes what they want, compares the times each service returns, and confirms in the same conversation. Yelp says its side builds on the reviews and business-listing partnership it already had with OpenAI."
+        },
+        {
+          "q": "Can ChatGPT put me on a restaurant waitlist?",
+          "a": "Yes, through Yelp. Alongside reservations, the Yelp integration in ChatGPT lets a diner join a restaurant waitlist without leaving the chat, covering thousands of restaurants across the United States and Canada. Yelp's announcement does not extend the waitlist option to the OpenTable or Resy paths."
+        },
+        {
+          "q": "How do I change a table I booked through ChatGPT?",
+          "a": "Bookings made through the Yelp path in ChatGPT are managed afterwards on Yelp itself — the chat handles the booking, not the edit. Yelp's announcement says diners can manage or modify the reservation there once it is confirmed, which keeps the record in one place rather than split across two apps."
+        },
+        {
+          "q": "Why would restaurants want reservations inside ChatGPT?",
+          "a": "Distribution. Yelp points to Morning Consult research in which nearly two-thirds of respondents — 65% — said being able to take action on trusted platforms matters when using AI tools. Putting reservations and waitlists inside ChatGPT means a restaurant can be booked at the moment someone is asking where to eat, rather than after a hand-off to another site."
+        }
+      ],
+      "explainer": {
+        "tagline": "Restaurant reservations and waitlists now happen inside a ChatGPT conversation instead of on a separate booking site.",
+        "whatIsIt": "Reservations arrived in ChatGPT on 10 August 2026 through three booking partners — OpenTable, Resy and Yelp. A diner asks for a table, compares what is open, and confirms the booking in the same chat window. The Yelp path adds waitlists, covering thousands of restaurants across the United States and Canada.",
+        "howItWorks": "Each booking partner feeds its live availability into ChatGPT, so the assistant reads real open times instead of guessing at them. Yelp describes the ChatGPT tie-up as an extension of the reviews, ratings, photos and business-listing data it already supplied to OpenAI, routed now through its reservation and waitlist systems. Edits to a Yelp booking happen back on Yelp.",
+        "whyItMatters": "Booking a table is a small errand, but it is the kind of task that moves ChatGPT from answering a question to finishing it. OpenTable, Resy and Yelp each gain a route into the chat window itself, which for restaurants is a new front door. Yelp cites Morning Consult research where 65% of people said taking action on trusted platforms matters when they use AI tools.",
+        "forWho": "ChatGPT users and restaurant tech teams",
+        "tryIt": "Ask ChatGPT: \"Find me a table for two tonight nearby.\""
+      },
+      "image": {
+        "url": "https://blog.yelp.com/wp-content/uploads/2026/08/Yelp-and-OpenAI_Wordpress-1200x630.png",
+        "alt": "Yelp and OpenAI announcement graphic for ChatGPT restaurant reservations",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Yelp Announcement",
+          "url": "https://blog.yelp.com/news/yelp-chatgpt-integration/"
+        },
+        {
+          "label": "Android Authority",
+          "url": "https://www.androidauthority.com/chatgpt-restaurant-reservations-and-waitlists-3696712/"
+        }
+      ],
+      "publishDate": "2026-08-11T13:03:48.864Z"
+    },
     {
       "id": "anthropic-claude-content-marking",
       "categories": [
