@@ -1,8 +1,176 @@
 {
-  "generatedAt": "2026-08-11T20:47:13.202Z",
+  "generatedAt": "2026-08-11T22:45:50.037Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openai-chatgpt-desktop-linux",
+      "categories": [
+        "tool"
+      ],
+      "title": "ChatGPT Desktop for Linux — OpenAI ships a preview with Codex built in",
+      "org": "OpenAI",
+      "date": "2026-08-11",
+      "url": "https://techcrunch.com/2026/08/11/openai-launches-chatgpt-desktop-app-for-linux/",
+      "summary": "OpenAI released the ChatGPT desktop app for Linux in public preview on August 11, 2026. The app bundles ChatGPT, ChatGPT Work and Codex, ships as DEB and RPM packages for x64 and ARM64, and updates through the system package manager.",
+      "tags": [
+        "openai",
+        "chatgpt",
+        "codex",
+        "linux",
+        "desktop-app",
+        "ubuntu",
+        "debian",
+        "fedora",
+        "coding-agent",
+        "developer-tools"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "OpenAI's desktop app now runs on Linux, bringing ChatGPT, ChatGPT Work and the Codex coding workspace to Ubuntu, Debian and Fedora.",
+        "whatIsIt": "Linux users can now install an official ChatGPT desktop app. OpenAI put it out in public preview on August 11, 2026 as DEB and RPM packages for x64 and ARM64 machines. One window holds three things: ChatGPT for normal chat, ChatGPT Work for longer tasks, and the Codex workspace for coding.",
+        "howItWorks": "Installing the package also adds an OpenAI software repository to the machine, so the app updates through the normal package manager instead of its own updater. Inside, the Codex workspace opens a local repository, edits files, reads git history and runs commands on the machine. A built-in browser loads web pages without leaving the app.",
+        "whyItMatters": "Linux was the last major desktop platform with no official ChatGPT client, and OpenAI says it was the most-requested one. Developers who work on Linux can point Codex at a local repository without uploading files anywhere, instead of falling back to the browser or the command line.",
+        "forWho": "Linux developers",
+        "tryIt": "Download the DEB or RPM package from openai.com/codex"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenAI"
+        },
+        {
+          "label": "Status",
+          "value": "Public preview"
+        },
+        {
+          "label": "Tested distros",
+          "value": "Ubuntu 24.04 / 26.04 LTS, Debian 13, Fedora 43 / 44"
+        },
+        {
+          "label": "Packages",
+          "value": "DEB and RPM, x64 and ARM64"
+        },
+        {
+          "label": "Included",
+          "value": "ChatGPT, ChatGPT Work, Codex"
+        },
+        {
+          "label": "Updates",
+          "value": "Package manager, via a repo added at install"
+        },
+        {
+          "label": "Missing at launch",
+          "value": "Native Computer Use"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much does the ChatGPT Linux app cost?",
+          "a": "The ChatGPT desktop app for Linux is free to download and works with a free OpenAI account. Some features inside it need a paid ChatGPT plan, so the app itself costs nothing but heavier use still depends on your subscription tier."
+        },
+        {
+          "q": "Can I install the ChatGPT desktop app on Arch Linux?",
+          "a": "OpenAI tested the ChatGPT desktop app on Ubuntu, Debian and Fedora only, and says downstream flavors of those should also work. Arch Linux is not on that list, but community packages for the app are available through the AUR."
+        },
+        {
+          "q": "What can Codex do inside the Linux app?",
+          "a": "Codex in the ChatGPT Linux app works as a project workspace: it opens a local repository, edits files, reads git history and runs commands on your machine. Files stay on the computer rather than being uploaded, which is the main reason Linux developers asked for a native client."
+        },
+        {
+          "q": "How does this compare to Claude's Linux desktop app?",
+          "a": "OpenAI's Linux client arrives about a month after Anthropic shipped a Claude desktop app for Linux, so both major assistants now have native Linux builds. OpenAI's version is still labeled a preview, and Native Computer Use — driving other desktop programs — is not available at launch."
+        }
+      ],
+      "image": {
+        "url": "https://linuxiac.com/wp-content/uploads/2026/08/openai-linux-app.jpg",
+        "alt": "OpenAI ChatGPT desktop app running on a Linux desktop",
+        "credit": "Linuxiac"
+      },
+      "links": [
+        {
+          "label": "TechCrunch Report",
+          "url": "https://techcrunch.com/2026/08/11/openai-launches-chatgpt-desktop-app-for-linux/"
+        },
+        {
+          "label": "Phoronix Coverage",
+          "url": "https://www.phoronix.com/news/ChatGPT-Desktop-Linux-Preview"
+        },
+        {
+          "label": "The New Stack",
+          "url": "https://thenewstack.io/openais-chatgpt-desktop-linux/"
+        },
+        {
+          "label": "Install Notes",
+          "url": "https://www.omgubuntu.co.uk/2026/08/chatgpt-desktop-app-linux-preview"
+        },
+        {
+          "label": "Distro Details",
+          "url": "https://linuxiac.com/openai-launches-official-chatgpt-desktop-app-for-linux-in-preview/"
+        }
+      ],
+      "publishDate": "2026-08-11T22:45:50.037Z"
+    },
+    {
+      "id": "pathway-bdh-cq",
+      "categories": [
+        "paper",
+        "algorithm"
+      ],
+      "title": "BDH-CQ — a 150M model that reasons in latent space on ARC-AGI-1",
+      "org": "Pathway",
+      "date": "2026-08-10",
+      "url": "https://pathway.com/research/introducing-bdh-cq",
+      "summary": "BDH-CQ is a 150M-parameter model from Pathway that scores 29.5% pass@2 on the public ARC-AGI-1 evaluation set at $0.00070 per task. It reasons inside a recurrent latent state instead of writing out chain-of-thought text.",
+      "tags": [
+        "pathway",
+        "bdh-cq",
+        "dragon-hatchling",
+        "arc-agi",
+        "latent-reasoning",
+        "reasoning",
+        "in-context-learning",
+        "model-architecture",
+        "inference-cost"
+      ],
+      "importance": "notable",
+      "metrics": {
+        "Parameters": "150M",
+        "ARC-AGI-1 pass@2": "29.5%",
+        "Cost per task": "$0.00070"
+      },
+      "explainer": {
+        "tagline": "Pathway's BDH-CQ solves ARC-AGI-1 puzzles by thinking in a recurrent latent state instead of writing out a chain of thought.",
+        "whatIsIt": "A 150M-parameter reasoning model called BDH-CQ scores 29.5% pass@2 on the public ARC-AGI-1 evaluation set at a computed $0.00070 per task. Pathway compares that with GPT 5.6 Luna (Low), which scores 34.2% at $0.040 per task. The weights are not released, and Pathway says the exact update rules and implementation details stay proprietary.",
+        "howItWorks": "Demonstrations shown at inference time update a recurrent memory one step at a time, so what a later example contributes depends on associations built from earlier ones. The model then runs a set number of iterative steps inside a high-dimensional latent workspace and decodes an answer from the final state. Nothing is written out as text, so BDH-CQ leaves no intermediate reasoning trace.",
+        "whyItMatters": "Cost per solved task is the claim worth watching. Pathway reports one H200 GPU takes about 0.85 seconds per task at standard effort, and had the run reproduced independently by Łukasz Kaiser, a co-author of the 2017 Transformer paper. If latent reasoning holds up at larger sizes, small models could take on puzzle-style reasoning that today needs a frontier model and a long chain of thought.",
+        "forWho": "ML researchers",
+        "tryIt": "git clone https://github.com/pathwaycom/arc-task-gen"
+      },
+      "image": {
+        "url": "https://pathway.com/_og/s/o_31fm7z.png",
+        "alt": "Pathway announcement card for the BDH-CQ reasoning model"
+      },
+      "links": [
+        {
+          "label": "Pathway Research Post",
+          "url": "https://pathway.com/research/introducing-bdh-cq"
+        },
+        {
+          "label": "arXiv Paper",
+          "url": "https://arxiv.org/abs/2608.09888"
+        },
+        {
+          "label": "Task Generator Code",
+          "url": "https://github.com/pathwaycom/arc-task-gen"
+        },
+        {
+          "label": "Press Coverage",
+          "url": "https://analyticsindiamag.com/ai-news/pathway-claims-11x-lower-ai-reasoning-costs-with-150m-parameter-model"
+        }
+      ],
+      "publishDate": "2026-08-11T22:45:50.037Z"
+    },
     {
       "id": "semantica-0-6-5",
       "categories": [

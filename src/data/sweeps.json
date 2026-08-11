@@ -30912,6 +30912,45 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260811t224550z",
+      "timestamp": "2026-08-11T22:45:50.037Z",
+      "source": "github-actions-sweep",
+      "summary": "Added OpenAI's ChatGPT desktop app for Linux (public preview, Aug 11) and Pathway's BDH-CQ latent-reasoning model paper (#2 on HuggingFace papers). All 5 fresh YouTube videos were already in the feed; Ouroboros (arXiv Aug 8), The Stack v3 (Jul 23) and Guide Labs' interpretability paper (Aug 6) were dropped as outside the 72h window.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-chatgpt-desktop-linux",
+          "title": "ChatGPT Desktop for Linux — OpenAI ships a preview with Codex built in",
+          "category": "tool",
+          "note": "Official OpenAI desktop client lands on Linux in preview with Codex included; covered by TechCrunch, The New Stack, Phoronix, OMG Ubuntu and Linuxiac within hours."
+        },
+        {
+          "id": "pathway-bdh-cq",
+          "title": "BDH-CQ — a 150M model that reasons in latent space on ARC-AGI-1",
+          "category": "paper",
+          "note": "150M-parameter latent-reasoning architecture at #2 on HuggingFace papers (681 upvotes) with public task-generator code (683 stars) and an independent reproduction."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "paper",
+        "algorithm",
+        "dataset",
+        "video",
+        "article",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }
