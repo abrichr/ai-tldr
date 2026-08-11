@@ -1,8 +1,352 @@
 {
-  "generatedAt": "2026-08-11T13:03:48.864Z",
+  "generatedAt": "2026-08-11T15:01:23.866Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "nvidia-nemotron-3-5-lightning",
+      "categories": [
+        "model"
+      ],
+      "title": "Nemotron 3.5 Lightning — NVIDIA's 30B open MoE for always-on agents",
+      "org": "NVIDIA",
+      "date": "2026-08-11",
+      "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-lightning-delivers-fast-accurate-specialized-task-execution-for-long-running-agents/",
+      "summary": "Nemotron 3.5 Lightning is a 30B open mixture-of-experts model with 3B active parameters, released by NVIDIA on 2026-08-11. It handles up to 1M tokens of context and targets high-volume agent steps that run all day.",
+      "tags": [
+        "model",
+        "nvidia",
+        "nemotron",
+        "open-weights",
+        "mixture-of-experts",
+        "moe",
+        "mamba",
+        "agentic-ai",
+        "local-llm",
+        "edge-ai",
+        "openmdw"
+      ],
+      "importance": "major",
+      "metrics": {
+        "SWE-bench Verified": "52.8%",
+        "GPQA Diamond": "75.57%"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "NVIDIA"
+        },
+        {
+          "label": "Parameters",
+          "value": "30B total, 3B active"
+        },
+        {
+          "label": "Architecture",
+          "value": "Mamba-2 + MoE + attention hybrid"
+        },
+        {
+          "label": "Context window",
+          "value": "Up to 1M tokens"
+        },
+        {
+          "label": "License",
+          "value": "OpenMDW-1.1"
+        },
+        {
+          "label": "Checkpoints",
+          "value": "NVFP4 and BF16"
+        },
+        {
+          "label": "Availability",
+          "value": "Hugging Face, ModelScope, OpenRouter, build.nvidia.com NIM"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What hardware does Nemotron 3.5 Lightning run on?",
+          "a": "Nemotron 3.5 Lightning is built to run either locally or in the cloud. NVIDIA lists RTX PCs, DGX Spark, DGX Station and Jetson as local targets, and the same weights are served in the cloud through build.nvidia.com as an NIM microservice and through NVIDIA Cloud Partners, OpenRouter and ModelScope."
+        },
+        {
+          "q": "Which companies already use Nemotron 3.5 Lightning?",
+          "a": "NVIDIA names five early adopters for Nemotron 3.5 Lightning in its launch post: CrowdStrike in cybersecurity, Harvey with Trajectory in legal work, CodeRabbit with Baseten for code review, Lila Sciences in physical and life sciences, and Fastino Labs across software, finance and healthcare."
+        },
+        {
+          "q": "What languages does Nemotron 3.5 Lightning support?",
+          "a": "The Nemotron 3.5 Lightning model card lists English plus coding languages, Spanish, French, German, Italian and Japanese. NVIDIA measured its published accuracy numbers under one consistent harness, NeMo Gym and the NeMo Evaluator SDK, and notes they may differ from numbers other vendors report for their own models."
+        },
+        {
+          "q": "Can I fine-tune Nemotron 3.5 Lightning on my own data?",
+          "a": "Yes. NVIDIA describes Nemotron 3.5 Lightning as a fully customizable open model and says teams can post-train it with NVIDIA NeMo on their own organization-specific data. The weights ship under the permissive OpenMDW-1.1 license in both NVFP4 and BF16 checkpoints, so you pick the precision your hardware fits."
+        },
+        {
+          "q": "How fast is Nemotron 3.5 Lightning compared to models its size?",
+          "a": "NVIDIA claims Nemotron 3.5 Lightning delivers up to 4x the output speed of similar-sized models and finishes agentic tasks 30% faster. On PinchBench it reaches 86% accuracy while completing 10,000 tasks 30% faster than Qwen3.6 35B at similar accuracy, and NVIDIA says it wins the accuracy-versus-speed Pareto frontier on the Artificial Analysis Intelligence Index."
+        }
+      ],
+      "explainer": {
+        "tagline": "NVIDIA's new 30B open MoE keeps only 3B parameters active per token, aimed at agents that fire thousands of small steps.",
+        "whatIsIt": "Nemotron 3.5 Lightning is a new open-weight model NVIDIA released on 2026-08-11 for the cheap, repetitive steps inside a long-running agent. It holds 30B parameters but activates only 3B of them per token, reads up to 1M tokens of context, and ships under the permissive OpenMDW-1.1 license in NVFP4 and BF16 checkpoints.",
+        "howItWorks": "The architecture is a hybrid: Mamba-2 state-space layers sit alongside attention layers, with a mixture-of-experts router picking a small slice of experts per token. That combination is what keeps the active parameter count at 3B, which is where the speed comes from — up to 4x the output rate of similar-sized models, and 30% faster completion on agentic tasks.",
+        "whyItMatters": "Agent workloads are dominated by small steps, and paying frontier prices for each one adds up. A 3B-active model that scores 52.8% on SWE-bench Verified and 81.62 on MMLU Pro lets teams move that volume onto an RTX PC, a Jetson board, or a cheap cloud endpoint. CrowdStrike, Harvey, CodeRabbit, Lila Sciences and Fastino Labs are already building on it.",
+        "forWho": "agent developers, teams running high-volume LLM workloads",
+        "tryIt": "Pull `nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4` from Hugging Face"
+      },
+      "image": {
+        "url": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/08/agentic-ai-nemotron-3.5-lightning.webp",
+        "alt": "NVIDIA Nemotron 3.5 Lightning agentic AI announcement graphic",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/"
+        },
+        {
+          "label": "Technical Blog",
+          "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-lightning-delivers-fast-accurate-specialized-task-execution-for-long-running-agents/"
+        },
+        {
+          "label": "Model Card",
+          "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4"
+        },
+        {
+          "label": "The New Stack",
+          "url": "https://thenewstack.io/nvidia-nemotron-lightning-switchyard/"
+        }
+      ],
+      "publishDate": "2026-08-11T15:01:23.866Z"
+    },
+    {
+      "id": "nvidia-nemo-switchyard",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "NeMo Switchyard — NVIDIA's open router picks a model per agent step",
+      "org": "NVIDIA",
+      "date": "2026-08-11",
+      "url": "https://developer.nvidia.com/blog/route-ai-agent-workloads-across-models-with-nvidia-nemo-switchyard/",
+      "summary": "NeMo Switchyard is an Apache-2.0 routing library NVIDIA released on 2026-08-11. It sends each step of an agent run to whichever model fits it, using capability, cost and infrastructure signals, without rewriting the app.",
+      "tags": [
+        "tool",
+        "repo",
+        "nvidia",
+        "nemo",
+        "switchyard",
+        "model-routing",
+        "agentic-ai",
+        "llm-proxy",
+        "rust",
+        "apache-2-0",
+        "open-source",
+        "cost-optimization"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Cost cut (LangChain test)": "74%",
+        "GitHub stars": 241
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "NVIDIA"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        },
+        {
+          "label": "Built in",
+          "value": "Rust, with Python CLI bindings"
+        },
+        {
+          "label": "Routers included",
+          "value": "LLM Classifier, Stage, Escalation, Random"
+        },
+        {
+          "label": "Works with",
+          "value": "Claude Code, Codex CLI, OpenClaw, vLLM, NVIDIA NIM, Ollama"
+        },
+        {
+          "label": "Install",
+          "value": "uv tool install --python 3.12 \"nemo-switchyard[cli,server]\""
+        },
+        {
+          "label": "Status",
+          "value": "Pre-alpha, not recommended for production"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is NeMo Switchyard ready for production use?",
+          "a": "No. The NeMo Switchyard repository labels the project pre-alpha experimental software and says it is not recommended for production. NVIDIA is shipping it open source under Apache-2.0 so teams can test routing on their own traffic, but the API surface and the four bundled routers should be treated as unstable for now."
+        },
+        {
+          "q": "How much money does NeMo Switchyard actually save?",
+          "a": "NVIDIA reports two measured results for NeMo Switchyard. On a LangChain set of 145 multi-turn tasks, routing between Nemotron 3.5 Lightning and Claude Opus 4.8 cut cost 74% for roughly a 6-point accuracy tradeoff. On Cognition's FrontierCode, routing between Opus 5 and Kimi K2.7 hit 50.6% accuracy at $3.11 mean cost, about 28% below Opus 5 alone."
+        },
+        {
+          "q": "Which agent tools and partners support NeMo Switchyard?",
+          "a": "NeMo Switchyard plugs into Claude Code, Codex CLI, OpenClaw, vLLM, NVIDIA NIM, Ollama and any OpenAI-compatible endpoint. NVIDIA lists Boomi, Cadence, Classmethod, Cognition, Kong, LangChain, LiteLLM, Nous Research, Ramp and Siemens as partners that have integrated it or are rolling it out."
+        },
+        {
+          "q": "Can I write my own routing rules for NeMo Switchyard?",
+          "a": "Yes. NVIDIA says developers can bring their own routing algorithms or customization data to NeMo Switchyard rather than being limited to the four bundled routers. The library also translates between the OpenAI and Anthropic API shapes and exports Prometheus metrics for requests, errors, latency and tokens."
+        }
+      ],
+      "explainer": {
+        "tagline": "An Apache-2.0 Rust proxy from NVIDIA that reshuffles which model handles each step of an agent run.",
+        "whatIsIt": "Model routing gets a first-party open-source option: NeMo Switchyard, released by NVIDIA on 2026-08-11, sits between an agent and its models and picks a different backend per request. It ships four routers out of the box — an LLM classifier, a stage router, an escalation router that judges weak-to-strong, and a random splitter for A/B tests.",
+        "howItWorks": "Each request is scored on three signal groups: which models can solve the task, what each one costs in latency and money, and system-level reliability. A provider-agnostic SDK keeps semantic model names separate from provider endpoints, so swapping a backend does not touch application code. The proxy also translates between OpenAI and Anthropic API formats and exports Prometheus metrics.",
+        "whyItMatters": "Most agent runs mix trivial steps with a few hard ones, but teams usually pay frontier rates for all of them. NVIDIA's own tests put the saving at 74% on a 145-task LangChain set, and Cognition cut mean cost 28% in Devin Desktop. Because it speaks to Claude Code, Codex CLI, OpenClaw, vLLM and Ollama, the change is a proxy swap rather than a rewrite.",
+        "forWho": "agent developers, platform teams watching inference bills",
+        "tryIt": "uv tool install --python 3.12 \"nemo-switchyard[cli,server]\""
+      },
+      "image": {
+        "url": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/08/Agentic-AI-Switchyard.webp",
+        "alt": "NVIDIA NeMo Switchyard agentic AI model routing announcement graphic",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Technical Blog",
+          "url": "https://developer.nvidia.com/blog/route-ai-agent-workloads-across-models-with-nvidia-nemo-switchyard/"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/NVIDIA-NeMo/Switchyard"
+        },
+        {
+          "label": "Announcement",
+          "url": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/"
+        },
+        {
+          "label": "Architecture Docs",
+          "url": "https://github.com/NVIDIA-NeMo/Switchyard/blob/main/docs/architecture.md"
+        }
+      ],
+      "publishDate": "2026-08-11T15:01:23.866Z"
+    },
+    {
+      "id": "sam-witteveen-nemotron-lightning-aug11",
+      "categories": [
+        "video"
+      ],
+      "title": "Sam Witteveen — 'Nemotron Lightning: NVIDIA's Super Fast Agent MoE'",
+      "org": "Sam Witteveen",
+      "date": "2026-08-11",
+      "url": "https://www.youtube.com/watch?v=fonbmFSmuRk",
+      "summary": "Sam Witteveen's same-day video covers Nemotron 3.5 Lightning, the 30B open mixture-of-experts model NVIDIA released on 2026-08-11 with 3B active parameters and up to 1M tokens of context.",
+      "tags": [
+        "video",
+        "youtube",
+        "sam-witteveen",
+        "nemotron",
+        "nvidia",
+        "open-weights",
+        "mixture-of-experts",
+        "moe",
+        "agentic-ai",
+        "local-llm"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Sam Witteveen walks through Nemotron 3.5 Lightning, NVIDIA's 30B open MoE built for high-volume agent steps.",
+        "whatIsIt": "Nemotron 3.5 Lightning landed on 2026-08-11, and this Sam Witteveen video is the same-day walkthrough. The model is a 30B open mixture-of-experts release from NVIDIA under the OpenMDW-1.1 license, with 3B parameters active per token and a context window up to 1M tokens.",
+        "howItWorks": "The model card describes a hybrid stack — Mamba-2 state-space layers, attention layers, and MoE routing — shipped in both NVFP4 and BF16 checkpoints. NVIDIA measures 52.8% on SWE-bench Verified and 81.62 on MMLU Pro under its own NeMo Gym harness, and claims up to 4x the output speed of models in the same weight class.",
+        "whyItMatters": "Sam Witteveen's channel is a first stop for developers deciding which open weights to download, so a same-day breakdown shapes how quickly Nemotron 3.5 Lightning spreads. The model is aimed at people running agents on their own hardware — RTX PCs, DGX Spark, DGX Station or Jetson — where a 3B-active model is the difference between an affordable loop and an API bill.",
+        "forWho": "local-LLM builders, agent developers",
+        "tryIt": "Watch the video, then pull `nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4` from Hugging Face"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/fonbmFSmuRk/hqdefault.jpg",
+        "alt": "Sam Witteveen video thumbnail on NVIDIA Nemotron Lightning agent MoE model",
+        "fit": "cover"
+      },
+      "author": {
+        "name": "Sam Witteveen",
+        "profileUrl": "https://www.youtube.com/channel/UC55ODQSvARtgSyc8ThfiepQ"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=fonbmFSmuRk"
+        },
+        {
+          "label": "Sam Witteveen Channel",
+          "url": "https://www.youtube.com/channel/UC55ODQSvARtgSyc8ThfiepQ"
+        },
+        {
+          "label": "NVIDIA Announcement",
+          "url": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/"
+        },
+        {
+          "label": "Model Card",
+          "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4"
+        }
+      ],
+      "publishDate": "2026-08-11T15:01:23.866Z"
+    },
+    {
+      "id": "sam-witteveen-switchyard-aug11",
+      "categories": [
+        "video"
+      ],
+      "title": "Sam Witteveen — 'Switchyard: NVIDIA's Local Agent Router'",
+      "org": "Sam Witteveen",
+      "date": "2026-08-11",
+      "url": "https://www.youtube.com/watch?v=9hDyXi5cbQw",
+      "summary": "Sam Witteveen's new video covers NeMo Switchyard, the Apache-2.0 model router NVIDIA released on 2026-08-11 that sends each agent step to a different backend, including local ones like vLLM and Ollama.",
+      "tags": [
+        "video",
+        "youtube",
+        "sam-witteveen",
+        "switchyard",
+        "nvidia",
+        "nemo",
+        "model-routing",
+        "agentic-ai",
+        "local-llm",
+        "open-source"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Sam Witteveen walks through NeMo Switchyard, NVIDIA's open router that picks a model per step of an agent run.",
+        "whatIsIt": "NeMo Switchyard shipped on 2026-08-11, and this Sam Witteveen video is a same-day look at it. The library is an Apache-2.0 Rust proxy from NVIDIA that sits between an agent and its models, and it speaks to local backends such as vLLM and Ollama as well as hosted ones.",
+        "howItWorks": "Switchyard scores each request on model capability, cost profile and infrastructure signals, then forwards it to the chosen backend. Four routers ship in the box — LLM classifier, stage, escalation and random — and a provider-agnostic SDK keeps model names separate from endpoints so backends can be swapped without touching app code.",
+        "whyItMatters": "Routing is the cheapest lever most agent builders have not pulled yet, and Sam Witteveen's audience runs exactly the local setups Switchyard targets. NVIDIA measured a 74% cost cut on a 145-task LangChain benchmark by mixing Nemotron 3.5 Lightning with Claude Opus 4.8, so a walkthrough of the setup has direct bill impact for viewers.",
+        "forWho": "agent developers, local-LLM builders",
+        "tryIt": "Watch the video, then run `uv tool install --python 3.12 \"nemo-switchyard[cli,server]\"`"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/9hDyXi5cbQw/hqdefault.jpg",
+        "alt": "Sam Witteveen video thumbnail on NVIDIA Switchyard local agent model router",
+        "fit": "cover"
+      },
+      "author": {
+        "name": "Sam Witteveen",
+        "profileUrl": "https://www.youtube.com/channel/UC55ODQSvARtgSyc8ThfiepQ"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=9hDyXi5cbQw"
+        },
+        {
+          "label": "Sam Witteveen Channel",
+          "url": "https://www.youtube.com/channel/UC55ODQSvARtgSyc8ThfiepQ"
+        },
+        {
+          "label": "Switchyard Repo",
+          "url": "https://github.com/NVIDIA-NeMo/Switchyard"
+        },
+        {
+          "label": "NVIDIA Technical Blog",
+          "url": "https://developer.nvidia.com/blog/route-ai-agent-workloads-across-models-with-nvidia-nemo-switchyard/"
+        }
+      ],
+      "publishDate": "2026-08-11T15:01:23.866Z"
+    },
     {
       "id": "openai-chatgpt-restaurant-booking",
       "categories": [
