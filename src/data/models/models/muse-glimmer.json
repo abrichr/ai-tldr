@@ -1,0 +1,219 @@
+{
+  "slug": "muse-glimmer",
+  "name": "Muse Glimmer",
+  "maker": "meta",
+  "makerTitle": "Meta",
+  "line": "muse-glimmer",
+  "lineTitle": "Muse Glimmer",
+  "tagline": "Meta Superintelligence Labs' open-weight Muse model — a 30B agentic multimodal model distilled from Muse Spark, Apache-2.0 licensed and sized to run on one consumer GPU. Released August 10, 2026.",
+  "seoTitle": "Muse Glimmer — Meta's 30B Open Agentic Model",
+  "metaDescription": "Muse Glimmer is Meta's Apache-2.0 30B agentic multimodal model, distilled from Muse Spark to run locally on one consumer GPU. Released August 10, 2026.",
+  "releaseDate": "2026-08-10",
+  "status": "Generally available (open weights on Hugging Face)",
+  "license": "Apache-2.0",
+  "openWeights": true,
+  "modalities": [
+    "Text",
+    "Vision"
+  ],
+  "contextWindow": "131K",
+  "parameters": "~29.6B total (includes a ~1.8B-parameter ViT-G/14 vision encoder)",
+  "knowledgeCutoff": "Jan 2026",
+  "architecture": "Dense causal transformer with a dedicated perception encoder: 52 layers, 6,656 hidden dimension, 32 query / 2 KV attention heads (GQA 16:1), SwiGLU FFN (19,968 intermediate), RoPE on local layers, and a repeating [Local, Local, Local, Global] attention pattern with a 2,048-token sliding window.",
+  "tags": [
+    "open-weights",
+    "agentic",
+    "multimodal",
+    "reasoning",
+    "coding",
+    "on-device"
+  ],
+  "overview": [
+    "Muse Glimmer is Meta Superintelligence Labs' open-weight agentic model, released on August 10, 2026 under the Apache 2.0 license. It is a ~29.6B-parameter dense causal transformer with a dedicated ~1.8B-parameter ViT-G/14 perception encoder, distilled from Muse Spark using logit distillation during pre-training, and aimed at always-on local agent workflows rather than hosted frontier serving.",
+    "Meta trained and evaluated it on the capabilities agents actually need: end-to-end task completion, reliable schema-based tool calling, multi-step reasoning over long horizons, recovery after a failed tool call, and interleaved text-and-image input. The model takes text and images and returns text (audio is not supported), has a 131,072-token context length, a January 4, 2026 knowledge cutoff, and training data spanning more than 100 languages. Reasoning strength is selectable in the system prompt at low / medium / high / xhigh.",
+    "Local deployment is the design goal. Meta ships 4-bit quantized weights that shrink the language model to under 20 GB — Meta reports 0.2% average degradation for its K-Quant-Dynamic build (32 GB VRAM target) and 1.0% for K-Quant-17GB (24 GB target) across 15 benchmarks — plus a DFlash block-diffusion drafter for speculative decoding. With that drafter, Meta measures 233.4 tok/s on an RTX 5090 (3.1× over its 74.9 tok/s baseline), 50.2 tok/s on an Apple M5 Max (1.8×), and 37.8 tok/s on an M4 Max (1.5×). Full-precision BF16 weights, both quantized variants, the drafter head and the frozen perception encoder are all released under Apache 2.0."
+  ],
+  "strengths": [
+    "Apache-2.0 open weights — full BF16 checkpoints plus two 4-bit quantized builds, the DFlash drafter, and the vision encoder",
+    "Runs locally on a single consumer GPU: under 20 GB quantized, validated on 24 GB and 32 GB VRAM envelopes and on Apple M4/M5 Max",
+    "Leads its size class on Meta's agentic evaluations — MCP Atlas 75.5, DeepSearch QA 74.6, Gaia2 43.3 and τ3-Banking 23.5 against Gemma4-31B and Qwen3.6-27B",
+    "Speculative decoding via the bundled DFlash drafter gives a measured 3.1× decode speedup on an RTX 5090",
+    "Multimodal input through a dedicated perception encoder — screenshots, charts and documents alongside conversation",
+    "Selectable reasoning strength (low / medium / high / xhigh) set from the system prompt"
+  ],
+  "useCases": [
+    "Reach for it when an agent must run entirely on-device — no cloud round-trip, no network dependency — with tool calling and failure recovery intact.",
+    "Reach for it for local coding agents and SWE-Bench-style workflows on a 24–32 GB consumer GPU or an Apple silicon laptop.",
+    "Reach for it as an LLM-as-a-judge evaluator or a synthetic-data generator where per-token API cost would otherwise dominate.",
+    "Use Muse Spark 1.2 instead when the job needs frontier-level quality, a 1M-token context, or Meta's hosted API rather than local weights."
+  ],
+  "benchmarks": [
+    {
+      "name": "MCP Atlas (Public) — general agentic",
+      "score": 75.5,
+      "unit": "",
+      "max": 100,
+      "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+    },
+    {
+      "name": "DeepSearch QA",
+      "score": 74.6,
+      "unit": "",
+      "max": 100,
+      "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+    },
+    {
+      "name": "SWE-Bench Verified (agentic coding)",
+      "score": 76.0,
+      "unit": "",
+      "max": 100,
+      "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+    },
+    {
+      "name": "SWE-Bench Pro",
+      "score": 51.2,
+      "unit": "",
+      "max": 100,
+      "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+    },
+    {
+      "name": "AIME 2026",
+      "score": 94.7,
+      "unit": "",
+      "max": 100,
+      "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+    },
+    {
+      "name": "GPQA Diamond (AA)",
+      "score": 83.5,
+      "unit": "",
+      "max": 100,
+      "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Muse Glimmer-30B (high reasoning) against the two size-class peers Meta published at launch, both in thinking mode. Higher is better except where marked ↓.",
+    "models": [
+      "Muse Glimmer-30B",
+      "Gemma4-31B",
+      "Qwen3.6-27B"
+    ],
+    "subject": 0,
+    "rows": [
+      { "benchmark": "MCP Atlas (Public)", "scores": [75.5, 54.2, 62.5] },
+      { "benchmark": "DeepSearch QA", "scores": [74.6, 61.7, 71.1] },
+      { "benchmark": "τ3-Banking", "scores": [23.5, 15.1, 16.7] },
+      { "benchmark": "WildClawBench", "scores": [47.6, 37.6, 43.2] },
+      { "benchmark": "GDPVal-AA v2", "scores": [953, 811, 1141] },
+      { "benchmark": "Gaia2", "scores": [43.3, 36.4, 40.0] },
+      { "benchmark": "SkillsBench (with skills)", "scores": [44.3, 32.4, 46.6] },
+      { "benchmark": "OSWorld-Verified", "scores": [65.9, 58.5, 75.6] },
+      { "benchmark": "SWE-Bench Pro", "scores": [51.2, 36.9, 50.2] },
+      { "benchmark": "SWE-Bench Verified", "scores": [76.0, 66.6, 77.2] },
+      { "benchmark": "TerminalBench 2.1 (with terminus2)", "scores": [51.7, 43.4, 60.7] },
+      { "benchmark": "SciCode", "scores": [43.6, 43.4, 39.8] },
+      { "benchmark": "Charxiv Reasoning", "scores": [78.8, 77.7, 78.4] },
+      { "benchmark": "ScreenSpot Pro", "scores": [75.4, 75.9, 76.1] },
+      { "benchmark": "OmniDocBench v1.5", "scores": [75.8, 72.5, 77.8] },
+      { "benchmark": "MMMU Pro", "scores": [74, 73, 75] },
+      { "benchmark": "CI Memories — violation ↓", "scores": [26.4, 12.1, 53.4] },
+      { "benchmark": "CI Memories — coverage", "scores": [64.8, 53.0, 66.9] },
+      { "benchmark": "Siren AgentDojo — attack success ↓", "scores": [28.4, 25.6, 40.3] },
+      { "benchmark": "Siren AgentDojo — utility", "scores": [94.2, 90.8, 92.7] },
+      { "benchmark": "IFBench", "scores": [77.0, 76.0, 70.8] },
+      { "benchmark": "AIME 2026", "scores": [94.7, 89.2, 94.1] },
+      { "benchmark": "GPQA Diamond (AA)", "scores": [83.5, 85.7, 84.2] },
+      { "benchmark": "HLE Text (AA)", "scores": [22.0, 23.6, 23.1] },
+      { "benchmark": "AA-LCR", "scores": [80.0, 68.3, 73.3] },
+      { "benchmark": "Beam128K", "scores": [65.1, 58.2, 63.0] }
+    ],
+    "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+  },
+  "pricing": {
+    "input": "$0.35",
+    "output": "$1.50",
+    "cachedInput": "$0.04",
+    "unit": "/ 1M tokens",
+    "note": "The weights are free under Apache 2.0 and can be run locally at no per-token cost; these are OpenRouter's hosted rates for meta/muse-glimmer-30b.",
+    "source": "https://openrouter.ai/meta/muse-glimmer-30b"
+  },
+  "apis": [
+    {
+      "provider": "Hugging Face (open weights)",
+      "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "modelId": "meta-models/Muse-Glimmer-30B"
+    },
+    {
+      "provider": "OpenRouter",
+      "url": "https://openrouter.ai/meta/muse-glimmer-30b",
+      "modelId": "meta/muse-glimmer-30b"
+    }
+  ],
+  "links": [
+    {
+      "label": "Introducing Muse Glimmer: An Open Agentic Model That Runs on Your Device (Meta AI Research)",
+      "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+      "kind": "announcement"
+    },
+    {
+      "label": "Muse Glimmer-30B model card (Hugging Face)",
+      "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "kind": "model-card"
+    },
+    {
+      "label": "Muse Glimmer evaluation methodology report (Meta AI Research)",
+      "url": "https://research.meta.ai/static/muse-glimmer-methodology",
+      "kind": "paper"
+    },
+    {
+      "label": "Muse Glimmer 30B — hosted API pricing & providers (OpenRouter)",
+      "url": "https://openrouter.ai/meta/muse-glimmer-30b",
+      "kind": "api-docs"
+    },
+    {
+      "label": "Meta Publishes Muse Glimmer As 30B Open Agentic Model (Phoronix)",
+      "url": "https://www.phoronix.com/news/Meta-Muse-Glimmer",
+      "kind": "review"
+    },
+    {
+      "label": "Meta AI Releases Muse Glimmer: A 30B Open-Weights Agentic Model (MarkTechPost)",
+      "url": "https://www.marktechpost.com/2026/08/10/meta-ai-releases-muse-glimmer/",
+      "kind": "review"
+    }
+  ],
+  "faq": [
+    {
+      "q": "When was Muse Glimmer released and under what license?",
+      "a": "Meta Superintelligence Labs released Muse Glimmer on August 10, 2026 under the Apache 2.0 license. Every artifact is Apache-2.0: the full-precision BF16 weights, two 4-bit quantized builds for 24 GB and 32 GB hardware, the DFlash speculative-decoding drafter head, and the frozen ViT-G/14 perception encoder."
+    },
+    {
+      "q": "What hardware does Muse Glimmer need?",
+      "a": "Meta quantizes the weights to roughly 4-bit precision, putting the language model under 20 GB and leaving room for the KV cache, perception encoder and drafter inside a 24 GB or 32 GB VRAM envelope. Meta measured it on an Nvidia RTX 5090 and on MacBook M4-Max and M5-Max machines, and reports 0.2% average accuracy degradation for the 32 GB build and 1.0% for the 24 GB build across 15 benchmarks."
+    },
+    {
+      "q": "How fast is Muse Glimmer locally?",
+      "a": "With the bundled DFlash drafter doing speculative decoding, Meta measured 233.4 tok/s on an RTX 5090 versus a 74.9 tok/s no-speculation baseline (3.1×), 50.2 tok/s on an Apple M5 Max (1.8× over 26.6), and 37.8 tok/s on an M4 Max (1.5× over 23.7). Measurements used batch size 1 and greedy decoding, with llama.cpp on the RTX and ExecuTorch on Apple silicon."
+    },
+    {
+      "q": "How does Muse Glimmer compare to Gemma4-31B and Qwen3.6-27B?",
+      "a": "In Meta's published table, Muse Glimmer-30B leads both on general agentic work — MCP Atlas 75.5 (vs 54.2 and 62.5), DeepSearch QA 74.6 (vs 61.7 and 71.1), Gaia2 43.3 (vs 36.4 and 40.0) — and on SWE-Bench Pro (51.2 vs 36.9 and 50.2), AIME 2026 (94.7) and AA-LCR (80.0). Qwen3.6-27B is ahead on OSWorld-Verified (75.6), TerminalBench 2.1 (60.7), SWE-Bench Verified (77.2) and SkillsBench (46.6); Gemma4-31B is ahead on GPQA Diamond (85.7) and HLE Text (23.6)."
+    },
+    {
+      "q": "How is Muse Glimmer different from Muse Spark?",
+      "a": "Muse Glimmer is distilled from Muse Spark — Meta trained it on Muse Spark's outputs with logit distillation — and is open-weight, roughly 30B parameters, and built for local execution with a 131K context window. Muse Spark 1.2 is proprietary, served through the Meta Model API, and carries a 1M-token context. Meta states that Muse Glimmer is generally less capable than Muse Spark and therefore does not fall under the Frontier AI definition in Meta's Advanced AI Scaling Framework."
+    },
+    {
+      "q": "What can Muse Glimmer not do?",
+      "a": "Audio input and output are unsupported, and the model is not explicitly optimized for video — video input is processed as individual frames. Meta also notes that quantized inference can differ slightly from full precision in edge cases, and that performance may degrade on languages outside the strongly supported set of its 100+ training languages."
+    }
+  ],
+  "versionHistory": [
+    {
+      "version": "Muse Glimmer",
+      "slug": "muse-glimmer",
+      "date": "2026-08-10",
+      "current": true,
+      "note": "First open-weight Muse model — 30B dense transformer with perception encoder, distilled from Muse Spark, Apache 2.0, with 4-bit builds and a DFlash speculative-decoding drafter."
+    }
+  ]
+}

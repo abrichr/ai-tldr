@@ -5,9 +5,9 @@
   "makerTitle": "OpenAI",
   "line": "gpt-cyber",
   "lineTitle": "GPT Cyber",
-  "tagline": "OpenAI's most permissive cyber-tuned GPT-5.5 tier — invite-only access for vetted security defenders.",
+  "tagline": "The most permissive cyber-tuned tier of OpenAI's GPT-5.5 generation — invite-only access for vetted security defenders.",
   "seoTitle": "GPT-5.5-Cyber — OpenAI Cyber Model Specs",
-  "metaDescription": "GPT-5.5-Cyber is OpenAI's most permissive cyber tier for vetted defenders under Trusted Access for Cyber. Preview May 7, 2026; full release June 22, 2026.",
+  "metaDescription": "GPT-5.5-Cyber is OpenAI's cyber-tuned GPT-5.5 tier for vetted defenders under Trusted Access for Cyber. Preview May 7, 2026; full release June 22, 2026.",
   "releaseDate": "2026-05-07",
   "license": "Proprietary",
   "openWeights": false,
@@ -23,8 +23,8 @@
     "long-context"
   ],
   "overview": [
-    "GPT-5.5-Cyber is OpenAI's most permissive cybersecurity tier, opened in limited preview on May 7, 2026 as part of the Trusted Access for Cyber (TAC) program and fully released on June 22, 2026 alongside OpenAI's expanded Daybreak security program. It is built on the same underlying GPT-5.5 model that became OpenAI's flagship in late April 2026, but is tuned to issue fewer classifier-based refusals on authorized security tasks for a small set of vetted, invite-only defenders and approved partner organizations.",
-    "The model accepts text and image input and shares GPT-5.5's core specs: a roughly 1.05M-token context window, up to 128K output tokens, and a December 2025 knowledge cutoff. On the June 22 full release, OpenAI reported the model lifts CyberGym to 85.6% (vs. 81.8% for standard GPT-5.5), ExploitGym to 39.5% (vs. 25.95%), and SEC-bench Pro to 69.8% (vs. 63.1%). OpenAI describes the full version as the most capable defensive cybersecurity model it has released and pairs it with stronger verification, monitoring, scoped controls, and review for verified defenders.",
+    "GPT-5.5-Cyber is the most permissive cybersecurity tier of OpenAI's GPT-5.5 generation, opened in limited preview on May 7, 2026 as part of the Trusted Access for Cyber (TAC) program and fully released on June 22, 2026 alongside OpenAI's expanded Daybreak security program. It is built on the same underlying GPT-5.5 model that became OpenAI's flagship in late April 2026, but is tuned to issue fewer classifier-based refusals on authorized security tasks for a small set of vetted, invite-only defenders and approved partner organizations.",
+    "The model accepts text and image input and shares GPT-5.5's core specs: a roughly 1.05M-token context window, up to 128K output tokens, and a December 2025 knowledge cutoff. On the June 22 full release, OpenAI reported the model lifts CyberGym to 85.6% (vs. 81.8% for standard GPT-5.5), ExploitGym to 39.5% (vs. 25.95%), and SEC-bench Pro to 69.8% (vs. 63.1%). At that June 22, 2026 release OpenAI described the full version as the most capable defensive cybersecurity model it had released, and pairs it with stronger verification, monitoring, scoped controls, and review for verified defenders.",
     "Access is gated. Individuals apply at chatgpt.com/cyber and enterprises via OpenAI's enterprise TAC form; the Cyber tier is the highest, invite-only level. Beginning June 1, 2026, individual members accessing OpenAI's most permissive cyber models must enable Advanced Account Security with phishing-resistant protections, or organizations can attest to phishing-resistant single sign-on. Safeguards still block malicious activity such as credential theft, stealth/persistence techniques, malware deployment, and exploitation of third-party systems."
   ],
   "strengths": [
@@ -83,6 +83,12 @@
     }
   ],
   "versionHistory": [
+    {
+      "version": "GPT-5.6-Cyber",
+      "slug": "gpt-5-6-cyber",
+      "date": "2026-08-10",
+      "note": "Built on GPT-5.6 Sol and trained for zero-day discovery and exploit-chain development; ships in the Daybreak Red tier."
+    },
     {
       "version": "GPT-5.5-Cyber",
       "slug": "gpt-5-5-cyber",
@@ -144,7 +150,7 @@
   "faq": [
     {
       "q": "What is GPT-5.5-Cyber?",
-      "a": "GPT-5.5-Cyber is OpenAI's most permissive cybersecurity tier, opened in limited preview on May 7, 2026 and fully released on June 22, 2026 as part of the Trusted Access for Cyber program and OpenAI's Daybreak security initiative. It is built on the same underlying GPT-5.5 model but is tuned to issue fewer automated refusals on authorized security work — vulnerability research, malware analysis, reverse engineering, detection engineering, and authorized penetration testing — for vetted, invite-only defenders."
+      "a": "GPT-5.5-Cyber is the most permissive cybersecurity tier of OpenAI's GPT-5.5 generation, opened in limited preview on May 7, 2026 and fully released on June 22, 2026 as part of the Trusted Access for Cyber program and OpenAI's Daybreak security initiative. It is built on the same underlying GPT-5.5 model but is tuned to issue fewer automated refusals on authorized security work — vulnerability research, malware analysis, reverse engineering, detection engineering, and authorized penetration testing — for vetted, invite-only defenders."
     },
     {
       "q": "How is GPT-5.5-Cyber different from regular GPT-5.5?",

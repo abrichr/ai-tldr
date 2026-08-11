@@ -914,8 +914,25 @@
         {
           "id": "gpt-cyber",
           "title": "GPT Cyber",
-          "blurb": "Specialized, more permissive cybersecurity model for vetted defenders under OpenAI's Trusted Access for Cyber.",
+          "blurb": "Specialized, more permissive cybersecurity models for vetted defenders — first under OpenAI's Trusted Access for Cyber, then the Daybreak program.",
           "versions": [
+            {
+              "name": "GPT-5.6-Cyber",
+              "slug": "gpt-5-6-cyber",
+              "blurb": "Built on GPT-5.6 Sol and trained for zero-day discovery and exploit-chain development; released August 10, 2026 in the Daybreak Red tier with a 400K context window.",
+              "tags": [
+                "proprietary",
+                "frontier",
+                "reasoning",
+                "agentic",
+                "long-context"
+              ],
+              "contextWindow": "400K",
+              "license": "Proprietary",
+              "date": "2026-08-10",
+              "current": true,
+              "rich": true
+            },
             {
               "name": "GPT-5.5-Cyber",
               "slug": "gpt-5-5-cyber",
@@ -925,7 +942,6 @@
               ],
               "license": "Proprietary",
               "date": "2026-05-07",
-              "current": true,
               "rich": true
             }
           ]
@@ -1555,6 +1571,31 @@
               ],
               "license": "Proprietary",
               "date": "2026-04-08",
+              "rich": true
+            }
+          ]
+        },
+        {
+          "id": "muse-glimmer",
+          "title": "Muse Glimmer",
+          "blurb": "Meta Superintelligence Labs' open-weight, on-device Muse model — distilled from Muse Spark and licensed Apache 2.0 for local agent workflows.",
+          "versions": [
+            {
+              "name": "Muse Glimmer",
+              "slug": "muse-glimmer",
+              "blurb": "Apache-2.0 30B agentic multimodal model distilled from Muse Spark, released August 2026: 131K context, 4-bit builds under 20 GB, and a bundled speculative-decoding drafter.",
+              "tags": [
+                "open-weights",
+                "agentic",
+                "multimodal",
+                "reasoning",
+                "coding",
+                "on-device"
+              ],
+              "contextWindow": "131K",
+              "license": "Apache-2.0",
+              "date": "2026-08-10",
+              "current": true,
               "rich": true
             }
           ]

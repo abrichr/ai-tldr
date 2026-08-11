@@ -1,0 +1,160 @@
+{
+  "slug": "gpt-5-6-cyber",
+  "name": "GPT-5.6-Cyber",
+  "maker": "openai",
+  "makerTitle": "OpenAI",
+  "line": "gpt-cyber",
+  "lineTitle": "GPT Cyber",
+  "tagline": "OpenAI's cyber-tuned build of GPT-5.6 Sol for approved Daybreak Red members — released August 10, 2026 for authorized vulnerability research, exploit validation and security testing.",
+  "seoTitle": "GPT-5.6-Cyber — OpenAI's Daybreak Red Model",
+  "metaDescription": "GPT-5.6-Cyber is OpenAI's cyber-tuned GPT-5.6 Sol build for approved Daybreak Red defenders: 400K context, $12.50/$75 per 1M tokens. Released Aug 10, 2026.",
+  "releaseDate": "2026-08-10",
+  "status": "Generally available to approved Daybreak Red members (application, identity verification and monitoring required)",
+  "license": "Proprietary",
+  "openWeights": false,
+  "modalities": [
+    "Text",
+    "Vision"
+  ],
+  "contextWindow": "400K",
+  "maxOutput": "128K",
+  "parameters": "Undisclosed",
+  "knowledgeCutoff": "Feb 2026",
+  "architecture": "Built on GPT-5.6 Sol, with additional training on specialized cybersecurity tasks such as finding zero-day vulnerabilities and developing exploit chains, and reduced refusals on higher-risk dual-use cyber work. Served only through the Responses API endpoint (v1/responses).",
+  "tags": [
+    "frontier",
+    "proprietary",
+    "reasoning",
+    "agentic",
+    "long-context"
+  ],
+  "overview": [
+    "GPT-5.6-Cyber is OpenAI's purpose-trained cybersecurity model, announced on August 10, 2026 alongside a restructuring of the Daybreak program into two access tiers. It is built on GPT-5.6 Sol and trained to improve on specialized security tasks — finding zero-day vulnerabilities, developing exploit chains, validating exploits — while refusing far less often on higher-risk dual-use cyber work than the general-purpose model.",
+    "Access runs through Daybreak Red, the tier for security researchers doing vulnerability research, exploit validation and penetration testing; Daybreak Blue is the broader tier, giving GPT-5.6 Sol with tailored safeguards for defensive work such as vulnerability discovery, secure code review, malware analysis, incident response and patch validation. Entry to either tier requires identity verification, account security measures, monitoring and legal declarations, and hardware security keys become mandatory for all Daybreak accounts on September 1, 2026.",
+    "The model takes text and image input and returns text, with a 400,000-token context window, up to 128,000 output tokens, and a February 16, 2026 knowledge cutoff. OpenAI prices it at $12.50 per million input tokens, $1.25 per million cached input tokens and $75.00 per million output tokens, and notes that requests over 272K input tokens are billed at 2× input and 1.5× output for the whole request. Only the Responses API endpoint is supported. OpenAI reports using the model in real-world vulnerability research, including work that surfaced previously unknown flaws in Chrome's V8 engine."
+  ],
+  "strengths": [
+    "Answers the authorized security questions a general-purpose model blocks — 95.0% completion on OpenAI's advanced cybersecurity request set, against 1.5% for GPT-5.6 Sol",
+    "Trained for zero-day discovery, exploit-chain development and exploit validation rather than defensive triage alone",
+    "Outperforms both GPT-5.6 Sol and GPT-5.5-Cyber on ExploitGym, which tests turning known vulnerabilities into working exploits",
+    "400K-token context with 128K max output — enough for whole-codebase review and long agentic security runs",
+    "Inherits GPT-5.6 Sol's frontier reasoning, vision input and tool use"
+  ],
+  "useCases": [
+    "Reach for it when an approved research team needs a model that will engage with authorized vulnerability research, exploit validation and penetration testing.",
+    "Reach for it for zero-day hunting and exploit-chain development in a monitored, sandboxed environment under coordinated disclosure.",
+    "Use Daybreak Blue with GPT-5.6 Sol instead for the defensive majority of security work — vulnerability discovery, secure code review, malware analysis, incident response and patch validation.",
+    "Use standard GPT-5.6 Sol for everything outside authorized security work: it is a fifth of the input price and carries the full 1.05M-token context."
+  ],
+  "benchmarks": [
+    {
+      "name": "Advanced cybersecurity request completion (OpenAI internal set)",
+      "score": 95.0,
+      "unit": "%",
+      "max": 100,
+      "source": "https://the-decoder.com/openai-launches-gpt-5-6-cyber-to-help-defenders-find-vulnerabilities-before-attackers-do/"
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Share of advanced cybersecurity requests completed, from the figures OpenAI published with the August 10, 2026 Daybreak announcement.",
+    "models": [
+      "GPT-5.6-Cyber",
+      "GPT-5.5-Cyber",
+      "GPT-5.6 Sol (Daybreak Blue)",
+      "GPT-5.6 Sol"
+    ],
+    "subject": 0,
+    "rows": [
+      {
+        "benchmark": "Advanced cybersecurity request completion",
+        "unit": "%",
+        "scores": [95.0, 57.3, 2.0, 1.5]
+      }
+    ],
+    "source": "https://the-decoder.com/openai-launches-gpt-5-6-cyber-to-help-defenders-find-vulnerabilities-before-attackers-do/"
+  },
+  "pricing": {
+    "input": "$12.50",
+    "output": "$75.00",
+    "cachedInput": "$1.25",
+    "unit": "/ 1M tokens",
+    "note": "Prompts over 272K input tokens are priced at 2× input and 1.5× output for the full request. Access is granted through the Daybreak Red application, not the public price list.",
+    "source": "https://developers.openai.com/api/docs/models/gpt-5.6-cyber"
+  },
+  "apis": [
+    {
+      "provider": "OpenAI Responses API (Daybreak Red approval required)",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-cyber",
+      "modelId": "gpt-5.6-cyber"
+    }
+  ],
+  "links": [
+    {
+      "label": "Expanding Daybreak as the Cyber Defense Window Narrows (OpenAI announcement)",
+      "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/",
+      "kind": "announcement"
+    },
+    {
+      "label": "GPT-5.6-Cyber model reference — context, pricing, endpoints (OpenAI API docs)",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-cyber",
+      "kind": "api-docs"
+    },
+    {
+      "label": "Putting Frontier Cyber Models in More Trusted Hands (OpenAI)",
+      "url": "https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands",
+      "kind": "announcement"
+    },
+    {
+      "label": "Daybreak — OpenAI for cybersecurity",
+      "url": "https://openai.com/daybreak/",
+      "kind": "official"
+    },
+    {
+      "label": "OpenAI launches GPT-5.6-Cyber to help defenders find vulnerabilities before attackers do (The Decoder)",
+      "url": "https://the-decoder.com/openai-launches-gpt-5-6-cyber-to-help-defenders-find-vulnerabilities-before-attackers-do/",
+      "kind": "review"
+    },
+    {
+      "label": "As AI-led attacks multiply, OpenAI launches a new cyber model (TechCrunch)",
+      "url": "https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/",
+      "kind": "review"
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is GPT-5.6-Cyber?",
+      "a": "GPT-5.6-Cyber is OpenAI's purpose-trained cybersecurity model, announced on August 10, 2026. It is built on GPT-5.6 Sol and trained to improve on specialized security tasks — including finding zero-day vulnerabilities and developing exploit chains — and to refuse less often on higher-risk dual-use cyber work. It is offered through Daybreak Red for authorized vulnerability research, exploit validation and security testing."
+    },
+    {
+      "q": "How do you get access to GPT-5.6-Cyber?",
+      "a": "Through the Daybreak Red tier, which requires a separate application and approval. OpenAI gates both Daybreak tiers behind identity verification, account security measures, monitoring and legal declarations, and hardware security keys become mandatory for all Daybreak accounts on September 1, 2026."
+    },
+    {
+      "q": "What is the difference between Daybreak Blue and Daybreak Red?",
+      "a": "Daybreak Blue provides access to frontier models including GPT-5.6 Sol with safeguards tailored to defensive work — vulnerability discovery, secure code review, malware analysis, incident response and patch validation. Daybreak Red provides purpose-trained cybersecurity models, including GPT-5.6-Cyber, for authorized vulnerability research, exploit validation and security testing."
+    },
+    {
+      "q": "How much does GPT-5.6-Cyber cost, and how large is its context window?",
+      "a": "OpenAI lists $12.50 per million input tokens, $1.25 per million cached input tokens and $75.00 per million output tokens, with prompts over 272K input tokens billed at 2× input and 1.5× output for the whole request. The context window is 400,000 tokens with up to 128,000 output tokens and a February 16, 2026 knowledge cutoff — a smaller window than GPT-5.6 Sol's 1.05M tokens."
+    },
+    {
+      "q": "How much more permissive is it than GPT-5.6 Sol?",
+      "a": "On OpenAI's advanced cybersecurity request set, GPT-5.6-Cyber completes 95.0% of requests, compared with 1.5% for GPT-5.6 Sol, 2.0% for GPT-5.6 Sol under Daybreak Blue access, and 57.3% for the earlier GPT-5.5-Cyber. On ExploitGym, which measures whether an agent can turn a known vulnerability into a working exploit in a controlled environment, OpenAI reports that GPT-5.6-Cyber beats both GPT-5.6 Sol and GPT-5.5-Cyber."
+    }
+  ],
+  "versionHistory": [
+    {
+      "version": "GPT-5.6-Cyber",
+      "slug": "gpt-5-6-cyber",
+      "date": "2026-08-10",
+      "current": true,
+      "note": "Built on GPT-5.6 Sol and trained for zero-day discovery and exploit-chain development; ships in the new Daybreak Red tier with a 400K context window."
+    },
+    {
+      "version": "GPT-5.5-Cyber",
+      "slug": "gpt-5-5-cyber",
+      "date": "2026-05-07",
+      "note": "First GPT Cyber model — more permissive GPT-5.5 tier for vetted defenders under Trusted Access for Cyber; full release June 22, 2026."
+    }
+  ]
+}

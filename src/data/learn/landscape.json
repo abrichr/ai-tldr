@@ -1491,6 +1491,15 @@
      "title": "RAG Frameworks & Platforms",
      "tools": [
       {
+       "name": "Pathway",
+       "slug": "pathway",
+       "repo": "pathwaycom/pathway",
+       "homepage": "https://pathway.com",
+       "description": "A Python framework with a Rust streaming engine that keeps ETL, real-time analytics and RAG pipelines continuously up to date as source data changes.",
+       "access": "open-core",
+       "detail": true
+      },
+      {
        "name": "Dify",
        "slug": "dify",
        "repo": "langgenius/dify",

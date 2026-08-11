@@ -1,0 +1,68 @@
+{
+  "slug": "pathway",
+  "name": "Pathway",
+  "repo": "pathwaycom/pathway",
+  "homepage": "https://pathway.com",
+  "access": "open-core",
+  "category": "retrieval-knowledge",
+  "categoryTitle": "Retrieval & Knowledge (RAG)",
+  "subcategory": "rag-frameworks",
+  "subcategoryTitle": "RAG Frameworks & Platforms",
+  "tagline": "Python ETL and RAG pipelines that stay live as the data changes",
+  "seoTitle": "Pathway - Live Data Framework for ETL and RAG",
+  "metaDescription": "Pathway is a Python ETL framework with a Rust streaming engine for stream processing, real-time analytics, LLM pipelines and RAG that update as source data changes.",
+  "overview": [
+    "Pathway is a Python framework for stream processing, real-time analytics, LLM pipelines and RAG. You write ordinary Python — schemas, filters, joins, reducers — and the framework runs it as an incremental computation, so results are recomputed only where the input changed instead of being rebuilt from scratch on a schedule.",
+    "The Python API sits on top of a Rust engine based on Differential Dataflow, which handles multithreading, multiprocessing and distributed computation. The same code runs in both batch and streaming mode, so a pipeline developed against local files or a CI fixture can be pointed at a live Kafka topic without a rewrite. Pipeline state is held in memory, with persistence available so a pipeline can restart after a crash or an update, and the engine handles late and out-of-order records by updating results when the data arrives.",
+    "For AI work, Pathway ships an LLM extension (the \"LLM xpack\") with wrappers, parsers, embedders and splitters, an in-memory real-time vector index, and integrations with LangChain and LlamaIndex — which is what makes it a RAG option rather than only a data-engineering one: the index tracks your documents as they change instead of being rebuilt by a nightly job. Connectors cover Kafka, Google Drive, PostgreSQL and SharePoint, plus an Airbyte connector for 300+ more sources and a Python connector for anything custom."
+  ],
+  "features": [
+    "One codebase for batch and streaming — the same pipeline runs on local files, CI fixtures, stream replays, and live topics",
+    "Rust engine based on Differential Dataflow doing incremental computation, with multithreading, multiprocessing and distributed execution",
+    "Stateful transformations implemented in Rust — joins, windowing, sorting — alongside arbitrary Python functions and libraries",
+    "LLM xpack: LLM wrappers, parsers, embedders, splitters and an in-memory real-time vector index, with LangChain and LlamaIndex integrations",
+    "Connectors for Kafka, Google Drive, PostgreSQL and SharePoint, an Airbyte connector for 300+ sources, and a custom Python connector",
+    "Persistence to save computation state and restart a pipeline after a crash or update, plus a monitoring dashboard for connector throughput and latency",
+    "Deploys as a plain Python process, a Docker image (pathwaycom/pathway), or on Kubernetes"
+  ],
+  "gettingStarted": {
+    "intro": "Pathway needs Python 3.10 or above and runs on macOS and Linux (other systems should use a VM). Install it with pip, describe the pipeline, then call pw.run() to start the computation.",
+    "steps": [
+      {
+        "heading": "Install Pathway",
+        "code": "pip install -U pathway",
+        "lang": "bash"
+      },
+      {
+        "heading": "Write a pipeline",
+        "body": "Connect to a source, transform the table, write the result, and run. This example from the README sums the positive values arriving in a CSV directory and keeps the output file up to date.",
+        "code": "import pathway as pw\n\n# Define the schema of your data (Optional)\nclass InputSchema(pw.Schema):\n  value: int\n\n# Connect to your data using connectors\ninput_table = pw.io.csv.read(\n  \"./input/\",\n  schema=InputSchema\n)\n\n# Define your operations on the data\nfiltered_table = input_table.filter(input_table.value>=0)\nresult_table = filtered_table.reduce(\n  sum_value = pw.reducers.sum(filtered_table.value)\n)\n\n# Load your results to external systems\npw.io.jsonlines.write(result_table, \"output.jsonl\")\n\n# Run the computation\npw.run()",
+        "lang": "python"
+      },
+      {
+        "heading": "Run it",
+        "body": "A Pathway project is a normal Python script. The pathway CLI adds a spawn command when you want multiple threads.",
+        "code": "python main.py\n\n# or, with the Pathway CLI and 3 threads\npathway spawn --threads 3 python main.py",
+        "lang": "bash"
+      },
+      {
+        "heading": "Containerize it",
+        "body": "For single-file projects you can skip the Dockerfile and run the script directly in the official image.",
+        "code": "docker run -it --rm --name my-pathway-app -v \"$PWD\":/app pathwaycom/pathway:latest python my-pathway-app.py",
+        "lang": "bash"
+      },
+      {
+        "heading": "Add LLM and RAG tooling",
+        "body": "The LLM xpack adds model wrappers, parsers, embedders, splitters and a real-time vector index on top of the same pipelines. Pathway's documentation carries runnable templates — adaptive RAG, multimodal RAG, and a private RAG stack running on Ollama with Mistral — at pathway.com/developers/user-guide/llm-xpack/overview."
+      }
+    ]
+  },
+  "useCases": [
+    "Reach for it when a RAG index must reflect documents that keep changing — the in-memory vector index updates with the source instead of waiting for a rebuild job.",
+    "Reach for it for real-time ETL and event-driven pipelines over Kafka, object storage or a database, when you want Python rather than Flink or Spark.",
+    "Reach for it when the same transformation has to serve both a historical backfill and a live stream without maintaining two implementations.",
+    "Look elsewhere if you need a batteries-included RAG application with a UI — Pathway is a pipeline framework, not a chat product."
+  ],
+  "language": "Python, Rust",
+  "license": "BSL 1.1 (free for non-commercial use and most commercial purposes; converts to Apache 2.0 after 4 years)"
+}
