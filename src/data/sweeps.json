@@ -30645,6 +30645,34 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260811t105619z",
+      "timestamp": "2026-08-11T10:56:19.032Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, Ai2, NVIDIA, plus DeepSeek/Qwen/MiniMax/Moonshot/Z.ai), GitHub trending (daily + weekly Python/TypeScript), HuggingFace models/datasets/papers/blog, HN front page and newest, all 8 YouTube creator feeds, tier-1 press, and the AI-for-science lane (STAT, Nature, Lancet Digital Health, Endpoints, neuro/pharma searches). Nothing new qualified: the Aug 10 wave (Muse Glimmer, Needle 2, GPT-5.6-Cyber, Claude content marking, SWE-Bench ProMax) is already in the feed, and the only fresh YouTube upload is the already-ingested Sam Witteveen Muse Glimmer video. Best near-miss was Ouroboros (arXiv 2608.08311, top HF paper at 1.06k upvotes, MIT repo at 1,075 stars) — its arXiv v1 landed 2026-08-08 19:45 UTC, so the date falls outside the 72h cap as finalize-sweep computes it; not added rather than restate the date. Dan Luu's coding-agent language study (HN 188 points) carries no publishable date anywhere on the page, was submitted by a third party, and commenters place it earlier, so it failed date verification. NVIDIA Magpie TTS (weights Aug 5) and NemotronLabs VoiceChat 11B (repo Jul 29) are outside 72h; Macaron-V1 has no code, weights or demo and fails the paper 2-of-N bar; the GPT-5.7 'Doug' chatter traces to an X tracker and a SemiAnalysis memo with nothing shipped.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "algorithm",
+        "video",
+        "dataset",
+        "article",
+        "security",
+        "benchmark",
+        "ecosystem",
+        "rumor"
+      ]
     }
   ]
 }
