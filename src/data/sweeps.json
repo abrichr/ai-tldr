@@ -30572,6 +30572,45 @@
         "algorithm",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260811t070510z",
+      "timestamp": "2026-08-11T07:05:10.184Z",
+      "source": "github-actions-sweep",
+      "summary": "Added antirez's h3.c (MiniMax H3 inference engine in C for Apple Silicon, HN #1 at 197 points) and SWE-Bench ProMax (170-task multilingual refactoring benchmark, #1 on HF Papers, best model 41.2%). Lab blogs were quiet: Anthropic, Meta, Mistral, DeepMind and the Chinese labs shipped nothing inside 72h. Both fresh YouTube videos were already in the feed, and the science lane surfaced no released artifact within the window.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "antirez-h3-c",
+          "title": "h3.c — antirez ships a C engine that runs MiniMax H3 on Apple Silicon",
+          "category": "repo",
+          "note": "Repo first published 2026-08-09, 638 stars in two days, Hacker News #1 with 197 points; distinct from the existing antirez-ds4 item (different engine, different model)."
+        },
+        {
+          "id": "swe-bench-promax",
+          "title": "SWE-Bench ProMax — coding-agent benchmark where the best model scores 41.2%",
+          "category": "benchmark",
+          "note": "arXiv submission 2026-08-10, #1 on Hugging Face Papers with 68 upvotes, released Hugging Face dataset plus COLM 2026 acceptance clears the 2-of-N paper bar."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "benchmark",
+        "dataset",
+        "video",
+        "article",
+        "algorithm",
+        "ecosystem"
+      ]
     }
   ]
 }

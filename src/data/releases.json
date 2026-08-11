@@ -1,8 +1,221 @@
 {
-  "generatedAt": "2026-08-11T05:13:35.148Z",
+  "generatedAt": "2026-08-11T07:05:10.184Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "antirez-h3-c",
+      "categories": [
+        "repo",
+        "tool"
+      ],
+      "title": "h3.c — antirez ships a C engine that runs MiniMax H3 on Apple Silicon",
+      "org": "antirez",
+      "date": "2026-08-09",
+      "url": "https://github.com/antirez/h3.c",
+      "summary": "h3.c is an MIT-licensed inference engine written in C that runs the MiniMax H3 multimodal model natively on Apple Silicon Macs. It generates video and audio from a prompt using Metal, and reached 638 stars two days after publication.",
+      "tags": [
+        "inference",
+        "apple-silicon",
+        "metal",
+        "minimax-h3",
+        "video-generation",
+        "local-inference",
+        "c",
+        "open-source",
+        "mit-license",
+        "antirez"
+      ],
+      "importance": "major",
+      "metrics": {
+        "GitHub stars": 638,
+        "Hacker News points": 197
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "antirez (Salvatore Sanfilippo)"
+        },
+        {
+          "label": "License",
+          "value": "MIT"
+        },
+        {
+          "label": "Language",
+          "value": "C"
+        },
+        {
+          "label": "Model it runs",
+          "value": "MiniMax H3"
+        },
+        {
+          "label": "Platform",
+          "value": "Apple Silicon Macs, Metal (M3 and M5 tested)"
+        },
+        {
+          "label": "Memory",
+          "value": "128 GB unified memory recommended for the full feature set"
+        },
+        {
+          "label": "First published",
+          "value": "2026-08-09"
+        }
+      ],
+      "explainer": {
+        "tagline": "A single C program that turns a prompt into video and audio on a Mac, with no Python stack underneath.",
+        "whatIsIt": "h3.c runs the MiniMax H3 multimodal model directly on Apple Silicon, written in C against Metal instead of a Python framework. It takes a text prompt and produces video with sound. A Ref2VA mode lets you steer the result with first-frame and last-frame anchors plus ordered image, video, and audio references. Salvatore Sanfilippo (antirez), the creator of Redis, wrote it.",
+        "howItWorks": "The engine runs the diffusion transformer denoising loop on Metal and exposes the quality-versus-speed knobs directly: step count, layer count, a layer-reuse factor, an internal render resolution, and an int8 path instead of BF16. Building h3.c is a plain `make -j8`; it shells out to FFmpeg and FFprobe for reading and writing media. Running the binary without a prompt drops you into an interactive session.",
+        "whyItMatters": "Local video generation normally means a large Python and CUDA stack on an NVIDIA box. Because h3.c is C plus Metal, a Mac owner can clone it, run make, and generate clips offline with nothing else installed. The README reports about 3.5 seconds for a four-step denoise of a 512×512, 22-frame clip on an M5 Max, so iteration is fast enough to actually experiment.",
+        "forWho": "Mac developers who want local video generation without a Python stack",
+        "tryIt": "make -j8 && ./h3 -d ./MiniMax-H3 -p \"a fox running\" --width 512 --height 512"
+      },
+      "faq": [
+        {
+          "q": "What hardware do you need to run h3.c?",
+          "a": "h3.c requires an Apple Silicon Mac with Metal support; the README notes M3 and M5 were tested. FFmpeg and FFprobe must be on your PATH because the engine shells out to them for media input and output. The author recommends 128 GB of unified memory to use the full feature set."
+        },
+        {
+          "q": "How fast is h3.c on an M5 Max?",
+          "a": "The h3.c README gives several figures for an M5 Max. A four-step denoise of a 512×512, 22-frame fox clip takes about 3.5 seconds. The default preset drops from 16.69 to 12.60 seconds with token reduction, and an aggressive profile at 320 internal render spends 8.02 seconds in the diffusion transformer."
+        },
+        {
+          "q": "Does int8 make h3.c faster than BF16?",
+          "a": "Yes. The h3.c README reports 36.30 seconds using BF16 on MPS versus 25.80 seconds using int8 for the same work on an M5 Max. A complete Ref2VA run including audio is listed at 74.58 and 76.99 seconds, so the reference-conditioned path costs noticeably more than plain prompt-to-video."
+        },
+        {
+          "q": "What output sizes and lengths does h3.c support?",
+          "a": "h3.c requires canvas dimensions that are multiples of 32, and the width times height product cannot exceed 768×1344 pixels. Frame counts snap to the formula 5+17n, so a request for 23 frames rounds up to 39. Audio references are capped at 15 seconds total across a maximum of three inputs, and native 128×128 is unsupported."
+        },
+        {
+          "q": "Is h3.c free to use commercially?",
+          "a": "h3.c itself is released under the MIT license, which permits commercial use, modification, and redistribution. The engine is only the runtime, though — you still need the MiniMax H3 weights, which are distributed separately on Hugging Face under their own terms, so check that model license before shipping anything built on it."
+        }
+      ],
+      "image": {
+        "url": "https://opengraph.githubassets.com/1d1cdea84962243bf80f099d1350ca5ac855cd9eea0770a4c4df2d863af3f507/antirez/h3.c",
+        "alt": "GitHub repository card for antirez/h3.c, a MiniMax H3 inference engine for Mac computers",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/antirez/h3.c"
+        },
+        {
+          "label": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=49252179"
+        },
+        {
+          "label": "MiniMax H3 Weights",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3"
+        }
+      ],
+      "publishDate": "2026-08-11T07:05:10.184Z"
+    },
+    {
+      "id": "swe-bench-promax",
+      "categories": [
+        "benchmark",
+        "paper",
+        "dataset"
+      ],
+      "title": "SWE-Bench ProMax — coding-agent benchmark where the best model scores 41.2%",
+      "org": "SWE-Bench ProMax",
+      "date": "2026-08-10",
+      "url": "https://arxiv.org/abs/2608.09802",
+      "summary": "SWE-Bench ProMax is a code-refactoring benchmark of 170 expert-curated tasks across seven languages. Each task changes 11.4 files and 261.6 lines on average, and the best frontier model resolves only 41.2% of them.",
+      "tags": [
+        "benchmark",
+        "coding-agents",
+        "code-refactoring",
+        "swe-bench",
+        "evaluation",
+        "multilingual",
+        "dataset",
+        "colm-2026",
+        "software-engineering"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Best resolve rate": "41.2%"
+      },
+      "quickFacts": [
+        {
+          "label": "What it tests",
+          "value": "Large-scale, behavior-preserving code refactoring"
+        },
+        {
+          "label": "Instances",
+          "value": "170"
+        },
+        {
+          "label": "Languages",
+          "value": "Python, Java, TypeScript, Go, C, C++, Rust"
+        },
+        {
+          "label": "Task size",
+          "value": "11.4 files and 261.6 lines changed on average"
+        },
+        {
+          "label": "Best result",
+          "value": "41.2% resolve rate"
+        },
+        {
+          "label": "Availability",
+          "value": "Hugging Face dataset, 13.1 MB"
+        },
+        {
+          "label": "Venue",
+          "value": "COLM 2026"
+        }
+      ],
+      "explainer": {
+        "tagline": "A refactoring benchmark built to replace saturating SWE-bench tests, and frontier agents solve well under half of it.",
+        "whatIsIt": "Code refactoring, not bug fixing, is what SWE-Bench ProMax measures: 170 tasks drawn from real commits across Python, Java, TypeScript, Go, C, C++, and Rust. Every task demands coordinated edits that preserve behavior across many files, averaging 11.4 modified files and 261.6 lines — well beyond the single-file scale of earlier suites. The work was accepted to COLM 2026.",
+        "howItWorks": "Curation is what separates SWE-Bench ProMax from its predecessors. The authors rewrote every issue description from scratch so the specification is precise and unambiguous, then manually reviewed each test suite to strip out tests that were too narrow (rejecting correct solutions) or too broad (checking requirements nobody stated). Tasks with too little complexity or too little cross-file reach were filtered out entirely.",
+        "whyItMatters": "Existing agent benchmarks are running out of headroom, and the paper cites an audit finding that nearly 60% of unsolved SWE-bench Verified instances contain flawed tests, with frontier models able to reproduce gold patches verbatim from training data. SWE-Bench ProMax gives teams a harder, cleaner yardstick: the best model tested clears only 41.2%, leaving obvious room to measure real progress.",
+        "forWho": "teams building or evaluating coding agents",
+        "tryIt": "https://huggingface.co/datasets/swe-bench-promax/SWE-Bench-ProMax"
+      },
+      "faq": [
+        {
+          "q": "How does SWE-Bench ProMax differ from SWE-bench Verified?",
+          "a": "SWE-bench Verified asks agents to resolve issues, mostly in Python and mostly in small patches. SWE-Bench ProMax instead targets behavior-preserving refactoring across seven languages, at roughly 11.4 files and 261.6 lines per task. Its issue descriptions were rewritten from scratch and its tests manually audited, addressing quality problems documented in the older suite."
+        },
+        {
+          "q": "Which programming languages does SWE-Bench ProMax cover?",
+          "a": "SWE-Bench ProMax spans seven languages with a fairly even split across its 170 instances: Python (29), TypeScript (28), Java (26), Go (23), C++ (22), Rust (22), and C (20). That balance is deliberate — most prior coding-agent benchmarks lean heavily on Python, which makes cross-language generalization hard to measure."
+        },
+        {
+          "q": "Where can you download SWE-Bench ProMax?",
+          "a": "SWE-Bench ProMax is published as a Hugging Face dataset at swe-bench-promax/SWE-Bench-ProMax, totalling 13.1 MB. The main file is swe-bench-promax.json, with evaluation metadata in eval.json. Each instance carries the task description, repository metadata, a reference patch, and the evaluation test patch needed to score an attempt."
+        },
+        {
+          "q": "Why do models score so low on SWE-Bench ProMax?",
+          "a": "The paper reports a best resolve rate of 41.2% across frontier models under two agent frameworks. Refactoring is harder than issue fixing because a correct answer must change many files at once and preserve existing behavior everywhere. Tasks with limited cross-file scope were filtered out, so nothing easy remains in the set."
+        }
+      ],
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2608.09802/gradient.png",
+        "alt": "Hugging Face paper card for SWE-Bench ProMax, a multilingual code refactoring benchmark",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Paper (arXiv)",
+          "url": "https://arxiv.org/abs/2608.09802"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/swe-bench-promax/SWE-Bench-ProMax"
+        },
+        {
+          "label": "Hugging Face Papers",
+          "url": "https://huggingface.co/papers/2608.09802"
+        }
+      ],
+      "publishDate": "2026-08-11T07:05:10.184Z"
+    },
     {
       "id": "meta-future-is-for-everyone",
       "categories": [
