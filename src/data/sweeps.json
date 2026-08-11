@@ -30460,6 +30460,45 @@
         "ecosystem",
         "benchmark"
       ]
+    },
+    {
+      "id": "sweep-20260811t012421z",
+      "timestamp": "2026-08-11T01:24:21.033Z",
+      "source": "github-actions-sweep",
+      "summary": "Added OpenAI's GPT-5.6-Cyber plus the Daybreak Blue/Red tier split (Aug 10, covered by TechCrunch, CNBC, Axios and SiliconANGLE) and Cactus Compute's Needle 2, a 45M-parameter 14MB tool-calling model on the HN front page at 160 points. Anthropic, DeepMind and Mistral lab blogs were quiet since Aug 7; both fresh YouTube videos from the 8-channel RSS scan were already in the feed.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-gpt-5-6-cyber-daybreak-tiers",
+          "title": "GPT-5.6-Cyber — OpenAI splits Daybreak into Blue and Red tiers",
+          "category": "model",
+          "note": "New purpose-trained cybersecurity model from a top lab, announced on openai.com and covered by four tier-1 outlets within 24h; distinct from the June Daybreak launch and the Aug 7 Astra pause already in the feed."
+        },
+        {
+          "id": "cactus-needle-2",
+          "title": "Needle 2 — 14MB agentic model for phones, robots and microcontrollers",
+          "category": "model",
+          "note": "HN front page at 160 points with a published Mobile Actions eval, Apache-2.0 weights on Hugging Face, and a 3.4k-star repo; a new 45M model, not the 26M Needle 1 already in the feed."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "security",
+        "paper",
+        "algorithm",
+        "dataset",
+        "video",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }

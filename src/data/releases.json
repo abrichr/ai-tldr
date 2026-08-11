@@ -1,8 +1,293 @@
 {
-  "generatedAt": "2026-08-10T22:45:10.581Z",
+  "generatedAt": "2026-08-11T01:24:21.033Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openai-gpt-5-6-cyber-daybreak-tiers",
+      "categories": [
+        "model",
+        "security",
+        "tool"
+      ],
+      "title": "GPT-5.6-Cyber — OpenAI splits Daybreak into Blue and Red tiers",
+      "org": "OpenAI",
+      "date": "2026-08-10",
+      "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/",
+      "summary": "GPT-5.6-Cyber is OpenAI's new security model, built on GPT-5.6 Sol and gated behind a Daybreak Red tier. It answers 95.0% of advanced cyber requests, against 1.5% for GPT-5.6 Sol with normal safeguards.",
+      "tags": [
+        "openai",
+        "gpt-5-6-cyber",
+        "gpt-5-6-sol",
+        "daybreak",
+        "cybersecurity",
+        "vulnerability-research",
+        "exploit-development",
+        "security-model",
+        "red-teaming",
+        "cve"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Advanced cyber completion rate": "95.0%",
+        "Chrome V8 CVE found": "CVE-2026-15903"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenAI"
+        },
+        {
+          "label": "Base model",
+          "value": "GPT-5.6 Sol"
+        },
+        {
+          "label": "Access tiers",
+          "value": "Daybreak Blue and Daybreak Red"
+        },
+        {
+          "label": "Where GPT-5.6-Cyber lives",
+          "value": "Daybreak Red only"
+        },
+        {
+          "label": "Availability",
+          "value": "Approved individuals and organizations doing authorized work"
+        },
+        {
+          "label": "Login requirement",
+          "value": "Hardware security keys from September 1, 2026"
+        },
+        {
+          "label": "Preparedness rating",
+          "value": "High for cyber capability, below Critical"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "Advanced Cybersecurity Completion Rate",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "GPT-5.6-Cyber (Daybreak Red)",
+              "score": 95,
+              "highlight": true
+            },
+            {
+              "name": "GPT-5.5-Cyber",
+              "score": 57.3
+            },
+            {
+              "name": "GPT-5.6 Sol (Daybreak Blue)",
+              "score": 2
+            },
+            {
+              "name": "GPT-5.6 Sol (safeguards on)",
+              "score": 1.5
+            }
+          ],
+          "source": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Who can get Daybreak Red access?",
+          "a": "Daybreak Red is open to approved individuals and organizations whose authorized work includes vulnerability research, exploit development, or red teaming. OpenAI controls entry through identity verification, account security, monitoring, approved-use restrictions, and legal attestations. Teams apply through the Daybreak partners page. OpenAI recommends Daybreak Blue as the starting point for most defenders instead."
+        },
+        {
+          "q": "How is Daybreak Blue different from normal GPT-5.6 Sol?",
+          "a": "Daybreak Blue gives approved defenders GPT-5.6 Sol without the system-level guardrails that screen cybersecurity requests in production. Those guardrails block real defensive work, so Blue removes them for vulnerability discovery, secure code review, malware analysis, incident response, and patch validation. GPT-5.6 Sol still refuses highly dual-use prompts such as pentesting production systems, even under Blue."
+        },
+        {
+          "q": "What real vulnerabilities has GPT-5.6-Cyber found?",
+          "a": "GPT-5.6-Cyber found two previously unknown flaws in V8, the JavaScript engine in Chrome, that could be chained to corrupt memory and escape the V8 heap sandbox. Google fixed the issue as CVE-2026-15903. OpenAI also reports three critical database bugs, at least five mobile OS flaws, and over 400 privilege-escalation issues in an OS kernel."
+        },
+        {
+          "q": "Was GPT-5.6-Cyber involved in the Hugging Face breach?",
+          "a": "No. OpenAI states directly in the Daybreak announcement that GPT-5.6-Cyber was not involved in exploiting Hugging Face, and that no other models are planned for an upcoming release in connection with it. The company points back to its earlier Hugging Face incident updates for the full account of what happened."
+        },
+        {
+          "q": "Is GPT-5.6-Cyber better than GPT-5.6 Sol at every security task?",
+          "a": "No. GPT-5.6-Cyber beats GPT-5.6 Sol on ExploitGym 2 and on zero-day severity calibration, but scores worse on OpenAI's internal Vulnerability Discovery and Report Writing evaluation — OpenAI believes the model sometimes writes shorter, less detailed reports. On ExploitBench with a 300-turn limit, GPT-5.6 Sol under Daybreak Blue performs best."
+        }
+      ],
+      "explainer": {
+        "tagline": "OpenAI ships a security-specific model and puts it behind a vetted tier so approved defenders stop hitting refusals.",
+        "whatIsIt": "GPT-5.6-Cyber is a new cybersecurity model trained on top of GPT-5.6 Sol for finding zero-day vulnerabilities and building exploit chains. OpenAI released it alongside a two-tier restructure of its Daybreak program. Daybreak Blue hands approved defenders frontier general-purpose models with the cyber guardrails removed; Daybreak Red gates the purpose-trained models behind tighter vetting.",
+        "howItWorks": "The split is about refusals, not raw capability. In production, system-level safeguards screen cybersecurity requests, and they also block legitimate defensive work — so Daybreak Blue turns them off. Some dual-use prompts still get refused by the base model, so OpenAI trained GPT-5.6-Cyber to answer them and to perform better on exploit-chain development, authentication bypass, and privilege escalation.",
+        "whyItMatters": "Security teams have spent a year fighting model refusals on work they are paid and authorized to do. Daybreak now gives them a documented path: Blue for day-to-day defense, Red for research that needs the sharper model. The Chrome CVE and the kernel findings show the capability is real, which is also why access is gated and hardware keys become mandatory.",
+        "forWho": "security researchers, incident responders, red teams",
+        "tryIt": "Apply to join the program at openai.com/daybreak/partners"
+      },
+      "image": {
+        "url": "https://images.ctfassets.net/kftzwdyauwt9/126iXrjsNVMlUR3pgI1PbS/80445f60ec21f0b051acb893fdf5dac4/16x9_SEO.png?w=1600&h=900&fit=fill",
+        "alt": "OpenAI Daybreak announcement card for GPT-5.6-Cyber",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Codex Security Docs",
+          "url": "https://developers.openai.com/codex/security/"
+        },
+        {
+          "label": "TechCrunch Report",
+          "url": "https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/"
+        },
+        {
+          "label": "CNBC Report",
+          "url": "https://www.cnbc.com/2026/08/10/open-ai-daybreak-cybersecurity.html"
+        },
+        {
+          "label": "SiliconANGLE Report",
+          "url": "https://siliconangle.com/2026/08/10/openai-expands-daybreak-cybersecurity-research-program/"
+        }
+      ],
+      "publishDate": "2026-08-11T01:24:21.033Z"
+    },
+    {
+      "id": "cactus-needle-2",
+      "categories": [
+        "model",
+        "repo",
+        "tool"
+      ],
+      "title": "Needle 2 — 14MB agentic model for phones, robots and microcontrollers",
+      "org": "Cactus Compute",
+      "date": "2026-08-10",
+      "url": "https://cactuscompute.com/needle",
+      "summary": "Needle 2 is a 45M-parameter open model for tool calling and structured extraction that ships as one 14MB binary and runs a full session in 28MB of RAM. It scores 63.7% on Mobile Actions under Apache-2.0.",
+      "tags": [
+        "cactus-compute",
+        "needle-2",
+        "on-device-ai",
+        "edge-ai",
+        "tool-calling",
+        "function-calling",
+        "small-language-model",
+        "quantization",
+        "apache-2-0",
+        "structured-output",
+        "microcontroller",
+        "webassembly",
+        "open-weights"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Parameters": "45M",
+        "File size": "14 MB"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Cactus Compute"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        },
+        {
+          "label": "Session RAM",
+          "value": "28 MB peak"
+        },
+        {
+          "label": "Quantization",
+          "value": "CQ2-bit, trained from pretrain through post-train"
+        },
+        {
+          "label": "Speed",
+          "value": "500+ tok/s decode on a Raspberry Pi 5"
+        },
+        {
+          "label": "Runs on",
+          "value": "ARM64, x86-64, ARMv7, RISC-V and WebAssembly"
+        },
+        {
+          "label": "Weights",
+          "value": "huggingface.co/Cactus-Compute/needle2"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "Mobile Actions (961 rows, ordered strict exact match)",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Needle 2 (45M, CQ2-bit)",
+              "score": 63.7,
+              "highlight": true
+            },
+            {
+              "name": "LFM2.5 230M (f16, vLLM)",
+              "score": 69.1
+            },
+            {
+              "name": "Apple FM (~3B, on-device)",
+              "score": 64.5
+            },
+            {
+              "name": "FunctionGemma 270M (f16, vLLM)",
+              "score": 64
+            }
+          ],
+          "source": "https://cactuscompute.com/needle"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Needle 2 free for commercial use?",
+          "a": "Yes. Needle 2 is licensed under Apache-2.0, with weights published on Hugging Face at Cactus-Compute/needle2 and source in the cactus-compute/needle repo. That covers commercial products, and Cactus points to Pebble as a shipping example — the Index 01 app runs Needle locally so a screenless ring can act on speech without a network."
+        },
+        {
+          "q": "How is Needle 2 different from the first Needle?",
+          "a": "The first Needle, published in May 2026, was a 26M-parameter model distilled from Gemini tool calling. Needle 2 is a 45M-parameter model trained from scratch on Cactus's Simple Attention Network architecture, using a proprietary 115B-token pretraining corpus plus 38B post-training tokens, and it adds device use and structured extraction to plain function calling."
+        },
+        {
+          "q": "What hardware can actually run Needle 2?",
+          "a": "Needle 2 reaches 500 tokens per second of decode on a Raspberry Pi 5, 400–1,500 on VR headsets such as Meta Quest 3S and Apple Vision Pro, and 300–700 on sub-$200 phones like Samsung's A-Series. The roughly 28MB peak session RAM means it also fits newer microcontrollers, including the ESP32-S3."
+        },
+        {
+          "q": "Can I fine-tune Needle 2 on my own product's tools?",
+          "a": "Yes, and Cactus designed for it. At 45M parameters, Needle 2 is small enough to retrain on the machine you develop on: the GitHub repo and the cactus-needle Python package handle tuning and testing on a Mac or PC in minutes to a few hours, so you can ship a model that speaks your device's tool vocabulary."
+        },
+        {
+          "q": "What does Needle 2 do when a request is out of scope?",
+          "a": "Needle 2 refuses by returning an empty call rather than guessing. Every response also carries a learned confidence score, so a product can set a threshold: act above it, and re-ask or escalate to a cloud model below it. Cactus argues most device requests are routine control, so escalation stays rare."
+        }
+      ],
+      "explainer": {
+        "tagline": "A 45M-parameter tool-calling model that ships as one 14MB binary and runs on hardware too small for anything else.",
+        "whatIsIt": "Needle 2 packs tool calling, device use, and structured extraction into a single 14MB binary that needs about 28MB of RAM for a whole session. Cactus Compute is aiming at the cheap end of the edge — budget phones, wearables, small robots, and microcontrollers — rather than the Macs and PCs that usually get called 'on-device AI'.",
+        "howItWorks": "The architecture is Cactus's Simple Attention Network, an attention-only stack described in a July 2026 arXiv paper. A Hadamard MLP swaps dense projections for a fixed Walsh transform, hashed n-gram 'engram' tables hold world knowledge outside the layer stack, and a 256-token sliding window bounds the KV cache. Weights, activations, and cache all train at CQ2-bit precision, so the 2-bit model deployed is the model that was trained.",
+        "whyItMatters": "Tool calling does not need world knowledge — mapping a messy sentence onto a typed function is a much smaller problem than chat, and Needle 2 is the argument that 45M parameters cover it. On Mobile Actions it lands within a point and a half of a 3B Apple model and beats FunctionGemma 270M, at a fraction of the size. That puts an offline agent on hardware with no GPU, no NPU, and a few hundred MB of RAM.",
+        "forWho": "embedded and mobile developers, robotics teams",
+        "tryIt": "pip install cactus-needle"
+      },
+      "image": {
+        "url": "https://cactuscompute.com/opengraph-image?9df76a35fe8276e2",
+        "alt": "Cactus Needle 2 announcement card for the 14MB agentic model",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Model Weights",
+          "url": "https://huggingface.co/Cactus-Compute/needle2"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/cactus-compute/needle"
+        },
+        {
+          "label": "SAN Paper",
+          "url": "https://arxiv.org/abs/2607.18363"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49246804"
+        }
+      ],
+      "publishDate": "2026-08-11T01:24:21.033Z"
+    },
     {
       "id": "openai-chatgpt-business-premium-seats",
       "categories": [
