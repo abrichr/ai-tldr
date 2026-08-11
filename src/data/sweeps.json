@@ -30759,6 +30759,58 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260811t170506z",
+      "timestamp": "2026-08-11T17:05:06.717Z",
+      "source": "github-actions-sweep",
+      "summary": "Added 4 items: the Stolen Thoughts reasoning-trace extraction attack against Anthropic/OpenAI/Google APIs (HN front page, 172 pts), Mistral's Regional Endpoints going GA with third-party open models, and two fresh creator videos from Two Minute Papers and Fireship. Lab blogs were otherwise quiet — Anthropic's newest post is 7 Aug, Meta's is 27 Jul, DeepMind's WeatherNext and the Chinese labs are already in the feed.",
+      "counts": {
+        "added": 4,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "stolen-thoughts-reasoning-extraction",
+          "title": "Stolen Thoughts — encrypted reasoning pulled out of Claude, GPT and Gemini",
+          "category": "security",
+          "note": "HN front page at 172 points with a dedicated site, arXiv paper (2608.09867, 10 Aug) and reproducible attack against three frontier providers."
+        },
+        {
+          "id": "mistral-regional-endpoints-ga",
+          "title": "Mistral Regional Endpoints — pin inference to Europe or the US",
+          "category": "tool",
+          "note": "Official Mistral news post from today; Regional Endpoints reaching GA is a concrete API change (new base URLs, SDK server parameter, 1.1x pricing) plus first third-party open model hosting."
+        },
+        {
+          "id": "two-minute-papers-openai-agents-aug11",
+          "title": "Two Minute Papers — 'OpenAI's AI Agents Just Crossed A Line'",
+          "category": "video",
+          "note": "Fresh video (1h old) from a listed creator, grounded in OpenAI's and Hugging Face's own incident write-ups linked in its description."
+        },
+        {
+          "id": "fireship-robot-demos-aug11",
+          "title": "Fireship — 'Robot demos have a dirty little secret...'",
+          "category": "video",
+          "note": "Fresh video (0h old) from a listed creator, a first-hand report from a week at MIT CSAIL."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "security",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
