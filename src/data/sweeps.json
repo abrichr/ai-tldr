@@ -30811,6 +30811,67 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260811t190643z",
+      "timestamp": "2026-08-11T19:06:43.398Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Mojo 1.0, Modular's first stable release of its GPU/AI systems language, and Cua's Metal capability shim, which makes llama.cpp 8.9-16.4x faster inside macOS VMs (223 points on HN). Lab blogs were quiet: Anthropic's newest post is 7 August, Meta's is July, DeepMind's only August post is WeatherNext (already in the feed), and Mistral's 11 August regional-inference post is already covered by mistral-regional-endpoints-ga. All 5 fresh YouTube videos from the RSS scan were already ingested by the 17:05Z sweep. Dropped: the Ouroboros coding-agent paper (1,090 HF upvotes, but arXiv v1 is 8 August, past the 72h cap), Macaron-V1 (technical report is fresh, but its open weights shipped 21 July), BDH-CQ (no released code or weights for BDH-CQ itself, so it misses the 2-of-N paper bar), and the H3-metal HN post (401 points, but it points at antirez/h3.c, already in the feed).",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "modular-mojo-1-0",
+          "title": "Mojo 1.0 — Modular's AI systems language reaches its first stable release",
+          "category": "tool",
+          "note": "First stable 1.0 of Mojo, announced today on modular.com with matching release notes on mojolang.org; a language-defining GA for a 26.7k-star AI infrastructure project, and on the HN front page (points still climbing at the time of the sweep)."
+        },
+        {
+          "id": "cua-metal-capability-shim",
+          "title": "Metal Capability Shim — llama.cpp runs up to 16x faster inside macOS VMs",
+          "category": "tool",
+          "note": "HN front page top 30 with 223 points, published today by Cua with reproducible benchmarks and public shim source in a 21.2k-star MIT repo."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "tool",
+        "repo",
+        "model",
+        "paper",
+        "dataset",
+        "video",
+        "ecosystem",
+        "benchmark",
+        "algorithm",
+        "article",
+        "security"
+      ]
+    },
+    {
+      "id": "sweep-20260811t190654z",
+      "timestamp": "2026-08-11T19:06:54.263Z",
+      "source": "github-actions-sweep",
+      "summary": "Follow-up patch to the same sweep: trimmed the Mojo 1.0 summary under the 240-char cap. No new items and no source re-scan in this pass.",
+      "counts": {
+        "added": 0,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [
+        {
+          "id": "modular-mojo-1-0",
+          "title": "Mojo 1.0 — Modular's AI systems language reaches its first stable release",
+          "note": "Trim summary to 231 chars (was 249, over the 240 cap)."
+        }
+      ],
+      "removed": [],
+      "coverage": []
     }
   ]
 }

@@ -1,8 +1,222 @@
 {
-  "generatedAt": "2026-08-11T17:05:06.717Z",
+  "generatedAt": "2026-08-11T19:06:54.263Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "modular-mojo-1-0",
+      "categories": [
+        "tool",
+        "ecosystem"
+      ],
+      "title": "Mojo 1.0 — Modular's AI systems language reaches its first stable release",
+      "org": "Modular",
+      "date": "2026-08-11",
+      "url": "https://www.modular.com/blog/modular-26-5-mojo-1-0-is-here",
+      "summary": "Mojo 1.0 is the first stable release of Modular's Python-like language for GPU and AI systems code, three years after its 2023 debut. Changes through 1.x will be mostly additive, and the compiler is still due to open source in 2026.",
+      "tags": [
+        "mojo",
+        "modular",
+        "programming-language",
+        "compiler",
+        "gpu-programming",
+        "ai-infrastructure",
+        "max",
+        "qualcomm",
+        "python"
+      ],
+      "importance": "major",
+      "metrics": {
+        "GitHub stars": "26.7k",
+        "Community pull requests": "1,100+"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Modular (a Qualcomm company)"
+        },
+        {
+          "label": "Version",
+          "value": "Mojo 1.0.0, shipped in Modular 26.5"
+        },
+        {
+          "label": "Stability",
+          "value": "Mostly additive changes through 1.x"
+        },
+        {
+          "label": "Compiler source",
+          "value": "Open source planned for 2026"
+        },
+        {
+          "label": "Migration",
+          "value": "Deprecated aliases plus compiler fix-its"
+        },
+        {
+          "label": "Also in 26.5",
+          "value": "MAX adds GLM-5.2 and Nemotron-H support"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is the Mojo compiler open source?",
+          "a": "Mojo's compiler and toolchain are not open source yet. The 1.0 post repeats the plan: 'Our commitment remains unchanged – we will open source the Mojo compiler and toolchain in 2026.' Community work already lands in the public Modular repository, where nearly 200 contributors have merged more than 1,100 pull requests changing over 200,000 lines of code."
+        },
+        {
+          "q": "What breaks when I move existing code to Mojo 1.0?",
+          "a": "Mojo 1.0 carries more breaking changes than a normal release. Variable declarations now require var, a method's self must be typed as Self, Pointer and UnsafePointer merge into one type, and several core names change: size becomes length, InlineArray becomes Array, StringSlice becomes StringSpan. Modular says nearly every breaking change ships with a deprecated alias and a compiler fix-it, so migration is mechanical."
+        },
+        {
+          "q": "How stable is Mojo now that it is 1.0?",
+          "a": "The Mojo 1.0 release notes state that APIs marked stable won't be removed or changed in a way that breaks source compatibility. The first stable set covers Deinitable, Movable, Copyable, Array, List, Span, String, Bool and Optional. Modular still allows breaking changes later, but says they will follow the standards of a mature language such as C++."
+        },
+        {
+          "q": "What else shipped in Modular 26.5 besides Mojo 1.0?",
+          "a": "Modular 26.5 also updates MAX, the company's inference server. MAX gains support for GLM-5.2 and Nemotron-H, both hybrid Mamba-2 models, and installation splits into granular packages so you can pick max[\"serve\"], max[\"benchmark\"] or max[\"all\"]. The older modular package retires in 26.6."
+        }
+      ],
+      "explainer": {
+        "tagline": "Modular's Python-like language for GPU and AI systems code reaches 1.0 after three years of breaking changes.",
+        "whatIsIt": "Mojo 1.0 is the first stable release of Modular's language for GPU and AI systems programming, and the 1.0 tag is mainly a promise about change rather than a feature list. Modular is telling library authors the ground will stop moving, so the growing set of community Mojo libraries can finally target a fixed language. The release ships inside Modular 26.5 alongside the MAX inference server.",
+        "howItWorks": "Reaching 1.0 meant tightening the language rather than growing it. Pointer and UnsafePointer collapse into a single type, with risky operations now spelled out with an unsafe_ prefix instead of the type carrying the warning. Collections hand back element references bound to interior origins, so the compiler rejects code that holds a reference across a mutation. New Python-style lambda syntax covers inline closures, and a reworked import system requires from for relative imports.",
+        "whyItMatters": "A stable 1.0 is what lets an ecosystem form. Until now every Modular release could rename core types under library authors, so Mojo packages had to chase the compiler instead of each other. With stable APIs pinned and most breaking changes carrying a compiler fix-it, teams writing GPU kernels or inference code in Mojo can plan past the next release. It also sets up the compiler open-sourcing Modular still owes for 2026.",
+        "forWho": "GPU and AI infrastructure engineers",
+        "tryIt": "uv pip install --upgrade mojo"
+      },
+      "image": {
+        "url": "https://cdn.prod.website-files.com/68c9c3107effc2ea46e1a82c/6a7b1bf1bd5b664c84aac08f_Blog-26.5-sm.jpeg",
+        "alt": "Modular 26.5 announcement graphic for the Mojo 1.0 release",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.modular.com/blog/modular-26-5-mojo-1-0-is-here"
+        },
+        {
+          "label": "Release Notes",
+          "url": "https://mojolang.org/releases/v1.0.0/"
+        },
+        {
+          "label": "Get Started Docs",
+          "url": "https://mojolang.org/docs/manual/get-started/"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/modular/modular"
+        }
+      ],
+      "publishDate": "2026-08-11T19:06:43.398Z"
+    },
+    {
+      "id": "cua-metal-capability-shim",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "Metal Capability Shim — llama.cpp runs up to 16x faster inside macOS VMs",
+      "org": "Cua",
+      "date": "2026-08-11",
+      "url": "https://github.com/trycua/cua/blob/main/blog/gpu-passthrough-macos-vms.md",
+      "summary": "Cua's Metal capability shim lets llama.cpp reach the fast Metal GPU kernels inside a macOS virtual machine on Apple Silicon. On an M1 Ultra, token generation runs 8.9x to 16.4x faster and prompt processing 7.2x to 11.1x faster.",
+      "tags": [
+        "cua",
+        "lume",
+        "apple-silicon",
+        "metal",
+        "llama-cpp",
+        "macos",
+        "virtualization",
+        "gpu",
+        "local-inference",
+        "sandboxing",
+        "open-source"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Token generation": "8.9–16.4x faster",
+        "Prompt processing": "7.2–11.1x faster"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Cua (trycua)"
+        },
+        {
+          "label": "License",
+          "value": "MIT, in the Cua repository"
+        },
+        {
+          "label": "Code path",
+          "value": "libs/lume/metal-capability-shim"
+        },
+        {
+          "label": "Tested on",
+          "value": "M1 Ultra, 48-core GPU, macOS 26.6.1"
+        },
+        {
+          "label": "Status",
+          "value": "Experimental research release"
+        },
+        {
+          "label": "What it changes",
+          "value": "Metal Apple family up to 9, threadgroup memory 32 KB to 64 KB"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much faster is llama.cpp with the Cua Metal shim?",
+          "a": "The Cua post publishes three measured pairs on an M1 Ultra. TinyLlama 1.1B goes from 12.63 to 206.60 tokens per second when generating, a 16.36x gain. Gemma 4 12B goes from 3.41 to 49.67 tokens per second, 14.54x. Muse Glimmer 30B in a 64 GiB guest goes from 2.38 to 21.08 tokens per second, 8.87x."
+        },
+        {
+          "q": "Does the Cua shim need a patched hypervisor or a modified macOS guest?",
+          "a": "No. The Cua Metal capability shim is process-scoped: it is injected into one guest process with DYLD_INSERT_LIBRARIES and changes nothing in the underlying virtualization infrastructure. You do have to stop the VM once and set a macOS preference for unrestricted device features, and Lume's documentation includes LaunchAgent templates and rollback steps."
+        },
+        {
+          "q": "Is the Metal capability shim safe to rely on?",
+          "a": "Cua calls the Metal capability shim experimental and version-sensitive, because it depends on private Metal implementation details. It only affects processes you inject it into, and only the capability profiles Cua has tested. Other Apple chips, other guest macOS releases, and other Metal APIs each need separate validation before you trust the result."
+        },
+        {
+          "q": "Why is llama.cpp so slow in a macOS VM to begin with?",
+          "a": "Inside a macOS guest, Metal reports a lower capability profile than the same Apple Silicon hardware reports on the host, including a smaller 32 KB threadgroup memory limit. llama.cpp reads those answers and falls back to slower kernels. The Cua shim raises the reported Apple family to 9 and the threadgroup limit to 64 KB so the fast kernel paths become eligible."
+        }
+      ],
+      "explainer": {
+        "tagline": "A process-scoped Metal shim unlocks the fast GPU kernels for llama.cpp inside macOS VMs on Apple Silicon.",
+        "whatIsIt": "The Metal capability shim is a small compatibility layer that changes selected capability answers Metal gives to one process inside a macOS virtual machine. Francesco Bonacci and Johnny Franks published it on 11 August 2026 as a research release in the Cua repository, the 21,000-star project for running computer-use agents across operating systems. Before it, running a local model in a Cua VM meant single-digit tokens per second.",
+        "howItWorks": "Injection happens through DYLD_INSERT_LIBRARIES, so only the process you target sees the changed answers. When llama.cpp asks Metal what the GPU supports, the shim reports a higher Apple family level and a larger threadgroup memory budget, and llama.cpp selects its optimized kernels instead of the conservative fallback. Environment variables such as LUME_METAL_APPLE_FAMILY_MAX control the reported profile.",
+        "whyItMatters": "VMs are how teams sandbox coding agents and computer-use agents on Macs, and until now that sandbox made local inference impractical: a 30B model generated about 2.4 tokens per second. At 21 tokens per second the same setup becomes usable, so an agent can run a local model inside the isolated environment instead of calling out to a hosted API.",
+        "forWho": "Mac developers running agents or local LLMs in VMs",
+        "tryIt": "./Scripts/build.sh in libs/lume/metal-capability-shim"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/54eb5d71e1f81579f7384bf12bc03b6df042698e44cd5ee91c4eb0a8d0610853/trycua/cua",
+        "alt": "Cua repository card for the macOS VM GPU passthrough write-up",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Blog Post",
+          "url": "https://github.com/trycua/cua/blob/main/blog/gpu-passthrough-macos-vms.md"
+        },
+        {
+          "label": "Shim Source",
+          "url": "https://github.com/trycua/cua/tree/main/libs/lume/metal-capability-shim"
+        },
+        {
+          "label": "Cua Repo",
+          "url": "https://github.com/trycua/cua"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49259339"
+        },
+        {
+          "label": "Cua Docs",
+          "url": "https://cua.ai/docs"
+        }
+      ],
+      "publishDate": "2026-08-11T19:06:43.398Z"
+    },
     {
       "id": "stolen-thoughts-reasoning-extraction",
       "categories": [
