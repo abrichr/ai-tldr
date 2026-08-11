@@ -30533,6 +30533,45 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260811t051335z",
+      "timestamp": "2026-08-11T05:13:35.148Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Zuckerberg's 'The Future is for Everyone' letter (Aug 10, 435 HN points, covered by FT, Fortune, Forbes, Axios and Variety) and Kuber Mehta's HN front-page essay on why humanising agent output is lossy compression. Lab blogs were quiet inside 72h: Anthropic's last post is Aug 7, Meta AI's Jul 27, Mistral's Aug 4, Moonshot's Jul 16, DeepMind has nothing dated Aug 8-11. Dropped Docker Sandboxes (642 HN points but the product shipped by Feb 2026 - not news), GitHub Models retirement (dated Jul 30, outside the 72h cap), SWE-Bench ProMax (#1 on HF papers but only one signal - dataset has 0 likes, no repo), antirez/h3.c (128 HN points, under the 150 bar), and the OpenAI Texas infrastructure letter (no developer action). YouTube: yt-rss-scan.ts returned HTTP 404 for all 8 channels from this runner, so zero videos were available to evaluate.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "meta-future-is-for-everyone",
+          "title": "The Future is for Everyone — Zuckerberg's 6,500-word case for open AI",
+          "category": "article",
+          "note": "Meta's CEO sets out the company's open-source AI position in a 6,500-word letter; #2 story on HN and covered by six tier-1 outlets within 24h."
+        },
+        {
+          "id": "kuber-mehta-humanising-llm-outputs-aug10",
+          "title": "Kuber Mehta — 'Humanising LLM Outputs Is Dumb'",
+          "category": "article",
+          "note": "HN front page top 10 at 185 points with a concrete architectural argument about agent output fidelity, not just an opinion."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "dataset",
+        "paper",
+        "benchmark",
+        "algorithm",
+        "ecosystem"
+      ]
     }
   ]
 }

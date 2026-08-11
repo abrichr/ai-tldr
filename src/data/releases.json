@@ -1,8 +1,183 @@
 {
-  "generatedAt": "2026-08-11T03:45:43.414Z",
+  "generatedAt": "2026-08-11T05:13:35.148Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "meta-future-is-for-everyone",
+      "categories": [
+        "article",
+        "ecosystem"
+      ],
+      "title": "The Future is for Everyone — Zuckerberg's 6,500-word case for open AI",
+      "org": "Meta",
+      "date": "2026-08-10",
+      "url": "https://about.fb.com/news/2026/08/the-future-is-for-everyone/",
+      "summary": "Mark Zuckerberg published a 6,500-word letter on August 10 arguing that superintelligence should be spread widely rather than held by a few labs. It restates Meta's support for open source AI and launches a Future Is For Everyone Fund.",
+      "tags": [
+        "meta",
+        "mark-zuckerberg",
+        "open-source",
+        "open-weights",
+        "ai-policy",
+        "superintelligence",
+        "essay",
+        "export-controls",
+        "ai-regulation",
+        "meta-superintelligence-labs"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Essay length": "6,500 words",
+        "HN points": 435
+      },
+      "quickFacts": [
+        {
+          "label": "Author",
+          "value": "Mark Zuckerberg, Meta founder and CEO"
+        },
+        {
+          "label": "Published",
+          "value": "August 10, 2026"
+        },
+        {
+          "label": "Format",
+          "value": "Open letter on Meta's newsroom"
+        },
+        {
+          "label": "Core principles",
+          "value": "Empowerment, invention, balance of power"
+        },
+        {
+          "label": "New commitment",
+          "value": "Future Is For Everyone Fund"
+        },
+        {
+          "label": "Stance on open source",
+          "value": "Supportive, opposes restricting it"
+        },
+        {
+          "label": "Discussion",
+          "value": "435 points on Hacker News"
+        }
+      ],
+      "explainer": {
+        "tagline": "Meta's CEO lays out a three-principle case for putting superintelligence in everyone's hands instead of a few labs.",
+        "whatIsIt": "\"The Future is for Everyone\" is a 6,500-word open letter Mark Zuckerberg published on Meta's newsroom on August 10, 2026. The letter sets out three principles Meta says it now builds by: individual empowerment as the source of prosperity, invention as the primary purpose of superintelligence, and balance of power as the foundation of safety. It also announces a Future Is For Everyone Fund that pays into the communities where Meta runs data centers.",
+        "howItWorks": "The argument runs through the balance-of-power principle: Zuckerberg writes that superintelligence held by a few would lead to worse outcomes for everyone, so the safer path is to spread capability rather than lock it up. On that basis the letter states that \"Meta continues to be strongly supportive of open source, including open source AI models\" and that \"the current open source ecosystem is strong, and we think it would be a mistake to restrict it.\" It pairs that with a product promise: a fully private mode for personal agents that neither Meta nor any other provider can see into.",
+        "whyItMatters": "The letter is Meta's clearest public answer yet to the closed-model strategies at OpenAI and Anthropic, and it lands the same week Meta shipped the open-weight Muse Glimmer. For developers deciding whether to build on open weights, a stated policy from the company behind Llama and Muse is a signal about how long those weights keep coming. Zuckerberg also asks Washington to speed up infrastructure permitting, keep silicon export controls on foreign rivals, and aim regulation at physical harms rather than model access.",
+        "forWho": "developers building on open-weight models, AI policy watchers",
+        "tryIt": "https://www.meta.com/thefutureisforeveryone/"
+      },
+      "faq": [
+        {
+          "q": "Does the letter name which Meta models will get open weights?",
+          "a": "No. \"The Future is for Everyone\" states Meta's general support for open source AI models and argues against restricting the open ecosystem, but the letter names no specific model and gives no release timeline. Meta separately shipped the open-weight Muse Glimmer on August 10, the same day the letter went up, though the letter itself does not mention it."
+        },
+        {
+          "q": "What is the Future Is For Everyone Fund?",
+          "a": "The Future Is For Everyone Fund is a Meta program announced in the letter to pay direct benefits into each community where Meta builds and runs infrastructure. Zuckerberg calls these local benefits a \"community compact.\" Forbes reported the fund at $1 billion, aimed at communities near Meta's data centers."
+        },
+        {
+          "q": "What does Zuckerberg ask governments to do?",
+          "a": "The letter asks for four things: speed up the capacity to build energy and data-center infrastructure, keep silicon export controls on foreign competitors, modernize FDA approval so new drugs can be tested faster, and point regulation at limiting the physical production and distribution of harmful materials rather than at access to models."
+        },
+        {
+          "q": "How does this compare to Zuckerberg's earlier open-source arguments?",
+          "a": "Zuckerberg made a shorter version of the same case in a Wall Street Journal opinion piece in July 2026. The August 10 letter expands it into a full 6,500-word statement with named principles, the community fund, and the private-mode commitment, and frames open models as an American strategic advantage rather than only a Meta preference."
+        },
+        {
+          "q": "What is the private mode Meta commits to?",
+          "a": "Zuckerberg commits Meta to building \"a fully private mode for personal agents where even Meta or any other service provider cannot see or grant access to your information.\" It is a stated commitment in the letter, not a shipped feature, and the letter gives no date or product name for it."
+        }
+      ],
+      "image": {
+        "url": "https://about.fb.com/wp-content/uploads/2026/08/Meta_Header-3.jpg?w=1200",
+        "alt": "Meta newsroom header art for Mark Zuckerberg's letter The Future is for Everyone",
+        "fit": "cover"
+      },
+      "author": {
+        "name": "Mark Zuckerberg",
+        "profileUrl": "https://www.meta.com/media-gallery/executives/mark-zuckerberg/"
+      },
+      "links": [
+        {
+          "label": "The Letter",
+          "url": "https://about.fb.com/news/2026/08/the-future-is-for-everyone/"
+        },
+        {
+          "label": "Essay Site",
+          "url": "https://www.meta.com/thefutureisforeveryone/"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49243880"
+        },
+        {
+          "label": "Forbes Coverage",
+          "url": "https://www.forbes.com/sites/tylerroush/2026/08/10/mark-zuckerberg-outlines-ai-vision-in-new-manifesto-heres-what-he-says/"
+        },
+        {
+          "label": "Author Profile",
+          "url": "https://www.meta.com/media-gallery/executives/mark-zuckerberg/"
+        }
+      ],
+      "publishDate": "2026-08-11T05:13:35.148Z"
+    },
+    {
+      "id": "kuber-mehta-humanising-llm-outputs-aug10",
+      "categories": [
+        "article"
+      ],
+      "title": "Kuber Mehta — 'Humanising LLM Outputs Is Dumb'",
+      "org": "Kuber Mehta",
+      "date": "2026-08-10",
+      "url": "https://kuber.studio/blog/Reflections/Humanising-LLM-Outputs-is-Actually-Dumb",
+      "summary": "Kuber Mehta argues that the popular skills telling an agent to write more like a human are a design mistake. Making a model reformat its findings into friendly prose is lossy compression that throws away the failure signals you needed.",
+      "tags": [
+        "llm",
+        "agents",
+        "prompt-engineering",
+        "agent-skills",
+        "system-design",
+        "developer-experience",
+        "opinion"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Telling an agent to sound human makes it compress away the exact failure details you needed to debug.",
+        "whatIsIt": "\"Humanising LLM Outputs Is Dumb\" is an August 10, 2026 blog post by Kuber Mehta on the popular agent skills that instruct a model to write in a plainer, more human register — the \"I have ADHD\" prompts and the ASD-STE100 Simplified Technical English rules doing the rounds. Mehta's claim is that these fix a symptom in the wrong place.",
+        "howItWorks": "The mechanism Mehta describes is lossy compression. Asking a model to finish a task and reformat its report at the same time makes it squeeze real findings into readable prose, and detail falls out. His example contrasts an agent saying \"Most tests passed, although there was one issue worth looking into\" with the machine-readable version — \"5/6 PASS / FAIL: test_cache_invalidation / CAUSE: stale key survives restart / REPRO: tests/cache_test.py:184\" — which names the test, the cause, and the line to reproduce it.",
+        "whyItMatters": "The fix Mehta proposes is architectural: keep the highest-fidelity representation for as long as possible and transform it only at the point a human reads it, the way databases, compilers, and APIs already work. For anyone wiring agents into CI or a review pipeline, that reframes the viral humanising skills as useful bug reports about output format rather than the answer. The post reached the Hacker News front page with 185 points and 114 comments.",
+        "forWho": "developers building agent pipelines and tooling"
+      },
+      "image": {
+        "url": "https://kuber.studio/blog/static/social-images/content-Reflections-Humanising%20LLM%20Outputs%20is%20Actually%20Dumb.md.webp",
+        "alt": "Social card for the blog post Humanising LLM Outputs Is Actually Dumb",
+        "fit": "cover"
+      },
+      "author": {
+        "name": "Kuber Mehta",
+        "handle": "@Kuberwastaken",
+        "profileUrl": "https://github.com/Kuberwastaken",
+        "avatarUrl": "https://github.com/Kuberwastaken.png"
+      },
+      "links": [
+        {
+          "label": "Full Post",
+          "url": "https://kuber.studio/blog/Reflections/Humanising-LLM-Outputs-is-Actually-Dumb"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49243474"
+        },
+        {
+          "label": "Author on GitHub",
+          "url": "https://github.com/Kuberwastaken"
+        }
+      ],
+      "publishDate": "2026-08-11T05:13:35.148Z"
+    },
     {
       "id": "motif-3",
       "categories": [
