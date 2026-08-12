@@ -30984,6 +30984,47 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260812t041356z",
+      "timestamp": "2026-08-12T04:13:56.784Z",
+      "source": "github-actions-sweep",
+      "summary": "Added LTX-2.5, Lightricks' 22B open-weights video model that renders a 10-second clip in 6.8 seconds, and the print release of Nathan Lambert's RLHF post-training textbook. Lab blogs were quiet: Anthropic, Meta, OpenAI, Google DeepMind, Cohere, Qwen, Moonshot and DeepSeek posted nothing new inside 72h, and Mistral's Aug 11 post is already in the feed. WorldClaw was dropped for being 7 days old, and all fresh YouTube videos across the 8 creator channels were already ingested.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "lightricks-ltx-2-5",
+          "title": "LTX-2.5 — open-weights video model makes a 10s clip in 6.8 seconds",
+          "category": "model",
+          "note": "Open-weights 22B video model released 2026-08-11 with published API pricing, a day-one ComfyUI integration and a matching GitHub v1.2.0 release; a genuine new version above the existing LTX-2.3 entry."
+        },
+        {
+          "id": "interconnects-rlhf-book-aug10",
+          "title": "Nathan Lambert's RLHF book ships — Manning prints the free post-training text",
+          "category": "resource",
+          "note": "Named influential voice (Interconnects) shipping a real dated artifact — the Manning hardcover of the free RLHF post-training book plus its companion course."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "resource",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }

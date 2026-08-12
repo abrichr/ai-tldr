@@ -1,8 +1,215 @@
 {
-  "generatedAt": "2026-08-12T01:30:03.162Z",
+  "generatedAt": "2026-08-12T04:13:56.784Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "lightricks-ltx-2-5",
+      "categories": [
+        "model",
+        "tool"
+      ],
+      "title": "LTX-2.5 — open-weights video model makes a 10s clip in 6.8 seconds",
+      "org": "Lightricks",
+      "date": "2026-08-11",
+      "url": "https://ltx.io/model/ltx-2-5",
+      "summary": "LTX-2.5 is a 22B open-weights video model that generates a 10-second clip in 6.8 seconds on two GB200 GPUs. It adds native multi-shot scenes, a new diffusion decoder, 4K HDR output, and runs from 16GB of VRAM.",
+      "tags": [
+        "video-generation",
+        "open-weights",
+        "ltx",
+        "diffusion-transformer",
+        "text-to-video",
+        "image-to-video",
+        "multishot",
+        "hdr",
+        "comfyui",
+        "physical-ai",
+        "local-inference",
+        "fine-tuning"
+      ],
+      "importance": "major",
+      "metrics": {
+        "10s clip, self-hosted": "6.8 s",
+        "Visual artifacts per clip": "0.28"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Lightricks (LTX)"
+        },
+        {
+          "label": "Parameters",
+          "value": "22B diffusion transformer"
+        },
+        {
+          "label": "Text encoder",
+          "value": "Custom Gemma 4 12B"
+        },
+        {
+          "label": "License",
+          "value": "LTX-2 Community License — free under $10M ARR"
+        },
+        {
+          "label": "Min VRAM",
+          "value": "16GB"
+        },
+        {
+          "label": "Availability",
+          "value": "Open weights on Hugging Face, native in ComfyUI, LTX API"
+        },
+        {
+          "label": "What's new",
+          "value": "Native multi-shot, new diffusion decoder, auto duration, 4K HDR and RAW"
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "API 720p",
+            "price": "$0.09",
+            "unit": "/ second of video"
+          },
+          {
+            "plan": "API 1080p",
+            "price": "$0.15",
+            "unit": "/ second of video"
+          },
+          {
+            "plan": "API 2K",
+            "price": "$0.19",
+            "unit": "/ second of video"
+          },
+          {
+            "plan": "API 4K",
+            "price": "$0.37",
+            "unit": "/ second of video"
+          },
+          {
+            "plan": "Self-hosted weights",
+            "price": "$0",
+            "note": "Free under $10M ARR"
+          }
+        ],
+        "source": "https://ltx.io/model/ltx-2-5"
+      },
+      "explainer": {
+        "tagline": "An open-weights video model that renders connected multi-shot scenes faster than real time.",
+        "whatIsIt": "LTX-2.5 adds native multi-shot generation, so one prompt produces a sequence of connected shots that keep the same character, environment, lighting and voice across cuts instead of stitching separate clips together. The model is a 22B diffusion transformer with a custom Gemma 4 12B text encoder. Lightricks publishes the weights under the LTX-2 Community License, which is free for companies under $10M in annual recurring revenue.",
+        "howItWorks": "A technique the company calls Diffusion Fidelity Rendering spends more compute on complex parts of a scene and less on simple ones. A new diffusion video decoder replaces the older VAE reconstruction step, which cuts glitches in high-motion shots and recovers fine detail like text and faces. An optional duration predictor picks the clip length that fits the requested action, and a retrained distilled variant reaches near-full-model quality with fewer retries.",
+        "whyItMatters": "Video generation has mostly been a closed API business, so teams could not fine-tune the model or keep footage on their own machines. Because LTX-2.5 ships its weights and needs 16GB of VRAM, a small studio can run the whole pipeline on hardware it already owns and adapt the base checkpoint to its own footage. Robotics teams get the same checkpoint for physical AI work, where the training data looks nothing like cinematic video.",
+        "forWho": "video teams, ComfyUI users, robotics and physical-AI researchers",
+        "tryIt": "Download the weights from https://huggingface.co/Lightricks/LTX-2.5"
+      },
+      "faq": [
+        {
+          "q": "How much does the LTX-2.5 API cost?",
+          "a": "The LTX-2.5 API bills per second of generated video: $0.09 per second at 720p, $0.15 at 1080p, $0.19 at 2K and $0.37 at 4K. Running the open weights yourself costs nothing in license fees for organizations under $10M in annual recurring revenue, so the API is for teams that would rather not manage GPUs."
+        },
+        {
+          "q": "How does LTX-2.5 compare to LTX-2.3?",
+          "a": "LTX-2.5 replaces the VAE reconstruction step in LTX-2.3 with a diffusion video decoder, which lowers the measured visual-artifact score from 0.74 to 0.28 glitches per clip on Lightricks' own 98-prompt test. LTX-2.5 also adds native multi-shot scenes, automatic clip duration, a Gemma 4 12B text encoder, and native 4K HDR and RAW output."
+        },
+        {
+          "q": "Can I fine-tune LTX-2.5 on my own data?",
+          "a": "Yes. LTX-2.5 ships a pretrained base checkpoint built specifically for fine-tuning, so teams can adapt it to their own domain and deploy it on their own infrastructure. Lightricks also released a checkpoint tuned for physical AI and robotics, aimed at teams whose training footage looks nothing like cinematic video."
+        },
+        {
+          "q": "What hardware does LTX-2.5 need?",
+          "a": "LTX-2.5 needs a minimum of 16GB of VRAM and runs on ordinary GPUs, on-premises hardware, or edge machines. The headline 6.8-second figure for a 10-second 720p clip was measured self-hosted on two NVIDIA GB200 chips at steady state, so consumer cards are slower; the LTX API renders the same clip at 1080p in 23.7 seconds."
+        },
+        {
+          "q": "Where can I get LTX-2.5?",
+          "a": "LTX-2.5 is available three ways: open weights on Hugging Face at Lightricks/LTX-2.5, native support inside ComfyUI from day one, and the hosted LTX API. The inference code lives in the Lightricks/LTX-2 GitHub repository, whose v1.2.0 release added checkpoint-driven architecture selection and NVFP4 quantization for Blackwell GPUs."
+        }
+      ],
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/Lightricks/LTX-2.5.png",
+        "alt": "Hugging Face model card banner for Lightricks LTX-2.5",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Model Page",
+          "url": "https://ltx.io/model/ltx-2-5"
+        },
+        {
+          "label": "Open Weights",
+          "url": "https://huggingface.co/Lightricks/LTX-2.5"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/Lightricks/LTX-2"
+        },
+        {
+          "label": "v1.2.0 Release",
+          "url": "https://github.com/Lightricks/LTX-2/releases/tag/v1.2.0"
+        },
+        {
+          "label": "Documentation",
+          "url": "https://docs.ltx.io"
+        }
+      ],
+      "publishDate": "2026-08-12T04:13:56.784Z"
+    },
+    {
+      "id": "interconnects-rlhf-book-aug10",
+      "categories": [
+        "resource",
+        "article"
+      ],
+      "title": "Nathan Lambert's RLHF book ships — Manning prints the free post-training text",
+      "org": "Interconnects AI",
+      "date": "2026-08-10",
+      "url": "https://www.interconnects.ai/p/5-useful-things-youll-learn-in-my",
+      "summary": "Nathan Lambert's post-training textbook, Reinforcement Learning from Human Feedback, is now shipping in hardcover from Manning. The full text stays free to read at rlhfbook.com, alongside a codebase and a 12-hour course.",
+      "tags": [
+        "rlhf",
+        "post-training",
+        "book",
+        "education",
+        "interconnects",
+        "nathan-lambert",
+        "reinforcement-learning",
+        "distillation",
+        "manning"
+      ],
+      "importance": "notable",
+      "author": {
+        "name": "Nathan Lambert",
+        "handle": "natolambert",
+        "profileUrl": "https://www.interconnects.ai/",
+        "avatarUrl": "https://github.com/natolambert.png"
+      },
+      "explainer": {
+        "tagline": "The free RLHF book is now a printed Manning hardcover, with a codebase and a 12-hour course beside it.",
+        "whatIsIt": "Reinforcement Learning from Human Feedback: Aligning and Post-training LLMs is Nathan Lambert's textbook on how modern language models are trained after pretraining, and Manning began shipping the hardcover on August 10, 2026. The complete text stays free to read online at rlhfbook.com. Manning is selling it at half price with the code PBLambert through August 19; UK copies arrive in October.",
+        "howItWorks": "The book is organized around the canonical RLHF recipe and walks through each optimization stage in order: instruction tuning, reward-model training, then rejection sampling, reinforcement learning, on-policy distillation and direct alignment algorithms. Lambert covers policy-gradient methods including PPO, GSPO and CISPO, and devotes space to the systems problems practitioners actually hit — data freshness, training-inference mismatch and throughput in asynchronous setups.",
+        "whyItMatters": "Post-training know-how mostly circulates as scattered papers and lab folklore, which makes it hard to enter the field without sitting inside a frontier lab. Lambert gathers it into one ordered reference and keeps it free online, so a researcher can read the whole thing before deciding whether to buy the print copy. Companion resources — a codebase, a completion-comparison library and a 12-hour course with slides and video — turn the book into a teachable curriculum rather than a single text.",
+        "forWho": "ML researchers and engineers learning post-training",
+        "tryIt": "Read the full book free at https://rlhfbook.com"
+      },
+      "image": {
+        "url": "https://substackcdn.com/image/fetch/$s_!ccYc!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4468909c-7481-4b27-9566-6fc838b95743_1074x731.jpeg",
+        "alt": "Cover of Nathan Lambert's Reinforcement Learning from Human Feedback book",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.interconnects.ai/p/5-useful-things-youll-learn-in-my"
+        },
+        {
+          "label": "Read Free Online",
+          "url": "https://rlhfbook.com"
+        },
+        {
+          "label": "Manning Hardcover",
+          "url": "https://www.manning.com/books/reinforcement-learning-from-human-feedback"
+        }
+      ],
+      "publishDate": "2026-08-12T04:13:56.784Z"
+    },
     {
       "id": "xai-grok-bot",
       "categories": [
