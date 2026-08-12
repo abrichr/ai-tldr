@@ -1,8 +1,122 @@
 {
-  "generatedAt": "2026-08-12T11:06:26.705Z",
+  "generatedAt": "2026-08-12T13:07:42.690Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "stratechery-nvidias-risky-business-aug11",
+      "categories": [
+        "article"
+      ],
+      "title": "Ben Thompson: Nvidia's Risky Business — the chip maker now backs the debt",
+      "org": "Stratechery",
+      "date": "2026-08-11",
+      "url": "https://stratechery.com/2026/nvidias-risky-business/",
+      "summary": "Ben Thompson argues Nvidia has taken on real financial risk to keep AI data centers being built. Nvidia lined up six asset managers to raise over $500 billion of outside capital and guarantees up to 25% of a site's residual value.",
+      "tags": [
+        "article",
+        "ben-thompson",
+        "stratechery",
+        "nvidia",
+        "ai-infrastructure",
+        "data-centers",
+        "ai-capex",
+        "hyperscalers",
+        "financing",
+        "ai-strategy"
+      ],
+      "importance": "major",
+      "image": {
+        "url": "https://s0.wp.com/_si/?t=eyJpbWciOiJodHRwczpcL1wvaTAud3AuY29tXC9zdHJhdGVjaGVyeS5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMThcLzAzXC9jcm9wcGVkLWFuZHJvaWQtY2hyb21lLTUxMng1MTItMS5wbmc_Zml0PTUxMiUyQzUxMiZzc2w9MSIsInR4dCI6IlN0cmF0ZWNoZXJ5IGJ5IEJlbiBUaG9tcHNvbiIsInRlbXBsYXRlIjoiZWRnZSIsImZvbnQiOiIiLCJibG9nX2lkIjoxODgwNDM0MTV9.5VWck4PcKPWCTPe_HVznn3n3xsgn-G0b3d2OeiNNC7cMQ",
+        "alt": "Stratechery social card by Ben Thompson",
+        "fit": "cover"
+      },
+      "author": {
+        "name": "Ben Thompson",
+        "handle": "@benthompson",
+        "profileUrl": "https://stratechery.com/about/",
+        "avatarUrl": "https://i0.wp.com/stratechery.com/wp-content/uploads/2015/05/BenPortrait-medium-1.jpg?resize=220%2C330&ssl=1"
+      },
+      "quickFacts": [
+        {
+          "label": "Author",
+          "value": "Ben Thompson"
+        },
+        {
+          "label": "Publication",
+          "value": "Stratechery"
+        },
+        {
+          "label": "Published",
+          "value": "2026-08-11"
+        },
+        {
+          "label": "Access",
+          "value": "Paywalled; podcast for Stratechery Plus"
+        },
+        {
+          "label": "Nvidia capital partnerships",
+          "value": "Over $500B of third-party capital"
+        },
+        {
+          "label": "Nvidia backstop",
+          "value": "Up to 25% residual-value financing"
+        },
+        {
+          "label": "Hyperscaler debt to Jul 2026",
+          "value": "$194B, vs $108B in all of 2025"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is 'Nvidia's Risky Business' free to read?",
+          "a": "Stratechery publishes 'Nvidia's Risky Business' behind its subscription wall, so the full essay needs a paid account. Stratechery Plus members can also listen to the piece as a podcast after logging in. Ben Thompson's Monday essays follow this pattern, with an opening section readable before the wall and the argument and figures inside."
+        },
+        {
+          "q": "What is a residual-value guarantee, and why does Nvidia offer one?",
+          "a": "A residual-value guarantee means Nvidia promises to cover part of what a data center is still worth years from now. Nvidia backstops deals with up to 25% residual-value based financing, and Ben Thompson reads that as a price cut in disguise: Nvidia puts its own profits behind the asset so builders borrow at a lower cost."
+        },
+        {
+          "q": "Which firms are in Nvidia's $500 billion financing partnerships?",
+          "a": "Nvidia named six partners — Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR — to set up independent financing platforms. Nvidia says the platforms are designed to mobilize over $500 billion of third-party capital for AI infrastructure over time, drawing on pools such as insurance floats and pension funds rather than Nvidia's own balance sheet."
+        },
+        {
+          "q": "How much debt have the hyperscalers already raised for AI?",
+          "a": "Hyperscalers issued $194 billion of debt by July 2026, against $108 billion across all of 2025, the essay reports. Google raised $85 billion in equity over the same stretch, including a $10 billion investment from Berkshire Hathaway. Ben Thompson notes bond cover fell below 2x from 5x in February, while 86% of 2026 issuances trade above their issue price."
+        },
+        {
+          "q": "What historical parallel does the essay draw?",
+          "a": "Ben Thompson compares Nvidia's financing push to Jay Cooke's railroad bonds in 1870, when new and untested pools of capital funded a buildout that later broke. He scales the comparison: roughly $500 million of 1870s railway bonds maps to about $600 billion of 2026 AI investment, which is the order of magnitude Nvidia is now helping arrange."
+        }
+      ],
+      "explainer": {
+        "tagline": "Ben Thompson on how Nvidia went from selling AI chips to helping guarantee the money that buys them.",
+        "whatIsIt": "Nvidia's Risky Business is Ben Thompson's August 11 Stratechery essay on Nvidia's move into financing the data centers that run its chips. Thompson walks through the financing platforms Nvidia set up with six large asset managers, and asks what happens to Nvidia if AI demand comes in below what those buildouts assume.",
+        "howItWorks": "The financing platforms pull in outside money — insurance floats and pension funds among them — to pay for AI data centers, and Nvidia guarantees up to 25% of a site's residual value. Thompson calls that guarantee a price cut in disguise: Nvidia puts its own profit at risk so the people building with its chips face a lower cost of capital.",
+        "whyItMatters": "The argument ties Nvidia's earnings to credit markets, not just to chip orders. Thompson points at hyperscaler debt of $194 billion by July 2026 against $108 billion in all of 2025, plus bond cover falling below 2x from 5x in February, and warns that pulling untested capital into one bet is how the 1870 railroad bust started.",
+        "forWho": "investors, infra teams, and anyone tracking AI capex",
+        "tryIt": "https://stratechery.com/2026/nvidias-risky-business/"
+      },
+      "links": [
+        {
+          "label": "Nvidia's Risky Business",
+          "url": "https://stratechery.com/2026/nvidias-risky-business/"
+        },
+        {
+          "label": "About / Author",
+          "url": "https://stratechery.com/about/"
+        },
+        {
+          "label": "SemiAnalysis Newsletter",
+          "url": "https://newsletter.semianalysis.com/p/gemini-is-cooked-but-gcp-is-cooking"
+        },
+        {
+          "label": "1873 by Liaquat Ahamed",
+          "url": "https://www.penguinrandomhouse.com/books/306461/1873-by-liaquat-ahamed/"
+        }
+      ],
+      "publishDate": "2026-08-12T13:07:42.690Z"
+    },
     {
       "id": "google-amie-video-consultations",
       "categories": [

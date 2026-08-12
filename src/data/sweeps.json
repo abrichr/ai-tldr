@@ -31146,6 +31146,40 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260812t130742z",
+      "timestamp": "2026-08-12T13:07:42.690Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, x.ai, Cohere, DeepSeek, Qwen, Moonshot, Z.ai, MiniMax, Baidu, ByteDance), GitHub trending daily+weekly, new-repo search, HuggingFace models/datasets/papers/blog, HN front page + Algolia top stories over 60h, all 8 YouTube creator feeds, coding-agent changelogs, and the AI-for-science lane (Nature, STAT, NeuroscienceNews, Lancet Digital Health, pharma AI blogs, BCI/neural-decoding searches). Added one item: Ben Thompson's Stratechery essay on Nvidia backstopping AI data-center financing. Nearly every high-traction HN candidate was an older release resurfacing and failed the 72h cap — Docker Sandboxes launched in April, llama.app on May 29, WorldClaw's paper and repo on Aug 5, NVIDIA Magpie TTS Multilingual on Jul 21, the tl;dv disclosure on Aug 4, Sophie Alpert's essay on Jun 25. All 5 fresh YouTube videos were already in the feed, as were Muse Glimmer, Mojo 1.0, Nemotron 3.5 Lightning, Switchyard, Grok Bot, Stolen Thoughts, The Stack v3, h3.c and Mistral's regional endpoints. Trending repos (orca, google/skills, loopx, book-to-skill, code-graph-rag, uber/ADR) were months-old projects shipping routine point releases, not launches.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "stratechery-nvidias-risky-business-aug11",
+          "title": "Ben Thompson: Nvidia's Risky Business — the chip maker now backs the debt",
+          "category": "article",
+          "note": "Fresh Aug 11 essay from a named influential voice on the prompt's list, 341 points on HN, with verified figures on Nvidia's $500B financing platforms and 25% residual-value backstops."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
