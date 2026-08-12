@@ -31025,6 +31025,44 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260812t055408z",
+      "timestamp": "2026-08-12T05:54:08.509Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Cohere, Moonshot, DeepSeek, MiniMax, ByteDance Seed), GitHub trending, HuggingFace models/datasets/papers, HN front page and newest, 8 YouTube feeds, tier-1 press and the AI-for-science lane. Added two items: Manus returning to independent operations after China blocked Meta's acquisition, with a hard August 23 user-data backup deadline, and Annie Sexton's widely-read ngrok post on compression and prediction (419 HN points). Both fresh YouTube videos were already in the feed; WorldClaw (Aug 5), The Stack v3 (Jul 23) and Gemini Robotics ER 2 (Jul 30) all failed the 72h cap despite trending now.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "manus-independent-operations-aug11",
+          "title": "Manus returns to independence — Meta-era user data gets deleted",
+          "category": "ecosystem",
+          "note": "Lab spinout with a concrete developer action — export your Manus data before the Aug 23 deletion window; distinct event from the April acquisition-block item already in the feed."
+        },
+        {
+          "id": "ngrok-compression-is-prediction-aug11",
+          "title": "Annie Sexton — 'Compression is prediction, and LLMs are compressors'",
+          "category": "article",
+          "note": "Top of the HN front page at 419 points, published Aug 11, a clear technical explainer of the LLM/compression equivalence."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
