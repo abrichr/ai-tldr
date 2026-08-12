@@ -31095,6 +31095,30 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260812t091422z",
+      "timestamp": "2026-08-12T09:14:22.305Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic newest is Aug 7; OpenAI, DeepMind, Meta, xAI, Cohere, Qwen, DeepSeek, MiniMax/Zhipu/Moonshot all quiet since Aug 10), GitHub trending daily, HuggingFace models/datasets/papers, HN front page + Show HN, all 8 YouTube creator feeds, coding-agent changelogs (Cursor, Claude Code), influential voices (Simon Willison, Interconnects) and the AI-for-science lane (medical imaging/FDA, BCI/neural decoding, protein and drug discovery, nature.com, STAT News). Every qualifying item was already ingested by the 07:25Z sweep less than two hours ago: all 5 fresh YouTube videos matched existing watch URLs, and Nemotron 3.5 Lightning, NeMo Switchyard, Mojo 1.0, Grok Bot, Stolen Thoughts, LTX-2.5, Muse Glimmer, Mistral Regional Endpoints and the ngrok compression essay are all live. Nothing new cleared the 72h cap plus the inclusion bar.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
