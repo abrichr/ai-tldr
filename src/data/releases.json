@@ -1,8 +1,226 @@
 {
-  "generatedAt": "2026-08-12T15:03:04.004Z",
+  "generatedAt": "2026-08-12T17:07:26.578Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "qwen-3-8-2-4t-a95b-open-weights",
+      "categories": [
+        "model"
+      ],
+      "title": "Qwen3.8-2.4T-A95B — the open-weights core of Qwen3.8-Max hits Hugging Face",
+      "org": "Alibaba (Qwen)",
+      "date": "2026-08-12",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+      "summary": "Qwen3.8-2.4T-A95B is now a public download on Hugging Face, the first time Qwen has opened the weights of a Max-class model. The 2.4T mixture-of-experts fires 95B parameters per token and ships with an FP8 build.",
+      "tags": [
+        "qwen",
+        "qwen3.8-max",
+        "alibaba",
+        "open-weights",
+        "moe",
+        "mixture-of-experts",
+        "reasoning",
+        "long-context",
+        "fp8",
+        "hugging-face"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Alibaba (Qwen)"
+        },
+        {
+          "label": "Size",
+          "value": "2.4T total, 95B active per token"
+        },
+        {
+          "label": "Experts",
+          "value": "512 total; 10 routed + 1 shared per token"
+        },
+        {
+          "label": "Context window",
+          "value": "262,144 native, up to 1,010,000"
+        },
+        {
+          "label": "License",
+          "value": "qwen3.8-max (Qwen's own licence)"
+        },
+        {
+          "label": "Modality",
+          "value": "Text only, thinking mode always on"
+        },
+        {
+          "label": "Formats",
+          "value": "BF16 and FP8 checkpoints"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "PaperBench",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Qwen3.8-Max",
+              "score": 93,
+              "highlight": true
+            },
+            {
+              "name": "Claude Fable 5",
+              "score": 88.8
+            },
+            {
+              "name": "Claude Opus 4.8",
+              "score": 80.3
+            }
+          ],
+          "source": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"
+        },
+        {
+          "name": "Terminal Bench 2.1",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Qwen3.8-Max",
+              "score": 86.6,
+              "highlight": true
+            },
+            {
+              "name": "Claude Opus 4.8",
+              "score": 84.6
+            },
+            {
+              "name": "Claude Fable 5",
+              "score": 84.6
+            }
+          ],
+          "source": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"
+        },
+        {
+          "name": "SWE-bench Pro",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Qwen3.8-Max",
+              "score": 67.7,
+              "highlight": true
+            },
+            {
+              "name": "Claude Opus 4.8",
+              "score": 69.2
+            },
+            {
+              "name": "Claude Fable 5",
+              "score": 80
+            }
+          ],
+          "source": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Qwen3.8-2.4T-A95B free for commercial use?",
+          "a": "Qwen3.8-2.4T-A95B does not ship under Apache-2.0 like most of Qwen's open family. The model card lists its licence as qwen3.8-max, a licence Qwen wrote for this release. Anyone planning to build a product on the weights should read that licence file first rather than assume the usual Apache terms carry over."
+        },
+        {
+          "q": "How is Qwen3.8-2.4T-A95B different from Qwen3.8-Max?",
+          "a": "Qwen3.8-Max is the official service version built on Qwen3.8-2.4T-A95B, and it adds features the open checkpoint does not have. The model card says Max supports vision input and non-thinking mode. The downloadable Qwen3.8-2.4T-A95B is text only, and reasoning cannot be switched off."
+        },
+        {
+          "q": "Can you turn off thinking mode in Qwen3.8-2.4T-A95B?",
+          "a": "No. Qwen3.8-2.4T-A95B requires thinking mode for every interaction, and each reply begins with reasoning wrapped in a think block. What you can change is how hard it thinks: the card exposes reasoning effort levels of xhigh, which is the default, plus medium and low."
+        },
+        {
+          "q": "How much of the 1M context can Qwen3.8-2.4T-A95B spend on output?",
+          "a": "Qwen3.8-2.4T-A95B handles 262,144 tokens natively and stretches to 1,010,000. Inside that window the card caps reasoning at 262,144 tokens and the final answer at 131,072 tokens, so a long-context job needs budget for both the visible reply and the hidden thinking that precedes it."
+        }
+      ],
+      "explainer": {
+        "tagline": "Qwen's 2.4T Max-class mixture-of-experts is now a public download, in BF16 and FP8.",
+        "whatIsIt": "Qwen3.8-2.4T-A95B is the open-weights checkpoint behind Qwen3.8-Max, published on Hugging Face on 12 August 2026 along with an FP8 build. It is the first time Qwen has released the weights of a Max-class model instead of keeping the flagship tier behind its API. The checkpoint is text only and always reasons.",
+        "howItWorks": "A 92-layer stack alternates Gated DeltaNet linear attention with gated full attention, and each block ends in a mixture-of-experts layer. Of 512 experts, 10 routed plus 1 shared fire per token, which is how 2.4T total parameters cost only 95B of compute per step. The FP8 build uses fine-grained quantization with a block size of 128, and Qwen says its results are nearly identical to the original.",
+        "whyItMatters": "Until today the 2.4T flagship was API-only, so outsiders could not audit its published scores, fine-tune it, or keep their data off Alibaba's servers. Downloadable weights change all three: teams can serve the model themselves on vLLM, SGLang or TokenSpeed, and community quantizations for llama.cpp, LM Studio, Jan and Ollama are already listed on the card. The catch is the licence, which is Qwen's own rather than Apache-2.0.",
+        "forWho": "teams self-hosting frontier open-weight models",
+        "tryIt": "vllm serve \"Qwen/Qwen3.8-2.4T-A95B\""
+      },
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/Qwen/Qwen3.8-2.4T-A95B.png",
+        "alt": "Hugging Face model card header for Qwen/Qwen3.8-2.4T-A95B",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Model Card",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"
+        },
+        {
+          "label": "FP8 Weights",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B-FP8"
+        },
+        {
+          "label": "Qwen3.8 Announcement",
+          "url": "https://qwen.ai/blog?id=qwen3.8"
+        }
+      ],
+      "publishDate": "2026-08-12T17:07:26.578Z"
+    },
+    {
+      "id": "gowers-llm-maths-counterexamples",
+      "categories": [
+        "article"
+      ],
+      "title": "Tim Gowers — LLMs crack maths problems with counterexamples, not proofs",
+      "org": "Tim Gowers",
+      "date": "2026-08-12",
+      "url": "https://gowers.wordpress.com/2026/08/12/what-sort-of-maths-are-llms-good-at/",
+      "summary": "Tim Gowers notes that the famous maths problems LLMs have cracked were almost all settled by counterexamples, not proofs. The Fields Medallist argues wide knowledge plus fast search explains the wins; pruning bad ideas is still human work.",
+      "tags": [
+        "mathematics",
+        "llm-reasoning",
+        "tim-gowers",
+        "proofs",
+        "counterexamples",
+        "analysis",
+        "research"
+      ],
+      "importance": "notable",
+      "author": {
+        "name": "Tim Gowers",
+        "profileUrl": "https://gowers.wordpress.com/"
+      },
+      "explainer": {
+        "tagline": "A Fields Medallist on why LLM maths wins cluster around counterexamples rather than proofs.",
+        "whatIsIt": "Tim Gowers picks at a pattern in recent AI maths results: the famous problems that have fallen were almost all settled with counterexamples. He points to OpenAI's announcement that it had solved ten major problems in mathematics and theoretical computer science, including the first construction of a non-sofic group and a proof that the multicolour Ramsey number R(3,3,...,3) with k threes grows superexponentially in k. He writes that the Jacobian conjecture and the unit distance conjecture went the same way.",
+        "howItWorks": "The mechanism behind those wins, Gowers argues, is search rather than any special talent for one kind of statement. A model with wide mathematical recall can throw many candidate objects at a problem quickly, and an object that works is cheap to check once you have it. That combination of breadth and speed is what suits construction-shaped problems.",
+        "whyItMatters": "What Gowers says is still missing is judgment about which idea to drop. Working on open problems with 5.6 Pro, he reports being 'often presented with approaches that sound promising until I think about them carefully, and then seem quite a lot less promising.' He expects models to stay weakest on 'problems where the mysterious human ability to prune the proof-discovery search tree is particularly advantageous' — a practical filter for reading the next round of AI maths announcements.",
+        "forWho": "mathematicians and people tracking AI reasoning claims"
+      },
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Timothy_Gowers_at_GOSIM_conference_at_Station_F_in_Paris_-_2026-05-05.jpg",
+        "alt": "Tim Gowers speaking at the GOSIM conference at Station F in Paris",
+        "fit": "cover",
+        "credit": "Wikimedia Commons"
+      },
+      "links": [
+        {
+          "label": "Blog Post",
+          "url": "https://gowers.wordpress.com/2026/08/12/what-sort-of-maths-are-llms-good-at/"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49270022"
+        },
+        {
+          "label": "Author Profile",
+          "url": "https://en.wikipedia.org/wiki/Timothy_Gowers"
+        }
+      ],
+      "publishDate": "2026-08-12T17:07:26.578Z"
+    },
     {
       "id": "google-deepmind-sl2t",
       "categories": [

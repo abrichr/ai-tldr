@@ -31213,6 +31213,43 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260812t170726z",
+      "timestamp": "2026-08-12T17:07:26.578Z",
+      "source": "github-actions-sweep",
+      "summary": "Qwen published the open weights for Qwen3.8-2.4T-A95B, the 2.4T Max-class checkpoint behind Qwen3.8-Max, plus an FP8 build; Tim Gowers argues recent LLM maths wins are counterexamples rather than proofs. Anthropic, Meta, OpenAI, Cohere and Cursor were quiet inside 72h, all 5 fresh YouTube videos were already in the feed, and DeepSeek's V4-Pro-0813 API checkpoint was dropped for lack of any official announcement to cite.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "qwen-3-8-2-4t-a95b-open-weights",
+          "title": "Qwen3.8-2.4T-A95B — the open-weights core of Qwen3.8-Max hits Hugging Face",
+          "category": "model",
+          "note": "First Max-class Qwen weights ever released; HN front page (149 pts) and HF models trending, distinct from the Aug 3 API launch item which explicitly listed weights as still pending."
+        },
+        {
+          "id": "gowers-llm-maths-counterexamples",
+          "title": "Tim Gowers — LLMs crack maths problems with counterexamples, not proofs",
+          "category": "article",
+          "note": "Fields Medallist analysis at 190 points on the HN front page, clearing the top-30/150-point signal."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "article",
+        "security"
+      ]
     }
   ]
 }
