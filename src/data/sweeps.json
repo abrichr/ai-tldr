@@ -30951,6 +30951,39 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260812t013003z",
+      "timestamp": "2026-08-12T01:30:03.162Z",
+      "source": "github-actions-sweep",
+      "summary": "Added xAI's Grok Bot public beta (Aug 11) — always-on agents with their own cloud computer that sign into apps without an API. Everything else fresh on lab blogs, GitHub trending, HF and HN was already in the feed (Mistral regional inference, Mojo 1.0, Nemotron 3.5 Lightning, NeMo Switchyard, Stolen Thoughts, ChatGPT Linux, Claude watermarking) or failed the 72h cap (WorldClaw Aug 5, the Copilot MitM article Aug 4, Macaron-V1's July 21 launch). All 5 fresh YouTube uploads were already ingested last sweep.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "xai-grok-bot",
+          "title": "Grok Bot — xAI's always-on agents get their own cloud computer",
+          "category": "tool",
+          "note": "Top-lab product launch within 24h, covered by Bloomberg, VentureBeat, MacRumors and 9to5Mac plus 128 points on HN; major not seismic because it is an agent product, not a new SOTA model."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "video",
+        "paper",
+        "dataset",
+        "article",
+        "benchmark",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }

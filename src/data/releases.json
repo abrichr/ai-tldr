@@ -1,8 +1,119 @@
 {
-  "generatedAt": "2026-08-11T22:45:50.037Z",
+  "generatedAt": "2026-08-12T01:30:03.162Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "xai-grok-bot",
+      "categories": [
+        "tool"
+      ],
+      "title": "Grok Bot — xAI's always-on agents get their own cloud computer",
+      "org": "xAI",
+      "date": "2026-08-11",
+      "url": "https://x.ai/news/introducing-grok-bot",
+      "summary": "Grok Bot is xAI's team of always-on AI agents, released in public beta on August 11, 2026. Each Bot gets its own cloud computer, signs into your existing apps without an API, and keeps working after you close your laptop.",
+      "tags": [
+        "xai",
+        "grok",
+        "grok-bot",
+        "ai-agents",
+        "agentic-ai",
+        "computer-use",
+        "automation",
+        "cursor",
+        "beta",
+        "tool-launch"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Team price": "$120 / seat / month"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "xAI"
+        },
+        {
+          "label": "Status",
+          "value": "Public beta"
+        },
+        {
+          "label": "Platforms",
+          "value": "Mac, iOS, Windows, Linux (Android soon)"
+        },
+        {
+          "label": "Access tiers",
+          "value": "SuperGrok Heavy, Cursor Ultra, Cursor Teams Premium"
+        },
+        {
+          "label": "Team price",
+          "value": "$120 / seat / month"
+        },
+        {
+          "label": "Enterprise",
+          "value": "Waitlist"
+        },
+        {
+          "label": "How it connects",
+          "value": "Signs into apps directly, no API or MCP needed"
+        }
+      ],
+      "explainer": {
+        "tagline": "xAI's agents now hold their own cloud machine, log into your tools, and finish the job while you are away.",
+        "whatIsIt": "Grok Bot gives each agent its own cloud computer and a login to the apps you already use. xAI released it in public beta on August 11, 2026 on Mac, iOS, Windows and Linux, with Android listed as coming soon. Because the work runs in the cloud, a job keeps going after you close the laptop. Bots come back to you only when they need approval.",
+        "howItWorks": "The agent drives real apps and websites through its own machine, so a service does not need an API or an MCP server to be usable. You teach a workflow by doing it once; the Bot saves those steps as a routine and runs it on its own afterwards. Several Bots can run at the same time, message each other, share threads, and pass work between them in group chats. Each Bot keeps context from earlier tasks.",
+        "whyItMatters": "Most agent tools stop at whatever has an API. By signing in the way a person does, Grok Bot reaches the long tail of internal dashboards and web apps that never got one. xAI frames the pitch around finishing: \"There is a huge difference between 90% done and 100% done. Most AI gets you almost there. Grok Bot can finish the swing.\"",
+        "forWho": "sales, ops and engineering teams with repetitive multi-app work",
+        "tryIt": "Open the Grok Bot app on Mac or iOS with a SuperGrok Heavy, Cursor Ultra, or Cursor Teams Premium subscription."
+      },
+      "faq": [
+        {
+          "q": "How much does Grok Bot cost?",
+          "a": "Grok Bot has no separate price. Access is bundled into three existing xAI and Cursor subscriptions: SuperGrok Heavy, Cursor Ultra, and Cursor Teams Premium. The team plan is $120 per seat per month and adds centralized billing, a team marketplace, shared analytics, and SAML/OIDC single sign-on. Enterprise buyers join a waitlist through sales."
+        },
+        {
+          "q": "Which devices can run Grok Bot?",
+          "a": "Grok Bot shipped on Mac and iOS at launch, with Windows and Linux desktop builds also posted and Android listed as coming soon. The Bots themselves run on cloud machines rather than your device, so a task started on a phone continues after the app is closed. The app is the control surface, not the compute."
+        },
+        {
+          "q": "Does Grok Bot need an API or MCP server for each app?",
+          "a": "No. Grok Bot signs into apps and websites the same way a person does, using its own cloud computer, so a service does not need an API or an MCP connection to be usable. That is the main difference from agent tools that can only touch systems with a published integration."
+        },
+        {
+          "q": "Can several Grok Bots work on the same job?",
+          "a": "Yes. Multiple Grok Bots run in parallel, message each other, share threads, and coordinate in group chats where they hand off work and assign ownership. Each Bot also keeps context from its earlier tasks, so a long-running job does not restart from nothing every session."
+        },
+        {
+          "q": "Does Grok Bot act without asking me first?",
+          "a": "Grok Bot works unsupervised through most of a task and returns only when approval is needed. You can also teach it a workflow by demonstrating it once, after which the Bot saves the steps as a routine and repeats them on its own. xAI describes the product as an early beta."
+        }
+      ],
+      "image": {
+        "url": "https://x.ai/images/news/introducing-grok-bot-og-2.png",
+        "alt": "xAI Grok Bot announcement graphic",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://x.ai/news/introducing-grok-bot"
+        },
+        {
+          "label": "Coverage: MacRumors",
+          "url": "https://www.macrumors.com/2026/08/11/grok-bot-macos-ios/"
+        },
+        {
+          "label": "Coverage: 9to5Mac",
+          "url": "https://9to5mac.com/2026/08/11/grok-bot-is-an-all-new-iphone-and-mac-app-from-spacexai-and-cursor/"
+        },
+        {
+          "label": "Feature Breakdown",
+          "url": "https://www.unite.ai/xai-launches-grok-bot-always-on-ai-teammates-with-their-own-cloud-computers/"
+        }
+      ],
+      "publishDate": "2026-08-12T01:30:03.162Z"
+    },
     {
       "id": "openai-chatgpt-desktop-linux",
       "categories": [
