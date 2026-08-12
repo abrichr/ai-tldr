@@ -1,8 +1,108 @@
 {
-  "generatedAt": "2026-08-12T05:54:08.509Z",
+  "generatedAt": "2026-08-12T07:24:09.953Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "google-amie-video-consultations",
+      "categories": [
+        "paper",
+        "model"
+      ],
+      "title": "AMIE (Video) — Google's medical AI matches doctors in live video consults",
+      "org": "Google Research",
+      "date": "2026-08-11",
+      "url": "https://research.google/blog/advancing-amie-towards-expert-level-audio-visual-clinical-consultations/",
+      "summary": "AMIE (Video) is a Google research medical AI that holds live video consultations. Across 300 consultations it matched 30 primary care doctors on diagnosis and management, and scored higher at eliciting physical signs on camera.",
+      "tags": [
+        "google",
+        "google-deepmind",
+        "gemini",
+        "amie",
+        "multi-agent",
+        "multimodal",
+        "telehealth",
+        "clinical-ai",
+        "healthcare",
+        "diagnostics"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Google Research + Google DeepMind"
+        },
+        {
+          "label": "Built on",
+          "value": "Gemini and Project Astra"
+        },
+        {
+          "label": "Architecture",
+          "value": "Three agents — Talker, Planner, Perception"
+        },
+        {
+          "label": "Study size",
+          "value": "100 scenarios, 300 live consultations"
+        },
+        {
+          "label": "Evaluated against",
+          "value": "30 board-certified primary care physicians"
+        },
+        {
+          "label": "Availability",
+          "value": "Research system — not publicly available"
+        },
+        {
+          "label": "Paper",
+          "value": "arXiv 2608.09861 (Aug 10, 2026)"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Can I use AMIE (Video) today?",
+          "a": "No. Google states that AMIE (Video) remains a research system and that more research is needed before responsible real-world clinical deployment. There is no public code release, no API, and no product. The only public artifacts are the Google Research blog post and the arXiv paper describing the system and the study."
+        },
+        {
+          "q": "How did AMIE (Video) compare with the human doctors in the study?",
+          "a": "Clinical evaluators rated AMIE (Video) on par with the primary care physicians on history-taking thoroughness, diagnostic accuracy, management appropriateness, and communication quality. AMIE (Video) scored significantly higher than both the physicians and the text-only AMIE baseline at eliciting physical signs and guiding patient actors through virtual examination maneuvers."
+        },
+        {
+          "q": "What can AMIE (Video) not do yet?",
+          "a": "The paper reports that AMIE (Video) still struggles with fine anatomical precision, subtle affective nuances, and high-frequency movements on camera. The study also used trained patient actors in simulated consultations rather than real patients, so the results do not show how the system behaves in actual clinical care."
+        },
+        {
+          "q": "How is AMIE (Video) different from the earlier text-based AMIE?",
+          "a": "Earlier AMIE work ran text chat consultations. AMIE (Video) adds a synchronous audio-visual channel, so the system reads non-verbal cues, watches the patient, and talks the patient through a virtual physical exam in real time. The study ran text-only AMIE as a control arm, and patient actors preferred the video version."
+        }
+      ],
+      "explainer": {
+        "tagline": "Google's AMIE now runs synchronous video consultations and guides patients through a virtual physical exam.",
+        "whatIsIt": "AMIE (Video) adds a live audio-visual channel to Google's medical AI research system, so it can hold a real-time video consultation instead of a text chat. The system watches the patient, picks up non-verbal cues, and asks the patient to move a limb or angle the camera at a rash so it can see the sign for itself. AMIE stands for Articulate Medical Intelligence Explorer.",
+        "howItWorks": "Three agents run asynchronously behind the video call. A Talker agent faces the patient and keeps the conversation flowing with low-latency replies; a Planner agent keeps refining the clinical reasoning, updates the differential diagnosis, and spots missing information; a Perception agent reviews the audio and video stream for clinically relevant cues. Splitting the work this way lets AMIE (Video) answer at conversational speed while the slower reasoning continues in the background. The stack is built on Gemini and Project Astra.",
+        "whyItMatters": "Video is how most telehealth actually happens, and it is where an AI consultation system has to prove it can see, not just read. The AMIE (Video) study is the first to put an AI through 300 live video consultations against 30 board-certified primary care physicians and have blinded clinical evaluators score both. For teams building clinical AI, it sets a concrete benchmark for what a multi-agent audio-visual consultation can reach — and the paper is equally clear about what is still missing before any of this touches a real patient.",
+        "forWho": "clinical AI researchers and digital health teams"
+      },
+      "image": {
+        "url": "https://storage.googleapis.com/gweb-research2023-media/images/HO_previewImage1.width-800.format-jpeg.jpg",
+        "alt": "Google Research illustration for AMIE audio-visual clinical consultations",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Research Blog",
+          "url": "https://research.google/blog/advancing-amie-towards-expert-level-audio-visual-clinical-consultations/"
+        },
+        {
+          "label": "Google Announcement",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/"
+        },
+        {
+          "label": "Paper (arXiv)",
+          "url": "https://arxiv.org/abs/2608.09861"
+        }
+      ],
+      "publishDate": "2026-08-12T07:24:09.953Z"
+    },
     {
       "id": "manus-independent-operations-aug11",
       "categories": [

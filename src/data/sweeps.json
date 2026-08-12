@@ -31063,6 +31063,38 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260812t072409z",
+      "timestamp": "2026-08-12T07:24:09.953Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Qwen, DeepSeek/Z.ai/MiniMax), GitHub trending, HuggingFace models/datasets/papers, HN front page and newest, 8 YouTube creator feeds, coding agents, influential voices, tier-1 press and the AI-for-science lane. One item qualified: Google's AMIE (Video) audio-visual clinical consultation system, announced Aug 11. Everything else fresh was already in the feed (all 5 fresh YouTube videos, Mistral regional inference, NVIDIA Nemotron/Switchyard, Stolen Thoughts, Mojo 1.0, Grok Bot, Manus, Anthropic watermarking) or failed the 72h cap (Tencent WorldClaw arXiv Aug 5, NVIDIA Magpie TTS weights Jul 21, OpenAI education plugins Aug 4, Qwen3.8 open weights still unshipped). Top GitHub trending repos were all long-lived projects, not new releases; funding and executive-departure stories were rejected by the ecosystem gate.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "google-amie-video-consultations",
+          "title": "AMIE (Video) — Google's medical AI matches doctors in live video consults",
+          "category": "paper",
+          "note": "Top-lab official blog post within 48h (research.google + blog.google, Aug 11) with an arXiv paper and a randomized 300-consultation study; first demonstration of expert-level AI performance in real-time clinical video consultations, and the science lane's one item this sweep."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
