@@ -7,7 +7,7 @@
   "lineTitle": "Claude Sonnet",
   "tagline": "A more agentic Sonnet: autonomous planning, tool use, and browser/terminal control at a fraction of Opus 4.8 pricing.",
   "seoTitle": "Claude Sonnet 5 — Specs, Pricing & Availability",
-  "metaDescription": "Claude Sonnet 5 (Jun 2026) is Anthropic's more agentic mid-tier model: 1M-token context, 128K output, autonomous tool use, at $3/$15 per MTok.",
+  "metaDescription": "Claude Sonnet 5 (Jun 2026) is Anthropic's more agentic mid-tier model: 1M-token context, 128K output, autonomous tool use, at $2/$10 per MTok.",
   "releaseDate": "2026-06-30",
   "status": "Generally available",
   "license": "Proprietary",
@@ -32,7 +32,7 @@
   "overview": [
     "Claude Sonnet 5 is Anthropic's mid-tier model released on June 30, 2026. Anthropic frames it as a more powerful and agentic version of the Sonnet line: it can make plans, use tools like browsers and terminals, and run autonomously across multi-step tasks. On the Claude API the effort parameter defaults to high on Sonnet 5.",
     "It ships with a 1 million-token context window and up to 128K output tokens on the synchronous Messages API. Modalities are text and image (vision). Adaptive thinking is always on; extended (visible) thinking is not exposed on this model. Anthropic positions Sonnet 5 as approaching Opus 4.8 on agentic search and computer-use evaluations at meaningfully lower cost.",
-    "Pricing is $3 per million input tokens and $15 per million output tokens at the standard rate, with an introductory rate of $2 input and $10 output per million tokens through August 31, 2026. The model is generally available on the Claude API, Claude Platform on AWS, Amazon Bedrock, Google Cloud, and Microsoft Foundry, and is the default model for Free, Pro, Max, Team, and Enterprise plans on claude.ai and in Claude Code."
+    "Pricing is $2 per million input tokens and $10 per million output tokens. On August 10, 2026 Anthropic made that launch rate the standard price and cancelled the increase to $3 / $15 per MTok that had been scheduled for September 1, 2026. The model is generally available on the Claude API, Claude Platform on AWS, Amazon Bedrock, Google Cloud, and Microsoft Foundry, and is the default model for Free, Pro, Max, Team, and Enterprise plans on claude.ai and in Claude Code."
   ],
   "strengths": [
     "Stronger autonomous planning and multi-step tool use than Sonnet 4.6",
@@ -48,11 +48,11 @@
     "Default assistant for Claude Free/Pro/Max/Team/Enterprise plans and Claude Code"
   ],
   "pricing": {
-    "input": "$3.00",
-    "output": "$15.00",
+    "input": "$2.00",
+    "output": "$10.00",
     "unit": "per million tokens",
-    "note": "Introductory pricing of $2 input / $10 output per million tokens applies through August 31, 2026.",
-    "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    "note": "Anthropic made the $2 / $10 launch rate standard on August 10, 2026; the increase to $3 / $15 per MTok scheduled for September 1, 2026 will not occur.",
+    "source": "https://platform.claude.com/docs/en/release-notes/api"
   },
   "apis": [
     {
@@ -83,6 +83,11 @@
       "kind": "official"
     },
     {
+      "label": "Claude Platform release notes (API)",
+      "url": "https://platform.claude.com/docs/en/release-notes/api",
+      "kind": "official"
+    },
+    {
       "label": "Claude on Amazon Bedrock",
       "url": "https://platform.claude.com/docs/en/build-with-claude/claude-in-amazon-bedrock",
       "kind": "api-docs"
@@ -105,7 +110,7 @@
     },
     {
       "q": "How much does Claude Sonnet 5 cost?",
-      "a": "Standard pricing is $3 per million input tokens and $15 per million output tokens. Anthropic is running an introductory rate of $2 input and $10 output per million tokens through August 31, 2026."
+      "a": "Claude Sonnet 5 costs $2 per million input tokens and $10 per million output tokens. Anthropic made that launch rate the standard price on August 10, 2026, cancelling the $3 / $15 per MTok increase it had scheduled for September 1, 2026."
     },
     {
       "q": "What is the context window of Claude Sonnet 5?",

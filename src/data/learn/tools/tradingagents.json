@@ -1,0 +1,63 @@
+{
+  "slug": "tradingagents",
+  "name": "TradingAgents",
+  "repo": "TauricResearch/TradingAgents",
+  "homepage": "https://tauric.ai/",
+  "category": "agents",
+  "categoryTitle": "Agents & Automation",
+  "subcategory": "multi-agent",
+  "subcategoryTitle": "Multi-Agent Systems",
+  "tagline": "An LLM trading firm: analysts, bull-bear researchers, trader and risk agents",
+  "seoTitle": "TradingAgents - Multi-Agent LLM Trading Framework",
+  "metaDescription": "TradingAgents is an Apache-2.0 LangGraph framework that mirrors a trading firm with LLM analyst, researcher, trader and risk agents. Research use, not advice.",
+  "overview": [
+    "TradingAgents is a multi-agent framework from Tauric Research that models the division of labour inside a real trading firm. Specialised LLM agents each take one role — fundamentals, sentiment, news and technical analysts, bullish and bearish researchers, a trader, a risk-management team and a portfolio manager — and they debate each other before a decision is produced, rather than a single prompt answering the whole question.",
+    "The analyst team gathers the inputs: company financials, aggregated news headlines and social chatter, macro indicators, and technical indicators such as MACD and RSI. The researcher team then argues both sides of the resulting thesis, the trader composes those reports into a call, and the risk team and portfolio manager review it against volatility and liquidity before the final decision is recorded.",
+    "It is built on LangGraph and is deliberately provider-agnostic: OpenAI, Google, Anthropic, xAI, DeepSeek, Qwen, GLM, MiniMax, OpenRouter, Azure OpenAI and Amazon Bedrock are supported, as are local models through Ollama or any OpenAI-compatible server such as vLLM or LM Studio. The framework is Apache-2.0, has an accompanying paper (arXiv 2412.20138), and its authors state plainly that it is built for research and is not financial, investment or trading advice."
+  ],
+  "features": [
+    "Role-specialised agents: fundamentals, sentiment, news and technical analysts, plus trader, risk team and portfolio manager",
+    "Structured bull-versus-bear researcher debate before a position is proposed",
+    "Built on LangGraph, with checkpoint resume and a persistent decision log",
+    "Wide provider support — OpenAI, Google, Anthropic, xAI, DeepSeek, Qwen, GLM, MiniMax, OpenRouter, Azure and Bedrock — plus Ollama and OpenAI-compatible local servers",
+    "Interactive CLI for picking tickers, analysis date, provider and research depth, and a Python package for use in your own code",
+    "Works with any market Yahoo Finance covers via exchange-suffixed tickers (0700.HK, 7203.T, RELIANCE.NS, 600519.SS) and crypto pairs like BTC-USD"
+  ],
+  "gettingStarted": {
+    "intro": "Clone the repo, install it into a fresh environment, set the API key for whichever LLM provider you want to drive the agents, then launch the CLI.",
+    "steps": [
+      {
+        "heading": "Clone and create an environment",
+        "body": "The README uses conda, but any environment manager works.",
+        "code": "git clone https://github.com/TauricResearch/TradingAgents.git\ncd TradingAgents\nconda create -n tradingagents python=3.12\nconda activate tradingagents",
+        "lang": "bash"
+      },
+      {
+        "heading": "Install the package",
+        "body": "Install TradingAgents and its dependencies from the checkout.",
+        "code": "pip install .",
+        "lang": "bash"
+      },
+      {
+        "heading": "Set your provider keys",
+        "body": "Export the key for the provider you plan to use; Alpha Vantage supplies market data. You can also copy .env.example to .env and fill it in there.",
+        "code": "export OPENAI_API_KEY=...\nexport ANTHROPIC_API_KEY=...\nexport ALPHA_VANTAGE_API_KEY=...",
+        "lang": "bash"
+      },
+      {
+        "heading": "Run the CLI",
+        "body": "The interactive CLI asks for tickers, an analysis date, the LLM provider and research depth, then streams each agent's progress as it runs. A Docker path (docker compose run --rm tradingagents) is available too.",
+        "code": "tradingagents",
+        "lang": "bash"
+      }
+    ]
+  },
+  "useCases": [
+    "Studying how role-specialised agents and structured debate change an LLM's decision quality",
+    "A worked reference for multi-agent design: analyst fan-out, adversarial review, then a single decision-maker",
+    "Backtesting research on how different backbone models reason over the same market inputs",
+    "Prototyping finance-flavoured agent pipelines over live news, fundamentals and technical indicators"
+  ],
+  "language": "Python",
+  "license": "Apache-2.0"
+}

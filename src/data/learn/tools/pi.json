@@ -1,0 +1,63 @@
+{
+  "slug": "pi",
+  "name": "Pi",
+  "repo": "earendil-works/pi",
+  "homepage": "https://pi.dev",
+  "category": "coding-assistants",
+  "categoryTitle": "AI Coding",
+  "subcategory": "autonomous-coding",
+  "subcategoryTitle": "Autonomous Coding Agents",
+  "tagline": "A minimal terminal coding agent you extend in TypeScript instead of forking",
+  "seoTitle": "Pi - Minimal Terminal Coding Agent Harness",
+  "metaDescription": "Pi is an MIT-licensed terminal coding agent from Earendil Works: four built-in tools, TypeScript extensions and skills, and a reusable agent runtime and LLM API.",
+  "overview": [
+    "Pi is an open-source agent harness whose headline piece is a terminal coding agent CLI. The project's stated aim is that you adapt Pi to your workflow rather than the other way around: instead of forking the tool and editing its internals, you extend it with TypeScript extensions, skills, prompt templates and themes, and you can bundle those into \"Pi packages\" shared over npm or git.",
+    "The agent ships deliberately small. Out of the box the model gets four tools — read, write, edit and bash — and features such as sub-agents and a plan mode are left out on purpose; the project's answer is to ask Pi to build the behaviour you want or install a third-party package that already has it. It runs in four shapes: interactive TUI, print/JSON output for scripting, RPC for process integration, and an SDK for embedding in your own app.",
+    "The repository is a monorepo, so the parts are reusable on their own: @earendil-works/pi-coding-agent is the CLI, pi-agent-core is the agent runtime with tool calling and state management, pi-ai is a unified multi-provider LLM API, pi-tui is a terminal UI library with differential rendering, and pi-telemetry holds vendor-neutral telemetry contracts. Everything is MIT-licensed TypeScript."
+  ],
+  "features": [
+    "Interactive terminal coding agent with four core tools — read, write, edit and bash",
+    "Extension points in TypeScript: extensions, skills, prompt templates and themes, packaged and shared as Pi packages",
+    "Four run modes — interactive, print/JSON, RPC for process integration, and an embeddable SDK",
+    "Reusable packages: pi-ai (multi-provider LLM API), pi-agent-core (agent runtime), pi-tui (terminal UI), pi-telemetry",
+    "Authenticate with a provider API key or an existing subscription (Anthropic Claude Pro/Max, OpenAI ChatGPT Plus/Pro via Codex, GitHub Copilot) plus many API-key providers",
+    "Supply-chain hardening: exact-pinned direct dependencies, a published shrinkwrap, and installs that use --ignore-scripts"
+  ],
+  "gettingStarted": {
+    "intro": "Install the CLI from npm (or the install script), point it at a provider, and run pi in the project you want to work on.",
+    "steps": [
+      {
+        "heading": "Install the CLI",
+        "body": "Install globally from npm. Pi needs no dependency lifecycle scripts for a normal npm install, so the README installs with --ignore-scripts.",
+        "code": "npm install -g --ignore-scripts @earendil-works/pi-coding-agent",
+        "lang": "bash"
+      },
+      {
+        "heading": "Or use the install script",
+        "body": "An alternative one-line installer is published at pi.dev.",
+        "code": "curl -fsSL https://pi.dev/install.sh | sh",
+        "lang": "bash"
+      },
+      {
+        "heading": "Authenticate and start",
+        "body": "Set a provider API key and launch pi, or start pi and run /login to sign in with an existing subscription, then pick a model with /model.",
+        "code": "export ANTHROPIC_API_KEY=sk-ant-...\npi",
+        "lang": "bash"
+      },
+      {
+        "heading": "Sandbox it if you need boundaries",
+        "body": "Pi has no built-in permission system and runs with the permissions of the user that launched it. The coding-agent docs describe three containerization patterns: the Gondolin extension (tools and ! commands routed into a local Linux micro-VM), plain Docker, and OpenShell.",
+        "code": "",
+        "lang": ""
+      }
+    ]
+  },
+  "useCases": [
+    "You want a terminal coding agent whose behaviour you can change in TypeScript without maintaining a fork",
+    "You prefer a small default tool set (read/write/edit/bash) and would rather add capabilities as skills or packages",
+    "You need to drive a coding agent from another process — print/JSON output, RPC, or the embeddable SDK",
+    "You are building your own agent and want the pieces separately: a multi-provider LLM API, an agent runtime, or a terminal UI library"
+  ],
+  "language": "TypeScript",
+  "license": "MIT"
+}

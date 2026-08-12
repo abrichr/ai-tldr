@@ -197,7 +197,7 @@
             {
               "name": "Claude Sonnet 5",
               "slug": "claude-sonnet-5",
-              "blurb": "Sonnet tier (Jun 2026); more agentic Sonnet with autonomous planning, browser/terminal tool use, and lower cost than Opus 4.8. 1M context, 128K max output, $3/$15 per MTok ($2/$10 intro through Aug 31, 2026).",
+              "blurb": "Sonnet tier (Jun 2026); more agentic Sonnet with autonomous planning, browser/terminal tool use, and lower cost than Opus 4.8. 1M context, 128K max output, $2/$10 per MTok (launch rate made permanent Aug 10, 2026).",
               "tags": [
                 "frontier",
                 "proprietary",

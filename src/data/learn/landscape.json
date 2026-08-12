@@ -3065,6 +3065,14 @@
        "homepage": "https://elizaos.ai/",
        "description": "An open-source TypeScript framework and product stack for autonomous AI agents, built around a model-agnostic plugin runtime that ships with a user-facing agent app, a CLI, and optional local on-device inference.",
        "detail": true
+      },
+      {
+       "name": "nanobot",
+       "slug": "nanobot",
+       "repo": "HKUDS/nanobot",
+       "homepage": "https://nanobot.wiki",
+       "description": "Lightweight self-hosted personal AI agent framework in Python, with a WebUI, terminal and chat-app channels, tools, long-term memory, MCP and scheduled automations.",
+       "detail": true
       }
      ]
     },
@@ -3168,6 +3176,14 @@
        "description": "PentAGI is a self-hosted AI security platform that plans and runs penetration tests autonomously using a team of agents and 20+ built-in pentesting tools.",
        "detail": true,
        "logo": "/tools-logos/gh-vxcontrol.png"
+      },
+      {
+       "name": "TradingAgents",
+       "slug": "tradingagents",
+       "repo": "TauricResearch/TradingAgents",
+       "homepage": "https://tauric.ai/",
+       "description": "LangGraph framework that mirrors a trading firm: LLM analyst, bull/bear researcher, trader and risk-management agents debate before a decision. For research, not advice.",
+       "detail": true
       }
      ]
     },
@@ -4300,6 +4316,14 @@
        "description": "Serena is an open-source MCP toolkit that gives any LLM coding agent symbol-level code retrieval, editing, and refactoring across 40+ languages.",
        "detail": true,
        "logo": "/tools-logos/gh-oraios.png"
+      },
+      {
+       "name": "Pi",
+       "slug": "pi",
+       "repo": "earendil-works/pi",
+       "homepage": "https://pi.dev",
+       "description": "Minimal terminal coding agent harness with four built-in tools, extended through TypeScript extensions, skills and prompt templates instead of forks.",
+       "detail": true
       }
      ]
     },

@@ -1,0 +1,63 @@
+{
+  "slug": "nanobot",
+  "name": "nanobot",
+  "repo": "HKUDS/nanobot",
+  "homepage": "https://nanobot.wiki",
+  "category": "agents",
+  "categoryTitle": "Agents & Automation",
+  "subcategory": "general-agents",
+  "subcategoryTitle": "Agent Frameworks & Builders",
+  "tagline": "Self-hosted personal agent runtime with a WebUI, memory, MCP and chat apps",
+  "seoTitle": "nanobot - Self-Hosted Personal AI Agent Framework",
+  "metaDescription": "nanobot is an MIT-licensed Python framework for a self-hosted personal AI agent: WebUI or terminal, tools, long-term memory, MCP, automations and chat apps.",
+  "overview": [
+    "nanobot is a lightweight, self-hosted personal AI agent framework written in Python. It bundles the pieces a long-running assistant needs — tools, long-term memory, MCP integrations, model routing, multi-agent delegation, scheduled automation and an OpenAI-compatible API — into a small, readable core that you run on your own machine or server.",
+    "You can talk to it three ways: a bundled browser WebUI that binds to localhost on first run, an interactive terminal chat, or chat apps such as Telegram, Discord, Slack, WeChat, Feishu, Teams, Mattermost and email. The gateway can be left running in the background so channels and scheduled automations keep working after you close the terminal.",
+    "The agent's tool set covers files, shell, web search, web fetch, MCP servers, cron, image generation and sub-agents, and session history plus long-term memory are handled by its Dream memory layer. Providers are configured in the WebUI: any OpenAI-compatible API, local models through Ollama or vLLM, and fallback models when one provider fails. It is MIT-licensed, needs Python 3.11 or newer, and is published to PyPI as nanobot-ai."
+  ],
+  "features": [
+    "Runs as a browser WebUI, an interactive terminal chat, or inside chat apps (Telegram, Discord, Slack, WeChat, Feishu, Teams, email, Mattermost)",
+    "Built-in tools: files, shell, web search, web fetch, MCP, cron, image generation and sub-agents",
+    "Long-term memory and session history via its Dream memory layer, for work that spans sessions",
+    "Model freedom: OpenAI-compatible endpoints, local LLMs, and configurable fallback models",
+    "Python SDK plus an OpenAI-compatible API, so other apps can call the agent",
+    "Runs as a long-lived background gateway with status, logs, restart and stop commands"
+  ],
+  "gettingStarted": {
+    "intro": "Install the nanobot-ai package, start the WebUI, and pick a provider and model in Settings before doing real work.",
+    "steps": [
+      {
+        "heading": "Install nanobot",
+        "body": "Install the published package with uv (Python 3.11 or newer). The README also offers a one-command installer script for macOS, Linux and Windows PowerShell.",
+        "code": "uv tool install nanobot-ai",
+        "lang": "bash"
+      },
+      {
+        "heading": "Open the WebUI and configure a model",
+        "body": "The recommended first run. It creates the config and workspace, starts the gateway, and opens http://127.0.0.1:8765. Then go to Settings → Models, choose a provider, credential and model, and send \"Hello!\" in a new topic to check the connection.",
+        "code": "nanobot webui",
+        "lang": "bash"
+      },
+      {
+        "heading": "Or stay in the terminal",
+        "body": "nanobot agent opens an interactive terminal chat with the same model, workspace and tools. The -m form sends one request and exits — handy for scripts or a quick provider check.",
+        "code": "nanobot agent\nnanobot agent -m \"Hello!\"",
+        "lang": "bash"
+      },
+      {
+        "heading": "Keep it running in the background",
+        "body": "Once first-time model setup is done, run the gateway detached and manage it with the gateway subcommands.",
+        "code": "nanobot webui --background\nnanobot gateway status\nnanobot gateway logs\nnanobot gateway stop",
+        "lang": "bash"
+      }
+    ]
+  },
+  "useCases": [
+    "You want one personal assistant you own end to end, running on your own hardware with your own keys",
+    "You want the assistant reachable from a chat app you already use rather than only a web page",
+    "You need scheduled or long-horizon automations that keep running between conversations",
+    "You want an agent that carries memory across sessions and can call MCP servers and shell tools"
+  ],
+  "language": "Python",
+  "license": "MIT"
+}
