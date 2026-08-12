@@ -31119,6 +31119,33 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260812t110626z",
+      "timestamp": "2026-08-12T11:06:26.705Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic last posted Aug 7, OpenAI/Meta/Mistral/xAI items from Aug 10-11 are all already in the feed, DeepMind and Cohere quiet, Qwen3.8-Max open weights still unshipped), GitHub trending (daily + Python), HuggingFace models/datasets/papers, HN top 30 plus page 2, and all 8 YouTube creator feeds. Every ≤72h item that clears the bar is already live: Muse Glimmer, GPT-5.6-Cyber, Mojo 1.0, Grok Bot, Nemotron 3.5 Lightning, NeMo Switchyard, Stolen Thoughts, Semantica 0.6.5, h3.c, Mistral regional endpoints, Manus, and all 5 fresh creator videos. The only untaken HN hit, Tencent's WorldClaw (231 pts), dates to Aug 7 (arXiv v1 Aug 5, repo README says paper released 2026.08.07) so it fails the 72h cap. Science lane (neurosciencenews, STAT, nature, BCI/imaging/pharma/protein queries) surfaced only finding-papers and journalism with no released artifact. Tier-1 press had only funding, personnel and revenue news (River AI $1.1B, Brad Lightcap departure, Gemini 1B users), all correctly rejected by the ecosystem gate.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
