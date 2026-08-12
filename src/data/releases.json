@@ -1,8 +1,167 @@
 {
-  "generatedAt": "2026-08-12T20:47:55.257Z",
+  "generatedAt": "2026-08-12T22:45:54.753Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "dream-taiwan-multi-agent-intrusion",
+      "categories": [
+        "security"
+      ],
+      "title": "AI agents breached Taiwan's government — Dream reports 85 accounts cracked",
+      "org": "Dream",
+      "date": "2026-08-12",
+      "url": "https://www.dreamgroup.com/blog/inside-a-multi-agent-ai-framework-used-to-compromise-government-entities-in-asia",
+      "summary": "Dream, an Israeli security firm, says attackers used the open-source Hermes and OpenClaw agent frameworks to crack 85 Taiwanese government accounts over four days in July and take 2,564 personnel records, with little human input.",
+      "tags": [
+        "security",
+        "ai-agents",
+        "agentic-ai",
+        "cybersecurity",
+        "openclaw",
+        "hermes",
+        "taiwan",
+        "critical-infrastructure",
+        "incident-report",
+        "threat-intelligence",
+        "dream"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Accounts cracked": "85",
+        "Records taken": "2,564"
+      },
+      "quickFacts": [
+        {
+          "label": "Reported by",
+          "value": "Dream (Israeli security firm)"
+        },
+        {
+          "label": "Report date",
+          "value": "12 August 2026"
+        },
+        {
+          "label": "Attack window",
+          "value": "1–4 July 2026"
+        },
+        {
+          "label": "Frameworks used",
+          "value": "Hermes and OpenClaw"
+        },
+        {
+          "label": "Systems mapped",
+          "value": "21 connected government systems"
+        },
+        {
+          "label": "Attack waves",
+          "value": "12, up to 8 sub-agents each"
+        },
+        {
+          "label": "Other targets",
+          "value": "Nuclear safety agency, 7+ energy firms"
+        }
+      ],
+      "explainer": {
+        "tagline": "Dream's report describes a four-day agentic intrusion that mapped 21 Taiwanese government systems and reached a nuclear safety agency.",
+        "whatIsIt": "Dream, an Israeli cybersecurity firm, published a report on 12 August 2026 on a multi-agent attack framework run against Taiwanese government targets. The operation took place from 1 to 4 July 2026 and used two open-source agent frameworks, Hermes and OpenClaw. CyberScoop reports that suspected Chinese hackers were behind it.",
+        "howItWorks": "The framework ran up to eight lettered sub-agents in parallel per wave, and Dream observed Agent A through Agent Q across the campaign. A Bayesian decision engine scored 14 parallel attack chains by posterior probability, so effort went to the highest-value targets first. When a path was blocked, what Dream calls Learning Cycles searched vulnerability databases and GitHub for new techniques, and structured after-action reports carried results from one wave into the next.",
+        "whyItMatters": "Near-autonomous intrusion changes the speed defenders face. The framework worked through a dozen waves in four days, re-planning between each one, and spread from government email and IT supply-chain vendors to a nuclear safety agency and energy companies. Dream argues security teams now need an AI-native approach that reasons probabilistically about which attack path is most likely, before defensive resources are overwhelmed.",
+        "forWho": "security engineers and threat intelligence teams"
+      },
+      "faq": [
+        {
+          "q": "Who is suspected of running the Taiwan AI agent attack?",
+          "a": "CyberScoop reports that suspected Chinese hackers ran the campaign against Taiwanese government targets using open-source AI models. Dream, the Israeli firm that analysed the intrusion, sets out the operators' tooling and behaviour in detail but frames its report around the multi-agent framework itself rather than naming a state-backed group."
+        },
+        {
+          "q": "What data was taken in the Taiwan breach?",
+          "a": "The Taiwan intrusion produced 2,564 personnel records, 7 SSO client secrets and 6 internal database credentials covering MSSQL, Oracle and Sybase, according to Dream. Investigators also found a 160 MB archive holding 1,395 files. Dream reports that 84 of the 85 cracked credentials authenticated successfully against internal systems."
+        },
+        {
+          "q": "How autonomous was the attack really?",
+          "a": "Dream calls the Taiwan operation near-autonomous rather than fully autonomous. The framework adapted mid-operation without human intervention, but researchers told CyberScoop that building a system that works at this level takes more work than just running a model. People designed the orchestration; the agents did the planning and execution inside it."
+        },
+        {
+          "q": "Does this mean OpenClaw itself was compromised?",
+          "a": "OpenClaw is an open-source agent framework, and Dream's report describes attackers using it as tooling rather than exploiting a flaw in the project. Dream names Hermes and OpenClaw as the frameworks the operators orchestrated, and nothing in the report says either project was breached or backdoored."
+        },
+        {
+          "q": "What does Dream say defenders should do?",
+          "a": "Dream's recommendation is a shift toward AI-native defence: systems that reason probabilistically about which attack path an adversary is most likely to take, rather than waiting to match a known signature. Dream frames this as needed before defensive resources are overwhelmed by attackers who can re-plan between waves."
+        }
+      ],
+      "image": {
+        "url": "https://cdn.prod.website-files.com/6a146a5aca0b1a41051708a5/6a745ae9468333f7959a4e95_6a32a0a73917680ab44d23ec_14%201.jpg",
+        "alt": "Dream report cover for a multi-agent AI framework used against government entities in Asia",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Dream Report",
+          "url": "https://www.dreamgroup.com/blog/inside-a-multi-agent-ai-framework-used-to-compromise-government-entities-in-asia"
+        },
+        {
+          "label": "CyberScoop",
+          "url": "https://cyberscoop.com/near-autonomous-ai-attack-government-target-taiwan/"
+        },
+        {
+          "label": "The Register",
+          "url": "https://www.theregister.com/security/2026/08/12/near-autonomous-ai-agents-attack-taiwans-nuclear-safety-agency/5287055"
+        }
+      ],
+      "publishDate": "2026-08-12T22:45:54.753Z"
+    },
+    {
+      "id": "wes-roth-ai-thoughts-revealed-aug12",
+      "categories": [
+        "video"
+      ],
+      "title": "Wes Roth — 'all AI thoughts JUST got revealed...'",
+      "org": "Wes Roth",
+      "date": "2026-08-12",
+      "url": "https://www.youtube.com/watch?v=kKjmv2CuVUI",
+      "summary": "Wes Roth's 12 August roundup runs six AI stories in one episode: Claude and the Riemann Hypothesis, Stolen Thoughts, Grok Bot, the EU's AI watermarks, Meta's Muse, and what he calls Google's Exodus.",
+      "tags": [
+        "youtube",
+        "wes-roth",
+        "video-explainer",
+        "ai-news-roundup",
+        "stolen-thoughts",
+        "grok-bot",
+        "claude",
+        "meta-muse",
+        "ai-watermarking"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Wes Roth's latest episode is a six-story AI news roundup, from a Claude maths result to AI watermark rules in the EU.",
+        "whatIsIt": "'all AI thoughts JUST got revealed...' is a Wes Roth news roundup uploaded on 12 August 2026. Its chapter list names six stories: Claude and the Riemann Hypothesis, Stolen Thoughts, Grok Bot, the EU's AI watermarks, Meta's Muse, and Google's Exodus.",
+        "howItWorks": "The episode is built as timestamped segments rather than one deep dive. An AI news block opens at 00:00, a sponsor read follows at 02:44, and the six story chapters run from 06:08 through to the end, so a viewer can jump straight to the one they care about.",
+        "whyItMatters": "Most of the stories Wes Roth covers here broke within the past few days and are still being argued over. The chapter list makes the episode a quick way to catch up on the week's frontier-lab news in one sitting instead of reading six separate write-ups.",
+        "forWho": "people catching up on the week's AI news"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/kKjmv2CuVUI/hqdefault.jpg",
+        "alt": "Wes Roth video thumbnail for 'all AI thoughts JUST got revealed...'",
+        "fit": "cover"
+      },
+      "author": {
+        "name": "Wes Roth",
+        "handle": "@WesRoth",
+        "profileUrl": "https://www.youtube.com/@WesRoth"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=kKjmv2CuVUI"
+        },
+        {
+          "label": "Channel",
+          "url": "https://www.youtube.com/@WesRoth"
+        }
+      ],
+      "publishDate": "2026-08-12T22:45:54.753Z"
+    },
     {
       "id": "stably-orca-1-4-180",
       "categories": [

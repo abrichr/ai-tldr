@@ -31339,6 +31339,45 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260812t224554z",
+      "timestamp": "2026-08-12T22:45:54.753Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Dream's report on a near-autonomous multi-agent intrusion into Taiwanese government systems (Hermes + OpenClaw, 85 accounts, covered by The Register and CyberScoop) and a fresh Wes Roth AI news roundup. Lab blogs were quiet inside the 72h window — Anthropic's newest post is 7 Aug, Meta and Cohere are older, and Mistral's 11 Aug regional-inference post is already in the feed. Every other HN front-page AI story (DeepSeek V4 Pro, Qwen3.8-2.4T, Grok 4.6, the middle-class-engineering thread, the LLM-maths thread) and every GitHub/HF trending item already exists in the feed.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "dream-taiwan-multi-agent-intrusion",
+          "title": "AI agents breached Taiwan's government — Dream reports 85 accounts cracked",
+          "category": "security",
+          "note": "Dream published the report today; The Register and CyberScoop both covered it on 12 Aug, and it is a distinct incident from the OpenClaw gym hack already in the feed."
+        },
+        {
+          "id": "wes-roth-ai-thoughts-revealed-aug12",
+          "title": "Wes Roth — 'all AI thoughts JUST got revealed...'",
+          "category": "video",
+          "note": "Only video from the 8-channel RSS scan not already in the feed; uploaded 0h before the sweep and its chapter list is verified from the channel feed."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "security",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
