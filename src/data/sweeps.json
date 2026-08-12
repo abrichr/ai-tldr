@@ -31180,6 +31180,39 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260812t150304z",
+      "timestamp": "2026-08-12T15:03:04.004Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Google DeepMind's SL2T sign-language-to-text model, announced today and shipping in Gboard and Live Transcribe on Pixel 11. Everything else checked was already in the feed or outside the 72h window: all 5 fresh YouTube videos are already ingested, Mistral's regional-inference post is the same announcement we ran yesterday, OpenAI's education plugins date to Aug 4, The Stack v3 to Jul 23, and Anthropic, Meta and xAI posted nothing new.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "google-deepmind-sl2t",
+          "title": "SL2T — Google's sign language model turns signing into text on Pixel",
+          "category": "model",
+          "note": "Top-lab blog post published today: a named model with a published benchmark number that ships in shipping products, and the first sign-language entry in the feed."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "video",
+        "dataset",
+        "paper",
+        "benchmark",
+        "article",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }

@@ -1,8 +1,125 @@
 {
-  "generatedAt": "2026-08-12T13:07:42.690Z",
+  "generatedAt": "2026-08-12T15:03:04.004Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "google-deepmind-sl2t",
+      "categories": [
+        "model",
+        "tool"
+      ],
+      "title": "SL2T — Google's sign language model turns signing into text on Pixel",
+      "org": "Google DeepMind",
+      "date": "2026-08-12",
+      "url": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/",
+      "summary": "SL2T is Google DeepMind's sign-language-to-text model, trained on over 100,000 hours of data across more than 50 sign languages. It now powers sign-to-text dictation in Gboard and Live Transcribe on Pixel 11, starting with ASL to English.",
+      "tags": [
+        "sign-language",
+        "accessibility",
+        "google-deepmind",
+        "translation",
+        "on-device-ai",
+        "pose-estimation",
+        "mediapipe",
+        "gboard",
+        "pixel-11",
+        "asl"
+      ],
+      "importance": "major",
+      "metrics": {
+        "BLEURT (FLEURS-ASL, zero-shot)": 70,
+        "Training data": "100,000+ hours"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Google DeepMind"
+        },
+        {
+          "label": "Model",
+          "value": "SL2T (sign-language-to-text)"
+        },
+        {
+          "label": "Sign languages in training",
+          "value": "More than 50"
+        },
+        {
+          "label": "Products",
+          "value": "Gboard dictation, Live Transcribe"
+        },
+        {
+          "label": "Devices",
+          "value": "Pixel 11, more coming soon"
+        },
+        {
+          "label": "First language pair",
+          "value": "ASL to English"
+        },
+        {
+          "label": "Pose tracking",
+          "value": "MediaPipe Holistic, on device"
+        }
+      ],
+      "explainer": {
+        "tagline": "Google DeepMind's SL2T reads a signer's body landmarks and writes the text, and it now runs inside Gboard and Live Transcribe.",
+        "whatIsIt": "Sign-to-text dictation now ships on Pixel 11, powered by a Google DeepMind model called SL2T. A signer signs at the phone camera and the words come out as text they can send, search with, or pass to Gemini. SL2T was trained on over 100,000 hours of data across more than 50 sign languages, with roughly a quarter of that in American Sign Language. The first pair Google turned on is ASL to English.",
+        "howItWorks": "The pipeline splits in two. An on-device model, MediaPipe Holistic, tracks points on the signer's face, hands and body, and only those geometric coordinates are sent to the server. SL2T then translates that coordinate sequence straight into text, skipping the intermediate annotations known as glosses that most sign language systems rely on. The original video is discarded immediately, so no footage of the person leaves the phone.",
+        "whyItMatters": "Typing has been the fallback for Deaf signers on a phone, and sign-to-text removes that step for everyday tasks like drafting a message or asking Gemini a question. On the FLEURS-ASL benchmark SL2T scores 70 BLEURT with no task-specific tuning, which Google DeepMind says is significantly higher than any previously reported score. Google built the model with an advisory committee of Deaf organizations, and it handles one-handed signing and left-handed signers.",
+        "forWho": "Deaf and hard-of-hearing signers, accessibility developers",
+        "tryIt": "Open Gboard dictation or Live Transcribe on a Pixel 11 and sign in ASL."
+      },
+      "faq": [
+        {
+          "q": "Which sign languages does SL2T support at launch?",
+          "a": "SL2T launches with American Sign Language to English, inside Gboard dictation and Live Transcribe. The model was trained on more than 50 sign languages, with about a quarter of its 100,000-plus hours of data in ASL, so the training covers far more than it currently serves. Google DeepMind has turned on only the ASL-to-English pair so far."
+        },
+        {
+          "q": "Which devices can use sign-to-text today?",
+          "a": "Sign-to-text powered by SL2T is available first on Pixel 11, and Google says more devices are coming soon. On the phone it shows up in two places: dictation inside the Gboard keyboard, and the Live Transcribe accessibility app. Google announced the rollout on August 12, 2026, alongside the Pixel 11 launch."
+        },
+        {
+          "q": "Does video of the signer leave the phone?",
+          "a": "No. SL2T never receives video. An on-device MediaPipe Holistic model converts the camera feed into geometric coordinates for points on the signer's face, hands and body, and only those coordinates are sent to the server for translation. Google DeepMind says the original video is discarded immediately."
+        },
+        {
+          "q": "How accurate is SL2T compared with earlier sign language models?",
+          "a": "SL2T scores 70 BLEURT zero-shot on the FLEURS-ASL benchmark. Google DeepMind states this is significantly higher than any previously reported score on that benchmark. FLEURS-ASL is published as a public dataset on Kaggle, so other research groups can measure their own sign language models against the same test set."
+        },
+        {
+          "q": "Did Deaf communities have a say in how SL2T was built?",
+          "a": "Google set up the AI Sign Language Advisory Committee, or AISLAC, which brings together global Deaf organizations and subject-matter experts. The committee published a joint impact report for SL2T 1.0 alongside the launch. Google credits that input for design choices such as supporting one-handed signing and left-handed signers."
+        }
+      ],
+      "image": {
+        "url": "https://lh3.googleusercontent.com/8RcynTx1ujudyw8Fs05Pv8WJahe2FQ3z1Y7gNHm-xvOTJLdMp9hNDsIIoQbJsnav6evNLgY1iT9B9ercsyIn0U1N51pzScvSfe6IHk2SjDJx-MaVzQ=w1200-h630-n-nu-rw",
+        "alt": "A person signs at a phone camera while the Gboard keyboard shows the translated text",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/"
+        },
+        {
+          "label": "FLEURS-ASL Dataset",
+          "url": "https://www.kaggle.com/datasets/googleai/fleurs-asl"
+        },
+        {
+          "label": "MediaPipe Holistic",
+          "url": "https://research.google/blog/mediapipe-holistic-simultaneous-face-hand-and-pose-prediction-on-device/"
+        },
+        {
+          "label": "AISLAC Impact Report",
+          "url": "https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/putting-sign-language-ai-into-users-hands/aislac-joint-impact-report-for-sl2t-1-0.pdf"
+        },
+        {
+          "label": "Pixel 11",
+          "url": "https://store.google.com/magazine/google_pixel_11"
+        }
+      ],
+      "publishDate": "2026-08-12T15:03:04.004Z"
+    },
     {
       "id": "stratechery-nvidias-risky-business-aug11",
       "categories": [
