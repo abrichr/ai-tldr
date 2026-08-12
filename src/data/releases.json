@@ -1,8 +1,172 @@
 {
-  "generatedAt": "2026-08-12T19:05:57.703Z",
+  "generatedAt": "2026-08-12T20:47:55.257Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "stably-orca-1-4-180",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "Orca 1.4.180 — stacked pull requests come to the parallel-agent desktop",
+      "org": "Stably",
+      "date": "2026-08-11",
+      "url": "https://github.com/stablyai/orca/releases/tag/v1.4.180",
+      "summary": "Orca 1.4.180 adds stacked GitHub pull requests to Stably's open-source app for running many coding agents at once, each in its own git worktree. The MIT-licensed desktop tool has 43.7k GitHub stars and runs on macOS, Windows and Linux.",
+      "tags": [
+        "orca",
+        "stably",
+        "coding-agent",
+        "agent-orchestration",
+        "git-worktree",
+        "developer-tools",
+        "open-source",
+        "mit-license",
+        "claude-code",
+        "codex",
+        "desktop-app",
+        "pull-requests"
+      ],
+      "importance": "major",
+      "metrics": {
+        "GitHub stars": 43732
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Stably"
+        },
+        {
+          "label": "Version",
+          "value": "1.4.180"
+        },
+        {
+          "label": "License",
+          "value": "MIT"
+        },
+        {
+          "label": "Price",
+          "value": "Free and open source"
+        },
+        {
+          "label": "Platforms",
+          "value": "macOS, Windows, Linux (+ iOS and Android companion)"
+        },
+        {
+          "label": "Agents supported",
+          "value": "Any CLI agent; preset for Claude Code, Codex, OpenCode, Cursor, Gemini, Copilot"
+        },
+        {
+          "label": "What's new",
+          "value": "Stacked GitHub PRs, manual artifact sharing, artifacts management UI"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much does Orca cost?",
+          "a": "Orca is free. Stably publishes it under the MIT license, so the desktop app, the mobile companion apps and the full source are available at no charge. The only cost is whatever model subscription or API key the coding agent you run inside Orca already uses, since Orca does not resell inference."
+        },
+        {
+          "q": "Which coding agents can Orca run?",
+          "a": "Orca works with any CLI coding agent and ships preconfigured for Claude Code, Codex, OpenCode, Cursor, Gemini, GitHub Copilot, Cline, Goose, Devin, Amp and others. Custom CLI agents can be added by hand, so a team picking Orca is not locked into one vendor's agent or one model provider."
+        },
+        {
+          "q": "Can I run Orca on Windows or Linux?",
+          "a": "Orca runs on macOS for both Apple Silicon and Intel, on Windows as an .exe, and on Linux as an AppImage. Stably also publishes a Homebrew cask for macOS and an AUR package for Arch Linux. Companion apps on iOS and Android let you watch and steer a run from a phone."
+        },
+        {
+          "q": "Can Orca run agents on a remote machine?",
+          "a": "Orca supports SSH-based remote worktrees, so an agent's work can execute on an external machine or a VPS while you drive it from the desktop app. Version 1.4.180 also fixed remote task agent support and native chat history restoration, both of which affect long-running remote sessions."
+        }
+      ],
+      "explainer": {
+        "tagline": "Run Claude Code, Codex and other CLI agents side by side in isolated git worktrees from one desktop app.",
+        "whatIsIt": "Orca 1.4.180 adds stacked pull requests, so a chain of dependent GitHub PRs can be mapped and merged without leaving the app. The release also brings manual artifact sharing from the HTML and Markdown views, an artifacts management interface, live attention badges on recent chats, and a runtime toggle for agent status hooks. Stably ships Orca as an open-source desktop app under the MIT license.",
+        "howItWorks": "Each task runs inside its own isolated git worktree, so parallel agents never fight over the same branch or checkout. Around every worktree the app wraps a WebGL terminal, a VS Code-based file editor, and a native Chromium window for inspecting the UI an agent just changed. GitHub and Linear browsing are built in, and any CLI coding agent can be plugged into Orca alongside the presets.",
+        "whyItMatters": "Running several coding agents at once normally means juggling terminals, branches and checkouts by hand, and reviewing their output one branch at a time. The worktree-per-task model plus the new stacked-PR support let one person land a chain of agent-written changes in order from a single window. Remote worktrees over SSH and the phone companions mean a run started on a laptop can be checked from anywhere.",
+        "forWho": "developers running several coding agents at once",
+        "tryIt": "brew install --cask stablyai/orca/orca"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/stablyai/orca",
+        "alt": "GitHub repository card for stablyai/orca, the parallel coding-agent desktop app",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Release Notes",
+          "url": "https://github.com/stablyai/orca/releases/tag/v1.4.180"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/stablyai/orca"
+        },
+        {
+          "label": "Product Page",
+          "url": "https://onorca.dev/"
+        },
+        {
+          "label": "Download",
+          "url": "https://onorca.dev/download"
+        }
+      ],
+      "publishDate": "2026-08-12T20:47:55.257Z"
+    },
+    {
+      "id": "florian-herrengt-middle-class-swe-aug11",
+      "categories": [
+        "article"
+      ],
+      "title": "Florian Herrengt — 'AI is removing the middle class of software engineering'",
+      "org": "Florian Herrengt",
+      "date": "2026-08-11",
+      "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
+      "summary": "Florian Herrengt argues that AI coding tools are splitting software engineering in two: strong engineers gain leverage, while average engineers get squeezed out because AI now does the implementation work they used to do.",
+      "tags": [
+        "ai-coding",
+        "software-engineering",
+        "careers",
+        "code-review",
+        "technical-debt",
+        "opinion",
+        "developer-productivity",
+        "hacker-news"
+      ],
+      "importance": "notable",
+      "author": {
+        "name": "Florian Herrengt",
+        "profileUrl": "https://github.com/florianherrengt",
+        "avatarUrl": "https://github.com/florianherrengt.png"
+      },
+      "explainer": {
+        "tagline": "Florian Herrengt argues AI coding tools reward the best engineers and squeeze the competent middle out of the job market.",
+        "whatIsIt": "Florian Herrengt's post argues that AI coding assistants have removed the constraint that used to limit how fast code could be written, and that this breaks the job market for average engineers. Herrengt is a London-based founder and JavaScript and DevOps consultant, and he published the piece on his personal blog on 11 August 2026. It reached the front page of Hacker News the same week.",
+        "howItWorks": "The argument in 'AI is removing the middle class of software engineering' runs through three effects Herrengt says compound on each other. Speed without judgment: one person can now open a 25,000-line pull request faster than a team can meaningfully review it. Knowledge collapse: understanding of a system spreads across AI chat logs and thin commit messages instead of living with people. Compounding debt: by the time one bad decision is untangled, several more have merged. Herrengt makes the case through scenarios rather than statistics.",
+        "whyItMatters": "The conclusion Herrengt reaches is that judgment, not typing speed, becomes the scarce skill, so engineers who can review and reject AI output gain value while those whose main contribution was implementation lose it. He predicts the same split spreads to most knowledge work. The post drew a long Hacker News discussion about where the employability bar for engineers now sits.",
+        "forWho": "software engineers and engineering managers"
+      },
+      "image": {
+        "url": "https://github.com/florianherrengt.png",
+        "alt": "Florian Herrengt profile photo",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Blog Post",
+          "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49271994"
+        },
+        {
+          "label": "Author Blog",
+          "url": "https://blog.florianherrengt.com/"
+        }
+      ],
+      "publishDate": "2026-08-12T20:47:55.257Z"
+    },
     {
       "id": "xai-grok-4-6",
       "categories": [
@@ -57,6 +221,31 @@
         }
       ],
       "benchmarks": [
+        {
+          "name": "Artificial Analysis Intelligence Index",
+          "unit": " pts",
+          "max": 100,
+          "results": [
+            {
+              "name": "Claude Opus 5",
+              "score": 63
+            },
+            {
+              "name": "Claude Fable 5",
+              "score": 62
+            },
+            {
+              "name": "Grok 4.6",
+              "score": 61,
+              "highlight": true
+            },
+            {
+              "name": "GPT-5.6 Sol",
+              "score": 61
+            }
+          ],
+          "source": "https://artificialanalysis.ai/articles/grok-4-6-benchmarks-and-analysis"
+        },
         {
           "name": "DeepSWE v1.1",
           "results": [
