@@ -31250,6 +31250,50 @@
         "article",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260812t190557z",
+      "timestamp": "2026-08-12T19:05:57.703Z",
+      "source": "github-actions-sweep",
+      "summary": "Two frontier model releases landed today: xAI's Grok 4.6 flagship for long-running agents and DeepSeek's V4 Pro 0813 GA build, plus a fresh Fireship video on Meta's personal-AI push. Lab blogs at Anthropic, Meta, DeepMind, Mistral and the Chinese labs had nothing new inside 72h that was not already in the feed.",
+      "counts": {
+        "added": 3,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "xai-grok-4-6",
+          "title": "Grok 4.6 — xAI's new flagship built for long-running agents",
+          "category": "model",
+          "note": "New xAI flagship announced today on x.ai/news with a full benchmark table; top-lab SOTA-class model release with active discussion (167 points on HN for the Artificial Analysis writeup)."
+        },
+        {
+          "id": "deepseek-v4-pro-0813",
+          "title": "DeepSeek V4 Pro 0813 — the 1.6T flagship leaves preview",
+          "category": "model",
+          "note": "DeepSeek's flagship left preview today; 381 points on the HN front page, confirmed in DeepSeek's own API docs and pricing page."
+        },
+        {
+          "id": "fireship-meta-personal-ai-aug12",
+          "title": "Fireship — 'Meta's new model wants deep access to your personal life'",
+          "category": "video",
+          "note": "Fresh Fireship upload (0h old per yt-rss-scan) on Meta's Muse Glimmer and personal-AI plan; video items coexist with the underlying release entry."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "video",
+        "article",
+        "repo",
+        "tool",
+        "paper",
+        "dataset",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }

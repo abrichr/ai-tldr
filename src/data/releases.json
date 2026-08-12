@@ -1,8 +1,419 @@
 {
-  "generatedAt": "2026-08-12T17:07:26.578Z",
+  "generatedAt": "2026-08-12T19:05:57.703Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "xai-grok-4-6",
+      "categories": [
+        "model"
+      ],
+      "title": "Grok 4.6 — xAI's new flagship built for long-running agents",
+      "org": "xAI",
+      "date": "2026-08-12",
+      "url": "https://x.ai/news/grok-4-6",
+      "summary": "Grok 4.6 is xAI's new flagship, tuned for agents that run long multi-step tasks. It scores 65.9% on DeepSWE v1.1, up from Grok 4.5's 54%, and keeps the same $2/$6 per million tokens.",
+      "tags": [
+        "grok-4-6",
+        "xai",
+        "llm",
+        "frontier-model",
+        "agents",
+        "coding",
+        "reasoning",
+        "api",
+        "cursor",
+        "benchmark"
+      ],
+      "importance": "seismic",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "xAI"
+        },
+        {
+          "label": "Context window",
+          "value": "500K tokens"
+        },
+        {
+          "label": "Price (input)",
+          "value": "$2 / 1M tokens"
+        },
+        {
+          "label": "Price (output)",
+          "value": "$6 / 1M tokens"
+        },
+        {
+          "label": "Availability",
+          "value": "API, Cursor, Grok Build, OpenRouter"
+        },
+        {
+          "label": "Knowledge cutoff",
+          "value": "February 1, 2026"
+        },
+        {
+          "label": "What's new",
+          "value": "Post-training for long agent runs, same 1.5T foundation"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "DeepSWE v1.1",
+          "results": [
+            {
+              "name": "Grok 4.6",
+              "score": 65.9,
+              "highlight": true
+            },
+            {
+              "name": "Grok 4.5",
+              "score": 54
+            },
+            {
+              "name": "GPT-5.6 Sol Max",
+              "score": 73
+            },
+            {
+              "name": "Fable 5 Max",
+              "score": 70
+            }
+          ],
+          "source": "https://x.ai/news/grok-4-6"
+        },
+        {
+          "name": "Terminal-Bench v3.0",
+          "results": [
+            {
+              "name": "Grok 4.6",
+              "score": 26,
+              "highlight": true
+            },
+            {
+              "name": "Grok 4.5",
+              "score": 15.7
+            },
+            {
+              "name": "GPT-5.6 Sol Max",
+              "score": 34.6
+            },
+            {
+              "name": "Fable 5 Max",
+              "score": 34.1
+            }
+          ],
+          "source": "https://x.ai/news/grok-4-6"
+        },
+        {
+          "name": "CursorBench v3.2",
+          "results": [
+            {
+              "name": "Grok 4.6",
+              "score": 69.9,
+              "highlight": true
+            },
+            {
+              "name": "Grok 4.5",
+              "score": 66.7
+            },
+            {
+              "name": "GPT-5.6 Sol Max",
+              "score": 67.2
+            },
+            {
+              "name": "Fable 5 Max",
+              "score": 70.5
+            }
+          ],
+          "source": "https://x.ai/news/grok-4-6"
+        },
+        {
+          "name": "APEX-Agents",
+          "results": [
+            {
+              "name": "Grok 4.6",
+              "score": 57.5,
+              "highlight": true
+            },
+            {
+              "name": "Grok 4.5",
+              "score": 47.1
+            },
+            {
+              "name": "GPT-5.6 Sol Max",
+              "score": 56.7
+            },
+            {
+              "name": "Fable 5 Max",
+              "score": 59.2
+            }
+          ],
+          "source": "https://x.ai/news/grok-4-6"
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "Input",
+            "price": "$2.00",
+            "unit": "/ 1M tokens",
+            "note": "prompts under 200K tokens"
+          },
+          {
+            "plan": "Cached input",
+            "price": "$0.50",
+            "unit": "/ 1M tokens",
+            "note": "prompts under 200K tokens"
+          },
+          {
+            "plan": "Output",
+            "price": "$6.00",
+            "unit": "/ 1M tokens",
+            "note": "prompts under 200K tokens"
+          },
+          {
+            "plan": "Input",
+            "price": "$4.00",
+            "unit": "/ 1M tokens",
+            "note": "prompts of 200K tokens or more"
+          },
+          {
+            "plan": "Output",
+            "price": "$12.00",
+            "unit": "/ 1M tokens",
+            "note": "prompts of 200K tokens or more"
+          }
+        ],
+        "source": "https://docs.x.ai/docs/models"
+      },
+      "explainer": {
+        "tagline": "xAI's new flagship, improved through post-training rather than size, so it holds up over long agent runs.",
+        "whatIsIt": "Grok 4.6 targets work that takes many steps — research, analysis, changes across a codebase, and building whole apps. xAI shipped it on 12 August 2026 into Cursor, Grok Build, the API console, and partners including OpenRouter, Vercel and Cloudflare. Price sits where Grok 4.5 sat, at $2 per million input tokens and $6 per million output tokens.",
+        "howItWorks": "The gains come from post-training, not a bigger model. xAI ran a longer supplemental training pass over curated model-generated data covering reasoning and technical concepts, used an improved optimizer, and applied reinforcement learning on agentic tasks such as kernel optimization, web development and computer-aided design. xAI says the result is a model that self-tests and verifies its own work part-way through a long run.",
+        "whyItMatters": "Long agent runs are where models usually fall apart, and that is where the numbers move: DeepSWE v1.1 goes from 54% on Grok 4.5 to 65.9%, and Terminal-Bench v3.0 from 15.7% to 26%. At $2/$6 per million tokens, Grok 4.6 costs far less than Claude Opus 5 at $5/$25 and GPT-5.6 Sol at $5/$30, while matching GPT-5.6 Sol's score of 61 on the Artificial Analysis Intelligence Index.",
+        "forWho": "developers running long coding and research agents",
+        "tryIt": "Pick Grok 4.6 in Cursor or Grok Build — 2x included usage for the first week"
+      },
+      "image": {
+        "url": "https://x.ai/images/news/grok-4-6-og.png",
+        "alt": "xAI announcement card for the Grok 4.6 model release",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://x.ai/news/grok-4-6"
+        },
+        {
+          "label": "Model Docs",
+          "url": "https://docs.x.ai/docs/models"
+        },
+        {
+          "label": "Benchmark Analysis",
+          "url": "https://artificialanalysis.ai/articles/grok-4-6-benchmarks-and-analysis"
+        },
+        {
+          "label": "Press Coverage",
+          "url": "https://www.unite.ai/spacexai-launches-grok-4-6-for-long-running-agents/"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much does Grok 4.6 cost?",
+          "a": "Grok 4.6 costs $2 per million input tokens and $6 per million output tokens for prompts under 200K tokens, with cached input at $0.50. Prompts of 200K tokens or more double to $4 in and $12 out. A faster variant costs double the standard rate. xAI is giving 2x included usage for the first week in Grok Build and Cursor."
+        },
+        {
+          "q": "What changed between Grok 4.5 and Grok 4.6?",
+          "a": "Grok 4.6 keeps the same foundation model as Grok 4.5 and puts the work into post-training instead: a longer supplemental training run, an improved optimizer, and reinforcement learning on agentic tasks. The benchmark gaps show up on agent work — DeepSWE v1.1 rises from 54% to 65.9%, Terminal-Bench v3.0 from 15.7% to 26%, and APEX-Agents from 47.1% to 57.5%."
+        },
+        {
+          "q": "Where can I use Grok 4.6 today?",
+          "a": "Grok 4.6 launched immediately in Cursor, in xAI's own Grok Build tool, and in the xAI API console. It is also served through partners including OpenRouter, Vercel and Cloudflare, so most existing routing setups can reach it without a direct xAI account."
+        },
+        {
+          "q": "How does Grok 4.6 compare to GPT-5.6 Sol and Fable 5?",
+          "a": "Grok 4.6 scores 61 on the Artificial Analysis Intelligence Index, level with GPT-5.6 Sol Max and just behind Fable 5 Max at 62. On coding agents it trails both — DeepSWE v1.1 puts Grok 4.6 at 65.9% against 73% for GPT-5.6 Sol Max. On Harvey LAB it leads clearly, at 15.8% versus 2.5% and 11.3%."
+        }
+      ],
+      "publishDate": "2026-08-12T19:05:57.703Z"
+    },
+    {
+      "id": "deepseek-v4-pro-0813",
+      "categories": [
+        "model"
+      ],
+      "title": "DeepSeek V4 Pro 0813 — the 1.6T flagship leaves preview",
+      "org": "DeepSeek",
+      "date": "2026-08-12",
+      "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
+      "summary": "DeepSeek V4 Pro 0813 is the general-availability build of DeepSeek's flagship mixture-of-experts model, ending a preview that began in April. Pricing holds at $0.435 in and $0.87 out per million tokens.",
+      "tags": [
+        "deepseek",
+        "deepseek-v4-pro",
+        "llm",
+        "mixture-of-experts",
+        "long-context",
+        "api",
+        "pricing",
+        "china"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "DeepSeek"
+        },
+        {
+          "label": "Model version",
+          "value": "DeepSeek-V4-Pro-0813"
+        },
+        {
+          "label": "Parameters",
+          "value": "1.6T total, 49B active per token"
+        },
+        {
+          "label": "Context window",
+          "value": "1M tokens"
+        },
+        {
+          "label": "Price (input)",
+          "value": "$0.435 / 1M tokens on a cache miss"
+        },
+        {
+          "label": "Price (output)",
+          "value": "$0.87 / 1M tokens"
+        },
+        {
+          "label": "Availability",
+          "value": "DeepSeek API and OpenRouter"
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "Input",
+            "price": "$0.435",
+            "unit": "/ 1M tokens",
+            "note": "cache miss"
+          },
+          {
+            "plan": "Input",
+            "price": "$0.003625",
+            "unit": "/ 1M tokens",
+            "note": "cache hit"
+          },
+          {
+            "plan": "Output",
+            "price": "$0.87",
+            "unit": "/ 1M tokens"
+          }
+        ],
+        "source": "https://api-docs.deepseek.com/quick_start/pricing"
+      },
+      "explainer": {
+        "tagline": "DeepSeek's 1.6-trillion-parameter flagship becomes a stable GA build after nearly four months in preview.",
+        "whatIsIt": "DeepSeek V4 Pro 0813 is the general-availability version of DeepSeek V4 Pro, which had run as a preview since late April 2026. The API name does not change — calls to deepseek-v4-pro now route to the 0813 build. DeepSeek shipped it without a blog post, so the change shows up only in the API docs and on model pages such as OpenRouter.",
+        "howItWorks": "The model is a mixture-of-experts network with 1.6 trillion total parameters and 49 billion active per token. Its hybrid attention design mixes a compressed sparse path with a heavily compressed one, which is what keeps a one-million-token context practical. Caching does the rest of the cost work: a cache hit costs $0.003625 per million input tokens, roughly 120x less than a cache miss.",
+        "whyItMatters": "Teams pinned to the preview build now get a stable flagship at unchanged rates. But the same pricing page carries a warning: DeepSeek plans to raise API prices 'in the near future, with a significant increase expected'. Anyone whose cost model rests on $0.87 per million output tokens should treat today's rate as temporary.",
+        "forWho": "teams running high-volume coding and long-context workloads",
+        "tryIt": "Call model \"deepseek-v4-pro\" on the DeepSeek API"
+      },
+      "image": {
+        "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813/opengraph-image-1oizug?abd1ffaa6102aa5f",
+        "alt": "OpenRouter model card for DeepSeek V4 Pro 0813",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Model Page",
+          "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813"
+        },
+        {
+          "label": "Pricing",
+          "url": "https://api-docs.deepseek.com/quick_start/pricing"
+        },
+        {
+          "label": "Model Card",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49275114"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is DeepSeek V4 Pro about to get more expensive?",
+          "a": "DeepSeek says on its own pricing page that it plans to raise overall API prices 'in the near future, with a significant increase expected', and advises users to plan usage accordingly. The current DeepSeek V4 Pro rates of $0.435 per million input tokens and $0.87 per million output tokens carried over unchanged from the preview period."
+        },
+        {
+          "q": "Do I need to change my code for DeepSeek V4 Pro 0813?",
+          "a": "No code change is needed. DeepSeek routes the existing deepseek-v4-pro model name to the DeepSeek-V4-Pro-0813 build automatically, and the calling method stays the same. The DeepSeek API remains reachable through both the OpenAI ChatCompletions interface and the Anthropic interface."
+        },
+        {
+          "q": "How is DeepSeek V4 Pro different from DeepSeek V4-Flash?",
+          "a": "DeepSeek V4 Pro is the large flagship at 1.6 trillion total parameters with 49 billion active per token, while V4-Flash is the smaller, cheaper 304B sibling that went to public beta on 31 July as DeepSeek-V4-Flash-0731. Flash scored 82.7 on Terminal Bench 2.1 in DeepSeek's own release note; Pro targets harder reasoning and long-context work."
+        },
+        {
+          "q": "How long is the DeepSeek V4 Pro context window?",
+          "a": "DeepSeek V4 Pro handles one million tokens of context, which its model card attributes to a hybrid attention architecture combining compressed sparse attention with a heavily compressed path. That is enough to hold a large codebase or a long document set in a single request without external chunking."
+        }
+      ],
+      "publishDate": "2026-08-12T19:05:57.703Z"
+    },
+    {
+      "id": "fireship-meta-personal-ai-aug12",
+      "categories": [
+        "video"
+      ],
+      "title": "Fireship — 'Meta's new model wants deep access to your personal life'",
+      "org": "Fireship",
+      "date": "2026-08-12",
+      "url": "https://www.youtube.com/watch?v=G55HSGpuh1M",
+      "summary": "Fireship's new video takes on Meta's personal-AI push, arguing the company's new model wants 'deep access' to your life. Meta released the open-weight Muse Glimmer model on 10 August with a letter from Mark Zuckerberg.",
+      "tags": [
+        "youtube",
+        "fireship",
+        "video-explainer",
+        "meta",
+        "muse-glimmer",
+        "personal-ai",
+        "open-weights",
+        "privacy"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Fireship's take on Meta's personal-AI push and how much of your life the new model expects to see.",
+        "whatIsIt": "The Fireship episode 'Meta's new model wants \"deep access\" to your personal life...' went up on 12 August 2026, two days after Meta released Muse Glimmer. The title frames the release as a question about personal data rather than benchmarks.",
+        "howItWorks": "Muse Glimmer is a 30-billion-parameter open-weight model that Meta built to run agents locally on a Mac or PC with a single consumer GPU, calling tools, writing code and working with files and screenshots. Meta launched it alongside a long letter from Mark Zuckerberg arguing AI should become deeply personal and help people with everyday tasks.",
+        "whyItMatters": "Fireship reaches a large developer audience, so its framing shapes how many engineers first meet Meta's personal-AI plan. The trade the title points at — how much personal context an assistant has to read before it is useful — is the open question as Muse Glimmer moves onto personal machines.",
+        "forWho": "developers following Meta's open models and personal-AI plans"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/G55HSGpuh1M/hqdefault.jpg",
+        "alt": "Fireship thumbnail for the video on Meta's new model and personal data",
+        "fit": "cover"
+      },
+      "author": {
+        "name": "Fireship",
+        "handle": "@Fireship",
+        "profileUrl": "https://www.youtube.com/@Fireship"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=G55HSGpuh1M"
+        },
+        {
+          "label": "Channel",
+          "url": "https://www.youtube.com/@Fireship"
+        },
+        {
+          "label": "Muse Glimmer Coverage",
+          "url": "https://techcrunch.com/2026/08/10/metas-new-glimmer-ai-model-offers-a-hint-at-zuckerbergs-personal-intelligence-vision/"
+        }
+      ],
+      "publishDate": "2026-08-12T19:05:57.703Z"
+    },
     {
       "id": "qwen-3-8-2-4t-a95b-open-weights",
       "categories": [
