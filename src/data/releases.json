@@ -1,8 +1,108 @@
 {
-  "generatedAt": "2026-08-13T01:29:19.990Z",
+  "generatedAt": "2026-08-13T04:14:42.824Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "twitch-generative-ai-training-optout",
+      "categories": [
+        "ecosystem"
+      ],
+      "title": "Twitch trains Amazon's AI on your streams — every channel is opted in by default",
+      "org": "Twitch",
+      "date": "2026-08-12",
+      "url": "https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/",
+      "summary": "Twitch now lets Amazon train generative AI models on channel content, and every channel is switched on by default. A new \"Training for Generative AI\" toggle under Settings, Security and Privacy is the only way to say no.",
+      "tags": [
+        "twitch",
+        "amazon",
+        "training-data",
+        "ai-training",
+        "privacy",
+        "opt-out",
+        "data-rights",
+        "creator-tools",
+        "generative-ai"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Twitch (Amazon)"
+        },
+        {
+          "label": "Setting",
+          "value": "Training for Generative AI"
+        },
+        {
+          "label": "Where",
+          "value": "Settings → Security and Privacy"
+        },
+        {
+          "label": "Default",
+          "value": "On — every channel is opted in"
+        },
+        {
+          "label": "Covers",
+          "value": "Streams, VODs, clips and chat"
+        },
+        {
+          "label": "Still runs after opt-out",
+          "value": "AutoMod, captions, recommendations"
+        },
+        {
+          "label": "Announced",
+          "value": "August 12, 2026"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Where is the Twitch AI training toggle?",
+          "a": "The Twitch setting is called \"Training for Generative AI\" and sits under Settings, Security and Privacy on the web, at twitch.tv/settings/security. In the mobile app the path is Profile, then Settings, then Security and Privacy. It is a single switch, and it is turned on for every channel until a creator turns it off."
+        },
+        {
+          "q": "Does opting out turn off all AI on Twitch?",
+          "a": "No. Twitch says the opt-out only stops content being used to train Amazon's generative AI models. AutoMod, captions, content moderation, audio transcription, stream summaries and recommendations keep running, and creators cannot switch those off. Twitch's chief product officer said disabling the setting \"does not opt you out of all AI or machine learning uses at Twitch.\""
+        },
+        {
+          "q": "Why did Twitch make AI training opt-out instead of opt-in?",
+          "a": "Twitch chief product officer Mike Minton answered that directly on a livestream: \"If this was opt-in, nobody would opt in. That's honestly the answer.\" Head of community Mary Kish described the opt-out switch itself as \"a reflection of reacting to this community's voice.\" Twitch shipped the toggle after streamers pushed back on the training plan."
+        }
+      ],
+      "explainer": {
+        "tagline": "Twitch quietly switched on generative AI training for every channel, and creators have to find the toggle to switch it back off.",
+        "whatIsIt": "Twitch has added a \"Training for Generative AI\" switch that decides whether Amazon can use a channel's content to train its generative AI models. Streams, VODs, clips and chat are all in scope. The switch is on for everyone from the start, so a creator who does not want their work in Amazon's training data has to go and turn it off.",
+        "howItWorks": "The toggle lives under Settings, Security and Privacy on the web and under Profile, Settings, Security and Privacy in the mobile app. Turning it off stops Twitch feeding that channel's recorded video, audio and chat into training runs for Amazon models that generate or synthesise text, audio, images and video. It does not touch the AI that already runs the service — AutoMod, captions, transcription, stream summaries and recommendations are separate and stay on.",
+        "whyItMatters": "For millions of Twitch creators this is the difference between their archive being training data and not, and the choice defaults to yes. Twitch chief product officer Mike Minton said the plain reason for that default: \"If this was opt-in, nobody would opt in.\" Anyone who streams — including developers who code on stream — has a concrete thing to do today, and doing nothing counts as consent.",
+        "forWho": "Twitch streamers and anyone whose content lives on the platform",
+        "tryIt": "https://www.twitch.tv/settings/security"
+      },
+      "image": {
+        "url": "https://techcrunch.com/wp-content/uploads/2024/03/twitch-reflection.jpg?resize=1200,799",
+        "alt": "The Twitch logo reflected on a glass surface",
+        "fit": "cover",
+        "credit": "TechCrunch"
+      },
+      "links": [
+        {
+          "label": "TechCrunch Report",
+          "url": "https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/"
+        },
+        {
+          "label": "How To Opt Out",
+          "url": "https://www.engadget.com/2235928/how-to-stop-twitch-training-ai-on-streams/"
+        },
+        {
+          "label": "Creator Backlash",
+          "url": "https://kotaku.com/twitch-is-now-using-your-content-to-train-amazon-ai-models-and-has-hidden-the-option-to-opt-out-2000723891"
+        },
+        {
+          "label": "Twitch Security Settings",
+          "url": "https://www.twitch.tv/settings/security"
+        }
+      ],
+      "publishDate": "2026-08-13T04:14:42.824Z"
+    },
     {
       "id": "zed-delta",
       "categories": [

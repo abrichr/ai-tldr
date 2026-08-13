@@ -31409,6 +31409,39 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260813t041442z",
+      "timestamp": "2026-08-13T04:14:42.824Z",
+      "source": "github-actions-sweep",
+      "summary": "Checked lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Qwen, MiniMax, Z.ai, Moonshot/ByteDance/Baidu via search), GitHub trending, HuggingFace models/datasets/papers, HN top 30, coding-agent changelogs (Claude Code, Cursor), Simon Willison, tier-1 press (TechCrunch, The Register) and the AI-for-science lane (BCI/neural decoding, medical imaging/FDA, protein design, nature.com, neurosciencenews). One item qualified: Twitch turning on generative AI training for every channel by default. Everything else in the 72h window was already in the feed (Grok 4.6, DeepSeek V4 Pro 0813, Qwen3.8-2.4T, Zed Delta, SL2T, Mistral regional endpoints, AMIE Video), too old (Stack v3 shipped Jul 23, WeatherNext Cyclones Aug 6, Sophie Alpert's post Jun 25), or business news the ecosystem gate blocks (Lovable $400M, Cognition $40B, Thrive $2B, River AI $1.1B, Brad Lightcap departure). NOTE: yt-rss-scan.ts returned HTTP 404 for 7 of 8 channels and HTTP 500 for the eighth, so no video could be assessed this run — this is a NEW failure mode (the RSS endpoint itself, not the 2026-06-13 watch-page bug) and needs investigation if it repeats.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "twitch-generative-ai-training-optout",
+          "title": "Twitch trains Amazon's AI on your streams — every channel is opted in by default",
+          "category": "ecosystem",
+          "note": "Shipped setting dated 2026-08-12, covered by TechCrunch and The Verge plus Engadget/Kotaku/PC Gamer/404 Media; clears the ecosystem gate with a concrete action — every streamer must open Settings → Security and Privacy and switch off \"Training for Generative AI\" or their streams, VODs, clips and chat feed Amazon's training runs. Sole ecosystem-primary item this sweep."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "dataset",
+        "paper",
+        "algorithm",
+        "video",
+        "article",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }
