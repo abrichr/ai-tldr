@@ -31442,6 +31442,32 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260813t072603z",
+      "timestamp": "2026-08-13T07:26:03.727Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep: every qualifying item in the 72h window is already in the feed. Lab blogs quiet or already covered (Anthropic newest is Aug 7 Fable 5 biology safeguards; Meta and Cohere have nothing in window; Mistral's Aug 11 regional inference, DeepMind's SL2T and WeatherNext Cyclones, xAI's Grok 4.6 and OpenAI's Codex Desktop for Linux are all live). HN top 30 AI posts (DeepSeek V4 Pro 0813 876pts, Qwen3.8-2.4T 588pts, Grok 4.6 508pts) already ingested 3h ago. GitHub trending AI repos (semantica, Orca, Kronos, RAGFlow, LTX-2, Needle) all present; agency-agents is a 230-prompt skill pack, not a release. HF trending models, datasets and papers all covered or out of window: Muse Glimmer, MiniMax H3, Qwen3.8-2.4T, LTX-2.5, Nemotron 3.5 Lightning and The Stack v3 are in the feed; NVIDIA VoiceChat-11B shipped Aug 3 (10d old); OpenART (#1 HF papers, 91 upvotes) was submitted Aug 1 with no released code, failing both the 72h cap and the 2-of-N paper bar. All 7 fresh videos from yt-rss-scan across the 8 creator channels are already items. Science lane searched (medical imaging/FDA, BCI and neural decoding, protein design and drug discovery, STAT News, NeuroscienceNews, Nature) with no released artifact inside 72h. Show HN below bar or off-topic: Ante 163pts is a daily preview build of a Dec-2025 repo, Woxi 287pts is a Wolfram reimplementation not AI, mcptoon 72pts. ChatGPT ads market expansion is a rollout of a January 2026 launch and duplicates an existing item.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "article",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }
