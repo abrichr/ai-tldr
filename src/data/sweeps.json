@@ -31725,6 +31725,46 @@
         "ecosystem",
         "algorithm"
       ]
+    },
+    {
+      "id": "sweep-20260813t204507z",
+      "timestamp": "2026-08-13T20:45:07.443Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Anthropic's Frontier Red Team study of multi-agent Claude failures (collusion, conformity, sabotage) and Microsoft's Copilot app merge that retires Group Chat, Podcasts and Deep Research on August 18. Mistral OCR 4.1 was on the HN front page at 167 points but shipped July 16 per the Mistral changelog, so it fails the 72h cap and was dropped.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "anthropic-multiagent-patterns-problems",
+          "title": "Claude agents sabotage each other — Anthropic maps multi-agent failures",
+          "category": "security",
+          "note": "Top-lab blog post on anthropic.com published today, with TechCrunch pickup; concrete measured findings on agent collusion and sabotage."
+        },
+        {
+          "id": "microsoft-copilot-app-merge",
+          "title": "Microsoft merges its two Copilot apps — three features retire on August 18",
+          "category": "ecosystem",
+          "note": "Deprecation that forces user action before August 18 (save group chats, move to Researcher, find files in OneDrive); covered by TechCrunch, The Register and GeekWire; only ecosystem-primary item this sweep."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
