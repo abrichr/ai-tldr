@@ -1,8 +1,254 @@
 {
-  "generatedAt": "2026-08-13T20:45:07.443Z",
+  "generatedAt": "2026-08-13T22:45:47.074Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "minimax-music-3",
+      "categories": [
+        "model",
+        "repo"
+      ],
+      "title": "MiniMax Music 3.0 — open-weights model writes a full five-minute song",
+      "org": "MiniMax",
+      "date": "2026-08-13",
+      "url": "https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model",
+      "summary": "MiniMax Music 3.0 turns a short concept and optional lyrics into a finished song of up to five minutes in one pass. MiniMax published the weights on Hugging Face under CC-BY-SA 4.0 with inference code on GitHub.",
+      "tags": [
+        "music-generation",
+        "open-weights",
+        "text-to-music",
+        "generative-audio",
+        "minimax",
+        "flow-matching",
+        "residual-vector-quantization",
+        "sglang",
+        "audio-ml"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "MiniMax"
+        },
+        {
+          "label": "License",
+          "value": "CC-BY-SA 4.0"
+        },
+        {
+          "label": "Max song length",
+          "value": "5 minutes"
+        },
+        {
+          "label": "Audio output",
+          "value": "32 kHz, 16-bit stereo WAV"
+        },
+        {
+          "label": "Language models",
+          "value": "8B global + 0.6B local"
+        },
+        {
+          "label": "Synthesis stack",
+          "value": "2.4B flow matching + 123M Flow-VAE"
+        },
+        {
+          "label": "Hardware",
+          "value": "Two CUDA GPUs"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Can you use MiniMax Music 3.0 commercially?",
+          "a": "MiniMax Music 3.0 ships its weights under CC-BY-SA 4.0. That license permits redistribution and adaptation, including for commercial work, as long as you credit MiniMax and release anything derived from the model under the same share-alike terms. Check the LICENSE file in the repository before shipping a product on top of it."
+        },
+        {
+          "q": "What hardware do you need to run MiniMax Music 3.0?",
+          "a": "Running MiniMax Music 3.0 takes two CUDA GPUs. The first handles autoregressive token generation and the second runs synthesis and waveform decoding. MiniMax serves the model through SGLang-Omni, and the current release supports non-streaming generation only, so a song is returned as one finished file rather than progressively."
+        },
+        {
+          "q": "How do you control what MiniMax Music 3.0 writes?",
+          "a": "Two inputs steer MiniMax Music 3.0. Lyrics go in the request's input field and can carry section tags such as Verse, Chorus and Bridge to shape the song structure. A separate instructions field takes a written music description covering genre, mood, instruments and vocal style, so you can specify an arrangement without supplying any lyrics at all."
+        },
+        {
+          "q": "Where can you download MiniMax Music 3.0?",
+          "a": "The MiniMax Music 3.0 weights are on Hugging Face as MiniMaxAI/MiniMax-Music3, and the inference code, tokenizer details and serving instructions live in the MiniMax-AI/MiniMax-Music3 repository on GitHub. The repository also includes a music-caption-rewriter skill that expands a short description into the structured caption format the model expects."
+        }
+      ],
+      "explainer": {
+        "tagline": "An open-weights music model that composes, arranges, performs and produces a whole song in a single pass.",
+        "whatIsIt": "MiniMax Music 3.0 generates a complete song — composition, arrangement, vocals and production — from a creative concept and optional lyrics, without stitching separate stages together. Tracks can run up to five minutes and come back as 32 kHz, 16-bit stereo WAV. MiniMax released the weights publicly alongside the inference code, so the model can be run locally rather than only through an API.",
+        "howItWorks": "A hierarchical autoregressive design splits the work between two language models. The 8B global model predicts the first residual-vector-quantization codebook frame by frame and carries the song's long-range structure; a 0.6B local model fills in the remaining acoustic codebooks inside each frame. The tokenizer uses eight RVQ layers — one 16,384-entry codebook for core semantics plus seven 1,024-entry codebooks for acoustic detail. A 2.4B flow-matching module then maps the fused hidden states into VAE latent space, and a 123M Flow-VAE decoder reconstructs the waveform.",
+        "whyItMatters": "Published weights change who can build on a music model of this class. Studios and tool makers can host MiniMax Music 3.0 themselves, inspect the architecture and adapt it, instead of renting a closed endpoint and accepting whatever it returns. The practical limit is hardware — two CUDA GPUs makes this a server or workstation model, not something that runs on a laptop.",
+        "forWho": "audio ML engineers and music tool builders",
+        "tryIt": "sgl-omni serve --model-path MiniMaxAI/MiniMax-Music3 --port 8000"
+      },
+      "image": {
+        "url": "https://file.cdn.minimax.io/public/32b0b01d-d945-4c9d-a8e0-8bb9204737c2.png",
+        "alt": "MiniMax Music 3 title banner over a purple flower and bird photograph",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model"
+        },
+        {
+          "label": "Model Weights",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-Music3"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/MiniMax-AI/MiniMax-Music3"
+        }
+      ],
+      "publishDate": "2026-08-13T22:45:47.074Z"
+    },
+    {
+      "id": "writer-palmyra-x6",
+      "categories": [
+        "model",
+        "tool"
+      ],
+      "title": "Palmyra X6 — Writer's flagship model halves the cost of an agent task",
+      "org": "Writer",
+      "date": "2026-08-13",
+      "url": "https://writer.com/blog/aug-roundup-new-at-writer/",
+      "summary": "Palmyra X6 is Writer's new flagship model, post-trained from Z.ai's open-weight GLM-5.2. Writer says per-task cost and latency are roughly halved against its previous generation, and the model can run unattended for up to eight hours.",
+      "tags": [
+        "palmyra-x6",
+        "writer",
+        "enterprise-ai",
+        "ai-agents",
+        "long-running-agents",
+        "mixture-of-experts",
+        "cost-efficiency",
+        "token-spend",
+        "model-governance"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Writer"
+        },
+        {
+          "label": "Model ID",
+          "value": "palmyra-x6"
+        },
+        {
+          "label": "Base model",
+          "value": "GLM-5.2 (Z.ai, open weights)"
+        },
+        {
+          "label": "Context window",
+          "value": "1M tokens"
+        },
+        {
+          "label": "Unattended run time",
+          "value": "Up to 8 hours on one goal"
+        },
+        {
+          "label": "Availability",
+          "value": "WRITER Agent and AI Studio"
+        },
+        {
+          "label": "What's new",
+          "value": "Per-task cost and latency roughly halved vs the previous generation"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "Writer internal evaluation (average of nine agent capabilities)",
+          "unit": "",
+          "max": 1,
+          "results": [
+            {
+              "name": "Palmyra X6",
+              "score": 0.87,
+              "highlight": true
+            },
+            {
+              "name": "Claude Opus 4.8",
+              "score": 0.86
+            },
+            {
+              "name": "GPT-5.5",
+              "score": 0.8
+            },
+            {
+              "name": "Gemini 3.1",
+              "score": 0.77
+            }
+          ],
+          "source": "https://siliconangle.com/2026/08/13/writer-launches-major-agentic-ai-improvements-palmyra-x6-flagship-model/"
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "Input",
+            "price": "$2.00",
+            "unit": "/ 1M tokens"
+          },
+          {
+            "plan": "Output",
+            "price": "$8.00",
+            "unit": "/ 1M tokens"
+          }
+        ],
+        "source": "https://dev.writer.com/home/models"
+      },
+      "faq": [
+        {
+          "q": "How does Palmyra X6 compare to Claude Opus 4.8 and GPT-5.5?",
+          "a": "On Writer's own evaluation of nine agent capabilities — covering grounding and retrieval, tool use, content generation and sub-agent delegation — Palmyra X6 averaged 0.87, ahead of Claude Opus 4.8 at 0.86, GPT-5.5 at 0.80 and Gemini 3.1 at 0.77. These are Writer's internal numbers on Writer's own task mix, not an independent public benchmark."
+        },
+        {
+          "q": "Can Palmyra X6 run a job without someone watching it?",
+          "a": "Writer says Palmyra X6 holds coherent reasoning on a single goal for up to eight hours unattended. That is the change Writer points to for background automation: long jobs previously failed on cost and reliability rather than capability. SiliconANGLE reports the model averages 26 seconds per task and produces 82 tokens per second."
+        },
+        {
+          "q": "Is Palmyra X6 open source?",
+          "a": "No. Writer sells Palmyra X6 through its own API and platform rather than publishing the weights. The base it was post-trained from — GLM-5.2, the mixture-of-experts model from Beijing-based Z.ai — is open weight, but the Palmyra X6 post-training and the model itself stay proprietary to Writer."
+        },
+        {
+          "q": "What changed in WRITER Agent alongside Palmyra X6?",
+          "a": "Writer rebuilt the harness around the model. WRITER Agent now completes tasks 44% faster and at 41% lower cost on average across every model tested, including third-party ones, by batching high-volume work, delegating to sub-agents and recovering from tool errors. AI Studio also gained live token reporting plus alerts and hard blocks above a spend limit."
+        }
+      ],
+      "explainer": {
+        "tagline": "Writer's new flagship model, post-trained from GLM-5.2, runs agent jobs unattended for up to eight hours.",
+        "whatIsIt": "Palmyra X6 targets the high-volume research, personalization and content work that go-to-market teams run every day, and is priced to be deployed across thousands of employees. Writer post-trained it from GLM-5.2, the open-weight mixture-of-experts model from Z.ai, rather than training a base model from scratch. Writer measures per-task cost and latency at roughly half its previous generation with no quality regressions.",
+        "howItWorks": "The saving comes from two layers stacked together, not from the model alone. Writer rewrote the harness — the orchestration code that decides how an agent plans, batches work, hands jobs to sub-agents and recovers from failed tool calls — and reports that layer by itself makes WRITER Agent 44% faster and 41% cheaper per task across every model it tested, third-party ones included. Adding Palmyra X6 on top brings the combined figures to 52% lower cost, 48% better speed and 10% better quality.",
+        "whyItMatters": "Token spend, not model quality, is what stops most companies moving agents from pilot to production. Admins now get a real lever over it: AI Studio reports live consumption by team, billing group or seat, and can raise an alert or block work outright above a set limit. Writer also lets admins enable outside models from Microsoft Azure, AWS Bedrock and NVIDIA NIM in the same governed workflow.",
+        "forWho": "enterprise go-to-market and platform teams",
+        "tryIt": "Model ID: palmyra-x6 — available in WRITER Agent and AI Studio"
+      },
+      "image": {
+        "url": "https://writer.com/wp-content/uploads/2026/08/2026-08-Aug-release-2-1.png",
+        "alt": "Writer product update graphic showing a model picker with Palmyra X6 set as default",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://writer.com/blog/aug-roundup-new-at-writer/"
+        },
+        {
+          "label": "Docs & Pricing",
+          "url": "https://dev.writer.com/home/models"
+        },
+        {
+          "label": "Launch Coverage",
+          "url": "https://techcrunch.com/2026/08/13/writer-introduces-new-ai-model-and-upgraded-harness-to-contain-token-costs/"
+        },
+        {
+          "label": "Benchmark Details",
+          "url": "https://siliconangle.com/2026/08/13/writer-launches-major-agentic-ai-improvements-palmyra-x6-flagship-model/"
+        }
+      ],
+      "publishDate": "2026-08-13T22:45:47.074Z"
+    },
     {
       "id": "anthropic-multiagent-patterns-problems",
       "categories": [
