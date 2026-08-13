@@ -1,8 +1,306 @@
 {
-  "generatedAt": "2026-08-13T13:06:31.265Z",
+  "generatedAt": "2026-08-13T15:06:47.513Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "liquid-lfm2-5-vl-3b",
+      "categories": [
+        "model"
+      ],
+      "title": "LFM2.5-VL-3B — Liquid AI's 3B vision model reads screens on a phone",
+      "org": "Liquid AI",
+      "date": "2026-08-12",
+      "url": "https://www.liquid.ai/blog/lfm2-5-vl-3b",
+      "summary": "LFM2.5-VL-3B is Liquid AI's new 3.1B open-weights vision-language model for phones and laptops. Screen understanding reaches 78.7 on ScreenSpot-v2 Desktop, and object grounding rises from 57.1 to 87.9 on RefCOCO-avg.",
+      "tags": [
+        "liquid-ai",
+        "lfm2-5",
+        "vision-language",
+        "multimodal",
+        "on-device",
+        "edge-ai",
+        "open-weights",
+        "screen-understanding",
+        "grounding",
+        "tool-use",
+        "huggingface"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "A 3.1B open-weights vision model that reads phone and desktop screens, points at objects, and calls tools on-device.",
+        "whatIsIt": "Screen and interface reading is the headline change in LFM2.5-VL-3B, Liquid AI's 3.1B open-weights vision-language model. The model handles mobile, web, and desktop screens, grounds objects to coordinates, reads text and charts, and calls tools from either a text or an image prompt. Weights are on Hugging Face with no waitlist.",
+        "howItWorks": "A SigLIP2 400M NaFlex vision encoder from Google sits in front of the same pre-trained backbone Liquid AI used for its LFM2.5-2.6B text model. Pre-training ran on roughly 34 trillion tokens with four times more vision data than the previous version, and the vocabulary doubled to 128,000 tokens. There is no reasoning step — the model answers directly, which keeps latency low.",
+        "whyItMatters": "Screen-reading agents have mostly needed a cloud model, which means shipping screenshots to a server. LFM2.5-VL-3B fits in about 3 GB of memory, so it runs on a laptop or a phone and no image leaves the device. Liquid AI measures 228 tokens per second on an Apple M5 Max, 116 on an AMD Ryzen AI Max+ 395, and 20 on a Galaxy S26 Ultra.",
+        "forWho": "on-device and edge AI developers",
+        "tryIt": "https://huggingface.co/LiquidAI/LFM2.5-VL-3B"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Liquid AI"
+        },
+        {
+          "label": "Parameters",
+          "value": "3.1B"
+        },
+        {
+          "label": "License",
+          "value": "lfm1.0"
+        },
+        {
+          "label": "Vision encoder",
+          "value": "SigLIP2 400M NaFlex"
+        },
+        {
+          "label": "Memory",
+          "value": "About 3 GB"
+        },
+        {
+          "label": "Availability",
+          "value": "Open weights on Hugging Face"
+        },
+        {
+          "label": "What's new",
+          "value": "Screen reading, grounding, multi-image, tool calls"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "MMStar",
+          "results": [
+            {
+              "name": "LFM2.5-VL-3B",
+              "score": 63.3,
+              "highlight": true
+            },
+            {
+              "name": "Qwen3.5-4B",
+              "score": 59.3
+            }
+          ],
+          "source": "https://www.liquid.ai/blog/lfm2-5-vl-3b"
+        },
+        {
+          "name": "ScreenSpot-v2 Desktop",
+          "results": [
+            {
+              "name": "LFM2.5-VL-3B",
+              "score": 78.7,
+              "highlight": true
+            },
+            {
+              "name": "Gemma-4-E4B",
+              "score": 45.8
+            }
+          ],
+          "source": "https://www.liquid.ai/blog/lfm2-5-vl-3b"
+        },
+        {
+          "name": "RefCOCO-avg",
+          "results": [
+            {
+              "name": "LFM2.5-VL-3B",
+              "score": 87.9,
+              "highlight": true
+            },
+            {
+              "name": "LFM2-VL-3B",
+              "score": 57.1
+            }
+          ],
+          "source": "https://www.liquid.ai/blog/lfm2-5-vl-3b"
+        },
+        {
+          "name": "ToolSandbox",
+          "results": [
+            {
+              "name": "LFM2.5-VL-3B",
+              "score": 59.5,
+              "highlight": true
+            },
+            {
+              "name": "LFM2-VL-3B",
+              "score": 26.4
+            }
+          ],
+          "source": "https://www.liquid.ai/blog/lfm2-5-vl-3b"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Can LFM2.5-VL-3B actually run on a phone?",
+          "a": "Liquid AI reports 20 tokens per second for LFM2.5-VL-3B on a Galaxy S26 Ultra, with the model fitting in roughly 3 GB of memory. That is slow next to a laptop but usable for short screen-reading and grounding tasks. Because inference stays local, no screenshot or photo is sent to a server."
+        },
+        {
+          "q": "How much better is LFM2.5-VL-3B than LFM2-VL-3B?",
+          "a": "The biggest gains for LFM2.5-VL-3B over LFM2-VL-3B are in grounding and tool use. RefCOCO-avg goes from 57.1 to 87.9, and ToolSandbox roughly doubles from 26.4 to 59.5. Desktop screen understanding on ScreenSpot-v2 reaches 78.7, where the previous version scored 6.0."
+        },
+        {
+          "q": "Does LFM2.5-VL-3B think step by step before answering?",
+          "a": "No. Liquid AI built LFM2.5-VL-3B as a non-reasoning model that replies directly instead of producing a chain of thought first. The trade-off is deliberate: skipping the reasoning pass keeps latency low enough for real-time and on-device use, at the cost of the extra accuracy a reasoning model can buy on hard problems."
+        },
+        {
+          "q": "How fast is LFM2.5-VL-3B on a server GPU?",
+          "a": "On an H100, Liquid AI measures about 11,000 output tokens per second for LFM2.5-VL-3B at high concurrency. So while the model is built for edge hardware, it also batches well enough to serve many users from one GPU, which suits high-volume document or screenshot processing."
+        }
+      ],
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/LiquidAI/LFM2.5-VL-3B.png",
+        "alt": "LFM2.5-VL-3B model card on Hugging Face",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Liquid AI Blog",
+          "url": "https://www.liquid.ai/blog/lfm2-5-vl-3b"
+        },
+        {
+          "label": "Model Weights",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-VL-3B"
+        },
+        {
+          "label": "Technical Write-up",
+          "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-3b"
+        },
+        {
+          "label": "Unite.AI Coverage",
+          "url": "https://www.unite.ai/liquid-ai-ships-lfm2-5-vl-3b-for-faster-vision-language-ai-on-the-edge/"
+        }
+      ],
+      "publishDate": "2026-08-13T15:06:47.513Z"
+    },
+    {
+      "id": "deepseek-v4-api-price-increase",
+      "categories": [
+        "model",
+        "ecosystem"
+      ],
+      "title": "DeepSeek raises V4 API prices — output costs more than double from August 16",
+      "org": "DeepSeek",
+      "date": "2026-08-13",
+      "url": "https://api-docs.deepseek.com/news/news260813",
+      "summary": "DeepSeek raises API prices for DeepSeek-V4-Pro and DeepSeek-V4-Flash at 16:00 UTC on August 16, 2026, and splits billing into peak and off-peak bands. V4-Pro output goes from $0.87 to $1.98 off-peak and $3.96 at peak per million tokens.",
+      "tags": [
+        "deepseek",
+        "deepseek-v4-pro",
+        "deepseek-v4-flash",
+        "api-pricing",
+        "pricing",
+        "peak-pricing",
+        "inference-cost",
+        "llm-api",
+        "china"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "DeepSeek ends its flat, ultra-cheap API rates and moves the V4 models to time-of-day pricing.",
+        "whatIsIt": "DeepSeek is replacing a single flat API rate with two price bands, peak and off-peak, for DeepSeek-V4-Pro and DeepSeek-V4-Flash. The new rates start at 16:00 UTC on August 16, 2026. Reuters puts the increase at 50% to 1,100% above current prices, depending on the model, token type, and hour of the day.",
+        "howItWorks": "The change splits each day into two peak windows, with off-peak covering everything else, and sets peak rates at exactly double off-peak across both V4 models. Each band prices three token types separately — cached input, uncached input, and output — so a cache-heavy workload and an output-heavy one see very different increases.",
+        "whyItMatters": "Cheap inference was DeepSeek's main draw, and a V4 bill now depends on when a job runs. Batch work, evals, and background agent runs can shift out of the peak windows and pay half. Anything that must answer live during peak hours pays the full rate, so cost planning now needs a clock, not just a token count.",
+        "forWho": "teams running high-volume DeepSeek API workloads",
+        "tryIt": "https://api-docs.deepseek.com/quick_start/pricing"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "DeepSeek"
+        },
+        {
+          "label": "Effective",
+          "value": "16:00 UTC, August 16, 2026"
+        },
+        {
+          "label": "Peak hours (UTC)",
+          "value": "01:00–04:00 and 06:00–10:00"
+        },
+        {
+          "label": "Models affected",
+          "value": "DeepSeek-V4-Pro, DeepSeek-V4-Flash"
+        },
+        {
+          "label": "Peak vs off-peak",
+          "value": "Peak is 2x off-peak"
+        },
+        {
+          "label": "Reported increase",
+          "value": "50%–1,100% (Reuters)"
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "V4-Pro input (cache miss), off-peak",
+            "price": "$0.66",
+            "unit": "/ 1M tokens"
+          },
+          {
+            "plan": "V4-Pro output, off-peak",
+            "price": "$1.98",
+            "unit": "/ 1M tokens"
+          },
+          {
+            "plan": "V4-Pro output, peak",
+            "price": "$3.96",
+            "unit": "/ 1M tokens"
+          },
+          {
+            "plan": "V4-Flash input (cache miss), off-peak",
+            "price": "$0.22",
+            "unit": "/ 1M tokens"
+          },
+          {
+            "plan": "V4-Flash output, off-peak",
+            "price": "$0.66",
+            "unit": "/ 1M tokens"
+          },
+          {
+            "plan": "V4-Flash output, peak",
+            "price": "$1.32",
+            "unit": "/ 1M tokens"
+          }
+        ],
+        "source": "https://api-docs.deepseek.com/quick_start/pricing"
+      },
+      "faq": [
+        {
+          "q": "How can I avoid DeepSeek's peak pricing?",
+          "a": "DeepSeek prices peak hours at exactly double the off-peak rate, so moving work outside the two peak windows halves the bill. Batch jobs, evals, and background agent runs are the easiest to shift. Requests that must answer live during peak hours pay the full rate, so latency-sensitive apps have less room to save."
+        },
+        {
+          "q": "Which DeepSeek token type rises the most?",
+          "a": "Cached input tokens see the largest jump on DeepSeek-V4-Pro: $0.003625 per million today becomes $0.022 off-peak and $0.044 at peak, roughly twelve times the old rate. Uncached input rises from $0.435 to $0.66 off-peak, and output from $0.87 to $1.98 off-peak. Cache-heavy workloads are hit hardest."
+        },
+        {
+          "q": "Does DeepSeek-V4-Flash get more expensive too?",
+          "a": "DeepSeek-V4-Flash rises alongside the Pro model. Uncached input goes from $0.14 to $0.22 off-peak and $0.44 at peak per million tokens, while output moves from $0.28 to $0.66 off-peak and $1.32 at peak. Flash stays the cheaper of the two DeepSeek V4 models after the change."
+        },
+        {
+          "q": "Why did DeepSeek raise its API prices?",
+          "a": "DeepSeek announced the increase in the same post that took DeepSeek-V4-Pro to general availability on August 13, 2026. The company frames the split as a way to schedule flexible workloads, noting off-peak rates are 50% lower than peak. Reuters reports the new rates run 50% to 1,100% above current prices."
+        }
+      ],
+      "image": {
+        "url": "https://api-docs.deepseek.com/img/deepseek-social-card.jpeg",
+        "alt": "DeepSeek API documentation social card",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "DeepSeek Announcement",
+          "url": "https://api-docs.deepseek.com/news/news260813"
+        },
+        {
+          "label": "Pricing Docs",
+          "url": "https://api-docs.deepseek.com/quick_start/pricing"
+        },
+        {
+          "label": "Reuters Report",
+          "url": "https://www.thestar.com.my/tech/tech-news/2026/08/13/deepseek-raises-api-pricing-for-its-v4-models"
+        }
+      ],
+      "publishDate": "2026-08-13T15:04:01.964Z"
+    },
     {
       "id": "unsloth-desktop",
       "categories": [
@@ -1033,7 +1331,7 @@
       "org": "DeepSeek",
       "date": "2026-08-12",
       "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
-      "summary": "DeepSeek V4 Pro 0813 is the general-availability build of DeepSeek's flagship mixture-of-experts model, ending a preview that began in April. Pricing holds at $0.435 in and $0.87 out per million tokens.",
+      "summary": "DeepSeek V4 Pro 0813 is the general-availability build of DeepSeek's flagship mixture-of-experts model, ending a preview that began in April. Launch pricing of $0.435 in and $0.87 out per million tokens rises on August 16.",
       "tags": [
         "deepseek",
         "deepseek-v4-pro",

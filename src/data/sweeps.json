@@ -31584,6 +31584,70 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260813t150401z",
+      "timestamp": "2026-08-13T15:04:01.964Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Qwen, DeepSeek, Z.ai, MiniMax, Moonshot, Baidu/ByteDance), GitHub trending daily+weekly, HuggingFace models/datasets/papers, HN front page (60 stories), 8 YouTube creator feeds, the AI-for-science lane (BCI, medical imaging, genomics, drug discovery), and tier-1 press. One item qualified: DeepSeek's V4 API price increase, announced 2026-08-13 and covered by Reuters. All 7 fresh YouTube videos were already in the feed; HN and GitHub trending leaders (Grok 4.6, Zed Delta, Qwen3.8-2.4T, semantica, Needle 2, Unsloth Desktop, LTX-2.5) were already covered.",
+      "counts": {
+        "added": 1,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "deepseek-v4-api-price-increase",
+          "title": "DeepSeek raises V4 API prices — output costs more than double from August 16",
+          "category": "model",
+          "note": "DeepSeek's first broad V4 price rise, confirmed in the official pricing docs and announcement post and reported by Reuters — a pricing change with a concrete developer action (re-budget or reschedule V4 workloads before 16:00 UTC on August 16)."
+        }
+      ],
+      "updated": [
+        {
+          "id": "deepseek-v4-pro-0813",
+          "title": "DeepSeek V4 Pro 0813 — the 1.6T flagship leaves preview",
+          "note": "The old summary said pricing 'holds' at $0.435/$0.87. DeepSeek announced on 2026-08-13 that V4 rates rise at 16:00 UTC on 2026-08-16, so that claim is now stale."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "ecosystem",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security"
+      ]
+    },
+    {
+      "id": "sweep-20260813t150647z",
+      "timestamp": "2026-08-13T15:06:47.513Z",
+      "source": "github-actions-sweep",
+      "summary": "Second pass of the 2026-08-13T14:55Z sweep. Scanning the Hugging Face org-blog feed surfaced Liquid AI's LFM2.5-VL-3B, a 3.1B open-weights vision-language model announced on liquid.ai on 2026-08-12 with weights on Hugging Face and same-day outside coverage. No semantic collision: the feed carries LFM2.5-VL-450M, LFM2.5-2.6B and LFM2.5-8B-A1B, all different models.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "liquid-lfm2-5-vl-3b",
+          "title": "LFM2.5-VL-3B — Liquid AI's 3B vision model reads screens on a phone",
+          "category": "model",
+          "note": "Named open-weights model release from a lab already tracked in the feed, announced on its official domain within 72h, with a public repo, a published benchmark table, and independent coverage the same day."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model"
+      ]
     }
   ]
 }
