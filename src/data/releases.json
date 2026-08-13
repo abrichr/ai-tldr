@@ -1,8 +1,181 @@
 {
-  "generatedAt": "2026-08-13T15:06:47.513Z",
+  "generatedAt": "2026-08-13T16:59:20.526Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "deepseek-harness",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "DeepSeek Harness — open-source agent framework built entirely from plugins",
+      "org": "DeepSeek",
+      "date": "2026-08-13",
+      "url": "https://deepseek.com/harness/en/",
+      "summary": "DeepSeek Harness is an open-source agent framework released today under the MIT license as a v0.1 developer preview. Models, tools, skills, sessions, sandboxes, storage, loops, scheduling and the UI are all swappable plugins.",
+      "tags": [
+        "deepseek",
+        "agent-framework",
+        "agents",
+        "coding-agent",
+        "open-source",
+        "mit-license",
+        "typescript",
+        "plugins",
+        "developer-preview",
+        "harness"
+      ],
+      "importance": "major",
+      "metrics": {
+        "GitHub stars (day one)": "34,074"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "DeepSeek"
+        },
+        {
+          "label": "Version",
+          "value": "v0.1 developer preview"
+        },
+        {
+          "label": "License",
+          "value": "MIT"
+        },
+        {
+          "label": "Built on",
+          "value": "Cordis plugin framework"
+        },
+        {
+          "label": "Language",
+          "value": "TypeScript"
+        },
+        {
+          "label": "Web UI",
+          "value": "http://127.0.0.1:3080"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is DeepSeek Harness free to use?",
+          "a": "DeepSeek Harness is released under the MIT license, so the full source is free to read, modify and redistribute. Running an agent still needs model access: the quickstart tells you to open Settings, go to Models, and enter a DeepSeek API key before starting a session, so the tokens you spend are billed separately."
+        },
+        {
+          "q": "Can DeepSeek Harness run models other than DeepSeek's?",
+          "a": "Yes. The DeepSeek API is the default provider in the quickstart, but the documentation points to a model configuration guide that covers other providers and custom OpenAI-compatible endpoints. Because the model itself is just another plugin in DeepSeek Harness, swapping providers does not require changing the framework's source."
+        },
+        {
+          "q": "What runtime modes does DeepSeek Harness ship with?",
+          "a": "DeepSeek Harness ships four presets. Standard is the full coding agent with the complete tool set. Code drives multi-step operations through TypeScript. Minimal cuts the agent down to a bash shell and a file editor. Creator is for building your own presets and inspecting the runtime while it works."
+        },
+        {
+          "q": "Is DeepSeek Harness ready for production use?",
+          "a": "No. DeepSeek labels Harness a developer preview and warns in the README, in capital letters, that there will be compatibility-breaking changes. The project is iterating quickly, so pinning a version and expecting a stable plugin API across upgrades is not safe yet."
+        },
+        {
+          "q": "Where do you find plugins for DeepSeek Harness?",
+          "a": "Community plugins for DeepSeek Harness are published on GitHub under the dsh-plugin topic, which acts as the informal registry. Discussion happens in the repository's GitHub Discussions and on the project's Discord. Anyone publishing a plugin is asked to tag it with dsh-plugin so it is discoverable there."
+        }
+      ],
+      "explainer": {
+        "tagline": "An MIT-licensed agent framework from DeepSeek where models, tools, sandboxes and even the interface are swappable plugins.",
+        "whatIsIt": "DeepSeek Harness arrives as a v0.1 developer preview: an agent runtime you assemble from plugins rather than a fixed product you configure. Models, tools, skills, sessions, sandboxes, storage, loops, scheduling and the user interface are each a plugin that can be replaced or recomposed. DeepSeek published the whole codebase under the MIT license on the day of the announcement.",
+        "howItWorks": "The plugin system sits on Cordis, a meta-framework that resolves dependencies between plugins and wires them together at runtime. Every session is written to an append-only log, so each step an agent takes stays traceable after the fact. Four presets ship in the box — Standard, Code, Minimal and Creator — and each one is simply a different composition of the same plugins. The CLI is named dsh and starts a local web interface.",
+        "whyItMatters": "Teams building coding agents normally fork a closed tool or rebuild the agent loop from scratch. This framework hands them the middle layer — the part between a model and the files, shells and tools it needs — as MIT-licensed code they can edit and extend. The repository passed 34,000 stars on its first day, so a plugin ecosystem has a large audience from the start.",
+        "forWho": "agent and developer-tooling engineers",
+        "tryIt": "npx @deepseek-ai/dsh web"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/deepseek-ai/deepseek-harness",
+        "alt": "GitHub repository card for deepseek-ai/deepseek-harness — 'Everything is a Plugin'",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://deepseek.com/harness/en/"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/deepseek-ai/deepseek-harness"
+        },
+        {
+          "label": "Quickstart Docs",
+          "url": "https://deepseek-harness.github.io/deepseek-harness/en/guide/quickstart"
+        },
+        {
+          "label": "Plugin Topic",
+          "url": "https://github.com/topics/dsh-plugin"
+        }
+      ],
+      "publishDate": "2026-08-13T16:59:20.526Z"
+    },
+    {
+      "id": "anthropic-conceptual-reasoning-index",
+      "categories": [
+        "benchmark",
+        "paper"
+      ],
+      "title": "Conceptual Reasoning Index — scoring models on questions with no right answer",
+      "org": "Anthropic",
+      "date": "2026-08-12",
+      "url": "https://alignment.anthropic.com/2026/conceptual-reasoning-index/",
+      "summary": "The Conceptual Reasoning Index (CRI) scores language models on questions that cannot be marked right or wrong, such as AI risk, philosophy and decision theory. Opus 5 leads at 73.6 against an estimated ceiling near 91.",
+      "tags": [
+        "benchmark",
+        "evaluation",
+        "llm-eval",
+        "ai-safety",
+        "alignment",
+        "anthropic",
+        "redwood-research",
+        "decision-theory",
+        "reasoning",
+        "leaderboard"
+      ],
+      "importance": "notable",
+      "metrics": {
+        "Top score (Opus 5)": "73.6",
+        "Estimated ceiling": "91"
+      },
+      "explainer": {
+        "tagline": "One number for how well a model reasons about questions that have no checkable right answer.",
+        "whatIsIt": "The Conceptual Reasoning Index (CRI) targets a gap in AI evaluation: questions about advanced AI risk, philosophy and decision theory where no grader can mark an answer correct. Redwood Research built the index with Anthropic and published it on Anthropic's alignment science blog on 12 August 2026. Scores run from 0 to 100, and the authors put the practical ceiling at roughly 91.",
+        "howItWorks": "Three separate benchmarks are combined into one weighted average. LMCA carries 60% and asks a model to judge the quality of conceptual arguments, drawing on 560 position texts and 1,461 expert-rated arguments written against them. ACCoRD carries 20% and checks whether a model stays consistent across related questions, using about 14,000 constraints spread over 18 constraint types. DTBench, 407 decision-theory multiple-choice questions, supplies the final 20%.",
+        "whyItMatters": "Most benchmarks reward work that comes with a grading key — maths, code, factual recall. The Conceptual Reasoning Index instead measures the judgment needed to help people think through advanced AI risk, where no key exists. Opus 5 tops the current list at 73.6, well below the estimated 91 ceiling, which gives safety researchers a concrete gap to track as models improve.",
+        "forWho": "alignment and model-evaluation researchers",
+        "tryIt": "https://conceptualreasoning.ai"
+      },
+      "image": {
+        "url": "https://conceptualreasoning.ai/assets/og-card.png",
+        "alt": "Conceptual Reasoning Index preview card showing the benchmark's leaderboard branding",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://alignment.anthropic.com/2026/conceptual-reasoning-index/"
+        },
+        {
+          "label": "Leaderboard",
+          "url": "https://conceptualreasoning.ai"
+        },
+        {
+          "label": "LMCA Paper",
+          "url": "https://arxiv.org/abs/2607.27499"
+        },
+        {
+          "label": "ACCoRD Code",
+          "url": "https://github.com/casparoe/accord_public"
+        },
+        {
+          "label": "DTBench Paper",
+          "url": "https://arxiv.org/abs/2411.10588"
+        }
+      ],
+      "publishDate": "2026-08-13T16:59:20.526Z"
+    },
     {
       "id": "liquid-lfm2-5-vl-3b",
       "categories": [

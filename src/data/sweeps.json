@@ -31648,6 +31648,45 @@
       "coverage": [
         "model"
       ]
+    },
+    {
+      "id": "sweep-20260813t165920z",
+      "timestamp": "2026-08-13T16:59:20.526Z",
+      "source": "github-actions-sweep",
+      "summary": "Added DeepSeek Harness v0.1 (MIT-licensed plugin-based agent framework, 34k GitHub stars on day one, 367 points on HN) and the Conceptual Reasoning Index from Redwood Research and Anthropic. Scanned lab blogs, GitHub trending, HuggingFace models/datasets/papers, HN pages 1-2, 8 YouTube feeds and the AI-for-science lane; all 6 fresh YouTube videos were already in the feed, and no biomedical, neuro or pharma release cleared the 72h bar.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "deepseek-harness",
+          "title": "DeepSeek Harness — open-source agent framework built entirely from plugins",
+          "category": "tool",
+          "note": "DeepSeek's first-party agent harness, open-sourced under MIT today; 367 points on the HN front page and 34,074 stars on a repo created 2026-08-13."
+        },
+        {
+          "id": "anthropic-conceptual-reasoning-index",
+          "title": "Conceptual Reasoning Index — scoring models on questions with no right answer",
+          "category": "benchmark",
+          "note": "New benchmark published on Anthropic's official alignment blog with a public leaderboard, an arXiv paper and released ACCoRD code; benchmark is an under-covered category."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "benchmark",
+        "algorithm",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
