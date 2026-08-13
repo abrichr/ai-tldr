@@ -133,6 +133,12 @@
   ],
   "versionHistory": [
     {
+      "version": "Grok 4.6",
+      "slug": "grok-4-6",
+      "date": "2026-08-12",
+      "note": "Agent-focused flagship: 500K context, $2/$6 per 1M tokens, AA Intelligence Index 61."
+    },
+    {
       "version": "Grok 4.5",
       "slug": "grok-4-5",
       "date": "2026-07-09",

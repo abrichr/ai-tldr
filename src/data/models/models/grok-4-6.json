@@ -1,0 +1,292 @@
+{
+  "slug": "grok-4-6",
+  "name": "Grok 4.6",
+  "maker": "xai",
+  "makerTitle": "SpaceXAI",
+  "line": "grok-flagship",
+  "lineTitle": "Grok (flagship)",
+  "tagline": "SpaceXAI's August 2026 Grok flagship, tuned for long-running agents and more ambitious interactive and visual work.",
+  "seoTitle": "Grok 4.6 — SpaceXAI's August 2026 Agent Flagship",
+  "metaDescription": "Grok 4.6 is SpaceXAI's Grok flagship, released August 12, 2026 for long-running agents. 500K context, $2/$6 per 1M tokens, 65.9% on DeepSWE v1.1.",
+  "releaseDate": "2026-08-12",
+  "status": "Available",
+  "license": "Proprietary",
+  "openWeights": false,
+  "modalities": [
+    "Text",
+    "Vision"
+  ],
+  "contextWindow": "500K",
+  "knowledgeCutoff": "February 1, 2026",
+  "tags": [
+    "frontier",
+    "proprietary",
+    "reasoning",
+    "coding",
+    "agentic",
+    "multimodal"
+  ],
+  "overview": [
+    "Grok 4.6 is SpaceXAI's Grok flagship, announced on August 12, 2026. SpaceXAI describes it as building on Grok 4.5 with a particular focus on long-running agents and more ambitious interactive and visual work: staying with a complex task across many steps, whether that is researching a topic, analysing information, working across a codebase, or turning an idea into a polished application or work artifact. On longer trajectories the company reports seeing more self-testing and verification, with the model checking its own work before moving on.",
+    "The model is served with a 500,000-token context window, accepts text and image input, and has a knowledge cutoff of February 1, 2026. Reasoning effort is configurable as low, medium, high (the default), or extra-high, and the model supports function calling, web search, X search, and code execution tools. Its API model id is grok-4.6.",
+    "SpaceXAI says Grok 4.6 went through a longer supplemental training run than Grok 4.5, using curated model-generated data for reasoning and advanced technical concepts, high-quality engineering data, and an improved optimizer and training recipe, then refined the result with reinforcement learning across agentic tasks spanning knowledge work, general programming, and domain-specific environments such as kernel optimization, web development, and computer-aided design. It is available in Grok Build, Cursor, the SpaceXAI API, and partner platforms including OpenRouter, Vercel, and Cloudflare."
+  ],
+  "strengths": [
+    "Scores 61 on the Artificial Analysis Intelligence Index, matching GPT-5.6 Sol Max on SpaceXAI's published comparison",
+    "Large agentic-coding gains over Grok 4.5 — DeepSWE v1.1 65.9% vs 54%, APEX-Agents 57.5% vs 47.1%",
+    "500,000-token context window with text and image input",
+    "Reasoning effort dial from low to extra-high, plus function calling, web search, X search, and code execution",
+    "$2.00 / $6.00 per 1M input/output tokens for prompts under 200K tokens"
+  ],
+  "useCases": [
+    "Reach for it for long-running coding agents inside Cursor and Grok Build that must hold a task across many steps.",
+    "Reach for it for turning a broad product idea into a working first version and refining it over several rounds of feedback.",
+    "Reach for it for multi-step research in unfamiliar domains where the model has to structure its own work.",
+    "Reach for it for tool-heavy agent workflows that combine function calling, web or X search, and code execution."
+  ],
+  "benchmarks": [
+    {
+      "name": "CursorBench v3.2",
+      "score": 69.9,
+      "unit": "%",
+      "max": 100,
+      "source": "https://x.ai/news/grok-4-6"
+    },
+    {
+      "name": "DeepSWE v1.1",
+      "score": 65.9,
+      "unit": "%",
+      "max": 100,
+      "source": "https://x.ai/news/grok-4-6"
+    },
+    {
+      "name": "FrontierCode v1.1 (Extended)",
+      "score": 61.3,
+      "unit": "%",
+      "max": 100,
+      "source": "https://x.ai/news/grok-4-6"
+    },
+    {
+      "name": "APEX-Agents",
+      "score": 57.5,
+      "unit": "%",
+      "max": 100,
+      "source": "https://x.ai/news/grok-4-6"
+    },
+    {
+      "name": "APEX-SWE",
+      "score": 56.4,
+      "unit": "%",
+      "max": 100,
+      "source": "https://x.ai/news/grok-4-6"
+    },
+    {
+      "name": "Terminal-Bench v3.0",
+      "score": 26,
+      "unit": "%",
+      "max": 100,
+      "source": "https://x.ai/news/grok-4-6"
+    },
+    {
+      "name": "Harvey LAB (Vals)",
+      "score": 15.8,
+      "unit": "%",
+      "max": 100,
+      "source": "https://x.ai/news/grok-4-6"
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Grok 4.6 against Grok 4.5 and rival frontier models, as published by SpaceXAI at launch.",
+    "models": [
+      "Grok 4.6 High",
+      "Grok 4.5 High",
+      "GPT-5.6 Sol Max",
+      "Fable 5 Max"
+    ],
+    "subject": 0,
+    "rows": [
+      {
+        "benchmark": "AA Intelligence Index",
+        "scores": [61, 56, 61, 62]
+      },
+      {
+        "benchmark": "GDPVal-AA v2",
+        "scores": [1753, 1526, 1728, 1741]
+      },
+      {
+        "benchmark": "CursorBench v3.2",
+        "unit": "%",
+        "scores": [69.9, 66.7, 67.2, 70.5]
+      },
+      {
+        "benchmark": "DeepSWE v1.1",
+        "unit": "%",
+        "scores": [65.9, 54, 73, 70]
+      },
+      {
+        "benchmark": "FrontierCode v1.1 (Extended)",
+        "unit": "%",
+        "scores": [61.3, 56.6, 60.6, 63.6]
+      },
+      {
+        "benchmark": "APEX-Agents",
+        "unit": "%",
+        "scores": [57.5, 47.1, 56.7, 59.2]
+      },
+      {
+        "benchmark": "Terminal-Bench v3.0",
+        "unit": "%",
+        "scores": [26, 15.7, 34.6, 34.1]
+      },
+      {
+        "benchmark": "APEX-SWE",
+        "unit": "%",
+        "scores": [56.4, 53.6, null, 58.8]
+      },
+      {
+        "benchmark": "AA-Briefcase",
+        "scores": [1577, 1313, 1502, 1574]
+      },
+      {
+        "benchmark": "Harvey LAB (Vals)",
+        "unit": "%",
+        "scores": [15.8, 12.9, 2.5, 11.3]
+      }
+    ],
+    "source": "https://x.ai/news/grok-4-6"
+  },
+  "pricing": {
+    "input": "$2.00",
+    "output": "$6.00",
+    "cachedInput": "$0.50",
+    "unit": "/ 1M tokens",
+    "note": "Rates apply to prompts under 200K tokens; prompts of 200K tokens or more are billed at $4.00 input, $1.00 cached input, and $12.00 output per 1M tokens.",
+    "source": "https://docs.x.ai/developers/grok-4-6"
+  },
+  "apis": [
+    {
+      "provider": "SpaceXAI API",
+      "url": "https://docs.x.ai/developers/grok-4-6",
+      "modelId": "grok-4.6"
+    },
+    {
+      "provider": "Cursor",
+      "url": "https://cursor.com/blog/grok-4-6",
+      "modelId": "grok-4.6"
+    }
+  ],
+  "links": [
+    {
+      "label": "Introducing Grok 4.6 (SpaceXAI announcement)",
+      "url": "https://x.ai/news/grok-4-6",
+      "kind": "announcement"
+    },
+    {
+      "label": "Grok 4.6 (SpaceXAI developer docs)",
+      "url": "https://docs.x.ai/developers/grok-4-6",
+      "kind": "api-docs"
+    },
+    {
+      "label": "Models and pricing (SpaceXAI developer docs)",
+      "url": "https://docs.x.ai/developers/models",
+      "kind": "api-docs"
+    },
+    {
+      "label": "SpaceXAI API release notes",
+      "url": "https://docs.x.ai/developers/release-notes",
+      "kind": "api-docs"
+    },
+    {
+      "label": "Grok 4.6 model card (PDF)",
+      "url": "https://media.x.ai/v1/website/card-4p6-4cd2dc57.pdf",
+      "kind": "model-card"
+    },
+    {
+      "label": "Grok 4.6 in Cursor (Cursor blog)",
+      "url": "https://cursor.com/blog/grok-4-6",
+      "kind": "official"
+    },
+    {
+      "label": "SpaceXAI Launches Grok 4.6 for Long-Running Agents (Unite.AI)",
+      "url": "https://www.unite.ai/spacexai-launches-grok-4-6-for-long-running-agents/",
+      "kind": "review"
+    }
+  ],
+  "faq": [
+    {
+      "q": "When was Grok 4.6 released?",
+      "a": "SpaceXAI announced Grok 4.6 on August 12, 2026, and made it available the same day in Cursor and Grok Build, in the SpaceXAI API, and through partners including OpenRouter, Vercel, and Cloudflare."
+    },
+    {
+      "q": "How much does Grok 4.6 cost?",
+      "a": "For prompts under 200K tokens, SpaceXAI prices Grok 4.6 at $2.00 per 1M input tokens, $0.50 per 1M cached input tokens, and $6.00 per 1M output tokens. Prompts of 200K tokens or more are billed at double those rates: $4.00 input, $1.00 cached input, and $12.00 output per 1M tokens."
+    },
+    {
+      "q": "What is the Grok 4.6 context window?",
+      "a": "Grok 4.6 has a 500,000-token context window and accepts text and image input. Its knowledge cutoff is February 1, 2026."
+    },
+    {
+      "q": "How does Grok 4.6 compare with Grok 4.5?",
+      "a": "On SpaceXAI's published comparison, Grok 4.6 High scores 65.9% on DeepSWE v1.1 against 54% for Grok 4.5 High, 57.5% vs 47.1% on APEX-Agents, 69.9% vs 66.7% on CursorBench v3.2, and 26% vs 15.7% on Terminal-Bench v3.0. Its Artificial Analysis Intelligence Index score rises from 56 to 61."
+    },
+    {
+      "q": "What is Grok 4.6 best at?",
+      "a": "SpaceXAI positions it for long-running agents and interactive, visual work — holding a complex task across many steps, turning a broad product idea into a working first version, and researching unfamiliar domains. The company reports more self-testing and verification on long trajectories."
+    }
+  ],
+  "versionHistory": [
+    {
+      "version": "Grok 4.6",
+      "slug": "grok-4-6",
+      "date": "2026-08-12",
+      "current": true,
+      "note": "Agent-focused flagship: 500K context, $2/$6 per 1M tokens, AA Intelligence Index 61."
+    },
+    {
+      "version": "Grok 4.5",
+      "slug": "grok-4-5",
+      "date": "2026-07-09",
+      "note": "Opus-class flagship trained jointly with Cursor."
+    },
+    {
+      "version": "Grok 4.3",
+      "slug": "grok-4-3",
+      "date": "2026-04-30"
+    },
+    {
+      "version": "Grok 4.20",
+      "slug": "grok-4-20",
+      "date": "2026-03"
+    },
+    {
+      "version": "Grok 4.1",
+      "slug": "grok-4-1",
+      "date": "2025-11-17"
+    },
+    {
+      "version": "Grok 4",
+      "slug": "grok-4",
+      "date": "2025-07-09"
+    },
+    {
+      "version": "Grok 3",
+      "slug": "grok-3",
+      "date": "2025-02-17"
+    },
+    {
+      "version": "Grok 2",
+      "slug": "grok-2",
+      "date": "2024-08-20"
+    },
+    {
+      "version": "Grok 1.5",
+      "slug": "grok-1-5",
+      "date": "2024-05-15"
+    },
+    {
+      "version": "Grok 1",
+      "slug": "grok-1",
+      "date": "2023-11-03"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "astrbot",
+  "name": "AstrBot",
+  "repo": "AstrBotDevs/AstrBot",
+  "homepage": "https://astrbot.app",
+  "category": "agents",
+  "categoryTitle": "Agents & Automation",
+  "subcategory": "assistants",
+  "subcategoryTitle": "Assistants & Chatbots",
+  "tagline": "All-in-one agent chatbot platform for your messaging apps",
+  "seoTitle": "AstrBot: Open-Source AI Chatbot for Messaging Apps",
+  "metaDescription": "AstrBot is an open-source agent chatbot platform that brings LLM chat, tools, knowledge bases and 1000+ plugins to Telegram, Slack, Discord, QQ, Feishu and more.",
+  "overview": [
+    "AstrBot is an open-source all-in-one agent chatbot platform that integrates with mainstream instant-messaging apps. Instead of giving you a standalone chat window, it puts a configurable AI agent inside the chat services your users already live in, and provides the surrounding infrastructure — model routing, conversation state, permissions and a web control panel — so a bot can run reliably rather than as a one-off script.",
+    "The bot itself is more than a passthrough to a model. It handles multimodal conversations, tool and MCP calls, skills, knowledge bases, persona settings and automatic context compression, and it can also delegate to external agent platforms such as Dify, Alibaba Cloud Bailian and Coze. An agent sandbox isolates code execution and shell calls, and lets a session reuse resources safely across turns.",
+    "AstrBot is written in Python and ships a WebUI for configuration plus a web ChatUI with a built-in agent sandbox and web search. Extensions come from a plugin marketplace with over a thousand one-click installable plugins, and the project is internationalised. It is released under the AGPL-3.0 licence."
+  ],
+  "features": [
+    "Connects one agent to many messaging platforms — Telegram, Slack, Discord, QQ, WeCom, WeChat Official Accounts, Feishu (Lark), DingTalk, LINE, KOOK, Misskey, Mattermost and OneBot v11",
+    "LLM conversations with multimodal input, agent behaviour, MCP and tool calls, skills, knowledge bases, persona settings and automatic context compression",
+    "Agent sandbox that isolates code execution and shell calls and reuses resources at the session level",
+    "Plugin marketplace with 1000+ plugins installable in one click",
+    "WebUI for administration plus a web ChatUI with built-in sandbox and web search",
+    "Works with OpenAI-compatible services, Anthropic and Google Gemini, and can hand off to agent platforms like Dify, Bailian and Coze"
+  ],
+  "gettingStarted": {
+    "intro": "The project's own quick start offers a one-command install via uv, a Docker deployment for production, and desktop builds. The commands below are the uv path from the README; it needs uv installed and Python 3.12.",
+    "steps": [
+      {
+        "heading": "Install AstrBot with uv",
+        "body": "Install the CLI as a uv tool pinned to Python 3.12. On macOS the first run of the astrbot command can take 10-20 seconds because of security checks.",
+        "code": "uv tool install astrbot --python 3.12",
+        "lang": "bash"
+      },
+      {
+        "heading": "Initialise the environment and run",
+        "body": "Run init once to set up the environment, then start the bot. The WebUI comes up with it, and that is where you connect messaging platforms, pick model providers and install plugins.",
+        "code": "astrbot init  # only needed the first time\nastrbot run",
+        "lang": "bash"
+      },
+      {
+        "heading": "Keep it up to date",
+        "body": "Upgrade the installed tool in place when a new release lands.",
+        "code": "uv tool upgrade astrbot --python 3.12",
+        "lang": "bash"
+      },
+      {
+        "heading": "Deploy with Docker instead",
+        "body": "For a more stable, production-oriented deployment the project recommends Docker or Docker Compose; the official image is published as soulter/astrbot and the deployment guide lives in the docs.",
+        "code": "https://docs.astrbot.app/deploy/astrbot/docker.html",
+        "lang": "text"
+      }
+    ]
+  },
+  "useCases": [
+    "Run a shared AI assistant inside a team's Slack, Discord, Feishu or DingTalk workspace without building the platform plumbing yourself",
+    "Stand up intelligent customer service or an enterprise knowledge-base bot on the messaging channel your customers already use",
+    "Give a personal AI companion a persistent home in a chat app, with persona settings and long-running conversation context",
+    "Extend a chatbot with tools, MCP servers and marketplace plugins instead of writing bespoke integrations per platform"
+  ],
+  "language": "Python",
+  "license": "AGPL-3.0"
+}

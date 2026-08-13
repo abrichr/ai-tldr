@@ -1491,6 +1491,13 @@
      "title": "RAG Frameworks & Platforms",
      "tools": [
       {
+       "name": "Langchain-Chatchat",
+       "slug": "langchain-chatchat",
+       "repo": "chatchat-space/Langchain-Chatchat",
+       "description": "An offline-deployable RAG and agent application built on LangChain that answers questions from a local knowledge base using open-source LLMs, embedding models and vector stores.",
+       "detail": true
+      },
+      {
        "name": "Pathway",
        "slug": "pathway",
        "repo": "pathwaycom/pathway",
@@ -3711,6 +3718,14 @@
      "id": "assistants",
      "title": "Assistants & Chatbots",
      "tools": [
+      {
+       "name": "AstrBot",
+       "slug": "astrbot",
+       "repo": "AstrBotDevs/AstrBot",
+       "homepage": "https://astrbot.app",
+       "description": "An all-in-one agent chatbot platform that puts LLM conversations, tools, knowledge bases and a plugin marketplace inside messaging apps like Telegram, Slack, Discord, QQ and Feishu.",
+       "detail": true
+      },
       {
        "name": "Khoj",
        "slug": "khoj",

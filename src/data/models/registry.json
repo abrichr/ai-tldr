@@ -3288,6 +3288,24 @@
           "blurb": "xAI's main general-purpose chat and reasoning model line.",
           "versions": [
             {
+              "name": "Grok 4.6",
+              "slug": "grok-4-6",
+              "blurb": "SpaceXAI's August 12, 2026 Grok flagship, tuned for long-running agents: 500K context, $2/$6 per 1M tokens, 65.9% DeepSWE v1.1, AA Intelligence Index 61.",
+              "tags": [
+                "frontier",
+                "proprietary",
+                "reasoning",
+                "coding",
+                "agentic",
+                "multimodal"
+              ],
+              "contextWindow": "500K",
+              "license": "Proprietary",
+              "date": "2026-08-12",
+              "current": true,
+              "rich": true
+            },
+            {
               "name": "Grok 4.5",
               "slug": "grok-4-5",
               "blurb": "SpaceXAI's July 2026 Grok flagship: Opus-class MoE trained jointly with Cursor; $2/$6 per 1M tokens; 83.3% Terminal-Bench 2.1, 64.7% SWE-Bench Pro.",
@@ -3301,8 +3319,7 @@
               ],
               "license": "Proprietary",
               "date": "2026-07-09",
-              "rich": true,
-              "current": true
+              "rich": true
             },
             {
               "name": "Grok 4.3",

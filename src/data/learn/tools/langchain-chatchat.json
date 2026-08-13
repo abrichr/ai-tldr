@@ -1,0 +1,62 @@
+{
+  "slug": "langchain-chatchat",
+  "name": "Langchain-Chatchat",
+  "repo": "chatchat-space/Langchain-Chatchat",
+  "category": "retrieval-knowledge",
+  "categoryTitle": "Retrieval & Knowledge (RAG)",
+  "subcategory": "rag-frameworks",
+  "subcategoryTitle": "RAG Frameworks & Platforms",
+  "tagline": "Offline-deployable local knowledge base Q&A built on LangChain",
+  "seoTitle": "Langchain-Chatchat: Offline Local Knowledge Base RAG",
+  "metaDescription": "Langchain-Chatchat is an open-source RAG and agent app built on LangChain. Run a local knowledge base Q&A entirely offline with open-source LLMs and embeddings.",
+  "overview": [
+    "Langchain-Chatchat, formerly Langchain-ChatGLM, is an open-source question-answering application built on the LangChain concept. Its goal is a friendly, offline-operable knowledge base Q&A solution that works well for Chinese-language scenarios and runs fully on open-source models — so the whole pipeline, including the model, can be deployed privately with no data leaving your machines.",
+    "The retrieval pipeline is the classic RAG loop: load files, read text, split it into chunks, vectorise the chunks, vectorise the question, match the top-k most similar chunks, then append the matched text as context to the prompt and hand it to the LLM. Version 0.3.x builds its core features on an Agent, and adds database conversations, arXiv document conversations, Wolfram queries and text-to-image on top of the LLM, knowledge base, search-engine and file conversation modes. File RAG supports BM25 and KNN retrieval, not only vector search.",
+    "From 0.3.0 the project stopped loading models from a local path itself and instead integrates with mainstream inference frameworks — Xinference, Ollama, LocalAI, FastChat and One API — all through an OpenAI-compatible interface. That means it runs across CPU, GPU, NPU and MPS hardware, and can equally point at a hosted API such as OpenAI, Azure OpenAI, Anthropic or Zhipu. It is a Python package under Apache-2.0 with a Streamlit WebUI and a FastAPI backend."
+  ],
+  "features": [
+    "Offline, fully open-source RAG stack — LLM, embeddings and vector store can all run privately with no external API calls",
+    "Multiple chat modes: plain LLM, local knowledge base, search engine, single-file, database and arXiv document conversations",
+    "File RAG with BM25 + KNN retrieval alongside vector similarity search",
+    "Agent-driven tool calling, with manual tool selection for models that lack reliable agent behaviour",
+    "Pluggable inference backends — Xinference, Ollama, LocalAI, FastChat and One API — all via the OpenAI SDK interface",
+    "Local knowledge base management and a multi-session WebUI with custom system prompts"
+  ],
+  "gettingStarted": {
+    "intro": "From version 0.3.0 Langchain-Chatchat installs as a Python library and is configured from the command line. It supports Python 3.8-3.11 on Windows, macOS and Linux. Start an inference framework first — the steps below follow the project's own quick start.",
+    "steps": [
+      {
+        "heading": "Install the package",
+        "body": "Install from PyPI. If you plan to serve models with Xinference, use the extra so its additional dependencies come along. Keep Langchain-Chatchat and the inference framework in separate virtual environments to avoid dependency conflicts.",
+        "code": "pip install langchain-chatchat -U\n# or, when pairing it with Xinference:\npip install \"langchain-chatchat[xinference]\" -U",
+        "lang": "bash"
+      },
+      {
+        "heading": "Point it at a model platform",
+        "body": "Run your inference framework and load an LLM plus an embedding model, then register the platform. Configuration is done through the chatchat-config CLI rather than config files.",
+        "code": "chatchat-config model --set_model_platforms \"[{\n    \\\"platform_name\\\": \\\"xinference\\\",\n    \\\"platform_type\\\": \\\"xinference\\\",\n    \\\"api_base_url\\\": \\\"http://127.0.0.1:9997/v1\\\",\n    \\\"api_key\\\": \\\"EMPT\\\",\n    \\\"api_concurrencies\\\": 5,\n    \\\"llm_models\\\": [\\\"autodl-tmp-glm-4-9b-chat\\\"],\n    \\\"embed_models\\\": [\\\"bge-large-zh-v1.5\\\"],\n    \\\"image_models\\\": [],\n    \\\"reranking_models\\\": [],\n    \\\"speech2text_models\\\": [],\n    \\\"tts_models\\\": []\n}]\"",
+        "lang": "bash"
+      },
+      {
+        "heading": "Initialise the knowledge base",
+        "body": "Build the vector store. Make sure the inference framework and its embedding model are running first. Pass --embed-model to pick a specific embedding model.",
+        "code": "chatchat-kb -r\n# or with an explicit embedding model:\nchatchat-kb -r --embed-model=text-embedding-3-small",
+        "lang": "bash"
+      },
+      {
+        "heading": "Start the project",
+        "body": "Launch the API and WebUI together. The server binds to 127.0.0.1 by default; change DEFAULT_BIND_HOST via chatchat-config server if you need to reach it from another machine.",
+        "code": "chatchat -a",
+        "lang": "bash"
+      }
+    ]
+  },
+  "useCases": [
+    "Stand up a private document Q&A service in an air-gapped or compliance-constrained environment where no data may leave the network",
+    "Build a Chinese-language knowledge base assistant on open-source models such as GLM-4-Chat or Qwen2-Instruct",
+    "Prototype a RAG pipeline with a WebUI before committing to a bespoke stack, swapping the inference backend as needs change",
+    "Give non-developers a managed local knowledge base with upload, re-indexing and multi-session chat out of the box"
+  ],
+  "language": "Python",
+  "license": "Apache-2.0"
+}
