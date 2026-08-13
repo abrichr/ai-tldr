@@ -31550,6 +31550,40 @@
       ],
       "removed": [],
       "coverage": []
+    },
+    {
+      "id": "sweep-20260813t130631z",
+      "timestamp": "2026-08-13T13:06:31.265Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Unsloth Desktop, the native app that runs and fine-tunes local models on Windows, macOS and Linux. Searched lab blogs, GitHub trending, Hugging Face, HN, 8 YouTube creator feeds and the bio/neuro/pharma lane; every other fresh item was already in the feed or missed the bar.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "unsloth-desktop",
+          "title": "Unsloth Desktop — run and train local AI models without writing code",
+          "category": "tool",
+          "note": "Launch release v0.1.70-beta on 2026-08-11 from a 70.8k-star repo that is on github.com/trending today (592 stars today); distinct product from the existing unsloth-studio web UI, so no semantic dupe."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "article",
+        "benchmark",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }

@@ -1,8 +1,123 @@
 {
-  "generatedAt": "2026-08-13T11:06:45.927Z",
+  "generatedAt": "2026-08-13T13:06:31.265Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "unsloth-desktop",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "Unsloth Desktop — run and train local AI models without writing code",
+      "org": "Unsloth AI",
+      "date": "2026-08-11",
+      "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.70-beta",
+      "summary": "Unsloth Desktop is a free, open-source app that runs and fine-tunes AI models on your own machine. The Tauri-based app works on Windows, macOS and Linux, trains without code, and serves local models through an OpenAI-compatible API.",
+      "tags": [
+        "unsloth",
+        "local-llm",
+        "fine-tuning",
+        "desktop-app",
+        "llama-cpp",
+        "gguf",
+        "lora",
+        "training",
+        "inference",
+        "diffusion",
+        "mcp",
+        "open-source"
+      ],
+      "importance": "major",
+      "metrics": {
+        "GitHub stars": "70,813",
+        "Training": "2x faster, 70% less VRAM"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Unsloth AI"
+        },
+        {
+          "label": "Version",
+          "value": "v0.1.70-beta"
+        },
+        {
+          "label": "Price",
+          "value": "Free"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        },
+        {
+          "label": "Platforms",
+          "value": "Windows, macOS, Linux, WSL"
+        },
+        {
+          "label": "Hardware",
+          "value": "CPU or multi-GPU: NVIDIA, AMD, Intel, Mac"
+        },
+        {
+          "label": "Export formats",
+          "value": "NVFP4, GGUF and others"
+        }
+      ],
+      "explainer": {
+        "tagline": "A free desktop app that runs, fine-tunes and serves local AI models on Windows, macOS and Linux.",
+        "whatIsIt": "Unsloth Desktop puts running a model and training a model in one native app, so neither task needs a Python environment or a local server first. The beta handles text LLMs, diffusion image and video models, MLX, GGUF and audio models. Unsloth AI released it on 11 August 2026, and it is free and open source.",
+        "howItWorks": "Built with Tauri, the app wraps llama.cpp, PyTorch and stablediffusion.cpp behind one interface and pulls models straight from Hugging Face. Training covers LoRA, full fine-tuning and pretraining across text, diffusion, audio and vision models. Local models are then served through an OpenAI-compatible API, and tool calls that come back malformed get repaired instead of dropped.",
+        "whyItMatters": "Local fine-tuning normally means sorting out CUDA versions, Python environments and port forwarding before any real work starts. Unsloth Desktop removes that setup on ordinary machines — CPU-only or multi-GPU, on NVIDIA, AMD, Intel or Mac hardware — and lets coding agents such as Claude Code and Codex point at the models it serves.",
+        "forWho": "developers and ML engineers who want models to stay on their own hardware",
+        "tryIt": "Download the installer for your OS from https://unsloth.ai/download"
+      },
+      "faq": [
+        {
+          "q": "Is Unsloth Desktop free?",
+          "a": "Unsloth Desktop is free and open source, with no paid tier or subscription. The Unsloth repository it ships from is licensed Apache-2.0, and the app is currently in beta at v0.1.70-beta. Everything runs on your own machine, so there are no per-token charges unless you choose to connect a cloud provider such as OpenAI or Anthropic."
+        },
+        {
+          "q": "What hardware does Unsloth Desktop need?",
+          "a": "Unsloth Desktop runs on CPU-only machines as well as multi-GPU systems, and supports NVIDIA, AMD, Intel and Mac hardware. Builds are available for Windows, macOS, Linux and WSL. Unsloth notes that very old hardware may not be well supported, so a reasonably modern CPU or GPU gives the most reliable results."
+        },
+        {
+          "q": "Which models can Unsloth Desktop run?",
+          "a": "Unsloth Desktop runs Muse Glimmer 30B, Kimi K3, Qwen3.8, DeepSeek-V4 Flash 0731 and Gemma 4 among others, and downloads more from Hugging Face inside the app. MiniMax-H3 handles video generation, and other diffusion models cover image and video creation at up to 2x faster inference on supported workflows."
+        },
+        {
+          "q": "Can Unsloth Desktop use cloud models as well as local ones?",
+          "a": "Unsloth Desktop can connect OpenAI and Anthropic as cloud model providers alongside the models it runs locally. The app also exposes local models through an OpenAI-compatible API and can be reached remotely over Cloudflare HTTPS, so external agents and clients can call the same machine from elsewhere."
+        }
+      ],
+      "image": {
+        "url": "https://unsloth.ai/cgi/image/unsloth_qwen3.8_final_ut2eqWnYJ-SLmu0s7x522.png?format=raw",
+        "alt": "Unsloth Desktop app interface shown in the launch announcement",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Release Notes",
+          "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.70-beta"
+        },
+        {
+          "label": "Download",
+          "url": "https://unsloth.ai/download"
+        },
+        {
+          "label": "Docs",
+          "url": "https://unsloth.ai/docs/desktop"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/unslothai/unsloth"
+        },
+        {
+          "label": "Local API Docs",
+          "url": "https://unsloth.ai/docs/basics/api"
+        }
+      ],
+      "publishDate": "2026-08-13T13:06:31.265Z"
+    },
     {
       "id": "anthropic-compliance-api-local-sessions",
       "categories": [
