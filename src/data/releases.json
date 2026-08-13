@@ -1,8 +1,122 @@
 {
-  "generatedAt": "2026-08-13T09:13:47.051Z",
+  "generatedAt": "2026-08-13T11:06:45.927Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "anthropic-compliance-api-local-sessions",
+      "categories": [
+        "tool",
+        "security"
+      ],
+      "title": "Compliance API pulls local sessions — admins can read Claude Code transcripts",
+      "org": "Anthropic",
+      "date": "2026-08-11",
+      "url": "https://platform.claude.com/docs/en/manage-claude/compliance-content-data",
+      "summary": "Anthropic's Compliance API now returns transcripts of Cowork and Claude Code sessions run on a user's own machine. Three beta endpoints let Claude Enterprise admins list sessions, read one session's metadata, and fetch its messages.",
+      "tags": [
+        "anthropic",
+        "claude",
+        "claude-code",
+        "cowork",
+        "compliance-api",
+        "enterprise",
+        "audit",
+        "governance",
+        "api",
+        "beta",
+        "data-retention"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Anthropic"
+        },
+        {
+          "label": "Availability",
+          "value": "Claude Enterprise organizations, beta"
+        },
+        {
+          "label": "Endpoints",
+          "value": "3, under /v1/compliance/apps/sessions/local"
+        },
+        {
+          "label": "Scope required",
+          "value": "read:compliance_user_data"
+        },
+        {
+          "label": "Covers",
+          "value": "Cowork and Claude Code on the user's machine"
+        },
+        {
+          "label": "Retention",
+          "value": "6 years, or the org's custom period"
+        },
+        {
+          "label": "Rate limit",
+          "value": "600 req/min per parent organization"
+        }
+      ],
+      "explainer": {
+        "tagline": "Claude Enterprise admins can now pull transcripts of Cowork and Claude Code sessions that ran on a user's own laptop.",
+        "whatIsIt": "Three new Compliance API endpoints return local sessions — the Cowork and Claude Code conversations that happen on a user's own machine rather than in Anthropic's cloud. Admins can list sessions across the organization, retrieve one session's metadata, and read its full message history. All three are in beta.",
+        "howItWorks": "Capture happens server-side: Anthropic records each conversation as its requests reach the Claude API, so nothing is installed on the device and nothing is collected beyond what the client already sends. The endpoints sit under /v1/compliance/apps/sessions/local and reuse the existing Compliance Access Key and the read:compliance_user_data scope. Local sessions carry a clls_ ID prefix and can be narrowed only by a created_at range.",
+        "whyItMatters": "Security, legal and compliance teams get a written record of what staff asked Claude Code to do and what came back — history that used to stay on the laptop. Tool calls and tool results appear in the transcript, so an admin can see which files and commands a session touched through the API. Work that never reached the API stays invisible.",
+        "forWho": "enterprise security and compliance teams",
+        "tryIt": "curl -sS -G \"https://api.anthropic.com/v1/compliance/apps/sessions/local\" -H \"x-api-key: $ANTHROPIC_COMPLIANCE_ACCESS_KEY\""
+      },
+      "faq": [
+        {
+          "q": "Which Claude plans include the local session endpoints?",
+          "a": "Local session endpoints are limited to Claude Enterprise organizations and are in beta. A standalone Claude Console organization with no parent organization cannot use them; that setup uses Admin API keys and can query the Activity Feed only. Organizations already running the Compliance API need no new key, scope, setting, or client update."
+        },
+        {
+          "q": "Can an admin delete a local session through the Compliance API?",
+          "a": "Deletion through the API is not supported for local sessions, and the same holds for remote sessions. The Compliance API can delete chats, files, and projects on demand, but session transcripts are read-only. Local session content is kept for six years by default, or for a shorter window when an organization sets a finite conversation retention period."
+        },
+        {
+          "q": "Are all Claude Code sessions captured?",
+          "a": "Several Claude Code setups are never captured. Sessions are skipped when Claude Code authenticates with a Claude Console API key or runs through Amazon Bedrock, Google Cloud, or Microsoft Foundry, and Claude Code on the web is not captured either. Organizations with HIPAA readiness enabled record no local session data at all."
+        },
+        {
+          "q": "How do local sessions differ from remote sessions?",
+          "a": "Local sessions run on a user's own machine and cover both Cowork and Claude Code, while remote sessions run in Anthropic-managed cloud environments and cover Cowork only. Local session IDs start with clls_ and filter only by a created_at range; remote IDs start with cse_ and also filter by organization and user."
+        },
+        {
+          "q": "What comes back for organizations using customer-managed encryption keys?",
+          "a": "Organizations on customer-managed encryption keys can still list and retrieve local sessions, but transcript content is not currently returned. Every message on the messages endpoint carries a provenance.type of content_unavailable with a reason of not_captured and an empty content array. Session metadata still returns normally, so the audit trail shows which sessions happened."
+        }
+      ],
+      "image": {
+        "url": "https://platform.claude.com/docs/og?locale=en&path=manage-claude/compliance-content-data&design-rev=1",
+        "alt": "Claude Platform documentation cover card for retrieving chats, files, projects, and sessions",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Release Notes",
+          "url": "https://platform.claude.com/docs/en/release-notes/overview"
+        },
+        {
+          "label": "Local Sessions Docs",
+          "url": "https://platform.claude.com/docs/en/manage-claude/compliance-content-data"
+        },
+        {
+          "label": "Compliance API",
+          "url": "https://platform.claude.com/docs/en/manage-claude/compliance-api"
+        },
+        {
+          "label": "Set Up Access",
+          "url": "https://platform.claude.com/docs/en/manage-claude/compliance-api-access"
+        },
+        {
+          "label": "API Reference",
+          "url": "https://platform.claude.com/docs/en/api/compliance"
+        }
+      ],
+      "publishDate": "2026-08-13T11:06:19.854Z"
+    },
     {
       "id": "twitch-generative-ai-training-optout",
       "categories": [

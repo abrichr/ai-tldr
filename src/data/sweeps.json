@@ -31495,6 +31495,61 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260813t110619z",
+      "timestamp": "2026-08-13T11:06:19.854Z",
+      "source": "github-actions-sweep",
+      "summary": "Checked lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Qwen, MiniMax, Google Research), GitHub trending daily + weekly, HuggingFace models/datasets/papers, HN front page + Show HN, all 8 YouTube creator feeds, and the AI-for-science lane. Almost everything fresh was already in the feed; added one item — Anthropic's Compliance API now returns Cowork and Claude Code local session transcripts (Aug 11).",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "anthropic-compliance-api-local-sessions",
+          "title": "Compliance API pulls local sessions — admins can read Claude Code transcripts",
+          "category": "tool",
+          "note": "Dated Aug 11 ship on Anthropic's official platform docs: three beta Compliance API endpoints expose Cowork and Claude Code transcripts from users' own machines to Claude Enterprise admins — a concrete governance change with a clear admin action, and no semantic collision with the Aug 7 Managed Agents release-note items."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem",
+        "algorithm"
+      ]
+    },
+    {
+      "id": "sweep-20260813t110645z",
+      "timestamp": "2026-08-13T11:06:45.927Z",
+      "source": "github-actions-sweep",
+      "summary": "Follow-up to sweep-20260813t110619z: trimmed the Compliance API item's summary under the 240-char cap. No new discovery pass.",
+      "counts": {
+        "added": 0,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [
+        {
+          "id": "anthropic-compliance-api-local-sessions",
+          "title": "Compliance API pulls local sessions — admins can read Claude Code transcripts",
+          "note": "Trim summary from 243 to 232 chars to clear the 240-char cap."
+        }
+      ],
+      "removed": [],
+      "coverage": []
     }
   ]
 }
