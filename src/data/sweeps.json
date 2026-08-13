@@ -31468,6 +31468,33 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260813t091347z",
+      "timestamp": "2026-08-13T09:13:47.051Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic quiet since Aug 7; Meta's last post is Jul 9; DeepMind's two August posts — SL2T and WeatherNext Cyclones — are already in the feed; Mistral's Aug 11 sovereign-inference post is already in as mistral-regional-endpoints-ga), GitHub trending daily, HuggingFace models/datasets/papers, HN front page top 30 plus /newest, 8 YouTube creator feeds, the AI-for-science lane, and coding-agent release pages. Everything above the bar was already ingested: HN's top AI stories (DeepSeek V4 Pro 0813, Qwen3.8-2.4T-A95B, Grok 4.6, Zed Delta, Gowers on LLM maths, Florian Herrengt, 'Compression is prediction') and GitHub trending's AI repos (stablyai/orca, semantica, Lightricks/LTX-2, cactus-compute/needle, Kronos, RAGFlow) all map to existing entries. All 7 fresh videos from yt-rss-scan were already added in prior sweeps. Near-misses dropped on the rules: NVIDIA NemotronLabs-VoiceChat-11B (real open full-duplex model but released Aug 3, outside the 72h cap), Brain2Qwerty in Nature Neuroscience (Aug 3, outside the cap and already in the feed), OpenAI's 'How enterprises put AI to work' (a report, fails the ecosystem gate test — no developer action), a rumored Gemini API postpay billing removal (no official announcement found, so dropped under zero-hallucination), and paperclipai/paperclip (trending on stars but no release since Jul 22).",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
