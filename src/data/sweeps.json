@@ -31687,6 +31687,44 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260813t190527z",
+      "timestamp": "2026-08-13T19:05:27.586Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Gemini 3.7 Flash (Google's Flash-tier coding/agent model, 65.3% DeepSWE v1.1, half-price introductory tokens) and OpenAI's Ultrafast mode (GPT-5.6 Sol at 750 tok/s on Cerebras). All 6 fresh YouTube videos and every top HF/GitHub trending entry were already in the feed; Mistral OCR 4.1 (July 16) and DeepMind WeatherNext Cyclones (Aug 6) failed the 72h cap, and the Mistral sovereign-AI post duplicates mistral-regional-endpoints-ga.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "google-gemini-3-7-flash",
+          "title": "Gemini 3.7 Flash — Google's coding and agent workhorse at half the price",
+          "category": "model",
+          "note": "Top-lab blog (blog.google) within 48h plus HN front page at 257 points; beats Gemini 3.6 Flash on all five published benchmarks at half the introductory token price."
+        },
+        {
+          "id": "openai-ultrafast-mode",
+          "title": "Ultrafast mode — GPT-5.6 Sol at 750 tokens per second on Cerebras",
+          "category": "tool",
+          "note": "Announced on openai.com/index within 48h with a matching Cerebras blog and tier-1 pickup; a real new API service tier, not a funding or roadmap item."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "video",
+        "repo",
+        "paper",
+        "dataset",
+        "article",
+        "ecosystem",
+        "algorithm"
+      ]
     }
   ]
 }

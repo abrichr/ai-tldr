@@ -1,8 +1,342 @@
 {
-  "generatedAt": "2026-08-13T16:59:20.526Z",
+  "generatedAt": "2026-08-13T19:05:27.586Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "google-gemini-3-7-flash",
+      "categories": [
+        "model"
+      ],
+      "title": "Gemini 3.7 Flash — Google's coding and agent workhorse at half the price",
+      "org": "Google DeepMind",
+      "date": "2026-08-13",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+      "summary": "Gemini 3.7 Flash scores 65.3% on DeepSWE v1.1, up from 49.0% for Gemini 3.6 Flash, and arrives just three weeks later. Google charges $0.75 per 1M input tokens through 2026, half the older model's launch price.",
+      "tags": [
+        "gemini",
+        "gemini-3-7-flash",
+        "google-deepmind",
+        "google",
+        "model",
+        "coding",
+        "agent",
+        "agentic",
+        "flash",
+        "tool-use",
+        "pricing"
+      ],
+      "importance": "major",
+      "metrics": {
+        "DeepSWE v1.1": "65.3%",
+        "WebDev Arena Elo": 1588
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Google DeepMind"
+        },
+        {
+          "label": "Price (input)",
+          "value": "$0.75 / 1M tokens"
+        },
+        {
+          "label": "Price (output)",
+          "value": "$3.75 / 1M tokens"
+        },
+        {
+          "label": "Standard price",
+          "value": "$1.50 in / $7.50 out from Jan 1, 2027"
+        },
+        {
+          "label": "Modalities",
+          "value": "Text, code, images, PDF documents"
+        },
+        {
+          "label": "Availability",
+          "value": "Gemini API, AI Studio, Android Studio, Antigravity, Gemini Enterprise"
+        },
+        {
+          "label": "Consumer access",
+          "value": "Gemini Spark for AI Pro and Ultra in 160+ countries"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "DeepSWE v1.1",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Gemini 3.7 Flash",
+              "score": 65.3,
+              "highlight": true
+            },
+            {
+              "name": "Gemini 3.6 Flash",
+              "score": 49
+            }
+          ],
+          "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/"
+        },
+        {
+          "name": "FrontierCode 1.1 Main",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Gemini 3.7 Flash",
+              "score": 43.6,
+              "highlight": true
+            },
+            {
+              "name": "Gemini 3.6 Flash",
+              "score": 34.4
+            }
+          ],
+          "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/"
+        },
+        {
+          "name": "GDP.pdf",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Gemini 3.7 Flash",
+              "score": 34,
+              "highlight": true
+            },
+            {
+              "name": "Gemini 3.6 Flash",
+              "score": 22
+            }
+          ],
+          "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/"
+        },
+        {
+          "name": "AutomationBench",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Gemini 3.7 Flash",
+              "score": 30.4,
+              "highlight": true
+            },
+            {
+              "name": "Gemini 3.6 Flash",
+              "score": 17
+            }
+          ],
+          "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/"
+        },
+        {
+          "name": "WebDev Arena",
+          "unit": " Elo",
+          "max": 2000,
+          "results": [
+            {
+              "name": "Gemini 3.7 Flash",
+              "score": 1588,
+              "highlight": true
+            },
+            {
+              "name": "Gemini 3.6 Flash",
+              "score": 1538
+            }
+          ],
+          "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/"
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "Input",
+            "price": "$0.75",
+            "unit": "/ 1M tokens",
+            "note": "Introductory rate through Dec 31, 2026"
+          },
+          {
+            "plan": "Output",
+            "price": "$3.75",
+            "unit": "/ 1M tokens",
+            "note": "Introductory rate through Dec 31, 2026"
+          },
+          {
+            "plan": "Input (standard)",
+            "price": "$1.50",
+            "unit": "/ 1M tokens",
+            "note": "From Jan 1, 2027"
+          },
+          {
+            "plan": "Output (standard)",
+            "price": "$7.50",
+            "unit": "/ 1M tokens",
+            "note": "From Jan 1, 2027"
+          }
+        ],
+        "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/"
+      },
+      "explainer": {
+        "tagline": "Google's new Flash model gains 16 points on long-horizon coding work and launches at half the price of the model it replaces.",
+        "whatIsIt": "Gemini 3.7 Flash lifts Google's Flash-tier coding scores by a wide margin, reaching 65.3% on DeepSWE v1.1 against 49.0% for Gemini 3.6 Flash. The model handles text, code, images, and PDF documents. It landed on August 13, 2026, three weeks after 3.6 Flash, and is generally available from day one.",
+        "howItWorks": "Algorithmic improvements from teams across Google DeepMind drive the gains, not a larger model. Google says the model thinks more diligently and puts more effort into multi-step planning and tool calls, which is what moves the agent numbers. The jump is largest on long-horizon work: enterprise workflow automation nearly doubles on AutomationBench, and expert PDF comprehension on GDP.pdf climbs from 22.0% to 34.0%.",
+        "whyItMatters": "Cheaper tokens plus higher coding scores change what a production agent can afford to run on. At $0.75 per 1M input tokens, Gemini 3.7 Flash costs half of what 3.6 Flash did at launch while scoring higher on every benchmark Google published. Teams that pushed hard coding work up to a Pro-tier model can now test whether the Flash tier covers it.",
+        "forWho": "Developers and enterprises running coding and agent workloads",
+        "tryIt": "https://aistudio.google.com/"
+      },
+      "faq": [
+        {
+          "q": "How much does Gemini 3.7 Flash cost?",
+          "a": "Gemini 3.7 Flash costs $0.75 per 1M input tokens and $3.75 per 1M output tokens as an introductory rate through December 31, 2026. Google describes that as half the price Gemini 3.6 Flash launched at. From January 1, 2027 the standard rate rises to $1.50 input and $7.50 output per 1M tokens."
+        },
+        {
+          "q": "How does Gemini 3.7 Flash compare to Gemini 3.6 Flash?",
+          "a": "Gemini 3.7 Flash beats Gemini 3.6 Flash on every benchmark Google published: 65.3% versus 49.0% on DeepSWE v1.1, 43.6% versus 34.4% on FrontierCode 1.1 Main, 34.0% versus 22.0% on GDP.pdf, and 30.4% versus 17.0% on AutomationBench. On WebDev Arena it scores 1588 Elo against 1538."
+        },
+        {
+          "q": "Where can I use Gemini 3.7 Flash today?",
+          "a": "Gemini 3.7 Flash is generally available to developers through the Gemini API in Google AI Studio, Android Studio, and Google Antigravity. Enterprises get it in the Gemini Enterprise Agent Platform and the Gemini Enterprise app. Consumers reach it through Gemini Spark, the personal agent for Google AI Pro and Ultra subscribers in 160+ countries."
+        },
+        {
+          "q": "Can I download the weights for Gemini 3.7 Flash?",
+          "a": "No. Gemini 3.7 Flash is a closed-weight Google model served only through the Gemini API and Google's own products. There is no open-weights release and no self-hosted option, so every request runs on Google infrastructure and is billed per token at the published API rates."
+        },
+        {
+          "q": "What safety changes shipped with Gemini 3.7 Flash?",
+          "a": "Google updated the safeguards in Gemini 3.7 Flash against misuse in chemical, biological, radiological, and nuclear (CBRN) domains and in cyber offense, while keeping legitimate uses in those fields working. The safety work shipped alongside the coding and agent improvements rather than as a separate release."
+        }
+      ],
+      "image": {
+        "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-7-flash.width-1300.png",
+        "alt": "Google key art announcing the Gemini 3.7 Flash model",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/"
+        },
+        {
+          "label": "Gemini API Docs",
+          "url": "https://ai.google.dev/gemini-api/docs/models"
+        },
+        {
+          "label": "Google AI Studio",
+          "url": "https://aistudio.google.com/"
+        },
+        {
+          "label": "9to5Google Report",
+          "url": "https://9to5google.com/2026/08/13/gemini-3-7-flash-launch/"
+        }
+      ],
+      "publishDate": "2026-08-13T19:05:27.586Z"
+    },
+    {
+      "id": "openai-ultrafast-mode",
+      "categories": [
+        "tool",
+        "model"
+      ],
+      "title": "Ultrafast mode — GPT-5.6 Sol at 750 tokens per second on Cerebras",
+      "org": "OpenAI",
+      "date": "2026-08-13",
+      "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
+      "summary": "Ultrafast mode is a new OpenAI API service tier that runs GPT-5.6 Sol at up to 750 output tokens per second, up to 14 times faster than standard. Cerebras wafer-scale chips power it. Limited preview for now.",
+      "tags": [
+        "openai",
+        "cerebras",
+        "gpt-5-6-sol",
+        "ultrafast",
+        "inference",
+        "api",
+        "latency",
+        "wafer-scale",
+        "agents",
+        "tool",
+        "serving"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Output speed": "750 tokens/sec",
+        "GDP-Val speedup": "5.6x end-to-end"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenAI, hardware by Cerebras"
+        },
+        {
+          "label": "Model",
+          "value": "GPT-5.6 Sol"
+        },
+        {
+          "label": "Peak output speed",
+          "value": "750 tokens/sec"
+        },
+        {
+          "label": "Speed vs standard",
+          "value": "Up to 14x faster"
+        },
+        {
+          "label": "Quality",
+          "value": "Same as GPT-5.6 Sol Standard"
+        },
+        {
+          "label": "Hardware",
+          "value": "Cerebras Wafer-Scale Engine, 44 GB on-chip SRAM"
+        },
+        {
+          "label": "Availability",
+          "value": "Limited preview on the OpenAI API, waitlist open"
+        }
+      ],
+      "explainer": {
+        "tagline": "OpenAI's new API tier runs GPT-5.6 Sol on Cerebras hardware at up to 750 output tokens per second.",
+        "whatIsIt": "Ultrafast mode is a new service tier in the OpenAI API that runs GPT-5.6 Sol at up to 750 output tokens per second, up to 14 times faster than the standard tier. OpenAI says the model keeps the same intelligence as GPT-5.6 Sol Standard, so only the speed changes. It opened on August 13, 2026 as a limited preview for selected customers.",
+        "howItWorks": "Cerebras Wafer-Scale Engine hardware supplies the speed. Inference on a large model is bottlenecked by moving weights between memory layers, so the Cerebras chip keeps 44 GB of SRAM on-chip and the weights stay reachable without repeated transfers. Cerebras measured the result at 11 times faster than Fable 5 and 5 times faster than Opus 4.8 running in Fast mode.",
+        "whyItMatters": "Latency, not intelligence, is what blocks many production uses of a frontier model. On GDP-Val, a benchmark of economically valuable knowledge work, Ultrafast mode delivered a 5.6x end-to-end speedup with no drop in quality. OpenAI points at voice, customer support, commerce, developer agents, financial research, and security response, and says it already uses the tier internally to read logs and traces during incidents.",
+        "forWho": "Teams building latency-sensitive agents, voice, and support products"
+      },
+      "faq": [
+        {
+          "q": "How much does Ultrafast mode cost?",
+          "a": "OpenAI has not published a price for Ultrafast mode. Both the OpenAI preview post and the Cerebras announcement of August 13, 2026 describe the speed, the hardware, and the preview access process without listing a per-token rate. Businesses joining the waitlist submit workload details, latency requirements, and expected usage instead of picking a published tier."
+        },
+        {
+          "q": "Who can access Ultrafast mode right now?",
+          "a": "Ultrafast mode is a limited preview restricted to selected OpenAI API customers, with access widening over time. Businesses that want in join a waitlist and submit their workload details, latency requirements, and expected usage. There is no self-serve toggle in the API for general accounts during the preview period."
+        },
+        {
+          "q": "Is Ultrafast mode less accurate than standard GPT-5.6 Sol?",
+          "a": "No. OpenAI and Cerebras both state that GPT-5.6 Sol on Ultrafast mode runs with the same intelligence as GPT-5.6 Sol Standard. On GDP-Val the tier produced a 5.6x end-to-end speedup with no quality degradation, so the trade is purely latency for hardware availability rather than accuracy."
+        },
+        {
+          "q": "Which workloads does OpenAI recommend Ultrafast mode for?",
+          "a": "OpenAI points Ultrafast mode at live and near-production work where latency matters as much as model intelligence: voice, customer support, commerce, developer agents, financial research, and security response. OpenAI also says it uses the tier internally to analyze logs and traces during incidents, and to compress overnight research cycles into several iterations inside one workday."
+        }
+      ],
+      "image": {
+        "url": "https://cdn.sanity.io/images/e4qjo92p/production/fdfac76baee0b174ea63df807f9d4f975341caea-1672x941.png?rect=0,32,1672,878&w=1200&h=630&fit=max&auto=format",
+        "alt": "Cerebras and OpenAI artwork for GPT-5.6 Sol Ultrafast mode",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai"
+        },
+        {
+          "label": "Press Release",
+          "url": "https://www.globenewswire.com/news-release/2026/08/13/3344804/0/en/cerebras-powers-ultrafast-mode-for-openai-s-gpt-5-6-sol.html"
+        },
+        {
+          "label": "9to5Mac Report",
+          "url": "https://9to5mac.com/2026/08/13/openai-previews-ultrafast-gpt-5-6-sol-running-up-to-14-times-faster/"
+        }
+      ],
+      "publishDate": "2026-08-13T19:05:27.586Z"
+    },
     {
       "id": "deepseek-harness",
       "categories": [
