@@ -1,8 +1,119 @@
 {
-  "generatedAt": "2026-08-12T22:45:54.753Z",
+  "generatedAt": "2026-08-13T01:29:19.990Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "zed-delta",
+      "categories": [
+        "tool"
+      ],
+      "title": "Delta — Zed's multiplayer workspace for coding with agents",
+      "org": "Zed Industries",
+      "date": "2026-08-12",
+      "url": "https://zed.dev/blog/introducing-delta",
+      "summary": "Delta is a new app from Zed Industries where developers and coding agents share one live session. It syncs code and conversation together, so comments stay anchored to code as it changes. Private beta invites started August 12.",
+      "tags": [
+        "tool",
+        "coding-agent",
+        "zed",
+        "delta",
+        "deltadb",
+        "crdt",
+        "collaboration",
+        "code-review",
+        "developer-tools",
+        "claude-code",
+        "rust",
+        "webassembly",
+        "agentic-coding"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "A multiplayer environment for coding with agents and for reviewing what those agents build.",
+        "whatIsIt": "Delta is a separate application from Zed Industries, not a plugin for the Zed editor. It puts people and AI agents in the same thread: everyone sees the same code, the same agent transcript, and the same comments at the same time. Zed Industries sent the first private-beta invites on August 12, 2026 and says it will invite more users over the coming weeks.",
+        "howItWorks": "Under Delta sits DeltaDB, a replicated database that copies the conversation and the worktree together in real time. Every edit gets its own stable identity, so a comment is anchored to a piece of code rather than to a line number and survives later rewrites. The app is written in Rust; the browser build compiles to WebAssembly and draws with WebGL, so the web version is the same program as the desktop one rather than a cut-down rewrite.",
+        "whyItMatters": "Reading and checking what an agent wrote is the slow part of agent-assisted coding, and Delta aims straight at it. Diffs open in full, the transcript sits beside the change, and a teammate can join while a run is still going instead of waiting for a commit. Work can also move to a cloud runner, so the agent keeps going after you close your laptop.",
+        "forWho": "teams reviewing agent-written code",
+        "tryIt": "Request an invite at https://zed.dev/deltadb"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Zed Industries"
+        },
+        {
+          "label": "Availability",
+          "value": "Private beta, first invites 2026-08-12"
+        },
+        {
+          "label": "Runs on",
+          "value": "Desktop app, browser, cloud runners"
+        },
+        {
+          "label": "Built on",
+          "value": "DeltaDB replicated database"
+        },
+        {
+          "label": "Agent harness",
+          "value": "Claude Code (first third-party integration)"
+        },
+        {
+          "label": "Relation to Zed",
+          "value": "Separate app; DeltaDB comes to Zed later"
+        },
+        {
+          "label": "Built with",
+          "value": "Rust, WebAssembly + WebGL in the browser"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How do you get access to Delta?",
+          "a": "Delta is in private beta. Zed Industries sent the first invites on August 12, 2026 and says more users will be invited over the coming weeks. To ask for access you enter an email address and a GitHub username on the DeltaDB early-access page at zed.dev/deltadb, which Zed says it uses only to contact you about early access."
+        },
+        {
+          "q": "Does Delta replace the Zed editor?",
+          "a": "Delta does not replace Zed. Zed Industries says it will keep developing the Zed editor and that DeltaDB will come to Zed later, but Delta is a separate application and the first DeltaDB client. In the launch post the team puts it plainly: Delta is where it begins, and the editor follows."
+        },
+        {
+          "q": "Does Delta replace Git?",
+          "a": "Delta works with the Git repository you already have rather than replacing it, capturing the edits and conversations that happen between commits. Zed Industries writes that Git and CI stay for what they are good at, which is running checks and connecting you to the rest of the world, instead of being the place collaboration is forced to happen."
+        },
+        {
+          "q": "Which coding agents work with Delta?",
+          "a": "Delta connects to third-party agent harnesses, starting with Claude Code, which is the only outside harness Zed Industries names in the August 12, 2026 launch post. Agents are treated as participants in the thread rather than as a side panel, so their edits and messages land in the same shared session everyone else sees."
+        },
+        {
+          "q": "How much does Delta cost?",
+          "a": "Zed Industries has not published pricing for Delta. The August 12, 2026 launch post describes the private beta and the DeltaDB foundation but does not list plans, seat prices, a free tier, or a general-availability date. The early-access page at zed.dev/deltadb also collects signups without quoting a price."
+        }
+      ],
+      "image": {
+        "url": "https://images.zed.dev/blog/introducing-delta/thumbnail.webp",
+        "alt": "Zed Industries announcement banner for Delta, its multiplayer agent coding environment",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://zed.dev/blog/introducing-delta"
+        },
+        {
+          "label": "DeltaDB Background",
+          "url": "https://zed.dev/blog/introducing-deltadb"
+        },
+        {
+          "label": "Early Access",
+          "url": "https://zed.dev/deltadb"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49276574"
+        }
+      ],
+      "publishDate": "2026-08-13T01:29:19.990Z"
+    },
     {
       "id": "dream-taiwan-multi-agent-intrusion",
       "categories": [

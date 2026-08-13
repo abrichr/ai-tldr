@@ -31378,6 +31378,37 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260813t012919z",
+      "timestamp": "2026-08-13T01:29:19.990Z",
+      "source": "github-actions-sweep",
+      "summary": "Checked lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Cohere, Qwen, DeepSeek, Z.ai, MiniMax), GitHub trending, HuggingFace models/datasets/papers, HN front page + Show HN, the 8 YouTube creator feeds, and the AI-for-science lane (BCI, medical imaging, pharma, STAT, Nature). Added one item: Zed's Delta, a multiplayer environment for coding with agents (385 points on HN). Everything else fresh was already in the feed, older than 72h, or business news.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "zed-delta",
+          "title": "Delta — Zed's multiplayer workspace for coding with agents",
+          "category": "tool",
+          "note": "Launched 2026-08-12 on zed.dev/blog/introducing-delta and hit the HN front page with 385 points; a genuinely new application from the Zed team, not covered by the existing zed-1-0 or zed-1-14-sandboxing entries."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "tool",
+        "model",
+        "repo",
+        "video",
+        "paper",
+        "dataset",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
