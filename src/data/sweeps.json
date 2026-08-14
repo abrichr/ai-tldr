@@ -32166,6 +32166,52 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260814t222540z",
+      "timestamp": "2026-08-14T22:25:40.390Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Mixedbread's Toast 1 search model (HN front page, 154 points) and a fresh 1littlecoder video on cutting token cost with Gemini 3.7 Flash. Most of today's news was already in the feed — Gemini 3.7 Flash, GLM-5.3, Qwen3.8-27B, DeepSeek V4 Pro, Cursor Builds, Writer Palmyra X6, OpenAI Ultrafast and Google's HEIR/Credentio work all landed in earlier sweeps.",
+      "counts": {
+        "added": 2,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "mixedbread-toast-1",
+          "title": "Toast 1 — Mixedbread's search model runs the whole retrieval loop",
+          "category": "model",
+          "note": "Search-specialist model launched 2026-08-13; on the HN front page at 154 points, with published pricing, docs and a benchmark table."
+        },
+        {
+          "id": "1littlecoder-gemini-3-7-flash-cost-aug14",
+          "title": "1littlecoder — 'Save your token cost with Gemini 3.7 Flash'",
+          "category": "video",
+          "note": "Fresh upload (0h old) from a listed creator; a creator breakdown is its own item, not a dupe of the Gemini 3.7 Flash release entry."
+        }
+      ],
+      "updated": [
+        {
+          "id": "anthropic-claude-content-marking",
+          "title": "Claude marks its output — Anthropic adds text watermarks and C2PA file metadata",
+          "note": "Anthropic published a technical post on 2026-08-14 explaining the watermarking mechanism (it biases the randomness used to pick between equally viable words, keyed so the pattern is verifiable). Same release as this item, so linked here rather than added twice."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "algorithm",
+        "article",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }

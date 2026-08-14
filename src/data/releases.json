@@ -1,8 +1,217 @@
 {
-  "generatedAt": "2026-08-14T20:36:29.500Z",
+  "generatedAt": "2026-08-14T22:25:40.390Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "mixedbread-toast-1",
+      "categories": [
+        "model",
+        "tool"
+      ],
+      "title": "Toast 1 — Mixedbread's search model runs the whole retrieval loop",
+      "org": "Mixedbread",
+      "date": "2026-08-13",
+      "url": "https://www.mixedbread.com/blog/toast-1",
+      "summary": "Toast 1 is Mixedbread's search model that takes over the whole retrieval loop — splitting a question into subqueries, gathering evidence, then curating context. Mixedbread says it matches Claude Opus 5 and GPT-5.6 Sol on search quality.",
+      "tags": [
+        "mixedbread",
+        "toast-1",
+        "search",
+        "retrieval",
+        "rag",
+        "agentic-search",
+        "subagent",
+        "api"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Tokens vs vanilla agent": "3.5x fewer",
+        "Median search latency": "8-11s"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Mixedbread"
+        },
+        {
+          "label": "Model ID",
+          "value": "toast-1"
+        },
+        {
+          "label": "Context window",
+          "value": "131K tokens"
+        },
+        {
+          "label": "Max output",
+          "value": "4K tokens"
+        },
+        {
+          "label": "Availability",
+          "value": "Mixedbread API (Chat Completions)"
+        },
+        {
+          "label": "Search backend",
+          "value": "Any; tuned for Mixedbread Search"
+        },
+        {
+          "label": "Launch offer",
+          "value": "$5 credits for new users"
+        }
+      ],
+      "explainer": {
+        "tagline": "A dedicated search model that runs the retrieval loop itself, so the main agent stops burning tokens on it.",
+        "whatIsIt": "Toast 1 hands the entire search loop to one dedicated model. Given a question, it writes its own subqueries, calls search tools, reads the sources it finds, and returns only the curated evidence. Mixedbread built it to run either as a standalone retrieval agent or as a subagent inside a larger system.",
+        "howItWorks": "The loop runs as repeated rounds of tool calls — Mixedbread's worked example answers an employment-rate question with 16 tool calls across 3 rounds in 5.33 seconds. Toast 1 ships with tools for Mixedbread Search, including store_search, store_grep, chunk listing and metadata facets, but the model is backend-agnostic and plugs into an existing retrieval stack.",
+        "whyItMatters": "Retrieval is where agent token bills grow fastest. On Harvey's law-firm knowledge benchmark of 33 tasks, Mixedbread reports the same task score of 55 while dropping a vanilla agent's 80.6M tokens to 23.0M and its 21.7 turns per task to 11.2.",
+        "forWho": "teams building RAG and research agents",
+        "tryIt": "Set model to toast-1 in the Mixedbread Chat Completions API"
+      },
+      "benchmarks": [
+        {
+          "name": "OfficeQA Pro V2 (answer correctness)",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "GPT-5.6 Sol (Codex) + Toast 1",
+              "score": 70,
+              "highlight": true
+            },
+            {
+              "name": "Claude Fable 5 (Genie)",
+              "score": 60
+            },
+            {
+              "name": "GPT-5.6 Sol (Codex), no Toast 1",
+              "score": 33
+            }
+          ],
+          "source": "https://www.mixedbread.com/blog/toast-1"
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "Input",
+            "price": "$0.30",
+            "unit": "/ 1M tokens",
+            "note": "Launch price; $0.50 regular"
+          },
+          {
+            "plan": "Cached input",
+            "price": "$0.036",
+            "unit": "/ 1M tokens",
+            "note": "Launch price; $0.06 regular. Cache writes are free"
+          },
+          {
+            "plan": "Output",
+            "price": "$0.72",
+            "unit": "/ 1M tokens",
+            "note": "Launch price; $1.20 regular"
+          }
+        ],
+        "source": "https://www.mixedbread.com/pricing"
+      },
+      "faq": [
+        {
+          "q": "How much does Toast 1 cost?",
+          "a": "Toast 1 launched at $0.30 per million input tokens, $0.036 per million cached input tokens and $0.72 per million output tokens, with cache writes free. Mixedbread lists regular rates of $0.50, $0.06 and $1.20. Search usage is billed separately, and new users get $5 in credits."
+        },
+        {
+          "q": "How does Toast 1 compare to Claude Opus 5 and GPT-5.6 Sol on search?",
+          "a": "Mixedbread claims Toast 1 matches or outperforms Claude Opus 5 and GPT-5.6 Sol on search while being up to 10 times cheaper and 12 times faster. On OfficeQA Pro V2, a GPT-5.6 Sol Codex agent paired with Toast 1 reached 70% answer correctness at roughly $1.15 per task."
+        },
+        {
+          "q": "Does Toast 1 work with a search backend other than Mixedbread?",
+          "a": "Toast 1 is backend-agnostic. Mixedbread states the model performs best with Mixedbread Search but works with any search backend, so an existing retrieval stack can stay in place. It also integrates with coding agents through the Chat Completions API and OpenCode."
+        },
+        {
+          "q": "Can Toast 1 run as a subagent inside an existing agent?",
+          "a": "Yes. Mixedbread designed Toast 1 to run either standalone or as one of many subagents. In the Harvey law-firm knowledge test, adding Toast 1 as a subagent held the task score at 55 while cutting tokens from 80.6M to 23.0M and turns per task from 21.7 to 11.2."
+        },
+        {
+          "q": "How fast does a Toast 1 search finish?",
+          "a": "Mixedbread reports a median of 8 to 11 seconds for Toast 1 across retrieval benchmarks including BrowseComp Plus, OfficeQA Pro and LongSeal, against 20 seconds to 4 minutes for the frontier models it compares with. A sample employment-rate query resolved in 5.33 seconds."
+        }
+      ],
+      "image": {
+        "url": "https://www.mixedbread.com/images/blog/toast-1/intro-toast-1.jpg",
+        "alt": "Mixedbread announcement graphic for the Toast 1 search model",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.mixedbread.com/blog/toast-1"
+        },
+        {
+          "label": "Model Docs",
+          "url": "https://www.mixedbread.com/docs/agent/models"
+        },
+        {
+          "label": "Pricing",
+          "url": "https://www.mixedbread.com/pricing"
+        },
+        {
+          "label": "Changelog",
+          "url": "https://www.mixedbread.com/changelog"
+        }
+      ],
+      "publishDate": "2026-08-14T22:25:40.390Z"
+    },
+    {
+      "id": "1littlecoder-gemini-3-7-flash-cost-aug14",
+      "categories": [
+        "video"
+      ],
+      "title": "1littlecoder — 'Save your token cost with Gemini 3.7 Flash'",
+      "org": "1littlecoder",
+      "date": "2026-08-14",
+      "url": "https://www.youtube.com/watch?v=BOTJ0iXda-4",
+      "summary": "1littlecoder's new video looks at cutting token spend with Gemini 3.7 Flash, the model Google launched on August 13 at an introductory $0.75 per million input tokens and $3.75 per million output tokens.",
+      "tags": [
+        "1littlecoder",
+        "video",
+        "youtube",
+        "Gemini 3.7 Flash",
+        "google",
+        "pricing",
+        "cost-optimization"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "1littlecoder walks through using Gemini 3.7 Flash to bring an agent's token bill down.",
+        "whatIsIt": "1littlecoder's latest upload is a hands-on video about token cost and Gemini 3.7 Flash, Google's coding and agent model released on August 13. Google set introductory pricing at $0.75 per million input tokens and $3.75 per million output tokens, half the original 3.6 Flash rate.",
+        "howItWorks": "The cost angle comes from where Google positioned Gemini 3.7 Flash: a workhorse tier meant to handle software engineering and agent work that would otherwise go to a pricier model. Google's own numbers put it at 43.6% on FrontierCode 1.1 Main and 65.3% on DeepSWE v1.1, up from 34.4% and 49.0% for 3.6 Flash.",
+        "whyItMatters": "Introductory pricing on Gemini 3.7 Flash expires on December 31, 2026, after which rates double to $1.50 and $7.50 per million tokens. Anyone budgeting an agent workload has a narrow window where the cheaper tier is unusually cheap, which is what makes a cost-focused walkthrough useful now.",
+        "forWho": "developers budgeting LLM API spend"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/BOTJ0iXda-4/hqdefault.jpg",
+        "alt": "1littlecoder YouTube thumbnail for 'Save your token cost with Gemini 3.7 Flash'",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=BOTJ0iXda-4"
+        },
+        {
+          "label": "1littlecoder Channel",
+          "url": "https://www.youtube.com/@1littlecoder"
+        },
+        {
+          "label": "Gemini 3.7 Flash Post",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/"
+        }
+      ],
+      "author": {
+        "name": "1littlecoder",
+        "profileUrl": "https://www.youtube.com/@1littlecoder"
+      },
+      "publishDate": "2026-08-14T22:25:40.390Z"
+    },
     {
       "id": "google-credentio",
       "categories": [
@@ -5995,6 +6204,10 @@
         {
           "label": "Anthropic Help Doc",
           "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content"
+        },
+        {
+          "label": "How The Watermark Works",
+          "url": "https://www.anthropic.com/news/claude-text-watermark"
         },
         {
           "label": "The Register Report",
