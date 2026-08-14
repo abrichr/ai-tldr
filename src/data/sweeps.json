@@ -31837,6 +31837,33 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260814t040938z",
+      "timestamp": "2026-08-14T04:09:38.867Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Qwen, Moonshot, DeepSeek, Z.ai, MiniMax, Baidu, ByteDance), GitHub trending daily, HuggingFace models/datasets/papers, the full HN top-30 plus Show HN and /newest, r/LocalLLaMA, 8 YouTube creator feeds, the AI-for-science lane (Nature, STAT News, BCI/neural-decoding, genomics/protein design, pharma AI) and tier-1 press. Every qualifying item inside the 72h window was already ingested by the 01:31Z sweep 2.5h earlier: Gemini 3.7 Flash, DeepSeek Harness, DeepSeek V4 Pro 0813, GPT-5.6 Sol Ultrafast, Grok 4.6, MiniMax Music 3.0, Qwen3.8-2.4T-A95B, LTX-2.5 and Codex-on-Linux are all live. The three fresh HN hits that were NOT in the feed all failed the 72h date cap, not the quality bar: Mistral OCR 4.1 (271 pts, shipped 2026-07-16), Geoffrey Litt's 'Understanding is the new bottleneck' (238 pts, a July 2026 AI Engineer talk) and OpenAI Presence (2026-07-22). Qwen3.8-27B is still a countdown page (opens 2026-08-15), so it is vapour, not a release. Nothing shipped in the science/pharma/neuro lane inside 72h. YouTube RSS was degraded on this run (6-8 of 8 channels returned HTTP 404/500 across three attempts); the one channel that responded, Wes Roth, returned two videos that are both already in the feed. No watch-page fallback was used.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "article",
+        "benchmark",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
