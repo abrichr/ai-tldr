@@ -32007,6 +32007,33 @@
         "algorithm",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260814t145540z",
+      "timestamp": "2026-08-14T14:55:40.400Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Checked lab blogs (Anthropic newest post Aug 7; Meta newest Jul 27; Mistral's Aug 11 sovereign-inference post already in feed as mistral-regional-endpoints-ga; DeepMind's WeatherNext and SL2T already in feed; Cohere newest Aug 6; openai.com returned 403 from the runner), GitHub trending daily + weekly, HuggingFace models/datasets/papers, HN front page and /newest, and all 8 YouTube creator feeds. Everything past the bar was already ingested by the 07:26/09:12/13:01 sweeps (GLM-5.3, Gemini 3.7 Flash, Ultrafast GPT-5.6 Sol, DeepSeek Harness + V4 price rise, MiniMax Music 3.0, Palmyra X6, Cursor Builds, ICML reproductions, all 6 fresh creator videos). New candidates were rejected on the 72h cap (Mistral OCR 4.1 shipped Jul 16; LLMRouter arXiv v1 Aug 7; Intern-S2-Preview weights on HF since May 15/Jul 16 despite the Aug 13 tech report), on missing artifacts (DreamX-Phi 1.0 withholds weights until the IROS challenge ends; Brain2Qwerty's Nature Neuroscience paper released no code), on being old repos merely trending (diagram-design, holaOS, ego-lite, modly, google/skills, book-to-skill created Mar-May 2026; loopx v0.4.6 and code-graph-rag are patch releases), and on the ecosystem gate (IBM-OpenAI partnership, Apple's Alibaba-assisted China model, the Kog TechCrunch profile - no developer action, no shipped artifact).",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "algorithm",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
