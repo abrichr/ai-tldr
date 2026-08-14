@@ -31902,6 +31902,46 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260814t091252z",
+      "timestamp": "2026-08-14T09:12:52.798Z",
+      "source": "github-actions-sweep",
+      "summary": "Added GLM-5.3, Z.ai's post-training-only coding and cyber upgrade (406 points on HN, corroborated by MarkTechPost and Unite.AI), plus a fresh Two Minute Papers video on Anthropic's Riemann zeta result. Everything else on lab blogs, GitHub trending, HuggingFace and HN was already in the feed or outside the 72h window.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "zai-glm-5-3",
+          "title": "GLM-5.3 — Z.ai's coding model improves without retraining the base",
+          "category": "model",
+          "note": "Shipped 2026-08-14, 406 points on the HN front page, and the feed only covers GLM-5.2 — a genuinely new model release with published benchmark deltas."
+        },
+        {
+          "id": "two-minute-papers-claude-riemann-aug14",
+          "title": "Two Minute Papers — 'Claude AI Failed 650 Times, Then Beat The Human Record'",
+          "category": "video",
+          "note": "Uploaded 2026-08-14 (0h old per yt-rss-scan) by a listed creator; a creator breakdown is its own item, not a dupe of the existing Anthropic Riemann entry."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "video",
+        "repo",
+        "tool",
+        "dataset",
+        "paper",
+        "benchmark",
+        "article",
+        "security",
+        "algorithm",
+        "ecosystem"
+      ]
     }
   ]
 }

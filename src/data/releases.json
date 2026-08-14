@@ -1,8 +1,252 @@
 {
-  "generatedAt": "2026-08-14T07:26:31.095Z",
+  "generatedAt": "2026-08-14T09:12:52.798Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "zai-glm-5-3",
+      "categories": [
+        "model",
+        "security"
+      ],
+      "title": "GLM-5.3 — Z.ai's coding model improves without retraining the base",
+      "org": "Z.ai",
+      "date": "2026-08-14",
+      "url": "https://z.ai/blog/glm-5.3",
+      "summary": "GLM-5.3 keeps the same base model as GLM-5.2 and gets all of its gains from more post-training. Z.ai reports Terminal-Bench 3.0 rising from 4.6 to 28.3 and says cyber skill grew faster than expected.",
+      "tags": [
+        "glm-5-3",
+        "z-ai",
+        "zhipu",
+        "coding-model",
+        "agentic-coding",
+        "post-training",
+        "terminal-bench",
+        "deepswe",
+        "cybersecurity",
+        "vulnerability-research",
+        "open-weights",
+        "china"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Base": "Same as GLM-5.2",
+        "Weights": "~2 weeks after launch"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Z.ai (Zhipu AI)"
+        },
+        {
+          "label": "Base model",
+          "value": "Same base as GLM-5.2, not retrained"
+        },
+        {
+          "label": "What's new",
+          "value": "Scaled post-training only"
+        },
+        {
+          "label": "Thinking effort",
+          "value": "Low, high or max — cannot be turned off"
+        },
+        {
+          "label": "Availability",
+          "value": "Z.ai API, GLM Coding Plan, ZCode"
+        },
+        {
+          "label": "Open weights",
+          "value": "Promised about two weeks after launch"
+        },
+        {
+          "label": "Security findings",
+          "value": "2,436 vulnerabilities, 53 CVEs public"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "Terminal-Bench 3.0",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "GLM-5.3",
+              "score": 28.3,
+              "highlight": true
+            },
+            {
+              "name": "GLM-5.2",
+              "score": 4.6
+            }
+          ],
+          "source": "https://www.marktechpost.com/2026/08/14/z-ai-ships-glm-5-3-without-retraining-the-base-model-better-at-complex-coding-and-long-horizon-tasks/"
+        },
+        {
+          "name": "DeepSWE v1.1",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "GLM-5.3",
+              "score": 66.9,
+              "highlight": true
+            },
+            {
+              "name": "GLM-5.2",
+              "score": 46.2
+            }
+          ],
+          "source": "https://www.marktechpost.com/2026/08/14/z-ai-ships-glm-5-3-without-retraining-the-base-model-better-at-complex-coding-and-long-horizon-tasks/"
+        },
+        {
+          "name": "ExploitBench",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "GLM-5.3",
+              "score": 54.4,
+              "highlight": true
+            },
+            {
+              "name": "GLM-5.2",
+              "score": 24.4
+            }
+          ],
+          "source": "https://www.marktechpost.com/2026/08/14/z-ai-ships-glm-5-3-without-retraining-the-base-model-better-at-complex-coding-and-long-horizon-tasks/"
+        },
+        {
+          "name": "CyberGym",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "GLM-5.3",
+              "score": 84.5,
+              "highlight": true
+            },
+            {
+              "name": "GLM-5.2",
+              "score": 77.2
+            }
+          ],
+          "source": "https://www.marktechpost.com/2026/08/14/z-ai-ships-glm-5-3-without-retraining-the-base-model-better-at-complex-coding-and-long-horizon-tasks/"
+        }
+      ],
+      "explainer": {
+        "tagline": "Z.ai got a large jump in coding and security skill out of GLM-5.2's base model by training it harder after the fact.",
+        "whatIsIt": "GLM-5.3 reuses the GLM-5.2 base model and takes every capability gain from scaled-up post-training instead of a new pretraining run. Z.ai calls it the strongest open-weights coding system it has measured, and says the model's cybersecurity skill grew faster than the company expected as training scaled. Thinking is now always on, with three effort levels to pick from.",
+        "howItWorks": "Rather than pretraining a new base, Z.ai scaled the post-training stage on top of the GLM-5.2 base and pushed hard on long-horizon agent work — the kind of task where a model runs a terminal for many steps instead of writing one file. That is where the gap shows up: the longest-horizon coding benchmarks move the most, while short single-shot tasks move far less. Callers choose low, high or max thinking effort, but cannot switch thinking off.",
+        "whyItMatters": "A post-training-only upgrade is much cheaper than a new base model, so GLM-5.3 suggests labs can keep buying real capability without another pretraining bill. The security side cuts both ways: Z.ai credits the model's vulnerability hunting with 2,436 findings across 269 open-source projects, which is useful defensive work and also a sign that offensive skill is arriving in models anyone can rent by the token.",
+        "forWho": "developers on coding plans, agent builders, security researchers",
+        "tryIt": "Call model id glm-5.3 on the Z.ai API, or use it inside the GLM Coding Plan and ZCode."
+      },
+      "faq": [
+        {
+          "q": "Are the GLM-5.3 weights available to download?",
+          "a": "Not at launch. Z.ai says it will publish the GLM-5.3 weights roughly two weeks after release, once safety evaluation and hardening finish. Until then the model is API-only through Z.ai. The existing GLM-5 repository on GitHub, where earlier weights in this series landed, carries an Apache-2.0 license."
+        },
+        {
+          "q": "How does GLM-5.3 compare to Claude and GPT models?",
+          "a": "Unite.AI reports that GLM-5.3 edges past Claude Opus 4.8 when thinking effort is matched, but still trails Claude Fable 5 and GPT-5.6 Sol on the harder coding benchmarks. Z.ai's own framing is narrower: it claims GLM-5.3 is the strongest open-weights coding system the company has measured, not the strongest model overall."
+        },
+        {
+          "q": "Where can I use GLM-5.3 right now?",
+          "a": "GLM-5.3 is live on the Z.ai API, inside the GLM Coding Plan, and in ZCode, Z.ai's official coding harness. Existing GLM Coding Plan subscribers were moved onto it automatically, so no separate purchase is needed. Z.ai has not published a per-token price row for GLM-5.3 yet."
+        },
+        {
+          "q": "What did Z.ai's security work with the model actually find?",
+          "a": "Z.ai credits its GLM-5.3 security effort with 2,436 vulnerabilities across 269 open-source projects, 1,097 of them rated critical or high. Its public disclosure ledger at cvd.z.ai lists 53 of those as publicly disclosed CVEs, with 2,383 still under embargo, covering projects such as Linux, Safari, FreeBSD and GStreamer."
+        },
+        {
+          "q": "Can I turn off thinking in GLM-5.3?",
+          "a": "No. GLM-5.3 removes the option to disable thinking that earlier GLM releases offered. Instead, callers pick one of three thinking effort levels — low, high or max — and trade latency and token spend against quality. Teams that relied on a zero-thinking fast path will need to move to the low effort level."
+        }
+      ],
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/zai-org/GLM-5",
+        "alt": "GitHub card for Z.ai's GLM-5 repository, described as 'From Vibe Coding to Agentic Engineering'",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://z.ai/blog/glm-5.3"
+        },
+        {
+          "label": "API Docs",
+          "url": "https://docs.z.ai/guides/llm/glm-5"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/zai-org/GLM-5"
+        },
+        {
+          "label": "Security Ledger",
+          "url": "https://cvd.z.ai/"
+        },
+        {
+          "label": "Benchmark Breakdown",
+          "url": "https://www.marktechpost.com/2026/08/14/z-ai-ships-glm-5-3-without-retraining-the-base-model-better-at-complex-coding-and-long-horizon-tasks/"
+        }
+      ],
+      "publishDate": "2026-08-14T09:12:52.798Z"
+    },
+    {
+      "id": "two-minute-papers-claude-riemann-aug14",
+      "categories": [
+        "video"
+      ],
+      "title": "Two Minute Papers — 'Claude AI Failed 650 Times, Then Beat The Human Record'",
+      "org": "Two Minute Papers",
+      "date": "2026-08-14",
+      "url": "https://www.youtube.com/watch?v=QnGNF8k_uoc",
+      "summary": "Two Minute Papers walks through Anthropic's Riemann zeta result, where a research version of Claude tried 650 ideas that failed before raising a longstanding lower bound from 41.6% to 67.2%.",
+      "tags": [
+        "two-minute-papers",
+        "video",
+        "anthropic",
+        "claude",
+        "riemann-hypothesis",
+        "mathematics",
+        "ai-for-science",
+        "agent-orchestration",
+        "explainer"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Two Minute Papers covers the Anthropic maths result, including the 650 dead ends that came before it.",
+        "whatIsIt": "Two Minute Papers breaks down Anthropic's Riemann zeta work, in which an unreleased research version of Claude improved the lower bound on the fraction of Riemann zeta zeros satisfying the Riemann hypothesis from 41.6% to 67.2%. The video also links Scientific American's pushback piece, which argues the model did not solve the Riemann hypothesis itself.",
+        "howItWorks": "The Anthropic write-up that Two Minute Papers uses describes Claude first generating and trying 650 ideas, none of which worked. It then ran roughly 60 subagents over about a day and a half, issuing around 2,400 shell commands and thousands of numerical checks before it landed on the improved bound.",
+        "whyItMatters": "Two Minute Papers frames the result as a test of how far long-running agent orchestration can push research maths, and pairs it with the Scientific American critique so viewers see both the claim and the limits. The 650 failed attempts are the useful part for practitioners: the win came from letting the model run wide and long, not from one clever prompt.",
+        "forWho": "ML researchers, maths-curious developers",
+        "tryIt": "Watch the video, then read Anthropic's write-up at anthropic.com/research/riemann-zeta"
+      },
+      "author": {
+        "name": "Two Minute Papers",
+        "profileUrl": "https://www.youtube.com/channel/UCbfYPyITQ-7l4upoX8nvctg"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/QnGNF8k_uoc/hqdefault.jpg",
+        "alt": "Two Minute Papers thumbnail for the video on Claude and the Riemann zeta bound",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=QnGNF8k_uoc"
+        },
+        {
+          "label": "Anthropic Research",
+          "url": "https://www.anthropic.com/research/riemann-zeta"
+        },
+        {
+          "label": "Two Minute Papers",
+          "url": "https://www.youtube.com/channel/UCbfYPyITQ-7l4upoX8nvctg"
+        }
+      ],
+      "publishDate": "2026-08-14T09:12:52.798Z"
+    },
     {
       "id": "huggingface-icml-2026-reproductions",
       "categories": [
