@@ -1,8 +1,173 @@
 {
-  "generatedAt": "2026-08-14T16:52:34.381Z",
+  "generatedAt": "2026-08-14T18:53:48.439Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "google-heir-encrypted-inference",
+      "categories": [
+        "tool",
+        "repo",
+        "security"
+      ],
+      "title": "HEIR — Google's compiler runs AI models on encrypted data",
+      "org": "Google",
+      "date": "2026-08-14",
+      "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
+      "summary": "HEIR is Google's open-source compiler that turns a pre-trained AI model into one that runs on encrypted inputs, without decrypting them. Google shipped four demo apps: recommendations, card fraud, intrusion detection and hotword spotting.",
+      "tags": [
+        "homomorphic-encryption",
+        "fhe",
+        "encrypted-inference",
+        "privacy",
+        "compiler",
+        "mlir",
+        "google",
+        "open-source",
+        "security",
+        "private-computing-toolkit"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Google"
+        },
+        {
+          "label": "What it is",
+          "value": "Open-source compiler for homomorphic encryption"
+        },
+        {
+          "label": "Built on",
+          "value": "MLIR"
+        },
+        {
+          "label": "HE schemes",
+          "value": "BGV, BFV, CKKS"
+        },
+        {
+          "label": "Backends",
+          "value": "OpenFHE, Lattigo"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        },
+        {
+          "label": "Demo apps",
+          "value": "4 (recommendations, card fraud, intrusion detection, hotword)"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is HEIR free to use?",
+          "a": "HEIR is free and open source under the Apache-2.0 license, with the code on GitHub at github.com/google/heir. There is no paid tier and no sign-up. Google frames HEIR as a research and development platform as much as a product, and the repository runs monthly meetings, weekly office hours and public GitHub discussions that anyone can join."
+        },
+        {
+          "q": "Do I need to be a cryptography expert to use HEIR?",
+          "a": "Google's stated goal for HEIR is that you do not. The documented entry point is to write a normal program in Python, annotate which types hold secret values, and let HEIR compile everything else. Google says its vision is to make HEIR a one-click solution so non-experts can add encrypted inference to production applications, though that vision is not finished yet."
+        },
+        {
+          "q": "How fast is encrypted inference with HEIR today?",
+          "a": "The latency figures Google published for the HEIR demos come from a single-threaded CPU, so they are a floor rather than a best case. Google says it plans to show the speed benefits of dedicated hardware in the near future, working with accelerator partners Belfort Labs, Niobium, Cornami and Optalysys. No historical speed comparison is given in the post."
+        },
+        {
+          "q": "What has actually been built with HEIR so far?",
+          "a": "Google showed four private inference applications compiled with HEIR: a deep learning recommendation model with Belfort Labs, LG and NYU; credit card fraud detection with Niobium and hardshell.ai; network intrusion detection using the Kitsune system with Niobium; and a hotword detector with Belfort Labs. Four peer-reviewed publications have also been built on HEIR."
+        },
+        {
+          "q": "How does HEIR fit with Google's other privacy tools?",
+          "a": "HEIR is the newest addition to Google's Private Computing Toolkit, which already covers differential privacy, private set membership, private information retrieval and secure enclaves. Those techniques protect data in different ways; homomorphic encryption is the one that lets a server compute on data it can never read, which is why Google positions HEIR as the piece that unlocks private AI inference."
+        }
+      ],
+      "explainer": {
+        "tagline": "Google's HEIR compiler takes a normal trained model and rebuilds it to run on data the server can never read.",
+        "whatIsIt": "HEIR (Homomorphic Encryption Intermediate Representation) is an open-source compiler toolchain that converts pre-trained AI models so they operate on encrypted inputs instead of plain ones. Google announced it on 14 August 2026 as the newest piece of its Private Computing Toolkit. Alongside the announcement Google published four working private inference demos built with the compiler.",
+        "howItWorks": "Homomorphic encryption lets a computation run directly on encrypted data, so the server returns an encrypted answer it was never able to read. The compiler behind that trick is built on MLIR, and it supports the BGV, BFV and CKKS schemes across the OpenFHE and Lattigo backend libraries. The developer-facing path is a Python one: write the program, mark which types are secret, and HEIR compiles the rest.",
+        "whyItMatters": "Encrypted inference has been possible for years but has needed a cryptographer to hand-tune each application, which is why almost nobody shipped it. By moving that expertise into a compiler, HEIR lowers the entry cost for teams that want to run a model on data they are not allowed to see — health records, payment streams, private audio. The four demos show the shape of that: fraud scoring and intrusion detection on traffic the server cannot inspect.",
+        "forWho": "privacy engineers, ML infrastructure teams, cryptography researchers",
+        "tryIt": "Start at https://heir.dev or clone github.com/google/heir"
+      },
+      "image": {
+        "url": "https://blog.google/static/blogv2/images/google-1000x1000.png?version=pr20260729-1718",
+        "alt": "Google logo, from the Google security blog post announcing the HEIR compiler",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/"
+        },
+        {
+          "label": "HEIR on GitHub",
+          "url": "https://github.com/google/heir"
+        },
+        {
+          "label": "Documentation",
+          "url": "https://heir.dev/"
+        },
+        {
+          "label": "Paper (arXiv)",
+          "url": "https://arxiv.org/abs/2508.11095"
+        },
+        {
+          "label": "FHE Demos Repo",
+          "url": "https://github.com/google/fully-homomorphic-encryption"
+        }
+      ],
+      "publishDate": "2026-08-14T18:53:20.632Z"
+    },
+    {
+      "id": "fireship-flock-edge-ml-aug14",
+      "categories": [
+        "video"
+      ],
+      "title": "Fireship — 'The edge ML pipeline that jailbroke the 4th Amendment'",
+      "org": "Fireship",
+      "date": "2026-08-14",
+      "url": "https://www.youtube.com/watch?v=E7la7-dtfVM",
+      "summary": "Fireship's 14 August video covers how Flock Safety turned cheap edge ML cameras into a warrantless tracking network, and the open source project working to counter it.",
+      "tags": [
+        "youtube",
+        "fireship",
+        "video-explainer",
+        "edge-ml",
+        "computer-vision",
+        "surveillance",
+        "flock-safety",
+        "privacy",
+        "open-source"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Fireship's newest video is about surveillance cameras that run machine learning on the device itself.",
+        "whatIsIt": "'The edge ML pipeline that jailbroke the 4th Amendment...' is a Fireship video uploaded on 14 August 2026. Its subject is Flock Safety, whose low-cost cameras run machine learning at the edge, and how that hardware grew into what the video calls a warrantless tracking network. The video also covers an open source project set up to push back.",
+        "howItWorks": "Edge ML means the model runs on the camera itself rather than sending video to a data centre, which is what makes it cheap enough to install a lot of them. Fireship's framing is that the pipeline, not any single camera, is the thing worth looking at: cheap devices plus on-device inference add up to coverage that no one device would give.",
+        "whyItMatters": "Fireship's audience is working developers, and edge inference is a pattern many of them ship. Putting a civil liberties question next to a familiar deployment pattern is the point of the video — the same architecture choices that make an edge ML product viable are the ones that make this network hard to opt out of.",
+        "forWho": "developers working on edge inference and computer vision",
+        "tryIt": "Watch at https://www.youtube.com/watch?v=E7la7-dtfVM"
+      },
+      "author": {
+        "name": "Fireship",
+        "profileUrl": "https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/E7la7-dtfVM/hqdefault.jpg",
+        "alt": "Fireship video thumbnail for 'The edge ML pipeline that jailbroke the 4th Amendment'",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=E7la7-dtfVM"
+        },
+        {
+          "label": "Channel",
+          "url": "https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA"
+        }
+      ],
+      "publishDate": "2026-08-14T18:53:20.632Z"
+    },
     {
       "id": "qwen-3-8-27b",
       "categories": [

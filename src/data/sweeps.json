@@ -32065,6 +32065,69 @@
         "algorithm",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260814t185320z",
+      "timestamp": "2026-08-14T18:53:20.632Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Google's HEIR homomorphic-encryption compiler for private AI inference (blog.google, 14 Aug) and a fresh Fireship video on Flock Safety's edge ML camera network. Everything else on HN, GitHub trending, HF and the lab blogs was already in the feed — GLM-5.3, Qwen3.8-27B, DeepSeek V4 Pro pricing, Needle 2, WeatherNext Cyclones, Mistral regional endpoints and OpenAI's Daybreak/GPT-5.6-Cyber tiers. The Stack v3 (23 Jul) and softwaredoug's 'Don't classify, hallucinate' (10 Aug) both fell outside the 72h cap.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "google-heir-encrypted-inference",
+          "title": "HEIR — Google's compiler runs AI models on encrypted data",
+          "category": "tool",
+          "note": "Google shipped HEIR as an open-source compiler for encrypted AI inference on its official security blog today, with four working demo applications and a public Apache-2.0 repo."
+        },
+        {
+          "id": "fireship-flock-edge-ml-aug14",
+          "title": "Fireship — 'The edge ML pipeline that jailbroke the 4th Amendment'",
+          "category": "video",
+          "note": "Fresh Fireship upload (1h old at scan) on edge ML surveillance; freshness confirmed from the channel RSS feed, substantive AI/ML topic rather than a Short or promo."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "benchmark",
+        "security",
+        "ecosystem",
+        "article",
+        "algorithm"
+      ]
+    },
+    {
+      "id": "sweep-20260814t185348z",
+      "timestamp": "2026-08-14T18:53:48.439Z",
+      "source": "github-actions-sweep",
+      "summary": "Follow-up patch to the same sweep: shortened the google-heir-encrypted-inference summary to fit the 240-char cap. No new discovery in this pass.",
+      "counts": {
+        "added": 0,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [
+        {
+          "id": "google-heir-encrypted-inference",
+          "title": "HEIR — Google's compiler runs AI models on encrypted data",
+          "note": "Trim summary from 248 to 238 chars to fit the 240-char cap."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "tool"
+      ]
     }
   ]
 }
