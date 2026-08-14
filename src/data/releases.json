@@ -1,8 +1,212 @@
 {
-  "generatedAt": "2026-08-14T04:09:38.867Z",
+  "generatedAt": "2026-08-14T07:26:31.095Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "huggingface-icml-2026-reproductions",
+      "categories": [
+        "article",
+        "resource"
+      ],
+      "title": "ICML 2026 Open Reproductions — agents re-ran 2,226 papers, contested 496",
+      "org": "Hugging Face",
+      "date": "2026-08-13",
+      "url": "https://huggingface.co/blog/icml-2026-open-reproductions",
+      "summary": "Hugging Face ran a 19-day hackathon where 1,221 people pointed coding agents at papers accepted to ICML 2026. Agents judged 35,908 claims across 2,226 papers, and every attempt was published as a public logbook.",
+      "tags": [
+        "hugging-face",
+        "icml",
+        "reproducibility",
+        "open-science",
+        "coding-agents",
+        "Claude Code",
+        "Codex",
+        "Cursor",
+        "peer-review",
+        "research",
+        "evaluation"
+      ],
+      "importance": "major",
+      "author": {
+        "name": "Abubakar Abid",
+        "handle": "@abidlabs",
+        "profileUrl": "https://huggingface.co/abidlabs"
+      },
+      "metrics": {
+        "Papers with a claim verified": "1,103",
+        "Papers with a claim falsified or contested": "496"
+      },
+      "quickFacts": [
+        {
+          "label": "Organizer",
+          "value": "Hugging Face"
+        },
+        {
+          "label": "Hackathon window",
+          "value": "July 15 – August 2, 2026"
+        },
+        {
+          "label": "Participants",
+          "value": "1,221 community members"
+        },
+        {
+          "label": "Logbooks published",
+          "value": "6,816"
+        },
+        {
+          "label": "Papers attempted",
+          "value": "2,226 (34% of ICML 2026)"
+        },
+        {
+          "label": "Claims judged",
+          "value": "35,908"
+        },
+        {
+          "label": "Fully reproduced",
+          "value": "266 papers"
+        }
+      ],
+      "explainer": {
+        "tagline": "Hugging Face turned 1,221 volunteers and their coding agents loose on ICML 2026, then published every reproduction attempt.",
+        "whatIsIt": "ICML 2026 Open Reproductions is Hugging Face's report on a public experiment: point coding agents at the papers accepted to ICML 2026 and see which results hold up. Volunteers picked a paper, re-ran its experiments with an agent, and wrote down what they found. Every attempt is public, including the ones that failed.",
+        "howItWorks": "Each accepted ICML 2026 paper was indexed with its abstract, and its core scientific claims were pulled out so they could be judged one at a time. Participants used Claude Code, Codex, Cursor, Pi or OpenResearch's orx to redo the work. Every run produced a Trackio logbook — a static Hugging Face Space holding the write-up, the code, the artifacts and, optionally, the full agent execution trace.",
+        "whyItMatters": "Reviewing ICML 2026 was a scale problem: 23,918 submissions and 6,352 accepted papers, roughly double the year before. Open Reproductions gives a reader an auditable trail per paper instead of trust alone. It also shows how far the checks disagree — 242 papers drew opposing verdicts, where one logbook verified a claim and another contested it.",
+        "forWho": "ML researchers, reviewers and anyone citing ICML work",
+        "tryIt": "https://huggingface.co/spaces/ICML-2026-agent-repro/challenge"
+      },
+      "faq": [
+        {
+          "q": "How many ICML 2026 papers failed to reproduce?",
+          "a": "ICML 2026 Open Reproductions found 496 papers with at least one claim falsified or contested, and 49 papers where every claim was falsified. Hugging Face publishes each verdict next to the logbook that produced it, so a reader can check the reasoning rather than take the count on trust."
+        },
+        {
+          "q": "Which coding agents did participants use?",
+          "a": "Participants in ICML 2026 Open Reproductions used Claude Code, Codex, Cursor, Pi and OpenResearch's orx to re-run paper experiments. Hugging Face did not require one single tool, so the results reflect a mix of agents and human judgment. A logbook can optionally include the full agent execution trace, which shows exactly which commands the agent ran."
+        },
+        {
+          "q": "Can I read the individual reproduction logbooks?",
+          "a": "Yes. Every logbook from ICML 2026 Open Reproductions is public on the challenge Space at huggingface.co/spaces/ICML-2026-agent-repro/challenge, alongside a frozen dataset of the verdicts. Each Trackio logbook is a static Hugging Face Space containing the write-up, the code and the artifacts from that attempt, so anyone can inspect a claim without re-running it."
+        },
+        {
+          "q": "Did the attempts agree with each other?",
+          "a": "Not always. ICML 2026 Open Reproductions recorded 242 papers where different attempts reached opposing verdicts on the same claim — one logbook verified it while another contested it. Hugging Face kept both instead of picking a winner, so the disagreement stays visible and both logbooks remain public on the challenge Space."
+        }
+      ],
+      "image": {
+        "url": "https://huggingface.co/blog/assets/icml-2026-open-reproductions/thumbnail.png",
+        "alt": "Thumbnail for the Hugging Face ICML 2026 Open Reproductions report",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://huggingface.co/blog/icml-2026-open-reproductions"
+        },
+        {
+          "label": "Challenge Space",
+          "url": "https://huggingface.co/spaces/ICML-2026-agent-repro/challenge"
+        }
+      ],
+      "publishDate": "2026-08-14T07:26:31.095Z"
+    },
+    {
+      "id": "cursor-cloud-agent-builds",
+      "categories": [
+        "tool"
+      ],
+      "title": "Cursor Builds — cloud agents fork a warm dev environment instead of setup",
+      "org": "Cursor",
+      "date": "2026-08-13",
+      "url": "https://cursor.com/blog/builds",
+      "summary": "Cursor Builds are prepared snapshots of a dev environment, refreshed in the background, so a cloud agent forks a warm machine instead of running setup. Cursor measured 3x faster time to first token. Builds become the default on August 17.",
+      "tags": [
+        "Cursor",
+        "coding-agents",
+        "cloud-agents",
+        "dev-environments",
+        "developer-tools",
+        "filesystem-snapshots",
+        "build-caching"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Cursor"
+        },
+        {
+          "label": "What's new",
+          "value": "Builds for Cloud Agents"
+        },
+        {
+          "label": "Speed",
+          "value": "3x faster time to first token"
+        },
+        {
+          "label": "Build cadence",
+          "value": "Hourly by default"
+        },
+        {
+          "label": "Stale-code threshold",
+          "value": "24 hours (set 0 to always pull)"
+        },
+        {
+          "label": "Default everywhere",
+          "value": "August 17, 2026"
+        },
+        {
+          "label": "Price",
+          "value": "Included with Cloud Agents, no extra cost"
+        }
+      ],
+      "explainer": {
+        "tagline": "Cursor keeps warm copies of your development environment ready, so a cloud agent skips setup and starts working almost immediately.",
+        "whatIsIt": "Builds are ready-made copies of a development environment that Cursor prepares in the background and keeps warm. A cloud agent starting a task forks one of these instead of cloning the repo, installing dependencies and running setup scripts from scratch. Cursor announced Builds on August 13, 2026.",
+        "howItWorks": "The mechanism is a filesystem snapshot. Cursor re-runs the environment's install command on a schedule, capturing the repo, the installed dependencies and the finished setup scripts, then snapshots the result. Agents fork a live machine rather than restoring from disk, which is what makes the start near-instant. A build only becomes active if it succeeds.",
+        "whyItMatters": "Waiting on environment setup is dead time on every cloud-agent task, and it repeats every session. Cursor reports 10x faster internal environment boots, and the customer Faire says its largest, most complex repos now start in a few seconds. The failure behaviour matters as much as the speed — a broken build never reaches an agent, so a bad dependency bump shows up as a notification rather than a stalled task.",
+        "forWho": "teams running Cursor Cloud Agents on large repos",
+        "tryIt": "Cloud Agents dashboard → Builds tab → Enable Builds"
+      },
+      "faq": [
+        {
+          "q": "How much does Cursor Builds cost?",
+          "a": "Cursor Builds are included with Cloud Agents at no additional cost. Cursor prepares and refreshes the snapshots in the background as part of the existing Cloud Agents product, so there is no separate charge and no new plan to buy. New environments already use Builds automatically, and from August 17, 2026 every environment uses them by default."
+        },
+        {
+          "q": "Do I have to turn Builds on for an existing environment?",
+          "a": "Only until August 17, 2026, the date Cursor makes Builds the default for all new and existing environments. Before then, an existing environment can opt in from the Builds tab of the Cloud Agents dashboard, or through .cursor/environment.json. Cursor suggests running a setup agent first so you can review the configuration changes it proposes."
+        },
+        {
+          "q": "How often does Cursor rebuild the environment?",
+          "a": "Cursor runs a new build on a recurring schedule, and also rebuilds on configuration changes, on a manual trigger, or when an agent asks for one. A separate 'Update stale builds' setting controls how fresh the default-branch code must be. Build history, status and logs are all visible in the Builds tab of the Cloud Agents dashboard."
+        },
+        {
+          "q": "What happens if a build fails?",
+          "a": "A failed build never becomes active in Cursor, so agents keep starting from the last build that worked and you get notified. That covers cases like a dependency bump breaking an install script or a Docker build failing. Agents can also inspect and manage Builds through the built-in Cursor Cloud MCP, so you can ask one to diagnose the failure."
+        }
+      ],
+      "image": {
+        "url": "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/blog/builds-og-3-NuyGQslgxr6V6gDBaw0io2du12JmZW.gif",
+        "alt": "Cursor Builds announcement graphic for Cloud Agents",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://cursor.com/blog/builds"
+        },
+        {
+          "label": "Changelog",
+          "url": "https://cursor.com/changelog/08-13-26"
+        },
+        {
+          "label": "Docs",
+          "url": "https://cursor.com/docs/cloud-agent/builds"
+        }
+      ],
+      "publishDate": "2026-08-14T07:26:31.095Z"
+    },
     {
       "id": "wes-roth-grok-4-6-fable-aug13",
       "categories": [

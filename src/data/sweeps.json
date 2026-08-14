@@ -31864,6 +31864,44 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260814t072631z",
+      "timestamp": "2026-08-14T07:26:31.095Z",
+      "source": "github-actions-sweep",
+      "summary": "Added two items: Hugging Face's ICML 2026 Open Reproductions report (2,226 papers re-run by coding agents) and Cursor Builds for Cloud Agents. Lab blogs were quiet — Anthropic's newest post is August 7, Meta AI's is July 27, Moonshot's is July 16, and Mistral's August 11 post is infrastructure, not a release. All 7 fresh YouTube videos from the RSS scan are already in the feed, as are the top HN and HuggingFace trending items (Gemini 3.7 Flash, GPT-5.6 Sol Ultrafast, DeepSeek Harness, DeepSeek V4 Pro 0813, Qwen3.8-2.4T-A95B, MiniMax Music 3, LTX-2.5, Needle 2, Unsloth Desktop, Semantica). Mistral OCR 4.1 (HN, 314 pts) was dropped as July 16 and LLMRouter as August 7 — both outside the 72h cap; WeatherNext Cyclones is August 6 and Brain2Qwerty August 3. The science lane (BCI, medical imaging, genomics, pharma, Nature/STAT/neurosciencenews) surfaced nothing shipped within 72h.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "huggingface-icml-2026-reproductions",
+          "title": "ICML 2026 Open Reproductions — agents re-ran 2,226 papers, contested 496",
+          "category": "article",
+          "note": "Hugging Face Research report published August 13, 2026 with a released public artifact — 6,816 Trackio logbooks and a frozen verdict dataset on a live challenge Space — not a finding paper."
+        },
+        {
+          "id": "cursor-cloud-agent-builds",
+          "title": "Cursor Builds — cloud agents fork a warm dev environment instead of setup",
+          "category": "tool",
+          "note": "First-party August 13, 2026 ship from a top coding agent, with its own blog post, changelog entry and docs; distinct from the May 2026 cloud-environments item (new snapshot/fork mechanism, becomes default August 17)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
