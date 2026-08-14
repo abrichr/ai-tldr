@@ -1,8 +1,210 @@
 {
-  "generatedAt": "2026-08-14T14:55:40.400Z",
+  "generatedAt": "2026-08-14T16:52:34.381Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "qwen-3-8-27b",
+      "categories": [
+        "model"
+      ],
+      "title": "Qwen3.8-27B — a 27B open model that beats Opus 4.6 Max on SWE-bench Pro",
+      "org": "Alibaba (Qwen)",
+      "date": "2026-08-14",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "summary": "Qwen3.8-27B is Alibaba's new 27B dense open-weights model with built-in vision, released under Apache-2.0. It scores 61.7 on SWE-bench Pro and 84.3 on OSWorld-Verified, ahead of Opus 4.6 Max on both.",
+      "tags": [
+        "qwen",
+        "qwen3.8-27b",
+        "alibaba",
+        "open-weights",
+        "dense-model",
+        "vision-language",
+        "agentic-coding",
+        "local-llm",
+        "long-context",
+        "fp8",
+        "hugging-face"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "A 27B dense model with open Apache-2.0 weights that reads images and video and runs long agentic coding jobs.",
+        "whatIsIt": "Qwen3.8-27B adds native vision to Alibaba's compact dense line: it takes images and hour-scale video alongside text, and thinking mode is on by default with a per-request off switch. The weights are on Hugging Face under Apache-2.0, in both BF16 and FP8. The context window is 262,144 tokens natively and stretches to 1,000,000.",
+        "howItWorks": "Under the hood sit 64 layers that repeat one hybrid block 16 times: three Gated DeltaNet linear-attention layers for every single full Gated Attention layer. Qwen3.8-27B was trained with multi-token prediction, and a `reasoning_effort` setting picks low, medium or xhigh reasoning depth per call. Thinking from earlier turns is kept by default so agents do not lose their train of thought.",
+        "whyItMatters": "Strong agentic coding now comes in weights you can host yourself. On SWE-bench Pro the 27B model scores 61.7 against 53.4 for Opus 4.6 Max, and computer use on OSWorld-Verified climbs from Qwen3.6-27B's 63.9 to 84.3. Teams that could not send code to a closed API get a model that competes on the same tasks.",
+        "forWho": "developers running local or self-hosted models",
+        "tryIt": "Model id: Qwen/Qwen3.8-27B (BF16) or Qwen/Qwen3.8-27B-FP8"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Alibaba (Qwen)"
+        },
+        {
+          "label": "Size",
+          "value": "27B dense, 64 layers"
+        },
+        {
+          "label": "Context window",
+          "value": "262,144 native, up to 1,000,000"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        },
+        {
+          "label": "Modality",
+          "value": "Text, image and video in"
+        },
+        {
+          "label": "Formats",
+          "value": "BF16 and FP8 checkpoints"
+        },
+        {
+          "label": "Thinking",
+          "value": "On by default, tunable low / medium / xhigh"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "SWE-bench Pro (agentic coding)",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Qwen3.8-27B",
+              "score": 61.7,
+              "highlight": true
+            },
+            {
+              "name": "Qwen3.7-Plus",
+              "score": 57.6
+            },
+            {
+              "name": "Qwen3.6-27B",
+              "score": 53.5
+            },
+            {
+              "name": "Opus 4.6 Max",
+              "score": 53.4
+            },
+            {
+              "name": "Muse Glimmer-30B",
+              "score": 51.2
+            }
+          ],
+          "source": "https://huggingface.co/Qwen/Qwen3.8-27B"
+        },
+        {
+          "name": "OSWorld-Verified (computer use)",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Qwen3.8-27B",
+              "score": 84.3,
+              "highlight": true
+            },
+            {
+              "name": "Qwen3.7-Plus",
+              "score": 73.3
+            },
+            {
+              "name": "Opus 4.6 Max",
+              "score": 72.7
+            },
+            {
+              "name": "Muse Glimmer-30B",
+              "score": 65.9
+            },
+            {
+              "name": "Qwen3.6-27B",
+              "score": 63.9
+            }
+          ],
+          "source": "https://huggingface.co/Qwen/Qwen3.8-27B"
+        },
+        {
+          "name": "Terminal Bench 2.1 (agentic terminal coding)",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Opus 4.6 Max",
+              "score": 78.2
+            },
+            {
+              "name": "Qwen3.8-27B",
+              "score": 73,
+              "highlight": true
+            },
+            {
+              "name": "Qwen3.7-Plus",
+              "score": 64
+            },
+            {
+              "name": "Qwen3.6-27B",
+              "score": 63.4
+            },
+            {
+              "name": "Muse Glimmer-30B",
+              "score": 51.7
+            }
+          ],
+          "source": "https://huggingface.co/Qwen/Qwen3.8-27B"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Qwen3.8-27B free for commercial use?",
+          "a": "Qwen3.8-27B ships under the Apache-2.0 licence, which allows commercial use, modification and redistribution without a separate agreement with Alibaba. That is looser than Qwen3.8-Max, the 2.4T flagship, which uses Qwen's own bespoke licence. Both the BF16 and the FP8 checkpoints on Hugging Face carry the same Apache-2.0 terms."
+        },
+        {
+          "q": "How much better is Qwen3.8-27B than Qwen3.6-27B?",
+          "a": "Qwen3.8-27B improves on Qwen3.6-27B on every benchmark Qwen published. Agentic terminal coding on Terminal Bench 2.1 rises from 63.4 to 73.0, SWE-bench Pro from 53.5 to 61.7, and computer use on OSWorld-Verified from 63.9 to 84.3. The biggest jump is DeepSWE 1.1, which goes from 13.3 to 42.2."
+        },
+        {
+          "q": "Can I get Qwen3.8-27B as a hosted API?",
+          "a": "A hosted Qwen3.8-27B is planned but not live yet. The model card points to Qwen Cloud for managed inference and says the 27B service will offer a 1M-token context by default plus built-in tools, but marks it as coming soon with no date given. For now the open weights are the way to run it."
+        },
+        {
+          "q": "Which serving frameworks support Qwen3.8-27B?",
+          "a": "Qwen publishes ready-made recipes for Qwen3.8-27B on SGLang, vLLM and TokenSpeed, and the Hugging Face repository holds the post-trained weights in Transformers format. Qwen recommends those dedicated serving engines over plain Transformers for production or high-throughput work, and warns that throughput varies a lot between frameworks."
+        },
+        {
+          "q": "Does Qwen3.8-27B beat closed frontier models?",
+          "a": "Qwen3.8-27B leads Opus 4.6 Max on several agentic benchmarks in Qwen's own table: 61.7 versus 53.4 on SWE-bench Pro, 84.3 versus 72.7 on OSWorld-Verified, and 90.3 versus 88.8 on LiveCodeBench v6. Opus 4.6 Max still wins Terminal Bench 2.1 at 78.2 to 73.0, plus GPQA Diamond and HLE."
+        }
+      ],
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/Qwen/Qwen3.8-27B.png",
+        "alt": "Hugging Face model card header for Qwen/Qwen3.8-27B",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Model Card",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+        },
+        {
+          "label": "Qwen3.8 Announcement",
+          "url": "https://qwen.ai/blog?id=qwen3.8"
+        },
+        {
+          "label": "FP8 Weights",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8"
+        },
+        {
+          "label": "vLLM Recipe",
+          "url": "https://recipes.vllm.ai/Qwen/Qwen3.8-27B"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49299684"
+        }
+      ],
+      "publishDate": "2026-08-14T16:52:34.381Z"
+    },
     {
       "id": "suno-studio-2-0",
       "categories": [

@@ -32034,6 +32034,37 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260814t165234z",
+      "timestamp": "2026-08-14T16:52:34.381Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Qwen3.8-27B, Alibaba's 27B dense open-weights vision-language model (Apache-2.0), which landed on Hugging Face today and hit #1 trending plus 282 points on HN. Everything else on the front page was already in the feed: GLM-5.3, DeepSeek's peak/off-peak pricing change, Semantica, Cactus Needle 2 and Unsloth Desktop all collided semantically with existing entries; all 5 fresh YouTube videos from the RSS scan were already added; lab blogs (Anthropic, Meta, Mistral, DeepMind) had nothing inside 72h; HF papers and datasets, the bio/neuro/pharma lane and Cursor's changelog produced no new qualifying artifact.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "qwen-3-8-27b",
+          "title": "Qwen3.8-27B — a 27B open model that beats Opus 4.6 Max on SWE-bench Pro",
+          "category": "model",
+          "note": "New 27B dense open-weights VL model from a top lab, published today under Apache-2.0; clears the bar twice over (HN front page at 282 points, #1 on HuggingFace trending) and is a distinct model from the Qwen3.8-Max and Qwen3.8-2.4T-A95B entries already in the feed."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "ecosystem"
+      ]
     }
   ]
 }
