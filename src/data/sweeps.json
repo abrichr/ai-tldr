@@ -31942,6 +31942,33 @@
         "algorithm",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260814t110222z",
+      "timestamp": "2026-08-14T11:02:22.048Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, DeepMind, Meta, Mistral changelog, OpenAI via Techmeme/TechCrunch, Z.ai, Qwen), GitHub trending daily + weekly, Hugging Face models/datasets/papers, HN front page + newest, all 8 YouTube creator feeds, Cursor + Claude Code changelogs, Simon Willison, and the AI-for-science lane (STAT News, BCI / medical-imaging / pharma queries). Every release inside the 72h window is already in the feed: GLM-5.3, Gemini 3.7 Flash, DeepSeek V4 Pro 0813 + Harness + pricing, OpenAI Ultrafast, MiniMax Music 3, Cursor Builds, Needle 2, Semantica, Unsloth Desktop, Prime Agent, Cloudflare Computer, TencentDB Agent Memory v2, LoopX, and all 8 fresh creator videos. The remaining candidates failed the 72h cap, not the quality bar: Mistral OCR 4.1 (July 16), Geoffrey Litt's 'Understanding is the new bottleneck' (July 2), Intern-S2-Preview (~Aug 5), Agent Plugins 1.0.0 + holaOS 0.1 (Aug 6), LLMRouter arXiv v1 (Aug 7), ByteDance Seed 2.1 Turbo (Aug 10). Trending-but-not-new repos (github/spec-kit, google/skills, denoland/celld, code-graph-rag) have no dated release event. Zero adds.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }
