@@ -32128,6 +32128,44 @@
       "coverage": [
         "tool"
       ]
+    },
+    {
+      "id": "sweep-20260814t203629z",
+      "timestamp": "2026-08-14T20:36:29.500Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, DeepSeek, Z.ai, MiniMax, Moonshot, Qwen), GitHub trending, HuggingFace models/datasets/papers, HN pages 1-2, 8 YouTube feeds and the AI-for-science lane. Added one item: Google's Credentio C2PA library. Everything else fresh was already in the feed (all 5 RSS videos, GLM-5.3, Qwen3.8-27B, Gemini 3.7 Flash, DeepSeek V4 Pro 0813, Kog, Needle 2, The Stack v3) or missed the bar (Mixedbread Toast 1 at 140 HN points, Ai2 OlmoEarth embeddings, LLMRouter dated Aug 7).",
+      "counts": {
+        "added": 1,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "google-credentio",
+          "title": "Credentio — Google open-sources the C++ library behind its content credentials",
+          "category": "tool",
+          "note": "Google open-sourced the Apache-2.0 C++ library behind its C2PA Content Credentials validation on its official developer blog within 48h; a real released artifact with a verified repo, not an announcement."
+        }
+      ],
+      "updated": [
+        {
+          "id": "spacex-cursor-acquisition-jun16",
+          "title": "SpaceX to Buy Cursor for $60B — stock deal days after blockbuster IPO",
+          "note": "Deal closed August 14, 2026 (was 'expected close Q3 2026'). Confirmed by Cursor's own post at cursor.com/blog/joining-spacex; added it as a link and updated the close row."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }

@@ -1,8 +1,110 @@
 {
-  "generatedAt": "2026-08-14T18:53:48.439Z",
+  "generatedAt": "2026-08-14T20:36:29.500Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "google-credentio",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "Credentio — Google open-sources the C++ library behind its content credentials",
+      "org": "Google",
+      "date": "2026-08-13",
+      "url": "https://developers.googleblog.com/introducing-credentio-open-source-c-library-for-c2pa-content-credentials-from-google/",
+      "summary": "Credentio is Google's open-source C++ library for checking C2PA Content Credentials inside an app, with no upload to a server. Released under Apache-2.0, it already runs in nearly 40 Google products.",
+      "tags": [
+        "google",
+        "c2pa",
+        "content-credentials",
+        "provenance",
+        "media-authenticity",
+        "open-source",
+        "cpp",
+        "apache-2-0",
+        "synthid",
+        "ai-watermarking",
+        "library"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Google"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        },
+        {
+          "label": "Language",
+          "value": "C++"
+        },
+        {
+          "label": "C2PA versions",
+          "value": "2.2 and 2.4"
+        },
+        {
+          "label": "What it does",
+          "value": "Validates Content Credentials locally"
+        },
+        {
+          "label": "Already in production",
+          "value": "Nearly 40 C2PA-conformant Google products"
+        },
+        {
+          "label": "Source",
+          "value": "mediaprovenance.googlesource.com/credentio"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Credentio free to use in a commercial product?",
+          "a": "Credentio is published under the Apache-2.0 license, so a company can use, change and ship it inside a commercial product without paying Google. Google says it also wants outside contributions, and invites developers, security experts and media ecosystem partners to work on the code."
+        },
+        {
+          "q": "Does Credentio need an internet connection to check a file?",
+          "a": "Credentio runs completely inside the host application, so a media file never has to be sent to a cloud server or an external validation endpoint to be checked. Google built the API this way for privacy and speed, and kept the memory footprint small so it can handle multi-gigabyte video and high-resolution images."
+        },
+        {
+          "q": "Can Credentio create Content Credentials, or only check them?",
+          "a": "Credentio only validates existing Content Credentials today. Google says it plans to expand the library beyond validation, adding the ability to generate Content Credentials and embed them directly into media files as the C2PA specification evolves."
+        },
+        {
+          "q": "Which C2PA specification versions does Credentio support?",
+          "a": "Credentio supports C2PA specification versions 2.2 and 2.4. It reads both the official C2PA trust lists and custom trust lists supplied through its API, which lets a team validate against its own set of trusted signers instead of only the public one."
+        }
+      ],
+      "explainer": {
+        "tagline": "Google's C++ library checks C2PA Content Credentials on the device, with nothing sent to a server.",
+        "whatIsIt": "Credentio opens up the C++ code Google uses to check C2PA Content Credentials — the signed records that say where an image, video, audio file or document came from and whether AI made it. Google published it under Apache-2.0 on August 13, 2026. The same code already runs inside nearly 40 C2PA-conformant Google products.",
+        "howItWorks": "The library parses the manifests, assertions, signatures and claims stored inside a media file and reports whether each one verifies and where the integrity breaks. Validation happens entirely inside the calling application, against either the official C2PA trust list or a custom one. A command-line utility ships alongside the library for inspecting a single file by hand.",
+        "whyItMatters": "Apps that want to label AI-generated media have had to write C2PA parsing themselves or send user files to a cloud checker. Credentio removes both costs, and it is battle-tested: Google says this code has handled tens of billions of generated images, videos, audio files and documents. That matters more now that visible watermarks are becoming optional and the invisible provenance layer is what is left to check.",
+        "forWho": "media app, browser and platform developers",
+        "tryIt": "https://mediaprovenance.googlesource.com/credentio/"
+      },
+      "image": {
+        "url": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/credentio-hero-updated.2e16d0ba.fill-1200x600.png",
+        "alt": "Credentio hero graphic from the Google Developers Blog announcement",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://developers.googleblog.com/introducing-credentio-open-source-c-library-for-c2pa-content-credentials-from-google/"
+        },
+        {
+          "label": "Source Code",
+          "url": "https://mediaprovenance.googlesource.com/credentio/"
+        },
+        {
+          "label": "Coverage",
+          "url": "https://www.opensourceforu.com/2026/08/google-open-sources-c-library-for-content-provenance/"
+        }
+      ],
+      "publishDate": "2026-08-14T20:36:29.500Z"
+    },
     {
       "id": "google-heir-encrypted-inference",
       "categories": [
@@ -48786,7 +48888,7 @@
       "org": "SpaceX",
       "date": "2026-06-16",
       "url": "https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/",
-      "summary": "SpaceX agreed to acquire Anysphere, maker of the Cursor AI coding editor, in a $60B all-stock deal. The acquisition is meant to feed Cursor into SpaceX's AI work tied to xAI, and is expected to close in Q3 2026.",
+      "summary": "SpaceX has completed its $60B all-stock acquisition of Anysphere, maker of the Cursor AI coding editor. The deal closed on August 14, 2026, and Cursor says it is now part of SpaceX.",
       "tags": [
         "spacex",
         "xai",
@@ -48819,8 +48921,8 @@
           "value": "Cursor, the most-used AI coding editor among professional developers"
         },
         {
-          "label": "Expected close",
-          "value": "Q3 2026, pending regulatory clearance"
+          "label": "Closed",
+          "value": "August 14, 2026"
         },
         {
           "label": "Break-up fee",
@@ -48862,6 +48964,10 @@
         {
           "label": "TechCrunch Report",
           "url": "https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/"
+        },
+        {
+          "label": "Cursor Announcement",
+          "url": "https://cursor.com/blog/joining-spacex"
         },
         {
           "label": "Hacker News Thread",
