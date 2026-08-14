@@ -1,8 +1,165 @@
 {
-  "generatedAt": "2026-08-14T11:02:22.048Z",
+  "generatedAt": "2026-08-14T13:01:42.774Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "suno-studio-2-0",
+      "categories": [
+        "tool"
+      ],
+      "title": "Suno Studio 2.0 — browser music workstation adds MIDI and a chat bar",
+      "org": "Suno",
+      "date": "2026-08-13",
+      "url": "https://suno.com/blog/studio-2",
+      "summary": "Suno Studio 2.0 adds MIDI recording and editing, a chat bar, a wavetable synth and automation curves to Suno's browser music workstation. Premier subscribers can export 32-bit/48 kHz multitracks and stems without limits.",
+      "tags": [
+        "suno",
+        "music-generation",
+        "ai-music",
+        "audio",
+        "daw",
+        "midi",
+        "music-production",
+        "synth",
+        "stem-separation",
+        "plugins"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Suno"
+        },
+        {
+          "label": "Version",
+          "value": "Studio 2.0"
+        },
+        {
+          "label": "Availability",
+          "value": "Suno Premier subscribers"
+        },
+        {
+          "label": "Runs in",
+          "value": "The browser"
+        },
+        {
+          "label": "What's new",
+          "value": "MIDI, chat bar, wavetable synth, audio effects, automation"
+        },
+        {
+          "label": "Export",
+          "value": "32-bit / 48 kHz multitracks and stems, no limits"
+        },
+        {
+          "label": "Chat bar status",
+          "value": "Beta"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Who can use Suno Studio 2.0?",
+          "a": "Suno Studio 2.0 is available now to Suno Premier subscribers. It runs in the browser, so there is no desktop install and no separate audio workstation to buy. The chat bar inside Studio 2.0 is marked beta, which means Suno is still testing that part of the release while the rest of the features ship to Premier accounts."
+        },
+        {
+          "q": "Can I bring my own MIDI into Suno Studio 2.0?",
+          "a": "Yes. Suno Studio 2.0 lets you import, record and edit MIDI directly on the timeline. You can play parts in from a MIDI controller or from your computer keyboard using the new musical typing mode, which includes an arpeggiator and a chord mode. MIDI parts sit on the same timeline as material Studio generates for you."
+        },
+        {
+          "q": "What audio quality does Suno Studio 2.0 export?",
+          "a": "Suno Studio 2.0 exports multitracks and stems at 32-bit / 48 kHz. Suno states that Premier subscribers can export at that quality without limitations, so a session started in Studio can be handed off to another audio workstation for final mixing rather than staying locked inside Suno."
+        },
+        {
+          "q": "What audio effects come with Suno Studio 2.0?",
+          "a": "Suno Studio 2.0 ships high-quality audio effects including sidechain compression and convolution reverb, plus a wavetable synth for basses, leads, pads and chords. You can also design your own effects and synth presets through the chat bar, and automation curves let effect parameters change over the length of a track."
+        }
+      ],
+      "explainer": {
+        "tagline": "Suno's browser music workstation now takes MIDI, and a chat bar builds instruments, effects and synth presets on request.",
+        "whatIsIt": "MIDI arrives in Suno Studio 2.0 — you can import, record and edit MIDI directly on the timeline, playing it in from a MIDI controller or from your typing keyboard. The same update adds a wavetable synth, high-quality audio effects, automation curves and higher-fidelity stem separation. Suno Studio is a music workstation that runs in the browser, so none of this needs a desktop install.",
+        "howItWorks": "The chat bar is the new control surface: you describe what you want and Studio generates instruments and vocals, builds custom plugins and synth presets, or answers a production question. Musical typing turns a computer keyboard into a MIDI input, with an arpeggiator and a chord mode for playing parts in. Automation curves move effect and plugin parameters over the length of a track. Suno lists the chat bar as beta.",
+        "whyItMatters": "Producers who already work in a normal audio workstation no longer have to pick between Suno's generation and their own playing — parts written on a controller land on the same timeline as generated ones. Premier subscribers can pull 32-bit/48 kHz multitracks and stems out without limits, so a session started in Studio can be finished elsewhere instead of staying locked in.",
+        "forWho": "music producers",
+        "tryIt": "https://suno.com/studio-welcome"
+      },
+      "image": {
+        "url": "https://suno.com/blog/studio-2/opengraph-image?4a0be6b3238f1ddc",
+        "alt": "Suno Studio 2.0 announcement card",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://suno.com/blog/studio-2"
+        },
+        {
+          "label": "Release Notes",
+          "url": "https://suno.com/release-notes/studio-2"
+        },
+        {
+          "label": "Open Studio",
+          "url": "https://suno.com/studio-welcome"
+        },
+        {
+          "label": "Coverage",
+          "url": "https://www.musicbusinessworldwide.com/suno-launches-studio-2-0-with-midi-support/"
+        }
+      ],
+      "publishDate": "2026-08-14T13:01:42.774Z"
+    },
+    {
+      "id": "mun-logadan-opus-5-feels-worse-aug14",
+      "categories": [
+        "article"
+      ],
+      "title": "Mun logadan — benchmarks reward guessing, so Claude Opus 5 stops asking",
+      "org": "Mun logadan",
+      "date": "2026-08-14",
+      "url": "https://mun-logadan.github.io/why-does-opus-5-feel-worse/",
+      "summary": "Mun logadan argues that Claude Opus 5 feels worse to code with because benchmark training rewards models that guess confidently instead of asking what the developer meant. The post hit the Hacker News front page with 182 points.",
+      "tags": [
+        "claude-opus-5",
+        "anthropic",
+        "coding-agents",
+        "developer-experience",
+        "benchmarks",
+        "evaluation",
+        "opinion",
+        "hacker-news"
+      ],
+      "importance": "notable",
+      "author": {
+        "name": "Mun logadan",
+        "profileUrl": "https://github.com/mun-logadan",
+        "avatarUrl": "https://github.com/mun-logadan.png"
+      },
+      "explainer": {
+        "tagline": "One developer's theory for why a stronger model can be more annoying to work with: benchmarks punish asking questions.",
+        "whatIsIt": "'Why does Opus 5 feel worse to work with?' takes on a complaint developers have repeated since the model shipped — Claude Opus 5 scores higher than its predecessors yet feels more frustrating in everyday coding. Mun logadan's answer is that the model acts on its assumptions instead of checking them first. The post is short and the author labels the reasoning speculation; it carries no experiments or benchmark data.",
+        "howItWorks": "The argument points at two pressures inside AI labs: the push toward self-improving systems, and the incentive to win on benchmarks. Selecting for benchmark scores, the post says, 'inherently selects for models that make bold, usually-correct assumptions in the face of ambiguity. It penalizes models with a tendency to stop and ask for clarification.'",
+        "whyItMatters": "The piece lands on a real gap between how coding models are graded and how they are used: a benchmark task has one right answer, a working codebase often does not. As the author puts it, 'with real-life consequences on the line, I do not want an agent taking its best guess.' The Hacker News thread on the post drew 158 comments.",
+        "forWho": "developers using coding agents"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/mun-logadan/mun-logadan.github.io",
+        "alt": "GitHub social preview card for the mun-logadan.github.io blog repository"
+      },
+      "links": [
+        {
+          "label": "Blog Post",
+          "url": "https://mun-logadan.github.io/why-does-opus-5-feel-worse/"
+        },
+        {
+          "label": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=49296740"
+        },
+        {
+          "label": "Source Repo",
+          "url": "https://github.com/mun-logadan/mun-logadan.github.io"
+        }
+      ],
+      "publishDate": "2026-08-14T13:01:42.774Z"
+    },
     {
       "id": "zai-glm-5-3",
       "categories": [

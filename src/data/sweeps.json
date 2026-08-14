@@ -31969,6 +31969,44 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260814t130142z",
+      "timestamp": "2026-08-14T13:01:42.774Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, Qwen, Z.ai, DeepSeek, Moonshot, MiniMax), GitHub trending, HuggingFace models/datasets/papers, HN top 30, all 8 YouTube creator feeds and the AI-for-science lane. Added Suno Studio 2.0 (browser music workstation gets MIDI and a chat bar) and a Hacker-News-trending essay on why Claude Opus 5 feels worse to code with. Everything else fresh had already landed: GLM-5.3, Gemini 3.7 Flash, DeepSeek V4 Pro 0813, Ling-3.0-flash, Ultrafast mode, Palmyra X6 and all 8 fresh creator videos are already in the feed.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "suno-studio-2-0",
+          "title": "Suno Studio 2.0 — browser music workstation adds MIDI and a chat bar",
+          "category": "tool",
+          "note": "Real shipped product update on Suno's own blog and release notes (2026-08-13), with wide independent pickup (Music Business Worldwide, Music Week, MusicTech, Unite.AI); no Suno Studio item exists in the feed."
+        },
+        {
+          "id": "mun-logadan-opus-5-feels-worse-aug14",
+          "title": "Mun logadan — benchmarks reward guessing, so Claude Opus 5 stops asking",
+          "category": "article",
+          "note": "Published 2026-08-14 and on the HN front page at 182 points / 158 comments, clearing the HN top-30 signal; distinct from the existing Simon Willison Opus 5 export-controls item."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "article",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "ecosystem"
+      ]
     }
   ]
 }
