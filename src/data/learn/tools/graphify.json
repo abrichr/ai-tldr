@@ -1,0 +1,65 @@
+{
+  "slug": "graphify",
+  "name": "graphify",
+  "repo": "Graphify-Labs/graphify",
+  "homepage": "https://www.graphify.com",
+  "category": "retrieval-knowledge",
+  "categoryTitle": "Retrieval & Knowledge (RAG)",
+  "subcategory": "rag-frameworks",
+  "subcategoryTitle": "RAG Frameworks & Platforms",
+  "tagline": "Turn a folder of code, docs, PDFs and images into a queryable knowledge graph",
+  "seoTitle": "graphify - Local Knowledge Graphs for Code and Docs",
+  "metaDescription": "graphify is an open-source tool that turns a codebase, docs, PDFs and images into a local knowledge graph using tree-sitter AST parsing and Leiden communities — no vector store.",
+  "overview": [
+    "graphify builds a knowledge graph out of whatever you point it at — source code, Markdown notes, PDFs, screenshots and diagrams — and then lets you and your coding agent query that graph instead of re-reading the raw files. It runs locally: code is parsed deterministically with tree-sitter into an AST plus a call-graph pass, while docs, papers and images are turned into concepts and relationships by an LLM. There is no vector store and no Neo4j server required; the stack is NetworkX, Leiden community detection via graspologic, tree-sitter and vis.js.",
+    "A run writes a `graphify-out/` directory containing an interactive `graph.html` you can click through, an Obsidian-compatible vault, a persistent `graph.json` you can query weeks later, a `GRAPH_REPORT.md` that surfaces 'god nodes' (the highest-degree concepts everything routes through) and surprising cross-document connections, and a SHA256 cache so re-runs only reprocess changed files. Every edge is labelled `EXTRACTED`, `INFERRED` or `AMBIGUOUS`, so it stays clear which relationships were read out of the source and which were guessed.",
+    "It is designed to be driven by an agent. It installs as a `/graphify` skill for Claude Code and can also expose the graph over MCP with `--mcp`, so an agent can ask for a path between two symbols or an explanation of one. A `--wiki` mode emits Wikipedia-style Markdown articles with an `index.md` entry point, which lets any agent navigate the knowledge base by reading files. A `--watch` mode and a post-commit git hook keep the graph in sync as code changes."
+  ],
+  "features": [
+    "Deterministic AST extraction with tree-sitter for Python, TypeScript, JavaScript, Go, Rust, Java, C/C++, Ruby, C#, Kotlin, Scala and PHP, plus a call-graph pass",
+    "Multimodal ingestion — Markdown and text, PDFs with citation mining, and images (screenshots, diagrams, whiteboard photos) via model vision",
+    "Runs fully locally on NetworkX + Leiden communities; no vector store and no Neo4j server needed",
+    "Every edge tagged EXTRACTED, INFERRED or AMBIGUOUS so you can tell findings from guesses",
+    "Outputs an interactive graph.html, an Obsidian vault, a persistent graph.json, and a GRAPH_REPORT.md of god nodes and surprising connections",
+    "Agent-facing surfaces: a /graphify skill, an MCP stdio server (--mcp), and a crawlable Markdown wiki (--wiki)",
+    "Incremental by design — SHA256 cache, --update for changed files, --watch for live sync, and a post-commit git hook",
+    "Exports to SVG, GraphML (Gephi, yEd) and Neo4j cypher"
+  ],
+  "gettingStarted": {
+    "intro": "graphify installs as a Python package that registers a Claude Code skill. It requires Claude Code and Python 3.10 or newer.",
+    "steps": [
+      {
+        "heading": "Install",
+        "body": "Install from PyPI and register the skill. The PyPI package is named graphifyy while the graphify name is being reclaimed; the CLI and skill command are still graphify. On macOS with an externally-managed Python, or on Windows if the command is not found, use pipx instead.",
+        "code": "pip install graphifyy && graphify install",
+        "lang": "bash"
+      },
+      {
+        "heading": "Build a graph",
+        "body": "Open Claude Code in any directory and run the skill against a folder. It writes everything to graphify-out/.",
+        "code": "/graphify .\n/graphify ./raw --mode deep      # more aggressive INFERRED edge extraction\n/graphify ./raw --update         # re-extract only changed files",
+        "lang": "text"
+      },
+      {
+        "heading": "Query the graph",
+        "body": "Ask questions of the graph, trace a path between two symbols, or explain a single node.",
+        "code": "/graphify query \"what connects attention to the optimizer?\"\n/graphify path \"DigestAuth\" \"Response\"\n/graphify explain \"SwinTransformer\"",
+        "lang": "text"
+      },
+      {
+        "heading": "Keep it in sync and expose it",
+        "body": "Watch a folder for changes, install a post-commit hook, or serve the graph to an agent over MCP.",
+        "code": "/graphify ./raw --watch\ngraphify hook install\n/graphify ./raw --mcp",
+        "lang": "text"
+      }
+    ]
+  },
+  "useCases": [
+    "Reach for it when an agent needs the shape of a large codebase and reading the raw files would burn the context window",
+    "Reach for it to connect scattered research material — papers, notes, screenshots — into one navigable graph",
+    "Reach for it when you want graph-based retrieval with auditable edges rather than opaque vector similarity",
+    "Reach for it to keep a live map of a repository while several agents write code in parallel"
+  ],
+  "language": "Python",
+  "license": "Apache-2.0"
+}

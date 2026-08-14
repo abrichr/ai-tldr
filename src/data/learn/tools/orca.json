@@ -1,0 +1,64 @@
+{
+  "slug": "orca",
+  "name": "Orca",
+  "repo": "stablyai/orca",
+  "homepage": "https://onorca.dev",
+  "category": "coding-assistants",
+  "categoryTitle": "AI Coding",
+  "subcategory": "autonomous-coding",
+  "subcategoryTitle": "Autonomous Coding Agents",
+  "tagline": "Run a fleet of CLI coding agents side by side, each in its own git worktree",
+  "seoTitle": "Orca - Desktop Workspace for Parallel Coding Agents",
+  "metaDescription": "Orca is an open-source MIT-licensed desktop app that runs Claude Code, Codex, OpenCode and other CLI coding agents in parallel git worktrees, with a mobile companion.",
+  "overview": [
+    "Orca is an open-source desktop application for running several CLI coding agents at once. Instead of juggling terminal tabs, you launch Claude Code, Codex, OpenCode, Cursor CLI, Grok or any other terminal agent from a single workspace, and Orca gives each one its own isolated git worktree so their edits never collide. The project calls itself an ADE — an agent development environment — and it is published by Stably under the MIT License.",
+    "The core workflow is fan-out and compare: send one prompt to several agents, let each work in its own worktree, then review the diffs and merge the one that got it right. Around that, Orca adds the surrounding tooling a review loop needs — Ghostty-class terminal splits with WebGL rendering and persistent scrollback, an embedded Chromium browser with a Design Mode that pipes any clicked element's HTML, CSS and a cropped screenshot into an agent's prompt, and native GitHub and Linear views so you can open a worktree straight from an issue.",
+    "It runs on macOS, Windows and Linux, with a mobile companion app for iOS and Android that notifies you when an agent finishes and lets you send follow-ups from your phone. Agents can also be run on a remote machine over SSH with file editing, git and terminals intact, and there is a headless `orca serve` mode for Linux servers. You bring your own agent subscriptions — Orca orchestrates the CLIs you already pay for rather than reselling model access."
+  ],
+  "features": [
+    "Parallel git worktrees — fan one prompt across several agents, each isolated, then compare results and merge the winner",
+    "Works with any CLI agent that runs in a terminal, including Claude Code, Codex, Grok, Cursor, GitHub Copilot, OpenCode, Goose, Cline and Qwen Code",
+    "Terminal splits with WebGL rendering and scrollback that survives restarts",
+    "Design Mode: click a UI element in an embedded Chromium window to send its HTML, CSS and a cropped screenshot into the agent prompt",
+    "Native GitHub and Linear browsing — open a worktree from any PR, issue or board item without a context switch",
+    "SSH worktrees for running agents on a remote box, plus account switching and usage/rate-limit tracking for Claude and Codex",
+    "Mobile companion apps (iOS and Android) to monitor and steer running agents"
+  ],
+  "gettingStarted": {
+    "intro": "Orca ships as a desktop app. Install a build for your platform, then point it at a repository and start agents in worktrees.",
+    "steps": [
+      {
+        "heading": "Install the desktop app",
+        "body": "Download a build from onorca.dev, or install via a package manager.",
+        "code": "# macOS (Homebrew)\nbrew install --cask stablyai/orca/orca\n\n# Arch Linux (AUR) — or stably-orca-git to build from source\nyay -S stably-orca-bin",
+        "lang": "bash"
+      },
+      {
+        "heading": "Or grab a direct build",
+        "body": "Signed builds are published on every release for macOS (Apple Silicon and Intel), Windows and Linux AppImage from the repository's releases page.",
+        "code": "https://github.com/stablyai/orca/releases/latest",
+        "lang": "text"
+      },
+      {
+        "heading": "Run agents in parallel worktrees",
+        "body": "Open a repository in Orca and start agents — each gets its own isolated git worktree, so you can fan the same prompt across several agents and compare the resulting diffs before merging one.",
+        "code": "",
+        "lang": ""
+      },
+      {
+        "heading": "Run headless on a server",
+        "body": "For a remote or headless Linux box, Orca can be started in server mode and driven from the desktop or mobile client; see the project's headless Linux server guide.",
+        "code": "orca serve",
+        "lang": "bash"
+      }
+    ]
+  },
+  "useCases": [
+    "Reach for it when you want to race several coding agents on the same task and merge whichever diff is best",
+    "Reach for it when parallel agents keep stepping on each other's changes and you need per-agent git worktree isolation",
+    "Reach for it when you want to review agent output next to the PR or Linear ticket it came from, without switching apps",
+    "Reach for it when you want to keep an eye on long-running agents from your phone, or run them on a remote machine over SSH"
+  ],
+  "language": "TypeScript",
+  "license": "MIT"
+}

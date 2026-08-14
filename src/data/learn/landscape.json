@@ -1491,6 +1491,14 @@
      "title": "RAG Frameworks & Platforms",
      "tools": [
       {
+       "name": "graphify",
+       "slug": "graphify",
+       "repo": "Graphify-Labs/graphify",
+       "homepage": "https://www.graphify.com",
+       "description": "Turns a folder of code, docs, PDFs and images into a local knowledge graph with tree-sitter AST parsing and Leiden communities — queryable by agents over MCP, no vector store.",
+       "detail": true
+      },
+      {
        "name": "Langchain-Chatchat",
        "slug": "langchain-chatchat",
        "repo": "chatchat-space/Langchain-Chatchat",
@@ -4113,6 +4121,14 @@
      "id": "autonomous-coding",
      "title": "Autonomous Coding Agents",
      "tools": [
+      {
+       "name": "Orca",
+       "slug": "orca",
+       "repo": "stablyai/orca",
+       "homepage": "https://onorca.dev",
+       "description": "Open-source desktop workspace that runs Claude Code, Codex, OpenCode and other CLI coding agents in parallel, each in its own git worktree, with a mobile companion app.",
+       "detail": true
+      },
       {
        "name": "Devin",
        "slug": "devin-cognition",

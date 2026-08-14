@@ -90,9 +90,10 @@
   ],
   "versionHistory": [
     {
-      "version": "DeepSeek-V4-Pro",
+      "version": "DeepSeek-V4-Pro (0813, GA)",
       "slug": "deepseek-v4-pro",
-      "date": "2026-04-24"
+      "date": "2026-08-13",
+      "note": "General availability of the 1.6T Pro tier, superseding its April preview."
     },
     {
       "version": "DeepSeek-V4-Flash (0731 official public beta)",
@@ -107,7 +108,7 @@
       "note": "Original open-weight preview released alongside V4-Pro."
     }
   ],
-  "status": "Public beta (official release). Re-post-trained DeepSeek-V4-Flash-0731 checkpoint took over the `deepseek-v4-flash` alias on 2026-07-31. Pro tier still ships at its April 24 checkpoint.",
+  "status": "Public beta (official release). Re-post-trained DeepSeek-V4-Flash-0731 checkpoint took over the `deepseek-v4-flash` alias on 2026-07-31. The Pro tier reached general availability separately as DeepSeek-V4-Pro-0813 on 2026-08-13.",
   "contextWindow": "1M",
   "maxOutput": "384K",
   "parameters": "284B total · 13B active",
@@ -210,6 +211,7 @@
     "output": "$0.28",
     "cachedInput": "$0.0028",
     "unit": "/ 1M tokens",
+    "note": "Rates listed by DeepSeek before 16:00 UTC on 16 August 2026. From that point V4-Flash is billed by time of day: off-peak $0.007 cache-hit input / $0.22 cache-miss input / $0.66 output, and peak (01:00–04:00 and 06:00–10:00 UTC) $0.014 / $0.44 / $1.32 per 1M tokens.",
     "source": "https://api-docs.deepseek.com/quick_start/pricing"
   },
   "apis": [

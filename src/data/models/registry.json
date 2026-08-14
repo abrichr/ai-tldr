@@ -1121,6 +1121,25 @@
           "blurb": "Fast, cost-efficient mid-tier Gemini model balancing speed and intelligence.",
           "versions": [
             {
+              "name": "Gemini 3.7 Flash",
+              "slug": "gemini-3-7-flash",
+              "blurb": "Flash-tier coding and agent model (Aug 2026); built on 3.6 Flash with a reworked reasoning core — DeepSWE v1.1 65.3% and Terminal-bench 2.1 85.8%. 1M context, 64K output.",
+              "tags": [
+                "proprietary",
+                "multimodal",
+                "reasoning",
+                "coding",
+                "agentic",
+                "long-context",
+                "frontier"
+              ],
+              "contextWindow": "1M",
+              "license": "Proprietary",
+              "date": "2026-08-13",
+              "current": true,
+              "rich": true
+            },
+            {
               "name": "Gemini 3.6 Flash",
               "slug": "gemini-3-6-flash",
               "blurb": "Flash-tier workhorse (July 2026); ~17% fewer output tokens than 3.5 Flash with stronger agentic, coding and 1M-token long-context scores.",
@@ -1136,8 +1155,7 @@
               "contextWindow": "1M",
               "license": "Proprietary",
               "date": "2026-07-21",
-              "rich": true,
-              "current": true
+              "rich": true
             },
             {
               "name": "Gemini 3.5 Flash",
@@ -1797,7 +1815,7 @@
             {
               "name": "DeepSeek-V4-Pro",
               "slug": "deepseek-v4-pro",
-              "blurb": "Larger V4 tier: 1.6T total / 49B active MoE, 1M-token context, MIT-licensed open weights; built for coding and agentic tasks, with a V4-Pro-Max maxim…",
+              "blurb": "Larger V4 tier: 1.6T total / 49B active MoE, 1M-token context, MIT-licensed open weights. Previewed April 2026 and generally available as V4-Pro-0813 on 13 Aug 2026 — 87.9 on Terminal Bench 2.1, selectable low/high/max reasoning effort.",
               "tags": [
                 "frontier",
                 "open-weights",
@@ -1808,8 +1826,9 @@
               ],
               "contextWindow": "1M",
               "license": "MIT",
-              "date": "2026-04-24",
-              "rich": true
+              "date": "2026-08-13",
+              "rich": true,
+              "current": true
             },
             {
               "name": "DeepSeek-V4-Flash",
@@ -1825,8 +1844,7 @@
               ],
               "license": "MIT",
               "date": "2026-07-31",
-              "rich": true,
-              "current": true
+              "rich": true
             }
           ]
         },
@@ -2262,7 +2280,7 @@
             {
               "name": "Qwen3.8-Max",
               "slug": "qwen3-8-max",
-              "blurb": "Alibaba's August 2026 Qwen-Max flagship — a 2.4T-parameter multimodal MoE (95B active) with a 1M-token context, priced at $2 / $6 per million tokens; open weights scheduled for the week of August 10, 2026.",
+              "blurb": "Alibaba's August 2026 Qwen-Max flagship — a 2.4T-parameter multimodal MoE (95B active) with a 1M-token context, priced at $2 / $6 per million tokens. Its underlying weights were published in August 2026 as Qwen3.8-2.4T-A95B.",
               "tags": [
                 "frontier",
                 "proprietary",
@@ -2410,8 +2428,25 @@
         {
           "id": "qwen-open",
           "title": "Qwen (open-weight)",
-          "blurb": "The flagship open-weight (Apache 2.0) family spanning edge-sized dense models to large MoE models, covering general text, reasoning and agentic use.",
+          "blurb": "The flagship open-weight family spanning edge-sized dense models to large MoE models, covering general text, reasoning and agentic use. Licences vary by generation (Apache 2.0 through Qwen3.6; a custom licence for Qwen3.8).",
           "versions": [
+            {
+              "name": "Qwen3.8-2.4T-A95B",
+              "slug": "qwen3-8",
+              "blurb": "Open-weight Max-class release (Aug 2026); 2.4T-parameter MoE with 95B active, 262K context extensible to 1M, always-on reasoning. Text-only checkpoint under a custom Qwen licence.",
+              "tags": [
+                "open-weights",
+                "frontier",
+                "reasoning",
+                "coding",
+                "agentic",
+                "long-context"
+              ],
+              "contextWindow": "262K (up to 1M)",
+              "license": "Qwen3.8-Max License",
+              "date": "2026-08",
+              "current": true
+            },
             {
               "name": "Qwen3.6",
               "slug": "qwen3-6",
@@ -2426,7 +2461,6 @@
               ],
               "license": "Apache-2.0",
               "date": "2026-04",
-              "current": true,
               "rich": true
             },
             {

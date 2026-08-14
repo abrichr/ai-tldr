@@ -1,0 +1,190 @@
+{
+  "slug": "qwen3-8",
+  "name": "Qwen3.8-2.4T-A95B",
+  "maker": "alibaba",
+  "makerTitle": "Alibaba (Qwen)",
+  "line": "qwen-open",
+  "lineTitle": "Qwen (open-weight)",
+  "tagline": "The August 2026 open-weight release of Qwen's Max-class model: a 2.4T-parameter MoE with 95B active and a 262K context extensible to 1M.",
+  "seoTitle": "Qwen3.8-2.4T-A95B — open weights, specs, benchmarks",
+  "metaDescription": "Qwen3.8-2.4T-A95B (August 2026): Qwen's first Max-class open-weight model — 2.4T total / 95B active MoE, 262K context extensible to 1M, always-on thinking.",
+  "releaseDate": "2026-08",
+  "status": "Generally available",
+  "license": "Qwen3.8-Max License (custom, published as license_name \"qwen3.8-max\" on Hugging Face)",
+  "openWeights": true,
+  "modalities": [
+    "Text"
+  ],
+  "contextWindow": "262K (extensible to 1M)",
+  "maxOutput": "131K final response · 262K reasoning",
+  "parameters": "2.4T total · 95B active",
+  "architecture": "Sparse Mixture-of-Experts with 92 layers in a hybrid layout — 23 × (3 × (Gated DeltaNet → MoE) → 1 × (Gated Attention → MoE)). 512 experts with 11 activated per token (10 routed + 1 shared), 8192 hidden dimension, expert intermediate dimension 2048, and multi-token prediction trained with multiple steps.",
+  "tags": [
+    "open-weights",
+    "frontier",
+    "reasoning",
+    "coding",
+    "agentic",
+    "long-context"
+  ],
+  "overview": [
+    "Qwen3.8-2.4T-A95B is the open-weight release of Alibaba's Qwen3.8 generation, published on Hugging Face in August 2026 (the repository was created on 8 August 2026 and last updated on 12 August 2026, with a companion FP8 checkpoint). Qwen's own model card frames it as a first: 'For the first time, Qwen3.8 brings a Qwen-Max-class model to open release.' The weights are covered by a custom licence Qwen publishes as `qwen3.8-max`.",
+    "It is a sparse Mixture-of-Experts model with 2.4 trillion total parameters and 95 billion activated per token, built on the architectural foundation of Qwen3.5. The 92-layer stack interleaves Gated DeltaNet linear-attention blocks with Gated Attention blocks, each followed by an MoE layer, and routes to 11 of 512 experts per token. Context length is 262,144 tokens natively, extensible up to 1,010,000.",
+    "The released checkpoint is text-only and always reasons: multimodal input is not supported and thinking cannot be disabled, so every response opens with a `<think>…</think>` block before the final answer. Reasoning depth is controlled with `reasoning_effort` (xhigh by default, plus medium and low), and reasoning context from earlier turns is retained through `preserve_thinking`. Qwen recommends allocating up to 262,144 tokens for reasoning and 131,072 for the final response within a 1M-token window.",
+    "The artifacts ship in Hugging Face Transformers format and are compatible with vLLM, SGLang and TokenSpeed. Qwen3.8-Max — the hosted version on Qwen Cloud — is, in Qwen's words, 'the official version based on Qwen3.8-2.4T-A95B with more features, such as vision input & non-thinking support, 1M context length by default, official built-in tools'."
+  ],
+  "strengths": [
+    "Max-class capability released as downloadable weights — a tier Qwen had previously kept API-only",
+    "2.4T-parameter MoE that activates only 95B per token, plus an FP8 checkpoint for cheaper serving",
+    "262,144-token native context, extensible to 1,010,000 tokens",
+    "Hybrid Gated DeltaNet + Gated Attention layout designed for long-horizon agentic work",
+    "Selectable reasoning effort (low / medium / xhigh) with reasoning carried across turns via preserve_thinking",
+    "Runs on standard open serving stacks: Transformers, vLLM, SGLang, TokenSpeed"
+  ],
+  "useCases": [
+    "Reach for it for self-hosted agentic coding where a Max-class model must run on your own infrastructure",
+    "Reach for it for long-horizon, multi-step tasks that benefit from always-on reasoning",
+    "Reach for it for long-document and repo-scale work inside the 262K–1M context range",
+    "Reach for it as an open substitute when the hosted Qwen3.8-Max API is not an option"
+  ],
+  "comparisonTable": {
+    "caption": "Benchmarks published on the Qwen3.8-2.4T-A95B model card. Qwen reports the figures for Qwen3.8-Max, the hosted version built on these weights, against the models it names (August 2026).",
+    "models": [
+      "Opus 4.8",
+      "Fable 5",
+      "GPT 5.6 Sol (max)",
+      "Qwen3.7-Max",
+      "Qwen3.8-Max"
+    ],
+    "subject": 4,
+    "rows": [
+      { "benchmark": "Terminal Bench 2.1 (coding agent)", "scores": [84.6, 84.6, 88.8, 74.5, 86.6] },
+      { "benchmark": "SWE-bench Pro", "scores": [69.2, 80.0, 64.6, 60.6, 67.7] },
+      { "benchmark": "DeepSWE 1.1", "scores": [59.0, 70.0, 73.0, 21.6, 56.6] },
+      { "benchmark": "NL2Repo-Bench", "scores": [69.4, null, null, 47.2, 55.9] },
+      { "benchmark": "FrontierSWE", "scores": [70.0, 88.8, null, 40.7, 73.5] },
+      { "benchmark": "MLS-Bench-Lite", "scores": [42.8, 49.9, 46.2, 31.7, 41.0] },
+      { "benchmark": "PaperBench", "scores": [80.3, 88.8, 90.5, 64.8, 93.0] },
+      { "benchmark": "AndroidBench", "scores": [69.8, 84.5, 74.0, 56.5, 75.1] },
+      { "benchmark": "QwenSWEBench", "scores": [84.0, 86.3, 73.5, 63.4, 80.7] },
+      { "benchmark": "QwenQoderBench", "scores": [62.7, 63.1, 53.8, 36.8, 58.4] },
+      { "benchmark": "QwenReactBench (Elo)", "scores": [1694, 1770, 1564, 1538, 1724] },
+      { "benchmark": "QwenSVGBench (Elo)", "scores": [1648, 1690, 1758, 1499, 1713] },
+      { "benchmark": "CoWorkBench (general agent)", "scores": [72.3, 75.9, 71.5, 64.6, 74.8] },
+      { "benchmark": "WorkSpaceBench", "scores": [66.8, 68.7, 65.6, 61.4, 67.7] },
+      { "benchmark": "JobBench", "scores": [48.4, 57.4, 45.4, 31.3, 53.4] },
+      { "benchmark": "SkillsBench", "scores": [65.1, 70.9, 73.5, 61.2, 70.2] },
+      { "benchmark": "Agents' Last Exam (pass / score)", "scores": ["27.0 / 45.1", null, "30.6 / 53.6", "11.8 / 31.1", "27.0 / 52.4"] },
+      { "benchmark": "Automation-Bench (Pass@1)", "scores": [27.2, 29.1, 29.7, 14.2, 27.3] },
+      { "benchmark": "Toolathlon Verified (Pass@1)", "scores": [76.2, 77.9, 74.9, 49.7, 72.5] },
+      { "benchmark": "WideSearch", "scores": [72.9, 81.2, null, 75.2, 81.9] },
+      { "benchmark": "HLE w/ tools", "scores": [57.9, 64.5, 58.0, 53.5, 56.2] },
+      { "benchmark": "GPQA Diamond", "scores": [92.0, 92.6, 94.1, 92.4, 92.6] },
+      { "benchmark": "HLE", "scores": [45.7, 53.3, 47.2, 41.4, 43.6] },
+      { "benchmark": "IFBench", "scores": [62.2, 63.5, 72.7, 79.1, 82.8] },
+      { "benchmark": "$OneMillion-Bench (expert score)", "scores": [41.8, 55.9, 53.8, 44.4, 52.5] },
+      { "benchmark": "HealthBench", "scores": [52.4, null, 55.3, 54.5, 60.2] },
+      { "benchmark": "PLawBench", "scores": [69.6, 70.2, 72.3, 58.9, 73.2] },
+      { "benchmark": "PRBench-Legal", "scores": [52.7, 57.6, 57.6, 48.5, 57.6] },
+      { "benchmark": "PRBench-Finance", "scores": [51.9, 55.8, 55.5, 46.8, 58.3] },
+      { "benchmark": "MRCR v2 256K (8-needle)", "scores": [83.2, null, 93.8, 86.7, 92.9] },
+      { "benchmark": "LongBench v2", "scores": [69.1, null, 67.1, 65.3, 66.3] }
+    ],
+    "source": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"
+  },
+  "apis": [
+    {
+      "provider": "Qwen Cloud (hosted Qwen3.8-Max)",
+      "url": "https://www.qwencloud.com/models/qwen3.8-max",
+      "modelId": "qwen3.8-max"
+    }
+  ],
+  "links": [
+    {
+      "label": "Qwen3.8-2.4T-A95B model card (Hugging Face)",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+      "kind": "model-card"
+    },
+    {
+      "label": "Qwen3.8-2.4T-A95B-FP8 checkpoint (Hugging Face)",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B-FP8",
+      "kind": "model-card"
+    },
+    {
+      "label": "Qwen — Qwen3.8 blog post",
+      "url": "https://qwen.ai/blog?id=qwen3.8",
+      "kind": "announcement"
+    },
+    {
+      "label": "Qwen Cloud — Qwen3.8-Max overview",
+      "url": "https://www.qwencloud.com/models/qwen3.8-max",
+      "kind": "official"
+    },
+    {
+      "label": "Qwen Studio (chat)",
+      "url": "https://chat.qwen.ai/?models=qwen3.8-max",
+      "kind": "playground"
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is Qwen3.8-2.4T-A95B?",
+      "a": "It is the open-weight checkpoint of Alibaba's Qwen3.8 generation, published on Hugging Face in August 2026. Qwen's model card describes it as the first time a Qwen-Max-class model has been released with open weights. It is a Mixture-of-Experts model with 2.4 trillion total parameters and 95 billion activated per token."
+    },
+    {
+      "q": "What licence are the Qwen3.8 weights under?",
+      "a": "The Hugging Face repository lists the licence as 'other' with the licence name qwen3.8-max, pointing at a LICENSE file in the repo — a custom Qwen licence rather than Apache-2.0, which earlier open Qwen releases such as Qwen3.6 used. Check the LICENSE file for the exact terms before commercial deployment."
+    },
+    {
+      "q": "How long a context does it support?",
+      "a": "262,144 tokens natively, extensible up to 1,010,000 tokens. Within a 1M-token window Qwen recommends allocating up to 262,144 tokens to reasoning content and 131,072 tokens to the final response."
+    },
+    {
+      "q": "How is it different from Qwen3.8-Max?",
+      "a": "Qwen3.8-Max is the hosted version on Qwen Cloud built on these weights. Per Qwen's model card it adds vision input, non-thinking support, a 1M context length by default, and official built-in tools. The open checkpoint is text-only and always reasons — thinking cannot be disabled."
+    },
+    {
+      "q": "How do I run it?",
+      "a": "The weights ship in Hugging Face Transformers format and are compatible with vLLM, SGLang and TokenSpeed; an FP8 checkpoint is published alongside the BF16 one. Qwen's recommended sampling settings are temperature 1.0, top_p 0.95, top_k 20, min_p 0.0, presence_penalty 0.0 and repetition_penalty 1.0."
+    }
+  ],
+  "versionHistory": [
+    {
+      "version": "Qwen3.8-2.4T-A95B",
+      "slug": "qwen3-8",
+      "date": "2026-08",
+      "note": "First Max-class Qwen released with open weights; 2.4T total / 95B active.",
+      "current": true
+    },
+    {
+      "version": "Qwen3.6",
+      "slug": "qwen3-6",
+      "date": "2026-04"
+    },
+    {
+      "version": "Qwen3.5",
+      "slug": "qwen3-5",
+      "date": "2026-02-16"
+    },
+    {
+      "version": "Qwen3 (2507 update)",
+      "slug": "qwen3-2507",
+      "date": "2025-07"
+    },
+    {
+      "version": "Qwen3",
+      "slug": "qwen3",
+      "date": "2025-04-28"
+    },
+    {
+      "version": "Qwen2.5",
+      "slug": "qwen2-5",
+      "date": "2024-09"
+    },
+    {
+      "version": "Qwen2",
+      "slug": "qwen2",
+      "date": "2024-06"
+    }
+  ]
+}

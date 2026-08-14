@@ -3,17 +3,20 @@
   "name": "DeepSeek-V4-Pro",
   "maker": "deepseek",
   "makerTitle": "DeepSeek",
-  "tagline": "1.6T-parameter open-weight MoE with a 1M-token context and tiered reasoning effort.",
+  "line": "deepseek-v4",
+  "lineTitle": "DeepSeek V4",
+  "tagline": "1.6T-parameter open-weight MoE with a 1M-token context and tiered reasoning effort; generally available as V4-Pro-0813 from August 2026.",
   "seoTitle": "DeepSeek-V4-Pro: 1.6T Open-Weight MoE, 1M Context",
-  "metaDescription": "DeepSeek-V4-Pro is a 1.6T-parameter (49B active) open-weight MoE model with a 1M-token context, MIT license, and Non-think/Think/Max reasoning modes.",
-  "releaseDate": "2026-04-24",
-  "status": "Preview",
+  "metaDescription": "DeepSeek-V4-Pro is a 1.6T-parameter (49B active) open-weight MoE with a 1M-token context and MIT licence. The 0813 GA release scores 87.9 on Terminal Bench 2.1.",
+  "releaseDate": "2026-08-13",
+  "status": "Generally available",
   "license": "MIT",
   "openWeights": true,
   "modalities": [
     "Text"
   ],
   "contextWindow": "1M",
+  "maxOutput": "384K",
   "parameters": "1.6T total · 49B active",
   "architecture": "Mixture-of-Experts",
   "tags": [
@@ -25,15 +28,18 @@
     "agentic"
   ],
   "overview": [
-    "DeepSeek-V4-Pro is the larger of the two models in DeepSeek's V4 series, released as a preview on 24 April 2026. It is a Mixture-of-Experts language model with 1.6 trillion total parameters and 49 billion activated per token, and it supports a context length of one million tokens. The smaller sibling in the series is DeepSeek-V4-Flash (284B total / 13B active).",
-    "The model introduces a Hybrid Attention Architecture that combines Compressed Sparse Attention and Heavily Compressed Attention to make long-context inference far cheaper than V3: in the 1M-token setting DeepSeek reports it needs only about 27% of the single-token inference FLOPs of the prior generation. It was trained on more than 32 trillion tokens and uses techniques including Manifold-Constrained Hyper-Connections and the Muon optimizer.",
-    "DeepSeek-V4-Pro exposes three reasoning-effort modes — Non-think, Think High, and Think Max — where 'Think Max' (sometimes referred to as V4-Pro-Max) applies the highest reasoning budget. All weights are released under the MIT License and published on Hugging Face, making the model fully open for local deployment and commercial use."
+    "DeepSeek-V4-Pro is the larger of the two models in DeepSeek's V4 series. It first appeared as a preview on 24 April 2026 and reached general availability on 13 August 2026 as the checkpoint DeepSeek-V4-Pro-0813, which DeepSeek calls 'the official release of DeepSeek-V4-Pro, superseding the preview version, with greatly enhanced agentic capabilities'. It is a Mixture-of-Experts language model with 1.6 trillion total parameters and 49 billion activated per token, and it supports a context length of one million tokens. The smaller sibling in the series is DeepSeek-V4-Flash (284B total / 13B active).",
+    "The model introduces a Hybrid Attention Architecture that combines Compressed Sparse Attention and Heavily Compressed Attention to make long-context inference far cheaper than V3: in the 1M-token setting DeepSeek reports it needs only about 27% of the single-token inference FLOPs of the prior generation. It was trained on more than 32 trillion tokens and uses techniques including Manifold-Constrained Hyper-Connections and the Muon optimizer. The 0813 release keeps the preview's model structure and attaches a DSpark speculative-decoding module.",
+    "The GA checkpoint is aimed squarely at agent work. In DeepSeek's own comparison it scores 87.9 on Terminal Bench 2.1 (against 72.1 for the preview), 62.7 on DeepSWE (12.8 for the preview), 83.3 on Cybergym, 74.1 on Toolathlon-Verified, 61.5 on NL2Repo and 31.8 on the public AutomationBench set, with HLE at 42.7 without tools and 60.0 with tools. DeepSeek evaluates the code-agent tasks using the minimal mode of DeepSeek Harness at the `max` reasoning-effort level.",
+    "Reasoning effort is selectable through the `reasoning_effort` parameter, which in the 0813 release takes the levels `low`, `high` and `max`. All weights are released under the MIT License and published on Hugging Face, making the model fully open for local deployment and commercial use; for the `high` and `max` levels DeepSeek recommends allowing up to 384K output tokens.",
+    "DeepSeek also changed how the V4 API is billed alongside the GA launch: from 16:00 UTC on 16 August 2026 prices vary by time of day, with peak hours defined as 01:00–04:00 and 06:00–10:00 UTC and off-peak rates set at half the peak rate."
   ],
   "strengths": [
     "Open MIT-licensed weights at frontier scale (1.6T parameters), free for commercial use and local deployment",
+    "87.9 on Terminal Bench 2.1 and 62.7 on DeepSWE in DeepSeek's GA comparison — far above the April preview (72.1 and 12.8)",
     "Native one-million-token context window with efficient hybrid attention",
-    "Selectable reasoning effort (Non-think / Think High / Think Max) to trade latency for depth",
-    "Strong knowledge and coding benchmark results among open models",
+    "Selectable reasoning effort (low / high / max) to trade latency for depth, with up to 384K output tokens",
+    "DSpark speculative-decoding module attached in the 0813 release",
     "Very low API pricing relative to capability, with aggressive cache-hit discounts"
   ],
   "useCases": [
@@ -44,46 +50,162 @@
   ],
   "benchmarks": [
     {
-      "name": "MMLU",
-      "score": 90.1,
+      "name": "Terminal Bench 2.1",
+      "score": 87.9,
       "unit": "%",
       "max": 100,
-      "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+      "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813"
     },
     {
-      "name": "MMLU-Pro",
-      "score": 73.5,
+      "name": "Cybergym",
+      "score": 83.3,
       "unit": "%",
       "max": 100,
-      "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+      "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813"
     },
     {
-      "name": "HumanEval",
-      "score": 76.8,
+      "name": "Toolathlon-Verified",
+      "score": 74.1,
       "unit": "%",
       "max": 100,
-      "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+      "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813"
     },
     {
-      "name": "GSM8K",
-      "score": 92.6,
+      "name": "DSBench-FullStack (internal)",
+      "score": 71.1,
       "unit": "%",
       "max": 100,
-      "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+      "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813"
     },
     {
-      "name": "LongBench-V2",
-      "score": 51.5,
+      "name": "DSBench-Hard (internal)",
+      "score": 67.2,
       "unit": "%",
       "max": 100,
-      "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+      "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813"
+    },
+    {
+      "name": "DeepSWE",
+      "score": 62.7,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813"
+    },
+    {
+      "name": "NL2Repo",
+      "score": 61.5,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813"
+    },
+    {
+      "name": "HLE (with tools)",
+      "score": 60,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813"
+    },
+    {
+      "name": "AutomationBench (public set)",
+      "score": 31.8,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813"
+    },
+    {
+      "name": "Agents' Last Exam",
+      "score": 25.7,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813"
     }
   ],
+  "comparisonFigures": [
+    {
+      "url": "/models-media/deepseek-v4-pro-cmp-3.png",
+      "alt": "DeepSeek's GA benchmark table comparing DeepSeek-V4-Pro-0813 with DeepSeek-V4-Flash-0731, both V4 preview checkpoints, GLM-5.2, Kimi-K3, Opus-4.8 and Fable 5 on HLE, Terminal Bench 2.1, NL2Repo, Cybergym, DeepSWE, Toolathlon-Verified, Agents' Last Exam, AutomationBench and DSBench.",
+      "caption": "DeepSeek's published comparison for the V4-Pro-0813 general-availability release (13 August 2026).",
+      "credit": "DeepSeek",
+      "source": "https://api-docs.deepseek.com/news/news260813"
+    },
+    {
+      "url": "/models-media/deepseek-v4-pro-cmp-1.png",
+      "alt": "Bar chart comparing DeepSeek-V4-Pro (DeepSeek-V4-Pro-Max) with Claude-Opus-4.6-Max, GPT-5.4-xHigh, and Gemini-3.1-Pro-High on Knowledge & Reasoning (SimpleQA Verified, HLE, Apex Shortlist, Codeforces) and Agentic Capabilities (SWE Verified, Terminal Bench 2.0, Toolathlon).",
+      "caption": "DeepSeek's April 2026 preview comparison against leading closed-source models.",
+      "credit": "DeepSeek",
+      "source": "https://api-docs.deepseek.com/news/news260424"
+    },
+    {
+      "url": "/models-media/deepseek-v4-pro-cmp-2.png",
+      "alt": "Detailed benchmark table comparing DeepSeek-V4-Pro (Max and Thinking modes) and DeepSeek-V4-Flash against Claude, GPT, and Gemini across Knowledge & Reasoning, Code, Long Context, and Agentic categories.",
+      "caption": "Full numeric benchmark table published with the April 2026 V4 preview.",
+      "credit": "DeepSeek",
+      "source": "https://api-docs.deepseek.com/news/news260424"
+    }
+  ],
+  "comparisonTable": {
+    "caption": "DeepSeek-V4-Pro-0813 against the field, as published by DeepSeek with the GA release (13 August 2026).",
+    "models": [
+      "DeepSeek-V4-Pro-0813",
+      "DeepSeek-V4-Flash-0731",
+      "DeepSeek-V4-Pro (Preview)",
+      "DeepSeek-V4-Flash (Preview)",
+      "GLM-5.2",
+      "Kimi K3",
+      "Opus-4.8",
+      "Fable-5 (w/ fallback)"
+    ],
+    "subject": 0,
+    "rows": [
+      {
+        "benchmark": "HLE (without / with tools)",
+        "scores": ["42.7 / 60.0", "37.8 / 51.5", "37.7 / 48.2", "34.8 / 45.1", "40.5 / 54.7", "43.5 / 56.0", "49.8 / 57.9", "53.3 / 63.0"]
+      },
+      {
+        "benchmark": "Terminal Bench 2.1",
+        "scores": [87.9, 82.7, 72.1, 61.8, 81.0, 88.3, 85.0, 88.0]
+      },
+      {
+        "benchmark": "NL2Repo",
+        "scores": [61.5, 54.2, 38.5, 39.4, 48.9, null, 69.7, null]
+      },
+      {
+        "benchmark": "Cybergym",
+        "scores": [83.3, 76.7, 52.7, 38.7, null, 80.0, 78.3, 83.1]
+      },
+      {
+        "benchmark": "DeepSWE",
+        "scores": [62.7, 54.4, 12.8, 7.3, 46.2, 67.5, 58.0, 70.0]
+      },
+      {
+        "benchmark": "Toolathlon-Verified",
+        "scores": [74.1, 70.3, 55.9, 49.7, 59.9, 76.5, 76.2, 77.9]
+      },
+      {
+        "benchmark": "Agents' Last Exam",
+        "scores": [25.7, 25.2, 16.5, 15.8, 23.8, 27.6, 25.7, null]
+      },
+      {
+        "benchmark": "AutomationBench (public)",
+        "scores": [31.8, 25.1, 12.8, 10.8, 12.9, 30.8, 27.2, 29.1]
+      },
+      {
+        "benchmark": "DSBench-FullStack (internal)",
+        "scores": [71.1, 68.7, 41.8, 37.0, 61.8, 73.7, 71.6, 77.2]
+      },
+      {
+        "benchmark": "DSBench-Hard (internal)",
+        "scores": [67.2, 59.6, 31.1, 25.8, 54.5, 63.0, 71.7, 68.3]
+      }
+    ],
+    "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813"
+  },
   "pricing": {
     "input": "$0.435",
     "output": "$0.87",
     "cachedInput": "$0.003625",
     "unit": "/ 1M tokens",
+    "note": "Rates listed by DeepSeek before 16:00 UTC on 16 August 2026. From that point V4-Pro is billed by time of day: off-peak $0.022 cache-hit input / $0.66 cache-miss input / $1.98 output, and peak (01:00–04:00 and 06:00–10:00 UTC) $0.044 / $1.32 / $3.96 per 1M tokens.",
     "source": "https://api-docs.deepseek.com/quick_start/pricing"
   },
   "apis": [
@@ -95,7 +217,17 @@
   ],
   "links": [
     {
-      "label": "DeepSeek-V4-Pro model card (Hugging Face)",
+      "label": "DeepSeek-V4-Pro-0813 model card (Hugging Face)",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813",
+      "kind": "model-card"
+    },
+    {
+      "label": "DeepSeek-V4-Pro GA release announcement",
+      "url": "https://api-docs.deepseek.com/news/news260813",
+      "kind": "announcement"
+    },
+    {
+      "label": "DeepSeek-V4-Pro (preview) model card (Hugging Face)",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
       "kind": "model-card"
     },
@@ -128,50 +260,42 @@
   "faq": [
     {
       "q": "Is DeepSeek-V4-Pro open source?",
-      "a": "Yes. The model weights are published on Hugging Face under the MIT License, one of the most permissive open licenses. That means you can download, run, fine-tune, and use DeepSeek-V4-Pro commercially, including for self-hosted and on-premise deployment, without paying DeepSeek. It can be run locally with tools such as Ollama, vLLM, or llama.cpp."
+      "a": "Yes. The model weights are published on Hugging Face under the MIT License, one of the most permissive open licenses — the GA checkpoint lives at deepseek-ai/DeepSeek-V4-Pro-0813. That means you can download, run, fine-tune, and use DeepSeek-V4-Pro commercially, including for self-hosted and on-premise deployment, without paying DeepSeek."
+    },
+    {
+      "q": "What is DeepSeek-V4-Pro-0813?",
+      "a": "It is the general-availability release of DeepSeek-V4-Pro, published on 13 August 2026. DeepSeek describes it as superseding the April 2026 preview, with greatly enhanced agentic capabilities, built on the preview's model structure with a DSpark speculative-decoding module attached."
     },
     {
       "q": "How big is DeepSeek-V4-Pro and how much context does it handle?",
-      "a": "DeepSeek-V4-Pro is a Mixture-of-Experts model with 1.6 trillion total parameters, of which 49 billion are activated per token. It supports a context length of one million tokens, which DeepSeek now treats as the default across its official services, making it suitable for very long documents and large codebases."
+      "a": "DeepSeek-V4-Pro is a Mixture-of-Experts model with 1.6 trillion total parameters, of which 49 billion are activated per token. It supports a context length of one million tokens, which DeepSeek treats as the default across its official services, making it suitable for very long documents and large codebases."
     },
     {
       "q": "What are the reasoning modes in DeepSeek-V4-Pro?",
-      "a": "The model offers three reasoning-effort settings: Non-think for fast direct answers, Think High for deliberate step-by-step analysis, and Think Max for maximum reasoning depth. The highest setting, sometimes called V4-Pro-Max, is positioned as DeepSeek's strongest configuration for hard knowledge and coding tasks."
+      "a": "The 0813 release exposes a `reasoning_effort` parameter with three levels — `low`, `high` and `max` — controlling how much deliberation the model spends before answering. For the `high` and `max` levels DeepSeek recommends allowing up to 384K output tokens."
     },
     {
       "q": "How much does the DeepSeek-V4-Pro API cost?",
-      "a": "Per DeepSeek's official pricing page, DeepSeek-V4-Pro costs $0.435 per 1M input tokens on a cache miss and $0.87 per 1M output tokens. Cache hits drop the input price dramatically to about $0.003625 per 1M tokens, which makes repeated-context workloads especially cheap."
+      "a": "DeepSeek's pricing page listed $0.435 per 1M input tokens on a cache miss, $0.003625 on a cache hit and $0.87 per 1M output tokens before 16 August 2026. From 16:00 UTC on 16 August 2026, V4-Pro is billed by time of day: off-peak $0.022 / $0.66 / $1.98 and peak (01:00–04:00 and 06:00–10:00 UTC) $0.044 / $1.32 / $3.96 per 1M tokens for cache-hit input, cache-miss input and output respectively."
     }
   ],
   "versionHistory": [
     {
-      "version": "DeepSeek-V4-Pro",
+      "version": "DeepSeek-V4-Pro (0813, GA)",
       "slug": "deepseek-v4-pro",
-      "date": "2026-04-24",
+      "date": "2026-08-13",
+      "note": "Official release superseding the preview; DSpark speculative decoding attached, large agentic gains.",
       "current": true
     },
     {
-      "version": "DeepSeek-V4-Flash",
+      "version": "DeepSeek-V4-Flash (0731)",
       "slug": "deepseek-v4-flash",
-      "date": "2026-04-24"
-    }
-  ],
-  "line": "deepseek-v4",
-  "lineTitle": "DeepSeek V4",
-  "comparisonFigures": [
-    {
-      "url": "/models-media/deepseek-v4-pro-cmp-1.png",
-      "alt": "Bar chart comparing DeepSeek-V4-Pro (DeepSeek-V4-Pro-Max) with Claude-Opus-4.6-Max, GPT-5.4-xHigh, and Gemini-3.1-Pro-High on Knowledge & Reasoning (SimpleQA Verified, HLE, Apex Shortlist, Codeforces) and Agentic Capabilities (SWE Verified, Terminal Bench 2.0, Toolathlon).",
-      "caption": "DeepSeek-V4-Pro benchmark comparison vs leading closed-source models.",
-      "credit": "DeepSeek",
-      "source": "https://api-docs.deepseek.com/news/news260424"
+      "date": "2026-07-31"
     },
     {
-      "url": "/models-media/deepseek-v4-pro-cmp-2.png",
-      "alt": "Detailed benchmark table comparing DeepSeek-V4-Pro (Max and Thinking modes) and DeepSeek-V4-Flash against Claude, GPT, and Gemini across Knowledge & Reasoning, Code, Long Context, and Agentic categories.",
-      "caption": "Full numeric benchmark table for the DeepSeek-V4 line versus competing models.",
-      "credit": "DeepSeek",
-      "source": "https://api-docs.deepseek.com/news/news260424"
+      "version": "DeepSeek-V4 series preview (V4-Pro / V4-Flash)",
+      "date": "2026-04-24",
+      "note": "First public release of the V4 line, as a preview."
     }
   ]
 }

@@ -10,7 +10,7 @@
   "metaDescription": "Qwen3.8-Max is Alibaba's Qwen-Max flagship released August 3, 2026 — a 2.4T-parameter multimodal MoE (95B active) with 1M-token context, at $2/$6 per MTok.",
   "releaseDate": "2026-08-03",
   "status": "Generally available",
-  "license": "Proprietary (API). Open weights for Qwen3.8-Max and a companion Qwen3.8-27B checkpoint were announced by Alibaba for release the week of August 10, 2026; the weight license had not been published at launch.",
+  "license": "Proprietary (hosted API). The underlying weights were published in August 2026 as Qwen3.8-2.4T-A95B on Hugging Face under a custom licence Qwen names \"qwen3.8-max\".",
   "openWeights": false,
   "modalities": [
     "Text",
@@ -30,9 +30,9 @@
     "agentic"
   ],
   "overview": [
-    "Qwen3.8-Max is the August 2026 flagship of Alibaba's Qwen-Max line, generally available from August 3, 2026 through Alibaba Cloud Model Studio (also branded QwenCloud). It succeeds the July 2026 Qwen3.8-Max-Preview shown at the World Artificial Intelligence Conference in Shanghai and becomes the newest step above the text-only Qwen3.7-Max. Alibaba describes it as the most capable model in the Qwen family to date and the first Max-class Qwen released with open weights on the roadmap.",
+    "Qwen3.8-Max is the August 2026 flagship of Alibaba's Qwen-Max line, generally available from August 3, 2026 through Alibaba Cloud Model Studio (also branded QwenCloud). It succeeds the July 2026 Qwen3.8-Max-Preview shown at the World Artificial Intelligence Conference in Shanghai and becomes the newest step above the text-only Qwen3.7-Max. Alibaba describes it as the most capable model in the Qwen family to date, and it is the first Max-class Qwen whose weights were also published openly.",
     "Technically, Qwen3.8-Max is a sparse Mixture-of-Experts model with 2.4 trillion total parameters and 95 billion active per token, a 1M-token context window (roughly 991K tokens of input and up to 131,072 tokens of output), and a maximum reasoning budget of about 262K tokens. It is natively multimodal — text, image, and video input — and exposes a reasoning-effort control with low, medium, and xhigh settings.",
-    "API pricing is $2.00 per million input tokens, $6.00 per million output tokens (including thinking tokens), $0.25 per million tokens for implicit cache reads, and $2.50 per million tokens for explicit cache creation. Alibaba announced that the open weights for Qwen3.8-Max and a companion Qwen3.8-27B checkpoint would follow on Hugging Face and ModelScope the week of August 10, 2026; the weight license had not been published at launch."
+    "API pricing is $2.00 per million input tokens, $6.00 per million output tokens (including thinking tokens), $0.25 per million tokens for implicit cache reads, and $2.50 per million tokens for explicit cache creation. The weights behind it were subsequently published on Hugging Face as Qwen/Qwen3.8-2.4T-A95B (with an FP8 companion) in August 2026 under a custom licence Qwen names \"qwen3.8-max\"; that model card describes Qwen3.8-Max as \"the official version based on Qwen3.8-2.4T-A95B with more features, such as vision input & non-thinking support, 1M context length by default, official built-in tools\"."
   ],
   "strengths": [
     "Frontier multimodal reasoning: natively accepts text, image, and video input at trillion-parameter scale",
@@ -47,7 +47,7 @@
     "Multimodal analysis of screenshots, images, and video alongside text prompts",
     "Enterprise office and productivity automation that combines documents with charts or diagrams",
     "Cost-sensitive frontier deployments where the $2 / $6 per-MTok rate and cached-input discount matter",
-    "Applications that will later self-host: teams can prototype on the API this week and swap to the open weights when they land"
+    "Applications that intend to self-host: prototype on the hosted API, then swap to the open Qwen3.8-2.4T-A95B checkpoint"
   ],
   "benchmarks": [
     {
@@ -106,6 +106,11 @@
       "kind": "announcement"
     },
     {
+      "label": "Qwen3.8-2.4T-A95B open weights (Hugging Face)",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+      "kind": "model-card"
+    },
+    {
       "label": "Alibaba Qwen — Qwen3.8-Max launch post (@Alibaba_Qwen)",
       "url": "https://x.com/Alibaba_Qwen/status/2084100707423289643",
       "kind": "announcement"
@@ -149,7 +154,7 @@
   "faq": [
     {
       "q": "When was Qwen3.8-Max released?",
-      "a": "Alibaba announced the general availability of Qwen3.8-Max on August 3, 2026, on Alibaba Cloud Model Studio (also branded QwenCloud). The July 19, 2026 Qwen3.8-Max-Preview shown at the World Artificial Intelligence Conference in Shanghai was superseded by this release. Alibaba said open weights for Qwen3.8-Max and a companion Qwen3.8-27B checkpoint would follow on Hugging Face and ModelScope the week of August 10, 2026."
+      "a": "Alibaba announced the general availability of Qwen3.8-Max on August 3, 2026, on Alibaba Cloud Model Studio (also branded QwenCloud). The July 19, 2026 Qwen3.8-Max-Preview shown at the World Artificial Intelligence Conference in Shanghai was superseded by this release. The open weights behind the model followed on Hugging Face later in August 2026 as Qwen/Qwen3.8-2.4T-A95B."
     },
     {
       "q": "How many parameters does Qwen3.8-Max have?",
@@ -165,7 +170,7 @@
     },
     {
       "q": "Is Qwen3.8-Max open source?",
-      "a": "Not on release day. Qwen3.8-Max was proprietary and API-only on August 3, 2026, but Alibaba announced that it would release the weights of Qwen3.8-Max — along with a companion Qwen3.8-27B checkpoint — on Hugging Face and ModelScope the week of August 10, 2026. This makes it the first Max-class Qwen model with open weights on the roadmap. The weight license had not been published at launch."
+      "a": "Not on release day — Qwen3.8-Max was proprietary and API-only on August 3, 2026. The weights behind it were published later in August 2026 as Qwen/Qwen3.8-2.4T-A95B on Hugging Face (plus an FP8 checkpoint) under a custom licence Qwen names \"qwen3.8-max\", making it the first Max-class Qwen released with open weights. The hosted Qwen3.8-Max adds vision input, non-thinking support, a 1M default context and built-in tools on top of that checkpoint."
     },
     {
       "q": "What modalities does Qwen3.8-Max support?",

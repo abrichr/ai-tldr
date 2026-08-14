@@ -250,6 +250,12 @@
   ],
   "versionHistory": [
     {
+      "version": "Gemini 3.7 Flash",
+      "slug": "gemini-3-7-flash",
+      "date": "2026-08-13",
+      "note": "Built on 3.6 Flash with a reworked reasoning core; large coding and agentic gains."
+    },
+    {
       "version": "Gemini 3.6 Flash",
       "slug": "gemini-3-6-flash",
       "date": "2026-07-21",
