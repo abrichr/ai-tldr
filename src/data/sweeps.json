@@ -31803,6 +31803,40 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260814t013020z",
+      "timestamp": "2026-08-14T01:30:20.975Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, DeepMind, Meta, Mistral, Cohere, Moonshot, DeepSeek, MiniMax, Qwen), GitHub trending, HuggingFace models/datasets/papers, HN front page and /newest, the AI-for-science lane (BCI, medical imaging, pharma, genomics, STAT, NeuroscienceNews), coding-agent changelogs and tier-1 press, plus all 8 YouTube creator feeds. Everything above the bar in the last 72h was already in the feed (Gemini 3.7 Flash, GPT-5.6 Sol Ultrafast, DeepSeek V4 Pro 0813 and its price change, Palmyra X6, MiniMax Music 3.0). Mistral OCR 4.1 and WeatherNext Cyclones cleared the traction bar but are older than 72h; the top GitHub-trending repos are months-old projects spiking on stars, not new releases; Databricks/Lovable/IBM items are funding and partnership news the ecosystem gate rejects. One new item: a fresh Wes Roth video.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "wes-roth-grok-4-6-fable-aug13",
+          "title": "Wes Roth — 'Grok 4.6 is Fable now'",
+          "category": "video",
+          "note": "Fresh upload (2h old at sweep time) from a listed creator on the Grok 4.6 vs Claude Fable 5 comparison; a creator breakdown is its own item, not a dupe of the existing xai-grok-4-6 entry."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }

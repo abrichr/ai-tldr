@@ -1,8 +1,63 @@
 {
-  "generatedAt": "2026-08-13T22:45:47.074Z",
+  "generatedAt": "2026-08-14T01:30:20.975Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "wes-roth-grok-4-6-fable-aug13",
+      "categories": [
+        "video"
+      ],
+      "title": "Wes Roth — 'Grok 4.6 is Fable now'",
+      "org": "Wes Roth",
+      "date": "2026-08-13",
+      "url": "https://www.youtube.com/watch?v=VB39bHByHuU",
+      "summary": "Wes Roth's 13 August video says Grok 4.6 has closed the gap with Anthropic's Claude Fable 5. Artificial Analysis scores Grok 4.6 at 61 on its Intelligence Index, one point behind Claude Fable 5 at 62 and level with GPT-5.6 Sol.",
+      "tags": [
+        "youtube",
+        "wes-roth",
+        "video-explainer",
+        "grok-4-6",
+        "claude-fable-5",
+        "gpt-5-6-sol",
+        "model-comparison",
+        "benchmarks",
+        "llm-pricing"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Wes Roth's newest video takes the position that Grok 4.6 now sits level with Anthropic's Claude Fable 5.",
+        "whatIsIt": "'Grok 4.6 is Fable now' is a Wes Roth video uploaded on 13 August 2026. The title points at how close Grok 4.6 has landed to Claude Fable 5, the model at the top of the Artificial Analysis Intelligence Index.",
+        "howItWorks": "Artificial Analysis scores Grok 4.6 at 61 on its Intelligence Index, level with GPT-5.6 Sol (max) and one point behind Claude Fable 5 at 62. Grok 4.6 keeps the 500K-token context window of Grok 4.5 and costs $2 per million input tokens and $6 per million output tokens, with cache hits priced at $0.50 per million.",
+        "whyItMatters": "A large share of the audience for Grok 4.6 follows model launches through videos like this one rather than benchmark tables, so the framing here shapes how many people read the result. The practical question the video raises is whether a one-point gap on a single index should decide which model you pay for.",
+        "forWho": "people tracking frontier model rankings"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/VB39bHByHuU/hqdefault.jpg",
+        "alt": "Wes Roth video thumbnail for 'Grok 4.6 is Fable now'",
+        "fit": "cover"
+      },
+      "author": {
+        "name": "Wes Roth",
+        "handle": "@WesRoth",
+        "profileUrl": "https://www.youtube.com/@WesRoth"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=VB39bHByHuU"
+        },
+        {
+          "label": "Channel",
+          "url": "https://www.youtube.com/@WesRoth"
+        },
+        {
+          "label": "Grok 4.6 Analysis",
+          "url": "https://artificialanalysis.ai/articles/grok-4-6-benchmarks-and-analysis"
+        }
+      ],
+      "publishDate": "2026-08-14T01:30:20.975Z"
+    },
     {
       "id": "minimax-music-3",
       "categories": [
