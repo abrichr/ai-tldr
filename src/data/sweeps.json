@@ -32212,6 +32212,31 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260815t010006z",
+      "timestamp": "2026-08-15T01:00:06.734Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic, DeepMind, Meta, Mistral, Cohere, ByteDance Seed, DeepSeek, Z.ai, MiniMax, Qwen; OpenAI and x.ai returned 403), GitHub trending daily + weekly, HuggingFace models/datasets/papers/blog, HN front page + page 2 + Show HN, all 8 YouTube creator feeds, the coding-agent lane (Cursor, Claude Code, OpenCode) and the AI-for-science lane (BCI/neural-decoding, medical-imaging/FDA and pharma/protein-design searches, neurosciencenews, STAT News, Nature). Everything inside the 72h window was already ingested by the 2026-08-14T22:26Z sweep: all 6 fresh YouTube uploads, Gemini 3.7 Flash, GLM-5.3, Qwen3.8-27B, DeepSeek V4 Pro 0813 and its price change, Toast 1, HEIR, Palmyra X6, Cursor Builds and OpenAI Ultrafast mode. The near-misses failed on date, not quality: The Stack v3 shipped 2026-07-23, Doug Turnbull's HN-trending 'Don't classify, hallucinate' is dated 2026-08-10, and cloudflare/computer 0.2.0 landed 2026-08-11T16:52Z — all outside the cap. Anthropic's 'How Claude's text watermark works' explainer is already a link on anthropic-claude-content-marking. google/skills, code-graph-rag and denoland/celld trend on old repos with no fresh named release.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "article",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }
