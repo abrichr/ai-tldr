@@ -32302,6 +32302,38 @@
         "tutorial",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260815t063554z",
+      "timestamp": "2026-08-15T06:35:54.520Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, Qwen, DeepSeek, Z.ai, MiniMax, Moonshot), GitHub trending, HuggingFace models/datasets/papers, HN front page, the AI-for-science lane and tier-1 press; added one item — Google making Gemini's visible AI watermark optional. Nearly everything else fresh was already in the feed (Qwen3.8-27B, GLM-5.3, Gemini 3.7 Flash, Ultrafast, DeepSeek V4 Pro, Credentio, Claude text watermark). NOTE: the video lane returned nothing for infrastructure reasons, not editorial ones — all 8 youtube.com/feeds/videos.xml channel feeds returned HTTP 404, and a known-good control channel ID plus the uploads-playlist form 404 too, so the endpoint itself is unreachable from this runner.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "google-gemini-media-watermark-toggle",
+          "title": "Gemini watermarks become optional — Google adds an off switch for AI media",
+          "category": "tool",
+          "note": "Distinct product change covered by two tier-1 outlets (TechCrunch and The Verge) on 2026-08-14; not a dupe of google-credentio (the C2PA C++ library) or wiltodelta-remove-ai-watermarks (a third-party CLI)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }

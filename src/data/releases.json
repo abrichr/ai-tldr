@@ -1,8 +1,112 @@
 {
-  "generatedAt": "2026-08-15T04:30:57.261Z",
+  "generatedAt": "2026-08-15T06:35:54.520Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "google-gemini-media-watermark-toggle",
+      "categories": [
+        "tool"
+      ],
+      "title": "Gemini watermarks become optional — Google adds an off switch for AI media",
+      "org": "Google",
+      "date": "2026-08-14",
+      "url": "https://techcrunch.com/2026/08/14/google-will-now-allow-users-to-remove-visible-watermark-from-its-ai-generations/",
+      "summary": "Google now lets Gemini users turn off the visible watermark on AI images, video and music. The new Media watermark setting sits in Gemini and Flow. Invisible SynthID marks and C2PA metadata stay in every file.",
+      "tags": [
+        "google",
+        "gemini",
+        "watermark",
+        "synthid",
+        "c2pa",
+        "provenance",
+        "nano-banana",
+        "lyria",
+        "flow",
+        "ai-labeling"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Google"
+        },
+        {
+          "label": "Setting",
+          "value": "Settings → Media watermark (On / Off)"
+        },
+        {
+          "label": "Default",
+          "value": "On"
+        },
+        {
+          "label": "Where",
+          "value": "Gemini and Flow; Search coming soon"
+        },
+        {
+          "label": "Models covered",
+          "value": "Nano Banana, Omni, Lyria"
+        },
+        {
+          "label": "Still embedded",
+          "value": "Invisible SynthID + C2PA metadata"
+        },
+        {
+          "label": "Limits",
+          "value": "Not offered where local law requires visible labels"
+        }
+      ],
+      "explainer": {
+        "tagline": "Google makes Gemini's visible AI watermark a user choice, while invisible SynthID and C2PA provenance stay in every file.",
+        "whatIsIt": "A new Media watermark setting in the Gemini app lets you switch off the small sparkle mark Google stamps in the corner of AI-generated media. On is the default, so nothing changes until you opt out. Google began rolling the toggle out on August 14, 2026, over several days.",
+        "howItWorks": "Switching Media watermark off only stops the visible corner icon from being drawn on Gemini's image, video and music output. Nothing is stripped from the file itself: Google keeps writing an invisible SynthID watermark into the pixels and audio, plus signed C2PA metadata, so its own detection tools can still trace the media back to a Google model.",
+        "whyItMatters": "Creators who publish Gemini output no longer have to crop or edit around Google branding, which was the main reason people reached for third-party watermark removers. The trade-off is that a Gemini image or clip can now look like any other file to a reader, and the only label left is one that needs a detector to read.",
+        "forWho": "creators and marketers publishing AI media",
+        "tryIt": "Gemini app → Settings → Media watermark → Off"
+      },
+      "faq": [
+        {
+          "q": "Does turning off the Gemini watermark remove SynthID?",
+          "a": "No. The Gemini Media watermark setting controls only the visible corner mark. Google confirmed that invisible SynthID watermarks and C2PA provenance metadata stay embedded in every generated image, video and song regardless of the toggle, so Google's own detection tooling can still identify the file as AI-generated."
+        },
+        {
+          "q": "Is the visible watermark off by default in Gemini?",
+          "a": "No. Google ships the Gemini Media watermark setting switched On, so generated media keeps its visible sparkle mark unless you go into settings and turn it off yourself. The change is opt-out rather than opt-in, and it rolls out across platforms over the days following the August 14, 2026 announcement."
+        },
+        {
+          "q": "Is the Gemini watermark toggle available in every country?",
+          "a": "No. Google says the option to hide the visible watermark is not offered in countries whose laws require visible labelling of AI-generated content. In those markets Gemini keeps stamping the corner mark automatically, and reports note tighter limits in India, South Korea and Vietnam."
+        },
+        {
+          "q": "Does the watermark setting apply outside the Gemini app?",
+          "a": "Yes, partly. The Media watermark control also governs output from Flow, Google's AI video editor. Google says support is coming to Search as well, but that had not shipped at announcement. The toggle covers media from the Nano Banana image models, the Omni video model and the Lyria music family."
+        }
+      ],
+      "image": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/06/gemini-app-GettyImages-2276204472-1.jpg?w=1024",
+        "alt": "The Google Gemini app open on a smartphone screen",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "TechCrunch Report",
+          "url": "https://techcrunch.com/2026/08/14/google-will-now-allow-users-to-remove-visible-watermark-from-its-ai-generations/"
+        },
+        {
+          "label": "9to5Google Details",
+          "url": "https://9to5google.com/2026/08/14/gemini-app-3-7-flash/"
+        },
+        {
+          "label": "SynthID",
+          "url": "https://deepmind.google/science/synthid/"
+        },
+        {
+          "label": "C2PA Standard",
+          "url": "https://c2pa.org/"
+        }
+      ],
+      "publishDate": "2026-08-15T06:35:54.520Z"
+    },
     {
       "id": "openai-computer-history",
       "categories": [
