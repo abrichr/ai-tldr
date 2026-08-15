@@ -32540,6 +32540,33 @@
         "benchmark",
         "algorithm"
       ]
+    },
+    {
+      "id": "sweep-20260815t222329z",
+      "timestamp": "2026-08-15T22:23:29.024Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic, DeepMind, Mistral, Meta, Cohere, Moonshot, MiniMax, Z.ai, OpenAI), GitHub trending daily, HuggingFace models/datasets/papers, HN front page + Algolia (all stories >120 points since Aug 12), 8 YouTube creator feeds, Cursor's changelog, Simon Willison, and the science lane (STAT News, Nature, neurotech and medical-imaging searches). Everything fresh was already ingested by the 20:27Z sweep: all 5 YouTube videos in the RSS scan, Qwen3.8-27B, GLM-5.3, Gemini 3.7 Flash, Toast 1, Google HEIR, DeepSeek pricing, Cursor Builds, Anthropic's watermark post and the Claude Code session-cost post. The remaining HN traction was all stale on the 72h cap: Mistral OCR 4.1 (409 pts, released Jul 16), sankalp's 232x-kernel auto-research post (363 pts, published Jul 8), AI by Hand (347 pts, an undated evergreen newsletter), and LLMRouter (#1 on HF papers, arXiv v1 Aug 7). GitHub trending's non-dupes were old repos with fresh star spikes, not releases (Soup created Feb 20, CLI-Anything created Mar 8). Science lane found no released artifact inside the window: STAT News had only payment/regulatory pieces, nature.com was auth-walled, and the BCI/medical-imaging/pharma searches returned reviews and older work.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "article",
+        "tutorial",
+        "ecosystem"
+      ]
     }
   ]
 }
