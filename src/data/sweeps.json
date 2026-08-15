@@ -32514,6 +32514,32 @@
         "algorithm",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260815t202641z",
+      "timestamp": "2026-08-15T20:26:41.641Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Qwen, DeepSeek, MiniMax, Z.ai, Moonshot/Kimi, InternLM), GitHub trending daily and weekly, Hugging Face models/datasets/papers, Hacker News front page and newest, all 8 YouTube creator feeds, the Cursor changelog, Simon Willison, TechCrunch AI, and the AI-for-science lane (BCI/neural decoding, medical imaging and FDA clearances, drug discovery, STAT News, Nature). Everything inside the 72h window was already in the feed: all 5 fresh YouTube videos, Qwen3.8-27B, Gemini 3.7 Flash, DeepSeek V4-Pro 0813 and its price change, Cursor Builds, the Anthropic text-watermark post and the now-closed SpaceX-Cursor deal all resolve to existing entries that already carry the newer links. The remaining candidates failed a bar rather than a search: LLMRouter (arXiv v1 Aug 7) and the 232x-kernel write-up (Jul 8) are outside the 72h cap, diagram-design, Soup, Macro and code-graph-rag are months-old repos whose only recent events are patch releases, Intern-S2-Preview is a report on month-old weights and clears just one of the paper 2-of-N signals, and the one genuinely fresh HN essay (Allen Bargi, Aug 15) has no verified image.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "video",
+        "paper",
+        "dataset",
+        "article",
+        "ecosystem",
+        "benchmark",
+        "algorithm"
+      ]
     }
   ]
 }
