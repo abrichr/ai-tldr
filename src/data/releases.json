@@ -1,8 +1,121 @@
 {
-  "generatedAt": "2026-08-15T16:26:27.614Z",
+  "generatedAt": "2026-08-15T18:33:06.447Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "anthropic-claude-code-gitlab-support",
+      "categories": [
+        "tool",
+        "security"
+      ],
+      "title": "Claude Code 2.1.233 — GitLab merge requests, marketplaces and token redaction",
+      "org": "Anthropic",
+      "date": "2026-08-14",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "summary": "Claude Code 2.1.233 accepts GitLab merge request URLs in the --worktree flag and the agents view. The 2.1.232 release a day earlier added GitLab plugin marketplaces and redaction for nine GitLab token families.",
+      "tags": [
+        "claude-code",
+        "anthropic",
+        "gitlab",
+        "coding-agent",
+        "cli",
+        "worktrees",
+        "plugin-marketplace",
+        "secret-redaction",
+        "subagents",
+        "developer-tools"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Anthropic"
+        },
+        {
+          "label": "Version",
+          "value": "2.1.233, published August 14, 2026"
+        },
+        {
+          "label": "Git hosts",
+          "value": "GitHub, GitHub Enterprise, GitLab, Bitbucket"
+        },
+        {
+          "label": "GitLab secrets redacted",
+          "value": "9 token prefixes, plus glpat- and gldt-"
+        },
+        {
+          "label": "Subagent forking",
+          "value": "On by default since 2.1.232"
+        },
+        {
+          "label": "New Linux control",
+          "value": "CLAUDE_CODE_TOOL_MEMORY_LIMIT"
+        },
+        {
+          "label": "Install",
+          "value": "npm install -g @anthropic-ai/claude-code"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which GitLab tokens does Claude Code hide?",
+          "a": "Claude Code 2.1.232 redacts nine GitLab token families by prefix: glrt-, gloas-, glptt-, glagent-, glimt-, glsoat-, glcbt-, glft- and glffct-. Routable glpat- and gldt- tokens are removed completely rather than masked. The glab command-line config store also gets the sandbox and credential-path protection that Claude Code already applied to the gh CLI."
+        },
+        {
+          "q": "Can I install a plugin marketplace from a GitLab repo?",
+          "a": "Yes. Claude Code 2.1.232 added GitLab support to plugin marketplaces, so a bare gitlab.com repository URL clones the same way a github.com URL does, including repositories inside nested subgroups. When cloning fails on authentication, the hint Claude Code prints now names your actual git host instead of assuming GitHub."
+        },
+        {
+          "q": "Why did the todo tools stop working on Opus 4.8 and Sonnet 5?",
+          "a": "Claude Code 2.1.233 removed the todo and task-tracking tools (TaskCreate, TaskGet, TaskUpdate, TaskList and TodoWrite) from Opus 4.8, Sonnet 5, Fable 5, Mythos 5 and newer models. Anyone who still wants them can set the environment variable CLAUDE_CODE_ENABLE_TODO_TOOLS=1 to bring the tools back."
+        },
+        {
+          "q": "How do I stop a runaway build from stalling a Claude Code session?",
+          "a": "Claude Code 2.1.233 adds opt-in memory cgroup support for Bash tool commands on Linux through the CLAUDE_CODE_TOOL_MEMORY_LIMIT environment variable. Setting a limit caps how much memory a single Bash command can take, so a build that runs away cannot stall the whole session. The setting is off unless you turn it on."
+        },
+        {
+          "q": "What security holes did these two releases close?",
+          "a": "Claude Code 2.1.233 fixed Windows paths written with the NT \\??\\ device prefix slipping past UNC path validation, which closed an NTLM credential-leak vector. Version 2.1.232 fixed a PowerShell bypass where parameters could overwrite $PSDefaultParameterValues, a Git Bash symlink bypass on Windows, and nested git repositories inheriting trust from a parent directory."
+        }
+      ],
+      "explainer": {
+        "tagline": "GitLab teams get first-class Claude Code support: merge request worktrees, plugin marketplaces and token redaction.",
+        "whatIsIt": "GitLab merge request URLs now work with Claude Code's --worktree flag and its claude agents view, where merge requests appear as !N. That landed in version 2.1.233 on August 14, 2026. Version 2.1.232, published a day earlier, carried the rest of the GitLab work: plugin marketplaces that clone from gitlab.com, and secret redaction for GitLab token families. These paths previously assumed GitHub.",
+        "howItWorks": "The merge request URL is parsed the same way GitHub and Bitbucket pull request URLs already were, so pointing --worktree at one opens a session on that branch. For marketplaces, a bare gitlab.com repository URL — including nested subgroups — clones like a github.com URL. Redaction works on token prefixes: nine GitLab families are masked in output, and routable glpat- and gldt- tokens are stripped entirely. Anthropic also gave the glab config store the sandbox and credential-path protection that gh already had.",
+        "whyItMatters": "A lot of company source code lives on self-managed GitLab, and until now those teams had to work around a coding agent that treated GitHub as the default. The secret handling matters more than the convenience: a GitLab token that shows up in a session is now masked instead of passing through as plain text. Version 2.1.232 also turned subagent forking on by default, so a forked subagent inherits the full conversation and the prompt cache.",
+        "forWho": "teams on GitLab, enterprise platform engineers",
+        "tryIt": "npm install -g @anthropic-ai/claude-code"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/anthropics/claude-code",
+        "alt": "GitHub repository card for anthropics/claude-code, the Claude Code command-line coding agent",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Changelog",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/anthropics/claude-code"
+        },
+        {
+          "label": "CLI Reference",
+          "url": "https://code.claude.com/docs/en/cli-reference"
+        },
+        {
+          "label": "Plugin Marketplaces",
+          "url": "https://code.claude.com/docs/en/plugin-marketplaces"
+        },
+        {
+          "label": "Subagents Docs",
+          "url": "https://code.claude.com/docs/en/sub-agents"
+        }
+      ],
+      "publishDate": "2026-08-15T18:33:06.447Z"
+    },
     {
       "id": "google-gemini-media-watermark-toggle",
       "categories": [
@@ -49418,12 +49531,12 @@
           "a": "SpaceX says Cursor will plug into its AI work, which is built around Elon Musk's xAI. According to TechCrunch, the goal is to help SpaceX's AI division catch up to the major AI labs. Cursor is the most-used AI coding editor among professional developers, making Anysphere a notable target for SpaceX's AI ambitions."
         },
         {
-          "q": "When will the SpaceX-Cursor deal close?",
-          "a": "The acquisition is expected to close in Q3 2026, if regulators clear it. The purchase was announced with a $10 billion break-up fee, meaning SpaceX must either complete the deal or pay that amount. Until the close, Cursor continues to operate as the AI coding editor made by Anysphere."
+          "q": "Has the SpaceX-Cursor deal actually closed?",
+          "a": "Yes. TechCrunch reported on August 15, 2026 that SpaceX officially closed its acquisition of Cursor. SpaceX first announced a partnership with an option to buy in April 2026 and exercised that option in June 2026, after going public. The $10 billion break-up fee attached to the agreement is now moot."
         },
         {
           "q": "What does the acquisition mean for Cursor users?",
-          "a": "Anysphere stayed independent through every prior funding round, so many teams chose Cursor for its neutrality. A SpaceX and xAI owner changes that, and some users worry about default model routing to Grok. The deal also affects rivals like GitHub Copilot, Windsurf, and Continue. It is the largest acquisition in the AI tooling space to date."
+          "a": "Anysphere stayed independent through every prior funding round, so many teams chose Cursor for its neutrality. A SpaceX and xAI owner changes that, and some users worry about default model routing to Grok. Cursor says the main near-term change is access to SpaceX compute, which it calls the largest fleet of GPUs in the world."
         }
       ],
       "explainer": {
@@ -49443,6 +49556,10 @@
         {
           "label": "TechCrunch Report",
           "url": "https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/"
+        },
+        {
+          "label": "Closing Report",
+          "url": "https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/"
         },
         {
           "label": "Cursor Announcement",

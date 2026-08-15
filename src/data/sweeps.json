@@ -32474,6 +32474,46 @@
         "ecosystem",
         "tutorial"
       ]
+    },
+    {
+      "id": "sweep-20260815t183306z",
+      "timestamp": "2026-08-15T18:33:06.447Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, DeepSeek, Qwen, Z.ai, MiniMax), GitHub trending (daily plus weekly Python and TypeScript), HuggingFace models/datasets/papers, HN front page and newest, all 8 YouTube creator feeds, tier-1 press (TechCrunch, The Register, The New Stack), influential voices, and the AI-for-science lane. Nearly everything fresh was already in the feed: all 6 fresh videos, Qwen3.8-27B, GLM-5.3, DeepSeek V4 Pro, Gemini 3.7 Flash, the Google HEIR and Anthropic watermark posts, Prime Agent, Cloudflare Computer, TencentDB Agent Memory and The Stack v3. Added one item: Claude Code's GitLab support in 2.1.232 and 2.1.233. Intern-S2-Preview and LLMRouter were dropped as older than 72h, and the trending Soup and google/skills repos are months-old projects, not new releases.",
+      "counts": {
+        "added": 1,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "anthropic-claude-code-gitlab-support",
+          "title": "Claude Code 2.1.233 — GitLab merge requests, marketplaces and token redaction",
+          "category": "tool",
+          "note": "Claude Code 2.1.233 (npm-published 2026-08-14T18:50Z) plus 2.1.232 add GitLab merge request URLs to --worktree and the agents view, GitLab plugin marketplaces, and redaction for 11 GitLab token prefixes; every claim quoted from the official CHANGELOG and the CLI reference docs."
+        }
+      ],
+      "updated": [
+        {
+          "id": "spacex-cursor-acquisition-jun16",
+          "title": "SpaceX Buys Cursor for $60B — all-stock deal closes on August 14",
+          "note": "TechCrunch reported on 2026-08-15 that SpaceX officially closed the Cursor acquisition. The item's third FAQ answer still described the close as pending in Q3 2026, contradicting its own summary; rewrote that answer and added the closing report to links."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "video",
+        "dataset",
+        "paper",
+        "benchmark",
+        "article",
+        "ecosystem",
+        "algorithm",
+        "security"
+      ]
     }
   ]
 }
