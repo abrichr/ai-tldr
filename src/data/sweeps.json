@@ -32360,6 +32360,32 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260815t102551z",
+      "timestamp": "2026-08-15T10:25:51.713Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Checked lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, xAI, DeepSeek, Qwen, MiniMax, Z.ai), GitHub trending, HuggingFace models/datasets/papers, HN front page + Show HN, all 8 YouTube creator feeds, the AI-for-science lane and tier-1 press. Everything fresh was already in the feed: all 7 AI stories on the HN front page (Qwen3.8-27B, GLM-5.3, Google HEIR, Claude Code session costs, Toast 1, Opus 5) and all 6 YouTube videos from the RSS scan are existing items. Anthropic's only new post (how Claude's text watermark works, Aug 14) is already a cited link on anthropic-claude-content-marking, and DeepSeek's Aug 13 V4-Pro GA post is covered by deepseek-v4-pro-0813. The two genuinely uncovered candidates both failed the 72h cap on their earliest verifiable timestamp: LLMRouter (HF papers #2, 2,350 upvotes) was submitted to arXiv Aug 7, and Intern-S2-Mobius uploaded its weights Aug 4. The Stack v3 dataset repo was created Jul 23. No qualifying release in the last 72h.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "video",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
