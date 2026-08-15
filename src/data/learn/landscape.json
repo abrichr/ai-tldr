@@ -1324,6 +1324,15 @@
        "logo": "/tools-logos/gh-huggingface.png"
       },
       {
+       "name": "slime",
+       "slug": "slime",
+       "repo": "THUDM/slime",
+       "homepage": "https://thudm.github.io/slime",
+       "description": "THUDM's SGLang-native RL post-training framework, pairing Megatron training with SGLang rollout in a single dataflow; the RL framework behind the GLM model releases.",
+       "detail": true,
+       "logo": "/tools-logos/gh-thudm.png"
+      },
+      {
        "name": "verl",
        "slug": "verl",
        "repo": "verl-project/verl",

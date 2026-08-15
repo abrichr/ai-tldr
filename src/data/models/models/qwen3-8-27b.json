@@ -1,0 +1,345 @@
+{
+  "slug": "qwen3-8-27b",
+  "name": "Qwen3.8-27B",
+  "maker": "alibaba",
+  "makerTitle": "Alibaba (Qwen)",
+  "line": "qwen-open",
+  "lineTitle": "Qwen (open-weight)",
+  "tagline": "The compact member of Qwen's August 2026 open-weight generation: a 27B dense vision-language model under Apache 2.0 with a 262K context extensible to 1M.",
+  "seoTitle": "Qwen3.8-27B — open weights, specs, benchmarks",
+  "metaDescription": "Qwen3.8-27B (August 2026): Alibaba's 27B dense vision-language model under Apache 2.0 — 262K context extensible to 1M, image and video input, Terminal Bench 2.1 73.",
+  "releaseDate": "2026-08",
+  "status": "Available (open weights on Hugging Face). Qwen lists a hosted Qwen Cloud version as coming soon.",
+  "license": "Apache-2.0",
+  "openWeights": true,
+  "modalities": [
+    "Text",
+    "Vision",
+    "Video"
+  ],
+  "contextWindow": "262K (extensible to 1M)",
+  "maxOutput": "131K final response · 262K reasoning",
+  "parameters": "27B dense",
+  "architecture": "Causal language model with a vision encoder, built on the architectural foundation of Qwen3.5. 64 layers in a hybrid layout — 16 × (3 × (Gated DeltaNet → FFN) → 1 × (Gated Attention → FFN)) — with a 5120 hidden dimension, 17,408 FFN intermediate dimension, 48 linear-attention value heads and 16 QK heads in the Gated DeltaNet blocks, 24 query and 4 key-value heads in the Gated Attention blocks, and multi-token prediction trained with multiple steps.",
+  "tags": [
+    "open-weights",
+    "multimodal",
+    "reasoning",
+    "coding",
+    "agentic",
+    "long-context"
+  ],
+  "overview": [
+    "Qwen3.8-27B is the compact dense model in Alibaba's Qwen3.8 open-weight generation, published on Hugging Face in August 2026 under Apache 2.0 alongside an FP8 checkpoint. Qwen's model card introduces Qwen3.8 as 'the most capable generation in the Qwen open-model family to date' and frames the 27B as bringing those advances 'to a compact, deployment-friendly dense model: a native vision-language model that understands images and videos, with flexible thinking control'.",
+    "It is a 27-billion-parameter causal language model with a vision encoder, built on the architectural foundation of Qwen3.5. The 64-layer stack interleaves Gated DeltaNet linear-attention blocks with Gated Attention blocks, each followed by a feed-forward network, and is trained with multi-token prediction. Context length is 262,144 tokens natively and extensible to 1,000,000 with YaRN scaling; Qwen recommends allocating up to 262,144 tokens for reasoning content and 131,072 for the final response.",
+    "Thinking mode is on by default and can be disabled per request. Reasoning depth is tuned with `reasoning_effort` (xhigh by default, plus medium and low) and reasoning context from earlier turns is retained with `preserve_thinking`. Qwen recommends temperature 1.0 / top_p 0.95 / top_k 20 in thinking mode and temperature 0.7 / top_p 0.80 / top_k 20 in instruct mode.",
+    "In Qwen's own launch table the 27B leads its predecessor Qwen3.6-27B and the hosted Qwen3.7-Plus on most coding and agent benchmarks — Terminal Bench 2.1 73.0 (vs 63.4 and 64.0), SWE-bench Pro 61.7, QwenSWEBench 79.0, DeepSWE 1.1 42.2 — and posts strong multimodal agent numbers, including OSWorld-Verified 84.3 for computer use and AndroidWorld 81.9 for mobile use. Qwen evaluates most coding rows with the Claude Code harness and marks unavailable cells as '--'.",
+    "The weights ship in Hugging Face Transformers format and run on SGLang, vLLM and TokenSpeed, each with a published Qwen3.8 recipe. Qwen says a hosted Qwen3.8-27B with production features such as a 1M default context and built-in tools is coming to Qwen Cloud."
+  ],
+  "strengths": [
+    "Terminal Bench 2.1 of 73.0 for agentic terminal coding, against 63.4 for Qwen3.6-27B and 64.0 for Qwen3.7-Plus",
+    "QwenSWEBench 79.0 and DeepSWE 1.1 42.2 — large jumps over the 49.3 and 13.3 Qwen reports for Qwen3.6-27B",
+    "OSWorld-Verified 84.3, WebArena-Verified 64.8 and AndroidWorld 81.9 for computer, browser and mobile agent use",
+    "Native image and video understanding, from STEM diagrams and documents to hour-scale video",
+    "262K native context extensible to 1M, in a 27B dense model that fits far smaller deployments than the 2.4T MoE sibling",
+    "Apache 2.0 weights, so commercial self-hosting carries no custom-licence conditions"
+  ],
+  "useCases": [
+    "Self-hosted coding and terminal agents where a 27B dense model is the largest that fits the hardware budget",
+    "Computer-, browser- and mobile-use agents that need vision grounded in the same model",
+    "Document and chart understanding — OmniDocBench 1.5 91.1 and CharXiv (RQ) 83.7 without code interpreter",
+    "Long-context work over repositories or hour-scale video within the 262K–1M window"
+  ],
+  "benchmarks": [
+    {
+      "name": "Terminal Bench 2.1 (Terminus)",
+      "score": 73.0,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/Qwen/Qwen3.8-27B"
+    },
+    {
+      "name": "SWE-bench Pro",
+      "score": 61.7,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/Qwen/Qwen3.8-27B"
+    },
+    {
+      "name": "QwenSWEBench",
+      "score": 79.0,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/Qwen/Qwen3.8-27B"
+    },
+    {
+      "name": "LiveCodeBench v6",
+      "score": 90.3,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/Qwen/Qwen3.8-27B"
+    },
+    {
+      "name": "GPQA Diamond",
+      "score": 89.2,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/Qwen/Qwen3.8-27B"
+    },
+    {
+      "name": "IFBench",
+      "score": 79.5,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/Qwen/Qwen3.8-27B"
+    },
+    {
+      "name": "OSWorld-Verified (computer use)",
+      "score": 84.3,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/Qwen/Qwen3.8-27B"
+    },
+    {
+      "name": "AndroidWorld (mobile use)",
+      "score": 81.9,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/Qwen/Qwen3.8-27B"
+    },
+    {
+      "name": "OmniDocBench 1.5",
+      "score": 91.1,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/Qwen/Qwen3.8-27B"
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Qwen3.8-27B against the peers Qwen names in its own model-card tables. Coding rows are evaluated with the Claude Code harness; MathVision, BabyVision and CharXiv (RQ) rows are the \"without code interpreter\" setting. Blank cells are the '--' Qwen marks as not available.",
+    "models": [
+      "Qwen3.8-27B",
+      "Qwen3.6-27B",
+      "Qwen3.7-Plus",
+      "Muse Glimmer-30B",
+      "Opus4.6 Max"
+    ],
+    "subject": 0,
+    "rows": [
+      {
+        "benchmark": "Terminal Bench 2.1 (Terminus)",
+        "unit": "%",
+        "scores": [73.0, 63.4, 64.0, 51.7, 78.2]
+      },
+      {
+        "benchmark": "SWE-bench Pro",
+        "unit": "%",
+        "scores": [61.7, 53.5, 57.6, 51.2, 53.4]
+      },
+      {
+        "benchmark": "NL2Repo-Bench",
+        "unit": "%",
+        "scores": [42.3, 36.2, 41.1, null, 47.6]
+      },
+      {
+        "benchmark": "DeepSWE 1.1",
+        "unit": "%",
+        "scores": [42.2, 13.3, 14.2, null, null]
+      },
+      {
+        "benchmark": "QwenSWEBench",
+        "unit": "%",
+        "scores": [79.0, 49.3, 59.2, null, 63.8]
+      },
+      {
+        "benchmark": "CoWorkBench",
+        "unit": "%",
+        "scores": [70.7, 61.0, 65.1, null, 68.2]
+      },
+      {
+        "benchmark": "JobBench",
+        "unit": "%",
+        "scores": [33.4, 21.8, 27.6, null, null]
+      },
+      {
+        "benchmark": "Agents' Last Exam (Pass@1)",
+        "unit": "%",
+        "scores": [20.4, 10.6, 13.2, null, null]
+      },
+      {
+        "benchmark": "IFBench",
+        "unit": "%",
+        "scores": [79.5, 69.1, 79.1, 77.0, 62.5]
+      },
+      {
+        "benchmark": "GPQA Diamond",
+        "unit": "%",
+        "scores": [89.2, 87.8, 90.3, 83.5, 91.3]
+      },
+      {
+        "benchmark": "HLE",
+        "unit": "%",
+        "scores": [30.8, 24.0, 34.7, 22.0, 40.0]
+      },
+      {
+        "benchmark": "LiveCodeBench v6",
+        "unit": "%",
+        "scores": [90.3, 83.9, 89.6, null, 88.8]
+      },
+      {
+        "benchmark": "OSWorld-Verified (computer use)",
+        "unit": "%",
+        "scores": [84.3, 63.9, 73.3, 65.9, 72.7]
+      },
+      {
+        "benchmark": "WebArena-Verified (browser use)",
+        "unit": "%",
+        "scores": [64.8, 48.8, 55.3, null, null]
+      },
+      {
+        "benchmark": "AndroidWorld (mobile use)",
+        "unit": "%",
+        "scores": [81.9, 70.3, 81.0, null, 62.0]
+      },
+      {
+        "benchmark": "RecreationBench",
+        "unit": "%",
+        "scores": [47.1, 29.8, 30.2, null, null]
+      },
+      {
+        "benchmark": "SWE-MM (multimodal SWE)",
+        "unit": "%",
+        "scores": [38.6, 25.7, 30.0, null, 27.1]
+      },
+      {
+        "benchmark": "Vision2Web",
+        "unit": "%",
+        "scores": [62.9, 45.0, 42.1, null, null]
+      },
+      {
+        "benchmark": "MathVision (without CI)",
+        "unit": "%",
+        "scores": [90.0, 85.1, 90.3, null, 65.5]
+      },
+      {
+        "benchmark": "BabyVision (without CI)",
+        "unit": "%",
+        "scores": [65.7, 28.9, 64.7, null, 12.6]
+      },
+      {
+        "benchmark": "CharXiv RQ (without CI)",
+        "unit": "%",
+        "scores": [83.7, 78.4, 85.8, 78.8, 66.0]
+      },
+      {
+        "benchmark": "OmniDocBench 1.5",
+        "unit": "%",
+        "scores": [91.1, 89.4, 91.4, 75.8, 86.6]
+      },
+      {
+        "benchmark": "RealWorldQA",
+        "unit": "%",
+        "scores": [85.9, 84.1, 86.9, null, 73.9]
+      },
+      {
+        "benchmark": "ERQA",
+        "unit": "%",
+        "scores": [65.5, 62.5, 69.8, null, 40.8]
+      }
+    ],
+    "source": "https://huggingface.co/Qwen/Qwen3.8-27B"
+  },
+  "links": [
+    {
+      "label": "Qwen3.8-27B model card (Hugging Face)",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "kind": "model-card"
+    },
+    {
+      "label": "Qwen3.8-27B-FP8 checkpoint (Hugging Face)",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
+      "kind": "model-card"
+    },
+    {
+      "label": "Qwen — Qwen3.8 blog post",
+      "url": "https://qwen.ai/blog?id=qwen3.8",
+      "kind": "announcement"
+    },
+    {
+      "label": "vLLM recipe — Qwen3.8-27B",
+      "url": "https://recipes.vllm.ai/Qwen/Qwen3.8-27B",
+      "kind": "tutorial"
+    }
+  ],
+  "faq": [
+    {
+      "q": "What licence are the Qwen3.8-27B weights under?",
+      "a": "Apache 2.0, as published on the Hugging Face model card. That is more permissive than the custom licence on the larger Qwen3.8-2.4T-A95B checkpoint."
+    },
+    {
+      "q": "Is Qwen3.8-27B multimodal?",
+      "a": "Yes. It is a causal language model with a vision encoder and natively understands images and video, from STEM diagrams and documents to hour-scale videos, in addition to text."
+    },
+    {
+      "q": "What context length does Qwen3.8-27B support?",
+      "a": "262,144 tokens natively, extensible up to 1,000,000 with YaRN scaling. Qwen recommends allocating up to 262,144 tokens to reasoning content and 131,072 to the final response."
+    },
+    {
+      "q": "Can thinking mode be turned off?",
+      "a": "Yes. Thinking mode is on by default but can be disabled per request. Reasoning depth is set with reasoning_effort (xhigh by default, plus medium and low), and reasoning context from earlier messages is retained with preserve_thinking."
+    },
+    {
+      "q": "How does Qwen3.8-27B compare with Qwen3.6-27B?",
+      "a": "On Qwen's own tables it leads across the board: Terminal Bench 2.1 73.0 vs 63.4, SWE-bench Pro 61.7 vs 53.5, QwenSWEBench 79.0 vs 49.3, DeepSWE 1.1 42.2 vs 13.3, OSWorld-Verified 84.3 vs 63.9 and IFBench 79.5 vs 69.1."
+    },
+    {
+      "q": "How do I run Qwen3.8-27B?",
+      "a": "The weights ship in Hugging Face Transformers format and are compatible with SGLang, vLLM and TokenSpeed, each of which publishes a Qwen3.8 recipe. An FP8 checkpoint is also published for lower-memory serving."
+    }
+  ],
+  "versionHistory": [
+    {
+      "version": "Qwen3.8-2.4T-A95B",
+      "slug": "qwen3-8",
+      "date": "2026-08",
+      "note": "The Max-class open-weight sibling in the same generation: 2.4T total / 95B active MoE, text-only."
+    },
+    {
+      "version": "Qwen3.8-27B",
+      "slug": "qwen3-8-27b",
+      "date": "2026-08",
+      "note": "Compact dense vision-language member of the Qwen3.8 generation, Apache 2.0.",
+      "current": true
+    },
+    {
+      "version": "Qwen3.6",
+      "slug": "qwen3-6",
+      "date": "2026-04"
+    },
+    {
+      "version": "Qwen3.5",
+      "slug": "qwen3-5",
+      "date": "2026-02-16"
+    },
+    {
+      "version": "Qwen3 (2507 update)",
+      "slug": "qwen3-2507",
+      "date": "2025-07"
+    },
+    {
+      "version": "Qwen3",
+      "slug": "qwen3",
+      "date": "2025-04-28"
+    },
+    {
+      "version": "Qwen2.5",
+      "slug": "qwen2-5",
+      "date": "2024-09"
+    },
+    {
+      "version": "Qwen2",
+      "slug": "qwen2",
+      "date": "2024-06"
+    }
+  ]
+}

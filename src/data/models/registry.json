@@ -2448,6 +2448,23 @@
               "current": true
             },
             {
+              "name": "Qwen3.8-27B",
+              "slug": "qwen3-8-27b",
+              "blurb": "Compact dense member of the August 2026 Qwen3.8 generation: 27B parameters, native image and video understanding, 262K context extensible to 1M, Apache 2.0 weights.",
+              "tags": [
+                "open-weights",
+                "multimodal",
+                "reasoning",
+                "coding",
+                "agentic",
+                "long-context"
+              ],
+              "contextWindow": "262K (up to 1M)",
+              "license": "Apache-2.0",
+              "date": "2026-08",
+              "rich": true
+            },
+            {
               "name": "Qwen3.6",
               "slug": "qwen3-6",
               "blurb": "Open-weight (Apache 2.0) generation; Qwen3.6-35B-A3B (35B total / 3B active MoE, agentic coding, thinking-context preservation) on 2026-04-16 and a Q…",
@@ -3038,6 +3055,21 @@
           "title": "GLM (flagship)",
           "blurb": "Z.ai's frontier flagship large language model line, built for reasoning, agentic workflows and long-horizon coding, with open weights.",
           "versions": [
+            {
+              "name": "GLM-5.3",
+              "slug": "glm-5-3",
+              "blurb": "Released August 14, 2026 on the GLM-5.2 base with no new pretraining run — post-training alone lifts Terminal-Bench 3.0 from 4.6 to 28.3 and CyberGym to 84.5%. Coding-Plan first; API and weights pending.",
+              "tags": [
+                "frontier",
+                "coding",
+                "reasoning",
+                "agentic",
+                "long-context"
+              ],
+              "contextWindow": "1M",
+              "date": "2026-08-14",
+              "rich": true
+            },
             {
               "name": "GLM-5.2",
               "slug": "glm-5-2",
@@ -4631,6 +4663,20 @@
           "title": "Doubao Seed",
           "blurb": "ByteDance's flagship general-purpose LLM family, positioned as an agent-first productivity model, delivered via the Doubao app and Volcano Engine API.",
           "versions": [
+            {
+              "name": "Seed 2.1 Turbo",
+              "slug": "seed-2-1-turbo",
+              "blurb": "Compact half of the June 2026 Seed 2.1 family: the same agent-first multimodal tuning as Seed 2.1 Pro at a smaller size tier, scored on the same published suite.",
+              "tags": [
+                "proprietary",
+                "multimodal",
+                "coding",
+                "agentic",
+                "reasoning"
+              ],
+              "date": "2026-06",
+              "rich": true
+            },
             {
               "name": "Seed 2.1 Pro",
               "slug": "seed-2-1-pro",

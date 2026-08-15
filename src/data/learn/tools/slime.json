@@ -1,0 +1,76 @@
+{
+  "slug": "slime",
+  "name": "slime",
+  "repo": "THUDM/slime",
+  "homepage": "https://thudm.github.io/slime",
+  "category": "training-tuning",
+  "categoryTitle": "Training & Fine-Tuning",
+  "subcategory": "alignment-rlhf",
+  "subcategoryTitle": "RLHF & Alignment",
+  "tagline": "SGLang-native RL post-training framework, built around a single Megatron + SGLang path",
+  "seoTitle": "slime: SGLang-Native RL Post-Training Framework",
+  "metaDescription": "slime is an open-source LLM post-training framework for RL scaling that connects Megatron training with SGLang rollout. It is the RL framework behind the GLM models.",
+  "overview": [
+    "slime is an open-source reinforcement-learning post-training framework from THUDM, built for RL scaling. It provides two capabilities that are meant to reinforce each other: high-performance training, by connecting Megatron with SGLang, and flexible data generation, through custom data-generation interfaces and server-based engines. Megatron training, SGLang rollout, custom data generation, reward computation, verifier feedback and environment interaction all flow through the same training / rollout / Data Buffer path rather than a stack of disconnected services.",
+    "Its main claim is that it has been used for real releases rather than only examples: the project states slime is the RL framework behind GLM-5.2, GLM-5.1, GLM-5, GLM-4.7, GLM-4.6 and GLM-4.5, and that it also supports the Qwen series (Qwen3.6, Qwen3.5, Qwen3Next, Qwen3MoE, Qwen3, Qwen2.5), the DeepSeek V3 series (V3, V3.1, R1) and Llama 3. It is deliberately opinionated: by choosing SGLang as the single rollout backend, it can use SGLang-specific serving, routing, caching, disaggregation and weight-sync behaviour directly instead of abstracting over several inference engines.",
+    "Both engines are exposed by pass-through rather than wrapper code. Every argument the installed SGLang supports can be used by adding a `--sglang-` prefix, and Megatron arguments are read directly, so parallelism, optimizer and checkpointing options stay available as those projects evolve. Around that, slime adds RL-specific machinery: prefill/decode disaggregation for multi-turn and agentic workloads, delta weight sync for training/inference disaggregation, external rollout engines for setups where serving is managed outside the training job, and session-affinity router policies for multi-turn agents.",
+    "The project treats correctness as infrastructure work, maintaining CPU unit tests, contract tests for customization hooks, and GPU end-to-end tests covering dense and MoE models, checkpointing, numerical precision, async rollout and PPO-style workflows, plus documented reproducibility, fault tolerance, tracing and profiling. Several independent systems build on it as an RL substrate, including Dressage (agentic RL by Alibaba Accio), Miles (RadixArk) and vime (maintained by the vLLM project)."
+  ],
+  "features": [
+    "Single dataflow for RL post-training: Megatron training and SGLang rollout share one training / rollout / Data Buffer path",
+    "Native argument pass-through — SGLang flags via a `--sglang-` prefix, Megatron flags read directly, so no wrapper layer hides upstream options",
+    "Custom data-generation and rollout interfaces (`--rollout-function-path`, `--custom-generate-function-path`) for search, multi-agent, fully-async and coding-agent RL",
+    "Prefill/decode disaggregation, delta weight sync and external rollout engines for large-model and agentic workloads",
+    "Validated on frontier post-training runs — the project cites the GLM-4.5 through GLM-5.2 releases — with support for Qwen, DeepSeek V3 and Llama 3 model families",
+    "Engineering guardrails as first-class features: CPU unit tests, GPU end-to-end CI, reproducibility, fault tolerance, trace viewer and profiling docs"
+  ],
+  "gettingStarted": {
+    "intro": "The project recommends its Docker image, which ships the patched SGLang and Megatron dependencies. The quick-start walkthrough trains GLM-Z1-9B on the dapo-math-17k dataset; NVIDIA H-series GPUs have CI coverage, and B200 uses identical steps.",
+    "steps": [
+      {
+        "heading": "Start the Docker container",
+        "body": "Pull the prebuilt image and start an interactive container with GPUs attached. If Docker is not an option, the repository ships build_conda.sh instead.",
+        "code": "docker pull slimerl/slime:latest\n\ndocker run --rm --gpus all --ipc=host --shm-size=16g \\\n  --ulimit memlock=-1 --ulimit stack=67108864 \\\n  -it slimerl/slime:latest /bin/bash",
+        "lang": "bash"
+      },
+      {
+        "heading": "Update slime inside the image",
+        "body": "slime is preinstalled in the image; pull the newest revision and reinstall in editable mode to get the latest version.",
+        "code": "cd /root/slime\ngit pull\npip install -e . --no-deps",
+        "lang": "bash"
+      },
+      {
+        "heading": "Download a model and datasets",
+        "body": "The quick start uses GLM-Z1-9B with the dapo-math-17k training set and aime-2024 for evaluation.",
+        "code": "hf download zai-org/GLM-Z1-9B-0414 --local-dir /root/GLM-Z1-9B-0414\n\nhf download --repo-type dataset zhuzilin/dapo-math-17k \\\n  --local-dir /root/dapo-math-17k\n\nhf download --repo-type dataset zhuzilin/aime-2024 \\\n  --local-dir /root/aime-2024",
+        "lang": "bash"
+      },
+      {
+        "heading": "Convert the weights to Megatron format",
+        "body": "Source the matching model config from scripts/models, then convert the Hugging Face checkpoint into Megatron torch_dist format. Larger models can run the same script under torchrun.",
+        "code": "cd /root/slime\nsource scripts/models/glm4-9B.sh\n\nPYTHONPATH=/root/Megatron-LM python tools/convert_hf_to_torch_dist.py \\\n    ${MODEL_ARGS[@]} \\\n    --hf-checkpoint /root/GLM-Z1-9B-0414 \\\n    --save /root/GLM-Z1-9B-0414_torch_dist",
+        "lang": "bash"
+      },
+      {
+        "heading": "Launch the training run",
+        "body": "Run the example script. Rollout and training sizes must balance: rollout-batch-size × n-samples-per-prompt = global-batch-size × num-steps-per-rollout, with num-steps-per-rollout defaulting to 1 for on-policy training.",
+        "code": "cd /root/slime\nbash scripts/run-glm4-9B.sh",
+        "lang": "bash"
+      },
+      {
+        "heading": "Convert checkpoints back to Hugging Face",
+        "body": "Saved Megatron checkpoints convert back for serving or sharing. If Megatron's embedding padding produces a mismatch, set --vocab-size manually.",
+        "code": "PYTHONPATH=/root/Megatron-LM python tools/convert_torch_dist_to_hf.py \\\n  --input-dir /path/to/torch_dist_ckpt/iter_xxx/ \\\n  --output-dir /root/GLM-Z1-9B-0414-iter_xxx \\\n  --origin-hf-dir /root/GLM-Z1-9B-0414",
+        "lang": "bash"
+      }
+    ]
+  },
+  "useCases": [
+    "Reach for it when you are running RL post-training at release scale on a Megatron + SGLang stack and want the rollout and training loop in one dataflow",
+    "Reach for it when your reward signal comes from tools, sandboxes, verifiers or environments and needs a custom generation function rather than a fixed trainer",
+    "Reach for it for agentic RL — multi-turn, fully-async or coding-agent workloads where prefill and decode have different resource profiles",
+    "Reach for it when you need upstream SGLang or Megatron features immediately, without waiting for a framework abstraction to expose them"
+  ],
+  "language": "Python",
+  "license": "Apache-2.0"
+}

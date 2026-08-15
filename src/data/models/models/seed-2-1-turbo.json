@@ -1,0 +1,278 @@
+{
+  "slug": "seed-2-1-turbo",
+  "name": "Seed 2.1 Turbo",
+  "maker": "bytedance",
+  "makerTitle": "ByteDance",
+  "line": "bytedance-seed",
+  "lineTitle": "Doubao Seed",
+  "tagline": "The smaller, faster half of ByteDance's Seed 2.1 family (June 2026) — the same agent-first multimodal recipe as Seed 2.1 Pro at a lower size tier.",
+  "seoTitle": "Seed 2.1 Turbo — ByteDance's compact Doubao model",
+  "metaDescription": "Seed 2.1 Turbo: the compact model in ByteDance's Doubao Seed 2.1 family (June 2026), benchmarked by the Seed team against Seed 2.1 Pro, Claude Opus 4.7 and GPT-5.5.",
+  "releaseDate": "2026-06",
+  "status": "Available through Volcano Engine (Doubao)",
+  "license": "Proprietary",
+  "openWeights": false,
+  "modalities": [
+    "Text",
+    "Vision",
+    "Video"
+  ],
+  "tags": [
+    "proprietary",
+    "multimodal",
+    "coding",
+    "agentic",
+    "reasoning"
+  ],
+  "overview": [
+    "Seed 2.1 Turbo is the compact model in ByteDance's Doubao Seed 2.1 family, which the Seed team announced on June 23, 2026. ByteDance's Seed 2.1 page presents the generation as 'offering two AI productivity models in different sizes: Pro and Turbo', with Turbo the smaller of the pair and Seed 2.1 Pro the flagship. Like Pro it is served through Volcano Engine rather than released as open weights.",
+    "It inherits the generation's agent-first framing: the Seed 2.1 family is pitched at coding engineering delivery, long-chain agent task execution and multimodal understanding rather than single-turn question answering. Turbo is scored across the same published suite as Pro, spanning knowledge, reasoning, office and agent work, coding, terminal use, spatial reasoning and long-video understanding.",
+    "On the Seed team's own comparison table Turbo tracks close behind Pro on most rows and ahead of it on a few — BeyondAIMER 88.0 against Pro's 87.0, and Workspace Bench 54.7 against 53.0. It stays competitive on multimodal work (MathVision with tool 92.7, MMMU-Pro with tool 82.2, VideoMME 89.0, MMLongBench-128K 76.9) while giving up ground on the longest-horizon agent rows, where Pro leads by wide margins: Agent Startup Bench 54.0 vs 68.8 and TOMATO 56.8 vs 79.5.",
+    "The same table sets both models against Claude Opus 4.7, GPT-5.5 and Gemini 3.1 Pro. Turbo leads all three on several vision rows — BabyVision 62.9 (best of the group after Pro), WorldVQA 48.6 and ZEROBench with tool 20.0 — while GPT-5.5 remains ahead on most coding and terminal rows. ByteDance publishes no open weights for the Seed line; Turbo's per-token price and context limit are set on Volcano Engine's platform rather than in the Seed team's model page."
+  ],
+  "strengths": [
+    "BeyondAIMER 88.0 — above the 87.0 the Seed team reports for the larger Seed 2.1 Pro",
+    "Workspace Bench 54.7 for office-style agent work, again ahead of Pro's 53.0",
+    "Strong multimodal scores for its size: MathVision with tool 92.7, MMMU-Pro with tool 82.2, CharXiv-RQ with tool 83.6",
+    "Long-video and long-context understanding close to Pro — VideoMME 89.0, OVOBench 79.2, MMLongBench-128K 76.9",
+    "Same agent-first tuning as Seed 2.1 Pro at a smaller size tier, served through the same Volcano Engine API"
+  ],
+  "useCases": [
+    "High-volume production traffic where Seed 2.1 Pro's cost per call is the constraint",
+    "Multimodal understanding over documents, charts, infographics and video",
+    "Coding and terminal agent workflows that do not need Pro's longest-horizon planning",
+    "Doubao-based assistants and Volcano Engine applications already targeting the Seed 2.1 generation"
+  ],
+  "benchmarks": [
+    {
+      "name": "BeyondAIMER",
+      "score": 88.0,
+      "unit": "%",
+      "max": 100,
+      "source": "https://seed.bytedance.com/en/seed2_1"
+    },
+    {
+      "name": "MathVision (with tool)",
+      "score": 92.7,
+      "unit": "%",
+      "max": 100,
+      "source": "https://seed.bytedance.com/en/seed2_1"
+    },
+    {
+      "name": "MMMU-Pro (with tool)",
+      "score": 82.2,
+      "unit": "%",
+      "max": 100,
+      "source": "https://seed.bytedance.com/en/seed2_1"
+    },
+    {
+      "name": "VideoMME",
+      "score": 89.0,
+      "unit": "%",
+      "max": 100,
+      "source": "https://seed.bytedance.com/en/seed2_1"
+    },
+    {
+      "name": "MMLongBench-128K",
+      "score": 76.9,
+      "unit": "%",
+      "max": 100,
+      "source": "https://seed.bytedance.com/en/seed2_1"
+    },
+    {
+      "name": "Terminal Bench 2.1",
+      "score": 67.6,
+      "unit": "%",
+      "max": 100,
+      "source": "https://seed.bytedance.com/en/seed2_1"
+    },
+    {
+      "name": "SuperGPQA",
+      "score": 67.4,
+      "unit": "%",
+      "max": 100,
+      "source": "https://seed.bytedance.com/en/seed2_1"
+    },
+    {
+      "name": "BabyVision",
+      "score": 62.9,
+      "unit": "%",
+      "max": 100,
+      "source": "https://seed.bytedance.com/en/seed2_1"
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Seed 2.1 Turbo against Seed 2.1 Pro, Claude Opus 4.7, GPT-5.5 and Gemini 3.1 Pro, transcribed from the benchmark suite ByteDance publishes on its Seed 2.1 page. Blank cells reflect scores the maker did not report for that model.",
+    "models": [
+      "Seed 2.1 Turbo",
+      "Seed 2.1 Pro",
+      "Claude Opus 4.7",
+      "GPT-5.5",
+      "Gemini 3.1 Pro"
+    ],
+    "subject": 0,
+    "rows": [
+      {
+        "benchmark": "KINA",
+        "unit": "%",
+        "scores": [46.6, 48.3, 46.7, 52.6, 53.2]
+      },
+      {
+        "benchmark": "SuperGPQA",
+        "unit": "%",
+        "scores": [67.4, 70.8, 68.5, 72.7, 76.6]
+      },
+      {
+        "benchmark": "BeyondAIMER",
+        "unit": "%",
+        "scores": [88.0, 87.0, 79.0, 91.0, 90.0]
+      },
+      {
+        "benchmark": "Workspace Bench",
+        "unit": "%",
+        "scores": [54.7, 53.0, 55.1, 58.7, 32.8]
+      },
+      {
+        "benchmark": "Agent Startup Bench",
+        "unit": "%",
+        "scores": [54.0, 68.8, 62.3, 68.1, 45.7]
+      },
+      {
+        "benchmark": "xDailyBench",
+        "unit": "%",
+        "scores": [56.4, 61.0, 69.0, 73.0, 35.2]
+      },
+      {
+        "benchmark": "NL2Repo-Bench",
+        "unit": "%",
+        "scores": [43.7, 47.0, 58.2, 45.1, 33.4]
+      },
+      {
+        "benchmark": "Terminal Bench 2.1",
+        "unit": "%",
+        "scores": [67.6, 71.0, 71.7, 73.8, 70.7]
+      },
+      {
+        "benchmark": "SWE-Atlas",
+        "unit": "%",
+        "scores": [30.6, 35.2, 38.7, 44.7, 23.6]
+      },
+      {
+        "benchmark": "MathVision (with tool)",
+        "unit": "%",
+        "scores": [92.7, 94.5, 83.1, 92.2, 89.2]
+      },
+      {
+        "benchmark": "MMMU-Pro (with tool)",
+        "unit": "%",
+        "scores": [82.2, 82.7, 74.0, 81.2, 80.5]
+      },
+      {
+        "benchmark": "WorldVQA",
+        "unit": "%",
+        "scores": [48.6, 53.0, 35.9, 34.6, 44.3]
+      },
+      {
+        "benchmark": "ZEROBench (with tool)",
+        "unit": "%",
+        "scores": [20.0, 22.0, 8.0, 13.0, 12.0]
+      },
+      {
+        "benchmark": "BabyVision",
+        "unit": "%",
+        "scores": [62.9, 73.7, 22.2, 55.9, 54.4]
+      },
+      {
+        "benchmark": "CharXiv-RQ (with tool)",
+        "unit": "%",
+        "scores": [83.6, 86.4, 82.1, 83.2, 83.5]
+      },
+      {
+        "benchmark": "ERQA",
+        "unit": "%",
+        "scores": [71.3, 72.0, 52.5, 64.5, 70.8]
+      },
+      {
+        "benchmark": "MMLongBench-128K",
+        "unit": "%",
+        "scores": [76.9, 78.3, null, null, 70.7]
+      },
+      {
+        "benchmark": "VideoMME",
+        "unit": "%",
+        "scores": [89.0, 89.2, null, null, 86.7]
+      },
+      {
+        "benchmark": "TOMATO",
+        "unit": "%",
+        "scores": [56.8, 79.5, null, null, 60.4]
+      },
+      {
+        "benchmark": "Minerva",
+        "unit": "%",
+        "scores": [65.9, 70.7, null, null, 63.5]
+      },
+      {
+        "benchmark": "OVOBench",
+        "unit": "%",
+        "scores": [79.2, 80.7, null, null, 64.1]
+      },
+      {
+        "benchmark": "VideoSimpleQA",
+        "unit": "%",
+        "scores": [71.4, 76.4, null, null, 70.0]
+      }
+    ],
+    "source": "https://seed.bytedance.com/en/seed2_1"
+  },
+  "links": [
+    {
+      "label": "ByteDance Seed — Seed 2.1 model page",
+      "url": "https://seed.bytedance.com/en/seed2_1",
+      "kind": "official"
+    },
+    {
+      "label": "Seed 2.1 launch blog (Seed team)",
+      "url": "https://seed.bytedance.com/en/blog/seed2-1-officially-released-advancing-ai-productivity",
+      "kind": "announcement"
+    },
+    {
+      "label": "ByteDance Seed — team homepage",
+      "url": "https://seed.bytedance.com/en/",
+      "kind": "official"
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is Seed 2.1 Turbo?",
+      "a": "It is the smaller of the two models in ByteDance's Doubao Seed 2.1 family, which the Seed team announced on June 23, 2026. ByteDance's Seed 2.1 page describes the generation as offering two AI productivity models in different sizes, Pro and Turbo."
+    },
+    {
+      "q": "How does Seed 2.1 Turbo compare with Seed 2.1 Pro?",
+      "a": "On ByteDance's published table Pro leads on most rows, but Turbo is ahead on BeyondAIMER (88.0 vs 87.0) and Workspace Bench (54.7 vs 53.0) and close on multimodal work such as MMMU-Pro with tool (82.2 vs 82.7) and VideoMME (89.0 vs 89.2). The widest gaps are on long-horizon agent rows — Agent Startup Bench 54.0 vs 68.8 and TOMATO 56.8 vs 79.5."
+    },
+    {
+      "q": "Are Seed 2.1 Turbo weights available?",
+      "a": "No. Seed 2.1 is a proprietary, API-only line served through ByteDance's Volcano Engine (Doubao) platform; the Seed team does not publish open weights for it."
+    },
+    {
+      "q": "Is Seed 2.1 Turbo multimodal?",
+      "a": "Yes. ByteDance scores it on image, document and video benchmarks — MathVision, MMMU-Pro, CharXiv-RQ, VideoMME, OVOBench and VideoSimpleQA among them — alongside text, coding and terminal evaluations."
+    }
+  ],
+  "versionHistory": [
+    {
+      "version": "Seed 2.1 Pro",
+      "slug": "seed-2-1-pro",
+      "date": "2026-06-24",
+      "note": "Flagship of the Seed 2.1 family, unveiled at the Volcano Engine FORCE conference."
+    },
+    {
+      "version": "Seed 2.1 Turbo",
+      "slug": "seed-2-1-turbo",
+      "date": "2026-06",
+      "note": "Compact sibling in the same generation, scored across the same published benchmark suite.",
+      "current": true
+    }
+  ]
+}
