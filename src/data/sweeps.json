@@ -32276,6 +32276,32 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260815t043057z",
+      "timestamp": "2026-08-15T04:30:57.261Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic, DeepMind, Meta, Mistral, Cohere, ByteDance Seed, plus DeepSeek/Z.ai/MiniMax/Moonshot/Qwen/xAI/Baidu via search since their sites returned 403 or empty), GitHub trending daily + weekly, HuggingFace models/papers/datasets/blog, HN front page + page 2, Cursor's changelog and the AI-for-science lane (BCI, medical imaging, pharma). Every fresh AI story was already in the feed - Qwen3.8-27B, GLM-5.3, Google HEIR, Toast 1, Gemini 3.7 Flash, DeepSeek V4 Pro, Cursor Builds and the Opus 5 post - and the remaining candidates failed the 72h cap (LLMRouter Aug 7, WeatherNext cyclones Aug 6, Intern-S2-Preview weights ~Aug 5, NVIDIA's Nemotron terminal dataset Jul 21) or are old repos merely trending (github/spec-kit, a 2025 repo on a 0.16.4 patch; google/skills, created March 2026). Anthropic's Aug 14 watermark explainer is already linked from the existing claude-content-marking item. NOTE: the YouTube lane could not be searched this run - yt-rss-scan.ts returned HTTP 404/500 for all 8 creator channels on two consecutive runs, and a direct fetch of the RSS endpoints also 404s from this runner, so 'video' is deliberately left out of coverage rather than claimed.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "tutorial",
+        "ecosystem"
+      ]
     }
   ]
 }
