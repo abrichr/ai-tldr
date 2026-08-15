@@ -32420,6 +32420,32 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260815t142245z",
+      "timestamp": "2026-08-15T14:22:45.508Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero adds. Searched lab blogs (Anthropic, DeepMind, Meta, Mistral, plus DeepSeek/Moonshot/Z.ai/MiniMax/Qwen via search — OpenAI and x.ai returned 403 to the runner), GitHub trending + a created-since-2026-08-10 repo query, HuggingFace models/datasets/papers, HN front page and newest, all 8 YouTube creator feeds, the coding-agent lane, and the AI-for-science lane (medical imaging, BCI/neural decoding, protein and drug discovery, STAT News). Everything that qualified is already in the feed from the 12:35Z sweep: Qwen3.8-27B, Google HEIR homomorphic inference, Claude Code session costs, Cactus Needle 2, GLM-5.3, DeepSeek V4 Pro 0813, WeatherNext Cyclones, Unsloth Desktop, and all 6 fresh creator videos. The rest failed a hard rule: LLMRouter (HF papers #1, 2.35k upvotes) is an August 7 arXiv v1, 8 days past the 72h cap; guillaumemeyer/watermarks-remover (9.3k stars) was created August 11 and duplicates the existing remove-ai-watermarks entry; vercel-labs eve-software-factory-template is 74h old; The Stack v3 has no verifiable release date; AX-RAY is an unpublished 117-row release candidate; byhand.ai is an existing Substack resurfacing on HN, not a release; spec-kit v0.16.4 is a routine patch; HN newest was all sub-5-point noise.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
