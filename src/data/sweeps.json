@@ -32334,6 +32334,32 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260815t082932z",
+      "timestamp": "2026-08-15T08:29:32.734Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. All 6 fresh YouTube videos from yt-rss-scan (1littlecoder Gemini 3.7 Flash, Fireship x2, Two Minute Papers, Wes Roth x2) were already ingested by the 06:37Z sweep. Every AI story on the HN front page (Qwen3.8-27B, Google HEIR homomorphic encryption, Claude Code session costs, Toast 1, GLM-5.3, 'Why does Opus 5 feel worse') is already in the feed. GitHub trending daily/weekly held nothing new: needle, semantica, unsloth, Prime Agent, LoopX and Switchyard are all covered, while google/skills (created 2026-03-31) and holaboss-ai/holaOS (created 2026-03-22) are old repos merely trending today, not releases. HF trending models and datasets were all covered or stale; the top HF paper LLMRouter (2,350 upvotes, public code + xRouteBench) was rejected on the 72h cap (arXiv v1 was 2026-08-07, eight days old), and Intern-S2-Mobius shipped weights ~19h ago but cleared no traction signal. Lab blogs quiet: Anthropic's only new post (Aug 14 'How Claude's text watermark works') is already a cited link on anthropic-claude-content-marking, Meta has nothing in August, Mistral's latest is the Aug 11 regional endpoints post already in the feed, DeepMind's newest is WeatherNext Cyclones (Aug 6, covered), and Cohere/MiniMax/Moonshot had nothing shipped. Science lane ran dated searches for medical-imaging/FDA clearances, BCI and neural decoding, and protein design and drug discovery, plus STAT News and neurosciencenews.com; no released artifact inside 72h. Tier-1 press (The Register, TechCrunch, techstartups roundup) surfaced only already-covered items plus Apple's unreleased China model (a Reuters business report with no shipped artifact) and July 30 price cuts (outside the window).",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
