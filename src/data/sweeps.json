@@ -32386,6 +32386,40 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260815t123429z",
+      "timestamp": "2026-08-15T12:34:29.385Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Z.ai, Qwen, DeepSeek, MiniMax, Moonshot, Baidu, ByteDance), GitHub trending daily + weekly, HuggingFace models/datasets/papers, HN front page and the Algolia top-scoring feed, all 8 YouTube creator channels, the AI-for-science lane (STAT, Nature, neurosciencenews, npj Digital Medicine, BCI and pharma queries), and tier-1 press. Everything inside the 72h window was already in the feed: Anthropic's watermark explainer, Google's Gemini watermark toggle and HEIR, Qwen3.8-27B, GLM-5.3, DeepSeek V4 Pro, OpenAI Ultrafast, Writer Palmyra X6, Toast 1 and all 6 fresh creator videos. The near-misses failed on date, not quality — Mistral OCR 4.1 trended on HN at 407 points but shipped July 16, and The Stack v3 shipped July 23. github.com/trending's two uncovered repos (cathrynlavery/diagram-design, google/skills) are continuously-pushed skill packs with no dated release. Only change is an update: the SpaceX-Cursor item's explainer still said the deal was 'set to close in Q3 2026' while its own summary recorded the August 14 close.",
+      "counts": {
+        "added": 0,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [
+        {
+          "id": "spacex-cursor-acquisition-jun16",
+          "title": "SpaceX Buys Cursor for $60B — all-stock deal closes on August 14",
+          "note": "The deal closed on 2026-08-14 (Cursor's own 'Joining SpaceX' post says the acquisition is complete), but the explainer still described it as announced and 'set to close in Q3 2026 if regulators clear it' — contradicting the item's own summary and quickFacts, which already record the August 14 close. Rewrote the explainer to match the completed deal and updated the title from 'to Buy' to 'Buys'. All facts verified this run from cursor.com/blog/joining-spacex and techzine.eu."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "tutorial",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T10:25:51.713Z",
+  "generatedAt": "2026-08-15T12:34:29.385Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
@@ -49363,7 +49363,7 @@
         "ecosystem",
         "tool"
       ],
-      "title": "SpaceX to Buy Cursor for $60B — stock deal days after blockbuster IPO",
+      "title": "SpaceX Buys Cursor for $60B — all-stock deal closes on August 14",
       "org": "SpaceX",
       "date": "2026-06-16",
       "url": "https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/",
@@ -49427,10 +49427,10 @@
         }
       ],
       "explainer": {
-        "tagline": "SpaceX is buying the maker of Cursor — the leading AI coding editor — in a $60B all-stock deal.",
-        "whatIsIt": "An announced acquisition. SpaceX, fresh off its IPO, has agreed to acquire Anysphere — the company behind the Cursor AI coding editor — for $60 billion in stock. The deal is set to close in Q3 2026 if regulators clear it.",
-        "howItWorks": "TechCrunch reports the purchase is structured entirely in SpaceX stock, with no cash component. SpaceX's IPO price was $135 and shares were trading above $200 in pre-market, so the share count needed to fund the deal is smaller than the headline number suggests. SpaceX says Cursor will plug into its AI work, which is built around Elon Musk's xAI.",
-        "whyItMatters": "Cursor is the most-used AI coding editor among professional developers, and Anysphere has stayed independent through every prior funding round. A SpaceX/xAI owner changes the calculus for teams that picked Cursor for neutrality, for those worried about default model routing to Grok, and for rivals like GitHub Copilot, Windsurf, and Continue. It is also the largest acquisition in the AI tooling space to date.",
+        "tagline": "SpaceX has closed its $60B all-stock purchase of Anysphere, the maker of the Cursor AI coding editor.",
+        "whatIsIt": "SpaceX has finished buying Anysphere, the company behind the Cursor AI coding editor. Cursor said on August 14, 2026 that it is now part of SpaceX, which completes a process that started in April. The price was $60 billion, paid entirely in SpaceX stock.",
+        "howItWorks": "No cash changed hands — SpaceX paid for Anysphere in its own stock. Cursor now sits inside SpaceXAI, the combined SpaceX and xAI operation, and the Cursor team gets access to what SpaceX calls the largest fleet of GPUs in the world. Cursor points to Grok 4.6 as the first result of that compute, scoring between 69.9% and 70.8% on CursorBench and 61 on the Artificial Analysis Intelligence Index.",
+        "whyItMatters": "Cursor is the most-used AI coding editor among professional developers, and Anysphere had stayed independent through every prior funding round. A SpaceX and xAI owner changes the calculus for teams that picked Cursor for neutrality, for those worried about default model routing to Grok, and for rivals like GitHub Copilot, Windsurf, and Continue. It is also the largest acquisition in the AI tooling space to date.",
         "forWho": "Engineering leaders, Cursor users, AI coding tool builders",
         "tryIt": "https://www.cursor.com"
       },
