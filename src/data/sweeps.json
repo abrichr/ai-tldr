@@ -32446,6 +32446,34 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260815t162627z",
+      "timestamp": "2026-08-15T16:26:27.614Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, Google/DeepMind, Meta, Mistral, xAI, Cohere, NVIDIA, plus DeepSeek/Z.ai/MiniMax/Moonshot/Qwen), GitHub trending + a created-date repo search, HuggingFace models/datasets/papers, Hacker News top 60 and Show HN, all 8 YouTube creator feeds, the AI-for-science lane (Nature, STAT, neurosciencenews, BCI/pharma/medical-imaging queries) and tier-1 press. Nothing new cleared the bar: all 6 fresh YouTube videos are already in the feed, every HN AI story above 150 points is already covered (Qwen3.8-27B, Google HEIR, GLM-5.3, Toast 1, Opus 5 write-up, Claude Code session costs), Anthropic's watermark explainer is already a link on anthropic-claude-content-marking, and the remaining candidates failed the 72h cap (Intern-S2-Preview weights shipped in May/July despite an Aug 13 paper; tl;dv Firestore breach disclosed Aug 4; watermarks-remover repo created Aug 11; Ai2 OlmoEarth embeddings Aug 12).",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem",
+        "tutorial"
+      ]
     }
   ]
 }
