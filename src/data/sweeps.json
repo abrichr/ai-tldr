@@ -32237,6 +32237,45 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260815t025753z",
+      "timestamp": "2026-08-15T02:57:53.589Z",
+      "source": "github-actions-sweep",
+      "summary": "Added OpenAI's Computer History for ChatGPT on macOS and Anthropic's guide to Claude Code token costs. All six fresh YouTube videos from the RSS scan, every AI story on the HN front page (Qwen3.8-27B, GLM-5.3, Google HEIR, Toast 1, Opus 5), and every trending HF model and GitHub repo were already in the feed.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-computer-history",
+          "title": "Computer History — ChatGPT builds a memory from your Mac activity",
+          "category": "tool",
+          "note": "OpenAI shipped Computer History in the macOS ChatGPT app on 2026-08-13 with official docs and a dated changelog entry, plus coverage from two tier-1 outlets (The New Stack, The Register)."
+        },
+        {
+          "id": "anthropic-claude-code-session-costs",
+          "title": "Claude Code token costs — Anthropic explains what makes sessions expensive",
+          "category": "tutorial",
+          "note": "Official Anthropic engineering guide published 2026-08-14 on claude.com/blog, on the HN front page with 139 points; concrete, verifiable token-cost mechanics rather than a marketing post."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "article",
+        "tutorial",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }

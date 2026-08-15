@@ -1,8 +1,170 @@
 {
-  "generatedAt": "2026-08-15T01:00:06.734Z",
+  "generatedAt": "2026-08-15T02:57:53.589Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openai-computer-history",
+      "categories": [
+        "tool"
+      ],
+      "title": "Computer History — ChatGPT builds a memory from your Mac activity",
+      "org": "OpenAI",
+      "date": "2026-08-13",
+      "url": "https://learn.chatgpt.com/docs/customization/computer-history",
+      "summary": "Computer History is an opt-in ChatGPT feature for macOS. It turns clicks, typing and app switches into memories that ChatGPT and Codex can use. It records interaction events, not screenshots, and is off by default.",
+      "tags": [
+        "openai",
+        "chatgpt",
+        "codex",
+        "macos",
+        "memory",
+        "computer-history",
+        "agents",
+        "privacy",
+        "prompt-injection",
+        "desktop-app"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenAI"
+        },
+        {
+          "label": "Platform",
+          "value": "ChatGPT desktop app for macOS"
+        },
+        {
+          "label": "Plans",
+          "value": "Pro, Business, Enterprise"
+        },
+        {
+          "label": "Default",
+          "value": "Off — opt-in"
+        },
+        {
+          "label": "What it records",
+          "value": "Clicks, typing, shortcuts, app switches"
+        },
+        {
+          "label": "Local event retention",
+          "value": "Up to 48 hours"
+        },
+        {
+          "label": "Not available in",
+          "value": "EEA, Switzerland, UK"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does Computer History take screenshots of my Mac?",
+          "a": "Computer History does not take screenshots. OpenAI's documentation says it captures no screenshots, screen recordings, microphone input or system audio, and that private browsing is excluded. It records interaction events only — clicks, typing, keyboard shortcuts and app switches — and only from the apps and websites you choose to allow."
+        },
+        {
+          "q": "Which plans and regions can use Computer History?",
+          "a": "Computer History runs only in the ChatGPT desktop app on macOS, on the Pro, Business and Enterprise plans. Business and Enterprise admins must grant access before members can opt in. OpenAI says it is not currently available in the European Economic Area, Switzerland or the United Kingdom, and it does not work through an API key or Amazon Bedrock."
+        },
+        {
+          "q": "How is Computer History different from Chronicle?",
+          "a": "Chronicle was OpenAI's earlier research preview and worked by capturing screenshots. Computer History replaces it with a system that reads interaction events through macOS accessibility features instead, as 9to5Mac reported. OpenAI describes Computer History as a rebuilt system rather than a renamed version of Chronicle."
+        },
+        {
+          "q": "Is Computer History data used to train OpenAI models?",
+          "a": "Computer History event files are sent to OpenAI's servers to generate memories, and OpenAI says it does not keep those files after processing unless required by law. The data is not used for model training unless your own data controls permit it. The resulting memory files stay on your Mac until you delete them."
+        },
+        {
+          "q": "What are the risks of turning Computer History on?",
+          "a": "OpenAI warns that Computer History files can hold sensitive information, are not encrypted, and may be readable by other programs running as your macOS user. OpenAI also says the feature raises the risk of prompt injection from content in apps and websites, and advises switching it off during conversations with people who have not agreed to it."
+        }
+      ],
+      "explainer": {
+        "tagline": "ChatGPT for Mac can now build memories from what you do in your apps, using interaction events instead of screenshots.",
+        "whatIsIt": "Computer History turns recent activity across allowed apps and websites into memories and a searchable timeline that ChatGPT and Codex can read. OpenAI shipped it in the ChatGPT desktop app for macOS on August 13, 2026, switched off by default. Pro users can turn it on themselves, while Business and Enterprise members need an admin to grant access first.",
+        "howItWorks": "An interaction-event stream is built from the apps and websites you allow — clicks, typing, keyboard shortcuts and app switches — with no screenshots, screen recordings, microphone input or system audio. OpenAI periodically starts a short-lived Codex session that summarizes those events into plain-text memory files, stored on the Mac under ~/.codex/memories/extensions/skysight/. Temporary event files stay on the machine for up to 48 hours before they are processed and removed.",
+        "whyItMatters": "Work spreads across many apps, and Computer History lets ChatGPT pick up a half-finished task without being told the whole story again. It can also spot steps you repeat and suggest turning them into skills or automations. The trade-off is exposure: OpenAI's own warnings say the local files are not encrypted, that other programs running as your macOS user may be able to read them, and that the feature raises the risk of prompt injection from content in the apps and sites you allow.",
+        "forWho": "Mac users on ChatGPT Pro, Business or Enterprise",
+        "tryIt": "ChatGPT for macOS → Settings → Computer History (off by default)"
+      },
+      "image": {
+        "url": "https://learn.chatgpt.com/og/docs/customization/computer-history.png",
+        "alt": "OpenAI documentation card for the ChatGPT Computer History feature",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Official Docs",
+          "url": "https://learn.chatgpt.com/docs/customization/computer-history"
+        },
+        {
+          "label": "ChatGPT Changelog",
+          "url": "https://learn.chatgpt.com/docs/changelog"
+        },
+        {
+          "label": "The New Stack",
+          "url": "https://thenewstack.io/openai-chatgpt-computer-history/"
+        },
+        {
+          "label": "The Register",
+          "url": "https://www.theregister.com/ai-and-ml/2026/08/14/openai-ditches-recall-style-screenshot-surveillance-for-friendly-keylogging/5287618"
+        },
+        {
+          "label": "9to5Mac Report",
+          "url": "https://9to5mac.com/2026/08/13/chatgpt-for-mac-adds-opt-in-computer-history-feature-replacing-chronicle/"
+        }
+      ],
+      "publishDate": "2026-08-15T02:57:53.589Z"
+    },
+    {
+      "id": "anthropic-claude-code-session-costs",
+      "categories": [
+        "tutorial"
+      ],
+      "title": "Claude Code token costs — Anthropic explains what makes sessions expensive",
+      "org": "Anthropic",
+      "date": "2026-08-14",
+      "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
+      "summary": "Anthropic's guide explains what drives Claude Code token costs: stale context left in the conversation, mid-session model switches that break the prompt cache, and noisy command output. Cache reads cost 0.1x the input price.",
+      "tags": [
+        "anthropic",
+        "claude-code",
+        "tokens",
+        "prompt-caching",
+        "context-window",
+        "cost-optimization",
+        "developer-tools",
+        "cli"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Anthropic's guide lists the habits that make a Claude Code session cost more than it needs to.",
+        "whatIsIt": "A guide by Lydia Hallie, published by Anthropic on August 14, 2026, maps where Claude Code tokens actually go. It works through concrete habits — clearing between tasks, compacting before a break, @-mentioning files instead of typing paths, and quieting commands that dump large output — rather than general advice about writing better prompts.",
+        "howItWorks": "Every turn re-sends the whole conversation, so anything left in context gets paid for again and again. Prompt caching softens that: cache reads cost 0.1x the input price, but the cache expires after one hour on a subscription and five minutes on an API key. Changing /model or /effort mid-conversation invalidates the cache, which is why the guide says to set both at the start of a session. Running a noisy command inside a subagent keeps its output out of the main conversation.",
+        "whyItMatters": "One long Claude Code session costs more than several short ones, because each turn re-reads everything before it. Developers on metered API billing, and teams watching per-seat limits, get a checklist they can apply today: /clear between unrelated tasks, /compact before stepping away, and MAX_THINKING_TOKENS or BASH_MAX_OUTPUT_LENGTH when thinking and command output are the thing filling the window.",
+        "forWho": "Claude Code users on API billing or tight plan limits",
+        "tryIt": "/context — see what is filling your Claude Code context window"
+      },
+      "image": {
+        "url": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a7f1f51730ca89a4d571062_og_maximizing-the-value-of-your-claude-code-sessions.jpg",
+        "alt": "Anthropic blog card for the guide on maximizing the value of Claude Code sessions",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Anthropic Guide",
+          "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions"
+        },
+        {
+          "label": "Cost Docs",
+          "url": "https://code.claude.com/docs/en/costs"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49300800"
+        }
+      ],
+      "publishDate": "2026-08-15T02:57:53.589Z"
+    },
     {
       "id": "mixedbread-toast-1",
       "categories": [
