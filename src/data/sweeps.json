@@ -32567,6 +32567,33 @@
         "tutorial",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260816t010511z",
+      "timestamp": "2026-08-16T01:05:11.969Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Checked lab blogs (Anthropic — only the Aug 14 text-watermark explainer, already linked from anthropic-claude-content-marking; OpenAI API changelog stops at Aug 13 Ultrafast mode; DeepMind/Google, Meta, Mistral, x.ai, Qwen, Z.ai, DeepSeek/MiniMax/Moonshot/Zhipu all quiet since Aug 12), GitHub trending, HF models/datasets/papers, HN front page, 8 YouTube feeds, coding-agent releases, the AI-for-science lane and tier-1 press. Everything fresh was already in the feed (Gemini 3.7 Flash, Qwen3.8-27B, GLM-5.3, DeepSeek Harness, Google HEIR, Cursor Builds, all 4 fresh creator videos) or failed a hard rule: the three HN-hot essays date to Jul 8 / Jul 31 / Aug 4 (outside the 72h cap), the top HF paper LLMRouter is an Aug 7 submission, DreamX-Phi withholds code until its IROS challenge ends, Intern-S2-Mobius has no announcement and only 39 stars / 51 likes, and the one qualifying Aug 15 HN article (allen.bargi.org, 263 points) has no og:image so it cannot carry a card.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
