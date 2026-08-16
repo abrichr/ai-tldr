@@ -32771,6 +32771,32 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260816t142548z",
+      "timestamp": "2026-08-16T14:25:48.511Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Checked lab blogs (Anthropic, OpenAI news + API changelog, Google DeepMind, Meta AI, Mistral, Cohere, DeepSeek, MiniMax, Moonshot), GitHub trending daily and weekly, HuggingFace models/datasets/papers/blog, HN front page and Show HN, all 8 YouTube creator feeds, tier-1 press (TechCrunch, The Register), and the AI-for-science lane (Nature AI subjects, STAT News, NeuroscienceNews, plus dated searches for medical imaging, BCI/neural decoding and pharma AI). Everything inside 72h is already in the feed: all 5 fresh creator videos, the Anthropic watermark explainer (existing anthropic-claude-content-marking already links it), the SpaceX-Cursor close (spacex-cursor-acquisition-jun16), the Microsoft Mico retirement (microsoft-copilot-app-merge), DeepSeek Harness, unsloth and Needle. The strongest outside candidate, LittleLearner (HN 196 pts, models on HuggingFace), submitted to arXiv on 2026-08-13, which is 86h old and past the hard date cap. Trending repos diagram-design and code-graph-rag are viral old repos (created April 2026 and June 2025), not fresh releases. All HuggingFace top papers are 2026-08-13 submissions, also past the cap.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "article",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }
