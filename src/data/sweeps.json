@@ -32688,6 +32688,31 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260816t083112z",
+      "timestamp": "2026-08-16T08:31:12.284Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, Google/DeepMind, Meta, Mistral, Cohere, Qwen, DeepSeek, Z.ai, MiniMax), GitHub trending daily, HuggingFace models/datasets/papers top-10, the HN front page plus every HN story over 120 points in the last 72h, all 8 YouTube creator feeds, coding-agent changelogs (Cursor, Claude Code), influential voices (Simon Willison), and the AI-for-science lane (Nature AI subjects, STAT News, medical-imaging/FDA, BCI/neural-decoding and pharma searches). Everything inside the 72h window was already in the feed: all 5 fresh YouTube videos, Needle 2, Qwen3.8-27B, GLM-5.3, Toast 1, Google HEIR, DeepSeek V4 pricing, Cursor Builds, WeatherNext Cyclones and The Stack v3. The remaining candidates failed the 72h cap on their real release date (Intern-S2-Preview weights shipped in May/July with only an Aug 13 tech report; Auto-research-with-Codex July 8; Piffer working-memory essay Aug 4; Brain2Qwerty Aug 3) or had no released artifact (STAT/pharma items were business and policy coverage). Zero adds.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
