@@ -32822,6 +32822,34 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260816t182905z",
+      "timestamp": "2026-08-16T18:29:05.275Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched Anthropic/OpenAI/DeepMind/Meta/Mistral/Cohere/Qwen/DeepSeek/Z.ai/MiniMax/Moonshot lab channels, GitHub trending (daily + weekly), HuggingFace models/datasets/papers, HN front page and recent >100-point stories, all 8 YouTube creator feeds, the coding-agent changelogs (Claude Code, Cursor, ChatGPT), tier-1 press, and the AI-for-science lane (BCI/neural decoding, medical imaging, pharma/drug discovery, genomics/protein design, STAT News, Nature subjects). Nothing qualified: the previous sweep ran ~2h ago and had already ingested everything fresh. All 5 videos from yt-rss-scan were already in the feed; Anthropic's Aug 14 watermark explainer is already a link on anthropic-claude-content-marking; Google's homomorphic-encryption post, Anthropic's multi-agent research, DeepSeek V4-Pro GA, Cursor Builds and Claude Code 2.1.233 are all already ingested. The best genuinely new candidate, LittleLearner (arXiv 2608.13545, HN 226 points, 88B-token K-5 corpus + 0.6B/1.3B/5B models), was submitted 2026-08-13 and is ~90h old, so it fails the 72h cap. HN's #1 'Claude: System Prompts' is a docs page whose newest entry is July 24; the 561-point maths piece is dated Aug 4; cathrynlavery/diagram-design (+14.7k stars this week) is an April 16 repo surging, not a new release; the SpaceX-Cursor close was already covered twice.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem",
+        "security",
+        "tutorial"
+      ]
     }
   ]
 }
