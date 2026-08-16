@@ -32850,6 +32850,33 @@
         "security",
         "tutorial"
       ]
+    },
+    {
+      "id": "sweep-20260816t202511z",
+      "timestamp": "2026-08-16T20:25:11.908Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, DeepMind, Meta, Mistral, Cohere, Moonshot/Kimi, Z.ai, DeepSeek), GitHub trending daily + weekly, HuggingFace models/datasets/papers, HN front page + Show HN + Algolia 140pt+ feed, all 8 YouTube creator feeds, and the AI-for-science lane (STAT News, Nature, neurosciencenews, BCI/pharma/imaging queries). Nothing new qualified: all 5 fresh YouTube videos and every trending repo/model (Needle 2, Qwen3.8-27B, GLM-5.3, Toast 1, Prime Agent, TencentDB Agent Memory v2, Semantica, Switchyard, HEIR, DeepSeek pricing, Claude Code sessions) are already in the feed, and the top HN AI stories are older posts resurfacing (Piffer Aug 4, Sankalp Jul 8, token brokers Aug 10, Claude system prompts Jul 24) that fail the 72h cap. LittleLearner, LLMRouter and Intern-S2-Preview also missed the window (arXiv Aug 13 74h / Aug 7 / May); DreamX-Phi has no released weights yet.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "resource",
+        "ecosystem"
+      ]
     }
   ]
 }
