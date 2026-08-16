@@ -1,0 +1,69 @@
+{
+  "slug": "mempalace",
+  "name": "MemPalace",
+  "repo": "MemPalace/mempalace",
+  "category": "agents",
+  "categoryTitle": "Agents & Automation",
+  "subcategory": "memory-frameworks",
+  "subcategoryTitle": "Agent Memory",
+  "tagline": "Local-first agent memory that stores conversations verbatim and never summarises them",
+  "seoTitle": "MemPalace - Local-First Verbatim Memory for AI Agents",
+  "metaDescription": "MemPalace is an open-source, local-first AI memory system. It stores conversation history verbatim, retrieves it with semantic search, and needs no API calls.",
+  "overview": [
+    "MemPalace is an open-source, local-first memory system for AI agents and assistants. It stores your conversation history as verbatim text and retrieves it with semantic search — it deliberately does not summarise, extract or paraphrase, so nothing is lost to a lossy compression step before you ever search for it. Nothing leaves your machine unless you opt in, and the default retrieval path needs no API key and no LLM at any stage.",
+    "The index is structured rather than a flat corpus, using a memory-palace metaphor: people and projects become *wings*, topics become *rooms*, and the original content lives in *drawers*. That lets a search be scoped to a project or a person instead of running against everything you have ever said. On top of that, MemPalace ships a temporal entity-relationship knowledge graph with validity windows — add, query, invalidate, timeline — backed by local SQLite.",
+    "The retrieval layer is pluggable behind a documented backend contract. ChromaDB is the bundled default and needs no configuration; `sqlite_exact` is also bundled, and Milvus, Qdrant and pgvector are opt-in extras selected with `--backend`, an environment variable or `config.json`. MemPalace is distributed as a Python CLI (via `uv tool install` or `pipx`), as a multi-arch Docker image, and as an MCP server exposing 44 tools covering palace reads and writes, knowledge-graph operations, drawer management and agent coordination — so MCP clients such as Claude Code or Gemini CLI can use it directly."
+  ],
+  "features": [
+    "Verbatim storage: conversations are kept as written, with no summarisation or extraction step to lose detail",
+    "Structured palace index — wings (people/projects), rooms (topics) and drawers (content) — so searches can be scoped instead of flat",
+    "Local-first and offline by default: the raw semantic-search path requires no API key, no cloud and no LLM",
+    "Pluggable retrieval backends behind one contract: ChromaDB (default) and sqlite_exact bundled, Milvus, Qdrant and pgvector opt-in",
+    "Temporal entity-relationship knowledge graph with validity windows, backed by local SQLite",
+    "MCP server with 44 tools, plus a CLI and a multi-arch (amd64 + arm64) Docker image",
+    "Published, reproducible benchmarks — the repo commits per-question result files and the commands to re-run them"
+  ],
+  "gettingStarted": {
+    "intro": "MemPalace ships a CLI, so the project recommends installing it into an isolated environment — `uv tool install` puts the `mempalace` command on your PATH without colliding with your global site-packages (and avoids PEP 668 errors on Debian/Ubuntu/Homebrew Pythons).",
+    "steps": [
+      {
+        "heading": "Install the CLI and initialise a palace",
+        "body": "uv is the recommended installer; pipx works the same way.",
+        "code": "uv tool install mempalace\nmempalace init ~/projects/myapp",
+        "lang": "bash"
+      },
+      {
+        "heading": "Mine content into the palace",
+        "body": "Point it at project files, or at your agent transcripts to capture past sessions. Scope conversation mining per project with --wing.",
+        "code": "mempalace mine ~/projects/myapp                    # project files\nmempalace mine ~/.claude/projects/ --mode convos   # Claude Code sessions",
+        "lang": "bash"
+      },
+      {
+        "heading": "Search and load context",
+        "body": "Search runs against the verbatim store; wake-up loads relevant context for a new session.",
+        "code": "mempalace search \"why did we switch to GraphQL\"\nmempalace wake-up",
+        "lang": "bash"
+      },
+      {
+        "heading": "Run it as an MCP server instead",
+        "body": "A multi-arch container image is published for running the MCP server or CLI without a local Python toolchain. Everything persists under /data, so mount a volume there and reuse it across runs. The -i flag matters: MCP over stdio needs stdin.",
+        "code": "docker pull ghcr.io/mempalace/mempalace:latest\ndocker run -i --rm -v mempalace-data:/data ghcr.io/mempalace/mempalace",
+        "lang": "bash"
+      },
+      {
+        "heading": "Pick a different storage backend (optional)",
+        "body": "ChromaDB is the default and needs no configuration. Select another with --backend, MEMPALACE_BACKEND, or \"backend\" in config.json; Milvus and pgvector need their extra installed first.",
+        "code": "mempalace search \"graphql\" --backend qdrant",
+        "lang": "bash"
+      }
+    ]
+  },
+  "useCases": [
+    "Give a coding agent persistent recall across sessions without shipping your transcripts to a third-party service",
+    "Search months of past conversations for the exact wording of a decision, rather than a model's summary of it",
+    "Keep memory scoped per project or per person so a query does not drag in unrelated context",
+    "Wire memory into any MCP-compatible client (Claude Code, Gemini CLI and others) through the bundled MCP server"
+  ],
+  "language": "Python",
+  "license": "MIT"
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "deepseek-harness",
+  "name": "DeepSeek Harness",
+  "repo": "deepseek-ai/deepseek-harness",
+  "homepage": "https://deepseek.com/harness",
+  "category": "agents",
+  "categoryTitle": "Agents & Automation",
+  "subcategory": "general-agents",
+  "subcategoryTitle": "Agent Frameworks & Builders",
+  "tagline": "DeepSeek's open agent harness where every capability is a plugin",
+  "seoTitle": "DeepSeek Harness (dsh) - Open-Source Agent Harness",
+  "metaDescription": "DeepSeek Harness (dsh) is DeepSeek AI's open-source agent harness. Built on Cordis, everything is a plugin — models, tools, sessions, sandboxes and the UI.",
+  "overview": [
+    "DeepSeek Harness (`dsh`) is an open-source agent harness from DeepSeek AI. Its organising idea is that everything is a plugin: models, tools, skills, sessions, sandboxes, storage, loops, scheduling and the UI are all supplied by plugins that collaborate through services and events, so you can select, replace or extend any capability from configuration instead of forking the source. DeepSeek frames the split as 'Agent = Model + Harness' — the model reasons, the harness gives it an environment, tools and the loop that keeps it working.",
+    "The plugin system is powered by Cordis, an existing open plugin framework. Capabilities are composed as profiles: an ordered stack of plugin bundles plus your own patch layer. The launcher ships `web` and `headless` profiles that auto-initialise from templates on first use, and `dsh plugin` creates and manages further profiles by forwarding to pnpm inside the profile directory. `--dump-default-config` and `--dump-config` let you inspect the composed tree without booting it.",
+    "The project is MIT-licensed, written in TypeScript, and released by DeepSeek as a developer preview — the README warns in capitals that there will be compatibility-breaking changes while it iterates. It runs any DeepSeek API key out of the box, and its model-configuration guide covers other providers and custom OpenAI-compatible endpoints."
+  ],
+  "features": [
+    "Everything-is-a-plugin architecture: models, tools, skills, sessions, sandboxes, storage, loops, scheduling and UI all arrive as plugins",
+    "Built on Cordis, so plugins collaborate through shared services and events rather than hard-wired imports",
+    "Profiles compose ordered plugin bundles plus your own `cordis.patch.yml` layer, with `--dump-config` to inspect the result before booting",
+    "Ships a Web UI profile and a `headless` profile that runs one persisted session, prints the final answer and exits — good for scripting and CI",
+    "Agents can read and edit workspace files, run commands, delegate work and keep a plan, with approval prompts governed by a permission policy",
+    "Works with DeepSeek models by default and with other providers or custom OpenAI-compatible endpoints",
+    "A Python SDK and a `dsh-plugin` GitHub topic for discovering community plugins"
+  ],
+  "gettingStarted": {
+    "intro": "The fastest path is the Web UI over npx — no clone required. You need Node.js installed and a DeepSeek API key (or another OpenAI-compatible endpoint) to configure a model.",
+    "steps": [
+      {
+        "heading": "Start the Web UI",
+        "body": "Run the launcher with npx. It serves the Web UI at http://127.0.0.1:3080 by default.",
+        "code": "npx @deepseek-ai/dsh web",
+        "lang": "bash"
+      },
+      {
+        "heading": "Configure a model and pick a workspace",
+        "body": "In the UI, open Settings → Models and save a DeepSeek API key — the model route becomes usable immediately, with no server restart. Then click Choose workspace and add the project directory you started `dsh` in; the session composer stays disabled until a workspace is selected.",
+        "code": "",
+        "lang": ""
+      },
+      {
+        "heading": "Run a task",
+        "body": "Start a session and give it work. The agent can read and edit workspace files, run commands, delegate and maintain a plan, and the UI asks before anything the active permission policy gates.",
+        "code": "Summarize this repository and identify its main packages.",
+        "lang": "text"
+      },
+      {
+        "heading": "Run headless instead",
+        "body": "For scripts and CI, the headless profile runs one fresh persisted session, prints the final answer and exits.",
+        "code": "npx @deepseek-ai/dsh --profile headless \"run the tests\"",
+        "lang": "bash"
+      },
+      {
+        "heading": "Or build from source",
+        "body": "To hack on it, clone the repo and build with pnpm before running the local entry point.",
+        "code": "git clone https://github.com/deepseek-ai/deepseek-harness.git\ncd deepseek-harness\npnpm install\npnpm run build\npnpm dsh web",
+        "lang": "bash"
+      }
+    ]
+  },
+  "useCases": [
+    "Run a coding agent over a local workspace from a browser UI, with per-operation approval prompts",
+    "Script one-shot agent jobs in CI or a cron with the headless profile, which prints a final answer and exits",
+    "Swap a capability — a different model route, sandbox, storage or loop — by changing plugins and config instead of forking an agent framework",
+    "Build and publish your own agent capability as a `dsh-plugin` package rather than patching a monolith"
+  ],
+  "language": "TypeScript",
+  "license": "MIT"
+}

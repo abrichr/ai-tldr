@@ -4694,6 +4694,26 @@
               "current": true
             }
           ]
+        },
+        {
+          "id": "bytedance-seed-realtime",
+          "title": "SeedRealtime",
+          "blurb": "ByteDance Seed's real-time interaction line: a native audio-visual full-duplex model that fuses audio, video and text in one end-to-end system.",
+          "versions": [
+            {
+              "name": "SeedRealtime",
+              "slug": "seedrealtime",
+              "blurb": "Native audio-visual full-duplex LLM announced 5 August 2026: one end-to-end model that watches, listens and speaks over continuous streams, deciding turn-taking from multimodal context rather than an external voice-activity detector.",
+              "tags": [
+                "proprietary",
+                "multimodal",
+                "agentic"
+              ],
+              "license": "Proprietary",
+              "date": "2026-08-05",
+              "current": true
+            }
+          ]
         }
       ],
       "logo": "/models-logos/bytedance.svg"

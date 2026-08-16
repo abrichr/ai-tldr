@@ -3097,6 +3097,14 @@
        "homepage": "https://nanobot.wiki",
        "description": "Lightweight self-hosted personal AI agent framework in Python, with a WebUI, terminal and chat-app channels, tools, long-term memory, MCP and scheduled automations.",
        "detail": true
+      },
+      {
+       "name": "DeepSeek Harness",
+       "slug": "deepseek-harness",
+       "repo": "deepseek-ai/deepseek-harness",
+       "homepage": "https://deepseek.com/harness",
+       "description": "DeepSeek AI's open-source agent harness (dsh), built on Cordis, where models, tools, skills, sessions, sandboxes, storage and the UI are all plugins composed through profiles.",
+       "detail": true
       }
      ]
     },
@@ -3581,6 +3589,13 @@
        "description": "A framework (formerly MemGPT) for building stateful agents with long-term memory that persists across sessions and conversations.",
        "detail": true,
        "logo": "/tools-logos/gh-letta-ai.png"
+      },
+      {
+       "name": "MemPalace",
+       "slug": "mempalace",
+       "repo": "MemPalace/mempalace",
+       "description": "Local-first agent memory that stores conversations verbatim instead of summarising them, with a structured palace index, pluggable vector backends and an MCP server.",
+       "detail": true
       }
      ]
     },

@@ -1,0 +1,75 @@
+{
+  "slug": "seedrealtime",
+  "name": "SeedRealtime",
+  "maker": "bytedance",
+  "makerTitle": "ByteDance",
+  "line": "bytedance-seed-realtime",
+  "lineTitle": "SeedRealtime",
+  "tagline": "ByteDance Seed's native audio-visual full-duplex LLM, launched 5 August 2026: one end-to-end model that watches, listens and speaks over continuous streams.",
+  "seoTitle": "SeedRealtime: ByteDance Full-Duplex Audio-Visual LLM",
+  "metaDescription": "SeedRealtime is ByteDance Seed's audio-visual full-duplex LLM, launched 5 August 2026. It fuses audio, video and text in one end-to-end model for real-time talk.",
+  "releaseDate": "2026-08-05",
+  "status": "Generally available",
+  "license": "Proprietary",
+  "openWeights": false,
+  "modalities": [
+    "Text",
+    "Audio",
+    "Video",
+    "Vision"
+  ],
+  "tags": [
+    "proprietary",
+    "multimodal",
+    "agentic"
+  ],
+  "overview": [
+    "SeedRealtime is a native audio-visual full-duplex large language model announced by ByteDance's Seed team on 5 August 2026. Seed describes it as 'a key step toward omni-modal interaction': it uses a unified architecture to natively fuse audio, video and text, enabling real-time interaction over continuous multimodal streams and what Seed calls a 'watch, listen, and speak' experience.",
+    "The design point is that everything happens inside one end-to-end model rather than a chain of parts. Seed contrasts it with two existing paradigms: cascaded systems that string together separate ASR, VLM and TTS modules and lose information and time at every handoff, and end-to-end models that are more fluent but still lean on an external voice-activity detector to decide turns, which keeps them 'essentially a half-duplex, one-question-one-answer interaction'. SeedRealtime instead unifies sound, vision, timing and expression in a single model, letting perception, understanding, decision-making and expression run in parallel over the incoming streams.",
+    "Seed groups the result into three claimed breakthroughs. Joint audio-visual understanding lets the model resolve homophone ambiguity from visual context and interpret temporal references in what it sees. Proactive interaction means it can speak up unprompted when the scene changes — for example flagging a target object the moment it appears — and weave tool calls into its replies. Natural conversational timing means turn-taking is decided continuously from multimodal signals rather than by external VAD rules, so it can stay quiet through bystander chatter and background noise instead of being falsely triggered.",
+    "For results, Seed reports end-to-end human evaluation rather than a public benchmark table: compared with cascaded models, SeedRealtime 'reduces audio-visual conversational pacing issues by half', with fewer mid-sentence cut-offs, fewer sluggish replies after a pause and fewer false triggers, and a significantly higher chance of completing a conversation smoothly. ByteDance has not published a technical report, a parameter count, a context window, weights or a public API endpoint for the model; the launch post states only that SeedRealtime 'has been fully rolled out, pioneering large-scale deployment of audio-visual full-duplex technology in the industry'."
+  ],
+  "strengths": [
+    "Single end-to-end model for audio, video and text — no ASR → VLM → TTS handoffs and no inter-stage information loss",
+    "Turn-taking decided from multimodal context instead of an external voice-activity detector, so it holds up in noisy, multi-speaker scenes",
+    "Proactive: can raise a reminder on its own when a watched object appears, and can weave tool calls into a spoken reply",
+    "Uses the visual scene to disambiguate speech, including homophones and vague references like 'how do I do this'",
+    "Human evaluation reports half as many audio-visual conversational pacing problems as cascaded systems"
+  ],
+  "useCases": [
+    "Real-time voice-and-camera assistants that need to watch a live scene and answer about what is on screen",
+    "Hands-busy guidance — walking a user through a physical task and correcting them as the visual state changes",
+    "Multi-speaker settings where the assistant must track who is talking and avoid replying to background chatter",
+    "Watch-for-me tasks: holding an instruction in context and speaking up the moment the target appears"
+  ],
+  "links": [
+    {
+      "label": "SeedRealtime launch announcement (ByteDance Seed)",
+      "url": "https://seed.bytedance.com/en/blog/seedrealtime-audio-visual-full-duplex-llm-released-toward-omni-modal-natural-interaction",
+      "kind": "announcement"
+    },
+    {
+      "label": "ByteDance Seed",
+      "url": "https://seed.bytedance.com/en/",
+      "kind": "official"
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is SeedRealtime?",
+      "a": "SeedRealtime is ByteDance Seed's native audio-visual full-duplex large language model, announced on 5 August 2026. It fuses audio, video and text in one unified architecture so it can watch, listen and speak over continuous streams instead of taking one question at a time."
+    },
+    {
+      "q": "What does 'full-duplex' mean here?",
+      "a": "It means the model does not wait for a turn to be handed to it. Perception, understanding, decision-making and expression run in parallel over the incoming audio and video, and the model decides for itself when to speak, pause or stay quiet — rather than relying on an external voice-activity detector to mark the end of the user's turn."
+    },
+    {
+      "q": "How is it different from a cascaded voice assistant?",
+      "a": "A cascaded assistant chains separate speech-recognition, vision-language and text-to-speech modules, and each handoff adds latency and loses context. SeedRealtime replaces that chain with a single end-to-end model, which ByteDance says removes those handoffs and, in end-to-end human evaluation, halves audio-visual conversational pacing issues."
+    },
+    {
+      "q": "Are the weights or an API available?",
+      "a": "No. ByteDance has not released weights for SeedRealtime and has not published a public API endpoint, technical report, parameter count or context-window figure. The launch post says only that the model has been fully rolled out."
+    }
+  ]
+}
