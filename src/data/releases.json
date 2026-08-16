@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T08:31:12.284Z",
+  "generatedAt": "2026-08-16T10:24:53.374Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
@@ -6686,7 +6686,7 @@
       "explainer": {
         "tagline": "Claude output now carries a hidden text watermark and signed C2PA metadata on generated files.",
         "whatIsIt": "Anthropic has started marking what Claude generates. Supported Claude models embed an imperceptible watermark inside the text itself, so the mark travels with the words when someone copies and pastes them somewhere else. Generated .svg, .png and .jpg files get signed provenance metadata instead. Models launched on or after August 2, 2026 support marking at launch, and Anthropic says it is adding marking to models it already released.",
-        "howItWorks": "The text watermark is woven into the wording as the model writes, not bolted on as a separate tag, and Anthropic says it does not change the meaning, quality or readability of the response. For files, Claude attaches signed provenance metadata that follows the C2PA open standard, so a valid signed record can show that Claude processed the file and whether someone altered that record.",
+        "howItWorks": "The text watermark is a version of SynthID-Text, the approach Google DeepMind published in a Nature paper in 2024. Picking the next word normally draws on a random number; watermarking replaces that draw with a value worked out from a secret key plus the few words already written. The wording stays varied and the meaning does not change, but the run of choices follows a pattern a detector can check afterwards, and a longer passage gives the detector more choices to read. For files, Claude attaches signed provenance metadata that follows the C2PA open standard, so a valid signed record can show that Claude processed the file and whether someone altered that record.",
         "whyItMatters": "EU AI Act Article 50 requires providers of generative systems to mark output in a machine-readable format that is detectable as artificially generated, and this marking is Anthropic's answer to it. The marks apply worldwide rather than only in Europe, and reach third-party hosts including AWS, Google Cloud and Microsoft Foundry, so anyone building on Claude ships marked output by default. Anthropic warns that a detected mark is not conclusive evidence and that a missing mark does not prove AI was not involved.",
         "forWho": "developers shipping Claude output"
       },
@@ -6697,7 +6697,7 @@
         },
         {
           "label": "Text marking",
-          "value": "Imperceptible watermark inside the text"
+          "value": "SynthID-Text watermark inside the wording"
         },
         {
           "label": "File marking",
@@ -6717,7 +6717,7 @@
         },
         {
           "label": "Detection",
-          "value": "Docs promised, not yet published"
+          "value": "Detection API announced, not yet live"
         }
       ],
       "faq": [
@@ -6731,7 +6731,11 @@
         },
         {
           "q": "Can anyone detect Claude's watermark today?",
-          "a": "Not yet. Anthropic says it is working to let users and third parties detect Claude's embedded watermarks and provenance metadata, with technical documentation to follow, but no public detection tool or verification page ships with this announcement. For now the mark exists in the output without a released way for outsiders to read it."
+          "a": "Not yet, but Anthropic has now said a watermark detection API is coming and that it is working out the details of the implementation. Until that ships, no public tool reads Claude's text watermark. Anthropic also cautions that detection works poorly on short passages, because a few words leave the detector too few of Claude's word choices to judge."
+        },
+        {
+          "q": "Does the watermark make Claude's answers worse?",
+          "a": "Anthropic says the Claude watermark does not change the meaning, quality or readability of a response. In the SynthID-Text paper that introduced the technique, Google DeepMind found no statistically significant differences from the unwatermarked model, and human raters comparing watermarked and unwatermarked answers side by side saw no difference in quality."
         },
         {
           "q": "Does Claude's marking apply outside the EU?",

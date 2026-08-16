@@ -32713,6 +32713,38 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260816t102453z",
+      "timestamp": "2026-08-16T10:24:53.374Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero qualifying releases in the last 72h. Searched Anthropic/OpenAI/DeepMind/Meta/Mistral/Cohere/Qwen/DeepSeek/MiniMax lab blogs, GitHub trending (daily + weekly), HuggingFace models/datasets/papers, HN front page and page 2, tier-1 press, coding-agent changelogs and the AI-for-science lane; every fresh item was already in the feed (Qwen3.8-27B, GLM-5.3, Gemini 3.7 Flash, DeepSeek V4 Pro 0813, MiniMax Music 3, Cursor Builds, Semantica, Cactus Needle 2) and the trending repos with real bursts (ego-lite, book-to-skill, code-graph-rag, Harvey LAB, spec-kit) all ship their latest release outside the 72h window or are routine patch bumps. All 5 fresh YouTube videos from the 8-channel RSS scan are already in the feed. Anthropic's Aug 14 watermark deep-dive is the same release as the existing item, so it went to updates.",
+      "counts": {
+        "added": 0,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [
+        {
+          "id": "anthropic-claude-content-marking",
+          "title": "Claude marks its output — Anthropic adds text watermarks and C2PA file metadata",
+          "note": "Anthropic's August 14 post 'How Claude's text watermarking works' names the technique (a version of Google DeepMind's SynthID-Text, Nature 2024), describes the key-plus-preceding-words sampling mechanism, confirms a watermark detection API is coming, and cites the paper's quality results. Updated howItWorks, the Detection/Text-marking quickFacts rows and the detection FAQ, and added a quality FAQ. Already-linked source, no new item (same release)."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
