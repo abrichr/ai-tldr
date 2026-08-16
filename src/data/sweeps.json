@@ -32745,6 +32745,32 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260816t123328z",
+      "timestamp": "2026-08-16T12:33:28.811Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Qwen, Moonshot, Cohere, DeepSeek, Z.ai, MiniMax), GitHub trending (daily + weekly), HuggingFace models/datasets/papers/blog, HN front page and newest, all 8 YouTube creator feeds, coding-agent changelogs (Cursor, Claude Code), influential voices (Simon Willison, Interconnects), the AI-for-science lane (BCI/neural decoding, medical imaging + FDA, drug discovery/protein design, STAT News, Nature, techxplore) and tier-1 press. Every qualifying item inside the 72h window is already in the feed: the 5 fresh creator videos, Qwen3.8-27B, Gemini 3.7 Flash, DeepSeek V4 Pro pricing, Anthropic's watermark post, Cursor Builds and Claude Code 2.1.233. Everything else that surfaced was either older than 72h (LLMRouter arXiv Aug 7, WeatherNext Cyclones Aug 6, Wan 3.0 Aug 6, book-to-skill repo from May) or below the inclusion bar. Zero adds.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "article",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }
