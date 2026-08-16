@@ -32622,6 +32622,33 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260816t043624z",
+      "timestamp": "2026-08-16T04:36:24.410Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Qwen, Z.ai, MiniMax, DeepSeek, Moonshot, Cohere), GitHub trending daily, HuggingFace models/datasets/papers, HN front page + Show HN, all 8 YouTube creator feeds, the AI-for-science lane (BCI, medical imaging, protein/drug discovery, genomics, STAT News, Nature, neurosciencenews), coding agents, Simon Willison, benchmarks and tier-1 press. Everything inside the 72h window is already in the feed: all 4 fresh YouTube videos, Anthropic's watermark post (already linked from anthropic-claude-content-marking), DeepSeek V4-Pro GA, GLM-5.3, Qwen3.8-27B, Gemini 3.7 Flash and the SpaceX-Cursor close. The rest missed the 72h cap - LLMRouter (2.4k stars, top of HF papers) submitted Aug 7, The Stack v3 released Jul 23, WeatherNext Cyclones Aug 6, Brain2Qwerty Aug 3, and the OpenAI/Hugging Face ExploitGym intrusion is July news resurfacing. Top Show HN AI post peaked at 115 points, under the 150 bar. Zero adds.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
