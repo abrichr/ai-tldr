@@ -1,8 +1,110 @@
 {
-  "generatedAt": "2026-08-16T20:25:11.908Z",
+  "generatedAt": "2026-08-16T22:25:10.212Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "simonw-qwen-3-8-27b-overthinking-aug16",
+      "categories": [
+        "article"
+      ],
+      "title": "Simon Willison — Qwen3.8-27B is excellent, but it overthinks by default",
+      "org": "Simon Willison",
+      "date": "2026-08-16",
+      "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+      "summary": "Qwen3.8-27B ships with reasoning effort set to xhigh. Simon Willison measured one SVG prompt taking 21 minutes and 22,276 reasoning tokens on that default; the same prompt with reasoning off finished in 137 seconds.",
+      "tags": [
+        "qwen",
+        "qwen3.8-27b",
+        "local-llm",
+        "reasoning-effort",
+        "open-weights",
+        "lm-studio",
+        "vision-language-model",
+        "simon-willison",
+        "apache-2-0"
+      ],
+      "importance": "notable",
+      "author": {
+        "name": "Simon Willison",
+        "handle": "@simonw",
+        "profileUrl": "https://simonwillison.net/",
+        "avatarUrl": "https://github.com/simonw.png"
+      },
+      "explainer": {
+        "tagline": "A strong local model held back by one setting: Qwen3.8-27B arrives with its reasoning effort turned up far too high.",
+        "whatIsIt": "Simon Willison tested Qwen3.8-27B, the Apache 2 licensed 27B vision-capable model from Alibaba's Qwen lab, and found it ships with reasoning effort set to xhigh. He rates the size itself highly, calling 27B \"an excellent size for running a model on a reasonably specced laptop\". The Q4_K_M build is a 17GB file with a maximum context of 262,144 tokens.",
+        "howItWorks": "Reasoning effort decides how many hidden thinking tokens a model spends before it answers. On the xhigh default, the pelican-on-a-bicycle SVG prompt burned 22,276 reasoning tokens to produce 3,223 tokens of output and took 21 minutes. The same prompt with reasoning switched off returned 3,715 tokens in 137 seconds. Willison ran the official GGUF build in LM Studio on a 128GB M5 Max MacBook Pro and on an NVIDIA DGX Spark, seeing 15 to 30 tokens per second.",
+        "whyItMatters": "Anyone downloading this model on the strength of its scores meets the xhigh default first, and a 21-minute wait for a simple drawing reads as a bad model rather than a bad setting. Willison's advice is to \"ignore that default. Run Qwen 3.8 27B on low or even no reasoning levels at first.\" Same weights, usable speed. He also reports working vision bounding boxes, generated HTML tools and Python scripts, and a successful agent loop.",
+        "forWho": "developers running local models",
+        "tryIt": "Load the Qwen/Qwen3.8-27B GGUF in LM Studio and set reasoning effort to low"
+      },
+      "image": {
+        "url": "https://static.simonwillison.net/static/2026/qwen-thinking-bicycle-27b.jpg",
+        "alt": "SVG pelican riding a red bicycle, drawn by Qwen3.8-27B in its high reasoning mode",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Simon Willison's Post",
+          "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/"
+        },
+        {
+          "label": "Model Card",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+        }
+      ],
+      "publishDate": "2026-08-16T22:25:10.212Z"
+    },
+    {
+      "id": "w4g1-models-dumber-on-purpose-aug16",
+      "categories": [
+        "article"
+      ],
+      "title": "Walter van der Giessen — 'Models Are Getting Dumber on Purpose'",
+      "org": "Walter van der Giessen",
+      "date": "2026-08-16",
+      "url": "https://w4g1.dev/blog/models-are-getting-dumber-on-purpose",
+      "summary": "Walter van der Giessen argues that labs are trading factual recall for reasoning on purpose, because reasoning procedures compress into far fewer parameters than facts do. The post reached the Hacker News front page with 190 points.",
+      "tags": [
+        "llm-architecture",
+        "small-models",
+        "reasoning",
+        "hallucination",
+        "retrieval",
+        "quantization",
+        "opinion",
+        "hacker-news"
+      ],
+      "importance": "notable",
+      "author": {
+        "name": "Walter van der Giessen",
+        "profileUrl": "https://w4g1.dev/"
+      },
+      "explainer": {
+        "tagline": "Facts take space and go stale, reasoning compresses — so labs are moving knowledge out of the weights and into the harness.",
+        "whatIsIt": "'Models Are Getting Dumber on Purpose' reframes the shrinking world knowledge of small models as a design choice rather than a defect. Walter van der Giessen's claim is that \"facts take space\" and eat parameters, while reasoning is \"a relatively small set of procedures applied over and over\" that compresses well. He cites the Physics of Language Models series for the estimate of two bits of factual knowledge per parameter.",
+        "howItWorks": "The argument is a parameter budget one. Van der Giessen lines up active parameters against reasoning scores: GLM-5.2 at 99.2% on AIME 2026 with about 40 billion active per token, Qwen3.5 at 91.3% with 17 billion active, DeepSeek V4-Flash at 13 billion active — against GPT-4, rumored to run about 280 billion active in 2023. Facts then arrive at runtime from tools and retrieval, which he calls the harness.",
+        "whyItMatters": "Pushing facts out of the weights changes what a small model is for. Van der Giessen argues a 20 to 40B model at 4-bit quantization fits on a 24GB consumer card, so frontier-quality reasoning runs locally. He also claims it makes errors traceable, since a fact that is retrieved and cited can be checked and corrected, while a wrong fact baked into the weights cannot.",
+        "forWho": "developers choosing between local and hosted models"
+      },
+      "image": {
+        "url": "https://w4g1.dev/avatar.webp",
+        "alt": "Site avatar for Walter van der Giessen's blog w4g1.dev",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Blog Post",
+          "url": "https://w4g1.dev/blog/models-are-getting-dumber-on-purpose"
+        },
+        {
+          "label": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=49322695"
+        }
+      ],
+      "publishDate": "2026-08-16T22:25:10.212Z"
+    },
     {
       "id": "anthropic-aug-2026-risk-report",
       "categories": [
