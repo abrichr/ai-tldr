@@ -32649,6 +32649,45 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260816t063920z",
+      "timestamp": "2026-08-16T06:39:20.336Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Anthropic's August 2026 Risk Report (misalignment raised from very low to low, unreleased Model 2 disclosed) and a fresh Wes Roth video on Anthropic's multi-agent research. Lab blogs were otherwise quiet: OpenAI and x.ai blocked crawlers, Meta and Mistral had nothing since August 11, and DeepMind's WeatherNext post and Anthropic's watermark post are already in the feed.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "anthropic-aug-2026-risk-report",
+          "title": "Anthropic's August risk report — misalignment moves from very low to low",
+          "category": "security",
+          "note": "Top-lab publication on the official anthropic.com domain within 48h, with independent pickup from Unite.AI, TECHi, TechTimes and Benzinga; no existing feed entry covers the risk report or Model 2."
+        },
+        {
+          "id": "wes-roth-anthropic-worst-fear-aug16",
+          "title": "Wes Roth — 'Anthropic just confirmed everyone's worst fear'",
+          "category": "video",
+          "note": "Fresh upload (1h old at sweep time) from a listed creator, confirmed via yt-rss-scan; not a Short, and the only one of the five fresh RSS videos not already in the feed."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "dataset",
+        "video",
+        "article",
+        "security",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }
