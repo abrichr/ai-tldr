@@ -33047,6 +33047,32 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260817t084244z",
+      "timestamp": "2026-08-17T08:42:44.210Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Cohere, Qwen, Z.ai plus the Chinese frontier labs via HF/press), GitHub trending daily, HuggingFace models/datasets/papers top-10, HN front page and Show HN, all 8 YouTube creator feeds, coding-agent changelogs, influential voices, tier-1 press, and the AI-for-science lane (BCI/neural decoding, medical imaging + FDA, pharma AI, STAT News, Nature, neuroscience feeds). Nothing new cleared the bar: the 4 fresh YouTube uploads (Wes Roth, 1littlecoder, Fireship, Two Minute Papers) are already in the feed, Anthropic's only post in-window (text watermark explainer, Aug 14) duplicates anthropic-claude-content-marking, the SpaceX-Cursor close and the Stripe-OpenRouter report duplicate existing items, GitHub trending's top AI repos (unsloth, cactus-compute/needle) are already covered, HF papers topped out at 52 upvotes with no released code, MathCode dates to April 2026, and the science lane surfaced no released artifact inside 72h.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "article",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }
