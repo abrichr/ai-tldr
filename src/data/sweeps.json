@@ -33187,6 +33187,40 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260817t184318z",
+      "timestamp": "2026-08-17T18:43:18.173Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs, GitHub trending, HuggingFace models/datasets/papers, HN front page and Show HN, 8 YouTube feeds, and the AI-for-science lane; added one item — Wiz's disclosure that its autonomous Red Agent exploited a GitHub Actions command-injection bug written by Copilot Autofix to reach Snowflake's internal Jira (HN 198 pts, The Register). All 3 fresh YouTube videos were already in the feed, and WeatherNext Cyclones, Nemotron 3.5 Lightning and Cactus Needle were existing entries or outside the 72h window.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "wiz-red-agent-snowflake-copilot-autofix",
+          "title": "Wiz Red Agent breaks into Snowflake's Jira — via a bug Copilot Autofix wrote",
+          "category": "security",
+          "note": "Aug 17 Wiz disclosure on HN front page with 198 points plus The Register coverage; a real AI-introduced vulnerability found and exploited by an autonomous agent, with both the vulnerable and patch PRs publicly verifiable."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "security",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }

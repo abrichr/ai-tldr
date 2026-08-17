@@ -1,8 +1,115 @@
 {
-  "generatedAt": "2026-08-17T16:31:04.709Z",
+  "generatedAt": "2026-08-17T18:43:18.173Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "wiz-red-agent-snowflake-copilot-autofix",
+      "categories": [
+        "security"
+      ],
+      "title": "Wiz Red Agent breaks into Snowflake's Jira — via a bug Copilot Autofix wrote",
+      "org": "Wiz",
+      "date": "2026-08-17",
+      "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
+      "summary": "Wiz Red Agent, an autonomous AI security tester, found and exploited a command-injection bug that GitHub Copilot Autofix had written into a Snowflake repository's GitHub Actions workflow, then read Snowflake's internal Jira.",
+      "tags": [
+        "security",
+        "github-actions",
+        "github-copilot",
+        "command-injection",
+        "ci-cd",
+        "snowflake",
+        "wiz",
+        "ai-agents",
+        "autonomous-agents",
+        "supply-chain",
+        "vulnerability-disclosure"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "One AI wrote the security hole. Another AI found and exploited it five days later.",
+        "whatIsIt": "Wiz Red Agent, an autonomous AI penetration tester, opened a GitHub issue on a public Snowflake repository and used the issue title to run its own shell commands on the project's CI runner. The flaw it abused had been written by GitHub Copilot Autofix, which replaced the repository's existing safe input handling with direct string interpolation inside a workflow script. Wiz published the full account on August 17, 2026.",
+        "howItWorks": "The affected workflow in snowflakedb/snowflake-connector-net ran on every new GitHub issue and pasted the issue title straight into a shell script. Escaping with sed happened after GitHub had already expanded the template, so a single quote in a title broke out of the string and ran arbitrary commands. Red Agent's first payload died on a bash syntax error; the agent read the failure, rewrote the payload, and sent the workflow's Jira credentials to an out-of-band listener as base64.",
+        "whyItMatters": "Copilot Autofix exists to close security holes, so a suggested fix that opens one changes how carefully teams should read AI-written patches — especially patches touching CI files that hold secrets. The Snowflake case also shows the other side: autonomous attack agents can now discover and chain this class of mistake within days of the commit landing.",
+        "forWho": "security engineers and CI/CD maintainers"
+      },
+      "quickFacts": [
+        {
+          "label": "Found by",
+          "value": "Wiz Red Agent (autonomous AI)"
+        },
+        {
+          "label": "Affected repo",
+          "value": "snowflakedb/snowflake-connector-net"
+        },
+        {
+          "label": "Bug introduced",
+          "value": "June 18, 2026 (PR #1218)"
+        },
+        {
+          "label": "Reported and patched",
+          "value": "June 23, 2026 (PR #1402)"
+        },
+        {
+          "label": "Exposure window",
+          "value": "5 days"
+        },
+        {
+          "label": "Access gained",
+          "value": "Read access to Snowflake's internal Jira"
+        },
+        {
+          "label": "Authorization",
+          "value": "Snowflake HackerOne bug bounty"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Was Snowflake customer data exposed?",
+          "a": "Snowflake says its investigation found no evidence of unauthorized access. The stolen token authenticated to Snowflake's internal Jira and gave read access to engineering, security compliance and bug bounty projects, not to customer data in the Snowflake platform. Audit logs showed Wiz was the only third party that reached the endpoint during the five-day window."
+        },
+        {
+          "q": "How long was the Snowflake workflow exploitable?",
+          "a": "The vulnerable workflow was exploitable for five days. Copilot Autofix introduced the flaw on June 18, 2026 in PR #1218, and Wiz reported it on June 23, 2026. Snowflake merged the patch in PR #1402 the same day it was reported and rotated the exposed Jira credential the following day, June 24."
+        },
+        {
+          "q": "Does this mean GitHub Copilot Autofix should not be trusted?",
+          "a": "The Wiz write-up documents one Copilot Autofix suggestion, not a systemic failure rate. Worth noting: the change was co-authored by the Copilot Autofix bot but reviewed and merged by a Snowflake engineer in PR #1218, so a human approved it. The practical lesson is to review AI-suggested changes to CI workflows as closely as any other code that touches secrets."
+        },
+        {
+          "q": "Was this authorized security testing or an actual attack?",
+          "a": "The Wiz Red Agent research ran through Snowflake's HackerOne bug bounty program, which makes it sanctioned testing rather than an unsolicited intrusion. Wiz disclosed the flaw to Snowflake on June 23, 2026, waited for the patch and credential rotation, and published the technical write-up on August 17, 2026."
+        }
+      ],
+      "image": {
+        "url": "https://www.datocms-assets.com/75231/1786964856-image.png?fm=webp",
+        "alt": "Wiz report on an autonomous AI agent exploiting a Copilot-written flaw in Snowflake's CI"
+      },
+      "links": [
+        {
+          "label": "Wiz Report",
+          "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug"
+        },
+        {
+          "label": "The Register",
+          "url": "https://www.theregister.com/security/2026/08/17/an-ai-broke-snowflakes-code-then-another-ai-agent-exploited-it/5288666"
+        },
+        {
+          "label": "Vulnerable PR",
+          "url": "https://github.com/snowflakedb/snowflake-connector-net/pull/1218"
+        },
+        {
+          "label": "Patch PR",
+          "url": "https://github.com/snowflakedb/snowflake-connector-net/pull/1402"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49331423"
+        }
+      ],
+      "publishDate": "2026-08-17T18:43:18.173Z"
+    },
     {
       "id": "google-imagen-4-api-shutdown",
       "categories": [
