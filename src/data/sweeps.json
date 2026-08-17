@@ -33020,6 +33020,33 @@
         "ecosystem",
         "tutorial"
       ]
+    },
+    {
+      "id": "sweep-20260817t064832z",
+      "timestamp": "2026-08-17T06:48:32.089Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Checked lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, DeepSeek, Qwen, Z.ai, MiniMax, Moonshot), GitHub trending (daily + Python), HuggingFace models/datasets/papers, HN front page (pages 1-2, Show HN, newest), 8 YouTube creator feeds, the AI-for-science lane (STAT News, neurosciencenews, BCI/medical-imaging/drug-discovery searches) and tier-1 press. Everything inside the 72h window is already in the feed - Anthropic's watermark docs, Qwen3.8-27B, Gemini 3.7 Flash, Cursor Builds, Stripe/OpenRouter, LTX-2.5, DeepSeek V4 Pro. The near-misses all failed the 72h date cap: Cactus Needle 2 (Aug 12-13), the vectoral token-broker essay (Aug 10), DeepMind WeatherNext cyclones (Aug 6), Google ScientistOne (Jul 30), Docker Sandboxes (March 2026). Trending repos strix and CLI-Anything are 2025/early-2026 projects riding a star spike with no release in the window. Both fresh YouTube videos returned by the RSS scan are already in the feed.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }
