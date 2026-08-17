@@ -1,8 +1,112 @@
 {
-  "generatedAt": "2026-08-17T08:42:44.210Z",
+  "generatedAt": "2026-08-17T10:35:10.034Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "google-imagen-4-api-shutdown",
+      "categories": [
+        "ecosystem",
+        "model"
+      ],
+      "title": "Imagen 4 API endpoints shut down — Google moves image generation to Gemini",
+      "org": "Google",
+      "date": "2026-08-17",
+      "url": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "summary": "Google shuts down the Imagen 4 standard, fast and ultra endpoints in the Gemini API today, August 17, 2026. Code still calling imagen-4.0-generate-001 has to move to gemini-3.1-flash-image.",
+      "tags": [
+        "google",
+        "gemini",
+        "imagen",
+        "gemini-api",
+        "deprecation",
+        "api",
+        "image-generation",
+        "migration",
+        "nano-banana"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Google"
+        },
+        {
+          "label": "Shutdown date",
+          "value": "August 17, 2026"
+        },
+        {
+          "label": "Endpoints retired",
+          "value": "imagen-4.0-generate-001, -fast-generate-001, -ultra-generate-001"
+        },
+        {
+          "label": "Replacement",
+          "value": "gemini-3.1-flash-image"
+        },
+        {
+          "label": "Deprecated on",
+          "value": "June 15, 2026"
+        },
+        {
+          "label": "Originally released",
+          "value": "June 24, 2025"
+        },
+        {
+          "label": "Affected API",
+          "value": "Gemini API"
+        }
+      ],
+      "explainer": {
+        "tagline": "Three Imagen 4 endpoints go dark in the Gemini API today, and Google points every caller at gemini-3.1-flash-image.",
+        "whatIsIt": "Imagen 4's three Gemini API endpoints stop serving requests on August 17, 2026. Google marked imagen-4.0-generate-001, imagen-4.0-fast-generate-001 and imagen-4.0-ultra-generate-001 as deprecated on June 15, 2026 and set today as the shutdown date. All three had been available since June 24, 2025.",
+        "howItWorks": "Google's deprecations table maps each retired Imagen 4 endpoint to a single successor, gemini-3.1-flash-image. Text-to-image work therefore moves out of a standalone Imagen endpoint and into the Gemini model family, where the image-generation docs cover it next to gemini-3.1-flash-lite-image and gemini-3-pro-image. Every image these models return carries a SynthID watermark.",
+        "whyItMatters": "Any pipeline that hard-coded an Imagen 4 model ID stops working today rather than degrading quietly. Google's Imagen page tells developers to migrate to Gemini 3.1 Flash Image to avoid service interruptions, so for teams that missed the June notice this is a same-day fix, not a backlog item.",
+        "forWho": "developers generating images through the Gemini API",
+        "tryIt": "Replace model=\"imagen-4.0-generate-001\" with model=\"gemini-3.1-flash-image\""
+      },
+      "faq": [
+        {
+          "q": "What happens if I keep calling imagen-4.0-generate-001 after August 17?",
+          "a": "Google lists imagen-4.0-generate-001 with a shutdown date of August 17, 2026 in the Gemini API deprecations table. A shutdown means the endpoint stops serving, so requests that still name the retired Imagen 4 model ID no longer return images. Google's Imagen documentation instructs developers to migrate to Gemini 3.1 Flash Image to avoid service interruptions."
+        },
+        {
+          "q": "How much warning did Google give before the Imagen 4 shutdown?",
+          "a": "Google announced the Imagen 4 deprecation in the Gemini API changelog on June 15, 2026 and named August 17, 2026 as the shutdown date, giving roughly two months of notice. The three endpoints had been live since June 24, 2025, so Imagen 4 served the Gemini API for about fourteen months before retirement."
+        },
+        {
+          "q": "Is Gemini 3.1 Flash Image a drop-in replacement for Imagen 4?",
+          "a": "Google names gemini-3.1-flash-image as the successor for all three retired Imagen 4 endpoints, but it belongs to a different model family, so switching is a model-ID migration rather than a like-for-like swap. Google's image-generation docs describe gemini-3.1-flash-image as a general-purpose model with 4K generation, image editing and multi-reference input."
+        },
+        {
+          "q": "Did Google retire any other media models on this schedule?",
+          "a": "The same June 15, 2026 Gemini API changelog entry that deprecated Imagen 4 also announced three Veo video models — veo-2.0-generate-001, veo-3.0-generate-001 and veo-3.0-fast-generate-001 — with a shutdown date of June 30, 2026. Those video endpoints went dark earlier; August 17, 2026 is the Imagen 4 date."
+        }
+      ],
+      "image": {
+        "url": "https://ai.google.dev/static/site-assets/images/share-gemini-api-2026-07.png",
+        "alt": "Gemini API documentation banner used on Google's model deprecation pages",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Deprecations",
+          "url": "https://ai.google.dev/gemini-api/docs/deprecations"
+        },
+        {
+          "label": "API Changelog",
+          "url": "https://ai.google.dev/gemini-api/docs/changelog"
+        },
+        {
+          "label": "Imagen Docs",
+          "url": "https://ai.google.dev/gemini-api/docs/models/imagen"
+        },
+        {
+          "label": "Image Generation",
+          "url": "https://ai.google.dev/gemini-api/docs/image-generation"
+        }
+      ],
+      "publishDate": "2026-08-17T10:35:10.034Z"
+    },
     {
       "id": "gruber-claude-watermark-perversion-aug16",
       "categories": [

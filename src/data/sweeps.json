@@ -33073,6 +33073,39 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260817t103510z",
+      "timestamp": "2026-08-17T10:35:10.034Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, DeepMind, Mistral, Meta, Cohere, ByteDance Seed, DeepSeek, Qwen), GitHub trending, HuggingFace models/datasets/papers, HN front page + Show HN, 8 YouTube feeds and the AI-for-science lane. One item qualified: Google's Imagen 4 API endpoints shut down today, forcing a migration to gemini-3.1-flash-image. All three fresh YouTube videos were already in the feed; Intern-S2-Mobius (Shanghai AI Lab, open weights) was dropped as 82h old, past the 72h cap.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "google-imagen-4-api-shutdown",
+          "title": "Imagen 4 API endpoints shut down — Google moves image generation to Gemini",
+          "category": "ecosystem",
+          "note": "Deprecation that breaks downstream users and lands today: three Imagen 4 endpoints stop serving, with a concrete developer action (swap the model ID to gemini-3.1-flash-image), verified from Google's own deprecations table, changelog and Imagen docs."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "article",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }
