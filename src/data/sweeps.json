@@ -33131,6 +33131,35 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260817t144413z",
+      "timestamp": "2026-08-17T14:44:13.339Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic, OpenAI, Google DeepMind/Google AI, Meta, xAI, Mistral, Qwen, DeepSeek, Z.ai, MiniMax, Moonshot), GitHub trending, HuggingFace models/datasets/papers, the HN front page top 30 plus Show HN, all 8 YouTube creator feeds, coding-agent and inference-server changelogs, and the AI-for-science lane (STAT News, nature.com, plus dated BCI / neural-decoding / medical-imaging / genomics / protein-design / pharma-FDA searches). Everything fresh enough to qualify is already in the feed: Qwen3.8-27B and Simon Willison's writeup, Gruber on Claude's watermark, the Stripe-OpenRouter deal, Anthropic's watermark post, Cursor Builds, LTX-2.5, the Imagen 4 shutdown, and all 3 videos the RSS scan returned (Wes Roth, 1littlecoder, Fireship). The rest fell outside the 72h cap (The Stack v3 was July 23, Gemini Robotics ER 2 July 30, Gemini connected apps August 12) or missed the bar: Wiz's Red Agent / Snowflake Copilot Autofix disclosure is first-party and same-day but has 3 HN points and no independent coverage yet, HuggingFace's 'State of Open Models: Summer 2026' got no tier-1 pickup, the top Show HN AI posts peaked at 132 points, and no HF paper cleared the 2-of-N bar. Note GitHub was having an outage today, so its releases API returned empty for repo release checks.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem",
+        "rumor",
+        "showcase"
+      ]
     }
   ]
 }
