@@ -5,9 +5,9 @@
   "makerTitle": "DeepSeek",
   "line": "deepseek-v4",
   "lineTitle": "DeepSeek V4",
-  "tagline": "DeepSeek's lightweight V4 tier: a 284B / 13B-active open-weight MoE with a 1M-token context, near-Pro reasoning, and prices as low as $0.14 per million input tokens.",
+  "tagline": "DeepSeek's lightweight V4 tier: a 284B / 13B-active open-weight MoE with a 1M-token context, near-Pro reasoning, and off-peak input pricing from $0.22 per million tokens.",
   "seoTitle": "DeepSeek-V4-Flash: 284B MoE, 1M Context, MIT",
-  "metaDescription": "DeepSeek-V4-Flash is an MIT-licensed 284B / 13B-active Mixture-of-Experts model with a 1M-token context, Non-think/Think/Max reasoning, and $0.14/M input prici…",
+  "metaDescription": "DeepSeek-V4-Flash is an MIT-licensed 284B / 13B-active Mixture-of-Experts model with a 1M-token context, Non-think/Think/Max reasoning, and time-of-day API pricing.",
   "releaseDate": "2026-04-24",
   "license": "MIT",
   "openWeights": true,
@@ -25,14 +25,14 @@
   "overview": [
     "DeepSeek-V4-Flash is the smaller, faster, and cheaper of the two models in DeepSeek's V4 series, released as a preview on 24 April 2026 alongside the larger DeepSeek-V4-Pro. It is a Mixture-of-Experts language model with 284 billion total parameters, of which 13 billion are activated per token, and it natively supports a one-million-token context window with up to 384K tokens of output.",
     "Like the Pro tier, DeepSeek-V4-Flash uses a Hybrid Attention Architecture that combines Compressed Sparse Attention and Heavily Compressed Attention. DeepSeek reports that in the 1M-token setting it needs only about 27% of the single-token inference FLOPs and 10% of the KV cache of DeepSeek-V3.2, which is what makes such a long context affordable. The model was pre-trained on more than 32 trillion tokens, runs in mixed FP4/FP8 precision (FP4 for MoE experts), and exposes three reasoning-effort modes: Non-think, Think High, and Think Max. DeepSeek says Flash in its Max mode approaches the reasoning quality of V4-Pro when given a larger thinking budget.",
-    "All weights are published on Hugging Face under the MIT License, so DeepSeek-V4-Flash is free for commercial use, fine-tuning, and self-hosting via vLLM, SGLang, or quantized GGUF builds in Ollama and LM Studio. On the DeepSeek API the legacy deepseek-chat and deepseek-reasoner aliases were retired on 2026-07-24 after having routed to Flash's non-thinking and thinking modes, and DeepSeek positions Flash as a low-cost agentic and coding workhorse at $0.14 per million input tokens.",
+    "All weights are published on Hugging Face under the MIT License, so DeepSeek-V4-Flash is free for commercial use, fine-tuning, and self-hosting via vLLM, SGLang, or quantized GGUF builds in Ollama and LM Studio. On the DeepSeek API the legacy deepseek-chat and deepseek-reasoner aliases were retired on 2026-07-24 after having routed to Flash's non-thinking and thinking modes, and DeepSeek positions Flash as its low-cost agentic and coding workhorse, priced at a third of the V4-Pro rate.",
     "On 2026-07-31 the `deepseek-v4-flash` API entered official public beta on a re-post-trained checkpoint DeepSeek released as DeepSeek-V4-Flash-0731. The checkpoint keeps the same architecture and parameter count as the April preview but reports substantially stronger agent scores — Terminal-Bench 2.1 82.7, DSBench-FullStack 68.7, Cybergym 76.7, Toolathlon Verified 70.3, DeepSWE 54.4, and NL2Repo 54.2, tested with the DeepSeek Harness minimal mode at max effort. The official V4-Flash natively supports the Responses API format and is specifically adapted for OpenAI Codex; DeepSeek says the official release of V4-Pro will follow."
   ],
   "strengths": [
     "Open MIT-licensed weights, free for commercial use, fine-tuning, and local deployment via vLLM, SGLang, Ollama, or LM Studio",
     "Native one-million-token context with efficient hybrid attention (roughly 27% of V3.2's per-token FLOPs and 10% of its KV cache at 1M)",
     "Selectable reasoning effort (Non-think / Think High / Think Max) to trade latency for depth",
-    "Very low API pricing — $0.14 per 1M input tokens and $0.28 per 1M output, about 12x cheaper than V4-Pro, with aggressive cache-hit discounts",
+    "Low API pricing — $0.22 per 1M cache-miss input tokens and $0.66 per 1M output off-peak, a third of the V4-Pro rate, with aggressive cache-hit discounts",
     "Strong coding and reasoning scores for its size, approaching V4-Pro in the Max mode (LiveCodeBench 91.6, SWE Verified 79.0)"
   ],
   "useCases": [
@@ -207,11 +207,11 @@
     }
   ],
   "pricing": {
-    "input": "$0.14",
-    "output": "$0.28",
-    "cachedInput": "$0.0028",
+    "input": "$0.22 off-peak · $0.44 peak",
+    "output": "$0.66 off-peak · $1.32 peak",
+    "cachedInput": "$0.007 off-peak · $0.014 peak",
     "unit": "/ 1M tokens",
-    "note": "Rates listed by DeepSeek before 16:00 UTC on 16 August 2026. From that point V4-Flash is billed by time of day: off-peak $0.007 cache-hit input / $0.22 cache-miss input / $0.66 output, and peak (01:00–04:00 and 06:00–10:00 UTC) $0.014 / $0.44 / $1.32 per 1M tokens.",
+    "note": "Input prices are cache-miss. DeepSeek bills V4 by time of day from 16:00 UTC on 16 August 2026: peak is 01:00–04:00 and 06:00–10:00 UTC, all other hours are off-peak, and off-peak is half the peak rate. Before that change V4-Flash was a flat $0.14 cache-miss input / $0.0028 cache-hit input / $0.28 output per 1M tokens.",
     "source": "https://api-docs.deepseek.com/quick_start/pricing"
   },
   "apis": [
@@ -228,7 +228,7 @@
     },
     {
       "q": "How is DeepSeek-V4-Flash different from DeepSeek-V4-Pro?",
-      "a": "Both shipped on 24 April 2026 and share the same 1M-token context, hybrid attention design, and MIT license. Flash is the smaller, cheaper tier — 284B total / 13B active parameters versus Pro's 1.6T / 49B — so it responds faster and costs about 12x less ($0.14 vs $0.435 per 1M input tokens). DeepSeek says Flash in its Max reasoning mode approaches Pro's quality given a larger thinking budget."
+      "a": "Both shipped on 24 April 2026 and share the same 1M-token context, hybrid attention design, and MIT license. Flash is the smaller, cheaper tier — 284B total / 13B active parameters versus Pro's 1.6T / 49B — so it responds faster and DeepSeek prices it at exactly a third of Pro's per-token rate ($0.22 vs $0.66 per 1M cache-miss input tokens off-peak). DeepSeek says Flash in its Max reasoning mode approaches Pro's quality given a larger thinking budget."
     },
     {
       "q": "What are the reasoning modes in DeepSeek-V4-Flash?",
@@ -236,7 +236,7 @@
     },
     {
       "q": "How much does the DeepSeek-V4-Flash API cost?",
-      "a": "Per DeepSeek's official pricing page, DeepSeek-V4-Flash costs $0.14 per 1M input tokens on a cache miss and $0.28 per 1M output tokens. Cache hits drop the input price to about $0.0028 per 1M tokens, making repeated-context workloads very cheap."
+      "a": "DeepSeek bills V4-Flash by time of day. Off-peak it is $0.22 per 1M cache-miss input tokens, $0.007 per 1M cache-hit input tokens and $0.66 per 1M output tokens; at peak (01:00–04:00 and 06:00–10:00 UTC) those double to $0.44, $0.014 and $1.32. This schedule replaced a flat $0.14 / $0.0028 / $0.28 tariff at 16:00 UTC on 16 August 2026."
     },
     {
       "q": "What is DeepSeek-V4-Flash-0731?",

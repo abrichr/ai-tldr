@@ -1,0 +1,56 @@
+{
+  "slug": "ruflo",
+  "name": "Ruflo",
+  "repo": "ruvnet/ruflo",
+  "category": "agents",
+  "categoryTitle": "Agents & Automation",
+  "subcategory": "multi-agent",
+  "subcategoryTitle": "Multi-Agent Systems",
+  "tagline": "An agent meta-harness for Claude Code and Codex",
+  "seoTitle": "Ruflo - Agent Meta-Harness for Claude Code and Codex",
+  "metaDescription": "Ruflo is an open-source agent meta-harness. It adds 100+ specialized agents, swarm coordination, vector memory and cross-machine federation around Claude Code and Codex.",
+  "overview": [
+    "Ruflo is an open-source meta-harness that sits around existing coding agents rather than replacing them. Its framing is that an agent is a model plus a harness: the model writes, and the harness supplies the tools, memory, loops, sandboxes and controls that let it actually finish work. Ruflo is the harness layer for Claude Code and Codex, adding specialized agents, coordinated swarms, persistent memory and security guardrails so multiple agents can collaborate instead of running in isolation.",
+    "There are two install paths with very different footprints. The Claude Code plugin path adds slash commands, a few skills and agent definitions while writing zero files into your workspace — good for trying one plugin. The CLI path (`npx ruflo init`) installs the full loop: 98 agents, 60+ commands, 30 skills, an MCP server, hooks and a daemon, writing `.claude/`, `.claude-flow/`, `CLAUDE.md` and settings into the project. The README recommends the CLI path for production use, and notes that after `init` you mostly keep using Claude Code normally while hooks route tasks and coordinate agents in the background.",
+    "The project ships as a marketplace of 35 plugins covering orchestration (swarm, autopilot, workflows, federation), memory and knowledge (AgentDB, RAG memory, knowledge graph), learning, code quality, security, DevOps and domain-specific packs. Capabilities highlighted in the README include hierarchical, mesh and adaptive swarm topologies with consensus, HNSW-indexed vector memory, 12 auto-triggered background workers, multi-provider routing across Claude, GPT, Gemini, Cohere and Ollama, and zero-trust federation so agents on different machines can discover, authenticate and exchange work. The repository was formerly named Claude Flow. It is MIT-licensed and written in TypeScript."
+  ],
+  "features": [
+    "100+ specialized agents for coding, testing, security, docs and architecture, coordinated as swarms",
+    "Hierarchical, mesh and adaptive swarm topologies with consensus between agents",
+    "Vector memory backed by an HNSW-indexed AgentDB, plus RAG memory and knowledge-graph plugins",
+    "Zero-trust federation so agents on different machines or organizations can collaborate without leaking data",
+    "A marketplace of 35 plugins — swarm, autopilot, workflows, security audit, observability, cost tracking and more",
+    "Multi-provider routing across Claude, GPT, Gemini, Cohere and Ollama, and an MCP server for tool access"
+  ],
+  "gettingStarted": {
+    "intro": "Pick an install path first: the plugin path for a light trial, or the CLI path for the full harness. The CLI wizard runs identically on macOS, Linux, WSL and native Windows.",
+    "steps": [
+      {
+        "heading": "Path A — try it as Claude Code plugins",
+        "body": "Adds slash commands and agent definitions without touching your workspace. `ruflo-core` registers its own MCP server on install.",
+        "code": "/plugin marketplace add ruvnet/ruflo\n\n/plugin install ruflo-core@ruflo\n/plugin install ruflo-swarm@ruflo\n/plugin install ruflo-rag-memory@ruflo",
+        "lang": "bash"
+      },
+      {
+        "heading": "Path B — install the CLI and initialize",
+        "body": "The interactive wizard works on every platform, including PowerShell and cmd. The `curl | bash` one-liner needs a POSIX shell (Git-Bash, WSL or MSYS).",
+        "code": "# All platforms — interactive setup wizard\nnpx ruflo@latest init wizard\n\n# Or install globally\nnpm install -g ruflo@latest",
+        "lang": "bash"
+      },
+      {
+        "heading": "Register Ruflo as an MCP server",
+        "body": "Exposes Ruflo's tools to Claude Code over the Model Context Protocol.",
+        "code": "claude mcp add claude-flow -- npx ruflo@latest mcp start",
+        "lang": "bash"
+      }
+    ]
+  },
+  "useCases": [
+    "Coordinate several coding agents on one task instead of running a single agent in a loop",
+    "Give an existing Claude Code or Codex setup persistent vector memory and background workers without changing how you write code",
+    "Let agents on separate machines collaborate under zero-trust federation rules",
+    "Audit and grade an agent setup — tool configs, security risks and drift over time — before shipping it"
+  ],
+  "language": "TypeScript",
+  "license": "MIT"
+}

@@ -40,7 +40,7 @@
     "Native one-million-token context window with efficient hybrid attention",
     "Selectable reasoning effort (low / high / max) to trade latency for depth, with up to 384K output tokens",
     "DSpark speculative-decoding module attached in the 0813 release",
-    "Very low API pricing relative to capability, with aggressive cache-hit discounts"
+    "Aggressive cache-hit discounts, and off-peak API rates at half the peak price"
   ],
   "useCases": [
     "Long-document and large-codebase analysis that needs the full 1M-token window",
@@ -201,11 +201,11 @@
     "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813"
   },
   "pricing": {
-    "input": "$0.435",
-    "output": "$0.87",
-    "cachedInput": "$0.003625",
+    "input": "$0.66 off-peak · $1.32 peak",
+    "output": "$1.98 off-peak · $3.96 peak",
+    "cachedInput": "$0.022 off-peak · $0.044 peak",
     "unit": "/ 1M tokens",
-    "note": "Rates listed by DeepSeek before 16:00 UTC on 16 August 2026. From that point V4-Pro is billed by time of day: off-peak $0.022 cache-hit input / $0.66 cache-miss input / $1.98 output, and peak (01:00–04:00 and 06:00–10:00 UTC) $0.044 / $1.32 / $3.96 per 1M tokens.",
+    "note": "Input prices are cache-miss. DeepSeek bills V4 by time of day from 16:00 UTC on 16 August 2026: peak is 01:00–04:00 and 06:00–10:00 UTC, all other hours are off-peak, and off-peak is half the peak rate. Before that change V4-Pro was a flat $0.435 cache-miss input / $0.003625 cache-hit input / $0.87 output per 1M tokens.",
     "source": "https://api-docs.deepseek.com/quick_start/pricing"
   },
   "apis": [
@@ -276,7 +276,7 @@
     },
     {
       "q": "How much does the DeepSeek-V4-Pro API cost?",
-      "a": "DeepSeek's pricing page listed $0.435 per 1M input tokens on a cache miss, $0.003625 on a cache hit and $0.87 per 1M output tokens before 16 August 2026. From 16:00 UTC on 16 August 2026, V4-Pro is billed by time of day: off-peak $0.022 / $0.66 / $1.98 and peak (01:00–04:00 and 06:00–10:00 UTC) $0.044 / $1.32 / $3.96 per 1M tokens for cache-hit input, cache-miss input and output respectively."
+      "a": "DeepSeek bills V4-Pro by time of day. Off-peak it is $0.022 per 1M cache-hit input tokens, $0.66 per 1M cache-miss input tokens and $1.98 per 1M output tokens; at peak (01:00–04:00 and 06:00–10:00 UTC) those double to $0.044, $1.32 and $3.96. This schedule replaced a flat $0.003625 / $0.435 / $0.87 tariff at 16:00 UTC on 16 August 2026."
     }
   ],
   "versionHistory": [

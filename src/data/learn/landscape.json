@@ -3216,6 +3216,13 @@
        "homepage": "https://tauric.ai/",
        "description": "LangGraph framework that mirrors a trading firm: LLM analyst, bull/bear researcher, trader and risk-management agents debate before a decision. For research, not advice.",
        "detail": true
+      },
+      {
+       "name": "Ruflo",
+       "slug": "ruflo",
+       "repo": "ruvnet/ruflo",
+       "description": "Agent meta-harness that wraps Claude Code and Codex with 100+ specialized agents, swarm coordination, vector memory, background workers and cross-machine agent federation.",
+       "detail": true
       }
      ]
     },
@@ -3595,6 +3602,14 @@
        "slug": "mempalace",
        "repo": "MemPalace/mempalace",
        "description": "Local-first agent memory that stores conversations verbatim instead of summarising them, with a structured palace index, pluggable vector backends and an MCP server.",
+       "detail": true
+      },
+      {
+       "name": "Claude-Mem",
+       "slug": "claude-mem",
+       "repo": "thedotmack/claude-mem",
+       "homepage": "https://claude-mem.ai",
+       "description": "Persistent memory layer for coding agents: it captures what an agent does during a session, compresses it into semantic summaries, and injects the relevant parts back into later sessions.",
        "detail": true
       }
      ]
@@ -7891,6 +7906,14 @@
        "description": "An LLM gateway that routes calls to 100+ providers through one API and adds logging, tracing, caching, and fallbacks for production AI traffic.",
        "detail": true,
        "logo": "/tools-logos/gh-portkey-ai.png"
+      },
+      {
+       "name": "Headroom",
+       "slug": "headroom",
+       "repo": "headroomlabs-ai/headroom",
+       "homepage": "https://headroom-docs.vercel.app/docs",
+       "description": "Local context-compression layer that shrinks tool outputs, logs, files and RAG chunks before they reach the model, usable as a library, a drop-in proxy or an MCP server.",
+       "detail": true
       }
      ]
     }

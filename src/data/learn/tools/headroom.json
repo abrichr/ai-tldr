@@ -1,0 +1,57 @@
+{
+  "slug": "headroom",
+  "name": "Headroom",
+  "repo": "headroomlabs-ai/headroom",
+  "homepage": "https://headroom-docs.vercel.app/docs",
+  "category": "production-ops",
+  "categoryTitle": "Evaluation & Production Ops",
+  "subcategory": "llm-gateways",
+  "subcategoryTitle": "Gateways & Routing",
+  "tagline": "The context compression layer for AI agents",
+  "seoTitle": "Headroom - Context Compression Layer for AI Agents",
+  "metaDescription": "Headroom is an open-source context compression layer. It shrinks tool outputs, logs, files and RAG chunks before they reach the LLM, as a library, proxy or MCP server.",
+  "overview": [
+    "Headroom compresses everything an AI agent reads — tool outputs, logs, RAG chunks, files and conversation history — before it reaches the model. The goal is the same answer from far fewer tokens. The project reports 60–95% fewer tokens on JSON data and 15–20% fewer for coding agents, and its demo shows a 10,144-token input reduced to 1,260 while still surfacing the same FATAL log line.",
+    "It runs locally, so the data being compressed stays on your machine, and it exposes four entry points for different integration styles: a library (`compress(messages)` in Python or TypeScript), a drop-in proxy that needs no code changes in any language, a one-command wrapper around a specific coding agent, and an MCP server exposing `headroom_compress`, `headroom_retrieve` and `headroom_stats` to any MCP client.",
+    "Internally a ContentRouter detects the content type and picks a matching compressor: SmartCrusher for JSON, CodeCompressor for AST-aware code, and the Kompress-v2-base model for prose. A CacheAligner detects and warns about volatile content that would bust a provider's KV-cache prefix, without rewriting prompts itself. Compression is reversible — originals are cached locally under a scheme the project calls CCR, and the model can call `headroom_retrieve` when it needs the untruncated version. Headroom also ships cross-agent memory shared across agents with automatic dedup, and a `headroom learn` command that mines failed sessions and writes corrections into `CLAUDE.local.md`, `CLAUDE.md`, `AGENTS.md`, `GEMINI.md` or `GROK.md`."
+  ],
+  "features": [
+    "Content-aware compressors — SmartCrusher for JSON, CodeCompressor for AST, Kompress-v2-base for prose — selected automatically by a ContentRouter",
+    "Four integration modes: Python/TypeScript library, drop-in proxy, one-command agent wrap, and MCP server",
+    "Reversible compression (CCR): originals cached locally and retrievable by the model on demand",
+    "CacheAligner warns about volatile content that would invalidate a provider's KV-cache prefix, without rewriting prompts",
+    "Cross-agent memory shared across Claude, Codex, Gemini and Grok with automatic dedup",
+    "Output token reduction that trims what the model writes back, not only what you send"
+  ],
+  "gettingStarted": {
+    "intro": "Install the CLI, choose an integration mode, then verify the savings. Note that the npm package ships the TypeScript SDK only — the `headroom` CLI comes from the uv or pip install.",
+    "steps": [
+      {
+        "heading": "Install",
+        "body": "Use uv or pip for the CLI; npm gives you the TypeScript SDK without the CLI.",
+        "code": "uv tool install --python 3.13 \"headroom-ai[all]\"   # CLI as a global tool\npip install \"headroom-ai[all]\"                     # Python — ships the `headroom` CLI\nnpm install headroom-ai                            # TypeScript SDK only",
+        "lang": "bash"
+      },
+      {
+        "heading": "Pick a mode",
+        "body": "Wrapping a coding agent starts a local proxy, installs Serena for semantic code navigation, and launches the agent configured to route through Headroom. Undo it with `headroom unwrap <tool>`, or skip Serena with `--code-memory none`.",
+        "code": "headroom deploy                  # turnkey local deployment + agent config\nheadroom wrap claude             # wrap a coding agent\nheadroom proxy --port 8787       # drop-in proxy, zero code changes\n# or inline: from headroom import compress",
+        "lang": "bash"
+      },
+      {
+        "heading": "Verify the setup and watch the savings",
+        "body": "`doctor` confirms routing is working; the dashboard needs the proxy running.",
+        "code": "headroom doctor\nheadroom perf\nheadroom dashboard",
+        "lang": "bash"
+      }
+    ]
+  },
+  "useCases": [
+    "Cut the token bill of a coding agent that keeps reading long logs, test output and large files",
+    "Compress verbose JSON tool responses before they reach the model, where the reported savings are largest",
+    "Add compression to an existing app with no code change by pointing it at the local proxy",
+    "Keep compression reversible so an agent can pull the original text back when a summary is not enough"
+  ],
+  "language": "Python",
+  "license": "Apache-2.0"
+}

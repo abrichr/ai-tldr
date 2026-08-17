@@ -1,0 +1,63 @@
+{
+  "slug": "claude-mem",
+  "name": "Claude-Mem",
+  "repo": "thedotmack/claude-mem",
+  "homepage": "https://claude-mem.ai",
+  "category": "agents",
+  "categoryTitle": "Agents & Automation",
+  "subcategory": "memory-frameworks",
+  "subcategoryTitle": "Agent Memory",
+  "tagline": "Persistent context across sessions for coding agents",
+  "seoTitle": "Claude-Mem - Persistent Memory for Coding Agents",
+  "metaDescription": "Claude-Mem is an open-source memory layer for Claude Code and other coding agents. It captures session activity, compresses it into summaries, and restores context later.",
+  "overview": [
+    "Claude-Mem is an open-source persistent memory system for coding agents. During a session it captures what the agent does — tool calls and their observations — compresses those observations with an AI model into semantic summaries, and stores them locally. When a new session starts, the relevant summaries are injected back in, so the agent begins with knowledge of what happened on the project before rather than from a blank slate.",
+    "It is built around lifecycle hooks rather than a library you import. Installing it registers hook scripts (SessionStart, UserPromptSubmit, PostToolUse, Stop, SessionEnd) plus a local worker service that exposes an HTTP API and a web viewer. Observations, sessions and summaries live in a SQLite database, and a Chroma vector database backs hybrid semantic-plus-keyword search over them. The project describes itself as built for Claude Code, and the repository also documents installs for OpenCode, Antigravity CLI and OpenClaw gateways.",
+    "Retrieval is deliberately layered to keep token cost down — the project calls this progressive disclosure. Four MCP search tools implement a three-step workflow: `search` returns a compact index of matching observations at roughly 50–100 tokens per result, `timeline` shows what was happening chronologically around a result, and `get_observations` fetches the full detail (roughly 500–1,000 tokens each) only for the IDs you actually chose. The README puts the saving from filtering before fetching at about 10x."
+  ],
+  "features": [
+    "Automatic capture of tool-use observations during a session, summarized and stored without manual intervention",
+    "Context from previous sessions injected into new ones, with fine-grained configuration over what gets injected",
+    "MCP search tools (`search`, `timeline`, `get_observations`) implementing a token-efficient three-layer retrieval workflow",
+    "SQLite storage with FTS5 plus a Chroma vector database for hybrid semantic and keyword search",
+    "A local worker service with an HTTP API and a real-time web viewer for the memory stream",
+    "Privacy control via `<private>` tags, which exclude the wrapped content from storage"
+  ],
+  "gettingStarted": {
+    "intro": "Claude-Mem installs as a plugin with hooks and a worker service, not as a plain npm dependency. The README is explicit that `npm install -g claude-mem` gives you the SDK/library only and does not register hooks — use the installer or the plugin marketplace. Node.js 20+ is required; Bun, uv and SQLite are installed automatically if missing.",
+    "steps": [
+      {
+        "heading": "Install with the one-line installer",
+        "body": "This registers the lifecycle hooks and sets up the worker service.",
+        "code": "npx claude-mem install",
+        "lang": "bash"
+      },
+      {
+        "heading": "Or install from the plugin marketplace",
+        "body": "Run these inside Claude Code, then restart it. Context from previous sessions appears automatically in new ones.",
+        "code": "/plugin marketplace add thedotmack/claude-mem\n\n/plugin install claude-mem",
+        "lang": "bash"
+      },
+      {
+        "heading": "Search your project history",
+        "body": "Use the MCP tools in the intended order: get a cheap index first, then fetch full detail only for the IDs worth reading.",
+        "code": "// Step 1 — search for an index\nsearch(query=\"authentication bug\", type=\"bugfix\", limit=10)\n\n// Step 2 — review the index, pick relevant IDs (e.g. #123, #456)\n\n// Step 3 — fetch full details, batching the IDs\nget_observations(ids=[123, 456])",
+        "lang": "ts"
+      },
+      {
+        "heading": "Configure the model, worker and injection settings",
+        "body": "Settings live in `~/.claude-mem/settings.json`, created with defaults on first run. It controls the AI model, worker port, data directory, log level and context injection, plus a `CLAUDE_MEM_MODE` workflow/language mode. Restart the agent after changing the mode.",
+        "code": "{\n  \"CLAUDE_MEM_MODE\": \"code--zh\"\n}",
+        "lang": "json"
+      }
+    ]
+  },
+  "useCases": [
+    "Keep a long-running project's history available to a coding agent so it stops re-deriving the same context every session",
+    "Search back through past sessions in natural language to find when and why a bug was fixed or a decision was made",
+    "Cut the token cost of memory retrieval by pulling a cheap index first and full observations only on demand",
+    "Give several agent CLIs a shared, locally-stored record of what has already been tried on a codebase"
+  ],
+  "language": "JavaScript",
+  "license": "Apache-2.0"
+}
