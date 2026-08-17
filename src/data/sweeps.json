@@ -32974,6 +32974,52 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260817t044927z",
+      "timestamp": "2026-08-17T04:49:27.109Z",
+      "source": "github-actions-sweep",
+      "summary": "Added three AI articles that hit the HN front page inside the 72h window: John Gruber's critique of Claude's text watermark (169 pts), Joseph Heck on engineering fundamentals in the agent era (297 pts), and Allen Bargi on working with AI as leadership (323 pts). No new model, repo, tool, dataset or video qualified — the release side of this window was already fully covered by earlier sweeps (Qwen3.8-27B, Gemini 3.7 Flash, GLM-5.3, Toast 1, HEIR, LTX-2.5, Unsloth Desktop and the four fresh YouTube videos are all in the feed).",
+      "counts": {
+        "added": 3,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "gruber-claude-watermark-perversion-aug16",
+          "title": "John Gruber — Claude's text watermark is 'a perversion of writing'",
+          "category": "article",
+          "note": "Daring Fireball, 2026-08-16, 169 HN points — a named influential voice arguing against the Claude watermark already tracked in the feed; distinct artifact from the announcement item, same pattern as simonw-qwen-3-8-27b-overthinking-aug16 sitting alongside qwen-3-8-27b."
+        },
+        {
+          "id": "heckj-swe-fundamentals-aug15",
+          "title": "Joseph Heck — software engineering fundamentals matter more than ever",
+          "category": "article",
+          "note": "rhonabwy.com, 2026-08-15, 297 HN points / 219 comments — concrete argument on where engineering judgment still pays once agents write the code."
+        },
+        {
+          "id": "bargi-ai-feels-like-leadership-aug15",
+          "title": "Allen Bargi — working with AI feels more like leadership than coding",
+          "category": "article",
+          "note": "allen.bargi.org, 2026-08-15, 323 HN points / 200 comments — highest-traction AI-workflow piece of the window and not covered by any existing item."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "article",
+        "model",
+        "repo",
+        "tool",
+        "dataset",
+        "paper",
+        "video",
+        "benchmark",
+        "algorithm",
+        "ecosystem",
+        "tutorial"
+      ]
     }
   ]
 }

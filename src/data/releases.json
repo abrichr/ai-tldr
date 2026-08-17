@@ -1,8 +1,173 @@
 {
-  "generatedAt": "2026-08-17T03:05:34.703Z",
+  "generatedAt": "2026-08-17T04:49:27.109Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "gruber-claude-watermark-perversion-aug16",
+      "categories": [
+        "article"
+      ],
+      "title": "John Gruber — Claude's text watermark is 'a perversion of writing'",
+      "org": "Daring Fireball",
+      "date": "2026-08-16",
+      "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
+      "summary": "John Gruber argues that Anthropic's new text watermark damages what Claude writes. A secret key nudges Claude's word choices, so Gruber says a reader can no longer tell whether a word was picked for the sentence or for the mark.",
+      "tags": [
+        "anthropic",
+        "claude",
+        "watermarking",
+        "synthid",
+        "ai-content-detection",
+        "eu-ai-act",
+        "provenance",
+        "writing",
+        "opinion",
+        "hacker-news"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Gruber's case against Claude's text watermark: it changes your words for someone else's benefit.",
+        "whatIsIt": "Claude's new text watermark is the target of a sharp critique from John Gruber on Daring Fireball. Gruber accepts that the mark is invisible, but rejects Anthropic's claim that it leaves quality untouched. His objection is that the system steers Claude toward some words over others for a reason that has nothing to do with the person reading them.",
+        "howItWorks": "The watermark works by biasing the pick between words the model rates as roughly equal, using a secret key. Gruber's answer is that 'roughly equal' is the writer's judgment to make — choosing 'grey' over 'overcast' is a real decision, not a coin flip. He adds two more complaints: only Anthropic can read the mark, and by his reading it covers any output longer than 200 tokens, including private chats and proofreading where nobody is being misled.",
+        "whyItMatters": "Daring Fireball is widely read by developers and writers, so this piece gives shape to a complaint many Claude users have raised since the watermark was announced. Every large lab now faces the same EU AI Act rule that pushed Anthropic here, and Gruber's argument sets out the cost side of it: transparency for the public, paid for with word choices the user did not make.",
+        "forWho": "writers and developers who publish Claude output"
+      },
+      "author": {
+        "name": "John Gruber",
+        "handle": "@gruber",
+        "profileUrl": "https://daringfireball.net/"
+      },
+      "image": {
+        "url": "https://daringfireball.net/graphics/df-wide-card.png",
+        "alt": "Daring Fireball social card for John Gruber's post on Claude's text watermark",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Full Post",
+          "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49324087"
+        },
+        {
+          "label": "Anthropic's Post",
+          "url": "https://www.anthropic.com/news/claude-text-watermark"
+        }
+      ],
+      "publishDate": "2026-08-17T04:49:27.109Z"
+    },
+    {
+      "id": "heckj-swe-fundamentals-aug15",
+      "categories": [
+        "article"
+      ],
+      "title": "Joseph Heck — software engineering fundamentals matter more than ever",
+      "org": "Joseph Heck",
+      "date": "2026-08-15",
+      "url": "https://rhonabwy.com/2026/08/15/software-engineering-fundamentals-matter-more-than-ever/",
+      "summary": "Joseph Heck argues that coding agents have crossed the line into useful, and that this makes engineering basics more valuable, not less. Working code is the start of the job, he writes; testable, maintainable, debuggable code is the job.",
+      "tags": [
+        "ai-coding",
+        "coding-agents",
+        "software-engineering",
+        "code-review",
+        "maintainability",
+        "testing",
+        "prompt-injection",
+        "opinion",
+        "hacker-news"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Agents can write code that runs; Heck argues the hard parts of engineering are still yours.",
+        "whatIsIt": "Joseph Heck's post pushes back on the idea that agentic coding tools reduce the need for engineering skill. Heck grants the tools have crossed the threshold into genuinely useful. His claim is that 'it works' was never the finish line, so the part the tools do well is the part that was already easy.",
+        "howItWorks": "Heck separates what today's models are good at from what they are not. Tool calling and instruction following, he says, are strong. Architectural decisions, interface design and long-term maintainability are not, because that work needs the kind of extended reasoning he argues prediction does not give you. He also flags a safety cost of good instruction following: a model that follows instructions cannot reliably tell a good instruction from an injected one.",
+        "whyItMatters": "The 'do juniors still need fundamentals' question is live on every engineering team right now, and Heck answers it from the maintenance side rather than the hiring side. His framing — that the seams between systems are where judgment still pays — gives teams a concrete place to spend review time instead of a general worry about AI-written code.",
+        "forWho": "engineers and leads adopting coding agents"
+      },
+      "author": {
+        "name": "Joseph Heck",
+        "handle": "@heckj",
+        "profileUrl": "https://github.com/heckj",
+        "avatarUrl": "https://github.com/heckj.png"
+      },
+      "image": {
+        "url": "https://github.com/heckj.png",
+        "alt": "Joseph Heck profile photo",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Blog Post",
+          "url": "https://rhonabwy.com/2026/08/15/software-engineering-fundamentals-matter-more-than-ever/"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49314902"
+        },
+        {
+          "label": "Author Blog",
+          "url": "https://rhonabwy.com/"
+        }
+      ],
+      "publishDate": "2026-08-17T04:49:27.109Z"
+    },
+    {
+      "id": "bargi-ai-feels-like-leadership-aug15",
+      "categories": [
+        "article"
+      ],
+      "title": "Allen Bargi — working with AI feels more like leadership than coding",
+      "org": "Allen Bargi",
+      "date": "2026-08-15",
+      "url": "https://allen.bargi.org/notes/working-with-ai-feels-like-leadership/",
+      "summary": "Allen Bargi argues that the skill of working with AI is closer to leading people than to programming. The same prompt can give different answers, so he says sharing context and intent beats writing precise instructions.",
+      "tags": [
+        "ai-coding",
+        "coding-agents",
+        "prompting",
+        "context-engineering",
+        "developer-workflow",
+        "software-engineering",
+        "opinion",
+        "hacker-news"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Bargi's framing: you brief an AI the way you brief a colleague, not the way you write a function.",
+        "whatIsIt": "Allen Bargi's note describes a change in what the daily work of building software feels like. Instead of stating exactly what the machine should do, Bargi says the useful move is to explain why it matters and what a good result looks like. He is explicit that this is not a claim that models think — it is a claim about the shape of the interaction.",
+        "howItWorks": "Bargi builds the argument on one property: the same input can produce different output. A compiler is deterministic, so precise instructions are the right interface for it. A model is not, so Bargi treats reasoning, examples and desired outcomes as the interface instead. Corrections then act like ongoing feedback — saved as reusable instructions, they pull the system toward how a particular person works.",
+        "whyItMatters": "This is a practical read on why some developers get far more out of coding agents than others using the same tools. Bargi's answer is that the gap sits in briefing skill, which suggests the thing worth practising is describing intent and standards clearly. He is careful to note the limits of the comparison: a model has no lived experience and carries no accountability.",
+        "forWho": "developers working with coding agents day to day"
+      },
+      "author": {
+        "name": "Allen Bargi",
+        "profileUrl": "https://allen.bargi.org/"
+      },
+      "image": {
+        "url": "https://allen.bargi.org/notes/working-with-ai-feels-like-leadership/social-card.png",
+        "alt": "Social card for Allen Bargi's note on working with AI as leadership",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Full Note",
+          "url": "https://allen.bargi.org/notes/working-with-ai-feels-like-leadership/"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49309451"
+        },
+        {
+          "label": "Author's Site",
+          "url": "https://allen.bargi.org/"
+        }
+      ],
+      "publishDate": "2026-08-17T04:49:27.109Z"
+    },
     {
       "id": "stripe-openrouter-acquisition",
       "categories": [
