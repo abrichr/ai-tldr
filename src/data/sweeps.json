@@ -32915,6 +32915,31 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260817t010054z",
+      "timestamp": "2026-08-17T01:00:54.368Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic news, OpenAI release notes, Google DeepMind, Meta AI, Mistral, xAI, DeepSeek, Qwen, Z.ai, Moonshot, MiniMax, Cohere), GitHub trending daily + weekly, HuggingFace models/datasets/papers/blog, HN front page top 30 + Show HN, all 8 YouTube creator feeds, coding-agent changelogs (Cursor, Claude Code), influential voices (Simon Willison, Interconnects) and the AI-for-science lane (STAT News, Nature, neuroscience/pharma/imaging searches). Everything that shipped inside the 72h window was already in the feed after the 22:26Z sweep, so nothing qualified.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
