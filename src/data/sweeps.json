@@ -33106,6 +33106,31 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260817t124201z",
+      "timestamp": "2026-08-17T12:42:01.578Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Qwen, Moonshot, DeepSeek, Z.ai), GitHub trending, HuggingFace models/datasets/papers, HN front page + last-72h stories, 8 YouTube creator feeds, the coding-agent lane, and the AI-for-science lane (BCI/neural decoding, medical imaging, drug discovery, genomics). Nothing qualified: the effective cap today is date >= 2026-08-15, and every fresh-looking candidate was either already in the feed or published before it. All 3 fresh YouTube videos (Wes Roth, 1littlecoder, Fireship) are already in the feed by videoId. HN's biggest AI posts were older items resurfacing - Claude System Prompts (689 pts) points at a docs page last updated 2026-07-24, the Piffer maths essay (620 pts) is 2026-08-04, the Vectoral token-broker report (302 pts) is 2026-08-10, the Codex kernel post (451 pts) is 2026-07-08, and Derek Lowe's AI-drug-discovery post (184 pts) is 2026-08-10. LittleLearner (241 pts, models + 88B-token dataset + demo) is a real release but arXiv v1 is 2026-08-13, outside the cap. GitHub's top trending AI repo (usestrix/strix) is a year-old project whose latest release is 2026-08-10. Lab blogs are quiet: Anthropic's newest post is 2026-08-14 (already covered), Meta and Mistral have nothing since 2026-08-11, and every HF trending model (Qwen3.8-27B, LTX-2.5, MiniMax-Music3, DeepSeek-V4-Pro-0813) is already in the feed.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
