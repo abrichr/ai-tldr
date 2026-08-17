@@ -33160,6 +33160,33 @@
         "rumor",
         "showcase"
       ]
+    },
+    {
+      "id": "sweep-20260817t163104z",
+      "timestamp": "2026-08-17T16:31:04.709Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic, OpenAI, Google DeepMind/blog.google, Meta, Mistral, xAI, Cohere, Qwen, Z.ai, MiniMax, Moonshot, DeepSeek, ByteDance Seed), GitHub trending daily + weekly, HuggingFace models/datasets/papers, the HN front page top 30 plus Show HN, all 8 YouTube creator feeds, coding-agent and inference-server changelogs (Claude Code, Cursor, Windsurf, Ollama, vLLM), Techmeme for tier-1 confirmation, and the AI-for-science lane (neurosciencenews NeuroAI, STAT News, Lancet Digital Health, Nature ML, Endpoints, Recursion, plus dated BCI / neural-decoding / FDA-clearance searches). The effective cap today is date >= 2026-08-15 and nothing cleared it. All 3 videos the RSS scan returned are already in the feed by videoId (Wes Roth qZefjtkkvrY, 1littlecoder BOTJ0iXda-4, Fireship E7la7-dtfVM). Lab blogs are quiet: Anthropic's newest post is 2026-08-14, Mistral 2026-08-11, Cohere 2026-08-06, ByteDance Seed 2026-08-05, Meta July, and DeepMind's freshest is WeatherNext Cyclones (2026-08-06, too old); qwen.ai/blog and minimax.io/news render empty, z.ai/blog 404s and moonshot.ai/blog serves an nginx default page. Every HF trending model is already in the feed (Qwen3.8-27B, LTX-2.5, MiniMax-Music3/H3, DeepSeek-V4-Pro-0813, Nemotron 3.5 Lightning). HN's big AI posts are all already-covered or stale: Claude System Prompts (731), Qwen3.8-27B overthinking (701, our Simon Willison item), the Gruber watermark essay (595), and the Roboflow 'GPT 5.6 Sol is the best vision model' post (178) which is dated 2026-07-16. GitHub trending was old projects or already covered (strix, MoneyPrinterTurbo, unsloth, semantica, cactus needle, prime-agent - last release 2026-08-11). HF papers top 10 were all submitted 2026-08-14 or earlier: RA-Bench (254 upvotes) and S2VOPD (135) miss both the cap and the 2-of-N code/demo bar, and DFM Mimir v1 has weights but only 18 upvotes and no second signal. Rejected on the bars, not on freshness: OpenAI's Ohio 10GW data-center deal with Nvidia's ~$105B financing backstop and Groq's $350M round are pure financial news; the OpenAI Preparedness team disbanding is an end-of-July restructure reported today with no developer action; the Wiz Red Agent / Copilot Autofix disclosure describes a June 18 vulnerability patched June 23 and sits at 95 HN points; the OpenAI-Hugging Face agent breach is a July 9-16 event; and 404 Media's Amazon book-scanning investigation is journalism, not a release, with no HN front-page traction.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
