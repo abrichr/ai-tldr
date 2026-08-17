@@ -33261,6 +33261,47 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260817t223111z",
+      "timestamp": "2026-08-17T22:31:11.240Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, DeepMind, Meta, Mistral, Cohere, Moonshot, Qwen), GitHub trending, HuggingFace models/datasets/papers, HN front page, 8 YouTube creator feeds, and the AI-for-science lane. Added two items: 404 Media's AirTag investigation into Amazon destroying rare books for AI training (TechCrunch + Ars Technica pickup), and Rick Manelius's 'AI;DR' essay at 426 points on HN. Both fresh YouTube videos were already in the feed; the Roboflow GPT-5.6 Sol vision benchmark trending on HN is a July 16 post and fails the 72h cap.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "amazon-vgt3-book-scanning",
+          "title": "Amazon destroys rare books to train AI — an AirTag traced the shipment",
+          "category": "ecosystem",
+          "note": "First documented look at how a major AI company physically sources off-internet training text; two tier-1 outlets (TechCrunch, Ars Technica) covered it within 24h."
+        },
+        {
+          "id": "manelius-aidr-aug17",
+          "title": "Rick Manelius — 'AI;DR (AI; Didn't Read)'",
+          "category": "article",
+          "note": "Hacker News front page at 426 points, published today; gives a name to the unedited-AI-output problem that teams are already arguing about."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "resource",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }

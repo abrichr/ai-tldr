@@ -1,8 +1,162 @@
 {
-  "generatedAt": "2026-08-17T20:29:54.314Z",
+  "generatedAt": "2026-08-17T22:31:11.240Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "amazon-vgt3-book-scanning",
+      "categories": [
+        "ecosystem"
+      ],
+      "title": "Amazon destroys rare books to train AI — an AirTag traced the shipment",
+      "org": "Amazon",
+      "date": "2026-08-17",
+      "url": "https://techcrunch.com/2026/08/17/amazon-once-an-online-bookseller-is-destroying-rare-books-to-train-ai-models/",
+      "summary": "404 Media hid an Apple AirTag in a rare book and followed it to an Amazon warehouse in Las Vegas, where a team called VGT3 cuts the bindings off printed books so the pages scan faster. The printed copy is destroyed in the process.",
+      "tags": [
+        "amazon",
+        "training-data",
+        "ai-training",
+        "data-provenance",
+        "books",
+        "copyright",
+        "publishing",
+        "model-collapse",
+        "investigation",
+        "404-media"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Reported by",
+          "value": "404 Media, August 17, 2026"
+        },
+        {
+          "label": "Facility",
+          "value": "Amazon warehouse, Las Vegas, Nevada (team VGT3)"
+        },
+        {
+          "label": "Order traced",
+          "value": "1,000 books bought on Biblio"
+        },
+        {
+          "label": "Tracking method",
+          "value": "Apple AirTag hidden between the pages"
+        },
+        {
+          "label": "What happens",
+          "value": "Binding cut off, pages scanned, book destroyed"
+        },
+        {
+          "label": "Amazon's statement",
+          "value": "Books bought \"through commercial channels\""
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which Amazon site receives the books?",
+          "a": "The AirTag led 404 Media to an Amazon warehouse in Las Vegas, Nevada. The team working there is called VGT3 and uses a logo of a dinosaur holding a book in its claws. Staff describe the job in plain terms: they receive large shipments of printed books, some people cut the books, and others receive them and scan the barcodes."
+        },
+        {
+          "q": "What did Amazon say about buying the books?",
+          "a": "Amazon told 404 Media that the company \"purchases books through commercial channels to help develop and improve the products and services our customers use.\" Amazon did not name a specific model, product or training program in that statement, and did not say how many books it buys or what happens to the scans afterwards."
+        },
+        {
+          "q": "Why are old printed books valuable as AI training data?",
+          "a": "Rare and out-of-print books are useful to model builders because the text is not already on the public internet, which labs have largely exhausted. Anything printed before 2022 also carries a near-certainty that a human wrote it, so it helps avoid model collapse — the decay that sets in when a model is trained on the output of other models."
+        },
+        {
+          "q": "Are the books destroyed for good?",
+          "a": "Yes. 404 Media reports that workers at the Amazon site cut the bindings off so the loose pages feed through a scanner quickly, and the printed book does not survive that step. Because the shipments include rare and out-of-print titles, some of the physical copies going through the process are hard or impossible to replace."
+        }
+      ],
+      "explainer": {
+        "tagline": "A bookseller hid an AirTag in a rare book, and it ended up at an Amazon site that cuts books apart to scan them.",
+        "whatIsIt": "404 Media has documented where Amazon's bought books physically go. A bookseller who suspected that a 1,000-book order placed on Biblio — a marketplace where the buyer can stay anonymous — was really an AI company slipped an Apple AirTag between the pages of one volume. The tracker ended at an Amazon warehouse in Las Vegas run by a team called VGT3.",
+        "howItWorks": "The pipeline is physical, not digital. Amazon buys printed books through ordinary commercial channels, ships them to the Las Vegas site, and staff there cut the bindings off so the loose pages run through a scanner much faster. The scan becomes text; the printed copy does not survive. Workers at the site describe the split simply — some people cut, some people receive and scan barcodes.",
+        "whyItMatters": "This is the first public look at how a major AI company sources training text off the internet, and it shows the cost is paid in physical books. Labs have largely used up the public web, so out-of-print writing is valuable precisely because it is not online and was written before models could write it. Booksellers and rights holders now have a concrete reason to ask who is behind an anonymous bulk order.",
+        "forWho": "booksellers, publishers and anyone tracking where training data comes from",
+        "tryIt": "https://www.404media.co/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-facility/"
+      },
+      "image": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-601797365.jpg?resize=1200,800",
+        "alt": "Wall of bookshelves stacked with books",
+        "fit": "cover",
+        "credit": "Studio 642 / Getty Images"
+      },
+      "links": [
+        {
+          "label": "Original Investigation",
+          "url": "https://www.404media.co/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-facility/"
+        },
+        {
+          "label": "TechCrunch Report",
+          "url": "https://techcrunch.com/2026/08/17/amazon-once-an-online-bookseller-is-destroying-rare-books-to-train-ai-models/"
+        },
+        {
+          "label": "Futurism Coverage",
+          "url": "https://futurism.com/artificial-intelligence/amazon-destroying-rare-books-ai"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49330742"
+        }
+      ],
+      "publishDate": "2026-08-17T22:31:11.240Z"
+    },
+    {
+      "id": "manelius-aidr-aug17",
+      "categories": [
+        "article"
+      ],
+      "title": "Rick Manelius — 'AI;DR (AI; Didn't Read)'",
+      "org": "Rick Manelius",
+      "date": "2026-08-17",
+      "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
+      "summary": "Rick Manelius proposes AI;DR — 'AI; Didn't Read' — as a reply to unedited AI writing. His rule: if the sender did not review and edit the text, the reader should not have to read it. The post reached the Hacker News front page.",
+      "tags": [
+        "ai-writing",
+        "writing",
+        "editing",
+        "ai-slop",
+        "communication",
+        "workplace",
+        "opinion",
+        "hacker-news"
+      ],
+      "importance": "notable",
+      "author": {
+        "name": "Rick Manelius",
+        "profileUrl": "https://www.rickmanelius.com/"
+      },
+      "explainer": {
+        "tagline": "A short label for AI text nobody bothered to edit, and a reason to stop reading it.",
+        "whatIsIt": "AI;DR is Rick Manelius's shorthand for 'AI; Didn't Read' — the reply you send when a message or post is raw model output. His line is direct: \"If you're not bothered enough to review and edit it...then I'm not going to bother reading it.\" The label aims at the sender's effort, not at the use of AI.",
+        "howItWorks": "The test is where the text lands, not how it was made. Manelius treats AI as a normal part of drafting and expects it to be there; what he asks for is a human editing pass before anything reaches a reader. He splits the cases apart: raw generation is fine for something like customer support automation, and not fine for a professional newsletter or a note to a colleague.",
+        "whyItMatters": "As AI writing spreads through email, docs and newsletters, teams need a plain norm to point at, and 'AI;DR' gives them a two-word one. Sending unedited output, Manelius argues, tells the reader you did not think they were worth the polish. A commenter on the post adds a second cost he calls \"borrowed competence\" — expert-sounding work from someone who may not grasp the assumptions underneath it.",
+        "forWho": "anyone writing with AI at work"
+      },
+      "image": {
+        "url": "https://substackcdn.com/image/fetch/$s_!v6i6!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Frickmanelius.substack.com%2Ftwitter%2Fsubscribe-card.jpg%3Fv%3D-1034328908%26version%3D9",
+        "alt": "Card for Rick Manelius's newsletter, where the AI;DR post was published",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Blog Post",
+          "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49336573"
+        },
+        {
+          "label": "Author Newsletter",
+          "url": "https://www.rickmanelius.com/"
+        }
+      ],
+      "publishDate": "2026-08-17T22:31:11.240Z"
+    },
     {
       "id": "cursor-origin-code-hosting",
       "categories": [
