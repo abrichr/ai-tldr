@@ -1,8 +1,68 @@
 {
-  "generatedAt": "2026-08-17T01:00:54.368Z",
+  "generatedAt": "2026-08-17T03:05:34.703Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "stripe-openrouter-acquisition",
+      "categories": [
+        "rumor",
+        "ecosystem"
+      ],
+      "title": "Stripe buys OpenRouter for over $7B — reported deal, not yet confirmed",
+      "org": "Stripe",
+      "date": "2026-08-16",
+      "url": "https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/",
+      "summary": "Stripe has agreed to buy OpenRouter for more than $7 billion, Bloomberg reported on August 16, citing people familiar with the matter. OpenRouter routes API calls across 400+ AI models. Stripe says it does not comment on rumors.",
+      "tags": [
+        "stripe",
+        "openrouter",
+        "acquisition",
+        "ai-gateway",
+        "llm-routing",
+        "inference",
+        "developer-tools",
+        "api"
+      ],
+      "importance": "rumor",
+      "metrics": {
+        "Reported price": "$7B+",
+        "Models routed": "400+",
+        "Developers": "8 million"
+      },
+      "explainer": {
+        "tagline": "Bloomberg reports Stripe has agreed to buy OpenRouter, the gateway 8 million developers use to switch between AI models.",
+        "whatIsIt": "Stripe has agreed to buy OpenRouter for more than $7 billion, Bloomberg reported on August 16, 2026, citing people familiar with the matter who asked not to be named. OpenRouter is a single API that lets an app reach more than 400 AI models from different providers and pick one by task, price or speed. A Stripe spokesperson told TechCrunch the company does not comment on rumors or speculation, and OpenRouter also declined to comment.",
+        "howItWorks": "OpenRouter sits between an app and the model providers: developers send one request, and the gateway forwards it to whichever model they choose, with fallbacks when a provider fails. SiliconANGLE reports the company keeps roughly 5% of the inference spending that flows through it, and that annualized revenue reached about $50 million in March 2026, up from $19 million at the end of 2025. Weekly token volume hit 25 trillion by May 2026.",
+        "whyItMatters": "A Stripe-owned OpenRouter would put a payments company in charge of infrastructure that many AI apps depend on to stay provider-neutral, so teams routing through it should watch for changes to billing, terms and model coverage. The reported price is more than five times the $1.3 billion valuation OpenRouter carried after its $113 million Series B in May 2026. Treat this as reporting, not fact: Fortune notes the final price could still change, and the Wall Street Journal had earlier put the talks near $10 billion. A public statement from either company, or a regulatory filing, would confirm or deny it.",
+        "forWho": "developers who route LLM calls through a gateway"
+      },
+      "image": {
+        "url": "https://techcrunch.com/wp-content/uploads/2024/04/Stripe-resized.webp?resize=1200,674",
+        "alt": "Hand holding a phone showing the Stripe logo against a blurred blue screen",
+        "fit": "cover",
+        "credit": "TechCrunch"
+      },
+      "links": [
+        {
+          "label": "TechCrunch Report",
+          "url": "https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/"
+        },
+        {
+          "label": "Fortune Report",
+          "url": "https://fortune.com/2026/08/16/stripe-7-billion-deal-ai-firm-openrouter-acquisition/"
+        },
+        {
+          "label": "SiliconANGLE Analysis",
+          "url": "https://siliconangle.com/2026/08/16/stripe-reportedly-finalizes-deal-buy-ai-model-router-openrouter-7b/"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49323381"
+        }
+      ],
+      "publishDate": "2026-08-17T03:05:34.703Z"
+    },
     {
       "id": "simonw-qwen-3-8-27b-overthinking-aug16",
       "categories": [

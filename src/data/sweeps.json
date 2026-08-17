@@ -32940,6 +32940,40 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260817t030534z",
+      "timestamp": "2026-08-17T03:05:34.703Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Google, plus the Chinese labs), GitHub trending, HuggingFace models/datasets/papers, HN front page for Aug 15 and 16, Show HN, GitHub release feeds for 17 major AI repos, the AI-for-science lane (neuro, clinical, imaging, pharma) and tier-1 press. Only one item cleared the 72h bar and the inclusion bar: Bloomberg's report that Stripe has agreed to buy OpenRouter for over $7B, shipped as a rumor because Stripe declined to confirm. Everything else was already in the feed, older than 72h, or below the bar.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "stripe-openrouter-acquisition",
+          "title": "Stripe buys OpenRouter for over $7B — reported deal, not yet confirmed",
+          "category": "rumor",
+          "note": "Bloomberg (Aug 16) plus TechCrunch, Fortune and SiliconANGLE the same day, and 221 points on the HN front page; OpenRouter is core routing infrastructure for AI apps, so a change of owner is a real dependency question — filed as rumor since Stripe and OpenRouter both declined to comment."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "rumor",
+        "paper",
+        "dataset",
+        "benchmark",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }
