@@ -33221,6 +33221,46 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260817t202954z",
+      "timestamp": "2026-08-17T20:29:54.314Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs, GitHub trending, HuggingFace models/datasets/papers, HN front page, 8 YouTube feeds, coding agents and the AI-for-science lane; added Cursor's Origin code hosting launch (Aug 17) and Dario Amodei's crisis-of-trust post (Aug 15, HN front page at 219 points plus TechCrunch/The New Stack/Semafor/Fortune). Both fresh YouTube videos were already in the feed, and Anthropic's Aug 14 watermark explainer was dropped as a dupe of the existing content-marking item.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "cursor-origin-code-hosting",
+          "title": "Cursor Origin — a Git forge for agents opens in early beta",
+          "category": "tool",
+          "note": "Cursor shipped its own Git forge in early beta on Aug 17 — a first-party launch from a tool the feed already tracks, verified from the changelog, product page and docs."
+        },
+        {
+          "id": "amodei-crisis-of-trust-aug15",
+          "title": "Dario Amodei — AI backlash is 'fundamentally a crisis of trust'",
+          "category": "article",
+          "note": "HN front page at 219 points and covered by TechCrunch, The New Stack, Semafor and Fortune within 48h; distinct from the July open-weights position item."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "article",
+        "video",
+        "dataset",
+        "paper",
+        "benchmark",
+        "algorithm",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }

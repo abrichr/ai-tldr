@@ -1,8 +1,177 @@
 {
-  "generatedAt": "2026-08-17T18:43:18.173Z",
+  "generatedAt": "2026-08-17T20:29:54.314Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "cursor-origin-code-hosting",
+      "categories": [
+        "tool"
+      ],
+      "title": "Cursor Origin — a Git forge for agents opens in early beta",
+      "org": "Cursor",
+      "date": "2026-08-17",
+      "url": "https://cursor.com/changelog/origin-code-hosting",
+      "summary": "Cursor Origin is Cursor's own code hosting platform, now rolling out in early beta on paid plans. It hosts repos, pull requests and code browsing inside Cursor, and can mirror a GitHub repository so both stay in sync.",
+      "tags": [
+        "cursor",
+        "origin",
+        "git",
+        "code-hosting",
+        "git-forge",
+        "pull-requests",
+        "github",
+        "coding-agents",
+        "developer-tools",
+        "code-review",
+        "early-beta"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Cursor"
+        },
+        {
+          "label": "Status",
+          "value": "Early beta"
+        },
+        {
+          "label": "Plans",
+          "value": "Pro, Teams, Enterprise (not free)"
+        },
+        {
+          "label": "What ships now",
+          "value": "Repos, pull requests, code browsing, GitHub sync"
+        },
+        {
+          "label": "Where",
+          "value": "Codebase tab at cursor.com/codebase"
+        },
+        {
+          "label": "App integrations",
+          "value": "Vercel, Depot, Buildkite"
+        },
+        {
+          "label": "Pitch",
+          "value": "\"A git forge for the agentic era\""
+        }
+      ],
+      "explainer": {
+        "tagline": "Cursor now hosts your code as well as writing it, with pull requests and GitHub sync in the same tab.",
+        "whatIsIt": "Cursor Origin adds code hosting to Cursor. A new Codebase tab is where you create Origin repositories, browse and search code, and open, review and merge pull requests, so the place your agents write code is also the place it lives. Origin started rolling out on August 17, 2026 in early beta.",
+        "howItWorks": "Repos in Origin are plain git: an Origin CLI clones them, and normal push and pull work as usual, including from Cursor agents. Teams claim a codebase name to switch the feature on, and admins then control who can reach each repository from codebase settings. An existing GitHub repository can be mirrored into Origin, with updates flowing both ways, so a team can try the forge without moving off GitHub first.",
+        "whyItMatters": "Code review, not code generation, is where teams running many background agents get stuck, and a forge built for human-paced review is the bottleneck. By hosting the repository itself, Cursor can put the agent next to the pull request instead of behind an API, and the deployment and CI integrations mean a PR opened in Origin can still trigger the pipeline a team already runs.",
+        "forWho": "teams running fleets of coding agents",
+        "tryIt": "Open the Codebase tab in Cursor and pick + New to create an Origin repo"
+      },
+      "faq": [
+        {
+          "q": "Which Cursor plans include Origin?",
+          "a": "Cursor Origin is available on the Pro, Teams and Enterprise plans and is not offered on free plans. It began rolling out on August 17, 2026 to paid users, with access arriving gradually rather than all at once. Enterprise organisations are included unless their admins choose to opt out."
+        },
+        {
+          "q": "Can I keep my code on GitHub and still use Cursor Origin?",
+          "a": "Yes. Cursor Origin can mirror an existing GitHub repository, and the two stay updated in both directions, so GitHub-hosted repos sit alongside Origin-hosted ones in the same Codebase tab. That lets a team review pull requests in Origin without first migrating its history off GitHub."
+        },
+        {
+          "q": "What is still missing from Cursor Origin?",
+          "a": "Cursor Origin is in early beta, and the launch covers repositories, pull requests, code browsing and GitHub sync. Cursor says the agent-native parts of Origin are still to come rather than available today. Teams using legacy privacy mode cannot switch the feature on at all."
+        },
+        {
+          "q": "Which CI and deployment tools work with Cursor Origin?",
+          "a": "Cursor Origin ships with three app integrations at launch. Vercel adds preview deployments to pull requests, while Depot and Buildkite provide continuous integration, both with support for GitHub Actions and Buildkite also offering its own native pipelines. Teams connect these from the Origin repository settings."
+        }
+      ],
+      "image": {
+        "url": "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/og/og-origin-code-hosting-08-17-26-iibBEcxTigpnjXaBULY8Du327sx4P1.png",
+        "alt": "Cursor changelog card announcing Origin code hosting",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Changelog",
+          "url": "https://cursor.com/changelog/origin-code-hosting"
+        },
+        {
+          "label": "Origin Page",
+          "url": "https://cursor.com/origin"
+        },
+        {
+          "label": "Docs",
+          "url": "https://cursor.com/docs/origin"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49334209"
+        }
+      ],
+      "publishDate": "2026-08-17T20:29:54.314Z"
+    },
+    {
+      "id": "amodei-crisis-of-trust-aug15",
+      "categories": [
+        "article"
+      ],
+      "title": "Dario Amodei — AI backlash is 'fundamentally a crisis of trust'",
+      "org": "Dario Amodei",
+      "date": "2026-08-15",
+      "url": "https://x.com/DarioAmodei/status/2088758816376807762",
+      "summary": "Dario Amodei posted on X that the public backlash against AI is 'fundamentally a crisis of trust' in companies, governments and tech, not the result of his own risk warnings. Anthropic's CEO also backed a FINRA-like regulator for AI.",
+      "tags": [
+        "anthropic",
+        "dario-amodei",
+        "ai-policy",
+        "ai-regulation",
+        "open-weights",
+        "public-trust",
+        "ai-safety",
+        "opinion",
+        "hacker-news"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Anthropic's CEO answers the charge that his own warnings about AI risk caused the public backlash.",
+        "whatIsIt": "Dario Amodei used a rare X post to answer investor Gavin Baker, who argued that Anthropic's warnings about AI danger fed the backlash and said he 'should make an effort to be a more positive advocate for his own industry.' Amodei rejected the description of his messaging as negative, saying his writing has been 'about equally balanced between risks and benefits.'",
+        "howItWorks": "The argument turns on where the distrust comes from. Amodei traces it past AI to a long-running crisis of trust in companies, governments and the tech industry, where ordinary people 'always suspect that we are cooking up some new way to screw them over.' He does accept one criticism: AI companies have not yet delivered on their big promises to benefit the world, and he says the answer is real results such as curing cancer rather than a better marketing campaign.",
+        "whyItMatters": "The post is also the clearest recent statement of what Anthropic wants from regulators. Amodei rejects the choice between unregulated open distribution and rules that concentrate power, argues AI structurally tends to concentrate power because of scaling laws, and says Anthropic writes policy proposals that disadvantage frontier labs while helping smaller competitors. He endorses a central AI regulator modelled on FINRA, a position the industry will be arguing over as rules are drafted.",
+        "forWho": "people following AI policy"
+      },
+      "author": {
+        "name": "Dario Amodei",
+        "handle": "@DarioAmodei",
+        "profileUrl": "https://x.com/DarioAmodei"
+      },
+      "image": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/02/GettyImages-2261514463.jpg?w=1024",
+        "alt": "Dario Amodei, chief executive of Anthropic, speaking at a conference",
+        "fit": "cover",
+        "credit": "TechCrunch / Getty Images"
+      },
+      "links": [
+        {
+          "label": "Amodei's Post",
+          "url": "https://x.com/DarioAmodei/status/2088758816376807762"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49325789"
+        },
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/"
+        },
+        {
+          "label": "The New Stack",
+          "url": "https://thenewstack.io/amodei-open-weights-compute-regulation/"
+        },
+        {
+          "label": "Semafor",
+          "url": "https://www.semafor.com/article/08/16/2026/amodei-addresses-ai-backlash"
+        }
+      ],
+      "publishDate": "2026-08-17T20:29:54.314Z"
+    },
     {
       "id": "wiz-red-agent-snowflake-copilot-autofix",
       "categories": [
