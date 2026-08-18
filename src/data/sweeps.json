@@ -33641,6 +33641,46 @@
         "video",
         "algorithm"
       ]
+    },
+    {
+      "id": "sweep-20260818t202606z",
+      "timestamp": "2026-08-18T20:26:06.201Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Qwen, DeepSeek, Z.ai), GitHub trending, HuggingFace models/datasets/papers, HN front page and newest, all 8 YouTube creator feeds, the AI-for-science lane (BCI, medical imaging, pharma) and coding-agent changelogs. Lab blogs were quiet — Anthropic's last post is August 14 and Mistral's is August 11. Added two items: CISA's KEV listing of the critical Ray RCE (CVE-2025-62593) with a three-day federal patch deadline, and Anthropic's extension of the 50% Claude Code weekly limits promotion to August 31.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "cisa-ray-kev-cve-2025-62593",
+          "title": "Ray RCE hits CISA's exploited list — federal agencies get three days to patch",
+          "category": "security",
+          "note": "CISA added the actively-exploited Ray RCE to its KEV catalog on 2026-08-17 with an August 20 federal deadline; covered by The Register (tier-1) and The Hacker News, with a primary ray-project advisory and a concrete developer action (upgrade to Ray 2.52.0)."
+        },
+        {
+          "id": "anthropic-claude-code-weekly-limits-extension",
+          "title": "Claude Code keeps 50% higher weekly limits — extended through August 31",
+          "category": "tool",
+          "note": "Official Anthropic support page updated today extending the 50% weekly limit boost to August 31; 236 points on the HN front page, and a dated limits change every paid Claude Code user feels."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "article",
+        "security",
+        "ecosystem",
+        "benchmark",
+        "algorithm"
+      ]
     }
   ]
 }

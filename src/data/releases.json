@@ -1,8 +1,213 @@
 {
-  "generatedAt": "2026-08-18T18:42:47.784Z",
+  "generatedAt": "2026-08-18T20:26:06.201Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "cisa-ray-kev-cve-2025-62593",
+      "categories": [
+        "security",
+        "repo"
+      ],
+      "title": "Ray RCE hits CISA's exploited list — federal agencies get three days to patch",
+      "org": "CISA",
+      "date": "2026-08-17",
+      "url": "https://www.theregister.com/security/2026/08/18/cisa-gives-feds-3-days-to-fix-actively-exploited-ray-rce-bug/5289007",
+      "summary": "CISA added CVE-2025-62593, a critical remote code execution bug in the Ray AI compute framework, to its Known Exploited Vulnerabilities catalog on August 17. Federal agencies have until August 20 to move to Ray 2.52.0.",
+      "tags": [
+        "security",
+        "cve",
+        "ray",
+        "vulnerability",
+        "rce",
+        "cisa",
+        "kev",
+        "dns-rebinding",
+        "ml-infrastructure",
+        "distributed-computing"
+      ],
+      "importance": "major",
+      "metrics": {
+        "CVSS v4 score": 9.4
+      },
+      "quickFacts": [
+        {
+          "label": "CVE",
+          "value": "CVE-2025-62593"
+        },
+        {
+          "label": "Affected",
+          "value": "Ray before 2.52.0"
+        },
+        {
+          "label": "Fix",
+          "value": "Upgrade to Ray 2.52.0"
+        },
+        {
+          "label": "Federal deadline",
+          "value": "August 20, 2026"
+        },
+        {
+          "label": "Attack path",
+          "value": "DNS rebinding via Firefox or Safari"
+        },
+        {
+          "label": "Seen in the wild",
+          "value": "RondoDox botnet, ShadowRay 2.0"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which Ray versions are affected by CVE-2025-62593?",
+          "a": "CVE-2025-62593 affects every release of Ray before 2.52.0, according to the ray-project security advisory. Ray 2.52.0 is the patched version. Anyone running an older Ray dashboard on a developer machine or a cluster should upgrade, because the fix is the only mitigation the advisory names for the browser-based attack path."
+        },
+        {
+          "q": "Does upgrading to Ray 2.52.0 turn on authentication automatically?",
+          "a": "No. Ray 2.52.0 adds optional token-based authentication, but The Register reports it stays disabled by default. Upgrading closes the specific User-Agent and DNS rebinding hole described in CVE-2025-62593, so the patch is worth applying on its own, but teams that want authenticated Ray endpoints have to switch the new token option on themselves."
+        },
+        {
+          "q": "Who is most at risk from the Ray browser attack?",
+          "a": "The ray-project advisory names developers running Ray in development or testing environments as the group most at risk. The attack fires when such a developer visits a malicious page in Firefox or Safari, so phishing email and malicious advertising are the realistic delivery routes. A Ray instance bound to localhost is still reachable this way."
+        },
+        {
+          "q": "Does the CISA deadline apply to private companies?",
+          "a": "The August 20, 2026 deadline in the CISA Known Exploited Vulnerabilities catalog binds US federal civilian executive branch agencies. Private companies are not covered by that order. CISA cut the window to three days rather than the usual fourteen under Binding Operational Directive 26-04, which signals how urgent it considers the Ray flaw for everyone."
+        }
+      ],
+      "explainer": {
+        "tagline": "A Ray flaw first disclosed in November 2025 is now on CISA's actively-exploited list with a three-day federal patch deadline.",
+        "whatIsIt": "CISA added CVE-2025-62593 to its Known Exploited Vulnerabilities catalog on August 17, 2026. The bug is a critical remote code execution flaw in Ray, the distributed compute framework used to train and serve AI models. It scores 9.4 on CVSS v4 and affects every Ray version before 2.52.0.",
+        "howItWorks": "The Ray dashboard tried to block browser requests by checking whether the HTTP User-Agent header began with \"Mozilla\". Firefox and Safari let a page rewrite that header through the fetch API, so the check fails open. An attacker pairs that bypass with DNS rebinding, which makes the browser treat the attacker's server and the victim's local Ray instance as the same origin, and then submits a job that runs code. Avi Lumelsky of Oligo found the header bypass and Jonathan Leitschuh built the rebinding chain.",
+        "whyItMatters": "Ray sits under a lot of AI infrastructure. The Register cites 7 million weekly downloads, about a million monthly active users, and deployments at Amazon, Apple and OpenAI. Attackers are not waiting: the RondoDox DDoS botnet added the flaw two days before public disclosure, and the ShadowRay 2.0 campaign turns unpatched Nvidia GPU clusters into self-spreading crypto miners. The advisory traces the root cause to Ray's long-standing choice not to authenticate critical endpoints.",
+        "forWho": "ML platform and infrastructure teams",
+        "tryIt": "pip install -U \"ray>=2.52.0\""
+      },
+      "image": {
+        "url": "https://image.theregister.com/5274310.jpg?imageId=5274310&x=0&y=0&cropw=100&croph=88.36&panox=0&panoy=0&panow=100&panoh=88.36&width=1200&height=683",
+        "alt": "The Register report on CISA ordering federal agencies to patch the Ray remote code execution flaw",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "The Register Report",
+          "url": "https://www.theregister.com/security/2026/08/18/cisa-gives-feds-3-days-to-fix-actively-exploited-ray-rce-bug/5289007"
+        },
+        {
+          "label": "Ray Security Advisory",
+          "url": "https://github.com/ray-project/ray/security/advisories/GHSA-q279-jhrf-cc6v"
+        },
+        {
+          "label": "CISA KEV Catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "label": "The Hacker News",
+          "url": "https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html"
+        }
+      ],
+      "publishDate": "2026-08-18T20:26:06.201Z"
+    },
+    {
+      "id": "anthropic-claude-code-weekly-limits-extension",
+      "categories": [
+        "tool",
+        "ecosystem"
+      ],
+      "title": "Claude Code keeps 50% higher weekly limits — extended through August 31",
+      "org": "Anthropic",
+      "date": "2026-08-18",
+      "url": "https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion",
+      "summary": "Anthropic extended its Claude Code promotion again: weekly usage limits stay 50% higher through August 31, 2026. The boost covers Pro, Max, Team and legacy seat-based Enterprise plans across the CLI, IDE extensions, desktop and web.",
+      "tags": [
+        "claude-code",
+        "anthropic",
+        "usage-limits",
+        "pricing",
+        "coding-agent",
+        "developer-tools",
+        "rate-limits"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Increase",
+          "value": "50% higher weekly limits"
+        },
+        {
+          "label": "Plans",
+          "value": "Pro, Max, Team, legacy seat-based Enterprise"
+        },
+        {
+          "label": "Not included",
+          "value": "Free plans, consumption-based Enterprise seats"
+        },
+        {
+          "label": "Surfaces",
+          "value": "CLI, IDE extensions, desktop, web"
+        },
+        {
+          "label": "Started",
+          "value": "May 13, 2026"
+        },
+        {
+          "label": "Now ends",
+          "value": "August 31, 2026"
+        },
+        {
+          "label": "5-hour limit",
+          "value": "Unchanged"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What happens to Claude Code limits after August 31, 2026?",
+          "a": "Anthropic's support page states that after August 31, 2026 weekly usage limits in Claude Code return to their standard levels. The 50% increase is described as a promotion, not a permanent change to the plans. Teams that budget agent work by the week should plan for the lower ceiling from September onward unless Anthropic extends the promotion again."
+        },
+        {
+          "q": "Does the promotion change Claude Code's five-hour usage limit?",
+          "a": "No. The Claude Code promotion raises the weekly usage limit only. Anthropic's support page says the separate five-hour usage limit is unaffected, so a burst of heavy work can still hit the shorter window at the same point it always did. The extra 50% only shows up in how much total work fits inside a week."
+        },
+        {
+          "q": "Can Claude Free users get the higher Claude Code weekly limits?",
+          "a": "No. Anthropic limits the promotion to Pro, Max and Team plans plus legacy seat-based Enterprise. Free plans and consumption-based Enterprise seats are excluded. A Free-plan user who wants the raised weekly ceiling in Claude Code has to move to a paid plan, and even then the increase only runs until August 31, 2026."
+        },
+        {
+          "q": "Where do the higher Claude Code weekly limits apply?",
+          "a": "The increase follows the account rather than one client, so it applies across every Claude Code surface: the command-line interface, the IDE extensions, the desktop app and the web. A developer switching between the terminal and an editor extension draws on the same raised weekly pool instead of a separate allowance per surface."
+        }
+      ],
+      "explainer": {
+        "tagline": "Claude Code's 50% weekly limit boost, first added in May, now runs through August 31, 2026.",
+        "whatIsIt": "Anthropic pushed the end date of the Claude Code weekly limits promotion out to August 31, 2026. Weekly usage limits stay 50% above their standard levels for Pro, Max, Team and legacy seat-based Enterprise plans. Free plans and consumption-based Enterprise seats are not part of it.",
+        "howItWorks": "The raised ceiling touches the weekly usage window only; the separate five-hour limit in Claude Code is untouched. The extra headroom follows the account across every surface — the CLI, IDE extensions, the desktop app and the web — rather than giving each client its own pool. When the promotion ends, weekly limits drop back to standard levels with no other change to the plans.",
+        "whyItMatters": "Weekly limits are the ceiling that stops long agent runs, so an extra 50% often decides whether a heavy week of work finishes or stalls midway. The promotion has been running since May 13, 2026, and the new date buys developers who had planned around an earlier cutoff more time before they have to re-budget. The support page is explicit that this is temporary, so it is headroom to use, not a limit to design around.",
+        "forWho": "Claude Code users on Pro, Max and Team plans"
+      },
+      "image": {
+        "url": "https://downloads.intercomcdn.com/i/o/lupk8zyo/792494/717b10d3ebd874823db64841659b/76f3062d78ebbb04863fb1de3ef9cca0.png",
+        "alt": "Anthropic support page describing the Claude Code weekly limits promotion",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Anthropic Support",
+          "url": "https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion"
+        },
+        {
+          "label": "Claude Code Docs",
+          "url": "https://docs.claude.com/en/docs/claude-code/overview"
+        },
+        {
+          "label": "Claude Pricing",
+          "url": "https://claude.com/pricing"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49348751"
+        }
+      ],
+      "publishDate": "2026-08-18T20:26:06.201Z"
+    },
     {
       "id": "openai-cyber-capability-pacing",
       "categories": [
