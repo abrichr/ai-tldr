@@ -1,8 +1,68 @@
 {
-  "generatedAt": "2026-08-18T14:40:22.503Z",
+  "generatedAt": "2026-08-18T16:42:22.676Z",
   "promptVersion": "5.3.0",
-  "source": "github-actions-sweep",
+  "source": "github-actions-sweep-retry",
   "items": [
+    {
+      "id": "mirros-harnesseval-w",
+      "categories": [
+        "benchmark",
+        "paper",
+        "repo"
+      ],
+      "title": "HarnessEval-W — agents score world models and show their work",
+      "org": "MirroS Lab",
+      "date": "2026-08-17",
+      "url": "https://github.com/MirroS-Lab/HarnessEval-W",
+      "summary": "HarnessEval-W is an open-source benchmark that grades video world models with AI agents instead of fixed metrics. MirroS Lab ran it over 18 world models and 330 cases, and every score ships with the reasoning trace behind it.",
+      "tags": [
+        "benchmark",
+        "evaluation",
+        "world-models",
+        "video-generation",
+        "agents",
+        "open-source",
+        "research"
+      ],
+      "importance": "notable",
+      "metrics": {
+        "World models evaluated": 18,
+        "Evaluation cases": 330,
+        "Human rank correlation": "rho = 0.93"
+      },
+      "explainer": {
+        "tagline": "An agent-run benchmark for world models that returns an evidence trail, not just a number.",
+        "whatIsIt": "HarnessEval-W replaces the fixed scoring rubric with a panel of evaluation agents. MirroS Lab published the benchmark on 17 August 2026 together with results for 18 world models across 330 evaluation cases. Each case produces an auditable case card that records how the verdict was reached, and the repository ships a bundled example so you can run the pipeline end to end before plugging in your own model.",
+        "howItWorks": "The pipeline reads each evaluation case, splits the question into measurable sub-questions, and routes them to specialist sub-agents that reason over the evidence. Those agents build an evidence tree across 11 skills grouped under quality, transitions and persistence. HarnessEval-W scored 5,940 rollouts this way, keeping the full reasoning chain for every one of them.",
+        "whyItMatters": "A single scalar score hides why a generated clip failed, which makes world-model comparisons hard to trust. On intentional transitions the rankings from HarnessEval-W match human rankings at rho = 0.93, and on physical tasks it agrees with human pairwise choices 71.7% of the time. Researchers get a diagnosis they can check rather than a leaderboard they have to take on faith.",
+        "forWho": "world-model and video generation researchers",
+        "tryIt": "git clone https://github.com/MirroS-Lab/HarnessEval-W"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/MirroS-Lab/HarnessEval-W",
+        "alt": "GitHub repository card for HarnessEval-W, an agent-based benchmark for visual world models",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Code",
+          "url": "https://github.com/MirroS-Lab/HarnessEval-W"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.16859"
+        },
+        {
+          "label": "Project Page",
+          "url": "https://mirros-lab.github.io/HarnessEval-W/"
+        },
+        {
+          "label": "Paper Discussion",
+          "url": "https://huggingface.co/papers/2608.16859"
+        }
+      ],
+      "publishDate": "2026-08-18T16:42:22.676Z"
+    },
     {
       "id": "openai-chatgpt-for-teens",
       "categories": [

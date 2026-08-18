@@ -33567,6 +33567,40 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260818t164222z",
+      "timestamp": "2026-08-18T16:42:22.676Z",
+      "source": "github-actions-sweep-retry",
+      "summary": "Searched lab blogs, GitHub trending, HuggingFace models/datasets/papers, HN front page and Show HN, the 8 YouTube creator feeds, coding-agent changelogs, influential voices and the AI-for-science lane. Almost everything fresh was already in the feed (Qwen3.8-27B, GPT-5.6 Sol discount, ChatGPT for Teens, Cursor Origin, both fresh videos); one new item qualified — HarnessEval-W, an open-source agent-based benchmark for visual world models sitting at the top of HuggingFace Papers.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "mirros-harnesseval-w",
+          "title": "HarnessEval-W — agents score world models and show their work",
+          "category": "benchmark",
+          "note": "Top of HuggingFace Papers today (105 upvotes) with Apache-licensed code released the same day (137 stars, repo created 2026-08-17) and a runnable bundled demo — clears the paper 2-of-N bar via code-with-traction plus a runnable artifact, and the released benchmark is the artifact."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "benchmark",
+        "algorithm",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
