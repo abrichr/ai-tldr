@@ -1,8 +1,243 @@
 {
-  "generatedAt": "2026-08-18T08:40:02.898Z",
+  "generatedAt": "2026-08-18T10:35:11.593Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openrouter-gpt-5-6-sol-discount",
+      "categories": [
+        "model",
+        "ecosystem"
+      ],
+      "title": "GPT-5.6 Sol at half price — OpenRouter discounts OpenAI's flagship 50%",
+      "org": "OpenRouter",
+      "date": "2026-08-17",
+      "url": "https://openrouter.ai/openai/gpt-5.6-sol",
+      "summary": "OpenRouter now sells GPT-5.6 Sol at 50% off: $2.50 per million input tokens and $15 per million output, against OpenAI's own list price of $5 and $30. The batch tier drops to $1.25 and $7.50.",
+      "tags": [
+        "openrouter",
+        "openai",
+        "gpt-5-6-sol",
+        "api-pricing",
+        "price-cut",
+        "inference-cost",
+        "llm-api",
+        "batch-api",
+        "cost-optimization"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "OpenAI's flagship model costs half as much through OpenRouter as it does buying from OpenAI directly.",
+        "whatIsIt": "A 50% discount on GPT-5.6 Sol is live on OpenRouter, the API marketplace that routes requests to model providers. Input falls from $5.00 to $2.50 per million tokens and output from $30.00 to $15.00. Cached input reads drop from $0.50 to $0.25, and GPT-5.6 Sol Pro carries the same 50% cut.",
+        "howItWorks": "The discount sits on the OpenAI provider inside OpenRouter, so the model id openai/gpt-5.6-sol picks it up with no extra flag. Batch requests go lower still, at $1.25 input and $7.50 output per million tokens. OpenRouter lists the offer in its discounted-models collection, next to cuts on Gemini 3.7 Flash and several open models, and says promotional pricing can change.",
+        "whyItMatters": "Halving the token bill changes what is affordable to run on a frontier model: long agent loops, wide fan-out evaluation, and bulk document work on GPT-5.6 Sol all cost half as much through OpenRouter as calling OpenAI directly, where the list price is still $5.00 and $30.00 per million tokens. The 1M-token context window is the same on either path.",
+        "forWho": "teams running agents on frontier models",
+        "tryIt": "Call model id openai/gpt-5.6-sol on https://openrouter.ai"
+      },
+      "quickFacts": [
+        {
+          "label": "Model",
+          "value": "GPT-5.6 Sol"
+        },
+        {
+          "label": "Discount",
+          "value": "50% off list price"
+        },
+        {
+          "label": "Where",
+          "value": "OpenRouter only, OpenAI provider"
+        },
+        {
+          "label": "Applies to",
+          "value": "Standard, batch, and Sol Pro"
+        },
+        {
+          "label": "Context window",
+          "value": "1M tokens"
+        },
+        {
+          "label": "Duration",
+          "value": "Not stated; OpenRouter says offers can change"
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "Input",
+            "price": "$2.50",
+            "unit": "/ 1M tokens",
+            "note": "list $5.00"
+          },
+          {
+            "plan": "Output",
+            "price": "$15.00",
+            "unit": "/ 1M tokens",
+            "note": "list $30.00"
+          },
+          {
+            "plan": "Cached input",
+            "price": "$0.25",
+            "unit": "/ 1M tokens",
+            "note": "list $0.50"
+          },
+          {
+            "plan": "Batch input",
+            "price": "$1.25",
+            "unit": "/ 1M tokens"
+          },
+          {
+            "plan": "Batch output",
+            "price": "$7.50",
+            "unit": "/ 1M tokens"
+          }
+        ],
+        "source": "https://openrouter.ai/collections/discounted-models"
+      },
+      "faq": [
+        {
+          "q": "Does the discount apply if I call OpenAI's API directly?",
+          "a": "No. The GPT-5.6 Sol discount is applied inside OpenRouter, on the OpenAI provider. OpenAI's own published price list still shows $5.00 per million input tokens and $30.00 per million output tokens for GPT-5.6 Sol, so calling OpenAI directly costs the full amount."
+        },
+        {
+          "q": "How long does the OpenRouter GPT-5.6 Sol discount last?",
+          "a": "OpenRouter publishes no end date for the GPT-5.6 Sol discount. Its discounted-models page states only that provider discounts and promotional pricing can change, and that the collection updates as offers change. Anyone budgeting a long-running job around the lower rate should re-check the model page first."
+        },
+        {
+          "q": "How cheap does GPT-5.6 Sol get on the batch tier?",
+          "a": "GPT-5.6 Sol on OpenRouter's batch tier costs $1.25 per million input tokens and $7.50 per million output tokens, half the already-discounted standard rate. Batch work that tolerates a delayed response is therefore the cheapest way to run Sol through OpenRouter."
+        },
+        {
+          "q": "Which other models are discounted alongside it?",
+          "a": "OpenRouter's discounted-models collection lists GPT-5.6 Sol Pro at the same 50% cut, plus Google's Gemini 3.7 Flash at 50% off, DeepSeek V4 Flash at 44%, Z.ai GLM 5 at 40%, and steeper cuts on smaller open models such as inclusionAI Ling-2.6-flash at 90%."
+        }
+      ],
+      "image": {
+        "url": "https://openrouter.ai/openai/gpt-5.6-sol/opengraph-image-1oizug?abd1ffaa6102aa5f",
+        "alt": "OpenRouter page card for the GPT-5.6 Sol model",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Model Page",
+          "url": "https://openrouter.ai/openai/gpt-5.6-sol"
+        },
+        {
+          "label": "Discounted Models",
+          "url": "https://openrouter.ai/collections/discounted-models"
+        },
+        {
+          "label": "OpenAI List Price",
+          "url": "https://developers.openai.com/api/docs/pricing"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49337602"
+        }
+      ],
+      "publishDate": "2026-08-18T10:35:11.593Z"
+    },
+    {
+      "id": "responsible-statecraft-hanover-institute",
+      "categories": [
+        "article",
+        "ecosystem"
+      ],
+      "title": "Hanover Institute — Israel-funded site built to shape AI chatbot answers",
+      "org": "Responsible Statecraft",
+      "date": "2026-08-17",
+      "url": "https://responsiblestatecraft.org/israel-influence-chatgpt/",
+      "summary": "Responsible Statecraft reports that the Hanover Institute, a think tank whose reports carry no bylines, has published over 100 of them since August 6 and is run by Piro, Inc. under a $900,000 Israeli government contract.",
+      "tags": [
+        "ai-influence-operations",
+        "chatbots",
+        "misinformation",
+        "information-integrity",
+        "llm-citations",
+        "retrieval",
+        "ai-search",
+        "fara",
+        "responsible-statecraft",
+        "quincy-institute",
+        "investigation"
+      ],
+      "importance": "major",
+      "author": {
+        "name": "Nick Cleveland-Stout",
+        "profileUrl": "https://responsiblestatecraft.org/author/ncstout/"
+      },
+      "explainer": {
+        "tagline": "A think tank that publishes for machines instead of people: 100+ reports written to be cited by AI chatbots.",
+        "whatIsIt": "The Hanover Institute publishes reports on Israel and Palestine that carry no author bylines. Responsible Statecraft reports it is operated by Piro, Inc. on behalf of Israel's government under a $900,000 contract subcontracted through Havas Media, and that more than 100 reports have gone up since August 6, 2026. Piro was co-founded by Daniel Rosenberg, a producer of Spike Lee's film 'Inside Man'.",
+        "howItWorks": "Piro, Inc. sells a service it calls 'AI Story Optimization' — content, in its own words, engineered for how large language models evaluate credibility. The Hanover Institute reports match that description: neutral tone, dense citations and data, and headlines shaped as literal questions such as 'What Caused Palestinian Displacement in 1948?' — the form an answer engine is most likely to quote from. Responsible Statecraft ran 12 randomly chosen articles through the GPTZero detector; 11 came back 'high confidence' AI-written and one 'moderate confidence'.",
+        "whyItMatters": "The Hanover Institute is a documented attempt to game the sources an AI assistant reaches for, rather than the model itself. An earlier Drop Site investigation, cited in the piece, found Microsoft Copilot and Google Gemini drawing on Israeli-created websites and citing them without saying who ran them. For anyone building a retrieval pipeline, that makes source provenance — who publishes a page and who paid for it — as important as which model reads it.",
+        "forWho": "people building or relying on retrieval-based AI answers"
+      },
+      "quickFacts": [
+        {
+          "label": "Publication",
+          "value": "Responsible Statecraft (Quincy Institute)"
+        },
+        {
+          "label": "Reporter",
+          "value": "Nick Cleveland-Stout"
+        },
+        {
+          "label": "Reports published",
+          "value": "100+ since August 6, 2026"
+        },
+        {
+          "label": "Operator",
+          "value": "Piro, Inc., co-founded by Daniel Rosenberg"
+        },
+        {
+          "label": "Contract",
+          "value": "$900,000 from Israel's government, via Havas Media"
+        },
+        {
+          "label": "Evidence cited",
+          "value": "DOJ FARA filing, LinkedIn post, Politico reporting"
+        },
+        {
+          "label": "AI-detection sample",
+          "value": "11 of 12 articles flagged high-confidence AI-written"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How was the Hanover Institute traced back to Israel's government?",
+          "a": "Responsible Statecraft points to a Department of Justice FARA filing by Piro, Inc. disclosing $900,000 from Israel's government, subcontracted through Havas Media, which Politico had already reported on. The piece also cites a LinkedIn post by Piro co-founder Daniel Rosenberg promoting the firm's ability to reach chatbots."
+        },
+        {
+          "q": "Have AI chatbots actually cited sites like this?",
+          "a": "A separate Drop Site investigation, cited by Responsible Statecraft, found Microsoft Copilot and Google Gemini drawing on data from Israeli-created websites and citing them without disclosing who was behind them. Responsible Statecraft does not claim to have measured how often the Hanover Institute itself gets surfaced by a chatbot."
+        },
+        {
+          "q": "What does 'AI Story Optimization' mean in practice?",
+          "a": "AI Story Optimization is how Piro, Inc. describes content engineered for the way large language models evaluate credibility. In the Hanover Institute reports that shows up as a neutral tone, heavy citation and data tables, and headlines written as the literal questions a person would type into an assistant."
+        }
+      ],
+      "image": {
+        "url": "https://responsiblestatecraft.org/media-library/screenshot-of-the-hanover-institute-s-website-taken-on-aug-16-2026.png?id=67630219&width=1200&height=600&coordinates=0%2C0%2C0%2C65",
+        "alt": "Screenshot of the Hanover Institute website taken on August 16, 2026",
+        "fit": "cover",
+        "credit": "Responsible Statecraft"
+      },
+      "links": [
+        {
+          "label": "Investigation",
+          "url": "https://responsiblestatecraft.org/israel-influence-chatgpt/"
+        },
+        {
+          "label": "Reporter",
+          "url": "https://responsiblestatecraft.org/author/ncstout/"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49337392"
+        }
+      ],
+      "publishDate": "2026-08-18T10:35:11.593Z"
+    },
     {
       "id": "brockman-defenders-window-aug16",
       "categories": [

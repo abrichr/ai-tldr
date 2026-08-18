@@ -33461,6 +33461,47 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260818t103511z",
+      "timestamp": "2026-08-18T10:35:11.593Z",
+      "source": "github-actions-sweep",
+      "summary": "Two adds from a quiet 72h: OpenRouter is selling GPT-5.6 Sol at 50% off while OpenAI's own list price holds, and Responsible Statecraft traced the byline-free Hanover Institute to a $900,000 Israeli government contract aimed at AI chatbot answers. Lab blogs were dry (Anthropic last posted Aug 14, DeepMind Aug 6, Mistral Aug 11, Meta July, Cohere Aug 6); GitHub trending and HF trending surfaced only pre-existing repos and models; the single fresh YouTube video was already in the feed.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openrouter-gpt-5-6-sol-discount",
+          "title": "GPT-5.6 Sol at half price — OpenRouter discounts OpenAI's flagship 50%",
+          "category": "model",
+          "note": "HN front page, 451 points / 281 comments; discount and both list prices verified from OpenRouter's model page, its discounted-models collection, and OpenAI's own pricing docs."
+        },
+        {
+          "id": "responsible-statecraft-hanover-institute",
+          "title": "Hanover Institute — Israel-funded site built to shape AI chatbot answers",
+          "category": "article",
+          "note": "HN front page, 518 points; every claim attributed to the Responsible Statecraft investigation published 2026-08-17, whose author page and figures were fetched this run."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem",
+        "security",
+        "tutorial"
+      ]
     }
   ]
 }
