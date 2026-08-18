@@ -33529,6 +33529,44 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260818t144022z",
+      "timestamp": "2026-08-18T14:40:22.503Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, DeepSeek, MiniMax, Moonshot/ByteDance/Baidu), GitHub trending daily + weekly, HuggingFace models/datasets/papers, HN top 60, 8 YouTube creator feeds, the AI-for-science lane (Nature, STAT, neurotech, pharma) and tier-1 press. Added OpenAI's ChatGPT for Teens launch and one fresh Sam Witteveen video on serving Qwen3.8-27B. Most other candidates failed the 72h cap (WeatherNext Aug 6, GPT-5.6-Cyber Aug 10, Nemotron 3.5 Lightning Aug 11, Needle 2 Aug 13, Prime Agent Aug 6, MOSS-VL Aug 15) or lacked a verifiable primary source (GenBio AIDO Cell, Warp Factories with single-outlet coverage). openai.com returned 403 to both WebFetch and the verifier this run, so the ChatGPT for Teens item cites TechCrunch and AP instead of the lab's own post.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-chatgpt-for-teens",
+          "title": "ChatGPT for Teens — OpenAI's age-gated mode for 13-to-17-year-olds",
+          "category": "tool",
+          "note": "Global launch on 2026-08-18 covered by TechCrunch, AP and others within hours; a broad product ship from a top lab that changes the default ChatGPT experience for every 13-to-17-year-old account."
+        },
+        {
+          "id": "sam-witteveen-qwen-3-8-27b-serving-aug18",
+          "title": "Sam Witteveen — 'Qwen3.8-27B & How to Serve it Fast'",
+          "category": "video",
+          "note": "Fresh upload (1h old) from a listed creator channel, substantive open-model serving content; the video coexists with the existing Qwen3.8-27B release item per the video dedup exception."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }

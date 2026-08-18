@@ -1,8 +1,163 @@
 {
-  "generatedAt": "2026-08-18T12:43:00.739Z",
+  "generatedAt": "2026-08-18T14:40:22.503Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openai-chatgpt-for-teens",
+      "categories": [
+        "tool"
+      ],
+      "title": "ChatGPT for Teens — OpenAI's age-gated mode for 13-to-17-year-olds",
+      "org": "OpenAI",
+      "date": "2026-08-18",
+      "url": "https://techcrunch.com/2026/08/18/openai-launches-a-safer-chatgpt-for-teens-years-after-teens-started-using-it/",
+      "summary": "ChatGPT for Teens is a separate ChatGPT experience for ages 13 to 17 that blocks self-harm and romantic chat, sends homework into Study Mode, and gives parents Quiet Hours. OpenAI routes teens in by stated age or its own age estimate.",
+      "tags": [
+        "openai",
+        "chatgpt",
+        "ai-safety",
+        "age-verification",
+        "parental-controls",
+        "study-mode",
+        "education",
+        "child-safety"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenAI"
+        },
+        {
+          "label": "Ages",
+          "value": "13–17"
+        },
+        {
+          "label": "Plans",
+          "value": "Free and paid personal ChatGPT plans"
+        },
+        {
+          "label": "Rollout",
+          "value": "Global from 18 August 2026"
+        },
+        {
+          "label": "Age routing",
+          "value": "Stated age or OpenAI's own estimate"
+        },
+        {
+          "label": "Parent tools",
+          "value": "Quiet Hours, safety alerts, Study Mode default"
+        },
+        {
+          "label": "Restricted topics",
+          "value": "Suicide, self-harm, romantic and sexual chat"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does ChatGPT for Teens cost extra?",
+          "a": "OpenAI lists ChatGPT for Teens on both the Free plan and paid personal ChatGPT plans, so a teen account does not need its own separate product. The teen experience is a mode applied to an eligible account rather than an add-on, and OpenAI has not published a price for it."
+        },
+        {
+          "q": "What can parents control in ChatGPT for Teens?",
+          "a": "Parents linked to a teen account can set Quiet Hours that block access at chosen times, decide whether Study Mode is on by default, and receive safety notifications when ChatGPT detects a high-risk situation such as an eating disorder. Linking is opt-in: both the parent and the teen have to agree to it."
+        },
+        {
+          "q": "Can teens still use ChatGPT for homework?",
+          "a": "Homework still works in ChatGPT for Teens, but Study Mode answers with guiding questions and step-by-step prompts instead of a finished essay. Homework Reminders appear when the system spots an attempt to hand the answer straight in, and push the teen back to Study Mode. Quizzes and learning visualisations sit alongside it."
+        },
+        {
+          "q": "How is ChatGPT for Teens different from regular ChatGPT?",
+          "a": "Compared with the standard chatbot, ChatGPT for Teens refuses conversations about suicide, self-harm, and romantic or sexual topics, and is instructed not to suggest that it has feelings or consciousness. OpenAI says the restrictions follow its Under-18 Principles, which draw on developmental science, and are meant to cut emotional dependence on the assistant."
+        },
+        {
+          "q": "When does ChatGPT for Teens reach every country?",
+          "a": "Global rollout of ChatGPT for Teens starts on 18 August 2026 for eligible teen accounts on Free and paid personal plans, and coverage lands country by country rather than everywhere at once. Australia, for example, is expected to reach full availability by 8 September 2026, so some teens will see the standard experience for a few more weeks."
+        }
+      ],
+      "explainer": {
+        "tagline": "OpenAI's teen mode locks down sensitive topics, steers homework into Study Mode, and hands parents a Quiet Hours switch.",
+        "whatIsIt": "ChatGPT for Teens adds a separate, age-gated version of the chatbot for 13-to-17-year-olds, launched on 18 August 2026. OpenAI switches it on when a person states a teen age or when its systems estimate the user is under 18. The teen version refuses talk about suicide, self-harm, and romantic or sexual topics, and will not suggest that it has feelings or consciousness.",
+        "howItWorks": "Age routing is the gate: OpenAI reads the age a person entered on the account alongside its own estimate of whether the user is under 18, then serves the teen experience. Inside it, homework questions default to Study Mode, which replies with guiding questions and step-by-step support rather than a finished answer, and Homework Reminders fire when the system detects an attempt to pass the reply off as the teen's own work.",
+        "whyItMatters": "Teen use of chatbots is already normal — a 2025 Common Sense Media study found more than 70% of teens use AI chatbots for companionship, and about half use them regularly — so the safer defaults in ChatGPT for Teens reach students who were going to use the tool anyway. Parents get Quiet Hours and safety notifications for high-risk situations such as eating disorders. Allison Mishkin, OpenAI's head of child development, argues that \"people learn more effectively when they actively engage and struggle with concepts.\"",
+        "forWho": "parents, teachers, and teens aged 13–17"
+      },
+      "image": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/08/Still-04-HomeworkReminder__1_.webp?resize=1200,675",
+        "alt": "Homework reminder screen from OpenAI's ChatGPT for Teens",
+        "credit": "OpenAI via TechCrunch"
+      },
+      "links": [
+        {
+          "label": "Launch Report",
+          "url": "https://techcrunch.com/2026/08/18/openai-launches-a-safer-chatgpt-for-teens-years-after-teens-started-using-it/"
+        },
+        {
+          "label": "AP Report",
+          "url": "https://www.news4jax.com/business/2026/08/18/openai-launches-chatgpt-for-teens-promising-a-more-age-appropriate-chatbot/"
+        },
+        {
+          "label": "Rollout Details",
+          "url": "https://techstartups.com/2026/08/18/openai-launches-chatgpt-for-teens-with-parental-controls-and-guardrails-amid-growing-ai-safety-concerns/"
+        }
+      ],
+      "publishDate": "2026-08-18T14:40:22.503Z"
+    },
+    {
+      "id": "sam-witteveen-qwen-3-8-27b-serving-aug18",
+      "categories": [
+        "video"
+      ],
+      "title": "Sam Witteveen — 'Qwen3.8-27B & How to Serve it Fast'",
+      "org": "Sam Witteveen",
+      "date": "2026-08-18",
+      "url": "https://www.youtube.com/watch?v=PTuGGdDuyPI",
+      "summary": "Sam Witteveen walks through Qwen3.8-27B, Qwen's Apache-2.0 vision-language model, and how to serve it fast. The dense 27B model handles 262,144 tokens of context natively and stretches to about 1M.",
+      "tags": [
+        "video",
+        "qwen",
+        "open-weights",
+        "vision-language-model",
+        "vllm",
+        "sglang",
+        "self-hosting",
+        "inference",
+        "serving"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "A walkthrough of Qwen3.8-27B plus the serving stacks that keep the open-weights vision model quick.",
+        "whatIsIt": "Sam Witteveen's new video pairs a look at Qwen3.8-27B with the practical question its title asks: how to serve it fast. Qwen3.8-27B is a dense 27B vision-language model released under Apache 2.0, so teams can self-host it and read images and video alongside text without a licence fee.",
+        "howItWorks": "Under the hood, Qwen3.8-27B combines Gated DeltaNet with Gated Attention across 64 layers and a 5,120 hidden dimension, and is trained with multi-token prediction. Native context runs to 262,144 tokens and extends to roughly 1M. Qwen's own model card points serving at SGLang, vLLM, or TokenSpeed, and warns that throughput varies a lot between frameworks.",
+        "whyItMatters": "Which server you pick decides whether a 27B open model is cheap or painful to run, so the framework half of Sam Witteveen's video matters as much as the benchmark half. Anyone weighing Qwen3.8-27B against a hosted API gets a concrete starting point for the self-hosting side of that comparison.",
+        "forWho": "engineers self-hosting open models",
+        "tryIt": "https://huggingface.co/Qwen/Qwen3.8-27B"
+      },
+      "author": {
+        "name": "Sam Witteveen",
+        "profileUrl": "https://www.youtube.com/@samwitteveenai"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/PTuGGdDuyPI/hqdefault.jpg",
+        "alt": "Sam Witteveen video thumbnail for Qwen3.8-27B and how to serve it fast"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=PTuGGdDuyPI"
+        },
+        {
+          "label": "Model Card",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+        },
+        {
+          "label": "Channel",
+          "url": "https://www.youtube.com/@samwitteveenai"
+        }
+      ],
+      "publishDate": "2026-08-18T14:40:22.503Z"
+    },
     {
       "id": "openrouter-gpt-5-6-sol-discount",
       "categories": [
