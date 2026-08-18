@@ -1,8 +1,63 @@
 {
-  "generatedAt": "2026-08-18T04:38:22.500Z",
+  "generatedAt": "2026-08-18T06:42:27.224Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "interconnects-fish-for-tokens-aug17",
+      "categories": [
+        "article"
+      ],
+      "title": "Nathan Lambert: 'Teaching Everyone to Fish for Tokens' — Nvidia's $26B bet",
+      "org": "Interconnects AI",
+      "date": "2026-08-17",
+      "url": "https://www.interconnects.ai/p/teaching-everyone-to-fish-for-tokens",
+      "summary": "Nathan Lambert argues Nvidia is spending $26 billion on open-source models so companies train their own instead of buying tokens from OpenAI or Anthropic. His August 17 Interconnects post lays out two futures for that bet.",
+      "tags": [
+        "open-models",
+        "open-weights",
+        "nvidia",
+        "nathan-lambert",
+        "interconnects",
+        "article",
+        "essay",
+        "commentary",
+        "nemotron",
+        "gpu-demand",
+        "post-training"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Interconnects reads Nvidia's $26 billion open-model spending as demand creation for GPUs, not a bid to win the model race.",
+        "whatIsIt": "Nvidia is spending $26 billion on open-source model work, and Nathan Lambert's August 17 Interconnects post asks what the chip maker wants back for it. The answer sits in the post's own subtitle: Nvidia wants you building your own model, not buying from Anthropic or OpenAI. Lambert reads the spending as a way to grow chip demand rather than an attempt to beat the closed labs at their own game.",
+        "howItWorks": "The essay traces that money through the open-model supply chain — Nvidia's own Nemotron models, plus earlier public efforts like AI2's Olmo and EleutherAI's Pythia. Lambert points out that most teams today fine-tune existing open weights such as DeepSeek V4 Flash, Inkling Small and GLM 5.X instead of pre-training from scratch, and he reads Meta's Muse Spark 1.2 release as the same move: make tokens cheap and common.",
+        "whyItMatters": "Lambert sets out two futures for the bet. In the first, open recipes work well enough that many companies train, and Nvidia sells the chips. In the second — which he calls the more likely one — open models drift toward efficiency, modifiability and specialization, filling a long tail of enterprise-specific tasks while closed models keep the high-value work in knowledge work, drug discovery and software engineering. He notes Databricks and 01.ai left model training, but calls them anomalies rather than a trend.",
+        "forWho": "open-source AI followers, ML infra leads, teams deciding whether to train"
+      },
+      "image": {
+        "url": "https://substackcdn.com/image/fetch/$s_!JGky!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb8608bb9-bf33-46e6-8ffe-dcf75a851f9b_3182x1790.png",
+        "alt": "Interconnects header image for 'Teaching Everyone to Fish for Tokens'",
+        "fit": "contain",
+        "credit": "Interconnects / Nathan Lambert"
+      },
+      "links": [
+        {
+          "label": "Read on Interconnects",
+          "url": "https://www.interconnects.ai/p/teaching-everyone-to-fish-for-tokens"
+        },
+        {
+          "label": "Interconnects",
+          "url": "https://www.interconnects.ai/"
+        }
+      ],
+      "author": {
+        "name": "Nathan Lambert",
+        "handle": "natolambert",
+        "profileUrl": "https://www.interconnects.ai/",
+        "avatarUrl": "https://github.com/natolambert.png"
+      },
+      "publishDate": "2026-08-18T06:42:27.224Z"
+    },
     {
       "id": "amazon-vgt3-book-scanning",
       "categories": [

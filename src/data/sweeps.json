@@ -33395,6 +33395,40 @@
         "resource",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260818t064227z",
+      "timestamp": "2026-08-18T06:42:27.224Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Qwen, DeepSeek, MiniMax, Z.ai), GitHub trending, HuggingFace models/datasets/papers, HN front page, 8 YouTube creator feeds, coding-agent repos, influential voices and the AI-for-science lane. Only one item cleared the 72h bar: Nathan Lambert's Aug 17 Interconnects essay on Nvidia's $26B open-model spending. Everything else was either already in the feed (Cursor Origin, Wiz Copilot Autofix, AI;DR, Qwen3.8-27B, GPT-5.6-Cyber, Needle 2, Nemotron 3.5 Lightning), older than 72h (The Stack v3 Jul 23, Needle 2 Aug 13, MegaParts Aug 14, WeatherNext Aug 6), pure business news barred by the ecosystem gate (Groq raise, Anthropic revenue, Nvidia/SoftBank investment, Relay shutdown), or below the paper bar (VibeWorlding and ClawGym II trend on HF Papers but have near-zero repo stars and near-zero model downloads). No YouTube videos: all 8 creator RSS feeds returned HTTP 404/500 from this runner, so yt-rss-scan found zero ship-ready videos.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "interconnects-fish-for-tokens-aug17",
+          "title": "Nathan Lambert: 'Teaching Everyone to Fish for Tokens' — Nvidia's $26B bet",
+          "category": "article",
+          "note": "Nathan Lambert is on the influential-voices list; fresh Aug 17 essay with a concrete, verifiable claim ($26B Nvidia open-model spend) and a distinct argument from his other posts already in the feed."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "video",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
