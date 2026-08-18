@@ -33302,6 +33302,41 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260818t010318z",
+      "timestamp": "2026-08-18T01:03:18.260Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero new items. Searched lab blogs (Anthropic, OpenAI, DeepMind/Google, Meta, Mistral, Cohere, DeepSeek, MiniMax, Moonshot, Qwen, Z.ai, xAI), GitHub trending (daily, weekly, Python, Rust), Hugging Face models/datasets/papers/blog, the HN top 40, all 8 YouTube creator feeds, coding-agent changelogs and the AI-for-science lane; every qualifying item from the last 72h is already in the feed. The only fresh YouTube upload (Wes Roth) is already live, the top HN AI stories (AI;DR, Wiz Copilot Autofix, Amazon book scanning, Cursor Origin) are already live, and the strong candidates outside the feed all failed the 72h cap on their real release date: Roboflow's GPT-5.6 Sol vision benchmark (published Jul 16), Cactus Compute's Needle 2 (Jul 29), The Stack v3 (Jul 23), NVIDIA Nemotron-3.5-Lightning (Aug 11) and DeepMind WeatherNext Cyclones (Aug 6). The trending repos (Strix, needle, diagram-design, prime-agent, openpencil, ai-memory) were all created months ago with no release event in window, and the fresh tier-1 press was funding news (Groq $350M, Anthropic revenue) which the ecosystem gate rejects. One update: Artificial Analysis published an independent Intelligence Index score of 52 for Qwen3.8-27B (HN front page, 298 points), so that was patched onto the existing entry rather than added twice.",
+      "counts": {
+        "added": 0,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [
+        {
+          "id": "qwen-3-8-27b",
+          "title": "Qwen3.8-27B — a 27B open model that beats Opus 4.6 Max on SWE-bench Pro",
+          "note": "Artificial Analysis published an independent Intelligence Index score for Qwen3.8-27B (52, #1 of 135 open-weights models in the 4B-40B class). The result hit the HN front page at 298 points and was written up by Simon Willison. Same release, so this is a patch on the existing entry rather than a new item: adds the Artificial Analysis link, a hero metric chip and one FAQ row covering third-party scoring."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "tutorial",
+        "resource",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T22:31:11.240Z",
+  "generatedAt": "2026-08-18T01:03:18.260Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
@@ -2048,6 +2048,10 @@
           "a": "Qwen3.8-27B improves on Qwen3.6-27B on every benchmark Qwen published. Agentic terminal coding on Terminal Bench 2.1 rises from 63.4 to 73.0, SWE-bench Pro from 53.5 to 61.7, and computer use on OSWorld-Verified from 63.9 to 84.3. The biggest jump is DeepSWE 1.1, which goes from 13.3 to 42.2."
         },
         {
+          "q": "How does Qwen3.8-27B score on a third-party benchmark?",
+          "a": "Qwen3.8-27B scores 52 on the Artificial Analysis Intelligence Index, a third-party aggregate benchmark run outside Alibaba. Artificial Analysis ranks the model #1 of 135 open-weights models in its small 4B-40B size class, and lists its context window as 256k tokens. That matters because the SWE-bench Pro and OSWorld numbers come from Qwen's own model card."
+        },
+        {
           "q": "Can I get Qwen3.8-27B as a hosted API?",
           "a": "A hosted Qwen3.8-27B is planned but not live yet. The model card points to Qwen Cloud for managed inference and says the 27B service will offer a 1M-token context by default plus built-in tools, but marks it as coming soon with no date given. For now the open weights are the way to run it."
         },
@@ -2083,11 +2087,18 @@
           "url": "https://recipes.vllm.ai/Qwen/Qwen3.8-27B"
         },
         {
+          "label": "Artificial Analysis",
+          "url": "https://artificialanalysis.ai/models/qwen3-8-27b"
+        },
+        {
           "label": "HN Discussion",
           "url": "https://news.ycombinator.com/item?id=49299684"
         }
       ],
-      "publishDate": "2026-08-14T16:52:34.381Z"
+      "publishDate": "2026-08-14T16:52:34.381Z",
+      "metrics": {
+        "Artificial Analysis Intelligence Index": 52
+      }
     },
     {
       "id": "suno-studio-2-0",
