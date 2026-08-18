@@ -33502,6 +33502,33 @@
         "security",
         "tutorial"
       ]
+    },
+    {
+      "id": "sweep-20260818t124300z",
+      "timestamp": "2026-08-18T12:43:00.739Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic last post Aug 14, DeepMind, Meta, Mistral Aug 11, Cohere Aug 6, xAI, DeepSeek Aug 13, Google AI blog Aug 12, Qwen, MiniMax, Moonshot), GitHub trending daily + weekly, HuggingFace models/datasets/papers, HN front page + page 2 + Show HN, all 8 YouTube creator feeds, the AI-for-science lane (BCI/neural decoding, medical imaging + FDA, pharma/drug discovery, genomics/protein/single-cell, STAT News, techxplore, Lancet Digital Health, npj Digital Medicine) and tier-1 press. Everything fresh was already in the feed: the only ≤72h video (Wes Roth, Aug 16) is live as wes-roth-anthropic-worst-fear-aug16, and every ≥150-point AI story on HN (GPT-5.6 Sol 50% discount, Wiz/Copilot Autofix, AI;DR, Simon Willison on Qwen3.8-27B, Gruber on the Claude watermark, Amodei on trust) is already covered. Everything else failed a bar: LTX-2.5 (Aug 11), Stack v3 (Jul 23), transformers v5.15.0 (Aug 10), WeatherNext Cyclones (Aug 6) and the Roboflow GPT-5.6 Sol vision eval (Jul 16) all break the 72h cap; the top-10 HF papers are same-day arXiv posts with no code/demo/traction, so none clear the 2-of-N paper bar; TechCrunch's last 24h of AI news is funding and revenue only (Groq $350M, Wispr $280M, Nvidia/SoftBank $1.5B, Anthropic revenue), which the ecosystem gate excludes. Two near-misses were dropped on purpose: the Relay.app shutdown (real Sept 14 data-deletion deadline, but only one tier-1 outlet, short of the 2-outlet signal) and OpenAI disbanding its preparedness team (an org restructure with no concrete developer action).",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
