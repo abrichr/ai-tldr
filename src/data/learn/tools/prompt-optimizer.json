@@ -1,0 +1,69 @@
+{
+  "slug": "prompt-optimizer",
+  "name": "Prompt Optimizer",
+  "repo": "linshenkx/prompt-optimizer",
+  "homepage": "https://prompt.always200.com",
+  "category": "orchestration",
+  "categoryTitle": "App Orchestration",
+  "subcategory": "prompt-programming",
+  "subcategoryTitle": "Prompt Programming",
+  "tagline": "Rewrite, test and compare prompts in a workbench that runs entirely on your side",
+  "seoTitle": "Prompt Optimizer - Rewrite and Test AI Prompts",
+  "metaDescription": "Prompt Optimizer is an open-source tool that rewrites system and user prompts, then tests and compares versions side by side. Web, desktop, Chrome extension or Docker.",
+  "overview": [
+    "Prompt Optimizer is an open-source workbench for improving prompts. You bring a prompt — written by hand, taken from a template, imported from a file, or pulled from the project's Prompt Garden — and the tool rewrites it, optionally over several rounds, then lets you run the original and the rewritten version so you can judge whether the change actually helped. It handles system prompts and user prompts as two distinct modes, because the two are optimized for different things.",
+    "The part that separates it from a one-shot 'improve my prompt' box is the evaluation loop. It supports single-result analysis, side-by-side compare evaluation of two results, and an evaluation-driven rewrite that feeds the judgement back into the next revision. An advanced testing mode adds context variables you can swap per run, multi-turn conversation testing, and function-calling support, so a prompt can be checked under conditions closer to how it will actually be used.",
+    "It runs as a pure client-side application: your prompts and API keys stay in the browser or desktop app and talk to the model provider directly, with no intermediate server of the project's own. That shape lets it ship in four forms — the hosted web app, an installable desktop app, a Chrome extension, and a self-hosted Docker image — plus an MCP server so MCP-compatible clients can call the optimizer as a tool. It works with OpenAI, Gemini, DeepSeek, Grok, Zhipu AI, SiliconFlow, MiniMax and other mainstream providers, and also covers text-to-image and image-to-image prompts."
+  ],
+  "features": [
+    "One-click optimization with multi-round iterative refinement, in separate system-prompt and user-prompt modes",
+    "Analysis, single-result evaluation and side-by-side compare evaluation, plus evaluation-driven smart rewrite",
+    "Advanced testing mode with context variables, multi-turn conversation testing and function-calling support",
+    "Image-prompt modes for text-to-image, image-to-image and multi-image generation with per-model parameters",
+    "Smart favorites: save prompts as reusable assets with version history, examples, source binding, and full export/import",
+    "Four deployment shapes (web, desktop, Chrome extension, Docker) plus an MCP server, with optional password protection for shared deployments"
+  ],
+  "gettingStarted": {
+    "intro": "The fastest path is the hosted web app, which is pure frontend — everything stays in your browser. Self-hosting is a single Docker command. Bring your own model provider API key either way.",
+    "steps": [
+      {
+        "heading": "Try the hosted version",
+        "body": "Open prompt.always200.com. It is a pure frontend project, so prompts and keys are stored locally in the browser and are not uploaded to a server.",
+        "code": "",
+        "lang": ""
+      },
+      {
+        "heading": "Self-host with Docker",
+        "body": "Run the published image. Add an access password if the deployment is reachable by anyone else.",
+        "code": "docker run -d -p 8081:80 --restart unless-stopped \\\n  --name prompt-optimizer linshen/prompt-optimizer",
+        "lang": "bash"
+      },
+      {
+        "heading": "Or run it with a key and password baked in",
+        "body": "Environment variables configure the model provider and gate access.",
+        "code": "docker run -d -p 8081:80 \\\n  -e VITE_OPENAI_API_KEY=your_key \\\n  -e ACCESS_USERNAME=your_username \\\n  -e ACCESS_PASSWORD=your_password \\\n  --restart unless-stopped \\\n  --name prompt-optimizer \\\n  linshen/prompt-optimizer",
+        "lang": "bash"
+      },
+      {
+        "heading": "Install the desktop app or extension",
+        "body": "Desktop builds are on GitHub Releases as installers (.exe, .dmg, .AppImage — these auto-update) or archives. The desktop app has no browser CORS limits, so it can talk to any provider API including a local Ollama. The Chrome extension is in the Chrome Web Store.",
+        "code": "",
+        "lang": ""
+      },
+      {
+        "heading": "Deploy to Vercel or Cloudflare",
+        "body": "The repo ships one-click deploy buttons for both. Do not preconfigure API keys on a public frontend deployment: VITE_* values are exposed in the browser bundle. Use ACCESS_PASSWORD, or keep keys client-side.",
+        "code": "",
+        "lang": ""
+      }
+    ]
+  },
+  "useCases": [
+    "Reach for it when a prompt underperforms and you want a structured rewrite plus evidence that the rewrite is actually better",
+    "Use it to build a reusable prompt library, with version history and worked examples attached to each saved prompt",
+    "Good for testing a prompt against swapped context variables and multi-turn conversations before it goes into an app",
+    "Useful for image prompts too, turning a one-line idea into a directable text-to-image or image-to-image prompt"
+  ],
+  "language": "TypeScript",
+  "license": "AGPL-3.0-only"
+}

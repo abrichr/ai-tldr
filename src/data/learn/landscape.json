@@ -128,6 +128,13 @@
        "description": "Mistral AI's minimal official library for running Mistral open-weight models, with CLI demo and chat commands plus a Python API for text and multimodal inference.",
        "detail": true,
        "logo": "/tools-logos/gh-mistralai.png"
+      },
+      {
+       "name": "AirLLM",
+       "slug": "airllm",
+       "repo": "lyogavin/airllm",
+       "description": "A Python inference library that keeps only one transformer layer on the GPU at a time, so a 70B model runs on a single 4GB card and a 671B MoE model on about 12GB, without quantization.",
+       "detail": true
       }
      ]
     },
@@ -4691,6 +4698,14 @@
        "description": "A Stanford framework for programming language models with composable modules and automatic prompt optimization instead of hand-written prompts.",
        "detail": true,
        "logo": "/tools-logos/gh-stanfordnlp.png"
+      },
+      {
+       "name": "Prompt Optimizer",
+       "slug": "prompt-optimizer",
+       "repo": "linshenkx/prompt-optimizer",
+       "homepage": "https://prompt.always200.com",
+       "description": "A prompt optimization workbench that rewrites system and user prompts, then tests and compares the versions side by side; ships as a web app, desktop app, Chrome extension, Docker image and MCP server.",
+       "detail": true
       }
      ]
     },
@@ -6443,6 +6458,15 @@
        "description": "Web access and research API built for AI agents that returns live, grounded, LLM-ready search results and reports.",
        "access": "freemium",
        "logo": "/tools-logos/site-tavily-search.ico"
+      },
+      {
+       "name": "SurfSense",
+       "slug": "surfsense",
+       "repo": "MODSetter/SurfSense",
+       "homepage": "https://www.surfsense.com",
+       "access": "open-core",
+       "description": "An open-source web-research platform that exposes Reddit, YouTube, TikTok, Amazon, Google Search, Google Maps and open-web crawling to agents as typed REST endpoints and MCP tools.",
+       "detail": true
       }
      ]
     },

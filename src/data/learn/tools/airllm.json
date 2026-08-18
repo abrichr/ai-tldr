@@ -1,0 +1,68 @@
+{
+  "slug": "airllm",
+  "name": "AirLLM",
+  "repo": "lyogavin/airllm",
+  "category": "models-inference",
+  "categoryTitle": "Models & Inference",
+  "subcategory": "local-runtimes",
+  "subcategoryTitle": "Local Runtimes",
+  "tagline": "Run 70B and larger models on a single small GPU by streaming one layer at a time",
+  "seoTitle": "AirLLM - Run Huge LLMs on a Small GPU",
+  "metaDescription": "AirLLM is an open-source Python library that runs 70B, 405B and 671B models on a single consumer GPU by loading one layer at a time, with no quantization required.",
+  "overview": [
+    "AirLLM is an open-source Python library that shrinks the GPU memory an LLM needs at inference time. Instead of holding the whole model in VRAM, it splits the checkpoint into per-layer shards on disk and loads only the layer it is currently computing. Because the VRAM requirement then tracks the size of a single layer rather than the whole model, the project reports running a 70B model on one 4GB card, Llama 3.1 405B on about 8GB, and DeepSeek-V3 (671B) on about 12GB. For sparse Mixture-of-Experts models it streams one expert at a time, which is how it reports fitting Kimi K3 under 4GB.",
+    "The trade is memory for time: every layer is read from disk on each forward pass, so throughput is far below a GPU that holds the whole model. AirLLM is therefore aimed at people who want to run, inspect or experiment with a model their hardware could not otherwise load at all — a single hobbyist card, a laptop, or a Colab notebook — rather than at production serving, where vLLM, SGLang or TensorRT-LLM belong.",
+    "It is deliberately a thin layer over the Hugging Face ecosystem. You pass a Hugging Face repo id (or a local path) to a single `AutoModel.from_pretrained` call and then use `generate` as you would with Transformers, so most existing inference code needs almost no change. The project also ships an optional block-wise weight compression mode and supports Apple Silicon through MLX."
+  ],
+  "features": [
+    "Layer-by-layer loading: only one transformer layer sits on the GPU at a time, so VRAM scales with layer size, not model size",
+    "Per-expert streaming for sparse MoE models, loading only the experts a token actually routes to",
+    "One `AutoModel.from_pretrained` entry point that auto-detects the architecture and accepts any Hugging Face repo id or local path",
+    "Optional 4-bit or 8-bit block-wise weight compression, which the project reports as up to a 3x inference speed-up because less data is read from disk",
+    "Works on Apple Silicon via MLX, and supports CPU inference as well as NVIDIA GPUs",
+    "Configuration hooks for profiling, custom shard paths, gated-model tokens, prefetching, and deleting the original checkpoint to save disk"
+  ],
+  "gettingStarted": {
+    "intro": "AirLLM installs as a single pip package. On first run it decomposes the model and saves it layer-wise, so make sure the Hugging Face cache directory has enough free disk space.",
+    "steps": [
+      {
+        "heading": "Install the package",
+        "body": "AirLLM is on PyPI.",
+        "code": "pip install airllm",
+        "lang": "bash"
+      },
+      {
+        "heading": "Load a model and generate",
+        "body": "Pass a Hugging Face repo id to AutoModel, then tokenize and call generate exactly as you would with a normal Transformers model. The same one line works for far larger checkpoints.",
+        "code": "from airllm import AutoModel\n\nMAX_LENGTH = 128\nmodel = AutoModel.from_pretrained(\"Qwen/Qwen3-32B\")\n# go bigger with the exact same one line:\n# model = AutoModel.from_pretrained(\"deepseek-ai/DeepSeek-V3\")  # 671B, runs in ~12GB\n\ninput_tokens = model.tokenizer(\n    [\"What is the capital of United States?\"],\n    return_tensors=\"pt\",\n    return_attention_mask=False,\n    truncation=True,\n    max_length=MAX_LENGTH,\n    padding=False,\n)\n\ngeneration_output = model.generate(\n    input_tokens[\"input_ids\"].cuda(),\n    max_new_tokens=20,\n    use_cache=True,\n    return_dict_in_generate=True,\n)\n\nprint(model.tokenizer.decode(generation_output.sequences[0]))",
+        "lang": "python"
+      },
+      {
+        "heading": "Turn on compression for more speed",
+        "body": "Install bitsandbytes, then pass compression='4bit' (or '8bit') when loading. This quantizes only the weights, which is what the disk-loading bottleneck depends on.",
+        "code": "pip install -U bitsandbytes airllm",
+        "lang": "bash"
+      },
+      {
+        "heading": "Configure the run",
+        "body": "from_pretrained also accepts profiling_mode to print time consumption, layer_shards_saving_path to put the split model elsewhere, hf_token for gated repos, prefetching to overlap loading with compute, and delete_original to drop the downloaded checkpoint and save about half the disk space.",
+        "code": "model = AutoModel.from_pretrained(\n    \"garage-bAInd/Platypus2-70B-instruct\",\n    compression=\"4bit\",\n)",
+        "lang": "python"
+      },
+      {
+        "heading": "Run it on a Mac",
+        "body": "On Apple Silicon the code is the same; install mlx and torch first. Only Apple Silicon is supported — Intel Macs are not.",
+        "code": "",
+        "lang": ""
+      }
+    ]
+  },
+  "useCases": [
+    "Reach for it when you want to run a model that is far too large for your GPU and can accept slow generation in exchange",
+    "Use it to smoke-test or inspect the outputs of a frontier open-weight model on one consumer card before renting multi-GPU hardware",
+    "Good for notebook and Colab experiments where the alternative is not running the model at all",
+    "Skip it for production serving — a throughput engine such as vLLM or SGLang with enough VRAM will be orders of magnitude faster"
+  ],
+  "language": "Python",
+  "license": "Apache-2.0"
+}

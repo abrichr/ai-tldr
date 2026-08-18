@@ -1,0 +1,66 @@
+{
+  "slug": "surfsense",
+  "name": "SurfSense",
+  "repo": "MODSetter/SurfSense",
+  "homepage": "https://www.surfsense.com",
+  "access": "open-core",
+  "category": "data",
+  "categoryTitle": "Data & Labeling",
+  "subcategory": "web-scraping",
+  "subcategoryTitle": "Web Scraping & Crawling",
+  "tagline": "Typed live-web connectors and a research workspace, over one API and MCP server",
+  "seoTitle": "SurfSense - Live Web Data Connectors for AI Agents",
+  "metaDescription": "SurfSense is an open-source research platform that gives agents Reddit, YouTube, TikTok, Amazon, Google Search and web-crawl data as typed REST endpoints and MCP tools.",
+  "overview": [
+    "SurfSense is an open-source platform that gives AI agents structured data from the places answers actually live. Each source — Reddit, YouTube, Instagram, TikTok, Amazon, Walmart, Google Maps, Google Search, Indeed, and generic web crawling — is a REST endpoint that returns typed JSON items such as posts, comments, transcripts, reviews and SERP results, rather than a page of HTML or a markdown blob the agent has to parse. The same connectors are exposed as native tools through a hosted MCP server, so Claude, Cursor or any agent framework can call them directly.",
+    "The project positions this against three neighbouring approaches. Browser agents can click and log in, but for read-only retrieval an LLM-in-a-browser loop burns minutes and tokens per page, where a connector call is a single HTTP request. Generic scraping APIs turn a page into markdown but degrade on bot-protected platforms. Search APIs answer from a web index and cannot pull a thread's comments or a place's reviews. SurfSense's answer to all three is a typed, per-platform endpoint plus an agent harness that handles retries, structured output and metering.",
+    "Behind the connectors sits the research workspace SurfSense started as — an open-source NotebookLM alternative. You can upload documents or sync Google Drive, OneDrive and Dropbox into a knowledge base with hybrid semantic and full-text search and cited answers, generate reports, podcasts, slide decks and narrated overviews from it, run scheduled or event-triggered agent turns that write results back to Notion, Slack, Linear or Jira, and collaborate in real time with role-based access. There is no model lock-in: 100+ LLMs via the OpenAI spec and LiteLLM, thousands of embedding models, and full local support through vLLM and Ollama.",
+    "Licensing is open-core. Everything outside the `surfsense_backend/app/proprietary/` directory is Apache-2.0; that directory is Business Source License 1.1. The hosted cloud bills pay-as-you-go per item returned or page fetched, with failed calls not billed, while self-hosted installs ship with billing switched off and are limited only by your hardware and your own model keys."
+  ],
+  "features": [
+    "Typed REST connectors for Reddit, YouTube, Instagram, TikTok, Amazon, Walmart, Google Maps, Google Search, Indeed and open-web crawling",
+    "A hosted MCP server exposing every connector as a native agent tool, plus external MCP connectors with one-click OAuth for Notion, Slack and Jira",
+    "Knowledge base with 50+ file formats, cloud-drive sync, hybrid semantic and full-text search, and cited answers",
+    "Deliverable studio: reports exported to PDF/DOCX/HTML/LaTeX/EPUB, two-host AI podcasts, editable slide decks and narrated video overviews",
+    "Automations that run agent turns on a schedule or on an event and write results back to Notion, Slack, Linear or Jira",
+    "Desktop app with a global shortcut, select-text and screenshot assist, and a watched local folder that auto-syncs into the knowledge base",
+    "No vendor lock-in: 100+ LLMs via the OpenAI spec and LiteLLM, 6,000+ embedding models, and local inference through vLLM or Ollama"
+  ],
+  "gettingStarted": {
+    "intro": "You can call a hosted connector with an API key, wire the MCP server into an agent, or self-host the whole platform with Docker. Self-hosted installs run with billing off.",
+    "steps": [
+      {
+        "heading": "Call a connector over REST",
+        "body": "Every connector is a POST endpoint scoped to a workspace. Each connector page in the docs has copy-paste examples in Python, JavaScript, Go, PHP, Ruby, Java and C#.",
+        "code": "curl -X POST \"$SURFSENSE_API_URL/workspaces/$WORKSPACE_ID/scrapers/reddit/scrape\" \\\n  -H \"Authorization: Bearer $SURFSENSE_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"search_queries\": [\"your brand\"],\n    \"community\": \"SaaS\",\n    \"sort\": \"top\",\n    \"time_filter\": \"week\"\n  }'",
+        "lang": "bash"
+      },
+      {
+        "heading": "Give the connectors to an agent over MCP",
+        "body": "Point any MCP client at the SurfSense MCP server and every connector becomes a callable tool, such as surfsense_reddit_scrape or surfsense_google_search. The server can also be run locally from the surfsense_mcp directory.",
+        "code": "{\n  \"mcpServers\": {\n    \"surfsense\": {\n      \"url\": \"https://mcp.surfsense.com/mcp\",\n      \"headers\": { \"Authorization\": \"Bearer ${SURFSENSE_API_KEY}\" }\n    }\n  }\n}",
+        "lang": "json"
+      },
+      {
+        "heading": "Self-host the platform",
+        "body": "Docker Desktop must be installed and running. The install script also sets up Watchtower for daily auto-updates; pass --no-watchtower to skip it. Docker Compose and manual installs are covered in the docs.",
+        "code": "curl -fsSL https://raw.githubusercontent.com/MODSetter/SurfSense/main/docker/scripts/install.sh | bash",
+        "lang": "bash"
+      },
+      {
+        "heading": "Self-host on Windows",
+        "body": "The same installer ships as a PowerShell script.",
+        "code": "irm https://raw.githubusercontent.com/MODSetter/SurfSense/main/docker/scripts/install.ps1 | iex",
+        "lang": "bash"
+      }
+    ]
+  },
+  "useCases": [
+    "Reach for it when an agent needs platform-native data — Reddit comments, YouTube transcripts, Maps reviews — that a search API or a markdown scraper cannot return",
+    "Use it to replace a brittle LLM-driven browser loop for read-only retrieval, where a single typed HTTP call is faster and cheaper",
+    "Good for a self-hosted research workspace over your own documents, with cited answers and exportable reports",
+    "Useful for scheduled monitoring: run an agent turn on a cadence and push the resulting brief into Slack, Notion, Linear or Jira"
+  ],
+  "language": "Python",
+  "license": "Apache-2.0 (the surfsense_backend/app/proprietary/ directory is Business Source License 1.1)"
+}
