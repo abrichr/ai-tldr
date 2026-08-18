@@ -33601,6 +33601,46 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260818t184247z",
+      "timestamp": "2026-08-18T18:42:47.784Z",
+      "source": "github-actions-sweep",
+      "summary": "Added OpenAI's August 18 internal-model safeguards (30-minute detection target, ~20% compute overhead, two-week RL pause after the July Hugging Face intrusion) and Dan Luu's 'The benchmarkpocalypse' essay on agent-gamed performance benchmarks. Lab blogs were quiet inside 72h — Anthropic last posted Aug 14, Meta July, Mistral Aug 11, Cohere Aug 6, DeepMind Aug 11-12; both fresh YouTube videos from the 8-channel RSS scan were already in the feed.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-cyber-capability-pacing",
+          "title": "OpenAI tightens model monitoring — unsafe behavior flagged within 30 minutes",
+          "category": "security",
+          "note": "Top-lab announcement covered by TechCrunch and Bloomberg on Aug 18; distinct from the existing Hugging Face breach items, which cover the incident itself rather than OpenAI's new safeguards."
+        },
+        {
+          "id": "danluu-benchmarkpocalypse",
+          "title": "Dan Luu — LLMs make gaming a benchmark easy, so the numbers stop meaning much",
+          "category": "article",
+          "note": "HN front page with 161 points; influential engineering writer making a concrete, reproducible argument about agent-gamed benchmarks."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "security",
+        "ecosystem",
+        "article",
+        "benchmark",
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "dataset",
+        "video",
+        "algorithm"
+      ]
     }
   ]
 }
