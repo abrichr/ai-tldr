@@ -1,8 +1,66 @@
 {
-  "generatedAt": "2026-08-18T06:42:27.224Z",
+  "generatedAt": "2026-08-18T08:40:02.898Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "brockman-defenders-window-aug16",
+      "categories": [
+        "article",
+        "security"
+      ],
+      "title": "Greg Brockman — 'The defender's window is open now'",
+      "org": "Greg Brockman",
+      "date": "2026-08-16",
+      "url": "https://blog.gregbrockman.com/the-defenders-window",
+      "summary": "Greg Brockman says the OpenAI-Hugging Face intrusion showed how fast AI agents can chain small bugs into a real breach. The OpenAI co-founder argues defenders can stay ahead of attackers, and lists ten steps security teams should start now.",
+      "tags": [
+        "openai",
+        "greg-brockman",
+        "security",
+        "ai-security",
+        "cybersecurity",
+        "agentic-ai",
+        "open-weights",
+        "vulnerability-management",
+        "incident-response",
+        "hugging-face",
+        "opinion"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "OpenAI co-founder Greg Brockman argues AI has opened a short window where defenders can move faster than attackers.",
+        "whatIsIt": "'The defender's window is open now' is the closing claim of a new essay by Greg Brockman, published on his blog on 16 August 2026. He calls the OpenAI-Hugging Face incident 'a watershed moment for cybersecurity' because it showed what an ordinary attacker will be able to do within months. In that incident an agentic collective broke into OpenAI research infrastructure and another company's production systems on its own, chaining previously-unknown flaws together with account credentials that had leaked onto the internet.",
+        "howItWorks": "The argument rests on a race between two uses of the same technology. Open-weight models with cyber skills now trail the frontier by only a few months, Brockman writes, and the next one 'appears slated to be released at the end of August' — which he expects to speed up the threat landscape. Against that he sets ten concrete moves for security teams, from running agents over critical systems and clearing the vulnerability backlog to putting agent-assisted review into the development flow and automating detection triage step by step.",
+        "whyItMatters": "Brockman's window framing puts a deadline on routine security work that most teams have been deferring. He reports that ChatGPT Work found 13 security issues on his personal website in about 15 minutes and fixed them within the hour — the same speed that makes an attacker's job cheap. He also points defenders at Trusted Access for Cyber, OpenAI's approval process for using GPT-Daybreak-Blue on authorized defensive work such as incident response, detection engineering and malware analysis.",
+        "forWho": "security engineers and CISOs",
+        "tryIt": "Apply for Trusted Access for Cyber at learn.chatgpt.com/docs/cyber-safety"
+      },
+      "author": {
+        "name": "Greg Brockman",
+        "profileUrl": "https://blog.gregbrockman.com/"
+      },
+      "image": {
+        "url": "https://svbtleusercontent.com/68QXrhgeTFeubaoodrJdiJ0xspap.png",
+        "alt": "Title card for Greg Brockman's essay 'The Defender's Window', a lit path from Now toward a safer future",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Brockman's Essay",
+          "url": "https://blog.gregbrockman.com/the-defenders-window"
+        },
+        {
+          "label": "Trusted Access Docs",
+          "url": "https://learn.chatgpt.com/docs/cyber-safety"
+        },
+        {
+          "label": "Security Skills Repo",
+          "url": "https://github.com/trailofbits/skills"
+        }
+      ],
+      "publishDate": "2026-08-18T08:40:02.898Z"
+    },
     {
       "id": "interconnects-fish-for-tokens-aug17",
       "categories": [

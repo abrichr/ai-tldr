@@ -33429,6 +33429,38 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260818t084002z",
+      "timestamp": "2026-08-18T08:40:02.898Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind/Google, Meta, Mistral, Cohere, Qwen, DeepSeek, Z.ai, MiniMax), GitHub trending, HuggingFace models/datasets/papers/blog, HN front page + newest + Show HN, 8 YouTube creator feeds, coding-agent changelogs, release trackers, and the AI-for-science lane (medical imaging, BCI/neuro, Nature, STAT, pharma). One item qualified: Greg Brockman's 'The Defender's Window' essay, published 16 August on the OpenAI blog and his own. Everything else fresh was either already in the feed (Wes Roth's Anthropic video, Qwen3.8-27B, LTX-2.5, Amazon book scanning) or failed a bar: the HN-trending 'GPT-5.6 Sol 50% price cut' is an unattributed OpenRouter banner that primary sources contradict; the Relay.app shutdown was announced in July with only a personnel move fresh; every trending GitHub repo (Strix, LLMFIT, Career-Ops, oMLX, MoneyPrinterTurbo) predates the window; The Stack v3 shipped 23 July; HF papers were arXiv-trending only with no code or second signal.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "brockman-defenders-window-aug16",
+          "title": "Greg Brockman — 'The defender's window is open now'",
+          "category": "article",
+          "note": "OpenAI co-founder's essay published 16 August on his own blog (openai.com carries it too but 403s from CI, so the blog is the cited source), giving a named-source account of what the OpenAI-Hugging Face agent intrusion implies for everyone else, plus a dated warning about open-weight cyber models at the end of August."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
