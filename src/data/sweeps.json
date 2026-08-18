@@ -33337,6 +33337,33 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260818t030029z",
+      "timestamp": "2026-08-18T03:00:29.648Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched Anthropic/OpenAI/DeepMind/Meta/Mistral/Cohere/xAI plus the Chinese labs (Qwen, DeepSeek, Z.ai, MiniMax, Moonshot), GitHub trending (daily + weekly), Hugging Face models/datasets/papers/blog, HN front page + page 2 + Show HN, all 8 YouTube creator feeds, Cursor and Claude Code changelogs, Simon Willison and The New Stack, The Register and TechCrunch, and the AI-for-science lane (STAT News, neurosciencenews, Nature, plus dated BCI / medical-imaging / pharma searches). Everything fresh was already in the feed (Wes Roth's Anthropic video, Cursor Origin, Qwen3.8-27B, DeepSeek Harness, Stripe-OpenRouter, Amazon rare books, Wiz/Snowflake) and everything else failed the 72h cap on its real announcement date: Excel's =COPILOT retirement was announced 2026-08-13, The Stack v3 shipped 2026-07-23, Ling-3.0-tiny landed 2026-08-10, and the two HN/HF papers (MegaParts 2608.14783, GPU Offload in Rust 2608.13759) were both submitted 2026-08-14 or earlier. GitHub's biggest weekly mover, cathrynlavery/diagram-design (+16.3k stars), was created 2026-04-16 and has no release or feature ship in the window, and OpenRouter's '50% off' GPT-5.6 Sol banner is a third-party promo, not an OpenAI price change.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "article",
+        "benchmark",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
