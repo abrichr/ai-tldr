@@ -1,8 +1,227 @@
 {
-  "generatedAt": "2026-08-18T20:26:06.201Z",
+  "generatedAt": "2026-08-18T22:27:50.227Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "modular-mojo-open-source",
+      "categories": [
+        "repo",
+        "tool",
+        "ecosystem"
+      ],
+      "title": "Mojo goes open source — Modular ships the compiler under Apache 2.0",
+      "org": "Modular",
+      "date": "2026-08-18",
+      "url": "https://www.modular.com/blog/mojo-open-source",
+      "summary": "Mojo is now fully open source. Modular published the compiler, the tooling and the standard library under Apache 2.0 with LLVM exceptions, in the modular/modular repository, one week after Mojo 1.0 froze the language.",
+      "tags": [
+        "mojo",
+        "modular",
+        "open-source",
+        "apache-2-0",
+        "compiler",
+        "programming-language",
+        "gpu-programming",
+        "ai-infrastructure",
+        "llvm"
+      ],
+      "importance": "major",
+      "metrics": {
+        "GitHub stars": "27k+"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Modular"
+        },
+        {
+          "label": "License",
+          "value": "Apache 2.0 with LLVM exceptions"
+        },
+        {
+          "label": "What opened",
+          "value": "Compiler, tooling and standard library"
+        },
+        {
+          "label": "Repository",
+          "value": "github.com/modular/modular"
+        },
+        {
+          "label": "Build system",
+          "value": "Bazel, via the bundled ./bazelw wrapper"
+        },
+        {
+          "label": "Compiler contributions",
+          "value": "Not accepted yet; planned by end of the year"
+        },
+        {
+          "label": "Context",
+          "value": "Follows the Mojo 1.0 release the week before"
+        }
+      ],
+      "explainer": {
+        "tagline": "Modular published the Mojo compiler and toolchain under Apache 2.0, four years after the language first appeared.",
+        "whatIsIt": "The Mojo compiler source is public for the first time. Modular released it under the Apache 2.0 license with LLVM exceptions, together with the tooling and the standard library, all inside the modular/modular repository on GitHub. For four years Mojo grew with an open community but a closed compiler, and that last closed piece is now gone.",
+        "howItWorks": "Everything needed to build the language from scratch is in one repository. You clone modular/modular and compile it with Bazel through the bundled ./bazelw wrapper, then run a Mojo file with the toolchain you just built. Patches are a different story: the standard library has accepted outside contributions since 2024, but Modular says it is not ready to take compiler and tooling contributions yet and is aiming to open those by the end of the year.",
+        "whyItMatters": "Teams writing AI kernels can now read, fork and audit the compiler they depend on instead of trusting a closed binary. The timing helps too — Mojo 1.0 shipped the week before with source stability, so the code people can finally read is the version they will build on, not a moving target.",
+        "forWho": "systems and GPU programmers",
+        "tryIt": "git clone https://github.com/modular/modular.git"
+      },
+      "faq": [
+        {
+          "q": "Can I send patches to the Mojo compiler now?",
+          "a": "Not yet. Modular says in the announcement that it is not ready to take contributions to the Mojo compiler and tooling, and that it aims to accept them by the end of this year. The Mojo standard library is the exception — it has accepted outside contributions since 2024, so that part of the codebase is already open to patches."
+        },
+        {
+          "q": "What was already open before this release?",
+          "a": "Modular opened the Mojo standard library in 2024, then published hundreds of thousands of lines of kernel code written in Mojo, plus tools and support. The compiler stayed closed through all of it. Today's release fills that gap: the compiler and tooling that turn Mojo source into a running program are now in the same public repository."
+        },
+        {
+          "q": "How does this relate to the Mojo 1.0 release?",
+          "a": "Mojo 1.0 landed the week before and froze the language with source stability guarantees. Modular opened the compiler right after, so the public code corresponds to a stable version of the language rather than one still changing under contributors. The blog post presents the two events as one plan finishing."
+        },
+        {
+          "q": "Which license did Modular pick, and why that one?",
+          "a": "Mojo uses Apache 2.0 with LLVM exceptions. Modular calls this pairing the gold standard for programming languages and compilers, and says it lets people use Mojo flexibly across applications. It is the same license family the LLVM project itself uses, which matters because Mojo's toolchain sits close to LLVM."
+        }
+      ],
+      "image": {
+        "url": "https://cdn.prod.website-files.com/68c9c3107effc2ea46e1a82c/6a84597ae2a73bd4973f801f_Mojo-OSS-Blog-Compressed.jpeg",
+        "alt": "Modular announcement graphic for the Mojo open-source compiler release",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.modular.com/blog/mojo-open-source"
+        },
+        {
+          "label": "Repository",
+          "url": "https://github.com/modular/modular"
+        },
+        {
+          "label": "Docs",
+          "url": "https://mojolang.org/docs/"
+        },
+        {
+          "label": "Community Forum",
+          "url": "https://forum.modular.com/"
+        }
+      ],
+      "publishDate": "2026-08-18T22:27:50.227Z"
+    },
+    {
+      "id": "ryancodrai-turbovec",
+      "categories": [
+        "repo",
+        "tool"
+      ],
+      "title": "turbovec 1.0 — Rust vector index fits 10M embeddings in 4 GB",
+      "org": "RyanCodrai",
+      "date": "2026-08-18",
+      "url": "https://github.com/RyanCodrai/turbovec",
+      "summary": "turbovec 1.0 is a Rust vector index built on Google Research's TurboQuant. A 10-million-document corpus that needs 31 GB as float32 fits in 4 GB, and search runs about 3.4x faster than FAISS IndexPQFastScan at 4 bits.",
+      "tags": [
+        "turbovec",
+        "turboquant",
+        "vector-search",
+        "vector-database",
+        "quantization",
+        "rust",
+        "python",
+        "embeddings",
+        "rag",
+        "faiss",
+        "simd",
+        "open-source"
+      ],
+      "importance": "major",
+      "metrics": {
+        "GitHub stars": "15.2k",
+        "Hacker News points": 181
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "RyanCodrai (independent open-source project)"
+        },
+        {
+          "label": "Version",
+          "value": "1.0.0, published 18 August 2026"
+        },
+        {
+          "label": "License",
+          "value": "MIT"
+        },
+        {
+          "label": "Language",
+          "value": "Rust, with Python bindings"
+        },
+        {
+          "label": "Install",
+          "value": "pip install turbovec / cargo add turbovec"
+        },
+        {
+          "label": "Quantization",
+          "value": "2-bit and 4-bit"
+        },
+        {
+          "label": "Based on",
+          "value": "Google Research's TurboQuant"
+        }
+      ],
+      "explainer": {
+        "tagline": "A Rust vector index that fits 10 million embeddings in 4 GB and takes new vectors without a training pass.",
+        "whatIsIt": "turbovec 1.0 packages Google Research's TurboQuant compression into a working vector index, written in Rust with Python bindings. Embeddings are stored at 2 or 4 bits per dimension, so a 10-million-document corpus that takes 31 GB as float32 sits in 4 GB instead. Version 1.0.0 went up on PyPI on 18 August 2026 under the MIT license.",
+        "howItWorks": "TurboQuant is what the README calls a data-oblivious quantizer: it does not study your data before compressing it, so there is no separate training phase. Vectors go in as they arrive, the index saves incrementally, and search runs on SIMD instructions tuned for both ARM and x86. An optional calibration pass, TurboQuant+, samples roughly 1,024 vectors to push recall higher.",
+        "whyItMatters": "Memory is the main cost of vector search, and turbovec cuts a 31 GB corpus down to 4 GB while searching about 3.4x faster than FAISS IndexPQFastScan at 4 bits. Deletes are the sharper difference: turbovec removes by id in 0.44-1.37 microseconds against 0.19-1.02 seconds for FAISS, so indexes that churn constantly stop needing periodic rebuilds.",
+        "forWho": "RAG and search infrastructure engineers",
+        "tryIt": "pip install turbovec"
+      },
+      "faq": [
+        {
+          "q": "How does turbovec compare with FAISS?",
+          "a": "turbovec beats FAISS IndexPQFastScan across the configurations its README measures. Search averages 3.4x faster at 4 bits and 20-23% faster at 2 bits on both ARM and x86. Single-vector inserts run 7.6-13.9x faster, batches of 100 run 4.6-15.1x faster, and remove-by-id is 0.44-1.37 microseconds against 0.19-1.02 seconds."
+        },
+        {
+          "q": "Does turbovec need a training step before indexing?",
+          "a": "No. turbovec inherits TurboQuant's data-oblivious design, which the README describes as having near-optimal distortion and no separate training phase, so vectors can be ingested online as they arrive. Calibration exists but is optional: the TurboQuant+ mode uses a representative sample of about 1,024 vectors when you want the best recall."
+        },
+        {
+          "q": "How much recall does 2-bit compression cost?",
+          "a": "turbovec reports competitive recall at both widths. Its calibrated TurboQuant+ mode reaches at least 0.997 recall at k of 4 or less on OpenAI embeddings. On GloVe vectors with 200 dimensions it leads FAISS by 1.9 points at R@1 with 4-bit quantization and by 0.8 points at 2-bit."
+        },
+        {
+          "q": "What input formats and features does turbovec support?",
+          "a": "turbovec accepts 2-D float32 arrays only, and rejects other dtypes rather than silently converting them. Beyond storage it offers filtered search at query time, incremental saves so an index does not have to be rewritten in full, and fully local operation with no managed service to sign up for."
+        }
+      ],
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/RyanCodrai/turbovec",
+        "alt": "GitHub repository card for RyanCodrai/turbovec, a Rust vector index built on TurboQuant",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/RyanCodrai/turbovec"
+        },
+        {
+          "label": "PyPI Package",
+          "url": "https://pypi.org/project/turbovec/"
+        },
+        {
+          "label": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=49349898"
+        },
+        {
+          "label": "README Benchmarks",
+          "url": "https://github.com/RyanCodrai/turbovec/blob/main/README.md"
+        }
+      ],
+      "publishDate": "2026-08-18T22:27:50.227Z"
+    },
     {
       "id": "cisa-ray-kev-cve-2025-62593",
       "categories": [

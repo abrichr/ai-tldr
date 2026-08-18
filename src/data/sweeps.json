@@ -33681,6 +33681,45 @@
         "benchmark",
         "algorithm"
       ]
+    },
+    {
+      "id": "sweep-20260818t222750z",
+      "timestamp": "2026-08-18T22:27:50.227Z",
+      "source": "github-actions-sweep",
+      "summary": "Two adds: Modular open-sourced the Mojo compiler under Apache 2.0, and turbovec 1.0 shipped a TurboQuant-based Rust vector index that hit the HN front page at 181 points. Lab blogs were otherwise quiet (Anthropic's only recent post is the already-tracked watermark piece; OpenAI, Meta, Mistral, Cohere and the Chinese labs had nothing inside 72h), both fresh YouTube videos were already in the feed, and HF models/datasets/papers trending were all either older than 72h or already covered.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "modular-mojo-open-source",
+          "title": "Mojo goes open source — Modular ships the compiler under Apache 2.0",
+          "category": "repo",
+          "note": "Modular published the Mojo compiler, tooling and standard library under Apache 2.0 on 18 Aug 2026 — a distinct event from the Mojo 1.0 release already in the feed, and the completion of the open-sourcing that the tracked 1.0-beta item promised."
+        },
+        {
+          "id": "ryancodrai-turbovec",
+          "title": "turbovec 1.0 — Rust vector index fits 10M embeddings in 4 GB",
+          "category": "repo",
+          "note": "turbovec 1.0.0 published on PyPI 18 Aug 2026; HN front page #11 at 181 points; 15.2k stars, MIT. Not a dupe of the existing TurboQuant paper item — this is a third-party Rust index built on that algorithm."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
