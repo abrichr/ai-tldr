@@ -1,8 +1,285 @@
 {
-  "generatedAt": "2026-08-19T12:44:15.456Z",
+  "generatedAt": "2026-08-19T14:40:49.787Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "google-spirit-airlines-data",
+      "categories": [
+        "ecosystem",
+        "dataset"
+      ],
+      "title": "Google buys Spirit Airlines' data for $10M — 100M emails head to AI training",
+      "org": "Google",
+      "date": "2026-08-18",
+      "url": "https://www.theregister.com/ai-and-ml/2026/08/18/google-buys-crashed-airline-spirits-data-at-auction-because-ai/5288962",
+      "summary": "Google won a bankruptcy auction for the internal data of Spirit, the US airline that stopped flying in May 2026, paying $10 million. The package holds about 100 million emails, 500 million Teams items and 30 million recorded support calls.",
+      "tags": [
+        "google",
+        "training-data",
+        "dataset",
+        "bankruptcy",
+        "data-licensing",
+        "data-privacy",
+        "enterprise-data",
+        "mercor"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Price": "$10M",
+        "Emails": "~100 million"
+      },
+      "quickFacts": [
+        {
+          "label": "Buyer",
+          "value": "Google"
+        },
+        {
+          "label": "Seller",
+          "value": "Spirit (liquidating airline)"
+        },
+        {
+          "label": "Price",
+          "value": "$10 million"
+        },
+        {
+          "label": "How",
+          "value": "Bankruptcy auction"
+        },
+        {
+          "label": "Runner-up bidder",
+          "value": "Mercor"
+        },
+        {
+          "label": "Stated use",
+          "value": "Improving Google's AI services"
+        },
+        {
+          "label": "Status",
+          "value": "Awaiting judicial approval"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What is actually in the Spirit data Google bought?",
+          "a": "The Spirit package Google bought spans roughly 100 million emails, 500 million Microsoft Teams items, 17 million OneDrive files and 20.5 million SharePoint items, plus more than 30 million recorded customer service calls and over 15 million chat records. Operational records are included too: 763,000 flights, 5 million crew pairings and 787,452 parts purchases."
+        },
+        {
+          "q": "Does the Spirit data include passenger personal information?",
+          "a": "Spirit's records include 13.7 million active email addresses held in Oracle's Responsys and 11 million in-flight Wi-Fi sales. Google said personally identifiable information would be stripped out by a third party before the data is handed over. The Register notes that promise is hard to audit from outside, and the sale still needs a judge's sign-off."
+        },
+        {
+          "q": "Who else bid for the Spirit data?",
+          "a": "Mercor, a company that supplies data for AI model training, was the runner-up bidder in the Spirit auction. Google's winning $10 million bid gives it a corpus of real enterprise communication and operations records — the kind of material that is normally private and therefore missing from web-scraped training sets."
+        },
+        {
+          "q": "Why would Google pay for a dead airline's internal email?",
+          "a": "Google said the Spirit dataset could help improve its products and AI models. Public web text is largely exhausted as a source, so genuine enterprise artifacts — email threads, support calls, ticket queues, spreadsheets — are scarce and valuable for training agents that are meant to do office work. A liquidation auction is one of the few places that material comes up for sale."
+        }
+      ],
+      "explainer": {
+        "tagline": "Google paid $10 million at a bankruptcy auction for the internal records of a US airline that stopped flying in May 2026.",
+        "whatIsIt": "Google won the auction for Spirit's entire internal data estate, filed as part of the airline's liquidation. Spirit permanently grounded its fleet in May 2026, and its records went up for sale with the rest of the estate. The winning bid was $10 million; Mercor, which supplies data for AI training, came second.",
+        "howItWorks": "The Spirit trove is enterprise exhaust rather than web text: roughly 100 million emails, 500 million Microsoft Teams items, 17 million OneDrive files, 20.5 million SharePoint items, more than 30 million recorded support calls, over 15 million service chats and 600,000 ServiceNow tickets, alongside operational logs covering 763,000 flights, 5 million crew pairings, 1.2 million fuel slips and 787,452 parts purchases. Google said a third party will remove personally identifiable information before handover, and a judge still has to approve the sale.",
+        "whyItMatters": "Buying Spirit's records puts a price on a kind of data that web crawling cannot reach. Models meant to handle office work need examples of real office work — threads that go wrong, tickets that get reopened, calls that end badly — and that material sits inside companies. A liquidation auction turns a failed business into a training corpus, which is a route other estates can now follow.",
+        "forWho": "people tracking where AI training data comes from",
+        "tryIt": "https://www.theregister.com/ai-and-ml/2026/08/18/google-buys-crashed-airline-spirits-data-at-auction-because-ai/5288962"
+      },
+      "image": {
+        "url": "https://image.theregister.com/5273664.jpg?imageId=5273664&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+        "alt": "Illustration for The Register report on Google buying Spirit airline data at auction",
+        "fit": "cover",
+        "credit": "The Register"
+      },
+      "links": [
+        {
+          "label": "The Register Report",
+          "url": "https://www.theregister.com/ai-and-ml/2026/08/18/google-buys-crashed-airline-spirits-data-at-auction-because-ai/5288962"
+        },
+        {
+          "label": "Forbes Analysis",
+          "url": "https://www.forbes.com/sites/suzannerowankelleher/2026/08/18/google-train-ai-spirit-airlines-data/"
+        },
+        {
+          "label": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/google-buys-spirit-airlines-data-for-ai-training-for-just-usd10-million-purchase-includes-hundreds-of-millions-of-emails-microsoft-teams-chats-billions-of-flight-pricing-records-and-anonymized-passenger-records"
+        }
+      ],
+      "publishDate": "2026-08-19T14:40:49.787Z"
+    },
+    {
+      "id": "lean-fro-palomar-registry",
+      "categories": [
+        "tool",
+        "resource"
+      ],
+      "title": "Palomar — a registry that machine-checks Lean proofs, human or AI",
+      "org": "Lean FRO",
+      "date": "2026-08-18",
+      "url": "https://palomar-registry.org/about",
+      "summary": "Palomar is a public registry of Lean formalizations whose proofs have been machine-checked. Submissions are open to human-written, AI-written or mixed proofs, and every entry must clear a dual-kernel check plus a language-model review.",
+      "tags": [
+        "lean",
+        "lean-fro",
+        "formal-verification",
+        "theorem-proving",
+        "mathematics",
+        "ai-for-math",
+        "proof-assistant",
+        "mathlib",
+        "registry",
+        "open-source"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Challenge file cap": "1,000 lines"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Lean FRO and ICARM"
+        },
+        {
+          "label": "What it is",
+          "value": "Registry of machine-checked Lean proofs"
+        },
+        {
+          "label": "Accepts",
+          "value": "Human, AI or mixed authorship"
+        },
+        {
+          "label": "Mechanical check",
+          "value": "Lean kernel + NanoDa kernel via Comparator"
+        },
+        {
+          "label": "Non-mechanical check",
+          "value": "Language-model review of statement fidelity"
+        },
+        {
+          "label": "Peer review",
+          "value": "None — Palomar is not a journal"
+        },
+        {
+          "label": "Required files",
+          "value": "Challenge.lean, Solution.lean, comparator.json, formalization.yaml"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How does Palomar stop a Lean proof from cheating?",
+          "a": "Palomar requires the Solution module to depend only on the three standard Lean axioms — propext, Classical.choice and Quot.sound — and rejects anything reaching for sorryAx or Lean.ofReduceBool. Proofs are replayed through Lean's own kernel and the independent NanoDa kernel using the Comparator tool, so a single tampered kernel cannot wave a bad proof through."
+        },
+        {
+          "q": "Is Palomar peer reviewed?",
+          "a": "Palomar does not perform peer review and states plainly that it is not a journal. Registration means a submission passed automated checks — kernel verification, declaration matching, import validation and a language-model fidelity review — not that a human expert endorsed the mathematics. The registry publishes the review comments so readers can judge for themselves."
+        },
+        {
+          "q": "Can I submit an AI-generated proof to Palomar?",
+          "a": "Yes. Palomar accepts submissions whether they are human-generated, AI-generated or a mixture, and requires structured disclosure of authorship, sources, methods and limitations. The disclosure requirement is the point: the registry does not care who wrote the proof, only that the claim is stated clearly and the machine check passes."
+        },
+        {
+          "q": "What does a Palomar submission have to contain?",
+          "a": "A Palomar submission needs a Lean project with one lakefile, a pinned lean-toolchain, a short Challenge module stating the result, a Solution module proving it, a comparator.json naming every theorem to compare, a formalization.yaml with metadata, and a licence file. The Challenge module is capped at 1,000 lines and 100 KiB so a reader can audit the claim quickly."
+        },
+        {
+          "q": "Who runs Palomar?",
+          "a": "Palomar was initially developed by the Lean FRO and ICARM. Day-to-day work splits across three groups: technical maintainers — Terence Tao, Matthew Ballard, Nestor Guillen and Jaume de Dios — who run the repositories and services; moderators who can retract or restore a registered version; and a scientific advisory board that sets policy without reviewing individual submissions."
+        }
+      ],
+      "explainer": {
+        "tagline": "A searchable registry of Lean formalizations whose proofs are replayed through two independent kernels before they are listed.",
+        "whatIsIt": "Palomar opened for submissions as a public, searchable registry of Lean formalizations whose proofs have been machine-checked. Results are organised by the mathematical claim itself rather than scattered across GitHub repositories, so a reader can look up a theorem instead of hunting for the repo that proves it. Human-written, AI-written and mixed submissions are all welcome.",
+        "howItWorks": "Every submission clears three gates. The mechanical one replays the proof through Lean's kernel and the independent NanoDa kernel with the Comparator tool, checks that Challenge and Solution declarations share names and types, and rejects any dependency beyond the three standard axioms. A language model then judges whether the formal statement fairly represents the informal claim and meets a research-interest floor. Structured disclosure of authorship, sources and methods is the third requirement.",
+        "whyItMatters": "Checking that a Lean repository proves what its README says is slow work even for experts, and the flow of machine-generated proofs has made that bottleneck acute. A registry that replays the kernel, blocks axiom smuggling and publishes the review comments turns 'someone claims a proof' into something a non-Lean reader can check in one place. Palomar is explicit that this is not peer review — it is a floor, not a seal of approval.",
+        "forWho": "mathematicians and researchers working with Lean formalizations",
+        "tryIt": "https://palomar-registry.org/how-to-submit"
+      },
+      "image": {
+        "url": "https://lean-lang.org/static/png/banner.png",
+        "alt": "Lean theorem prover banner, the language Palomar registers verified proofs for",
+        "fit": "contain",
+        "credit": "Lean FRO"
+      },
+      "links": [
+        {
+          "label": "Palomar Registry",
+          "url": "https://palomar-registry.org/"
+        },
+        {
+          "label": "How To Submit",
+          "url": "https://palomar-registry.org/how-to-submit"
+        },
+        {
+          "label": "Announcement",
+          "url": "https://terrytao.wordpress.com/2026/08/18/palomar-a-registry-of-lean-verified-mathematics/"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49355968"
+        }
+      ],
+      "publishDate": "2026-08-19T14:40:49.787Z"
+    },
+    {
+      "id": "sam-witteveen-docker-sandboxes-aug19",
+      "categories": [
+        "video",
+        "tool"
+      ],
+      "title": "Sam Witteveen — 'Docker Sandboxes - Building Safe Agents'",
+      "org": "Sam Witteveen",
+      "date": "2026-08-19",
+      "url": "https://www.youtube.com/watch?v=erQnRkMrpls",
+      "summary": "Sam Witteveen's new video covers Docker Sandboxes, which run AI coding agents inside isolated microVMs. Each sandbox gets its own Docker daemon, filesystem and network, and is driven by a free sbx command-line tool.",
+      "tags": [
+        "video",
+        "sam-witteveen",
+        "docker",
+        "sandboxing",
+        "microvm",
+        "coding-agents",
+        "agent-safety",
+        "isolation",
+        "developer-tools"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "A walkthrough of Docker Sandboxes, the microVM isolation layer for coding agents that would otherwise run loose on your machine.",
+        "whatIsIt": "Docker Sandboxes, the subject of Sam Witteveen's new video, run AI coding agents in isolated microVM sandboxes. Each sandbox carries its own Docker daemon, filesystem and network stack, so an agent can build containers and rewrite files without touching the host. The `sbx` command-line tool manages them and is free to use, including for commercial work.",
+        "howItWorks": "The isolation boundary is a microVM rather than a plain container, which is a harder wall for a misbehaving agent to cross. Because the sandbox ships its own Docker daemon, an agent inside it can still build and run images normally. Starting a session is one command from a project directory — `sbx run claude` launches Claude inside the sandbox.",
+        "whyItMatters": "Coding agents are usually handed a shell on the developer's real machine, which makes an unwanted `rm` or a poisoned dependency a host-level problem. Putting each agent in a disposable microVM with its own network keeps the blast radius inside the sandbox, and Sam Witteveen's video is aimed at engineers deciding whether that trade is worth the setup.",
+        "forWho": "engineers running coding agents locally",
+        "tryIt": "sbx run claude"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/erQnRkMrpls/hqdefault.jpg",
+        "alt": "Sam Witteveen YouTube thumbnail for 'Docker Sandboxes - Building Safe Agents'",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=erQnRkMrpls"
+        },
+        {
+          "label": "Docker Sandboxes Docs",
+          "url": "https://docs.docker.com/ai/sandboxes/"
+        },
+        {
+          "label": "Product Page",
+          "url": "https://www.docker.com/products/docker-sandboxes/"
+        },
+        {
+          "label": "Channel",
+          "url": "https://www.youtube.com/@samwitteveenai"
+        }
+      ],
+      "author": {
+        "name": "Sam Witteveen",
+        "profileUrl": "https://www.youtube.com/@samwitteveenai"
+      },
+      "publishDate": "2026-08-19T14:40:49.787Z"
+    },
     {
       "id": "volcengine-openviking-0-4-14",
       "categories": [

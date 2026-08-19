@@ -33975,6 +33975,53 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260819t144049z",
+      "timestamp": "2026-08-19T14:40:49.787Z",
+      "source": "github-actions-sweep",
+      "summary": "Swept lab blogs (Anthropic quiet since Aug 14, Meta since Jul 27, Mistral since Aug 11, Cohere since Aug 6, DeepMind's newest is the Aug 6 WeatherNext post), GitHub trending daily+weekly, HuggingFace models/datasets/papers, HN front page, 8 YouTube creator feeds and the AI-for-science lane. Added three: Google's $10M bankruptcy-auction purchase of Spirit's internal data for AI training, the Palomar registry of machine-checked Lean proofs, and a fresh Sam Witteveen video on Docker Sandboxes.",
+      "counts": {
+        "added": 3,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "google-spirit-airlines-data",
+          "title": "Google buys Spirit Airlines' data for $10M — 100M emails head to AI training",
+          "category": "ecosystem",
+          "note": "590 points on HN plus The Register, Forbes, Tom's Hardware and Qz within 24h; a completed data transaction with a verified corpus inventory, not a funding or forecast story — the single ecosystem-primary item this sweep."
+        },
+        {
+          "id": "lean-fro-palomar-registry",
+          "title": "Palomar — a registry that machine-checks Lean proofs, human or AI",
+          "category": "tool",
+          "note": "Live registry launched Aug 18 and announced by Terence Tao; on the HN front page, and its second gate is a language-model review — infrastructure built for the flow of machine-generated Lean proofs."
+        },
+        {
+          "id": "sam-witteveen-docker-sandboxes-aug19",
+          "title": "Sam Witteveen — 'Docker Sandboxes - Building Safe Agents'",
+          "category": "video",
+          "note": "Uploaded 2026-08-19T13:35Z per yt-rss-scan (1h old); the Docker Sandboxes facts are grounded in docs.docker.com/ai/sandboxes."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "dataset",
+        "paper",
+        "benchmark",
+        "video",
+        "article",
+        "ecosystem",
+        "security",
+        "resource",
+        "algorithm"
+      ]
     }
   ]
 }
