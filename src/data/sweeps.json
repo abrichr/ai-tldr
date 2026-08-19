@@ -33800,6 +33800,33 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260819t044204z",
+      "timestamp": "2026-08-19T04:42:04.550Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic quiet since Aug 14, Mistral Aug 11, Cohere Aug 6, Meta Jul 27, DeepMind Aug 6/12, DeepSeek/Z.ai/Qwen/Moonshot/MiniMax nothing new), GitHub trending daily+weekly, HuggingFace models/datasets/papers, HN top 30 + Show HN, the 8 YouTube creator feeds, the AI-for-science lane (BCI/neural decoding, medical imaging, pharma, Nature/npj/Lancet, STAT News), and tier-1 press. Everything fresh is already in the feed: Cerebras CS-4, Cursor Origin, Warp Factories, ChatGPT for Teens, OpenAI's Preparedness rewrite, Mojo open source, GLM-5.3, Qwen3.8-27B, Needle 2, Semantica, Prime Agent, LTX-2.5, and the one fresh Wes Roth video. Remaining candidates failed a bar: StateM (191 HF upvotes) submitted Aug 15, outside the 72h cap; Embodied-Navigator (208 upvotes, Aug 18) has no released code or demo, so it misses the 2-of-N paper bar; GenBio AI's AIDO Cell (Aug 18) has no released weights or code for the new 1.0 simulator (HF org unchanged for 24 days, GitHub AIDO repo last pushed Sept 2025) and genbio.ai returns 403, so nothing could be verified; Anthropic revenue, Groq's raise, the OpenAI IPO filing and the Relay shutdown are business news the ecosystem gate rejects.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "video",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
