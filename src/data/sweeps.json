@@ -33914,6 +33914,33 @@
         "ecosystem",
         "showcase"
       ]
+    },
+    {
+      "id": "sweep-20260819t103144z",
+      "timestamp": "2026-08-19T10:31:44.449Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic newest post Aug 14, OpenAI index 403 so checked via press + openai.com/news coverage, DeepMind, Meta AI newest July, Mistral Aug 11, Cohere Aug 6, Moonshot July 16, Z.ai/GLM-5.3 Aug 14, MiniMax, DeepSeek), GitHub trending daily, HuggingFace models/datasets/papers top 10, HN front page top 30 + Show HN, 8 YouTube creator feeds, the AI-for-science lane (BCI/neural decoding, medical imaging + FDA, pharma/drug discovery, Nature ML, STAT News, neurosciencenews, Endpoints), and tier-1 press (TechCrunch, The Register) as a last resort. Nothing new qualified: every ≤72h release found is already in the feed (Cerebras CS-4, Mojo open source, turbovec, Cursor Origin, Warp Factories, ChatGPT for Teens, OpenAI monitoring overhaul, CISA Ray KEV, Claude protein binders, DesktopFly, ASI-Bench, Agent Lightning v1.0, the Sam Witteveen Qwen3.8-27B video). Rejected: ai-memory v1.28.1 (trending on stars but the release body is only checksums and install steps — a routine patch on a May-2026 repo, not a ship); GenBio AIDO Cell (genbio.ai returns 403 so the primary source is unverifiable, ModelGenerator's last release is Dec 2025, and STAT is paywalled — no confirmable artifact); the MIT 'attribution decay' Nature Communications paper (a finding with no released code or model); Claude Code 2.1.234/235 (incremental patches on the already-covered 2.1.233); Transformers v5.15.0 (Aug 10, outside the window); and the day's financial news (Anthropic Q2 revenue, OpenAI IPO, Unitree listing, Groq raise, Google buying Spirit's data), which fails the ecosystem gate — no developer does anything differently.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
