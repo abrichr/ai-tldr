@@ -34022,6 +34022,46 @@
         "resource",
         "algorithm"
       ]
+    },
+    {
+      "id": "sweep-20260819t163552z",
+      "timestamp": "2026-08-19T16:35:52.514Z",
+      "source": "github-actions-sweep",
+      "summary": "Added GenBio AI's AIDO Cell 1.0 virtual-cell world model (announced 18 Aug, STAT News + FirstWord coverage, Virtual Cell Benchmark 1.0) and oMLX 0.6.2, the Apache-2.0 Apple Silicon inference server trending on GitHub today. Lab blogs were quiet: Anthropic's newest post is 14 Aug, Mistral 11 Aug, Cohere 6 Aug, Meta AI late July; DeepMind's Gemini 3.7 Flash, WeatherNext Cyclones and SL2T are already in the feed. HF trending models/datasets and HN's top AI stories (Cerebras CS-4, Mojo open source, turbovec, OpenViking) were all already covered, and both fresh YouTube uploads from the RSS scan were already in the feed.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "genbio-aido-cell",
+          "title": "AIDO Cell — GenBio AI's virtual cell simulates drugs on a whole human cell",
+          "category": "model",
+          "note": "Science-lane item: named model with a technical report, its own benchmark and early-access rollout, announced 18 Aug and covered by STAT News and FirstWord Pharma — clears the 2-of-N bar without relying on star-trending."
+        },
+        {
+          "id": "jundot-omlx-0-6-2",
+          "title": "oMLX 0.6.2 — the Mac LLM server now tunes its own ANE/GPU split",
+          "category": "tool",
+          "note": "Top-10 on github.com/trending today (+467 stars, 19.7k total) with a real feature release inside 72h; not previously in the feed."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "benchmark",
+        "tool",
+        "repo",
+        "video",
+        "paper",
+        "dataset",
+        "article",
+        "security",
+        "ecosystem",
+        "algorithm"
+      ]
     }
   ]
 }

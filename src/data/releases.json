@@ -1,8 +1,175 @@
 {
-  "generatedAt": "2026-08-19T14:40:49.787Z",
+  "generatedAt": "2026-08-19T16:35:52.514Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "genbio-aido-cell",
+      "categories": [
+        "model",
+        "benchmark"
+      ],
+      "title": "AIDO Cell — GenBio AI's virtual cell simulates drugs on a whole human cell",
+      "org": "GenBio AI",
+      "date": "2026-08-18",
+      "url": "https://genbio.ai/aido-cell-simulator/",
+      "summary": "AIDO Cell 1.0 is a virtual-cell world model from GenBio AI that simulates a human cell from DNA and RNA up to whole-cell shape. GenBio AI reports state of the art on 24 of 31 metrics in its new Virtual Cell Benchmark 1.0.",
+      "tags": [
+        "virtual-cell",
+        "world-model",
+        "genbio-ai",
+        "aido-cell",
+        "drug-discovery",
+        "computational-biology",
+        "single-cell",
+        "molecular-design"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Benchmark SOTA": "24 of 31 metrics",
+        "Simulated perturbations": "1M per cell line"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "GenBio AI (Palo Alto)"
+        },
+        {
+          "label": "Version",
+          "value": "AIDO Cell 1.0"
+        },
+        {
+          "label": "Cell lines",
+          "value": "K-562 and Hep-G2"
+        },
+        {
+          "label": "Benchmark",
+          "value": "Virtual Cell Benchmark 1.0, 5 task families"
+        },
+        {
+          "label": "Compared with",
+          "value": "AlphaFold 3, Boltz-1, AlphaGenome, scGPT, Geneformer"
+        },
+        {
+          "label": "Also ships",
+          "value": "AIDO Foundry and AIDO Lab"
+        },
+        {
+          "label": "Availability",
+          "value": "Early access sign-up list"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How do I get access to AIDO Cell?",
+          "a": "AIDO Cell is in early access. GenBio AI runs a sign-up list for scientists in academia and the biopharmaceutical industry, and says a more capable version with more cell types is planned for later in 2026. The 1.0 announcement points people to that list rather than to a public download or API."
+        },
+        {
+          "q": "Which cells can AIDO Cell 1.0 simulate?",
+          "a": "AIDO Cell 1.0 ships prototype virtual cells for two human lines: K-562, which came from a leukemia patient, and Hep-G2, which came from a liver cancer patient. GenBio AI picked them because decades of multi-omics data exist to check the simulation against. A second system, AIDO Foundry, is meant to adapt the engine to other cell lines and primary cells."
+        },
+        {
+          "q": "How does AIDO Cell compare with AlphaFold 3 and AlphaGenome?",
+          "a": "AIDO Cell 1.0 covers all five task families in GenBio AI's Virtual Cell Benchmark 1.0, while AlphaFold 3, Boltz-1, AlphaGenome, scGPT and Geneformer each address one or two. GenBio AI reports AIDO Cell leads on 24 of the 31 metrics, with AlphaFold 3 still ahead on protein-DNA interactions and AlphaGenome ahead on some genome-regulation tracks."
+        },
+        {
+          "q": "What can AIDO Cell do for drug design?",
+          "a": "AIDO Cell supports what GenBio AI calls in-context molecular design: you describe the cell state you want instead of a binding pocket, and the system generates molecules, applies them to cloned cells and profiles each one. In an ABL1 test against the cancer drug imatinib, several designs with different chemistry recovered 65 to 88 percent of imatinib's gene-expression changes."
+        }
+      ],
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://genbio.ai/aido-cell-simulator/"
+        },
+        {
+          "label": "Technical Report",
+          "url": "https://genbio.ai/aido-cell-technical-report"
+        },
+        {
+          "label": "Early Access",
+          "url": "https://genbio.ai/waitlist"
+        },
+        {
+          "label": "STAT News",
+          "url": "https://www.statnews.com/2026/08/18/david-baker-genbio-ai-new-virtual-model-unveiled-aido-cell/"
+        }
+      ],
+      "explainer": {
+        "tagline": "A world model that holds one cell state you can perturb, clone and read out across DNA, RNA, protein and cell shape.",
+        "whatIsIt": "AIDO Cell 1.0 keeps a single simulated cell state that you change step by step, instead of making one-shot predictions. GenBio AI published it on 18 August 2026 as a general-purpose simulator for two human cell lines. A researcher applies a gene knockout or a drug, then reads expression, protein structure, localization or cell shape out of that same state.",
+        "howItWorks": "The simulation engine is a world model: every readout decodes from one shared internal state, so chromatin accessibility, expression, protein structure and morphology all describe the same cell at the same moment. A harness wraps the engine, tracking the cell across consecutive interventions and turning user commands into steps the engine can run. Cells can be cloned to branch an experiment, so a resistance mutation and two follow-up treatments can be compared from a shared ancestor.",
+        "whyItMatters": "Drug teams normally stitch together separate models — one for structure, one for expression, one for genome regulation — and the pieces do not agree with each other. GenBio AI reports that AIDO Cell 1.0 is the only system covering all five families in its Virtual Cell Benchmark 1.0, and that the simulation also runs backwards: name the cell state you want and it designs molecules to reach it. The company is a computational-biology startup whose co-founders include David Baker, who shared the 2024 Nobel Prize in Chemistry.",
+        "forWho": "computational biologists and drug discovery teams",
+        "tryIt": "Request early access at https://genbio.ai/waitlist"
+      },
+      "image": {
+        "url": "https://genbio.ai/wp-content/uploads/2026/08/aido-cell-x-1600x900-1.jpg",
+        "alt": "AIDO Cell announcement graphic from GenBio AI",
+        "fit": "cover"
+      },
+      "publishDate": "2026-08-19T16:35:52.514Z"
+    },
+    {
+      "id": "jundot-omlx-0-6-2",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "oMLX 0.6.2 — the Mac LLM server now tunes its own ANE/GPU split",
+      "org": "oMLX",
+      "date": "2026-08-18",
+      "url": "https://github.com/jundot/omlx/releases/tag/v0.6.2",
+      "summary": "oMLX 0.6.2 adds a built-in tuner that benchmarks Apple Neural Engine and GPU prefill splits on your own Mac, plus dedicated GPU kernels for M5 chips. The Apache-2.0 inference server has 19,733 GitHub stars.",
+      "tags": [
+        "local-llm",
+        "apple-silicon",
+        "mlx",
+        "inference-server",
+        "neural-engine",
+        "macos",
+        "quantization",
+        "open-source",
+        "kv-cache"
+      ],
+      "importance": "notable",
+      "metrics": {
+        "GitHub stars": "19,733",
+        "License": "Apache-2.0"
+      },
+      "links": [
+        {
+          "label": "Release Notes",
+          "url": "https://github.com/jundot/omlx/releases/tag/v0.6.2"
+        },
+        {
+          "label": "Repository",
+          "url": "https://github.com/jundot/omlx"
+        },
+        {
+          "label": "Project Site",
+          "url": "https://omlx.ai"
+        },
+        {
+          "label": "v0.6.0 Release",
+          "url": "https://github.com/jundot/omlx/releases/tag/v0.6.0"
+        }
+      ],
+      "explainer": {
+        "tagline": "Instead of shipping one ANE/GPU ratio for every Mac, oMLX now measures the best split on the machine in front of you.",
+        "whatIsIt": "A built-in ANE/GPU split tuner is the main change in oMLX 0.6.2, released on 18 August 2026. oMLX is an Apache-2.0 LLM inference server for Apple Silicon with continuous batching and SSD caching, managed from the macOS menu bar. It keeps the KV cache in a hot in-memory tier and a cold SSD tier, so earlier context stays reusable across requests.",
+        "howItWorks": "The tuner benchmarks a GPU-only baseline, several MLP-only splits and combined MLP/GDN splits on the current Mac, from either the macOS app or the web dashboard. Candidate settings stay temporary until the user applies them, and the tuner recommends GPU-only when the best split is under 1% faster. New NAX QMM kernels handle the GPU half of hybrid prefill on M5-family Macs for quantized Qwen3.5, Qwen3.6 and Qwen3.8 layers, and oMLX falls back to the existing Metal path when NAX is unavailable.",
+        "whyItMatters": "Split ratios tuned on one Mac ran slower on another, which is why oMLX had disabled the Neural Engine on M5 machines outright; measuring on the actual device replaces that guesswork, and the blanket M5 block is gone. Community testing on M5 reported about a 5% improvement, with the best tuner trial approaching 1,000 prompt tokens per second. The release also fixes a crash when Lightning MTP ran with TurboQuant KV enabled, and restores exact FP32 SSD-cache snapshots as the default so a restored cache no longer changes greedy outputs.",
+        "forWho": "people running local models on Apple Silicon",
+        "tryIt": "brew install jundot/omlx/omlx"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/jundot/omlx",
+        "alt": "oMLX GitHub repository card — LLM inference server for Apple Silicon",
+        "fit": "contain"
+      },
+      "publishDate": "2026-08-19T16:35:52.514Z"
+    },
     {
       "id": "google-spirit-airlines-data",
       "categories": [
