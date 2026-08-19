@@ -1,8 +1,402 @@
 {
-  "generatedAt": "2026-08-19T16:35:52.514Z",
+  "generatedAt": "2026-08-19T18:39:22.735Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "ornith-1-5",
+      "categories": [
+        "model"
+      ],
+      "title": "Ornith-1.5 — open MIT model matches Claude Opus 4.8 on Terminal-Bench",
+      "org": "Ornith",
+      "date": "2026-08-19",
+      "url": "https://ornith.ai/ornith_1_5.html",
+      "summary": "Ornith-1.5 is a family of open-weight models released under MIT in 397B and 35B mixture-of-experts and 9B dense sizes. The 397B scores 86.1 on Terminal-Bench 2.1 against 85.0 for Claude Opus 4.8.",
+      "tags": [
+        "model",
+        "open-weights",
+        "ornith",
+        "ornith-1-5",
+        "coding-model",
+        "agentic-coding",
+        "mixture-of-experts",
+        "reinforcement-learning",
+        "self-improvement",
+        "self-scaffolding",
+        "terminal-bench",
+        "swe-bench",
+        "mit-license",
+        "huggingface"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Ornith Team"
+        },
+        {
+          "label": "Model sizes",
+          "value": "397B MoE, 35B MoE, 9B dense"
+        },
+        {
+          "label": "License",
+          "value": "MIT"
+        },
+        {
+          "label": "Context window",
+          "value": "262,144 tokens"
+        },
+        {
+          "label": "Availability",
+          "value": "Open weights on Hugging Face"
+        },
+        {
+          "label": "Formats",
+          "value": "BF16, FP8, NVFP4, GGUF, MLX"
+        },
+        {
+          "label": "What's new",
+          "value": "Self-improvement loop replaces fixed training tasks"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "Terminal-Bench 2.1 (Terminus-2)",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Kimi K3",
+              "score": 88.3
+            },
+            {
+              "name": "Ornith-1.5-397B",
+              "score": 86.1,
+              "highlight": true
+            },
+            {
+              "name": "Claude Opus 4.8",
+              "score": 85
+            },
+            {
+              "name": "DeepSeek-V4-Flash-0731",
+              "score": 82.7
+            },
+            {
+              "name": "GLM-5.2",
+              "score": 81
+            },
+            {
+              "name": "Ornith-1.0-397B",
+              "score": 77.5
+            }
+          ],
+          "source": "https://ornith.ai/ornith_1_5.html"
+        },
+        {
+          "name": "SWE-bench Verified",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Kimi K3",
+              "score": 86.2
+            },
+            {
+              "name": "Ornith-1.5-397B",
+              "score": 86,
+              "highlight": true
+            },
+            {
+              "name": "Claude Opus 4.8",
+              "score": 85.8
+            },
+            {
+              "name": "GLM-5.2",
+              "score": 83
+            },
+            {
+              "name": "Ornith-1.0-397B",
+              "score": 82.4
+            },
+            {
+              "name": "DeepSeek-V4-Flash-0731",
+              "score": 81.6
+            }
+          ],
+          "source": "https://ornith.ai/ornith_1_5.html"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Ornith-1.5 free to use commercially?",
+          "a": "Ornith-1.5 ships under the MIT license on Hugging Face, so the weights can be used, modified and redistributed commercially without a separate agreement. Every size in the family is covered, including the 397B flagship and the quantized FP8, NVFP4, GGUF and MLX builds. There is no hosted API tier or published price list from the Ornith Team."
+        },
+        {
+          "q": "How much better is Ornith-1.5 than Ornith-1.0?",
+          "a": "Ornith-1.5-397B improves on Ornith-1.0-397B across the board in the published table: Terminal-Bench 2.1 goes from 77.5 to 86.1, SWE-bench Verified from 82.4 to 86.0, and Toolathlon-Verified from 43.2 to 71.2. The largest jump is DeepSWE, which moves from 8 to 56."
+        },
+        {
+          "q": "Can Ornith-1.5 run on one machine?",
+          "a": "The Ornith-1.5 family includes a 9B dense model and a 9B-Mobile variant aimed at edge deployment, plus GGUF and MLX builds that target laptops and Apple silicon. The 397B and 35B mixture-of-experts models are server-scale: the published vLLM recipe for the 397B uses eight-way tensor parallelism."
+        },
+        {
+          "q": "How long a context does Ornith-1.5 handle?",
+          "a": "Ornith-1.5-397B has a 262,144-token context window, and the model card notes it can be extended to roughly 1M tokens using YaRN scaling at factor 4.0. The published vLLM and SGLang launch commands both set the maximum length to 262,144 tokens by default."
+        },
+        {
+          "q": "Where does Ornith-1.5 still lose to Claude Opus 4.8?",
+          "a": "Claude Opus 4.8 stays ahead of Ornith-1.5-397B on the harder agentic and reasoning rows of the same table: Frontier-Bench v0.1 (21.1 against 13.5), NL2Repo (69.7 against 59.5), DeepSWE (59.0 against 56.0) and HLE without tools (49.8 against 44.6). Ornith-1.5 leads on WideSearch, ClawEval and SWE-bench Multilingual."
+        }
+      ],
+      "explainer": {
+        "tagline": "An open-weight model family that writes its own training tasks, then trains on them.",
+        "whatIsIt": "Ornith-1.5 extends the self-scaffolding idea from Ornith-1.0 into a full self-improvement loop, where the model invents its own training work instead of drawing from a fixed human-written set. It comes in three sizes — 397B mixture-of-experts, 35B mixture-of-experts and 9B dense — plus a 9B-Mobile build, all under MIT on Hugging Face.",
+        "howItWorks": "The loop has three steps that feed each other: the model proposes new tasks, builds a scaffold for each one, and produces solution rollouts that become the reward signal for reinforcement learning. The Ornith Team describes the effect as compounding — 'stronger policies enable the generation of harder and more informative tasks, evolving scaffolds discover better ways to elicit the model's capabilities, and higher-quality rollouts provide increasingly effective learning signals.'",
+        "whyItMatters": "Matching a closed flagship on Terminal-Bench while shipping under MIT means a team can run this coding agent on its own hardware with no per-token bill and no usage terms to negotiate. The 9B and 35B builds matter more day to day: they put the same training recipe inside a budget most teams can actually serve.",
+        "forWho": "teams self-hosting a coding agent",
+        "tryIt": "vllm serve ornith-ai/Ornith-1.5-397B --tensor-parallel-size 8 --max-model-len 262144"
+      },
+      "image": {
+        "url": "https://ornith.ai/ornith_1_5/ornith_1_5_cover_1787101791.jpg",
+        "alt": "Ornith-1.5 announcement cover graphic",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://ornith.ai/ornith_1_5.html"
+        },
+        {
+          "label": "Model Collection",
+          "url": "https://huggingface.co/collections/ornith-ai/ornith-15"
+        },
+        {
+          "label": "397B Model Card",
+          "url": "https://huggingface.co/ornith-ai/Ornith-1.5-397B"
+        },
+        {
+          "label": "9B Model Card",
+          "url": "https://huggingface.co/ornith-ai/Ornith-1.5-9B"
+        }
+      ],
+      "publishDate": "2026-08-19T18:39:07.975Z"
+    },
+    {
+      "id": "cursor-agent-subscriptions",
+      "categories": [
+        "tool"
+      ],
+      "title": "Cursor Subscriptions — cloud agents watch a PR and drive it to done",
+      "org": "Cursor",
+      "date": "2026-08-19",
+      "url": "https://cursor.com/changelog/08-19-26",
+      "summary": "Cursor added subscriptions, so a cloud agent can watch a pull request, a Slack thread or a schedule and keep working unprompted. Subagents now get their own cloud machines, and a new /goal command holds one long-running objective.",
+      "tags": [
+        "tool",
+        "cursor",
+        "coding-agent",
+        "cloud-agents",
+        "subagents",
+        "automation",
+        "pull-requests",
+        "slack",
+        "continuous-integration",
+        "developer-tools"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Cursor"
+        },
+        {
+          "label": "Released",
+          "value": "August 19, 2026"
+        },
+        {
+          "label": "What's new",
+          "value": "Subscriptions, custom modes, cloud subagents, /goal, steering"
+        },
+        {
+          "label": "Subscription triggers",
+          "value": "Pull requests, Slack threads, scheduled tasks"
+        },
+        {
+          "label": "Where subagents run",
+          "value": "Isolated cloud VMs with their own branch"
+        },
+        {
+          "label": "New commands",
+          "value": "/goal, /in-cloud, /babysit"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does a Cursor cloud agent keep working on a pull request after it opens one?",
+          "a": "Yes. Cursor cloud agents now subscribe automatically to the pull requests they create and drive them toward completion, which includes fixing failing CI and responding to bot comments on the PR. That is the default behaviour for agent-created PRs, so nobody has to re-prompt the agent each time a check goes red."
+        },
+        {
+          "q": "Where do Cursor subagents run now?",
+          "a": "Cursor subagents can run on their own isolated virtual machines, each with a separate copy of the project, a clean context and its own git branch. Cursor's docs describe launching them with /in-cloud, and note that cloud subagents pull MCP server settings from the team configuration rather than the local session."
+        },
+        {
+          "q": "Can I message a Cursor agent without interrupting it?",
+          "a": "Cursor's steering changes let a message land while the agent is mid-task instead of stopping it. Follow-up instructions now wait for the next tool call and are picked up there, so guidance arrives without cutting an action short. Previously a message during work could break the agent out of what it was doing."
+        },
+        {
+          "q": "How is /goal different from a normal Cursor prompt?",
+          "a": "A normal prompt is one request; /goal hands Cursor a long-lived objective that the agent keeps working toward across many loops. Cursor's example is 'fix all flaky tests and make CI green' — a target with no fixed endpoint that the agent revisits until it is met, rather than a single edit-and-return task."
+        },
+        {
+          "q": "What is a Custom Mode in Cursor?",
+          "a": "Custom Modes let a user pin any skill in the Cursor chat so the agent stays on that kind of work, in the style of an always-on skill. It is a way to keep a long session focused on one job — review, migration, test repair — instead of relying on the agent to reselect the right skill each turn."
+        }
+      ],
+      "explainer": {
+        "tagline": "Cursor's cloud agents can now subscribe to a PR, a Slack thread or a schedule and keep going on their own.",
+        "whatIsIt": "Subscriptions are the headline of Cursor's August 19 update: an agent watches something — a pull request, a Slack thread, a scheduled slot — and acts each time it changes. Cloud agents subscribe to their own pull requests by default, then fix CI and answer bot comments until the PR is done. The same release adds Custom Modes, cloud subagents, a /goal command and steering changes.",
+        "howItWorks": "The pieces fit together as a system rather than five separate features. Subscriptions supply the trigger, /goal supplies a target that outlives a single turn, and subagents get isolated cloud VMs with their own project copy and clean context so parallel work does not collide. Steering is the human input path: a message now waits for the agent's next tool call instead of interrupting the current action.",
+        "whyItMatters": "The gap this closes is the wait between an agent opening a PR and someone noticing CI failed. Cursor frames the goal as always-on agents that 'operate as a system, building and shipping software on their own without the need for intervention at each loop' — which shifts the reviewer's job from prompting to setting objectives and checking output.",
+        "forWho": "teams running Cursor cloud agents on shared repos",
+        "tryIt": "Type /goal in Cursor chat, or /in-cloud to hand a task to a cloud subagent"
+      },
+      "image": {
+        "url": "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/changelog/opengraph-changelog-08-17-26-5Fvh2Ff2noumYmXOC4Jqv93VpEABdp.png",
+        "alt": "Cursor changelog card for the cloud agents and harness update",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Changelog",
+          "url": "https://cursor.com/changelog/08-19-26"
+        },
+        {
+          "label": "Cloud Agent Docs",
+          "url": "https://cursor.com/docs/cloud-agent"
+        },
+        {
+          "label": "Subagent Docs",
+          "url": "https://cursor.com/docs/agent/subagents"
+        },
+        {
+          "label": "Modes Docs",
+          "url": "https://cursor.com/docs/agent/modes"
+        }
+      ],
+      "publishDate": "2026-08-19T18:39:07.975Z"
+    },
+    {
+      "id": "chaitanyagiri-munder-difflin",
+      "categories": [
+        "repo",
+        "tool"
+      ],
+      "title": "Munder Difflin v0.4.4 — a pixel-art office that runs your agent CLIs",
+      "org": "Munder Difflin",
+      "date": "2026-08-18",
+      "url": "https://github.com/chaitanyagiri/munder-difflin",
+      "summary": "Munder Difflin is an open-source desktop app that runs Claude Code, Codex, Gemini and other agent CLIs as avatars in a pixel-art office, passing messages to each other. Version 0.4.4 fixes agent-to-agent messaging on Windows.",
+      "tags": [
+        "repo",
+        "tool",
+        "multi-agent",
+        "agent-harness",
+        "claude-code",
+        "local-first",
+        "desktop-app",
+        "typescript",
+        "developer-tools",
+        "open-source"
+      ],
+      "importance": "notable",
+      "metrics": {
+        "GitHub stars": 2594,
+        "Version": "v0.4.4"
+      },
+      "explainer": {
+        "tagline": "Munder Difflin puts your agent CLIs on a pixel-art office floor and lets them message each other.",
+        "whatIsIt": "Munder Difflin wraps agent command-line tools — Claude Code, Codex, Gemini, Grok, Kimi, Qwen and others — as coworkers in a desktop app. Each agent is an avatar at a desk on a pixel-art office floor, and a supervising agent called Michael routes tasks and escalates decisions back to you. Version 0.4.4 landed on August 18.",
+        "howItWorks": "Two planes run side by side. The terminal plane spawns each agent as a real node-pty process running an actual CLI session, so nothing is simulated. The hive plane handles on-disk memory, atomic mailboxes, message routing and a shared blackboard, which is what lets agents keep context between sessions and hand work to each other.",
+        "whyItMatters": "Most multi-agent setups hide coordination inside a log file. Seeing envelopes fly between desks makes it obvious which agent is stuck and which is talking to whom, which is the part that usually goes wrong. The v0.4.4 release also unblocks Windows users, where a command-line argument truncation bug had stopped agents messaging each other entirely.",
+        "forWho": "developers juggling several agent CLIs at once",
+        "tryIt": "Clone github.com/chaitanyagiri/munder-difflin — needs Node.js 18+, a C/C++ toolchain and at least one agent CLI"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/eae796678075686d78afe079fc77fd63af3562144ae5364c5bf5c216ee1e4819/chaitanyagiri/munder-difflin",
+        "alt": "GitHub social card for the munder-difflin repository",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/chaitanyagiri/munder-difflin"
+        },
+        {
+          "label": "v0.4.4 Release",
+          "url": "https://github.com/chaitanyagiri/munder-difflin/releases/tag/v0.4.4"
+        },
+        {
+          "label": "Project Site",
+          "url": "https://munderdiffl.in"
+        }
+      ],
+      "publishDate": "2026-08-19T18:39:07.975Z"
+    },
+    {
+      "id": "two-minute-papers-deepseek-closed-ai-aug19",
+      "categories": [
+        "video"
+      ],
+      "title": "Two Minute Papers — 'DeepSeek Just Made Closed AI Look Ridiculous'",
+      "org": "Two Minute Papers",
+      "date": "2026-08-19",
+      "url": "https://www.youtube.com/watch?v=kyYepbhe1g8",
+      "summary": "Two Minute Papers covers DeepSeek V4 Pro 0813, DeepSeek's open-weights flagship. The video description lists the Hugging Face model card and seven developer posts on X as its sources.",
+      "tags": [
+        "video",
+        "two-minute-papers",
+        "deepseek",
+        "deepseek-v4-pro",
+        "open-weights",
+        "coding-model",
+        "explainer"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Two Minute Papers walks through DeepSeek V4 Pro 0813 and what open weights change for anyone paying a closed-model bill.",
+        "whatIsIt": "'DeepSeek Just Made Closed AI Look Ridiculous' is the August 19 Two Minute Papers episode on DeepSeek V4 Pro 0813, the open-weights flagship DeepSeek publishes on Hugging Face. The title states the video's argument; the description points at the model card and at seven posts from developers on X that it cites as evidence.",
+        "howItWorks": "Two Minute Papers runs its usual format — a short walkthrough of one result with clips and charts. What is unusual here is the sourcing: instead of a vendor benchmark deck, the listed material is the public Hugging Face model card plus community threads from Cline, TypingMind and other developers testing the model in real workflows.",
+        "whyItMatters": "DeepSeek V4 Pro 0813 is already in the feed as a release; this is the fast version for someone deciding whether open weights are worth the serving effort. The episode also lands the same week Ornith-1.5 shipped under MIT, so the 'open weights closing on closed flagships' argument now has more than one data point behind it.",
+        "forWho": "developers comparing open-weight models against a paid API",
+        "tryIt": "Watch the episode, then open huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813"
+      },
+      "author": {
+        "name": "Two Minute Papers",
+        "profileUrl": "https://www.youtube.com/channel/UCbfYPyITQ-7l4upoX8nvctg"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/kyYepbhe1g8/hqdefault.jpg",
+        "alt": "Two Minute Papers thumbnail for the episode on DeepSeek V4 Pro 0813",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=kyYepbhe1g8"
+        },
+        {
+          "label": "DeepSeek Model Card",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813"
+        },
+        {
+          "label": "Two Minute Papers",
+          "url": "https://www.youtube.com/channel/UCbfYPyITQ-7l4upoX8nvctg"
+        }
+      ],
+      "publishDate": "2026-08-19T18:39:07.975Z"
+    },
     {
       "id": "genbio-aido-cell",
       "categories": [
@@ -3249,14 +3643,13 @@
     {
       "id": "stripe-openrouter-acquisition",
       "categories": [
-        "rumor",
         "ecosystem"
       ],
-      "title": "Stripe buys OpenRouter for over $7B — reported deal, not yet confirmed",
+      "title": "OpenRouter is joining Stripe — the AI gateway confirms the deal",
       "org": "Stripe",
-      "date": "2026-08-16",
-      "url": "https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/",
-      "summary": "Stripe has agreed to buy OpenRouter for more than $7 billion, Bloomberg reported on August 16, citing people familiar with the matter. OpenRouter routes API calls across 400+ AI models. Stripe says it does not comment on rumors.",
+      "date": "2026-08-19",
+      "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
+      "summary": "OpenRouter confirmed on August 19 that it is joining Stripe. OpenRouter says the name, product, mission and roadmap all stay the same and that existing integrations do not change. The deal is expected to close in the coming weeks.",
       "tags": [
         "stripe",
         "openrouter",
@@ -3267,17 +3660,17 @@
         "developer-tools",
         "api"
       ],
-      "importance": "rumor",
+      "importance": "major",
       "metrics": {
         "Reported price": "$7B+",
         "Models routed": "400+",
         "Developers": "8 million"
       },
       "explainer": {
-        "tagline": "Bloomberg reports Stripe has agreed to buy OpenRouter, the gateway 8 million developers use to switch between AI models.",
-        "whatIsIt": "Stripe has agreed to buy OpenRouter for more than $7 billion, Bloomberg reported on August 16, 2026, citing people familiar with the matter who asked not to be named. OpenRouter is a single API that lets an app reach more than 400 AI models from different providers and pick one by task, price or speed. A Stripe spokesperson told TechCrunch the company does not comment on rumors or speculation, and OpenRouter also declined to comment.",
-        "howItWorks": "OpenRouter sits between an app and the model providers: developers send one request, and the gateway forwards it to whichever model they choose, with fallbacks when a provider fails. SiliconANGLE reports the company keeps roughly 5% of the inference spending that flows through it, and that annualized revenue reached about $50 million in March 2026, up from $19 million at the end of 2025. Weekly token volume hit 25 trillion by May 2026.",
-        "whyItMatters": "A Stripe-owned OpenRouter would put a payments company in charge of infrastructure that many AI apps depend on to stay provider-neutral, so teams routing through it should watch for changes to billing, terms and model coverage. The reported price is more than five times the $1.3 billion valuation OpenRouter carried after its $113 million Series B in May 2026. Treat this as reporting, not fact: Fortune notes the final price could still change, and the Wall Street Journal had earlier put the talks near $10 billion. A public statement from either company, or a regulatory filing, would confirm or deny it.",
+        "tagline": "OpenRouter, the gateway 8 million developers use to switch between AI models, has confirmed it is joining Stripe.",
+        "whatIsIt": "OpenRouter announced on August 19, 2026 that it is joining Stripe, ending three days of reporting that neither company would confirm. OpenRouter is a single API that reaches more than 400 AI models from different providers and picks one by task, price or speed. The company says it will keep operating as it is — same mission, same name, same product, same roadmap.",
+        "howItWorks": "The gateway sits between an app and the model providers: developers send one request, and OpenRouter forwards it to whichever model they choose, with fallbacks when a provider fails. Roughly 8 million people build on it. Nothing about that path changes on day one — OpenRouter says the transaction is subject to customary closing conditions and should close in the coming weeks.",
+        "whyItMatters": "A payments company now owns infrastructure that many AI apps depend on to stay provider-neutral. OpenRouter's answer is an explicit commitment that routing stays driven by what is best for the user, with every model on equal footing — worth holding them to as the deal closes. Bloomberg's reported price of more than $7 billion is over five times the $1.3 billion valuation OpenRouter carried after its $113 million Series B in May 2026.",
         "forWho": "developers who route LLM calls through a gateway"
       },
       "image": {
@@ -3288,6 +3681,10 @@
       },
       "links": [
         {
+          "label": "OpenRouter Announcement",
+          "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/"
+        },
+        {
           "label": "TechCrunch Report",
           "url": "https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/"
         },
@@ -3296,15 +3693,55 @@
           "url": "https://fortune.com/2026/08/16/stripe-7-billion-deal-ai-firm-openrouter-acquisition/"
         },
         {
-          "label": "SiliconANGLE Analysis",
-          "url": "https://siliconangle.com/2026/08/16/stripe-reportedly-finalizes-deal-buy-ai-model-router-openrouter-7b/"
-        },
-        {
           "label": "HN Discussion",
           "url": "https://news.ycombinator.com/item?id=49323381"
         }
       ],
-      "publishDate": "2026-08-17T03:05:34.703Z"
+      "publishDate": "2026-08-17T03:05:34.703Z",
+      "quickFacts": [
+        {
+          "label": "Buyer",
+          "value": "Stripe"
+        },
+        {
+          "label": "Target",
+          "value": "OpenRouter"
+        },
+        {
+          "label": "Announced",
+          "value": "August 19, 2026"
+        },
+        {
+          "label": "Reported price",
+          "value": "Over $7B (Bloomberg, August 16)"
+        },
+        {
+          "label": "Status",
+          "value": "Subject to closing conditions; expected in coming weeks"
+        },
+        {
+          "label": "Change for developers",
+          "value": "None — same API, name, product and roadmap"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does the Stripe deal change the OpenRouter API?",
+          "a": "No. OpenRouter states that 'if you build on OpenRouter today, nothing about your integration changes,' and that it will continue to operate with the same mission, name, product and roadmap. There is no migration step, no new endpoint and no announced deprecation tied to the Stripe acquisition."
+        },
+        {
+          "q": "How much is Stripe paying for OpenRouter?",
+          "a": "OpenRouter did not disclose the terms in its announcement. Bloomberg reported on August 16 that Stripe had agreed to pay more than $7 billion, a figure TechCrunch and Fortune also carried. Neither Stripe nor OpenRouter has confirmed a price publicly, so treat the number as reporting rather than a stated fact."
+        },
+        {
+          "q": "When does the Stripe and OpenRouter deal close?",
+          "a": "OpenRouter says the transaction is subject to customary closing conditions and that it expects to close 'in the coming weeks.' Until then OpenRouter continues to operate independently. The announcement names no regulatory review or condition beyond the customary ones, and gives no specific closing date."
+        },
+        {
+          "q": "Will OpenRouter still route to every model after the acquisition?",
+          "a": "OpenRouter says it will: 'routing decisions will remain driven by one thing: what's best for you, the user,' with the aim of keeping a neutral layer that puts every model on equal footing. That is a stated commitment rather than a contractual guarantee, so teams relying on provider neutrality should watch the terms as the deal closes."
+        }
+      ]
     },
     {
       "id": "simonw-qwen-3-8-27b-overthinking-aug16",

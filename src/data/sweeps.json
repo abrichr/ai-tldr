@@ -34062,6 +34062,87 @@
         "ecosystem",
         "algorithm"
       ]
+    },
+    {
+      "id": "sweep-20260819t183907z",
+      "timestamp": "2026-08-19T18:39:07.975Z",
+      "source": "github-actions-sweep",
+      "summary": "Four adds: Ornith-1.5 open MIT model family, Cursor's cloud-agent subscriptions update, the Munder Difflin v0.4.4 multi-agent harness trending on GitHub, and a fresh Two Minute Papers episode on DeepSeek V4 Pro 0813. Also promoted the Stripe/OpenRouter item from rumor to confirmed after OpenRouter's own announcement. Anthropic, OpenAI, Meta, Mistral, Qwen and the Chinese labs were quiet inside 72h; the science lane returned nothing with a released artifact in window.",
+      "counts": {
+        "added": 4,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "ornith-1-5",
+          "title": "Ornith-1.5 — open MIT model matches Claude Opus 4.8 on Terminal-Bench",
+          "category": "model",
+          "note": "Open-weight MIT model family shipped today, HN front page rank 4, benchmarks published against Claude Opus 4.8 and GLM-5.2; the 1.0 generation is already in the feed so this is a genuine new version, not a re-add."
+        },
+        {
+          "id": "cursor-agent-subscriptions",
+          "title": "Cursor Subscriptions — cloud agents watch a PR and drive it to done",
+          "category": "tool",
+          "note": "Distinct Cursor changelog entry (08-19-26) from the Origin item (08-17) and the Builds item (08-13); new features are subscriptions, custom modes, cloud subagents, /goal and steering."
+        },
+        {
+          "id": "chaitanyagiri-munder-difflin",
+          "title": "Munder Difflin v0.4.4 — a pixel-art office that runs your agent CLIs",
+          "category": "repo",
+          "note": "On github.com/trending today with ~797 stars gained; v0.4.4 shipped 2026-08-18 and fixes agent-to-agent messaging on Windows."
+        },
+        {
+          "id": "two-minute-papers-deepseek-closed-ai-aug19",
+          "title": "Two Minute Papers — 'DeepSeek Just Made Closed AI Look Ridiculous'",
+          "category": "video",
+          "note": "Fresh upload from yt-rss-scan (0h old). The other two scan hits (Sam Witteveen Docker Sandboxes and Qwen3.8-27B) are already in the feed."
+        }
+      ],
+      "updated": [
+        {
+          "id": "stripe-openrouter-acquisition",
+          "title": "OpenRouter is joining Stripe — the AI gateway confirms the deal",
+          "note": "OpenRouter confirmed the Stripe deal on its own blog on 2026-08-19, so this is no longer a rumor. Repointed url to the official announcement, moved importance rumor -> major, dropped the rumor category, and added the required quickFacts + faq."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem",
+        "security"
+      ]
+    },
+    {
+      "id": "sweep-20260819t183922z",
+      "timestamp": "2026-08-19T18:39:22.735Z",
+      "source": "github-actions-sweep",
+      "summary": "Follow-up patch: trimmed the cursor-agent-subscriptions summary to fit the 240-char cap flagged by the previous finalize run.",
+      "counts": {
+        "added": 0,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [
+        {
+          "id": "cursor-agent-subscriptions",
+          "title": "Cursor Subscriptions — cloud agents watch a PR and drive it to done",
+          "note": "Trim summary under the 240-char cap (was 245)."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "tool"
+      ]
     }
   ]
 }
