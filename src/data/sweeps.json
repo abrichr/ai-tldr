@@ -33766,6 +33766,40 @@
         "article",
         "algorithm"
       ]
+    },
+    {
+      "id": "sweep-20260819t030251z",
+      "timestamp": "2026-08-19T03:02:51.497Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, Qwen, Moonshot, DeepSeek, Z.ai, MiniMax), GitHub trending, HuggingFace models/datasets/papers, HN front page + Show HN, Simon Willison, tier-1 press and the AI-for-science lane; nearly every fresh story (Cursor Origin, Warp Factories, Cerebras CS-4, Mojo open source, OpenAI's Preparedness rewrite, the Copilot/Varonis research) was already in the feed. Added one: Sentence Transformers v6.0, which makes ColBERT-style late interaction a first-class model type.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "sentence-transformers-6-0",
+          "title": "Sentence Transformers v6.0 — ColBERT-style retrieval joins the library",
+          "category": "repo",
+          "note": "Major version of a 19k-star Apache-2.0 embedding library, announced on the official Hugging Face blog and tagged on GitHub the same day; adds a whole new model type with published NanoBEIR numbers and named breaking changes."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "security",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
