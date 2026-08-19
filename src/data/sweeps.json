@@ -33720,6 +33720,52 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260819t010413z",
+      "timestamp": "2026-08-19T01:04:13.681Z",
+      "source": "github-actions-sweep",
+      "summary": "Added three August 18 launches: Warp Factories (cloud agent pipelines), the Cerebras CS-4 wafer-scale inference rack, and Varonis' CoSnitch chain in Microsoft Copilot Personal. Lab blogs were quiet (Anthropic last posted Aug 14, Meta July, Mistral Aug 11, DeepMind Aug 6); both fresh YouTube videos and every qualifying HN, HF and GitHub-trending item were already in the feed.",
+      "counts": {
+        "added": 3,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "warp-factories",
+          "title": "Warp Factories — cloud agent pipelines for the whole dev cycle",
+          "category": "tool",
+          "note": "Real product launch on warp.dev Aug 18 with TechCrunch coverage and a live docs section; distinct from the existing warp-agent-cli item."
+        },
+        {
+          "id": "cerebras-cs-4",
+          "title": "Cerebras CS-4 — three wafer-scale chips per rack, 30x GPU token speed",
+          "category": "ecosystem",
+          "note": "Shipped hardware announcement (not a financial story) on the official Cerebras blog plus a GlobeNewswire press release and The Register; only ecosystem-primary item this sweep."
+        },
+        {
+          "id": "varonis-cosnitch-copilot",
+          "title": "CoSnitch — Copilot explained its own flaws, then leaked user data",
+          "category": "security",
+          "note": "Patched CVE with a full Varonis write-up and coverage from The Register and The Hacker News; separate vulnerability from the existing Copilot Autofix and Copilot-for-Word items."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "dataset",
+        "paper",
+        "benchmark",
+        "video",
+        "security",
+        "ecosystem",
+        "article",
+        "algorithm"
+      ]
     }
   ]
 }

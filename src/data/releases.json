@@ -1,8 +1,321 @@
 {
-  "generatedAt": "2026-08-18T22:27:50.227Z",
+  "generatedAt": "2026-08-19T01:04:13.681Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "warp-factories",
+      "categories": [
+        "tool"
+      ],
+      "title": "Warp Factories — cloud agent pipelines for the whole dev cycle",
+      "org": "Warp",
+      "date": "2026-08-18",
+      "url": "https://www.warp.dev/blog/open-infrastructure-for-building-a-software-factory",
+      "summary": "Warp Factories is closed-beta cloud infrastructure that runs fleets of coding agents from ticket triage to a reviewed pull request. Factory definitions live in version-controlled files, and humans approve at the checkpoints they choose.",
+      "tags": [
+        "warp",
+        "warp-factories",
+        "coding-agents",
+        "agent-orchestration",
+        "software-factory",
+        "devtools",
+        "sdlc",
+        "automation",
+        "cloud-agents",
+        "claude-code",
+        "mcp"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Tasks Warp automates internally": "~30%"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Warp"
+        },
+        {
+          "label": "Availability",
+          "value": "Closed beta, request access"
+        },
+        {
+          "label": "Pipeline stages",
+          "value": "Triage, spec, implement, review, verify, monitor"
+        },
+        {
+          "label": "Agent harnesses",
+          "value": "Claude Code, Codex, Cursor, Warp Agent"
+        },
+        {
+          "label": "Triggers",
+          "value": "Slack, Teams, Linear, Jira, GitHub, GitLab"
+        },
+        {
+          "label": "Hosting",
+          "value": "Warp cloud or bring your own inference"
+        },
+        {
+          "label": "Starter credit",
+          "value": "$10,000 of factory use for qualified orgs"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much does Warp Factories cost?",
+          "a": "Warp Factories is billed by usage per agent run, and Warp has not published the per-run rates. Qualified organizations that join the closed beta get $10,000 of factory use for free to start. TechCrunch reported the same: the early-access page asks teams to request access rather than listing a price."
+        },
+        {
+          "q": "Can Warp Factories use models and agents other than Warp's own?",
+          "a": "Yes. Warp Factories is model-agnostic and runs Claude Code, Codex, Cursor and open-weight models, and each pipeline stage can pick its own model and harness. A Factory MCP server lets local coding agents send work into a factory, so teams can benchmark configurations against their own workflows."
+        },
+        {
+          "q": "Does Warp Factories keep my source code on Warp's servers?",
+          "a": "Not necessarily. Warp Factories lets an organization bring its own inference and hosting instead of using Warp's infrastructure, and offers a zero-data-retention option. Warp states that customer data stays under customer control, which is aimed at teams with sovereignty or compliance requirements."
+        },
+        {
+          "q": "How is Warp Factories different from the Warp Agent CLI?",
+          "a": "Warp Factories is cloud infrastructure that coordinates many specialist agents from intake through to a reviewed pull request, with dashboards and human checkpoints. The Warp Agent CLI, released on August 4, 2026, is a single coding agent you drive interactively in your own terminal."
+        }
+      ],
+      "explainer": {
+        "tagline": "Warp Factories turns a backlog ticket into a reviewed pull request using fleets of cloud coding agents.",
+        "whatIsIt": "Warp Factories is new cloud infrastructure for running a \"software factory\" — a repeatable pipeline where coding agents triage a ticket, write a spec, implement it, review it, verify it and monitor the result. It launched in closed beta on August 18, 2026. Warp CEO Zach Lloyd told TechCrunch that running and managing agents at scale \"is actually a huge infrastructure undertaking to do this right\", and Factories is Warp's answer for teams that do not want to build that plumbing themselves.",
+        "howItWorks": "Each factory is defined in version-controlled configuration files, so a pipeline is reviewed and changed like code. Work enters through Slack, Teams, Linear, Jira, GitHub, GitLab, a terminal, an IDE, or a schedule, and the results flow back to the tool the request came from. Every stage picks its own model and harness, humans approve at the checkpoints the team sets, and a dashboard tracks cost per pull request and code quality across runs.",
+        "whyItMatters": "Smaller engineering teams can now rent agent orchestration instead of building it, which was the main thing separating them from companies with in-house agent platforms. Warp says factories already handle about 30% of its own internal tasks, and Lloyd expects that share to grow as models improve. Because the platform is model-agnostic, teams are not locked to one vendor's coding agent.",
+        "forWho": "engineering teams running coding agents at scale",
+        "tryIt": "Request early access at warp.dev/factories"
+      },
+      "image": {
+        "url": "https://cdn.sanity.io/images/1ygbk6d0/production/2bc8c9e158d6d482df834e76f379941cb995f531-3200x1600.png",
+        "alt": "Warp Factories announcement graphic",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.warp.dev/blog/open-infrastructure-for-building-a-software-factory"
+        },
+        {
+          "label": "Product Page",
+          "url": "https://www.warp.dev/factories"
+        },
+        {
+          "label": "Docs",
+          "url": "https://docs.warp.dev/factories"
+        },
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/18/warps-new-system-is-an-out-of-the-box-software-factory-for-ai-development/"
+        }
+      ],
+      "publishDate": "2026-08-19T01:04:13.681Z"
+    },
+    {
+      "id": "cerebras-cs-4",
+      "categories": [
+        "ecosystem",
+        "tool"
+      ],
+      "title": "Cerebras CS-4 — three wafer-scale chips per rack, 30x GPU token speed",
+      "org": "Cerebras",
+      "date": "2026-08-18",
+      "url": "https://www.cerebras.ai/blog/introducing-cerebras-cs-4",
+      "summary": "Cerebras CS-4 packs three Wafer Scale Engine 3 Turbo processors into one rack for 750 PFLOPS. Cerebras says it serves tokens up to 30 times faster per user than GPU systems and ships to first customers this quarter.",
+      "tags": [
+        "cerebras",
+        "cs-4",
+        "wse-3-turbo",
+        "nexus",
+        "wafer-scale",
+        "inference",
+        "hardware",
+        "accelerator",
+        "datacenter",
+        "tokens-per-second",
+        "agentic-inference"
+      ],
+      "importance": "major",
+      "metrics": {
+        "AI compute per rack": "750 PFLOPS",
+        "Speed vs GPU systems": "up to 30x"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Cerebras"
+        },
+        {
+          "label": "Processor",
+          "value": "3 x Wafer Scale Engine 3 Turbo (WSE-3T)"
+        },
+        {
+          "label": "Transistors per wafer",
+          "value": "4 trillion"
+        },
+        {
+          "label": "Cores per wafer",
+          "value": "900,000"
+        },
+        {
+          "label": "On-wafer SRAM",
+          "value": "44 GB per wafer"
+        },
+        {
+          "label": "Memory bandwidth",
+          "value": "129.6 PB/s per rack"
+        },
+        {
+          "label": "Availability",
+          "value": "First shipments this quarter"
+        }
+      ],
+      "faq": [
+        {
+          "q": "When can you buy a Cerebras CS-4?",
+          "a": "Cerebras says the first CS-4 shipments begin this quarter, which is the third quarter of 2026. The system is sold as a rack-scale solution rather than a single card, and Cerebras has not published a list price for it. The wafers are fabricated on TSMC's 5-nanometer process."
+        },
+        {
+          "q": "How is the CS-4 different from the CS-3?",
+          "a": "The CS-4 is up to twice as fast as the CS-3 and delivers up to 10 times more throughput per watt, which is the number Cerebras leans on for data-center economics. It is also the first system built on the new Cerebras Nexus rack-scale architecture, which splits a rack into separate compute, power and I/O modules."
+        },
+        {
+          "q": "How large a model can a CS-4 cluster serve?",
+          "a": "Cerebras states a CS-4 cluster supports models with more than 50 trillion parameters. Direct Wafer Links cut wafer-to-wafer latency to as low as two microseconds, which is what lets many racks act as one machine. On models above 10 trillion parameters, Cerebras reports more than 1,000 tokens per second."
+        },
+        {
+          "q": "How fast is the CS-4 on a real open model?",
+          "a": "Cerebras reports more than 4,400 tokens per second per user on GPT-OSS-120B, which is the basis of its claim of up to 30 times the tokens-per-second-per-user of GPU systems. CTO Sean Lie argues that being 30 times faster \"gives agentic systems room for significantly more reasoning and tool use\"."
+        }
+      ],
+      "explainer": {
+        "tagline": "Cerebras CS-4 puts three wafer-sized AI chips in one rack and aims squarely at GPU inference speed.",
+        "whatIsIt": "The CS-4 is Cerebras' new rack-scale inference system, announced on August 18, 2026. It is built from three Wafer Scale Engine 3 Turbo processors, each a single wafer holding 4 trillion transistors, 900,000 AI cores and 44 GB of on-wafer SRAM across 46,225 square millimetres of silicon. One rack delivers 750 PFLOPS of AI compute.",
+        "howItWorks": "Keeping weights in SRAM on the wafer removes the trip to external memory that limits GPU inference, and the CS-4 rack reaches 129.6 petabytes per second of memory bandwidth plus 7.2 terabits per second of system I/O. Direct Wafer Links join wafers with as little as two microseconds of latency, so clusters can hold models above 50 trillion parameters. The rack is the first machine on the Nexus architecture, which separates compute, power and I/O into swappable modules.",
+        "whyItMatters": "Speed per user, not total throughput, is what makes an agent feel usable, and agent loops burn tokens on reasoning and tool calls. Cerebras reports more than 4,400 tokens per second per user on GPT-OSS-120B and up to 10 times the throughput per watt of the CS-3, so the pitch is both faster responses and cheaper power. The Register frames it as another push at Nvidia's hold on inference hardware.",
+        "forWho": "inference providers and teams serving frontier-scale models"
+      },
+      "image": {
+        "url": "https://cdn.sanity.io/images/e4qjo92p/production/d109d095daa0d697a3929226431d9f206f14e73d-2697x1568.png?rect=0,76,2697,1416&w=1200&h=630&fit=max&auto=format",
+        "alt": "Cerebras CS-4 rack-scale AI system announcement",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.cerebras.ai/blog/introducing-cerebras-cs-4"
+        },
+        {
+          "label": "Press Release",
+          "url": "https://www.manilatimes.net/2026/08/19/tmt-newswire/globenewswire/cerebras-unveils-cs-4-up-to-30-times-faster-than-gpu-based-solutions/2408047"
+        },
+        {
+          "label": "The Register",
+          "url": "https://www.theregister.com/systems/2026/08/19/cerebras-cs-4-rack-systems-juice-chips-for-every-last-drop-of-ai-performance/5289286"
+        }
+      ],
+      "publishDate": "2026-08-19T01:04:13.681Z"
+    },
+    {
+      "id": "varonis-cosnitch-copilot",
+      "categories": [
+        "security"
+      ],
+      "title": "CoSnitch — Copilot explained its own flaws, then leaked user data",
+      "org": "Varonis",
+      "date": "2026-08-18",
+      "url": "https://www.varonis.com/blog/cosnitch",
+      "summary": "Varonis Threat Labs chained three Microsoft Copilot Personal flaws, tracked as CVE-2026-24301, so one clicked link could quietly pull a victim's mail, files and chat history. Microsoft shipped patches on August 18, 2026.",
+      "tags": [
+        "security",
+        "varonis",
+        "cosnitch",
+        "microsoft-copilot",
+        "prompt-injection",
+        "memory-poisoning",
+        "data-exfiltration",
+        "cve-2026-24301",
+        "vulnerability-disclosure",
+        "oauth",
+        "ai-assistants"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Reported by",
+          "value": "Varonis Threat Labs"
+        },
+        {
+          "label": "Affected product",
+          "value": "Microsoft Copilot Personal (copilot.microsoft.com)"
+        },
+        {
+          "label": "CVE",
+          "value": "CVE-2026-24301"
+        },
+        {
+          "label": "Chained flaws",
+          "value": "3"
+        },
+        {
+          "label": "Reported to Microsoft",
+          "value": "December 2025"
+        },
+        {
+          "label": "Patched",
+          "value": "August 18, 2026"
+        },
+        {
+          "label": "Exploited in the wild",
+          "value": "No evidence found"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Do Copilot users need to do anything now that CoSnitch is patched?",
+          "a": "Microsoft shipped the CoSnitch patches on August 18, 2026, so the one-click auto-run path is closed without user action. Instructions already written into Copilot's memory store are a separate problem: Varonis reports they survive password changes and device re-enrollment, so anyone worried should review and delete saved Copilot memories by hand."
+        },
+        {
+          "q": "What data could CoSnitch reach?",
+          "a": "CoSnitch reached whatever the victim's Copilot session was connected to. Varonis lists message bodies, subject lines and sender and recipient metadata from linked mail accounts, calendar titles, attendees, times and locations, file names and metadata summaries from Google Drive, full prior chat history, and the user's saved memory instructions."
+        },
+        {
+          "q": "Was CoSnitch used by real attackers?",
+          "a": "Varonis Threat Labs found no evidence that CoSnitch was exploited in the wild before Microsoft's fix. The researchers reported the chain privately in December 2025 and held publication until the patch shipped roughly eight months later, on August 18, 2026."
+        },
+        {
+          "q": "Does CoSnitch affect Microsoft 365 Copilot at work?",
+          "a": "The Varonis research targets Microsoft Copilot Personal, the consumer assistant at copilot.microsoft.com. The published reports do not state whether Microsoft 365 Copilot, the work version, is affected, so enterprise admins should treat that as unanswered rather than assume either way."
+        }
+      ],
+      "explainer": {
+        "tagline": "Varonis chained three Microsoft Copilot Personal flaws so one clicked link could silently steal mail, files and chat history.",
+        "whatIsIt": "CoSnitch is a chain of three flaws in Microsoft Copilot Personal, disclosed by Varonis Threat Labs on August 18, 2026 and tracked as CVE-2026-24301. A single click on a crafted link was enough to run an attacker's prompt inside the victim's own signed-in session, with no further interaction. Microsoft patched it the same day the research was published.",
+        "howItWorks": "The researchers call their method \"meta-hacking\": they kept asking Copilot why an attack would not work, and the assistant named the undocumented settings that made it work. Pairing a query parameter with an undocumented \"?autorun=1\" parameter made Copilot execute an embedded prompt automatically. From there, OAuth connectors carried data out, and a booby-trapped web page, once summarized, wrote attacker instructions into the user's persistent memory store.",
+        "whyItMatters": "The memory-poisoning step is what makes CoSnitch worse than a normal data leak, because injected instructions shape every later session and stay put through a password reset. It also shows a defensive blind spot: an assistant's own reasoning can be talked into describing its guardrails. Security teams reviewing AI assistants now have a named example of connector access plus persistent memory turning one click into ongoing compromise.",
+        "forWho": "security teams and admins reviewing AI assistants"
+      },
+      "image": {
+        "url": "https://www.varonis.com/hubfs/Blog_VTL-CoSnitch_202608_V1%20(1).png",
+        "alt": "Varonis Threat Labs CoSnitch research on Microsoft Copilot",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Varonis Research",
+          "url": "https://www.varonis.com/blog/cosnitch"
+        },
+        {
+          "label": "The Register",
+          "url": "https://www.theregister.com/research/2026/08/18/copilot-tricked-into-telling-reseachers-how-to-hack-itself/5288857"
+        },
+        {
+          "label": "The Hacker News",
+          "url": "https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html"
+        }
+      ],
+      "publishDate": "2026-08-19T01:04:13.681Z"
+    },
     {
       "id": "modular-mojo-open-source",
       "categories": [
