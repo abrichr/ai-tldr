@@ -1,8 +1,116 @@
 {
-  "generatedAt": "2026-08-19T04:42:04.550Z",
+  "generatedAt": "2026-08-19T06:41:04.326Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "anthropic-claude-protein-design",
+      "categories": [
+        "paper",
+        "dataset"
+      ],
+      "title": "Claude designs protein binders — 14 of 15 targets bound in lab tests",
+      "org": "Anthropic",
+      "date": "2026-08-18",
+      "url": "https://www.anthropic.com/research/Claude-accelerates-protein-design",
+      "summary": "Anthropic published lab-tested results showing Claude designed working protein binders for 14 of 15 targets. Adaptyv Bio and Twist Bioscience made and measured the designs. Hit rates ran 22.6% to 35.1%, against 10-15% typical for the field.",
+      "tags": [
+        "anthropic",
+        "claude",
+        "protein-design",
+        "drug-discovery",
+        "molecular-design",
+        "computational-biology",
+        "open-dataset",
+        "technical-report",
+        "wet-lab-validation"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "Claude designed de novo protein binders that two outside labs built and confirmed, hitting 14 of 15 targets.",
+        "whatIsIt": "Anthropic ran a protein design campaign in which Claude produced de novo protein binders on its own, working from a single prompt written by a human expert for each target. Claude Mythos Preview and Claude Opus 4.8 designed candidates against 16 targets. Two outside labs, Adaptyv Bio and Twist Bioscience, then made the proteins and measured whether they stuck.",
+        "howItWorks": "A binder is a small protein built to grab onto a chosen target and block or change what it does. Of the 16 targets, 15 gave clear results, and Claude produced binders for 14 of them. The share of individual designs that bound was 22.6% for Claude Opus 4.8 in multi-target mode, 26.7% for Claude Mythos Preview in the same mode, and 35.1% for Mythos Preview when it focused on one target at a time. Anthropic reports 10% to 15% as typical for protein design campaigns today. A separate analytical chemistry test had Claude Opus 5 read NMR and LC-MS data in 23 and 19 minutes; it measured purity at 96.4% where the contract lab reported 96.33%.",
+        "whyItMatters": "Designing a binder for a new target has usually taken a specialist weeks or months, so this changes who can start that work and how fast. The results also come with public data: Anthropic released the prompts and experimental measurements on Hugging Face under CC-BY-4.0, plus two technical reports, so other groups can check the numbers instead of taking the claim on trust. Anthropic is clear that binders are not drugs, and the work has drawn public skepticism from people in the field.",
+        "forWho": "protein engineers and drug-discovery teams",
+        "tryIt": "https://huggingface.co/datasets/Anthropic/claude-protein-binder-design"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Anthropic"
+        },
+        {
+          "label": "Models used",
+          "value": "Claude Mythos Preview, Claude Opus 4.8"
+        },
+        {
+          "label": "Result",
+          "value": "Binders for 14 of 15 targets"
+        },
+        {
+          "label": "Best hit rate",
+          "value": "35.1% (Mythos Preview, single target)"
+        },
+        {
+          "label": "Typical field hit rate",
+          "value": "10-15%"
+        },
+        {
+          "label": "Lab validation",
+          "value": "Adaptyv Bio and Twist Bioscience"
+        },
+        {
+          "label": "Released data",
+          "value": "Prompts + measurements, CC-BY-4.0"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Are Claude's protein binders actual drugs?",
+          "a": "No. Anthropic states plainly that protein binders are not drugs, and that designing a high-affinity binder is only the first step toward a drug-like molecule. A binder still has to clear stability, delivery, safety and manufacturing work before it could ever be tested in people, and none of that was part of this campaign."
+        },
+        {
+          "q": "How do Claude's hit rates compare with normal protein design work?",
+          "a": "Anthropic reports that 10% to 15% of designs bind in a typical protein design campaign today. In this campaign the share of Claude designs that bound ran from 22.6% up to 35.1%, depending on the model and whether it worked on one target at a time or several at once. Some designs bound several times more tightly than the best published de novo binder."
+        },
+        {
+          "q": "Who checked the results?",
+          "a": "Adaptyv Bio and Twist Bioscience produced and tested the designs independently of Anthropic. They ran the wet-lab work that turned Claude's sequences into real proteins and measured binding, using methods including surface plasmon resonance and biolayer interferometry."
+        },
+        {
+          "q": "Can I download the data behind the protein design claims?",
+          "a": "Yes. Anthropic published the prompts and experimental measurements as the claude-protein-binder-design dataset on Hugging Face, licensed CC-BY-4.0, with between 100,000 and 1 million entries. Two technical reports, one on protein design and one on analytical chemistry, are linked from the research post as PDFs."
+        },
+        {
+          "q": "What did Claude Opus 5 do in the chemistry part of the work?",
+          "a": "Claude Opus 5 handled the analytical chemistry test, reading NMR and LC-MS data for a compound in 23 and 19 minutes. Its answers matched the contract lab within tolerance: hydrogen counts agreed to within 0.08 proton, and Claude Opus 5 put purity at 96.4% where the lab measured 96.33%."
+        }
+      ],
+      "image": {
+        "url": "https://cdn.sanity.io/images/4zrzovbb/website/e3758f1bc27af0786f4249cc1ab194fc2c6cce63-3840x2160.png",
+        "alt": "Anthropic research post header for Claude's protein design and analytical chemistry results",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Research Post",
+          "url": "https://www.anthropic.com/research/Claude-accelerates-protein-design"
+        },
+        {
+          "label": "Protein Design Report",
+          "url": "https://www-cdn.anthropic.com/30bf50e22a01388bb29bf077ee3f244531594b7a.pdf"
+        },
+        {
+          "label": "Chemistry Report",
+          "url": "https://www-cdn.anthropic.com/9f08da5189ac269b3242ca760de9823805c3f5f6.pdf"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/Anthropic/claude-protein-binder-design"
+        }
+      ],
+      "publishDate": "2026-08-19T06:41:04.326Z"
+    },
     {
       "id": "sentence-transformers-6-0",
       "categories": [

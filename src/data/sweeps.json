@@ -33827,6 +33827,40 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260819t064104z",
+      "timestamp": "2026-08-19T06:41:04.326Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Qwen, DeepSeek, Z.ai, Moonshot), GitHub trending, Hugging Face models/datasets/papers, HN front page, 8 YouTube feeds, the AI-for-science lane and tier-1 press. One item qualified: Anthropic's Aug 18 protein design results, shipped with a public CC-BY-4.0 dataset and two technical reports. Everything else on HN and GitHub trending today (Cerebras CS-4, Cursor Origin, turbovec, GLM-5.3, Mojo open source, ChatGPT for Teens, OpenAI's post-breach safeguards) is already in the feed; GenBio's AIDO Cell 1.0 was dropped because genbio.ai returns 403 and no released artifact could be verified in this run.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "anthropic-claude-protein-design",
+          "title": "Claude designs protein binders — 14 of 15 targets bound in lab tests",
+          "category": "paper",
+          "note": "Top-lab blog post inside 48h with a released artifact (public CC-BY-4.0 dataset + two technical reports) and independent wet-lab validation by Adaptyv Bio and Twist Bioscience; kept at major rather than seismic because community discussion is still thin and no new model shipped."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "article",
+        "security",
+        "ecosystem",
+        "benchmark"
+      ]
     }
   ]
 }
