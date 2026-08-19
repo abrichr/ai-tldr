@@ -1,8 +1,117 @@
 {
-  "generatedAt": "2026-08-19T10:31:44.449Z",
+  "generatedAt": "2026-08-19T12:44:15.456Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "volcengine-openviking-0-4-14",
+      "categories": [
+        "repo",
+        "tool"
+      ],
+      "title": "OpenViking v0.4.14 — agents can now write and edit inside the memory store",
+      "org": "Volcengine",
+      "date": "2026-08-17",
+      "url": "https://github.com/volcengine/OpenViking/releases/tag/v0.4.14",
+      "summary": "OpenViking v0.4.14 lets an agent write and edit files inside the viking:// workspace over MCP, adds an Agent Plugins 1.0 package and a DeepSeek Harness plugin, and drops two vector backends.",
+      "tags": [
+        "openviking",
+        "volcengine",
+        "agent-memory",
+        "mcp",
+        "rag",
+        "context-engineering",
+        "vector-database",
+        "open-source",
+        "agents",
+        "python"
+      ],
+      "importance": "major",
+      "metrics": {
+        "GitHub stars": "29,830",
+        "Commits in release": 82
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Volcengine"
+        },
+        {
+          "label": "Version",
+          "value": "v0.4.14 (hotfix v0.4.15)"
+        },
+        {
+          "label": "License",
+          "value": "AGPL-3.0"
+        },
+        {
+          "label": "New MCP verbs",
+          "value": "tree, write, edit"
+        },
+        {
+          "label": "Removed backends",
+          "value": "Qdrant, openGauss"
+        },
+        {
+          "label": "Vector backends left",
+          "value": "local, cuvs, http, volcengine, vikingdb"
+        }
+      ],
+      "explainer": {
+        "tagline": "Volcengine's open-source context database turns its viking:// namespace into a place agents can write to, not just read from.",
+        "whatIsIt": "MCP clients gain three new verbs in OpenViking v0.4.14 — tree, write and edit — so an agent can browse a directory, create or append a file, and apply an exact string replacement inside the viking:// workspace. Earlier versions only let agents read what had already been stored. OpenViking is Volcengine's open-source context database that keeps agent memory, knowledge retrieval and skills in one system.",
+        "howItWorks": "Writes go through the same indexing pipeline as ingested documents. An edit only lands when the match is unique, and it leaves the file untouched when the match is missing or ambiguous; passing wait=true blocks until the semantic and vector indexes refresh, so a follow-up search sees the change. The release also ships an Agent Plugins 1.0 package with a stdio-to-HTTP MCP proxy that carries no npm runtime dependencies, plus a DeepSeek Harness plugin that injects recalled context as user messages at agent/pre-step instead of rewriting the system prompt.",
+        "whyItMatters": "Teams running OpenViking have real migration work in this release: two vector backends were dropped, the embedded Python clients are no longer exported, and memory extraction always uses V3, so anyone on those paths has to move before upgrading. In exchange, agents in DeerFlow, TRAE and OpenCode get automatic recall and session capture without custom glue code.",
+        "forWho": "teams building agent memory",
+        "tryIt": "pip install openviking && openviking-server init"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/volcengine/OpenViking",
+        "alt": "OpenViking GitHub repository card — Volcengine's context database for AI agents",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Release Notes",
+          "url": "https://github.com/volcengine/OpenViking/releases/tag/v0.4.14"
+        },
+        {
+          "label": "Repository",
+          "url": "https://github.com/volcengine/OpenViking"
+        },
+        {
+          "label": "Full Changelog",
+          "url": "https://github.com/volcengine/OpenViking/compare/v0.4.13...v0.4.14"
+        },
+        {
+          "label": "Agent Plugins Package",
+          "url": "https://github.com/volcengine/OpenViking/tree/main/agent-plugins"
+        },
+        {
+          "label": "v0.4.15 Hotfix",
+          "url": "https://github.com/volcengine/OpenViking/releases/tag/v0.4.15"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Do I have to migrate anything before upgrading to OpenViking v0.4.14?",
+          "a": "OpenViking v0.4.14 removes the Qdrant and openGauss vector backends, so deployments on either must migrate their data and configuration first. The embedded Python clients are also gone, and memory.version is ignored because extraction always runs the V3 path. Deployments already on the local, cuvs, http, volcengine or vikingdb backends need no data migration."
+        },
+        {
+          "q": "How does OpenViking v0.4.14 connect to DeepSeek Harness?",
+          "a": "OpenViking v0.4.14 ships @openviking/dsh-memory-plugin, which adds automatic recall, session capture, retryable-write replay and model-callable memory tools to DeepSeek Harness. The plugin is pinned to @deepseek-ai/dsh version 0.1.0-rc.6 and needs Node.js ^22.19.0 or 24 and up, plus a reachable OpenViking server."
+        },
+        {
+          "q": "Can I use OpenViking from Python without running the full server?",
+          "a": "Applications that only talk to an existing OpenViking server can install the standalone openviking-sdk package and use SyncHTTPClient with a server URL and API key. The full openviking package is now only needed on the machine that runs the server itself, since the embedded and local Python clients were removed in v0.4.14."
+        },
+        {
+          "q": "Which agent tools work with OpenViking v0.4.14 out of the box?",
+          "a": "OpenViking v0.4.14 documents setup for DeerFlow through both MemoryManager and MCP, a Hooks-plus-MCP integration for TRAE and TRAE CN, a hooks-only mode for OpenCode, and a DeepSeek Harness plugin. Any client that follows the Agent Plugins 1.0 specification can use the bundled package, though that route has no automatic session capture."
+        }
+      ],
+      "publishDate": "2026-08-19T12:44:15.456Z"
+    },
     {
       "id": "microsoft-agent-lightning-1-0",
       "categories": [

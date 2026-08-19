@@ -33941,6 +33941,40 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260819t124415z",
+      "timestamp": "2026-08-19T12:44:15.456Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Qwen, DeepSeek, Z.ai, MiniMax, Moonshot, ByteDance), GitHub trending, HuggingFace models/datasets/papers, HN front page and Show HN, 8 YouTube creator feeds, coding-agent changelogs, OSS release feeds, tier-1 press and the AI-for-science lane. One item qualified: OpenViking v0.4.14, trending on GitHub today with a substantial 82-commit release. Everything else was already in the feed (Cerebras CS-4, Mojo open source, turbovec, ChatGPT for Teens, OpenAI's safety overhaul, Cursor Origin, Warp Factories, the Sam Witteveen Qwen3.8 video), older than 72h (The Stack v3, OpenAI Presence, omlx 0.6.0, WeatherNext Cyclones), or patch-only (Claude Code 2.1.235, llama.cpp v0.1.2, OpenHands v1.14.0, transformers v5.15.1). GenBio AI's AIDO Cell virtual-cell model was dropped: early access is not yet available and genbio.ai blocks fetches, so the primary source could not be verified.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "volcengine-openviking-0-4-14",
+          "title": "OpenViking v0.4.14 — agents can now write and edit inside the memory store",
+          "category": "repo",
+          "note": "#4 on GitHub trending today (+803 stars, 29.8k total); the v0.4.14 release adds agent-writable MCP verbs and an Agent Plugins 1.0 package while removing two vector backends, so downstream users have concrete migration work."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
