@@ -1,8 +1,188 @@
 {
-  "generatedAt": "2026-08-19T18:39:22.735Z",
+  "generatedAt": "2026-08-19T20:29:20.625Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "google-gemini-student-study-tools",
+      "categories": [
+        "tool"
+      ],
+      "title": "Gemini study tools — 3D simulations and a free year of Google AI for students",
+      "org": "Google",
+      "date": "2026-08-19",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/",
+      "summary": "Google gives eligible US college students a free year of Google AI Pro, normally $19.99 a month, and students in 140+ other markets a free year of Google AI Plus. Gemini, Search and Lens gain study notebooks, quizzes and 3D simulations.",
+      "tags": [
+        "google",
+        "gemini",
+        "google-ai-pro",
+        "google-ai-plus",
+        "google-search",
+        "google-lens",
+        "study-tools",
+        "education",
+        "students",
+        "3d-simulation",
+        "deep-research",
+        "ai-in-education"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Google"
+        },
+        {
+          "label": "Who qualifies",
+          "value": "Verified college students"
+        },
+        {
+          "label": "US offer",
+          "value": "One year of Google AI Pro, free"
+        },
+        {
+          "label": "International offer",
+          "value": "One year of Google AI Plus in 140+ markets"
+        },
+        {
+          "label": "Redeem by",
+          "value": "December 31, 2026"
+        },
+        {
+          "label": "New in Gemini",
+          "value": "Study notebooks, 3D simulations, Deep Research in Gemini Live"
+        },
+        {
+          "label": "Student hub",
+          "value": "gemini.google.com/students"
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "Google AI Pro — US students",
+            "price": "$0",
+            "unit": "/ 12 months",
+            "note": "Normally $19.99 per month"
+          },
+          {
+            "plan": "Google AI Plus — 140+ other markets",
+            "price": "$0",
+            "unit": "/ 12 months",
+            "note": "Normally $4.99 per month"
+          }
+        ],
+        "source": "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/"
+      },
+      "explainer": {
+        "tagline": "Google gives verified college students a free year of its paid AI plans and adds study tools across Gemini, Search and Lens.",
+        "whatIsIt": "Study notebooks, interactive 3D simulations and a dedicated student hub are the headline additions in Google's back-to-school AI update, published on 19 August 2026. Alongside the tools, Google is giving eligible college students a full year of its paid AI plan at no cost: Google AI Pro in the United States, Google AI Plus in more than 140 other markets. The new features span the Gemini app, Google Search and Google Lens.",
+        "howItWorks": "Instead of returning a static picture, the Gemini app now builds a working 3D simulation from a prompt — a DNA structure a student can rotate and zoom into, for example. Deep Research runs inside Gemini Live, so a multi-step research report can be discussed out loud. In Search, uploaded PDFs, slides, documents and handwritten notes are turned into study documents and practice quizzes, and Lens is getting an interactive mode that explains a concept and points out where an answer went wrong.",
+        "whyItMatters": "A free year of a $19.99-a-month plan puts Google AI Pro in front of US undergraduates at no cost, which is a direct move against ChatGPT's strong position with students. For learners, the practical change is that Search and Gemini now build an interactive tool, simulation or quiz around a topic instead of returning links to read.",
+        "forWho": "students and educators",
+        "tryIt": "https://gemini.google.com/students"
+      },
+      "faq": [
+        {
+          "q": "What do students outside the United States get?",
+          "a": "Students in more than 140 markets outside the US get one year of Google AI Plus rather than Google AI Pro. That plan normally costs $4.99 a month and includes access to Gemini Omni, roughly twice the usage limits of the free tier, and 400 GB of storage. The US offer is the larger one, with 5 TB of storage and Google Health Premium."
+        },
+        {
+          "q": "What can Gemini's new 3D simulations actually do?",
+          "a": "Gemini generates functional 3D simulations from a plain request, so a student asking how DNA works gets a model they can rotate and zoom into rather than a diagram. Google frames these as interactive visualizations built on demand inside the Gemini app, aimed at topics that are hard to picture from text alone."
+        },
+        {
+          "q": "Can Google Search turn my own files into study material?",
+          "a": "Yes. Google Search now accepts uploaded PDFs, documents, slides and handwritten notes and turns them into study documents and customized practice quizzes. Search can also generate custom interactive visuals and simulations inside an AI Overview, such as a visual for pH levels, when a question is hard to answer in prose."
+        },
+        {
+          "q": "Is Google Lens part of this update?",
+          "a": "Google Lens is getting an interactive learning experience in which pointing the camera at a problem prompts Lens to explain the concept, identify likely mistakes and offer step-by-step guidance. TechCrunch reports the Lens feature as coming rather than live at launch, while the Gemini and Search tools are rolling out now."
+        },
+        {
+          "q": "Is a payment method needed to claim the free student year?",
+          "a": "Google requires a valid form of payment to redeem the student offer, even though the twelve months cost nothing. The offer has to be claimed by December 31, 2026, and eligibility is checked through student verification. Google AI Pro is the US plan; Google AI Plus covers the other 140-plus markets."
+        }
+      ],
+      "image": {
+        "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BTS_gemini_hero_withcopy.width-1300.png",
+        "alt": "Google back-to-school graphic for the Gemini student offer",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/"
+        },
+        {
+          "label": "Student Hub",
+          "url": "https://gemini.google.com/students"
+        },
+        {
+          "label": "Gemini For Students",
+          "url": "https://gemini.google/students/"
+        },
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/19/google-launches-new-study-tools-for-students-across-search-and-gemini/"
+        },
+        {
+          "label": "Tom's Guide",
+          "url": "https://www.tomsguide.com/ai/google-gemini/google-is-giving-students-a-free-year-of-gemini-pro-plus-new-ai-study-features"
+        }
+      ],
+      "publishDate": "2026-08-19T20:29:20.625Z"
+    },
+    {
+      "id": "fireship-math-fell-to-machines-aug19",
+      "categories": [
+        "video"
+      ],
+      "title": "Fireship — 'The summer Math fell to the machines...'",
+      "org": "Fireship",
+      "date": "2026-08-19",
+      "url": "https://www.youtube.com/watch?v=iuZPTE5qsJY",
+      "summary": "Fireship's 19 August video argues that AI has closed more open math problems in the last few weeks than the human race managed in the previous decade, and walks through that run of results.",
+      "tags": [
+        "youtube",
+        "fireship",
+        "video-explainer",
+        "mathematics",
+        "ai-mathematics",
+        "open-problems",
+        "ai-research"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Fireship's newest video is about the run of open math problems that AI systems have closed over the past few weeks.",
+        "whatIsIt": "'The summer Math fell to the machines...' is a Fireship video uploaded on 19 August 2026. Its stated premise, in the video's own description, is that AI has killed more open math problems in the last few weeks than the entire human race managed in the previous decade. Fireship then dives into those results.",
+        "howItWorks": "The Fireship format is a short, dense explainer aimed at working developers — a few minutes of fast narration over code and clips rather than a lecture. Here that format is pointed at a claim about pace: the argument is not that one new model appeared, but that the last few weeks of AI results on open problems outweigh a decade of human progress on the same questions.",
+        "whyItMatters": "Fireship reaches a large general developer audience, so this video is where many engineers will first hear that AI systems are landing results on open mathematical problems. It is a summary of the moment rather than a new result, which makes it a reasonable entry point before reading the underlying papers.",
+        "forWho": "developers following AI progress in mathematics",
+        "tryIt": "Watch at https://www.youtube.com/watch?v=iuZPTE5qsJY"
+      },
+      "author": {
+        "name": "Fireship",
+        "profileUrl": "https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/iuZPTE5qsJY/hqdefault.jpg",
+        "alt": "Fireship video thumbnail for 'The summer Math fell to the machines...'",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=iuZPTE5qsJY"
+        },
+        {
+          "label": "Channel",
+          "url": "https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA"
+        }
+      ],
+      "publishDate": "2026-08-19T20:29:20.625Z"
+    },
     {
       "id": "ornith-1-5",
       "categories": [
