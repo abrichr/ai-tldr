@@ -1,8 +1,300 @@
 {
-  "generatedAt": "2026-08-19T06:41:04.326Z",
+  "generatedAt": "2026-08-19T08:43:11.983Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "microsoft-agent-lightning-1-0",
+      "categories": [
+        "repo",
+        "paper",
+        "algorithm"
+      ],
+      "title": "Agent Lightning v1.0 — Microsoft's RL trainer plugs into real agent harnesses",
+      "org": "Microsoft",
+      "date": "2026-08-17",
+      "url": "https://github.com/microsoft/agent-lightning/releases/tag/v1.0.0",
+      "summary": "Agent Lightning v1.0 trains an agent with reinforcement learning while the agent keeps running inside its own harness. Microsoft rewrote the framework down to about 3,500 lines of core Python and added native Kubernetes support.",
+      "tags": [
+        "reinforcement-learning",
+        "agents",
+        "agent-training",
+        "microsoft",
+        "verl",
+        "vllm",
+        "swe-bench",
+        "kubernetes",
+        "open-source",
+        "mit-license",
+        "post-training"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Microsoft"
+        },
+        {
+          "label": "Version",
+          "value": "v1.0.0"
+        },
+        {
+          "label": "License",
+          "value": "MIT"
+        },
+        {
+          "label": "Core code",
+          "value": "~3,500 lines of Python"
+        },
+        {
+          "label": "Training stack",
+          "value": "verl + vLLM"
+        },
+        {
+          "label": "What's new",
+          "value": "Full rewrite, harness-owned rollouts, Kubernetes Jobs"
+        },
+        {
+          "label": "Paper",
+          "value": "arXiv 2608.17528"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "SWE-bench Verified (Qwen3.5-9B)",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Qwen3.5-9B after Agent Lightning RL",
+              "score": 56.4,
+              "highlight": true
+            },
+            {
+              "name": "Qwen3.5-9B before training",
+              "score": 41.8
+            }
+          ],
+          "source": "https://arxiv.org/abs/2608.17528"
+        }
+      ],
+      "explainer": {
+        "tagline": "Agent Lightning v1.0 lets you reinforcement-learn a model without rewriting the agent that will run it in production.",
+        "whatIsIt": "Agent Lightning v1.0 is a full rewrite of Microsoft's open-source reinforcement learning framework for AI agents, released on August 17, 2026 under the MIT license. The new version drops to about 3,500 lines of core Python and adds native Kubernetes support, so each agent rollout can run as a Kubernetes Job instead of needing a separate sandbox service.",
+        "howItWorks": "The paper calls the approach \"harnessed agentic RL\": the deploy-time harness, not the training engine, owns the loop that talks to the environment. Your agent points at an Agent Lightning proxy instead of the model endpoint, and the proxy records the calls it needs for training while the agent keeps its own tools, context and control flow. The framework then handles retokenization, sample merging, advantage calculation, loss normalization and backend scheduling on a verl and vLLM training stack.",
+        "whyItMatters": "Most RL-for-agents work makes you rebuild the agent as a training environment, and the rebuilt version behaves differently from the one you ship. Training through the real harness removes that gap, and Microsoft's own run shows it pays: 6,000 training samples moved Qwen3.5-9B from 41.8% to 56.4% on SWE-bench Verified. Teams already running AutoGen or MCP-based agents can post-train a smaller open model instead of paying for a frontier one.",
+        "forWho": "ML engineers post-training agent models",
+        "tryIt": "git clone https://github.com/microsoft/agent-lightning && uv sync"
+      },
+      "faq": [
+        {
+          "q": "Do I have to change my agent's code to train it with Agent Lightning?",
+          "a": "No. Agent Lightning v1.0 works by putting a proxy between your agent and the model endpoint, so the agent runs unmodified and keeps its existing tools, context handling and control flow. Microsoft describes this as training with real agent harnesses, which is the headline change in v1.0 over the earlier v0.x design."
+        },
+        {
+          "q": "What changed between Agent Lightning v0.3 and v1.0?",
+          "a": "Agent Lightning v1.0 is a complete refactor rather than an incremental update. Microsoft rewrote the codebase to about 3,500 lines of core Python, moved rollout ownership to the deploy-time harness, added support for the latest models, and shipped native Kubernetes support so agents can run as Kubernetes Jobs without an external sandbox dependency."
+        },
+        {
+          "q": "What infrastructure do I need to run it?",
+          "a": "Agent Lightning v1.0 trains on a verl and vLLM GPU stack, and the repository ships a setup script for verl. For scale-out, the release adds native Kubernetes support so each agent rollout becomes a Kubernetes Job. That means a GPU cluster is the realistic baseline; this is a post-training framework, not something you run on a laptop."
+        },
+        {
+          "q": "How big was the SWE-bench gain, and on what?",
+          "a": "Microsoft reports that Agent Lightning v1.0 raised Qwen3.5-9B from 41.8% to 56.4% on SWE-bench Verified, a gain of 14.6 percentage points, using only 6,000 training examples. The paper also covers instruction-following and search agents, so the coding result is one of three agent types tested rather than the only one."
+        }
+      ],
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/microsoft/agent-lightning",
+        "alt": "microsoft/agent-lightning repository card on GitHub",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Release Notes",
+          "url": "https://github.com/microsoft/agent-lightning/releases/tag/v1.0.0"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/microsoft/agent-lightning"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.17528"
+        },
+        {
+          "label": "Docs",
+          "url": "https://microsoft.github.io/agent-lightning/stable/"
+        }
+      ],
+      "publishDate": "2026-08-19T08:43:11.983Z"
+    },
+    {
+      "id": "apexin-asi-bench",
+      "categories": [
+        "benchmark",
+        "paper"
+      ],
+      "title": "ASI-Bench — 60 research projects that remove the method step by step",
+      "org": "Apexin AI",
+      "date": "2026-08-18",
+      "url": "https://arxiv.org/abs/2608.17271",
+      "summary": "ASI-Bench gives an agent a real research project, then takes the method away in four stages. Across 18 agent-model setups the average score falls from 50.91 with full guidance to 26.62 when the agent must pick its own method.",
+      "tags": [
+        "benchmark",
+        "evaluation",
+        "agents",
+        "autonomous-research",
+        "scientific-discovery",
+        "leaderboard",
+        "arxiv",
+        "apache-2-0",
+        "open-source"
+      ],
+      "importance": "notable",
+      "metrics": {
+        "Tasks": 60,
+        "Domains": 11,
+        "Expert hours": "31,000+"
+      },
+      "explainer": {
+        "tagline": "ASI-Bench measures how far an AI agent gets on a real research project once you stop telling it which method to use.",
+        "whatIsIt": "ASI-Bench is a benchmark of 60 project-level research tasks across 11 scientific domains, including astronomy, chemistry, materials, mathematics, medicine and robotics. More than 40 experts spent over 31,000 hours building it. Every task exists at four guidance levels, so the same project can be handed to an agent with the full procedure spelled out or with almost nothing but the goal.",
+        "howItWorks": "The four levels withdraw help in steps. B1 gives background, method, equations and the whole procedure. B2 names the method and its constraints but leaves the agent to build a workflow. B3 gives only the objective, data, constraints and required outputs, so the agent chooses the method itself. B4 adds true but irrelevant information on top of B3 to test whether the agent gets distracted. Tasks are checked by expert review, AI-assisted auditing, sandbox execution and scorer validation.",
+        "whyItMatters": "Scores on ASI-Bench collapse as guidance is removed: 50.91 at B1, 29.10 at B2, 26.62 at B3 and 26.99 at B4, averaged over 18 agent-model configurations. That gap is a concrete measure of how much of an agent's apparent research skill is really the human method it was handed. The runner and task data are public, so a team can reproduce the numbers rather than take them on trust.",
+        "forWho": "agent evaluation and AI-for-science researchers",
+        "tryIt": "pip install asibench && asibench task pull --repo seed31415"
+      },
+      "image": {
+        "url": "https://asibench.apexin.ai/assets/images/asi-bench-social-card.jpg",
+        "alt": "ASI-Bench benchmark social card",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.17271"
+        },
+        {
+          "label": "Benchmark Site",
+          "url": "https://asibench.apexin.ai/"
+        },
+        {
+          "label": "Leaderboard",
+          "url": "https://asibench.apexin.ai/leaderboard"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/apexin-ai/ASI-Bench"
+        }
+      ],
+      "publishDate": "2026-08-19T08:43:11.983Z"
+    },
+    {
+      "id": "denis-sergeevitch-desktop-fly",
+      "categories": [
+        "repo",
+        "showcase"
+      ],
+      "title": "DesktopFly — a Mac desktop fly wired from the real FlyWire connectome",
+      "org": "Denis Sergeevitch",
+      "date": "2026-08-18",
+      "url": "https://github.com/DenisSergeevitch/desktop-fly",
+      "summary": "DesktopFly puts a 3D fruit fly on a macOS desktop and drives its behavior with a live spiking simulation of 668 real neurons from the FlyWire connectome. Move the cursor at it and the fly escapes in about 4 ms.",
+      "tags": [
+        "neuroscience",
+        "connectome",
+        "computational-biology",
+        "spiking-neural-network",
+        "neural-simulation",
+        "flywire",
+        "drosophila",
+        "macos",
+        "swift",
+        "open-source",
+        "showcase"
+      ],
+      "importance": "notable",
+      "metrics": {
+        "Neurons simulated": 668,
+        "Synapses": "~19,000",
+        "Simulation rate": "1 kHz"
+      },
+      "explainer": {
+        "tagline": "A desktop pet whose behavior comes from a real fruit fly wiring diagram instead of hand-written animation.",
+        "whatIsIt": "DesktopFly is an open-source macOS app that renders a 3D fruit fly on your desktop, where its walking, grooming, sleeping and fleeing are produced by a live neural simulation rather than scripted animation. The circuit comes from FlyWire v783, the reconstructed wiring diagram of an adult Drosophila brain, which contains 139,255 neurons in total.",
+        "howItWorks": "The app draws 23,210 neuron soma positions and runs a 668-neuron circuit with roughly 19,000 real synaptic connections through a leaky-integrate-and-fire model at 1 kHz. The escape reflex shows the chain end to end: moving the cursor toward the fly feeds looming input to the LC4 and LPLC2 visual neurons, which drive the Giant Fiber escape command neuron through about 1,200 synapses of feedforward inhibition, matching the roughly 4 ms latency measured in real flies.",
+        "whyItMatters": "Connectome datasets are usually explored in a browser viewer, one neuron at a time, which makes it hard to feel that the wiring produces behavior. DesktopFly runs the circuit in real time on a laptop and ties its output to something you can poke with a cursor, which makes it a compact teaching example for anyone learning spiking network simulation. The code is MIT-licensed and the derived data files are CC BY-NC 4.0.",
+        "forWho": "computational neuroscientists and curious developers",
+        "tryIt": "git clone https://github.com/DenisSergeevitch/desktop-fly && ./build.sh"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/DenisSergeevitch/desktop-fly",
+        "alt": "DesktopFly repository card on GitHub",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/DenisSergeevitch/desktop-fly"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49353221"
+        }
+      ],
+      "publishDate": "2026-08-19T08:43:11.983Z"
+    },
+    {
+      "id": "anthropic-claude-playground",
+      "categories": [
+        "tool"
+      ],
+      "title": "Claude Playground — Anthropic retires Workbench for an API-exact console",
+      "org": "Anthropic",
+      "date": "2026-08-18",
+      "url": "https://support.claude.com/en/articles/8606378-how-do-i-use-playground",
+      "summary": "Anthropic replaced the Claude Console's Workbench with Playground, which supports every Messages API parameter and shows the full SDK request and API response for each run. Workbench data can be exported until September 1, 2026.",
+      "tags": [
+        "anthropic",
+        "claude",
+        "developer-tools",
+        "messages-api",
+        "prompt-engineering",
+        "console",
+        "tool-use",
+        "structured-outputs"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Playground replaces Workbench in the Claude Console and shows you the exact API request your prompt turns into.",
+        "whatIsIt": "Playground is the new prompt-testing surface in the Claude Console, announced on August 18, 2026, and it retires the older Workbench. It supports every Messages API parameter and ships templates that demonstrate API features such as code execution and web search, so you can try a model or a new API feature before writing any code.",
+        "howItWorks": "Each run in Playground displays the full SDK request alongside the API response, and working requests can be exported as code snippets. Model switching, parameter tuning, tool use and structured outputs are all testable in the browser. Nothing is stored on Anthropic's servers — the current draft stays in your browser, which is why prompt versioning, evaluations and sharing did not carry over from Workbench.",
+        "whyItMatters": "The old Workbench saved prompts server-side but drifted from what the API actually sends, so a prompt that looked right in the browser could behave differently in code. Playground closes that gap by making the request visible. There is a deadline attached: anyone with saved Workbench prompts or history has until September 1, 2026 to export them as JSON from Console settings.",
+        "forWho": "developers building on the Claude API",
+        "tryIt": "https://platform.claude.com/playground"
+      },
+      "image": {
+        "url": "https://platform.claude.com/playground/opengraph-image-17xuc7/2?e48ee598fc8f9efa",
+        "alt": "Claude Playground page in the Anthropic Console",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Playground Guide",
+          "url": "https://support.claude.com/en/articles/8606378-how-do-i-use-playground"
+        },
+        {
+          "label": "Release Notes",
+          "url": "https://platform.claude.com/docs/en/release-notes/overview"
+        },
+        {
+          "label": "Open Playground",
+          "url": "https://platform.claude.com/playground"
+        }
+      ],
+      "publishDate": "2026-08-19T08:43:11.983Z"
+    },
     {
       "id": "anthropic-claude-protein-design",
       "categories": [

@@ -33861,6 +33861,59 @@
         "ecosystem",
         "benchmark"
       ]
+    },
+    {
+      "id": "sweep-20260819t084311z",
+      "timestamp": "2026-08-19T08:43:11.983Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Agent Lightning v1.0 (Microsoft's rewritten agent RL framework, 17.5k stars), ASI-Bench (60 project-level research tasks with guidance progressively removed), DesktopFly (FlyWire connectome spiking simulation, 259 points on HN) and Claude Playground (Workbench retired in the Anthropic Console). Lab blogs were quiet on the 72h window: Anthropic/news, DeepMind, Meta AI, Mistral and Moonshot had nothing after August 14, and DeepSeek's latest note is August 13. OpenAI's August 18 posts, GLM-5.3, Cursor Origin, Cerebras CS-4, turbovec, Mojo open-sourcing and LTX-2.5 were all already in the feed. GenBio AI's AIDO Cell (STAT, August 18) was dropped because genbio.ai returns 403 and no public artifact could be verified.",
+      "counts": {
+        "added": 4,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "microsoft-agent-lightning-1-0",
+          "title": "Agent Lightning v1.0 — Microsoft's RL trainer plugs into real agent harnesses",
+          "category": "repo",
+          "note": "v1.0.0 shipped 2026-08-17 on a 17.5k-star Microsoft repo with an August 18 arXiv paper and a verified SWE-bench Verified gain of 41.8% to 56.4%."
+        },
+        {
+          "id": "apexin-asi-bench",
+          "title": "ASI-Bench — 60 research projects that remove the method step by step",
+          "category": "benchmark",
+          "note": "Top of huggingface.co/papers today with a public Apache-2.0 runner, pip package and live leaderboard, so the released benchmark is the artifact rather than the paper alone."
+        },
+        {
+          "id": "denis-sergeevitch-desktop-fly",
+          "title": "DesktopFly — a Mac desktop fly wired from the real FlyWire connectome",
+          "category": "repo",
+          "note": "259 points and 102 comments on the HN front page, repo created 2026-08-18, and every neuron/synapse figure traces to the README."
+        },
+        {
+          "id": "anthropic-claude-playground",
+          "title": "Claude Playground — Anthropic retires Workbench for an API-exact console",
+          "category": "tool",
+          "note": "Announced in the August 18 Claude Platform release notes; a concrete developer action attaches to it because Workbench data must be exported by September 1, 2026."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "dataset",
+        "video",
+        "article",
+        "security",
+        "ecosystem",
+        "showcase"
+      ]
     }
   ]
 }
