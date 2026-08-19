@@ -1,8 +1,232 @@
 {
-  "generatedAt": "2026-08-19T20:29:20.625Z",
+  "generatedAt": "2026-08-19T22:30:07.442Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "unsloth-dynamic-3-0-ggufs",
+      "categories": [
+        "algorithm",
+        "model"
+      ],
+      "title": "Unsloth Dynamic 3.0 — GGUF quants keep 10% more accuracy per gigabyte",
+      "org": "Unsloth",
+      "date": "2026-08-19",
+      "url": "https://unsloth.ai/docs/basics/dynamic-3.0-ggufs",
+      "summary": "Unsloth Dynamic 3.0 is a new GGUF quantization recipe that Unsloth says keeps over 10% more top-1% accuracy at the same file size than any other provider. The first full v3.0 set covers Qwen3.8-27B.",
+      "tags": [
+        "quantization",
+        "gguf",
+        "unsloth",
+        "local-llm",
+        "llama-cpp",
+        "inference",
+        "open-source",
+        "imatrix",
+        "qwen3-8-27b"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Accuracy gain": ">10% top-1% at same size",
+        "Smallest quant": "6.2 GB"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Unsloth"
+        },
+        {
+          "label": "Method",
+          "value": "Post-training quantization (no QAT or QAD)"
+        },
+        {
+          "label": "First model covered",
+          "value": "Qwen3.8-27B"
+        },
+        {
+          "label": "Size range",
+          "value": "6.2 GB (UD-IQ1_S) to 54.7 GB (BF16)"
+        },
+        {
+          "label": "Runs on",
+          "value": "llama.cpp, Unsloth Desktop"
+        },
+        {
+          "label": "Quality metrics",
+          "value": "KL Divergence, Divergence-300 @32"
+        },
+        {
+          "label": "Where to get it",
+          "value": "Hugging Face — unsloth/Qwen3.8-27B-GGUF"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much accuracy does the 1-bit Unsloth quant keep?",
+          "a": "Unsloth reports its UD-IQ1_S 1-bit build of Qwen3.8-27B holds around 72% top-1% accuracy while shrinking the file 89% to 6.2 GB. The mid-range UD-Q2_K_XL at 9.83 GB lands roughly 8% ahead of the next best provider on top-1%, and Unsloth notes that build wrote a working HTML program where earlier quants broke."
+        },
+        {
+          "q": "Which inference engines run Dynamic 3.0 GGUFs?",
+          "a": "Dynamic 3.0 files use the standard GGUF container, so Unsloth says they work with most inference engines, including llama.cpp and Unsloth Desktop. Unsloth publishes them on Hugging Face under unsloth/Qwen3.8-27B-GGUF, which means any llama.cpp-compatible runner can download and load a quant without extra tooling."
+        },
+        {
+          "q": "How is Dynamic 3.0 different from Dynamic 2.0?",
+          "a": "Dynamic 3.0 swaps the Dynamic 2.0 calibration data for a broader, higher-quality imatrix set drawn from agentic coding, chat and multilingual sources. Unsloth also made the per-layer choice of quantization type finer-grained and added more quantization techniques to pick from, so a file of a given size carries more of the original model's behaviour."
+        },
+        {
+          "q": "What does the Divergence-300 @32 score measure?",
+          "a": "Divergence-300 @32 is Unsloth's own drift test: it runs greedy argmax decoding for 32 tokens on 300 held-out examples and compares each quant's output against the BF16 original. Unsloth draws the held-out text from sources such as DeepSWE and Terminal Bench so the score reflects unseen data rather than the calibration set."
+        },
+        {
+          "q": "Are the smallest Dynamic 3.0 files missing anything?",
+          "a": "Yes. Unsloth removed the multi-token prediction (MTP) module from every Dynamic 3.0 quant of Qwen3.8-27B at 8.37 GB and below, which frees about 500 MB of disk space. Larger builds keep MTP, and Unsloth stores those files in a separate MTP folder inside the Hugging Face repository."
+        }
+      ],
+      "explainer": {
+        "tagline": "Unsloth's third-generation quantization recipe squeezes more accuracy out of the same GGUF file size.",
+        "whatIsIt": "Dynamic 3.0 changes how Unsloth turns full-precision LLM weights into GGUF files, and Unsloth reports the result holds over 10% more top-1% accuracy than any other provider's file of the same size. The first complete v3.0 set covers Qwen3.8-27B, spanning eleven builds from a 6.2 GB 1-bit quant up to 54.7 GB BF16. Everything ships on Hugging Face and loads in ordinary llama.cpp-compatible runners.",
+        "howItWorks": "Three changes drive the gain: a larger, higher-quality imatrix calibration set drawn from agentic coding, chat and multilingual text; finer per-layer decisions about which quantization type each layer receives; and a wider menu of quantization techniques to choose from. Unsloth states it does not train on the calibration data and uses neither quantization-aware training nor distillation — Dynamic 3.0 is purely post-training. Quality is then checked with KL Divergence and Unsloth's held-out Divergence-300 @32 test.",
+        "whyItMatters": "File size is the binding constraint for anyone running a large open model on a single GPU or a laptop, so accuracy-per-gigabyte decides which models are usable at all. A Dynamic 3.0 quant can do work that previously needed the next size up, which frees VRAM for longer context or a bigger batch. Unsloth's Qwen3.8 GGUFs were downloaded 5.1 million times in five days, so the recipe reaches a large share of local-LLM users immediately.",
+        "forWho": "people running open models locally",
+        "tryIt": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF"
+      },
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/unsloth/Qwen3.8-27B-GGUF.png",
+        "alt": "Hugging Face model card banner for the Unsloth Qwen3.8-27B GGUF quantizations",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Dynamic 3.0 Guide",
+          "url": "https://unsloth.ai/docs/basics/dynamic-3.0-ggufs"
+        },
+        {
+          "label": "Qwen3.8-27B GGUFs",
+          "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF"
+        },
+        {
+          "label": "Dynamic 2.0 Guide",
+          "url": "https://unsloth.ai/docs/basics/unsloth-dynamic-2.0-ggufs"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/unslothai/unsloth"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49365443"
+        }
+      ],
+      "publishDate": "2026-08-19T22:30:07.442Z"
+    },
+    {
+      "id": "vercel-labs-fx",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "fx — Vercel Labs open-sources a 6 MB coding agent written in Zig",
+      "org": "Vercel Labs",
+      "date": "2026-08-17",
+      "url": "https://fx.sh/",
+      "summary": "fx is a coding agent from Vercel Labs, written in Zig and shipped as one 6.39 MiB native binary. It cold starts in 10 microseconds, works with local or cloud models, and is now open source under Apache-2.0.",
+      "tags": [
+        "coding-agent",
+        "vercel",
+        "zig",
+        "cli",
+        "developer-tools",
+        "open-source",
+        "agents",
+        "mcp",
+        "terminal"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Binary size": "6.39 MiB",
+        "Cold start": "10 microseconds"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Vercel Labs"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        },
+        {
+          "label": "Language",
+          "value": "Zig"
+        },
+        {
+          "label": "Latest version",
+          "value": "v0.0.3 (August 18, 2026)"
+        },
+        {
+          "label": "Status",
+          "value": "Experimental"
+        },
+        {
+          "label": "Inference",
+          "value": "Local or cloud, provider-agnostic"
+        },
+        {
+          "label": "Extensibility",
+          "value": "Skills, MCP servers, subagents"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much does fx cost?",
+          "a": "fx itself is free: Vercel Labs publishes it under the Apache-2.0 license, so there is no fee for the binary. Costs come from inference only. You sign in with fx login through Vercel or supply an AI Gateway API key, then pay whatever your model provider charges. Pointing fx at local inference avoids per-token charges entirely."
+        },
+        {
+          "q": "Is fx ready for production use?",
+          "a": "fx is labelled experimental, and fx.sh warns to use it at your own risk because frequent changes are coming. The first public tag, v0.0.1, landed on August 17, 2026, with v0.0.3 following a day later. That makes fx a fit for experiments, sandboxes and embedded research harnesses today rather than for critical production pipelines."
+        },
+        {
+          "q": "Which models can fx use?",
+          "a": "Vercel Labs describes fx as model- and provider-agnostic, suitable for both local and cloud inference. Authentication runs either through fx login, which opens the Vercel authorization flow and saves the session, or through an AI Gateway API key. Inside a session the /models command switches between the models your account or local setup exposes."
+        },
+        {
+          "q": "What can fx actually do in a repository?",
+          "a": "fx runs an approval-gated agent loop over your workspace: it asks before sensitive actions such as writing or deleting files, and /permissions changes how strict that gate is. Skills add reusable project instructions, MCP servers connect external tools, and subagents take on independent pieces of work. Sessions resume later with fx -r."
+        }
+      ],
+      "explainer": {
+        "tagline": "A tiny native coding agent from Vercel Labs, built to be embedded anywhere a shell can run.",
+        "whatIsIt": "fx behaves like a Unix shell rather than an IDE in the terminal — it preserves scroll history, prints little, and draws complex TUI very sparingly. Vercel Labs built fx as an internal tool and released it publicly on August 17, 2026 under Apache-2.0. The whole agent arrives as a single 6.39 MiB native binary with no runtime to install first.",
+        "howItWorks": "Compiling ahead of time with Zig is what makes the speed claims possible: fx performs no unnecessary work or I/O before it accepts input, which Vercel Labs measures as a 10 microsecond cold start and a single-digit-megabyte memory baseline. Installation is one curl-to-bash script that drops the binary in ~/.local/bin. From there, slash commands cover status, model choice, permissions, images and usage.",
+        "whyItMatters": "Most coding agents assume a developer laptop with Node or Python already configured, which rules them out of thin environments. A few-megabyte static binary that starts instantly fits CI containers, agent sandboxes, cheap VMs and scripts that spawn a fresh agent per task. Keeping the harness provider-agnostic also means teams running their own inference are not locked to one vendor's endpoint.",
+        "forWho": "terminal-first developers and teams embedding agents in sandboxes",
+        "tryIt": "curl -fsSL https://fx.sh/setup.sh | bash"
+      },
+      "image": {
+        "url": "https://fx.sh/og.png",
+        "alt": "fx project card — a tiny, open, native coding agent from Vercel Labs",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/vercel-labs/fx"
+        },
+        {
+          "label": "Docs",
+          "url": "https://fx.sh/docs"
+        },
+        {
+          "label": "Releases",
+          "url": "https://github.com/vercel-labs/fx/releases"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49353339"
+        }
+      ],
+      "publishDate": "2026-08-19T22:30:07.442Z"
+    },
     {
       "id": "google-gemini-student-study-tools",
       "categories": [

@@ -34183,6 +34183,45 @@
         "security",
         "algorithm"
       ]
+    },
+    {
+      "id": "sweep-20260819t223007z",
+      "timestamp": "2026-08-19T22:30:07.442Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs, GitHub trending, HuggingFace models/datasets/papers, HN top 30, 8 YouTube feeds and the AI-for-science lane; added Unsloth Dynamic 3.0 GGUFs (HF models trending #2, HN #3) and Vercel Labs' open-sourced fx coding agent. Anthropic, Meta, Mistral, Moonshot and Qwen were quiet; all four fresh creator videos were already in the feed.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "unsloth-dynamic-3-0-ggufs",
+          "title": "Unsloth Dynamic 3.0 — GGUF quants keep 10% more accuracy per gigabyte",
+          "category": "algorithm",
+          "note": "New named quantization method released today with the first full v3.0 quant set; unsloth/Qwen3.8-27B-GGUF is #2 on HuggingFace models trending and the docs page is #3 on the HN front page."
+        },
+        {
+          "id": "vercel-labs-fx",
+          "title": "fx — Vercel Labs open-sources a 6 MB coding agent written in Zig",
+          "category": "tool",
+          "note": "Vercel Labs open-sourced fx on 2026-08-17 (first release tag v0.0.1); ~990 GitHub stars in two days and 145 points on the HN front page."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "algorithm",
+        "paper",
+        "dataset",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }
