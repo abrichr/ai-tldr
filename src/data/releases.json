@@ -1,8 +1,220 @@
 {
-  "generatedAt": "2026-08-20T20:33:39.957Z",
+  "generatedAt": "2026-08-20T22:31:35.531Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openai-chatgpt-apple-messages-plugin",
+      "categories": [
+        "tool"
+      ],
+      "title": "Apple Messages plugin — ChatGPT can read and send texts on a Mac",
+      "org": "OpenAI",
+      "date": "2026-08-20",
+      "url": "https://learn.chatgpt.com/docs/plugins",
+      "summary": "OpenAI's Apple Messages plugin lets ChatGPT read and search iMessage, SMS and RCS chats on a Mac and send replies through the Messages app. It runs in Codex and ChatGPT Work on the macOS desktop app, on all plans.",
+      "tags": [
+        "openai",
+        "chatgpt",
+        "codex",
+        "plugins",
+        "apple-messages",
+        "imessage",
+        "macos",
+        "desktop",
+        "agents",
+        "computer-use"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenAI"
+        },
+        {
+          "label": "Where it runs",
+          "value": "ChatGPT desktop app for macOS"
+        },
+        {
+          "label": "Hardware",
+          "value": "Apple silicon (arm64) Macs only"
+        },
+        {
+          "label": "Surfaces",
+          "value": "Codex and ChatGPT Work"
+        },
+        {
+          "label": "Plans",
+          "value": "All plans"
+        },
+        {
+          "label": "Sending",
+          "value": "Per-message approval by default"
+        },
+        {
+          "label": "Not supported",
+          "value": "Web, mobile, Codex CLI, IDE extension"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which Macs support the ChatGPT Apple Messages plugin?",
+          "a": "The Apple Messages plugin runs only on Apple silicon (arm64) Macs with the ChatGPT desktop app for macOS, so Intel machines are left out of this release. OpenAI also lists it as unavailable on ChatGPT for web, on mobile, in the Codex CLI and in the IDE extension, which makes a Mac desktop install the only route today."
+        },
+        {
+          "q": "Do I need a paid ChatGPT plan for the Apple Messages plugin?",
+          "a": "The Apple Messages plugin is available on all plans in the ChatGPT desktop app for macOS, so no paid upgrade is required. The real limit is the surface, not the subscription tier: the plugin works inside Codex and ChatGPT Work sessions, and OpenAI says it does not work in ordinary ChatGPT chats."
+        },
+        {
+          "q": "Can ChatGPT send a text without asking me first?",
+          "a": "ChatGPT asks for approval before every send by default, showing both the message body and the recipients. You can pick 'Allow once' or 'Always allow sending to this chat', and a standing permission can be undone from Settings then Computer use. OpenAI documents one known issue: tasks running with Full access may skip the confirmation prompt."
+        },
+        {
+          "q": "What kinds of messages can the Apple Messages plugin reach?",
+          "a": "The Apple Messages plugin reads and searches iMessage, SMS and RCS conversations in the Messages app on your Mac, and sends new messages through that same app. OpenAI is explicit that the plugin does not let you talk to ChatGPT remotely by texting it — the direction is one way, from a ChatGPT or Codex session out to Messages."
+        }
+      ],
+      "explainer": {
+        "tagline": "ChatGPT can now open your Mac's Messages app, search old threads and send a reply you approve.",
+        "whatIsIt": "The Apple Messages plugin connects ChatGPT to the Messages app on a Mac, so it can read and search iMessage, SMS and RCS threads and send messages on your behalf. OpenAI shipped it on August 20, 2026 for the macOS desktop app. It arrives as an installable plugin rather than a change to ChatGPT itself.",
+        "howItWorks": "Installation happens in the Plugins panel; once macOS permissions are granted, a fresh Codex or ChatGPT Work session can call the plugin to find, summarize, draft or send messages. Sending is gated by approval — ChatGPT shows the message and the recipients, and you choose 'Allow once' or 'Always allow sending to this chat'. A standing permission can be revoked under Settings then Computer use.",
+        "whyItMatters": "Texting has been one of the last places an assistant could not reach without handing over a phone, and OpenAI closes that gap on the desktop instead of the phone. The trade is obvious: a tool that can read every chat and send on your behalf is a lot of trust, which is why per-message approval stays on by default. OpenAI flags one known issue — tasks set to Full access may not show the confirmation prompt.",
+        "forWho": "Mac users of ChatGPT and Codex",
+        "tryIt": "ChatGPT desktop for macOS → Plugins → Apple Messages"
+      },
+      "image": {
+        "url": "https://learn.chatgpt.com/og/docs/plugins.png",
+        "alt": "OpenAI ChatGPT plugins documentation page card",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Plugin Docs",
+          "url": "https://learn.chatgpt.com/docs/plugins"
+        },
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/20/chatgpt-can-now-send-texts-for-you-with-new-apple-messages-plugin/"
+        },
+        {
+          "label": "9to5Mac",
+          "url": "https://9to5mac.com/2026/08/20/chatgpt-update-adds-apple-messages-integration-on-mac/"
+        }
+      ],
+      "publishDate": "2026-08-20T22:31:35.531Z"
+    },
+    {
+      "id": "danielvaughn-huzzah",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "Huzzah — an editor where you write pseudocode and an LLM fills in the code",
+      "org": "Daniel Vaughn",
+      "date": "2026-08-20",
+      "url": "https://www.danielvaughn.dev/posts/huzzah/",
+      "summary": "Huzzah is an experimental editor where you write pseudocode in .hz files and an LLM turns it into real source code. Each edit sends only the pseudocode diff as the prompt, and the pseudocode stays on disk as a record of intent.",
+      "tags": [
+        "coding-agents",
+        "developer-tools",
+        "pseudocode",
+        "editor",
+        "llm",
+        "open-source",
+        "show-hn",
+        "experimental"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Write pseudocode instead of a paragraph of English, and Huzzah syncs it into working code.",
+        "whatIsIt": "Huzzah replaces the chat box with a pseudocode file. You write informal pseudocode in a .hz file — function calls, loops, conditionals and object shapes — and on save the editor generates the matching source code. Daniel Vaughn showed it on Hacker News on August 20, 2026, where it reached 165 points, and calls it a proof of concept that is still experimental.",
+        "howItWorks": "When a .hz file changes, the editor captures the diff and sends only that diff to the model as the prompt, instead of restating the whole instruction. Source maps tie each piece of pseudocode back to the code it produced. Model access runs through Pi, so Anthropic, OpenAI or Google credentials all work, and the generated code runs in a Web Worker.",
+        "whyItMatters": "Prompts to coding agents are long, imperative and thrown away when the session ends; the pseudocode Huzzah keeps is short, declarative and saved, so intent becomes something you edit rather than re-explain. Vaughn describes it as a condensed distillation of human intent. Hacker News readers split on it, with several asking how it differs from writing a spec or a careful commit message.",
+        "forWho": "developers tired of writing long prompts",
+        "tryIt": "git clone https://github.com/danielvaughn/hz && npm install && npm run dev"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/danielvaughn/hz",
+        "alt": "GitHub repository card for danielvaughn/hz, the Huzzah editor",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.danielvaughn.dev/posts/huzzah/"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/danielvaughn/hz"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49378768"
+        }
+      ],
+      "author": {
+        "name": "Daniel Vaughn",
+        "profileUrl": "https://github.com/danielvaughn",
+        "avatarUrl": "https://github.com/danielvaughn.png"
+      },
+      "publishDate": "2026-08-20T22:31:35.531Z"
+    },
+    {
+      "id": "zachahn-vomit",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "Vomit — a local model rewrites Claude Code's replies before you read them",
+      "org": "Zach Ahn",
+      "date": "2026-08-19",
+      "url": "https://github.com/zachahn/vomit",
+      "summary": "Vomit is a Go tool that hooks into Claude Code, buffers each reply and hands it to a local model to be rewritten in plainer language before it reaches the screen. Zach Ahn runs gpt-oss:20b for the rewriting pass.",
+      "tags": [
+        "claude-code",
+        "local-llm",
+        "gpt-oss",
+        "go",
+        "developer-tools",
+        "hooks",
+        "open-source",
+        "writing"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Vomit pipes Claude Code's output through a small local model so the prose comes back plain.",
+        "whatIsIt": "Vomit hooks into Claude Code and rewrites what the model says before you see it. Zach Ahn built it after deciding that Claude 5's default style — dense jargon and stretched metaphors — got in the way of the work, and describes the result as an art project that is new and lightly tested. The tool is written in Go and licensed GPL-3.0.",
+        "howItWorks": "The tool buffers Claude Code's output, forwards each message to a local LLM, waits for the rewrite, then renders the new version through the MessageDisplay hook. Ahn uses gpt-oss:20b for that pass, so the rewriting stays on the machine. He notes some of the original phrasing still slips through, including plural pronouns like 'we'.",
+        "whyItMatters": "Complaints about a model's writing style usually get answered with a longer system prompt; Vomit answers with a second model instead. The Hacker News thread reached 154 points and 271 comments, most of them arguing about whether the style is a training side effect of agentic coding work or a dialect you eventually learn to read.",
+        "forWho": "Claude Code users",
+        "tryIt": "https://github.com/zachahn/vomit"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/zachahn/vomit",
+        "alt": "GitHub repository card for zachahn/vomit",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/zachahn/vomit"
+        },
+        {
+          "label": "Author's Write-Up",
+          "url": "https://zachahn.com/posts/1787191554"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49375996"
+        }
+      ],
+      "author": {
+        "name": "Zach Ahn",
+        "profileUrl": "https://github.com/zachahn",
+        "avatarUrl": "https://github.com/zachahn.png"
+      },
+      "publishDate": "2026-08-20T22:31:35.531Z"
+    },
     {
       "id": "adversa-grok-context-injection",
       "categories": [

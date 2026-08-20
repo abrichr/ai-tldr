@@ -34665,6 +34665,52 @@
         "article",
         "algorithm"
       ]
+    },
+    {
+      "id": "sweep-20260820t223135z",
+      "timestamp": "2026-08-20T22:31:35.531Z",
+      "source": "github-actions-sweep",
+      "summary": "Added three tool releases: OpenAI's Apple Messages plugin for ChatGPT on macOS, plus two Hacker News front-page projects (Huzzah, a pseudocode-driven editor, and Vomit, a local-LLM rewriter for Claude Code). Lab blogs were quiet — Anthropic's newest post is Aug 14, Meta AI's is July, and the Chinese labs (DeepSeek V4-Pro, GLM-5.3, MiniMax H3, ByteDance Seed) all shipped outside the 72h window and are already in the feed.",
+      "counts": {
+        "added": 3,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-chatgpt-apple-messages-plugin",
+          "title": "Apple Messages plugin — ChatGPT can read and send texts on a Mac",
+          "category": "tool",
+          "note": "OpenAI shipped a documented Apple Messages plugin on Aug 20 with official docs plus TechCrunch and 9to5Mac coverage; a real capability change for the macOS desktop app."
+        },
+        {
+          "id": "danielvaughn-huzzah",
+          "title": "Huzzah — an editor where you write pseudocode and an LLM fills in the code",
+          "category": "tool",
+          "note": "Show HN front page at 165 points on Aug 20 with a public repo — a genuinely new interaction model for coding agents, not another wrapper."
+        },
+        {
+          "id": "zachahn-vomit",
+          "title": "Vomit — a local model rewrites Claude Code's replies before you read them",
+          "category": "tool",
+          "note": "HN front page at 154 points with 271 comments; a small but real shipped tool announced by its author on Aug 19."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "video",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
