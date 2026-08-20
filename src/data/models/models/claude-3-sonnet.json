@@ -6,7 +6,7 @@
   "seoTitle": "Claude 3 Sonnet: Specs, Benchmarks & Pricing",
   "metaDescription": "Claude 3 Sonnet (Mar 2024) launched Anthropic's Opus/Sonnet/Haiku tiers: 79.0% MMLU, 73.0% HumanEval, 200K context, vision support and $3/$15 per MTok pricing.",
   "releaseDate": "2024-03-04",
-  "status": "Deprecated",
+  "status": "Retired — deprecated January 21, 2025 and retired on the Claude API on July 21, 2025. Requests to claude-3-sonnet-20240229 now fail; Anthropic's recommended replacement is Claude Sonnet 4.6.",
   "license": "Proprietary",
   "openWeights": false,
   "modalities": [
@@ -104,6 +104,11 @@
       "label": "Claude 3 Sonnet model card (PromptHub)",
       "url": "https://www.prompthub.us/models/claude-3-sonnet",
       "kind": "benchmark"
+    },
+    {
+      "label": "Anthropic model deprecations (retirement dates)",
+      "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "kind": "api-docs"
     }
   ],
   "faq": [

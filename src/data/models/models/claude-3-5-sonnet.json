@@ -6,7 +6,7 @@
   "seoTitle": "Claude 3.5 Sonnet: Specs, Benchmarks & Pricing",
   "metaDescription": "The original Claude 3.5 Sonnet (Jun 2024) scored 59.4% GPQA, 88.7% MMLU and 92.0% HumanEval, beating Claude 3 Opus at $3/$15 with a 200K context window.",
   "releaseDate": "2024-06-20",
-  "status": "Deprecated",
+  "status": "Retired — deprecated August 13, 2025 and retired on the Claude API on October 28, 2025. Requests to claude-3-5-sonnet-20240620 now fail; Anthropic's recommended replacement is Claude Sonnet 4.6.",
   "license": "Proprietary",
   "openWeights": false,
   "modalities": [
@@ -107,6 +107,11 @@
       "label": "Claude 3.5 Sonnet (June) analysis",
       "url": "https://artificialanalysis.ai/models/claude-35-sonnet-june-24",
       "kind": "benchmark"
+    },
+    {
+      "label": "Anthropic model deprecations (retirement dates)",
+      "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "kind": "api-docs"
     }
   ],
   "faq": [

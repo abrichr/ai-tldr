@@ -1,0 +1,76 @@
+{
+  "slug": "hindsight",
+  "name": "Hindsight",
+  "repo": "vectorize-io/hindsight",
+  "homepage": "https://hindsight.vectorize.io",
+  "category": "agents",
+  "categoryTitle": "Agents & Automation",
+  "subcategory": "memory-frameworks",
+  "subcategoryTitle": "Agent Memory",
+  "tagline": "An agent memory server built so agents learn, not just recall chat history",
+  "seoTitle": "Hindsight - Agent Memory System by Vectorize",
+  "metaDescription": "Hindsight is an open-source agent memory server. It stores facts and experiences, forms observations and mental models, and serves them via retain, recall, and reflect.",
+  "overview": [
+    "Hindsight is an agent memory system from Vectorize. Where most memory layers concentrate on replaying conversation history, Hindsight is built around the idea that an agent should form durable understanding: memories are pushed through an extraction pipeline and consolidated into evidence-backed beliefs the agent can act on later.",
+    "It organizes what it stores into four kinds of memory. World facts describe the world (\"the stove gets hot\"), experiences record what the agent itself did, observations are consolidated beliefs formed from many memories, and mental models are the synthesized understanding built on top. Memories live in named banks, and recall runs four retrieval strategies in parallel — semantic vector similarity, BM25 keyword matching, entity and temporal graph links, and time-range filtering.",
+    "You run it as a server (Docker, pip, Helm, or the managed Hindsight Cloud) and talk to it from Python, Node.js, Go, a CLI, or the REST API. Every server also exposes a Model Context Protocol endpoint per bank, so any MCP client can call retain, recall, and reflect as tools. The code is MIT-licensed; the project reports state-of-the-art results on the LongMemEval benchmark and publishes live benchmark numbers."
+  ],
+  "features": [
+    "Four memory types — world facts, experiences, consolidated observations, and synthesized mental models — instead of a flat conversation log",
+    "Three operations: retain to store, recall to retrieve, and reflect to answer with the memory applied",
+    "Parallel retrieval across semantic, keyword (BM25), graph, and temporal strategies",
+    "An LLM wrapper that adds memory to an existing OpenAI or Anthropic client in about two lines, plus 60+ framework and app integrations",
+    "A built-in MCP endpoint per memory bank, so MCP clients get retain/recall/reflect as tools",
+    "Works with 25+ LLM providers, including fully local ones (Ollama, LM Studio, llama.cpp) and any OpenAI-compatible endpoint",
+    "Deploy with Docker, pip, Helm, an embedded Python server with no separate process, or the managed cloud"
+  ],
+  "gettingStarted": {
+    "intro": "Start a server, then connect a client in your language. Docker is the recommended path; the embedded Python option skips the server entirely for local experiments.",
+    "steps": [
+      {
+        "heading": "Start a server with Docker",
+        "body": "The API listens on 8888 and a UI on 9999. Point HINDSIGHT_API_LLM_API_KEY at whichever provider you want Hindsight to use for extraction and consolidation.",
+        "code": "export OPENAI_API_KEY=sk-xxx\n\ndocker run -it --pull always --name hindsight --restart unless-stopped -p 8888:8888 -p 9999:9999 \\\n  -e HINDSIGHT_API_LLM_API_KEY=$OPENAI_API_KEY \\\n  -v hindsight-data:/home/hindsight/.pg0 \\\n  ghcr.io/vectorize-io/hindsight:latest",
+        "lang": "bash"
+      },
+      {
+        "heading": "Or install it bare metal",
+        "body": "The server is also a pip package if you would rather not use Docker.",
+        "code": "pip install hindsight-api\nexport HINDSIGHT_API_LLM_API_KEY=sk-xxx\n\nhindsight-api",
+        "lang": "bash"
+      },
+      {
+        "heading": "Connect a client",
+        "body": "Clients exist for Python, Node.js/TypeScript, Go, and the command line.",
+        "code": "pip install hindsight-client -U                                  # Python\nnpm install @vectorize-io/hindsight-client                        # Node.js / TypeScript\ngo get github.com/vectorize-io/hindsight/hindsight-clients/go     # Go",
+        "lang": "bash"
+      },
+      {
+        "heading": "Retain, recall, reflect",
+        "body": "Store something, search it back, then ask Hindsight to answer with the memory applied. Memories are scoped to a bank id.",
+        "code": "from hindsight_client import Hindsight\n\nclient = Hindsight(base_url=\"http://localhost:8888\")\n\n# Retain: store information\nclient.retain(bank_id=\"my-bank\", content=\"Alice works at Google as a software engineer\")\n\n# Recall: search memories\nclient.recall(bank_id=\"my-bank\", query=\"What does Alice do?\")\n\n# Reflect: generate a disposition-aware response\nclient.reflect(bank_id=\"my-bank\", query=\"Tell me about Alice\")",
+        "lang": "python"
+      },
+      {
+        "heading": "Add memory to an existing agent",
+        "body": "The LLM wrapper recalls relevant memories before each call and retains the conversation after it, with no other changes to your code. wrap_anthropic() does the same for the Anthropic SDK.",
+        "code": "pip install hindsight-litellm",
+        "lang": "bash"
+      },
+      {
+        "heading": "Wrap your client",
+        "body": "Swap the client you already have for a wrapped one and pass the bank you want the memories to land in.",
+        "code": "from openai import OpenAI\nfrom hindsight_litellm import wrap_openai\n\nclient = wrap_openai(\n    OpenAI(),\n    bank_id=\"user-123\",\n    hindsight_api_url=\"http://localhost:8888\",\n)\n\nresponse = client.chat.completions.create(\n    model=\"gpt-5-mini\",\n    messages=[{\"role\": \"user\", \"content\": \"What do you know about me?\"}],\n)",
+        "lang": "python"
+      }
+    ]
+  },
+  "useCases": [
+    "Give an assistant memory that survives sessions, so it recalls a user's facts, preferences, and history without re-prompting",
+    "Let a long-running agent accumulate its own experiences and act on what previously worked or failed",
+    "Give a CLI coding agent per-repository memory built from git history and past sessions",
+    "Expose a shared memory bank to several tools at once through the MCP endpoint"
+  ],
+  "language": "Python",
+  "license": "MIT"
+}

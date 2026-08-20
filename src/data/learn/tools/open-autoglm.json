@@ -1,0 +1,74 @@
+{
+  "slug": "open-autoglm",
+  "name": "Open-AutoGLM",
+  "repo": "zai-org/Open-AutoGLM",
+  "category": "agents",
+  "categoryTitle": "Agents & Automation",
+  "subcategory": "computer-use",
+  "subcategoryTitle": "Computer & Browser Use",
+  "tagline": "A phone agent that reads your screen and taps through apps for you",
+  "seoTitle": "Open-AutoGLM - Phone Agent Framework by Z.ai",
+  "metaDescription": "Open-AutoGLM is Z.ai's open-source phone agent framework. A vision-language model reads the screen and drives Android, HarmonyOS, or iOS devices over ADB to finish tasks.",
+  "overview": [
+    "Open-AutoGLM is a mobile agent framework from Z.ai (the lab behind the GLM models). You describe a task in plain language — \"Open eBay and search for wireless earphones\" — and the framework takes a screenshot of the phone, has a vision-language model work out what is on screen, plans the next action, and performs it on the device.",
+    "It belongs in the computer-use category because it automates a real device rather than calling APIs. Control happens through ADB (Android Debug Bridge) for Android, HDC for HarmonyOS, and WebDriverAgent for iPhone, so the agent taps, types, and swipes exactly as a person would. It ships a sensitive-operation confirmation step and lets you take over by hand when a login screen or verification code appears.",
+    "The models behind it are published separately: AutoGLM-Phone-9B is tuned for Chinese apps and AutoGLM-Phone-9B-Multilingual covers English and other languages. You can serve either yourself with vLLM or SGLang, or point the framework at a hosted endpoint such as Z.ai, Novita AI, or Parasail. The repository is Apache-2.0 and the project states it is for research and learning only."
+  ],
+  "features": [
+    "Vision-language screen understanding — the agent reads the live interface instead of relying on accessibility trees or hard-coded selectors",
+    "Cross-platform device control via ADB (Android), HDC (HarmonyOS), and WebDriverAgent (iOS)",
+    "Natural-language task input, with an interactive mode or a one-shot task passed on the command line",
+    "Sensitive-operation confirmation plus manual takeover for logins and verification codes",
+    "Remote debugging over WiFi, so the phone does not need to stay tethered by USB",
+    "Runs against a self-hosted vLLM/SGLang endpoint or a third-party host, and integrates with the Midscene.js UI-automation SDK"
+  ],
+  "gettingStarted": {
+    "intro": "You need Python 3.10+, a device with developer mode and USB debugging enabled, and either your own model server or an API key from a provider that hosts the AutoGLM phone models.",
+    "steps": [
+      {
+        "heading": "Install the framework",
+        "body": "Clone the repository, then install the dependencies and the package itself.",
+        "code": "pip install -r requirements.txt\npip install -e .",
+        "lang": "bash"
+      },
+      {
+        "heading": "Connect and check the device",
+        "body": "Enable developer mode and USB debugging on the phone, connect it with a data-capable USB cable, and confirm the tooling can see it. Android devices also need the ADB Keyboard app installed for text input.",
+        "code": "# Android\nadb devices\n\n# HarmonyOS\nhdc list targets",
+        "lang": "bash"
+      },
+      {
+        "heading": "Point it at a model",
+        "body": "Either serve the open weights yourself with vLLM, or use a hosted endpoint. The README's vLLM invocation must be followed closely — the startup flags matter.",
+        "code": "python3 -m vllm.entrypoints.openai.api_server \\\n --served-model-name autoglm-phone-9b-multilingual \\\n --allowed-local-media-path / \\\n --mm-encoder-tp-mode data \\\n --mm_processor_cache_type shm \\\n --mm_processor_kwargs \"{\\\"max_pixels\\\":5000000}\" \\\n --max-model-len 25480 \\\n --chat-template-content-format string \\\n --limit-mm-per-prompt \"{\\\"image\\\":10}\" \\\n --model zai-org/AutoGLM-Phone-9B-Multilingual \\\n --port 8000",
+        "lang": "bash"
+      },
+      {
+        "heading": "Verify the model service",
+        "body": "A helper script confirms the endpoint answers and reports token statistics before you let the agent touch the phone.",
+        "code": "python scripts/check_deployment_en.py --base-url http://localhost:8000/v1 --model autoglm-phone-9b-multilingual",
+        "lang": "bash"
+      },
+      {
+        "heading": "Run a task",
+        "body": "Pass a task as an argument for a one-shot run, or omit it for interactive mode. Use --device-type hdc for HarmonyOS devices.",
+        "code": "# Self-hosted\npython main.py --base-url http://localhost:8000/v1 \"Open Maps and search for nearby coffee shops\"\n\n# Hosted on Z.ai\npython main.py --base-url https://api.z.ai/api/paas/v4 --model \"autoglm-phone-multilingual\" --apikey \"your-z-ai-api-key\" \"Open Chrome browser\"",
+        "lang": "bash"
+      },
+      {
+        "heading": "Or drive it from Python",
+        "body": "The PhoneAgent class exposes the same loop for embedding in your own code.",
+        "code": "from phone_agent import PhoneAgent\nfrom phone_agent.model import ModelConfig\n\nmodel_config = ModelConfig(\n    base_url=\"http://localhost:8000/v1\",\n    model_name=\"autoglm-phone-9b-multilingual\",\n)\n\nagent = PhoneAgent(model_config=model_config)\nresult = agent.run(\"Open eBay and search for wireless earphones\")\nprint(result)",
+        "lang": "python"
+      }
+    ]
+  },
+  "useCases": [
+    "Automate multi-step errands inside mobile apps that expose no API — searching a marketplace, filling a form, working through a settings flow",
+    "Build and test mobile agent research on real hardware rather than a simulator",
+    "Run repeatable QA passes across Android and HarmonyOS builds from one natural-language script",
+    "Control a phone bench remotely over WiFi from a development machine"
+  ],
+  "language": "Python",
+  "license": "Apache-2.0"
+}

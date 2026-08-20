@@ -73,6 +73,11 @@
       "label": "Artificial Analysis — Claude 3 Haiku analysis",
       "url": "https://artificialanalysis.ai/models/claude-3-haiku",
       "kind": "review"
+    },
+    {
+      "label": "Anthropic model deprecations (retirement dates)",
+      "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "kind": "api-docs"
     }
   ],
   "versionHistory": [
@@ -93,7 +98,7 @@
       "current": true
     }
   ],
-  "status": "Deprecated — retiring April 19, 2026 (replacement: Claude Haiku 4.5)",
+  "status": "Retired — deprecated February 19, 2026 and retired on the Claude API on April 20, 2026. Requests to claude-3-haiku-20240307 now fail; Anthropic's recommended replacement is Claude Haiku 4.5.",
   "contextWindow": "200K tokens",
   "maxOutput": "4,096 tokens",
   "parameters": "Undisclosed",

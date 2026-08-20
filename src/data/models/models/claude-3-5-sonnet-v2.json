@@ -6,7 +6,7 @@
   "seoTitle": "Claude 3.5 Sonnet (new): Specs & Computer Use",
   "metaDescription": "The upgraded Claude 3.5 Sonnet (Oct 2024) introduced computer use, raised SWE-bench Verified to 49.0%, and scored 14.9% on OSWorld. 200K context, $3/$15 pricin…",
   "releaseDate": "2024-10-22",
-  "status": "Deprecated",
+  "status": "Retired — deprecated August 13, 2025 and retired on the Claude API on October 28, 2025. Requests to claude-3-5-sonnet-20241022 now fail; Anthropic's recommended replacement is Claude Sonnet 4.6.",
   "license": "Proprietary",
   "openWeights": false,
   "modalities": [
@@ -108,6 +108,11 @@
       "label": "Model Card Addendum (Oct 2024)",
       "url": "https://assets.anthropic.com/m/1cd9d098ac3e6467/original/Claude-3-Model-Card-October-Addendum.pdf",
       "kind": "model-card"
+    },
+    {
+      "label": "Anthropic model deprecations (retirement dates)",
+      "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "kind": "api-docs"
     }
   ],
   "faq": [

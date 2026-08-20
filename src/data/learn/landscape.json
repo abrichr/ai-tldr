@@ -3371,6 +3371,13 @@
        "logo": "/tools-logos/gh-browser-use.png"
       },
       {
+       "name": "Open-AutoGLM",
+       "slug": "open-autoglm",
+       "repo": "zai-org/Open-AutoGLM",
+       "description": "A phone-agent framework from Z.ai that reads an Android, HarmonyOS, or iOS screen with a vision-language model and drives the device over ADB/HDC to carry out tasks described in plain language.",
+       "detail": true
+      },
+      {
        "name": "Browserbase",
        "slug": "browserbase",
        "homepage": "https://www.browserbase.com",
@@ -3481,6 +3488,14 @@
        "description": "A library that builds a temporal knowledge graph from an agent's conversations and data so facts can be tracked and queried as they change over time.",
        "detail": true,
        "logo": "/tools-logos/gh-getzep.png"
+      },
+      {
+       "name": "Hindsight",
+       "slug": "hindsight",
+       "repo": "vectorize-io/hindsight",
+       "homepage": "https://hindsight.vectorize.io",
+       "description": "An agent memory server that stores facts and experiences, consolidates them into observations and mental models, and serves them back through retain, recall, and reflect operations.",
+       "detail": true
       },
       {
        "name": "Supermemory",
