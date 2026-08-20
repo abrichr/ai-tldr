@@ -34579,6 +34579,46 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260820t184046z",
+      "timestamp": "2026-08-20T18:40:46.083Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, Moonshot, DeepSeek, Z.ai, MiniMax, ByteDance Seed), GitHub trending, HuggingFace models/datasets/papers, HN front page and Show HN, 8 YouTube creator feeds, TechCrunch/The New Stack, and the AI-for-science lane (BCI, medical imaging, drug discovery, STAT News, Nature subjects). Added two: Ramp's Router LLM gateway and a fresh Fireship video. Everything else fresh was already in the feed (Gemini 3.7 Flash, WeatherNext Cyclones, Mistral Agentic Search, Mojo open source, DiffusionGemma, RollTab, OpenViking); HF's top papers had no released code, and Cohere's CultureMarkers dataset missed the traction bar.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "ramp-router",
+          "title": "Ramp Router — an LLM gateway that cut customer inference bills 40% on average",
+          "category": "tool",
+          "note": "New LLM gateway launched 19 Aug; covered by TechCrunch and The New Stack within 48h, with a primary launch announcement carrying the 40% cost figure."
+        },
+        {
+          "id": "fireship-deepseek-cooked-aug20",
+          "title": "Fireship — 'DeepSeek just cooked again... Big AI is big scared'",
+          "category": "video",
+          "note": "Fresh video (0h old) from a listed creator, substantive AI news rather than a promo; video items are exempt from semantic dedup against the releases they cover."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "video",
+        "article",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }

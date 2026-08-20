@@ -1,8 +1,174 @@
 {
-  "generatedAt": "2026-08-20T16:40:15.805Z",
+  "generatedAt": "2026-08-20T18:40:46.083Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "ramp-router",
+      "categories": [
+        "tool"
+      ],
+      "title": "Ramp Router — an LLM gateway that cut customer inference bills 40% on average",
+      "org": "Ramp",
+      "date": "2026-08-19",
+      "url": "https://router.com/",
+      "summary": "Ramp Router is an LLM gateway that takes one API call and sends it to the cheapest model that still meets your quality bar. Ramp says customers on it spend 40% less on inference on average. Routing is free through 2026.",
+      "tags": [
+        "llm-gateway",
+        "model-routing",
+        "ramp",
+        "router",
+        "api",
+        "cost-optimization",
+        "inference",
+        "developer-tools",
+        "fallbacks",
+        "openai",
+        "anthropic"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Avg. customer cost cut": "40%"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Ramp"
+        },
+        {
+          "label": "What it is",
+          "value": "One API endpoint that routes to many model providers"
+        },
+        {
+          "label": "Providers at launch",
+          "value": "OpenAI, Anthropic, SpaceXAI, Nvidia, Kimi, DeepSeek, GLM, Qwen"
+        },
+        {
+          "label": "API compatibility",
+          "value": "OpenAI and Anthropic APIs"
+        },
+        {
+          "label": "Routing price",
+          "value": "Free through 2026, plus $26 in credits"
+        },
+        {
+          "label": "Availability",
+          "value": "United States, individual developers and teams"
+        },
+        {
+          "label": "Reliability",
+          "value": "99.9%+ across production traffic"
+        }
+      ],
+      "explainer": {
+        "tagline": "Ramp Router takes one API call and forwards it to the model that meets your quality bar at the lowest price.",
+        "whatIsIt": "Router opens Ramp's internal model-routing layer to outside developers, announced on 19 August 2026 after three years of in-house use. One endpoint accepts a request and forwards it to a model from OpenAI, Anthropic, DeepSeek, Nvidia, Kimi, GLM or Qwen, with Gemini, AWS, Together AI, Baseten and Crusoe listed as coming. Ramp is best known as a corporate spend platform, and Router hooks model choice into the same spend visibility.",
+        "howItWorks": "Routing strategies decide where each request goes. You set cost and performance priorities per request type, or start from Ramp's benchmarked defaults. New models are scored on Ramp SWE-Bench, a benchmark built from Ramp's own production tasks, and the gateway layers on caching, compression and request timing — more than 100 optimizations in all. When a provider fails or rate-limits, Router falls back to another model on its own.",
+        "whyItMatters": "Teams paying several model providers usually write their own routing, fallback and cost-tracking code. Router replaces that with one endpoint that speaks the OpenAI and Anthropic APIs, plus a dashboard for token spend, cost and latency. Ramp cut roughly 30% off its own inference bill at the same output quality, and the routing layer costs nothing through 2026, so the main switching cost is integration time.",
+        "forWho": "engineering teams paying several model providers",
+        "tryIt": "Sign up at https://router.com and read the API docs at https://docs.router.com"
+      },
+      "faq": [
+        {
+          "q": "How much does Ramp Router cost?",
+          "a": "Ramp Router charges nothing for routing through the end of 2026. Customers pay list price for the tokens they consume from the underlying model providers, and new accounts get $26 in free credits to start. Ramp has not announced what the routing layer will cost from 2027 onward."
+        },
+        {
+          "q": "Can I bring my own provider API keys to Ramp Router?",
+          "a": "Ramp Router supports bring-your-own-key setups, so an existing OpenAI or Anthropic contract keeps working through the gateway. Router also ships a side-by-side comparison tool for putting two models against the same request, which is how Ramp expects teams to sanity-check a routing strategy before pointing production traffic at it."
+        },
+        {
+          "q": "Where can I use Ramp Router?",
+          "a": "Ramp Router is open to individual developers and teams in the United States, and Ramp says more countries are coming. Anthropic's head of platform engineering, Katelyn Lesse, is quoted in the launch announcement saying Claude is available through Router from day one."
+        },
+        {
+          "q": "What happens if a model provider goes down?",
+          "a": "Ramp Router falls back to another model automatically when a provider fails or rate-limits a request, so the calling application does not have to handle the retry. Ramp reports better than 99.9% reliability across its production traffic on the service."
+        },
+        {
+          "q": "Does Ramp Router keep my prompts?",
+          "a": "Ramp Router records model inputs, outputs and tool calls for one year by default, and the retention setting can be opted out of. Ramp says it strips personally identifiable information from that content before using it to improve the product."
+        }
+      ],
+      "image": {
+        "url": "https://mmx.prnewswire.com/media/MS1336361/Ramp-Logo.jpg?id=OA2898068&p=facebook",
+        "alt": "Ramp logo from the Router.com launch announcement",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Launch Announcement",
+          "url": "https://www.prnewswire.com/news-releases/ramp-launches-routercom-to-cut-companies-rising-ai-bills-302855572.html"
+        },
+        {
+          "label": "API Docs",
+          "url": "https://docs.router.com/"
+        },
+        {
+          "label": "TechCrunch Report",
+          "url": "https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/"
+        },
+        {
+          "label": "The New Stack",
+          "url": "https://thenewstack.io/cursor-ramp-meta-model-router/"
+        }
+      ],
+      "publishDate": "2026-08-20T18:40:46.083Z"
+    },
+    {
+      "id": "fireship-deepseek-cooked-aug20",
+      "categories": [
+        "video"
+      ],
+      "title": "Fireship — 'DeepSeek just cooked again... Big AI is big scared'",
+      "org": "Fireship",
+      "date": "2026-08-20",
+      "url": "https://www.youtube.com/watch?v=xBByvFrqmWU",
+      "summary": "Fireship uploaded 'DeepSeek just cooked again... Big AI is big scared' on 20 August 2026. The title points at DeepSeek; the video description leads on OpenAI, which it says paused its biggest training run in history.",
+      "tags": [
+        "youtube",
+        "fireship",
+        "video-explainer",
+        "deepseek",
+        "openai",
+        "training-run",
+        "open-weights",
+        "ai-safety"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Fireship's newest video pairs DeepSeek's latest open-weights push with OpenAI stopping its biggest training run.",
+        "whatIsIt": "'DeepSeek just cooked again... Big AI is big scared' is a Fireship video uploaded on 20 August 2026. The title points at DeepSeek. The description points somewhere else: it says OpenAI 'just paused its biggest training run in history just as things were getting interesting', then invites viewers to dive in.",
+        "howItWorks": "The Fireship format is a few minutes of fast narration over code and clips, written for working developers rather than researchers. Here that format is pointed at two threads from the same stretch of August — an open-weights lab shipping again, and a closed frontier lab choosing to stop scaling — rather than at a single result.",
+        "whyItMatters": "DeepSeek's releases and OpenAI's training pause have been reported as separate stories. Fireship reaches a large general developer audience, so this video is where many engineers will first see the two set against each other. It is a summary of the moment, not new reporting, which makes it a reasonable starting point before the primary sources.",
+        "forWho": "developers following the open-versus-closed model race",
+        "tryIt": "Watch at https://www.youtube.com/watch?v=xBByvFrqmWU"
+      },
+      "author": {
+        "name": "Fireship",
+        "profileUrl": "https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/xBByvFrqmWU/hqdefault.jpg",
+        "alt": "Fireship video thumbnail for 'DeepSeek just cooked again... Big AI is big scared'",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=xBByvFrqmWU"
+        },
+        {
+          "label": "Channel",
+          "url": "https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA"
+        },
+        {
+          "label": "OpenAI Training Pause",
+          "url": "https://techcrunch.com/2026/08/18/openai-institutes-new-safeguards-after-hugging-face-breach/"
+        }
+      ],
+      "publishDate": "2026-08-20T18:40:46.083Z"
+    },
     {
       "id": "cortechs-neuroquant-pet",
       "categories": [
