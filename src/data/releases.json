@@ -1,8 +1,116 @@
 {
-  "generatedAt": "2026-08-20T08:39:57.240Z",
+  "generatedAt": "2026-08-20T10:32:32.415Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openai-chatgpt-ads-europe",
+      "categories": [
+        "tool",
+        "ecosystem"
+      ],
+      "title": "ChatGPT Ads reach Europe — 31 markets get labeled ads on Free and Go",
+      "org": "OpenAI",
+      "date": "2026-08-19",
+      "url": "https://www.thurrott.com/a-i/340543/chatgpt-ads-are-coming-to-31-european-countries",
+      "summary": "OpenAI is taking ChatGPT Ads into 31 European markets, the largest step yet for its advertising pilot. Only Free and Go users see ads; Plus, Pro and Enterprise stay ad-free, and Europeans choose personalized or contextual targeting.",
+      "tags": [
+        "openai",
+        "chatgpt",
+        "ads",
+        "advertising",
+        "monetization",
+        "europe",
+        "gdpr",
+        "privacy",
+        "consent",
+        "free-tier"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Ad revenue growth": "+25% since Aug 1, 2026",
+        "Commercial intent": "20% of ChatGPT users"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenAI"
+        },
+        {
+          "label": "New markets",
+          "value": "31 European countries"
+        },
+        {
+          "label": "Rollout starts",
+          "value": "Week of August 24, 2026"
+        },
+        {
+          "label": "Who sees ads",
+          "value": "Free and Go plans"
+        },
+        {
+          "label": "Ad-free plans",
+          "value": "Plus, Pro, Enterprise"
+        },
+        {
+          "label": "Consent options",
+          "value": "Personalized or contextual"
+        },
+        {
+          "label": "Advertiser access",
+          "value": "Ads Solutions team and partners first"
+        }
+      ],
+      "explainer": {
+        "tagline": "OpenAI takes ChatGPT Ads into 31 European markets, with GDPR consent choices and no ads on paid plans.",
+        "whatIsIt": "ChatGPT Ads is expanding into 31 European markets, the largest step yet for OpenAI's advertising pilot. Before this move the program ran in nine countries: the US, Canada, Australia, New Zealand, the UK, Japan, South Korea, Brazil and Mexico. Named European markets include Germany, France, Spain, Italy, Sweden, Norway, Denmark, the Netherlands, Ireland, Belgium, Austria, Poland, the Czech Republic and Portugal.",
+        "howItWorks": "Ads sit in a clearly labeled block that OpenAI keeps separate from ChatGPT's answers, and the company says advertising does not influence the answers the model gives. Under GDPR, European users are asked for consent and can pick personalized ads, which use their personal data, or contextual ads chosen from the current conversation and a rough location. Advertisers reach the new markets through OpenAI's Ads Solutions team, agency partners and technology partners; self-serve buying through Ads Manager is planned for later this summer.",
+        "whyItMatters": "The European rollout turns ChatGPT Ads from a limited test into a real revenue line for OpenAI, which is still losing money and looking for income beyond subscriptions. Free-tier users across Europe now get an assistant that carries ads unless they upgrade. Advertisers get a new surface where, by OpenAI's own count, a fifth of the audience arrives with commercial intent.",
+        "forWho": "European ChatGPT users and advertisers"
+      },
+      "image": {
+        "url": "https://thurrott-assets.nyc3.digitaloceanspaces.com/web/wp-content/uploads/sites/2/2026/08/ChatGPT-Ads.jpg",
+        "alt": "ChatGPT Ads promotional graphic",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement Coverage",
+          "url": "https://www.thurrott.com/a-i/340543/chatgpt-ads-are-coming-to-31-european-countries"
+        },
+        {
+          "label": "Adweek Report",
+          "url": "https://www.adweek.com/media/openai-is-taking-its-ad-business-to-31-new-european-markets/"
+        },
+        {
+          "label": "Consent + GDPR",
+          "url": "https://digiday.com/marketing/openai-builds-offerings-on-consent-as-it-expands-chatgpt-ads-to-europe/"
+        },
+        {
+          "label": "Advertiser Access",
+          "url": "https://www.contentgrip.com/chatgpt-ads-europe/"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Can I turn off ads in ChatGPT?",
+          "a": "ChatGPT users on the Free and Go plans in Europe cannot switch ads off, but they do control how ads are chosen. OpenAI asks for consent under GDPR and lets people pick contextual ads, based only on the current chat and a rough location, instead of personalized ads that draw on their personal data. Upgrading to Plus, Pro or Enterprise removes ads."
+        },
+        {
+          "q": "Do ads change the answers ChatGPT gives?",
+          "a": "OpenAI says advertising does not influence the answers ChatGPT provides. Ads appear in a clearly labeled block kept separate from the model's response. In OpenAI's words, ads 'help advance our mission to democratize access to the best AI by supporting free and low-cost access to ChatGPT', and people keep control over ad personalization."
+        },
+        {
+          "q": "How can advertisers buy ChatGPT ads in Europe?",
+          "a": "Advertisers reach the 31 new European markets through OpenAI's Ads Solutions team, agency partners and technology partners at first. OpenAI plans to open self-serve buying through its Ads Manager later this summer. That staged approach mirrors how the earlier ChatGPT Ads markets were opened, starting with managed buys before self-serve."
+        },
+        {
+          "q": "Where did ChatGPT Ads run before Europe?",
+          "a": "ChatGPT Ads ran as a pilot in nine markets before this expansion: the United States, Canada, Australia, New Zealand, the United Kingdom, Japan, South Korea, Brazil and Mexico. Adding 31 European countries roughly quadruples the number of markets and makes Europe the largest single expansion of the program so far."
+        }
+      ],
+      "publishDate": "2026-08-20T10:32:32.415Z"
+    },
     {
       "id": "akitaonrails-ai-memory-1-29-0",
       "categories": [

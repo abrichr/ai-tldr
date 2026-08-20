@@ -34426,6 +34426,39 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260820t103232z",
+      "timestamp": "2026-08-20T10:32:32.415Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, Qwen, DeepSeek, Z.ai), GitHub trending, HuggingFace models/datasets/papers, HN top 30, all 8 YouTube creator feeds, and the AI-for-science lane (BCI, medical imaging, drug design, protein design). Almost everything fresh was already in the feed: 4 of 5 fresh YouTube videos, every AI repo on GitHub trending, and the HN AI stories (OpenRouter/Stripe, Unsloth Dynamic 3.0, fx, OpenAI cyber pacing) are all live entries. Added one item: OpenAI expanding ChatGPT Ads to 31 European markets, announced 2026-08-19 on openai.com and covered by Adweek, Digiday and Thurrott.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-chatgpt-ads-europe",
+          "title": "ChatGPT Ads reach Europe — 31 markets get labeled ads on Free and Go",
+          "category": "tool",
+          "note": "Official OpenAI announcement 2026-08-19 (openai.com/index/chatgpt-ads-expands-across-europe/) plus Adweek/Digiday/Thurrott coverage; largest expansion of the ChatGPT ad pilot to date and distinct from the May US self-serve Ads Manager item already in the feed."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "dataset",
+        "paper",
+        "video",
+        "ecosystem",
+        "article",
+        "benchmark",
+        "algorithm"
+      ]
     }
   ]
 }
