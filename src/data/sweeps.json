@@ -34619,6 +34619,52 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260820t203339z",
+      "timestamp": "2026-08-20T20:33:39.957Z",
+      "source": "github-actions-sweep",
+      "summary": "Added two items: Adversa AI's unpatched Grok data-theft attack that hides instructions as AES-256 ciphertext, and Google's embeddable Preferred Sources button for publishers. Lab blogs were quiet inside 72h (Anthropic last posted Aug 14, DeepSeek Aug 13, Meta Jul 27, Mistral's Aug 20 Agentic Search and Gemini 3.7 Flash already in the feed); all six fresh YouTube uploads were already in the feed or a sponsored promo; HF models/datasets and HN's AI posts were already covered; the science lane and pharma queries returned nothing new inside 72h.",
+      "counts": {
+        "added": 2,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "adversa-grok-context-injection",
+          "title": "Grok leaks chat data — encrypted prompt injection slips past its filters",
+          "category": "security",
+          "note": "Zero-click data exfiltration from Grok 4.5 Fast, disclosed today by Adversa AI and covered by The Register and The Hacker News; still unpatched, so it changes what agent builders should allow untrusted pages to reach."
+        },
+        {
+          "id": "google-preferred-sources-button",
+          "title": "Google Preferred Sources button — publishers can now embed it on their site",
+          "category": "ecosystem",
+          "note": "Google shipped a publisher-embeddable button today; a site owner can add two lines of code and earn a 'preferred' badge in AI Mode and AI Overviews, which is a concrete action, not a business announcement."
+        }
+      ],
+      "updated": [
+        {
+          "id": "google-diffusion-gemma",
+          "title": "Google Ships DiffusionGemma — Apache-2.0 26B/3.8B-Active Mixture-of-Experts That Denoises 256 Tokens in Parallel via Discrete Block Diffusion, Hits 1,000+ Tokens/Sec on H100 and 700+ on RTX 5090 While Posting 77.6% MMLU Pro, 73.2% GPQA Diamond, and 69.1% LiveCodeBench v6",
+          "note": "Added the DiffusionGemma Technical Report (arXiv 2608.00146), which reached the HN front page today with 116 points."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "benchmark",
+        "security",
+        "ecosystem",
+        "article",
+        "algorithm"
+      ]
     }
   ]
 }

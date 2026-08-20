@@ -1,8 +1,206 @@
 {
-  "generatedAt": "2026-08-20T18:40:46.083Z",
+  "generatedAt": "2026-08-20T20:33:39.957Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "adversa-grok-context-injection",
+      "categories": [
+        "security"
+      ],
+      "title": "Grok leaks chat data — encrypted prompt injection slips past its filters",
+      "org": "Adversa AI",
+      "date": "2026-08-20",
+      "url": "https://adversa.ai/blog/cryptographic-context-injection-grok-data-theft/",
+      "summary": "Adversa AI showed an attack that makes Grok send a user's name, rough location, plan and chat prompts to an attacker's server. The instructions sit on a web page as AES-256 ciphertext, so guardrails cannot read them. xAI has not patched it.",
+      "tags": [
+        "security",
+        "prompt-injection",
+        "grok",
+        "xai",
+        "llm-security",
+        "data-exfiltration",
+        "agents",
+        "ai-safety",
+        "red-teaming"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Researcher",
+          "value": "Adversa AI (Rony Utevsky)"
+        },
+        {
+          "label": "Affected",
+          "value": "Grok 4.5 Fast web chat on grok.com"
+        },
+        {
+          "label": "Method",
+          "value": "PBKDF2 + AES-256-GCM ciphertext on a web page"
+        },
+        {
+          "label": "Data exposed",
+          "value": "Name, coarse location, subscription tier, conversation prompts"
+        },
+        {
+          "label": "Reported",
+          "value": "June 3, 2026 via HackerOne"
+        },
+        {
+          "label": "Status",
+          "value": "Unpatched, no CVE"
+        },
+        {
+          "label": "User trigger",
+          "value": "Asking Grok to summarize a page"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which Grok product does the Cryptographic Context Injection attack hit?",
+          "a": "Adversa AI demonstrated Cryptographic Context Injection against Grok 4.5 Fast in the web chat at grok.com. The researchers reported they could still reproduce the data theft on August 19, 2026. They withheld the working payloads so the attack cannot be copied straight from the writeup."
+        },
+        {
+          "q": "Has xAI fixed the Grok data-theft flaw?",
+          "a": "No. Adversa AI reported the issue to xAI on June 3, 2026 directly and through the HackerOne bug bounty program, then followed up on August 4 and August 10 without a response. At public disclosure on August 20, 2026 there was no patch, no CVE identifier and no user-facing workaround."
+        },
+        {
+          "q": "Do other chatbots fall for the same encrypted payload?",
+          "a": "Adversa AI reports mixed results. The same technique worked against Google Gemini in Deep Thinking mode, reported on March 11, 2026, though the success rate has dropped sharply since June. OpenAI's GPT-5 failed to parse the decryption instructions, and Claude Sonnet 4.5 flagged the payload as prompt injection."
+        },
+        {
+          "q": "What can teams building agents do about this class of attack?",
+          "a": "Adversa AI advises keeping untrusted page content away from tools and credentials, asking a human to confirm any outbound or irreversible action, and logging every tool call with its resolved arguments. It also suggests alerting on suspicious sequences, such as an opaque blob paired with decryption instructions, rather than scanning single payloads."
+        }
+      ],
+      "explainer": {
+        "tagline": "Encrypted text on an ordinary web page turns Grok's own code runtime into a data-exfiltration tool.",
+        "whatIsIt": "Cryptographic Context Injection is an attack from Adversa AI that turns a plain \"summarize this page\" request into data theft. A user visits Grok, asks it to read a page an attacker controls, and the chatbot quietly sends the user's name, coarse location, subscription tier and every prompt in that conversation to the attacker's server. There is no confirmation step and no visible warning.",
+        "howItWorks": "The malicious instructions never appear as readable text. The attacker puts them on the page as AES-256-GCM ciphertext, derived with PBKDF2, next to the key. A guardrail scanner reads the page first and sees only random-looking characters, so it passes the content through. Grok then decrypts the blob inside its own Python runtime, treats the result as trusted output from its own tools, builds a URL with the user's data in the query string, and loads it with its navigation tool.",
+        "whyItMatters": "Guardrails that scan text for bad instructions stop working when the instruction is encrypted and the model holds the key. Any agent that reads untrusted pages and can also run code and make network calls has the same shape of hole, and Grok's is still open, so anyone summarizing an unknown link is exposed today.",
+        "forWho": "security teams and agent builders"
+      },
+      "image": {
+        "url": "https://adversa.ai/og/blog/cryptographic-context-injection-grok-data-theft.png",
+        "alt": "Adversa AI report on the Cryptographic Context Injection attack against Grok",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Research Writeup",
+          "url": "https://adversa.ai/blog/cryptographic-context-injection-grok-data-theft/"
+        },
+        {
+          "label": "The Register",
+          "url": "https://www.theregister.com/ai-and-ml/2026/08/20/grok-chat-duped-into-swallowing-injected-instructions/5290019"
+        },
+        {
+          "label": "The Hacker News",
+          "url": "https://thehackernews.com/2026/08/new-cryptographic-context-injection.html"
+        }
+      ],
+      "publishDate": "2026-08-20T20:33:39.957Z"
+    },
+    {
+      "id": "google-preferred-sources-button",
+      "categories": [
+        "ecosystem",
+        "tool"
+      ],
+      "title": "Google Preferred Sources button — publishers can now embed it on their site",
+      "org": "Google",
+      "date": "2026-08-20",
+      "url": "https://blog.google/products-and-platforms/products/search/personalize-search-discover-news/",
+      "summary": "Google now gives publishers an embeddable Preferred Sources button. Readers who click it mark a site as a favorite, so its stories show more often in Top Stories and can carry a \"preferred\" badge in AI Mode and AI Overviews.",
+      "tags": [
+        "google",
+        "search",
+        "publishers",
+        "ai-overviews",
+        "ai-mode",
+        "google-discover",
+        "google-news",
+        "seo",
+        "web"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Google"
+        },
+        {
+          "label": "What's new",
+          "value": "Embeddable Preferred Sources button"
+        },
+        {
+          "label": "Setup",
+          "value": "Two lines: a script tag plus a div"
+        },
+        {
+          "label": "Where it shows",
+          "value": "Top Stories, AI Mode, AI Overviews"
+        },
+        {
+          "label": "Eligible sites",
+          "value": "Domains and subdomains only"
+        },
+        {
+          "label": "Sources selected so far",
+          "value": "Over 600,000"
+        },
+        {
+          "label": "Required?",
+          "value": "No — a site can be preferred without it"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How does a publisher add the Preferred Sources button?",
+          "a": "Google's Search Central guide gives three options for the Preferred Sources button. The recommended one is a script tag plus a div, which renders a Google-styled button that localizes itself to the reader's browser language. Advanced JavaScript lets a site use its own assets, and a deeplink such as google.com/preferences/source?q=example.com works when JavaScript is not possible."
+        },
+        {
+          "q": "Can a blog that lives in a subdirectory be a preferred source?",
+          "a": "No. Google's Preferred Sources documentation says only domain-level and subdomain-level sites are eligible, such as example.com or code.example.com. A subdirectory like example.com/blog cannot be selected on its own, so a publication hosted under a path on someone else's domain cannot use this."
+        },
+        {
+          "q": "Does embedding the button guarantee more traffic?",
+          "a": "Google makes no traffic promise for the Preferred Sources button. It says a site a reader has selected is more likely to appear in Top Stories and can be highlighted with a \"preferred\" badge in AI Mode and AI Overviews for that reader. Google also states the button is optional and not required to appear as a preferred source."
+        },
+        {
+          "q": "What else did Google announce alongside the button?",
+          "a": "The same Google post adds two other personalization changes. In Discover, a three-dot menu lets readers ask for more or less on a topic in their own words, and the feed adjusts. In the Google News app on Android, readers can pick topics for a daily audio briefing that includes source attribution and links to the articles."
+        }
+      ],
+      "explainer": {
+        "tagline": "A two-line snippet lets readers pin a publisher as a preferred source across Google Search, Discover and News.",
+        "whatIsIt": "The Preferred Sources button is now something publishers can put on their own pages, not just a control buried in Google Search. A reader clicks it, the site is added to their preferred sources, and Google sends them straight back to the spot they were reading. Google says people have already selected more than 600,000 unique sources this way.",
+        "howItWorks": "The standard setup is a script tag and a div; Google renders the button, localizes the label to the browser language, and offers a light or dark theme. Sites that want their own design can drive it through an ES module import or a script callback, and a deeplink to Google's source preferences tool covers pages that cannot run JavaScript. Only domains and subdomains can be registered, not subdirectories.",
+        "whyItMatters": "AI answers now sit between search results and the pages behind them, and publishers have had little say in that. A preferred source gets a badge in AI Mode and AI Overviews and a better shot at Top Stories, so the button is a concrete lever a site owner can ship this week instead of waiting for ranking changes.",
+        "forWho": "publishers and site owners",
+        "tryIt": "https://developers.google.com/search/docs/appearance/preferred-sources"
+      },
+      "image": {
+        "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Untitled-13V_1.width-1300.png",
+        "alt": "Google illustration for personalized Search, Discover and News",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://blog.google/products-and-platforms/products/search/personalize-search-discover-news/"
+        },
+        {
+          "label": "Publisher Guide",
+          "url": "https://developers.google.com/search/docs/appearance/preferred-sources"
+        },
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/20/google-gives-publishers-a-new-way-to-fight-ai-driven-traffic-losses/"
+        }
+      ],
+      "publishDate": "2026-08-20T20:33:39.957Z"
+    },
     {
       "id": "ramp-router",
       "categories": [
@@ -58812,6 +59010,10 @@
         {
           "label": "Diffusion Toolbox",
           "url": "https://github.com/google/hackable_diffusion"
+        },
+        {
+          "label": "Technical Report",
+          "url": "https://arxiv.org/abs/2608.00146"
         }
       ],
       "explainer": {
