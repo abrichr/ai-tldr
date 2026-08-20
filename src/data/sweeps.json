@@ -34256,6 +34256,40 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260820t030007z",
+      "timestamp": "2026-08-20T03:00:07.567Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic/DeepMind/Mistral/Meta/OpenAI/DeepSeek/Qwen/x.ai), GitHub trending, HuggingFace models/datasets/papers, HN front page, 8 YouTube creator feeds, coding-agent changelogs and the AI-for-science lane; nearly everything fresh was already ingested by the 01:02Z sweep. Added one item: Simon Willison's hands-on test of smolvm as a per-task VM sandbox for untrusted agent code.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "simonw-smolvm-untrusted-sandbox-aug19",
+          "title": "Simon Willison — smolvm boots a real VM per task to run untrusted code",
+          "category": "article",
+          "note": "Fresh Aug 19 hands-on from a listed influential voice, with an Apache-2.0 5.5k-star artifact and concrete measured numbers plus a documented flag trap (--overlay vs --storage) that changes how you configure a sandbox today."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "security",
+        "ecosystem",
+        "rumor"
+      ]
     }
   ]
 }
