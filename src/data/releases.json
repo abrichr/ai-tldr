@@ -1,8 +1,203 @@
 {
-  "generatedAt": "2026-08-20T12:44:44.984Z",
+  "generatedAt": "2026-08-20T14:38:15.229Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "mistral-agentic-search",
+      "categories": [
+        "tool"
+      ],
+      "title": "Mistral Agentic Search — models search, open and grep their way through docs",
+      "org": "Mistral AI",
+      "date": "2026-08-20",
+      "url": "https://mistral.ai/news/agentic-search/",
+      "summary": "Mistral Agentic Search gives models file-style tools — search, open, navigate, read, grep — so they dig through a document set over several turns instead of one retrieval pass. On FinanceBench, Mistral Medium 3.5 rose from 26.7% to 86%.",
+      "tags": [
+        "mistral",
+        "agentic-search",
+        "rag",
+        "retrieval",
+        "agents",
+        "mcp",
+        "document-search",
+        "enterprise-search",
+        "tool"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "Mistral's retrieval layer lets an agent search, open and grep a document set until it can actually answer.",
+        "whatIsIt": "Agentic Search replaces one-shot retrieval with a loop. Mistral's new layer hands a model a set of file-style tools and lets it pick which one to call next, so it can run a search, open a promising document, and keep reading until it has enough to answer. Mistral AI announced it on 20 August 2026, both inside its Studio and Vibe products and as a standalone toolkit.",
+        "howItWorks": "Each tool copies a step a person would take in a file browser. `search` runs semantic and hybrid retrieval across collections, `open` widens the context around a matched chunk, `navigate` steps forward or back through a document, `read` pulls a known range of text, and `grep` does plain lexical matching inside a single file. The Search Toolkit SDK exposes the pipeline pieces (QueryEngine, VectorRetriever) and can serve the same tools to any agent over MCP.",
+        "whyItMatters": "Accuracy on document-heavy work is the whole point here. On FinanceBench, a set of questions over SEC filings, Mistral Medium 3.5 climbed from 26.7% to 86% once Agentic Search was in the loop; on OfficeQA Pro the GLM-5.2 loop gained 45.6 points to reach 51.9%. Mistral reports the extra turns are not a tax: token use fell 23.9% for Mistral Medium 3.5 and p90 latency dropped from 255s to 154s.",
+        "forWho": "teams building RAG over long documents",
+        "tryIt": "https://docs.mistral.ai/studio/search/agentic-search"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Mistral AI"
+        },
+        {
+          "label": "What it is",
+          "value": "Multi-turn retrieval layer for agents"
+        },
+        {
+          "label": "Tools",
+          "value": "search, open, navigate, read, grep, ingest, delete"
+        },
+        {
+          "label": "Availability",
+          "value": "Search Toolkit SDK, plus Studio and Vibe libraries"
+        },
+        {
+          "label": "Deployment",
+          "value": "Cloud or on-premises"
+        },
+        {
+          "label": "Agent protocol",
+          "value": "MCP server included"
+        },
+        {
+          "label": "Announced",
+          "value": "20 August 2026"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "FinanceBench (SEC filings)",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Mistral Medium 3.5 + Agentic Search",
+              "score": 86,
+              "highlight": true
+            },
+            {
+              "name": "Mistral Medium 3.5 (single-pass retrieval)",
+              "score": 26.7
+            }
+          ],
+          "source": "https://mistral.ai/news/agentic-search/"
+        },
+        {
+          "name": "OfficeQA Pro",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "GLM-5.2 + Agentic Search",
+              "score": 51.9,
+              "highlight": true
+            },
+            {
+              "name": "GLM-5.2 (single-pass retrieval)",
+              "score": 6.3
+            }
+          ],
+          "source": "https://mistral.ai/news/agentic-search/"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Where can I use Mistral Agentic Search?",
+          "a": "Mistral ships Agentic Search two ways. It is built into the Libraries feature of Studio and Vibe, so those users get the multi-turn retrieval loop without writing code. Developers who want it inside their own agents install the Mistral Search Toolkit SDK, which can run in Mistral's cloud or on their own infrastructure."
+        },
+        {
+          "q": "Does Agentic Search cost more tokens than ordinary RAG?",
+          "a": "No — Mistral reports the opposite. Even though Agentic Search takes several turns instead of one, token use on FinanceBench fell 23.9% with Mistral Medium 3.5 and 33.7% with GLM-5.2. Latency dropped too: p90 went from 255s to 154s and mean latency from 108s to 71s, because the model stops pulling in chunks it does not need."
+        },
+        {
+          "q": "Which models did Mistral test Agentic Search with?",
+          "a": "Mistral published results for two models: its own Mistral Medium 3.5 and Z.ai's GLM-5.2. Testing a rival open-weight model matters because Agentic Search is a tool layer, not a model feature — any model that can call tools can drive the loop. Both models improved on FinanceBench and OfficeQA Pro."
+        },
+        {
+          "q": "Can Agentic Search run on my own infrastructure?",
+          "a": "Yes. The Mistral Search Toolkit supports on-premises deployment alongside the hosted option, and it ships an MCP server so an agent running anywhere can call the same search, open, navigate, read and grep tools. Mistral also publishes a starter application on GitHub that wires up ingestion and querying end to end."
+        }
+      ],
+      "image": {
+        "url": "https://mistral.ai/cms-media/api/media/file/Thumbnail-Blog-Agenticsearch.png",
+        "alt": "Mistral Agentic Search announcement thumbnail",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://mistral.ai/news/agentic-search/"
+        },
+        {
+          "label": "Docs",
+          "url": "https://docs.mistral.ai/studio/search/agentic-search"
+        },
+        {
+          "label": "Starter App Repo",
+          "url": "https://github.com/mistralai/search-starter-app"
+        }
+      ],
+      "publishDate": "2026-08-20T14:38:15.229Z"
+    },
+    {
+      "id": "simedw-rolltab",
+      "categories": [
+        "showcase",
+        "model"
+      ],
+      "title": "RollTab — a 125M piano model that autocompletes on an iPhone",
+      "org": "Simon Edwardsson",
+      "date": "2026-08-20",
+      "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
+      "summary": "RollTab is a free iOS app that autocompletes piano playing from a MIDI keyboard. A 125M-parameter decoder-only transformer runs on the phone at about 108 notes per second on an iPhone 15, trained on roughly 300 million note events.",
+      "tags": [
+        "on-device",
+        "midi",
+        "music-generation",
+        "transformer",
+        "core-ml",
+        "ios",
+        "dpo",
+        "show-hn",
+        "small-models"
+      ],
+      "importance": "notable",
+      "metrics": {
+        "Parameters": "125M",
+        "On-device speed": "~108 notes/sec on iPhone 15"
+      },
+      "explainer": {
+        "tagline": "RollTab plugs a MIDI keyboard into an iPhone and finishes the phrase you started, entirely on-device.",
+        "whatIsIt": "RollTab turns a MIDI piano and an iPhone into an autocomplete pair: you play a few bars, and a 125M-parameter model continues the piece in real time. Simon Edwardsson published the write-up on 20 August 2026 and shipped the app free on the App Store. Everything runs locally through Core ML, so there is no server call between a keypress and the continuation.",
+        "howItWorks": "The tokenizer is where most of the speed comes from. Instead of emitting separate TIME_SHIFT events, Edwardsson encodes each note as a single compound NOTE(pitch, delta_onset, duration, velocity) token, so the transformer advances the music one whole note per forward pass — roughly 5x fewer autoregressive passes per note. The network itself is a standard decoder-only stack with RMSNorm, rotary position embeddings, causal self-attention and SwiGLU blocks. DPO post-training raised the preference score from 24.55% to 69.05%.",
+        "whyItMatters": "Small on-device models are usually shown off on text; this is a working music example with latency low enough to play against. Training used a few hundred thousand public-domain classical MIDI files, about 300 million note events, and heavy cleaning and deduplication — Edwardsson credits the data work and the token format, not scale, for most of the gain. He rates the output at roughly GPT-2 level, with rhythm and long-range structure still weak.",
+        "forWho": "musicians with a MIDI keyboard, on-device ML tinkerers",
+        "tryIt": "https://apps.apple.com/gb/app/rolltab/id6799679058"
+      },
+      "author": {
+        "name": "Simon Edwardsson",
+        "profileUrl": "https://simedw.com/"
+      },
+      "image": {
+        "url": "https://simedw.com/2026/08/20/midi-autocomplete/images/rolltab_phone.jpg",
+        "alt": "RollTab running on a phone above a MIDI piano keyboard",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Write-Up",
+          "url": "https://simedw.com/2026/08/20/midi-autocomplete/"
+        },
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/gb/app/rolltab/id6799679058"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49373456"
+        }
+      ],
+      "publishDate": "2026-08-20T14:38:15.229Z"
+    },
     {
       "id": "meta-ai-mac-app",
       "categories": [

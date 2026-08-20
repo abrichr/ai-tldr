@@ -34498,6 +34498,47 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260820t143815z",
+      "timestamp": "2026-08-20T14:38:15.229Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Mistral Agentic Search (lab blog, 20 Aug) and RollTab, a 125M on-device piano autocomplete model from Show HN (159 pts). Lab blogs were otherwise quiet — Anthropic's newest post is 14 Aug, Meta 27 Jul, DeepMind's sign-language and WeatherNext posts are 12 and 6 Aug; GitHub trending, HF models/datasets/papers, HN and the 8 YouTube feeds returned only items already in the feed.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "mistral-agentic-search",
+          "title": "Mistral Agentic Search — models search, open and grep their way through docs",
+          "category": "tool",
+          "note": "Posted on mistral.ai/news on 20 Aug 2026 (official lab blog, well inside 48h) with published FinanceBench and OfficeQA Pro numbers, docs and a starter repo — a significant tooling launch, so major."
+        },
+        {
+          "id": "simedw-rolltab",
+          "title": "RollTab — a 125M piano model that autocompletes on an iPhone",
+          "category": "showcase",
+          "note": "Show HN at 159 points on the HN front page top 30, published 20 Aug 2026, with a shipped free app and full training/architecture detail; notable rather than major since the audience is narrow."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "showcase",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
