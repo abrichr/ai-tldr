@@ -1,8 +1,233 @@
 {
-  "generatedAt": "2026-08-20T03:00:07.567Z",
+  "generatedAt": "2026-08-20T04:40:13.529Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openbmb-ultra-fineweb-l1",
+      "categories": [
+        "dataset",
+        "resource"
+      ],
+      "title": "Ultra-FineWeb-L1 — a 1.3T-token open web corpus for pretraining",
+      "org": "OpenBMB",
+      "date": "2026-08-20",
+      "url": "https://huggingface.co/datasets/openbmb/Ultra-FineWeb-L1",
+      "summary": "Ultra-FineWeb-L1 is a 1.3 trillion token English web corpus from OpenBMB, cleaned from six 2025 Common Crawl snapshots and free under Apache 2.0. OpenBMB reports it beats FineWeb by 0.635 points on its macro-average of downstream evals.",
+      "tags": [
+        "dataset",
+        "pretraining",
+        "common-crawl",
+        "web-corpus",
+        "openbmb",
+        "ultradata",
+        "open-data",
+        "data-filtering",
+        "deduplication",
+        "llm"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenBMB"
+        },
+        {
+          "label": "Size",
+          "value": "1.3T+ tokens, ~1.14B documents"
+        },
+        {
+          "label": "Language",
+          "value": "English"
+        },
+        {
+          "label": "Source data",
+          "value": "Six Common Crawl snapshots, CC-MAIN-2025-30 to CC-MAIN-2025-51"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        },
+        {
+          "label": "Format",
+          "value": "Parquet"
+        },
+        {
+          "label": "Layer",
+          "value": "L1 (filtered) in the UltraData L0-L4 framework"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How does Ultra-FineWeb-L1 compare to FineWeb?",
+          "a": "Ultra-FineWeb-L1 and FineWeb are both cleaned Common Crawl corpora. In OpenBMB's own ablation, a MiniCPM5-1B run pretrained on Ultra-FineWeb-L1 reaches a 9.668% macro-average across downstream evaluations against 9.033% for FineWeb, and 9.180% micro-average against 8.484%. Ultra-FineWeb-L1 also draws on 2025 crawl snapshots, so its pages are newer."
+        },
+        {
+          "q": "Can Ultra-FineWeb-L1 be used commercially?",
+          "a": "Ultra-FineWeb-L1 carries an Apache 2.0 license, but OpenBMB adds two conditions. Users must still respect the rights, licenses and terms of the original web sources the text was crawled from. OpenBMB also prohibits reposting, mirroring or commercially repackaging the project artifacts without prior written permission, so check the dataset card before redistributing."
+        },
+        {
+          "q": "Is there a higher-quality subset of Ultra-FineWeb-L1?",
+          "a": "Yes. OpenBMB also lists Ultra-FineWeb-from-L1, a quality-selected subset drawn from the L1 layer. In the same MiniCPM5-1B ablation it reaches a 10.379% macro-average and 9.798% micro-average, the best of the four corpora OpenBMB compares. The L1 release is the broad filtered pool that these tighter subsets are selected from."
+        },
+        {
+          "q": "How does Ultra-FineWeb-L1 fit with Ultra-FineWeb-L3?",
+          "a": "OpenBMB sorts UltraData into tiers from L0 to L4. Ultra-FineWeb-L1 is the filtered layer: raw crawl text after extraction, language filtering, deduplication and cleaning. Ultra-FineWeb-L3, released on 2026-05-28, is the synthetic refinement layer built further up the stack. L1 is the foundation the later tiers are selected and rewritten from."
+        }
+      ],
+      "links": [
+        {
+          "label": "Dataset Card",
+          "url": "https://huggingface.co/datasets/openbmb/Ultra-FineWeb-L1"
+        },
+        {
+          "label": "UltraData Platform",
+          "url": "https://ultradata.openbmb.cn/"
+        },
+        {
+          "label": "Ultra-FineWeb Paper",
+          "url": "https://arxiv.org/abs/2505.05427"
+        },
+        {
+          "label": "UltraData Paper",
+          "url": "https://arxiv.org/abs/2602.09003"
+        }
+      ],
+      "explainer": {
+        "tagline": "A 1.3T-token English web corpus from OpenBMB, cleaned from six 2025 Common Crawl snapshots and free under Apache 2.0.",
+        "whatIsIt": "Ultra-FineWeb-L1 adds 1.3 trillion English tokens, roughly 1.14 billion documents, drawn from six Common Crawl snapshots taken during 2025 and ending at CC-MAIN-2025-51. The data ships as Parquet files under an Apache 2.0 license. It sits at the L1 filtered layer of OpenBMB's UltraData framework, which runs from raw crawl data up to synthetic refinement.",
+        "howItWorks": "Six cleaning steps produce the corpus. trafilatura 2.0 pulls the main text out of each page, fastText drops non-English documents, heuristic rules cut low-quality text, and sensitive fields such as emails, IP addresses and phone numbers are replaced. MinHash deduplication then removes near-copies inside each crawl dump, and a final pass repairs leftover HTML and broken character encodings. Every record keeps a uid, the cleaned text and JSON metadata with the source URL.",
+        "whyItMatters": "Pretraining data is the piece of the stack that fewest labs publish, so a fresh 1.3 trillion token corpus gives small teams something they normally cannot buy. OpenBMB reports that the same MiniCPM5-1B training run scores 0.635 points higher on its macro-average of downstream evaluations when it reads Ultra-FineWeb-L1 instead of FineWeb. The 2025 snapshots also move the data's knowledge cutoff forward compared with older public corpora.",
+        "forWho": "teams pretraining open base models",
+        "tryIt": "load_dataset(\"openbmb/Ultra-FineWeb-L1\")"
+      },
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/datasets/openbmb/Ultra-FineWeb-L1.png",
+        "alt": "Hugging Face dataset card for OpenBMB's Ultra-FineWeb-L1 pretraining corpus",
+        "fit": "contain"
+      },
+      "publishDate": "2026-08-20T04:40:13.529Z"
+    },
+    {
+      "id": "xai-grok-4-6-bedrock",
+      "categories": [
+        "model",
+        "tool"
+      ],
+      "title": "Grok 4.6 on Amazon Bedrock — xAI's flagship opens to AWS teams",
+      "org": "xAI",
+      "date": "2026-08-19",
+      "url": "https://x.ai/news/grok-4-6-amazon-bedrock",
+      "summary": "Grok 4.6 is now generally available on Amazon Bedrock in every AWS Region where Bedrock runs, at $2 per million input tokens and $6 per million output. A US-only inference profile covers data-residency rules.",
+      "tags": [
+        "grok-4-6",
+        "xai",
+        "amazon-bedrock",
+        "aws",
+        "llm",
+        "agents",
+        "api",
+        "enterprise",
+        "long-context",
+        "cloud"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "xAI"
+        },
+        {
+          "label": "Platform",
+          "value": "Amazon Bedrock (generally available)"
+        },
+        {
+          "label": "Model IDs",
+          "value": "us.xai.grok-4.6, global.xai.grok-4.6"
+        },
+        {
+          "label": "Context window",
+          "value": "500K tokens"
+        },
+        {
+          "label": "Price (input)",
+          "value": "$2 / 1M tokens"
+        },
+        {
+          "label": "Price (output)",
+          "value": "$6 / 1M tokens"
+        },
+        {
+          "label": "Regions",
+          "value": "All AWS Regions where Bedrock is offered"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much does Grok 4.6 cost on Amazon Bedrock?",
+          "a": "Grok 4.6 on Amazon Bedrock costs $2 per 1 million input tokens and $6 per 1 million output tokens, the prices xAI published with the launch. Spend is billed through AWS, so Grok usage shows up alongside the rest of an account's costs in AWS Cost Explorer rather than on a separate xAI invoice."
+        },
+        {
+          "q": "How do I keep Grok 4.6 requests inside the United States?",
+          "a": "Amazon Bedrock ships two inference profiles for Grok 4.6. The US geo profile, us.xai.grok-4.6, routes requests only within US geography for teams with data-residency requirements. The global profile, global.xai.grok-4.6, can serve from any commercial AWS Region where the model is available, which favours throughput over residency."
+        },
+        {
+          "q": "Which Bedrock APIs work with Grok 4.6?",
+          "a": "Grok 4.6 supports the Responses, Chat Completions and Converse APIs on Amazon Bedrock, so existing Bedrock call sites work without a rewrite. The model also plugs into standard Bedrock controls, including model invocation logging, CloudWatch metrics and cost tracking, and it can run with cross-Region inference for extra capacity."
+        },
+        {
+          "q": "Does Grok 4.6 keep its full context window on Bedrock?",
+          "a": "Yes. Grok 4.6 on Amazon Bedrock keeps the 500K-token context window and the four configurable reasoning effort levels — low, medium, high and xhigh — that xAI ships on its own API. xAI positions the model for long-running agents and for interactive and visual work that spans many steps."
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "Input",
+            "price": "$2.00",
+            "unit": "/ 1M tokens"
+          },
+          {
+            "plan": "Output",
+            "price": "$6.00",
+            "unit": "/ 1M tokens"
+          }
+        ],
+        "source": "https://x.ai/news/grok-4-6-amazon-bedrock"
+      },
+      "links": [
+        {
+          "label": "xAI Announcement",
+          "url": "https://x.ai/news/grok-4-6-amazon-bedrock"
+        },
+        {
+          "label": "AWS What's New",
+          "url": "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-bedrock-grok-4-6/"
+        },
+        {
+          "label": "Bedrock Model Card",
+          "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-xai-grok-4-6.html"
+        },
+        {
+          "label": "Grok 4.6 Launch Post",
+          "url": "https://x.ai/news/grok-4-6"
+        }
+      ],
+      "explainer": {
+        "tagline": "Grok 4.6 is generally available on Amazon Bedrock, with a US-only and a global inference profile for AWS teams.",
+        "whatIsIt": "Amazon Bedrock now serves Grok 4.6, xAI's flagship model, across every AWS Region where Bedrock runs. Two inference profiles come with it: us.xai.grok-4.6 keeps traffic inside US geography, and global.xai.grok-4.6 can serve from any commercial Region for higher throughput. AWS points at coding, agent work and knowledge tasks as the target uses.",
+        "howItWorks": "Calls go through Bedrock's Responses, Chat Completions and Converse APIs, so teams already on Bedrock do not rewrite their call sites. Cross-Region inference spreads requests when one Region is busy. The usual Bedrock plumbing applies too — model invocation logging, CloudWatch metrics and cost tracking in AWS Cost Explorer. The model keeps its 500K-token context window and four reasoning effort settings, from low to xhigh.",
+        "whyItMatters": "Regulated AWS shops that could not send prompts to a third-party endpoint can now reach xAI's flagship under their existing IAM, logging and billing setup. The US geo profile answers the data-residency question that blocks many of those teams outright. Billing through AWS also matters in practice: model spend lands in the same reports finance already reviews, instead of a separate vendor invoice.",
+        "forWho": "AWS enterprise teams building agents",
+        "tryIt": "Invoke model ID global.xai.grok-4.6 on Amazon Bedrock"
+      },
+      "image": {
+        "url": "https://x.ai/images/news/og-grok-4-6-on-bedrock.webp",
+        "alt": "xAI announcement card for Grok 4.6 arriving on Amazon Bedrock",
+        "fit": "cover"
+      },
+      "publishDate": "2026-08-20T04:40:13.529Z"
+    },
     {
       "id": "simonw-smolvm-untrusted-sandbox-aug19",
       "categories": [
@@ -8377,7 +8602,7 @@
         },
         {
           "label": "Availability",
-          "value": "API, Cursor, Grok Build, OpenRouter"
+          "value": "API, Cursor, Grok Build, OpenRouter, Amazon Bedrock"
         },
         {
           "label": "Knowledge cutoff",

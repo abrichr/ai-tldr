@@ -34290,6 +34290,52 @@
         "ecosystem",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260820t044013z",
+      "timestamp": "2026-08-20T04:40:13.529Z",
+      "source": "github-actions-sweep",
+      "summary": "Added two items: OpenBMB's Ultra-FineWeb-L1, a 1.3T-token Apache-2.0 web corpus trending on HuggingFace datasets, and Grok 4.6's general availability on Amazon Bedrock. Lab blogs were quiet (Anthropic last posted 2026-08-14, Mistral 2026-08-11, Meta 2026-07-27), the YouTube RSS scan returned no fresh videos, and every other HN top-30 and GitHub-trending AI story was already in the feed.",
+      "counts": {
+        "added": 2,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openbmb-ultra-fineweb-l1",
+          "title": "Ultra-FineWeb-L1 — a 1.3T-token open web corpus for pretraining",
+          "category": "dataset",
+          "note": "Released 2026-08-20, trending top-10 on huggingface.co/datasets, with a published ablation against FineWeb and an Apache-2.0 license — a genuine open pretraining-data ship, a category the feed rarely gets."
+        },
+        {
+          "id": "xai-grok-4-6-bedrock",
+          "title": "Grok 4.6 on Amazon Bedrock — xAI's flagship opens to AWS teams",
+          "category": "model",
+          "note": "Announced 2026-08-19 on x.ai's official news channel and AWS What's New; distinct from the existing xai-grok-4-6 model entry because the news is enterprise availability, model IDs, residency profiles and Bedrock pricing, not the model itself."
+        }
+      ],
+      "updated": [
+        {
+          "id": "xai-grok-4-6",
+          "title": "Grok 4.6 — xAI's new flagship built for long-running agents",
+          "note": "Added Amazon Bedrock to the availability row after xAI announced general availability there on 2026-08-19."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "dataset",
+        "paper",
+        "benchmark",
+        "article",
+        "video",
+        "security",
+        "ecosystem",
+        "algorithm"
+      ]
     }
   ]
 }
