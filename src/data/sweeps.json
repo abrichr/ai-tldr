@@ -34336,6 +34336,62 @@
         "ecosystem",
         "algorithm"
       ]
+    },
+    {
+      "id": "sweep-20260820t064607z",
+      "timestamp": "2026-08-20T06:46:07.219Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, Qwen, DeepSeek, Z.ai/MiniMax), GitHub trending, HuggingFace models/datasets/papers/blog, HN front page + Show HN, influential voices, and the AI-for-science lane (neuro/clinical/pharma/genomics). Added one item: Simon Willison's 19 Aug post on counting lines of code and conceptual integrity. Everything else fresh was already in the feed (Ornith-1.5, Mojo open source, turbovec, Unsloth Dynamic 3.0, OpenViking, omlx, munder-difflin, OpenRouter/Stripe, OpenAI Private Safety Processing, GenBio AIDO Cell, Ultra-FineWeb-L1), or fell outside the 72h cap: Terence Tao's ICM essay 'Mathematics in the age of AI' (arXiv 17 Aug, ~79h old), Cohere Labs' Culture Funnel blog (posted 19 Aug but the paper and CultureMarkers dataset shipped 11 Jun), The Stack v3 (23 Jul), GPT-5.6-Cyber V8 CVE (10 Aug), Microsoft Intelligent Terminal 0.2 (10 Aug), DeepMind WeatherNext Cyclones (6 Aug) and SL2T sign language (12 Aug). NOTE: the video lane produced zero candidates for an infrastructure reason, not an editorial one — yt-rss-scan.ts got HTTP 404 from all 8 YouTube channel RSS feeds on this runner, twice in a row, so no video discovery was possible this sweep.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "simonw-conceptual-integrity-aug19",
+          "title": "Simon Willison — lines of code count again, but review capacity does not",
+          "category": "article",
+          "note": "Fresh (19 Aug) post from simonwillison.net, the feed's most-carried influential voice; a self-contained argument that lines of code regain meaning as an agent-productivity measure while human review capacity becomes the real ceiling. No semantic collision with the existing 19 Aug smolvm item or any other feed entry."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "dataset",
+        "video",
+        "article",
+        "security",
+        "ecosystem",
+        "benchmark",
+        "algorithm",
+        "tutorial"
+      ]
+    },
+    {
+      "id": "sweep-20260820t064643z",
+      "timestamp": "2026-08-20T06:46:43.174Z",
+      "source": "github-actions-sweep",
+      "summary": "Follow-up pass on the same sweep: trimmed the summary of simonw-conceptual-integrity-aug19 to fit the 240-char cap. No new discovery run; no items added or removed.",
+      "counts": {
+        "added": 0,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [
+        {
+          "id": "simonw-conceptual-integrity-aug19",
+          "title": "Simon Willison — lines of code count again, but review capacity does not",
+          "note": "Trimmed summary from 242 to 236 chars to meet the 240-char cap; no facts changed."
+        }
+      ],
+      "removed": [],
+      "coverage": []
     }
   ]
 }

@@ -1,8 +1,65 @@
 {
-  "generatedAt": "2026-08-20T04:40:13.529Z",
+  "generatedAt": "2026-08-20T06:46:43.174Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "simonw-conceptual-integrity-aug19",
+      "categories": [
+        "article"
+      ],
+      "title": "Simon Willison — lines of code count again, but review capacity does not",
+      "org": "Simon Willison",
+      "date": "2026-08-19",
+      "url": "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/",
+      "summary": "Simon Willison argues that lines of code became a useful productivity measure once coding agents write them. The limit he hits is review, not typing: he can produce code 100 times faster but cannot hold 100 times more of it in his head.",
+      "tags": [
+        "ai-coding",
+        "coding-agents",
+        "software-engineering",
+        "code-review",
+        "developer-productivity",
+        "conceptual-integrity",
+        "simon-willison",
+        "talking-postgres",
+        "opinion"
+      ],
+      "importance": "notable",
+      "author": {
+        "name": "Simon Willison",
+        "handle": "@simonw",
+        "profileUrl": "https://simonwillison.net/",
+        "avatarUrl": "https://github.com/simonw.png"
+      },
+      "explainer": {
+        "tagline": "Simon Willison on why coding agents make code cheap to write and expensive to keep coherent.",
+        "whatIsIt": "Lines of code work as a productivity measure again, Simon Willison argues in a post published on 19 August 2026. He states the case directly: \"If agents let you produce a thousand lines of debugged code, that really is a very meaningful improvement — as long as the code is the same quality.\" The post collects highlights from his Talking Postgres interview with host Claire Giordano on how AI is changing software development.",
+        "howItWorks": "The bottleneck named in the post is human review rather than typing speed. \"I can churn out code a hundred times faster. I don't have the cognitive capacity to stay on top of 100 times the amount of code,\" Willison says. Cheap code also wears down conceptual integrity — the idea from The Mythical Man-Month that a system should feel designed by one mind. Willison points out that the old discipline came from cost: \"It used to be that the discipline was enforced on you by the amount of time it took... If it takes an hour, it's so much easier to justify.\" Agents remove that brake, and he notes \"it's very easy to keep adding new rooms, because the cost of adding those rooms is so much cheaper.\"",
+        "whyItMatters": "Teams that measure agent adoption by raw output now have a named counter-argument: the ceiling is how much code a person can still hold in their head, not how much the agent can emit. Claire Giordano's Winchester Mystery House comparison — a house with 140 rooms added piecemeal over 40 years — gives reviewers a short way to describe software that keeps gaining features without a coherent design.",
+        "forWho": "engineering leads and developers working with coding agents",
+        "tryIt": "https://talkingpostgres.com/episodes/how-ai-is-changing-software-development-with-simon-willison"
+      },
+      "image": {
+        "url": "https://img.transistorcdn.com/jD8fhgErlZ6HvUGkiSwc_9uxRHIbPUhpf3h8t-Swyt8/rs:fill:0:0:1/w:800/h:800/q:60/mb:500000/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kMDRk/MzlhMzJkNTNlMTg4/MTFkMTI4N2MxYTU5/NGRiYy5wbmc.webp",
+        "alt": "Cover art for the Talking Postgres podcast episode with Simon Willison on AI and software development",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Blog Post",
+          "url": "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/"
+        },
+        {
+          "label": "Podcast Episode",
+          "url": "https://talkingpostgres.com/episodes/how-ai-is-changing-software-development-with-simon-willison"
+        },
+        {
+          "label": "Winchester Mystery House",
+          "url": "https://en.wikipedia.org/wiki/Winchester_Mystery_House"
+        }
+      ],
+      "publishDate": "2026-08-20T06:46:07.219Z"
+    },
     {
       "id": "openbmb-ultra-fineweb-l1",
       "categories": [
