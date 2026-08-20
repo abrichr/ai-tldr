@@ -34459,6 +34459,45 @@
         "benchmark",
         "algorithm"
       ]
+    },
+    {
+      "id": "sweep-20260820t124444z",
+      "timestamp": "2026-08-20T12:44:44.984Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Meta AI's first native Mac app (screen sharing plus system-wide dictation, Muse Spark, 19 Aug) and Binance Agent OS, an MCP server that lets Claude Code, Cursor, Codex and ChatGPT trade inside permissioned sub-accounts (20 Aug). Lab blogs were otherwise quiet inside 72h — Anthropic's newest post is 14 Aug, Gemini 3.7 Flash and GLM-5.3 are 13-14 Aug and already in the feed, Meta's and Mistral's blogs had nothing new. GitHub trending, HF models/datasets/papers, HN and 8 YouTube feeds produced no other qualifying item.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "meta-ai-mac-app",
+          "title": "Meta AI for Mac — a native desktop app with screen sharing and dictation",
+          "category": "tool",
+          "note": "First native desktop app for Meta AI, a top-lab product ship covered within 24h by TechCrunch, 9to5Mac, MacRumors, Engadget and others."
+        },
+        {
+          "id": "binance-agent-os",
+          "title": "Binance Agent OS — an MCP server that lets AI agents place real trades",
+          "category": "tool",
+          "note": "Real developer artifact shipped today: an MCP server plus public docs that any MCP client can attach to, covered by TechCrunch and the official Binance blog and press release."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }

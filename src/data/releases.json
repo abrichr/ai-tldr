@@ -1,8 +1,222 @@
 {
-  "generatedAt": "2026-08-20T10:32:32.415Z",
+  "generatedAt": "2026-08-20T12:44:44.984Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "meta-ai-mac-app",
+      "categories": [
+        "tool"
+      ],
+      "title": "Meta AI for Mac — a native desktop app with screen sharing and dictation",
+      "org": "Meta",
+      "date": "2026-08-19",
+      "url": "https://techcrunch.com/2026/08/20/meta-ais-new-mac-app-wants-you-to-talk-to-your-apps/",
+      "summary": "Meta AI now runs as a native Mac app. It can look at any window you attach to the chat, and a keyboard shortcut dictates speech into any app on the Mac. The 1.0 beta is free and needs an Apple Silicon Mac on macOS 15 or later.",
+      "tags": [
+        "meta",
+        "meta-ai",
+        "muse-spark",
+        "macos",
+        "desktop-app",
+        "dictation",
+        "screen-sharing",
+        "assistant",
+        "apple-silicon"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Meta"
+        },
+        {
+          "label": "Model",
+          "value": "Muse Spark"
+        },
+        {
+          "label": "Version",
+          "value": "1.0 beta"
+        },
+        {
+          "label": "Requirements",
+          "value": "Apple Silicon Mac, macOS 15 or later"
+        },
+        {
+          "label": "Download size",
+          "value": "16 MB"
+        },
+        {
+          "label": "Price",
+          "value": "Free; Meta One plans raise rate limits"
+        },
+        {
+          "label": "Desktop-only features",
+          "value": "Window sharing and system-wide dictation"
+        }
+      ],
+      "explainer": {
+        "tagline": "Meta's assistant gets a real Mac app that can read your screen and type for you anywhere.",
+        "whatIsIt": "The Meta AI Mac app adds two things you cannot do in the browser: you attach a single window to the conversation and the assistant answers from what is on it, and you hold a shortcut to dictate speech straight into whatever app is in front of you. Meta ships it as a 1.0 beta for Apple Silicon Macs on macOS 15 or later. Business users can also connect a professional Facebook or Instagram account, Google Workspace, and Meta ad campaigns.",
+        "howItWorks": "Muse Spark, Meta's own model, powers the dictation and the on-screen answers. The app is a native AppKit and SwiftUI shell wrapped around WebKit for chat content rather than an Electron build, which is why the download is only 16 MB. Option-Space brings up a Quick Invoke bar, and screen recording plus macOS accessibility hooks are what let the assistant capture the window you point it at.",
+        "whyItMatters": "A native Mac app puts Meta AI in the same place ChatGPT, Claude and Perplexity already sit — one keystroke away from any window — instead of behind a browser tab. For creators and small businesses, the Facebook, Instagram, Google Workspace and ad-campaign connections mean the assistant can answer performance questions against their own accounts, which is the part a general chatbot cannot do.",
+        "forWho": "Mac users, creators and small businesses running marketing on Meta platforms",
+        "tryIt": "Download from ai.meta.com/meta-ai/assistant/ (Apple Silicon, macOS 15+)"
+      },
+      "faq": [
+        {
+          "q": "How much does the Meta AI Mac app cost?",
+          "a": "The Meta AI Mac app is free to download and use. Meta sells optional Meta One plans that raise rate limits for people who hit them, but no subscription is needed to install the app or use window sharing and dictation. Meta ships this first release as a 1.0 beta."
+        },
+        {
+          "q": "What does the Meta AI Mac app need to run?",
+          "a": "Meta AI for Mac requires an Apple Silicon Mac running macOS 15 or later. Intel Macs are not supported. The download is 16 MB because the app is a native AppKit and SwiftUI shell around WebKit rather than an Electron build, so it is far smaller than most desktop assistants."
+        },
+        {
+          "q": "Can the Meta AI Mac app connect to Google Workspace?",
+          "a": "Yes. People with a professional Facebook or Instagram account can connect Meta AI to Google Workspace and pull in documents, spreadsheets and other work files. The same business setup also links Meta's own analytics and ad campaign tools, so the assistant can answer questions about campaign performance."
+        },
+        {
+          "q": "Are Meta AI Mac conversations used to train Meta's models?",
+          "a": "Meta's privacy policy says interactions with features that are part of AI at Meta are used to train its models, and the Mac app is one of those features. Anyone handling client work or sensitive business documents through the Meta AI Mac app should weigh that before connecting Google Workspace."
+        },
+        {
+          "q": "How does Meta AI read what is on my Mac screen?",
+          "a": "Meta AI does not watch the whole desktop. You attach one specific window to the conversation, and the app uses macOS screen recording and accessibility permissions to capture that window so the assistant can answer questions, suggest edits, or draft content from it."
+        }
+      ],
+      "image": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/05/meta-ai-GettyImages-2264943773.jpg?w=1024",
+        "alt": "Meta AI branding on a smartphone screen",
+        "fit": "cover",
+        "credit": "TechCrunch / Getty Images"
+      },
+      "links": [
+        {
+          "label": "TechCrunch Report",
+          "url": "https://techcrunch.com/2026/08/20/meta-ais-new-mac-app-wants-you-to-talk-to-your-apps/"
+        },
+        {
+          "label": "Meta AI Assistant",
+          "url": "https://ai.meta.com/meta-ai/assistant/"
+        },
+        {
+          "label": "9to5Mac Hands-On",
+          "url": "https://9to5mac.com/2026/08/19/meta-ai-is-now-available-as-a-more-capable-desktop-app-for-mac/"
+        },
+        {
+          "label": "MacRumors Coverage",
+          "url": "https://www.macrumors.com/2026/08/19/meta-ai-mac-app/"
+        }
+      ],
+      "publishDate": "2026-08-20T12:44:44.984Z"
+    },
+    {
+      "id": "binance-agent-os",
+      "categories": [
+        "tool",
+        "ecosystem"
+      ],
+      "title": "Binance Agent OS — an MCP server that lets AI agents place real trades",
+      "org": "Binance",
+      "date": "2026-08-20",
+      "url": "https://www.binance.com/en/blog/ecosystem/5991233187660196794",
+      "summary": "Binance Agent OS gives AI agents a standard way into Binance trading, market data, wallets and payments. Any MCP client over Streamable HTTP can connect, including Claude Code, Cursor, Codex and ChatGPT, with limits set per sub-account.",
+      "tags": [
+        "binance",
+        "agent-os",
+        "mcp",
+        "model-context-protocol",
+        "agents",
+        "trading",
+        "crypto",
+        "fintech",
+        "agentic-finance",
+        "x402"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Binance"
+        },
+        {
+          "label": "Access layer",
+          "value": "MCP server over Streamable HTTP"
+        },
+        {
+          "label": "MCP coverage today",
+          "value": "Spot, Futures, Convert and market data"
+        },
+        {
+          "label": "Works with",
+          "value": "ChatGPT, Claude Code, Codex, Cursor"
+        },
+        {
+          "label": "Agent isolation",
+          "value": "Dedicated sub-accounts with per-feature permissions"
+        },
+        {
+          "label": "Default caps",
+          "value": "$50,000/day swaps, $100,000/day DeFi, $20/day x402"
+        },
+        {
+          "label": "Kill switch",
+          "value": "Emergency Stop revokes every agent at once"
+        }
+      ],
+      "explainer": {
+        "tagline": "Binance opens its trading, wallet and payment stack to AI agents through a single MCP server.",
+        "whatIsIt": "Agent OS is Binance's developer platform for pointing an AI agent at real money. It bundles the Binance APIs, the Wallet Agentic Hub, the x402 programmable-payments layer and a Skill Hub of ready-made integrations behind one standardized access layer, so a coding agent can read markets and place orders without a custom exchange integration.",
+        "howItWorks": "The entry point is a Model Context Protocol server. Any client that speaks MCP over Streamable HTTP can attach, which today covers ChatGPT, Claude Code, Codex and Cursor as well as self-built agents. The MCP server currently exposes Spot, Futures and Convert trading plus market data; payments and on-chain calls are listed as coming later. Agents run inside dedicated sub-accounts, where the account owner toggles individual features, sets funding limits, requires approval on orders, revokes one agent, or hits Emergency Stop to cut them all off.",
+        "whyItMatters": "Jeff Li, VP of Product at Binance, says Agent OS addresses the fragmentation developers face building agentic finance applications across crypto and traditional markets. The practical catch is where the safety line falls: Binance monitors and controls trading activity and the resulting orders, but cannot see the agent's broader workflow or reasoning, which runs inside whichever AI app the user picked. Setting sane limits is the user's job, not the exchange's.",
+        "forWho": "Fintech developers, quant teams and agent builders",
+        "tryIt": "Start at developers.binance.com/en/docs/agent-native/mcp-server"
+      },
+      "faq": [
+        {
+          "q": "How do you stop an AI agent that misbehaves on Binance?",
+          "a": "Binance Agent OS puts every agent in its own sub-account, managed under Account Management. From there an owner can switch off individual features, cut funding limits, or revoke one agent's access. Emergency Stop is the blunt option: it revokes access for every connected agent at once."
+        },
+        {
+          "q": "How much can an agent spend through Binance Agent OS?",
+          "a": "Binance Agent OS caps regular swaps at $50,000 per day, DeFi activity at $100,000 per day, and x402 machine-to-machine payments at $20 per day. Owners can tighten those figures per sub-account and can require manual approval before an agent's orders go through."
+        },
+        {
+          "q": "Can Binance see what an AI agent is reasoning about?",
+          "a": "No. Binance monitors and controls the trading activity and the orders an agent produces, but the agent's broader workflow and reasoning run inside the user's chosen AI application, outside Binance's view. That is why per-agent permissions and funding limits carry most of the safety weight."
+        },
+        {
+          "q": "What can Binance Agent OS agents not do yet?",
+          "a": "The Binance MCP server currently covers Spot, Futures and Convert trading plus market data. Payment and on-chain functionality is listed as arriving later, so an agent that needs x402 settlement or wallet transactions today goes through the Binance Web3 APIs and Wallet Agentic Hub instead of MCP."
+        }
+      ],
+      "image": {
+        "url": "https://mmx.prnewswire.com/media/MS1972971/20260820045349EDT_image_3.jpg?id=OA2899826&p=facebook",
+        "alt": "Binance Agent OS announcement graphic",
+        "fit": "cover",
+        "credit": "Binance / PR Newswire"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.binance.com/en/blog/ecosystem/5991233187660196794"
+        },
+        {
+          "label": "MCP Server Docs",
+          "url": "https://developers.binance.com/en/docs/agent-native/mcp-server"
+        },
+        {
+          "label": "Press Release",
+          "url": "https://www.prnewswire.com/news-releases/binance-introduces-agent-os-to-connect-ai-applications-to-financial-infrastructure-302856306.html"
+        },
+        {
+          "label": "TechCrunch Report",
+          "url": "https://techcrunch.com/2026/08/20/binance-now-lets-ai-agents-trade-but-keeping-them-in-check-is-largely-up-to-users/"
+        }
+      ],
+      "publishDate": "2026-08-20T12:44:44.984Z"
+    },
     {
       "id": "openai-chatgpt-ads-europe",
       "categories": [
