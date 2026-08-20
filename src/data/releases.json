@@ -1,8 +1,172 @@
 {
-  "generatedAt": "2026-08-20T14:38:15.229Z",
+  "generatedAt": "2026-08-20T16:40:15.805Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "cortechs-neuroquant-pet",
+      "categories": [
+        "tool"
+      ],
+      "title": "NeuroQuant PET — FDA clears automated amyloid scoring for dementia",
+      "org": "Cortechs.ai",
+      "date": "2026-08-18",
+      "url": "https://www.cortechs.ai/neuroquant-pet-fda-clearance/",
+      "summary": "Cortechs.ai's NeuroQuant PET received FDA 510(k) clearance on August 18, 2026. The software measures amyloid in each brain region from a PET scan and reports SUVRs and Centiloid scores for dementia workups.",
+      "tags": [
+        "medical-imaging",
+        "radiology",
+        "neuroimaging",
+        "diagnostics",
+        "clinical-ai",
+        "precision-medicine",
+        "neuroscience",
+        "alzheimers",
+        "pet-imaging",
+        "fda-clearance",
+        "cortechs-ai"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Cortechs.ai"
+        },
+        {
+          "label": "Clearance",
+          "value": "FDA 510(k) K261916"
+        },
+        {
+          "label": "Cleared",
+          "value": "August 18, 2026"
+        },
+        {
+          "label": "Cleared tracers",
+          "value": "Florbetapir, florbetaben, flutemetamol"
+        },
+        {
+          "label": "Outputs",
+          "value": "Regional SUVRs, Centiloid scores"
+        },
+        {
+          "label": "Workflows",
+          "value": "PET-CT, PET-MR or PET-only"
+        },
+        {
+          "label": "Research use only",
+          "value": "FDG, flortaucipir"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which PET tracers is NeuroQuant PET cleared for?",
+          "a": "NeuroQuant PET is cleared for three amyloid tracers: florbetapir, florbetaben and flutemetamol. Two further tracers, FDG for glucose metabolism and flortaucipir for tau imaging, are listed on the product page as research use only, so they are not covered by the clinical clearance. Cortechs.ai reports Centiloid values so readings taken with different amyloid tracers can be compared."
+        },
+        {
+          "q": "Does NeuroQuant PET need an MRI scan to work?",
+          "a": "No. Cortechs.ai states that NeuroQuant PET runs on PET-CT, PET-MR or PET-only studies, so a site without paired MRI can still use it. Processing is cloud-based and automated, and the results come back as PACS-ready structured reports with fusion images and anatomical overlays for the reading radiologist."
+        },
+        {
+          "q": "What does a Centiloid score add over a plain SUVR?",
+          "a": "Centiloid is a shared scale for amyloid PET. Cortechs.ai says the Centiloid output in NeuroQuant PET lets results be compared across different amyloid tracers and tracked over repeat scans, which a raw standardized uptake value ratio cannot do on its own because each tracer has its own uptake range."
+        },
+        {
+          "q": "What does the FDA clearance change for a dementia clinic?",
+          "a": "The 510(k) clearance means NeuroQuant PET can be used in routine patient care in the United States, not just in research. Cortechs.ai positions it as a move toward biomarker-driven assessment instead of judgment based on symptoms alone, and CEO Kyle Frye says the goal is objective, reproducible measurements clinicians can trust."
+        }
+      ],
+      "explainer": {
+        "tagline": "Cortechs.ai's NeuroQuant PET can now be used on real patients to score amyloid brain scans automatically.",
+        "whatIsIt": "NeuroQuant PET won FDA 510(k) clearance, number K261916, on August 18, 2026, which lets hospitals use it in routine care. The software reads an amyloid PET brain scan and reports how much tracer sits in each brain region. Cortechs.ai built it to support the workup of cognitive impairment, including Alzheimer's disease and related conditions.",
+        "howItWorks": "Automated segmentation splits the scan into anatomical regions, and NeuroQuant PET then measures tracer uptake inside each one against normative population data. Results come back as standardized uptake value ratios and Centiloid scores. The clearance covers three amyloid tracers, and the tool accepts PET-CT, PET-MR or PET-only studies, returning a structured report straight into PACS.",
+        "whyItMatters": "Reading an amyloid PET scan by eye is a judgment call, and borderline cases are where readers disagree. Clearance means NeuroQuant PET can attach an objective, repeatable number to that scan in everyday clinical work. Cortechs.ai frames the goal as earlier diagnosis and biomarker-driven decisions rather than assessment based on symptoms alone.",
+        "forWho": "neuroradiologists and dementia clinics",
+        "tryIt": "https://www.cortechs.ai/neuroquant-pet/"
+      },
+      "image": {
+        "url": "https://www.cortechs.ai/wp-content/uploads/2026/08/PET-FDA-APPROVED-Option-2-1-1024x535.png",
+        "alt": "Cortechs.ai graphic announcing FDA clearance of NeuroQuant PET",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.cortechs.ai/neuroquant-pet-fda-clearance/"
+        },
+        {
+          "label": "Product Page",
+          "url": "https://www.cortechs.ai/neuroquant-pet/"
+        },
+        {
+          "label": "ITN Coverage",
+          "url": "https://www.itnonline.com/content/fda-clears-cortechsais-neuroquant-pet"
+        }
+      ],
+      "publishDate": "2026-08-20T16:40:15.805Z"
+    },
+    {
+      "id": "liquid-lfm2-5-q4-0-qad",
+      "categories": [
+        "model"
+      ],
+      "title": "LFM2.5 Q4_0 — Liquid AI's 4-bit models keep 96%+ of full accuracy",
+      "org": "Liquid AI",
+      "date": "2026-08-19",
+      "url": "https://huggingface.co/blog/LiquidAI/qad",
+      "summary": "Liquid AI released Q4_0 GGUF checkpoints for LFM2.5 at 230M, 350M, 1.2B and 2.6B. Quantization-aware distillation keeps 96.5-97.4% of the BF16 benchmark average and decodes 3-33% faster on phones, mini-PCs and a Raspberry Pi 5.",
+      "tags": [
+        "on-device",
+        "edge-ai",
+        "quantization",
+        "gguf",
+        "llama-cpp",
+        "distillation",
+        "open-weights",
+        "small-models",
+        "liquid-ai"
+      ],
+      "importance": "notable",
+      "metrics": {
+        "Accuracy kept vs BF16": "96.5-97.4%",
+        "Sizes released": "230M, 350M, 1.2B, 2.6B"
+      },
+      "explainer": {
+        "tagline": "LFM2.5's new Q4_0 checkpoints are trained as 4-bit models rather than squeezed into 4 bits afterwards.",
+        "whatIsIt": "LFM2.5 Q4_0 is a set of four on-device checkpoints - 230M, 350M, 1.2B Instruct and 2.6B - that Liquid AI published on August 19, 2026. Each ships as a GGUF file in Q4_0, the simplest and smallest 4-bit layout. What is different is how they were made: by training, not by compressing a finished model.",
+        "howItWorks": "Quantization-Aware Distillation is the technique behind the gain. A high-precision teacher model trains a student whose weights are already quantized, so the student learns to work inside 4-bit limits instead of being squeezed into them at the end. Liquid AI reports the resulting checkpoints hold 96.5% to 97.4% of the BF16 model's average benchmark score, depending on size.",
+        "whyItMatters": "Q4_0 is normally the format people avoid, because it is the fastest but loses the most quality, pushing them toward larger K-quants. Liquid AI measured these builds matching Q5_K_M quality at 230M and 350M and Q4_K_M quality at 1.2B and 2.6B, while decoding 3-33% faster on a MacBook Pro, a NucBox EVO-X2, a Galaxy S26 Ultra and a Raspberry Pi 5.",
+        "forWho": "on-device and edge developers",
+        "tryIt": "LiquidAI/LFM2.5-1.2B-Instruct-GGUF"
+      },
+      "image": {
+        "url": "https://cdn-uploads.huggingface.co/production/uploads/644249b08443bce4c9890a0f/PYy1cufo9frwFjiHZLq2S.png",
+        "alt": "Liquid AI chart comparing LFM2.5 Q4_0 quantization-aware distillation checkpoints",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://huggingface.co/blog/LiquidAI/qad"
+        },
+        {
+          "label": "LFM2.5-1.2B GGUF",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF"
+        },
+        {
+          "label": "LFM2.5-2.6B GGUF",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-2.6B-GGUF"
+        },
+        {
+          "label": "LFM2.5-350M GGUF",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-350M-GGUF"
+        },
+        {
+          "label": "LFM2.5-230M GGUF",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-230M-GGUF"
+        }
+      ],
+      "publishDate": "2026-08-20T16:40:15.805Z"
+    },
     {
       "id": "mistral-agentic-search",
       "categories": [

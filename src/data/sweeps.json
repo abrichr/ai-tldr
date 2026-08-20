@@ -34539,6 +34539,46 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260820t164015z",
+      "timestamp": "2026-08-20T16:40:15.805Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Cohere, Moonshot, DeepSeek, ByteDance Seed, MiniMax), GitHub trending, HuggingFace models/datasets/papers/blog, HN front page and Algolia top-100, 8 YouTube creator feeds, and the AI-for-science lane. Nearly everything fresh was already in the feed (Mistral Agentic Search, Ornith-1.5, Mojo open source, Cerebras CS-4, Unsloth Dynamic 3.0, OpenRouter/Stripe, Cursor Subscriptions, all 4 fresh creator videos). Added two: Cortechs.ai's FDA-cleared NeuroQuant PET amyloid quantification and Liquid AI's LFM2.5 Q4_0 quantization-aware-distilled checkpoints.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "cortechs-neuroquant-pet",
+          "title": "NeuroQuant PET — FDA clears automated amyloid scoring for dementia",
+          "category": "tool",
+          "note": "FDA 510(k) K261916 cleared 2026-08-18 - a real approved clinical AI artifact, confirmed by the company announcement plus Imaging Technology News and AuntMinnie; the clinical/neuro lane's one item this sweep."
+        },
+        {
+          "id": "liquid-lfm2-5-q4-0-qad",
+          "title": "LFM2.5 Q4_0 — Liquid AI's 4-bit models keep 96%+ of full accuracy",
+          "category": "model",
+          "note": "Four new GGUF checkpoints published 2026-08-19 with a named technique (quantization-aware distillation) and published BF16-retention and throughput numbers; distinct from the existing LFM2.5 base-model entries."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "video",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
