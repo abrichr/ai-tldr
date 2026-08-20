@@ -1,8 +1,109 @@
 {
-  "generatedAt": "2026-08-19T22:30:07.442Z",
+  "generatedAt": "2026-08-20T01:01:43.464Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openai-private-safety-processing",
+      "categories": [
+        "ecosystem",
+        "security"
+      ],
+      "title": "Private Safety Processing — OpenAI's abuse check that stores no customer data",
+      "org": "OpenAI",
+      "date": "2026-08-19",
+      "url": "https://techcrunch.com/2026/08/19/openai-seeks-to-one-up-anthropic-with-new-customer-privacy-protections/",
+      "summary": "Private Safety Processing is an OpenAI preview that looks for abuse across several linked conversations without storing customer content. Zero Data Retention stays on, and OpenAI receives only a narrow safety signal.",
+      "tags": [
+        "openai",
+        "zero-data-retention",
+        "privacy",
+        "enterprise",
+        "api",
+        "safety",
+        "abuse-monitoring",
+        "security",
+        "compliance"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenAI"
+        },
+        {
+          "label": "Name",
+          "value": "Private Safety Processing"
+        },
+        {
+          "label": "Status",
+          "value": "Preview with select customers"
+        },
+        {
+          "label": "Who it's for",
+          "value": "Customers approved for Zero Data Retention"
+        },
+        {
+          "label": "What OpenAI receives",
+          "value": "A narrowly defined safety signal"
+        },
+        {
+          "label": "Scope",
+          "value": "Multiple related conversations, not one at a time"
+        },
+        {
+          "label": "Announced",
+          "value": "August 19, 2026"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does Private Safety Processing change OpenAI's Zero Data Retention promise?",
+          "a": "No. OpenAI says Private Safety Processing runs while Zero Data Retention stays in force, so prompts and responses are still not stored. The monitoring happens automatically and passes OpenAI only a narrowly defined signal when something looks like abuse. Customers who want to send more detail can choose to share it."
+        },
+        {
+          "q": "How is this different from what Anthropic asks of customers?",
+          "a": "TechCrunch reports that Anthropic keeps customer data for 30 days on certain models so it can run safety checks. OpenAI is taking the other route with Private Safety Processing: the abuse check still spans several conversations, but nothing from those conversations is retained, which is why TechCrunch framed the preview as a direct answer to Anthropic."
+        },
+        {
+          "q": "Can I turn Private Safety Processing on today?",
+          "a": "Not yet for everyone. OpenAI is previewing Private Safety Processing with select customers, so it is not a self-serve toggle. Zero Data Retention itself, which the preview builds on, already requires OpenAI approval first; approved organizations then switch it on under Settings, Organization, Data controls at the organization or project level."
+        },
+        {
+          "q": "Which OpenAI endpoints can run under Zero Data Retention?",
+          "a": "OpenAI's data-controls guide lists /v1/responses, /v1/chat/completions, /v1/embeddings, /v1/completions, /v1/moderations, /v1/realtime, the image generation and edit endpoints, and the audio transcription, translation and speech endpoints. Stateful endpoints such as /v1/assistants, /v1/threads and /v1/vector_stores are not eligible and may still store application state."
+        }
+      ],
+      "explainer": {
+        "tagline": "OpenAI previews an abuse check that reads across many conversations while storing none of them.",
+        "whatIsIt": "Private Safety Processing is a new OpenAI monitoring service, in preview with select customers, that looks for abuse patterns spread across several related conversations. It runs while Zero Data Retention is on, so the prompts and responses it inspects are never stored. OpenAI announced it on August 19, 2026.",
+        "howItWorks": "Rather than judging each request on its own, the service reviews the inputs and outputs of several conversations together — what OpenAI describes as \"long-horizon safety monitoring that assesses the inputs and outputs of multiple conversations — not just one.\" When it spots something suspicious it hands OpenAI a narrowly defined signal instead of the underlying text. Customers can opt to share more information if they want to.",
+        "whyItMatters": "Companies with strict security duties have had to pick between Zero Data Retention and the abuse checks a vendor wants before granting frontier-model access. That trade-off is what Private Safety Processing is meant to remove for the customers in the preview. TechCrunch reports Anthropic retains data for 30 days on certain models, so the two labs are now offering visibly different deals to the same buyers.",
+        "forWho": "enterprise API teams with strict data rules",
+        "tryIt": "https://developers.openai.com/api/docs/guides/your-data"
+      },
+      "image": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/02/GettyImages-2236544149.jpg?resize=1200,800",
+        "alt": "OpenAI CEO Sam Altman in profile against a plain white background",
+        "fit": "cover",
+        "credit": "Getty Images via TechCrunch"
+      },
+      "links": [
+        {
+          "label": "TechCrunch Report",
+          "url": "https://techcrunch.com/2026/08/19/openai-seeks-to-one-up-anthropic-with-new-customer-privacy-protections/"
+        },
+        {
+          "label": "Reuters Wire",
+          "url": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN44G13P:0-openai-says-previewing-private-safety-processing-to-strengthen-safeguards-across-interactions/"
+        },
+        {
+          "label": "Data Controls Docs",
+          "url": "https://developers.openai.com/api/docs/guides/your-data"
+        }
+      ],
+      "publishDate": "2026-08-20T01:01:43.464Z"
+    },
     {
       "id": "unsloth-dynamic-3-0-ggufs",
       "categories": [

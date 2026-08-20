@@ -34222,6 +34222,40 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260820t010143z",
+      "timestamp": "2026-08-20T01:01:43.464Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Qwen, DeepSeek), GitHub trending, HuggingFace models/datasets/papers, HN front page (top 60), 8 YouTube creator feeds, coding-agent changelogs (Cursor, Claude Code), tier-1 press and the AI-for-science lane. Added one item: OpenAI's Private Safety Processing preview, which keeps Zero Data Retention while checking for abuse across linked conversations. All four fresh YouTube videos, every trending HF model and every AI item on the HN front page were already in the feed; the top HF paper has no released code and is outside the 72h window.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-private-safety-processing",
+          "title": "Private Safety Processing — OpenAI's abuse check that stores no customer data",
+          "category": "ecosystem",
+          "note": "Covered within 24h by TechCrunch, Reuters, Axios and Bloomberg; it is a concrete platform change for API customers who must keep Zero Data Retention while using frontier models."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "algorithm",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
