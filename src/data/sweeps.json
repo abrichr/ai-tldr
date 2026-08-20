@@ -34392,6 +34392,40 @@
       ],
       "removed": [],
       "coverage": []
+    },
+    {
+      "id": "sweep-20260820t083957z",
+      "timestamp": "2026-08-20T08:39:57.240Z",
+      "source": "github-actions-sweep",
+      "summary": "Added one item: ai-memory v1.29.0, the MIT-licensed Rust memory layer that lets coding agents hand a project off to each other, now number five on GitHub trending. Everything else fresh was already in the feed after the 06:47Z sweep (Ultra-FineWeb-L1, Grok 4.6 on Bedrock, Ornith-1.5, Mojo open source, OpenViking, omlx, Unsloth Dynamic 3.0, OpenRouter/Stripe, Simon Willison's 19 Aug posts, and all four fresh creator videos), or fell outside the 72h cap: Terence Tao's ICM essay (arXiv 17 Aug, 80h), the Princeton/UK AISI shadow-evaluation study (arXiv 2607.27191, July), Strix v1.5.3 (10 Aug), GLM-5.2 Turbo (17 Aug), DeepMind WeatherNext Cyclones (6 Aug) and SL2T (12 Aug). Lab blogs were quiet — Anthropic last posted 14 Aug, Mistral 11 Aug, Meta 9 Jul. The only new YouTube upload, Wes Roth's 'here's how to build a real business...', is not substantive AI/ML, so the video lane added nothing. OpenAI's ChatGPT Ads expansion to 31 European markets was dropped on the ecosystem gate: no concrete developer action follows from it.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "akitaonrails-ai-memory-1-29-0",
+          "title": "ai-memory v1.29.0 — long-term memory that follows agents across CLIs",
+          "category": "tool",
+          "note": "Number five on github.com/trending today with 606 stars gained in a day (3,310 total); v1.29.0 tagged 2026-08-19T21:27:54Z, inside the 72h cap; distinct from the agent-memory tools already in the feed (OpenViking, AgentMemory, cognee, TencentDB Agent Memory) — this one is a git-versioned markdown wiki aimed at cross-vendor handoff."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "video",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }

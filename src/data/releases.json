@@ -1,8 +1,119 @@
 {
-  "generatedAt": "2026-08-20T06:46:43.174Z",
+  "generatedAt": "2026-08-20T08:39:57.240Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "akitaonrails-ai-memory-1-29-0",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "ai-memory v1.29.0 — long-term memory that follows agents across CLIs",
+      "org": "AkitaOnRails",
+      "date": "2026-08-19",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "summary": "ai-memory is an MIT-licensed Rust tool that keeps a git-versioned markdown wiki of what a coding agent learned, so you can stop Claude Code mid-task and continue in Codex or Cursor without re-explaining the project.",
+      "tags": [
+        "ai-memory",
+        "agent-memory",
+        "coding-agents",
+        "rust",
+        "mit-license",
+        "sqlite",
+        "fts5",
+        "mcp",
+        "claude-code",
+        "codex",
+        "cursor",
+        "open-source",
+        "developer-tools"
+      ],
+      "importance": "major",
+      "metrics": {
+        "GitHub stars": "3,310"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "AkitaOnRails (open source)"
+        },
+        {
+          "label": "Version",
+          "value": "v1.29.0, released 19 Aug 2026"
+        },
+        {
+          "label": "License",
+          "value": "MIT"
+        },
+        {
+          "label": "Written in",
+          "value": "Rust"
+        },
+        {
+          "label": "Storage",
+          "value": "Git-versioned markdown wiki + SQLite FTS5"
+        },
+        {
+          "label": "LLM needed",
+          "value": "No — providers are optional"
+        },
+        {
+          "label": "Agents supported",
+          "value": "Claude Code, Codex, Cursor, Gemini CLI, OpenCode, OpenClaw, Zed and ~12 more"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Can I install ai-memory without Docker?",
+          "a": "ai-memory ships more than a Docker image. Release v1.29.0 offers prebuilt binaries for macOS on aarch64 and x86_64, Windows x86_64 and Linux, an Arch Linux AUR package, and a build from source with cargo install --git https://github.com/akitaonrails/ai-memory --tag v1.29.0. Version 1.29.0 also added a flake.nix so Nix users can build without a Rust toolchain or Docker."
+        },
+        {
+          "q": "Does ai-memory redact secrets from captured sessions?",
+          "a": "A built-in sanitizer runs over every observation ai-memory captures, and version 1.28.1 widened it to seven more credential shapes: GitHub token prefixes, AWS STS temporary keys, Stripe restricted keys, Google OAuth refresh tokens, Meta and Facebook Graph tokens, Telegram bot tokens, and GoHighLevel Private Integration Tokens. Each single observation is also bounded at 16 KiB."
+        },
+        {
+          "q": "Does ai-memory need an LLM API key?",
+          "a": "No. ai-memory has a zero-LLM mode where hooks capture sessions and full-text search retrieves pages, so no API key is required to start. Anthropic, OpenAI, Gemini and OpenAI-compatible providers are optional, and they unlock consolidation, linting and bootstrap. Version 1.29.0 moved the default Gemini model from gemini-2.5-flash to gemini-3.5-flash and added an llm_timeout_secs config key."
+        },
+        {
+          "q": "What changed in ai-memory v1.29.0?",
+          "a": "Version 1.29.0 of ai-memory is mostly a correctness release. The lint stale threshold now derives from the operator's decay lambda instead of a hardcoded 30 days, install-hooks writes agent-distinct filenames instead of two agents sharing one file, and the deploy script refuses to push single-architecture builds over multi-architecture manifest tags."
+        }
+      ],
+      "explainer": {
+        "tagline": "A local, git-versioned wiki of what your coding agent already figured out, readable by whichever agent you open next.",
+        "whatIsIt": "ai-memory writes a persistent markdown wiki out of your coding-agent sessions so the next agent starts already knowing the project. The pitch in its README is blunt: quit Claude Code mid-task, start Codex in the same directory, and continue without re-explaining the architecture. Around eighteen agent CLIs are wired up, from Claude Code and Cursor to Zed and Hermes Agent. Version 1.29.0 landed on 19 August 2026.",
+        "howItWorks": "Lifecycle hooks capture prompts, tool calls and session boundaries in a fire-and-forget way, sanitized and capped at 16 KiB per observation. Those raw observations are then consolidated into markdown pages rather than replayed as transcripts, and the wiki is kept under git on disk. Retrieval mixes SQLite FTS5 full-text search, entity matching, graph-neighbour ranking and optional vector similarity, with an authority-aware recall that favours procedural and decision pages.",
+        "whyItMatters": "Switching coding tools normally throws away everything the previous agent learned — the failed approaches, the decisions, the open questions. Keeping that record on your own disk in plain markdown, under MIT, means the notes outlive any one vendor and can be read or edited by hand. ai-memory reached number five on GitHub trending on 20 August 2026, which suggests the cross-vendor handoff problem is widely felt.",
+        "forWho": "developers who switch between several coding agents",
+        "tryIt": "cargo install --git https://github.com/akitaonrails/ai-memory --tag v1.29.0"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/092cd1f5911d99f74362e471820cd4d0818a6e04cf26b490302b0ce1d2d2ed84/akitaonrails/ai-memory",
+        "alt": "GitHub social preview card for the akitaonrails/ai-memory repository",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/akitaonrails/ai-memory"
+        },
+        {
+          "label": "Release v1.29.0",
+          "url": "https://github.com/akitaonrails/ai-memory/releases/tag/v1.29.0"
+        },
+        {
+          "label": "Changelog",
+          "url": "https://github.com/akitaonrails/ai-memory/blob/main/CHANGELOG.md"
+        },
+        {
+          "label": "Documentation",
+          "url": "https://github.com/akitaonrails/ai-memory/blob/main/README.md"
+        }
+      ],
+      "publishDate": "2026-08-20T08:39:57.240Z"
+    },
     {
       "id": "simonw-conceptual-integrity-aug19",
       "categories": [
