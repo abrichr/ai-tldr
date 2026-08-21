@@ -1,8 +1,189 @@
 {
-  "generatedAt": "2026-08-21T03:07:05.924Z",
+  "generatedAt": "2026-08-21T04:42:00.085Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "google-envharness",
+      "categories": [
+        "paper",
+        "algorithm",
+        "repo"
+      ],
+      "title": "EnvHarness — Google's wrapper layer makes static agent benchmarks adapt",
+      "org": "Google Cloud AI Research",
+      "date": "2026-08-20",
+      "url": "https://arxiv.org/abs/2608.19880",
+      "summary": "EnvHarness wraps an existing agent benchmark so its behaviour can be reshaped without editing the benchmark itself. The paper reports up to a 9.0-point gain on held-out tasks with 9.8% fewer steps. Code is Apache-2.0.",
+      "tags": [
+        "envharness",
+        "envrigger",
+        "google",
+        "agents",
+        "reinforcement-learning",
+        "agent-training",
+        "swe-bench",
+        "webarena",
+        "alfworld",
+        "open-source",
+        "apache-2-0",
+        "arxiv"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Best held-out gain": "+9.0 points",
+        "Execution steps saved": "9.8%"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Google Cloud AI Research"
+        },
+        {
+          "label": "Also credited",
+          "value": "Washington University in St. Louis, UNC Chapel Hill"
+        },
+        {
+          "label": "Parts",
+          "value": "EnvHarness wrapper layer + EnvRigger"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0 (code)"
+        },
+        {
+          "label": "Language",
+          "value": "Python"
+        },
+        {
+          "label": "Evaluated on",
+          "value": "5 benchmarks across 4 domains"
+        },
+        {
+          "label": "Paper",
+          "value": "arXiv 2608.19880, 20 August 2026"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is EnvHarness open source?",
+          "a": "Yes. EnvHarness ships as Apache-2.0 Python code at github.com/google-research/envharness, published alongside the arXiv paper on 20 August 2026. The repository sits under the google-research organisation. A project page at envharness.com hosts a browser playground, so the framework can be inspected and tried without an API key or a paid account."
+        },
+        {
+          "q": "Which benchmarks did EnvHarness improve, and by how much?",
+          "a": "The EnvHarness paper reports three headline results. On WebArena the agent moves from 38.7 to 41.6. On SWE-bench Verified it moves from 47.7 to 52.6. On ALFWorld it moves from 61.7 to 68.3, the largest jump at 5.9 points. Across five benchmarks in four domains the best held-out gain reaches 9.0 points."
+        },
+        {
+          "q": "Does EnvHarness require rewriting an existing benchmark?",
+          "a": "No. EnvHarness customises an environment through the standard reset() and step() interface alone, using composable wrapper components. The interface contract and the original benchmark's verifiers both stay intact, so scores remain comparable to the unmodified benchmark and maintainers do not have to fork or patch the environment's own code."
+        },
+        {
+          "q": "How does EnvHarness compare to training an agent in the real environment?",
+          "a": "The paper includes that comparison as a separate column. Learning in real environments scores 38.5 on WebArena, 49.9 on SWE-bench Verified and 62.4 on ALFWorld. EnvHarness environments beat all three, at 41.6, 52.6 and 68.3. On WebArena, real-environment training actually scored slightly below the base agent's 38.7."
+        },
+        {
+          "q": "Can I try EnvHarness without running any code?",
+          "a": "Yes. The EnvHarness project page at envharness.com includes a playable demo built on the 24 game, where four cards are combined with plus, minus, times and divide, two at a time, until one number is left. Visitors can edit environment components live and watch how the policy's observations diverge from the real environment state."
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "WebArena",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Base agent",
+              "score": 38.7
+            },
+            {
+              "name": "Learned in real envs",
+              "score": 38.5
+            },
+            {
+              "name": "EnvHarness",
+              "score": 41.6,
+              "highlight": true
+            }
+          ],
+          "source": "https://envharness.com/"
+        },
+        {
+          "name": "SWE-bench Verified",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Base agent",
+              "score": 47.7
+            },
+            {
+              "name": "Learned in real envs",
+              "score": 49.9
+            },
+            {
+              "name": "EnvHarness",
+              "score": 52.6,
+              "highlight": true
+            }
+          ],
+          "source": "https://envharness.com/"
+        },
+        {
+          "name": "ALFWorld",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Base agent",
+              "score": 61.7
+            },
+            {
+              "name": "Learned in real envs",
+              "score": 62.4
+            },
+            {
+              "name": "EnvHarness",
+              "score": 68.3,
+              "highlight": true
+            }
+          ],
+          "source": "https://envharness.com/"
+        }
+      ],
+      "explainer": {
+        "tagline": "EnvHarness reshapes an existing agent benchmark into a training environment without touching the benchmark's own code.",
+        "whatIsIt": "EnvHarness turns a fixed agent benchmark into an environment you can edit. Google Cloud AI Research built it with Washington University in St. Louis and the University of North Carolina at Chapel Hill, and released the code under Apache-2.0. A second part, EnvRigger, watches an agent's trajectories and writes new environment components aimed at the weak spots it finds.",
+        "howItWorks": "Composable wrappers do the work. Customisation in EnvHarness happens through the standard reset() and step() calls alone, so the interface contract and the original benchmark's verifiers both stay intact. EnvRigger then reads agent trajectories and synthesises targeted components from them, which lets the environment and the policy keep changing together instead of the environment staying frozen.",
+        "whyItMatters": "Agent training environments are hand-built and static, so they stop teaching once an agent gets good at them. The EnvHarness paper reports up to a 9.0-point gain on held-out instances with 9.8% fewer execution steps across five benchmarks in four domains. Teams that already run WebArena, SWE-bench Verified or ALFWorld can reuse those environments for training rather than building new ones.",
+        "forWho": "agent and RL researchers",
+        "tryIt": "git clone https://github.com/google-research/envharness"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/google-research/envharness",
+        "alt": "GitHub social preview card for the google-research/envharness repository",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.19880"
+        },
+        {
+          "label": "Project Page",
+          "url": "https://envharness.com/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/google-research/envharness"
+        },
+        {
+          "label": "Hugging Face Paper",
+          "url": "https://huggingface.co/papers/2608.19880"
+        }
+      ],
+      "publishDate": "2026-08-21T04:42:00.085Z"
+    },
     {
       "id": "waymo-custom-asic",
       "categories": [

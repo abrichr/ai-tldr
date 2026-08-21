@@ -34803,6 +34803,42 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260821t044200z",
+      "timestamp": "2026-08-21T04:42:00.085Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Qwen, Moonshot, DeepSeek, Z.ai), GitHub trending, HuggingFace models/datasets/papers/blog, HN pages 1-2, all 8 YouTube feeds, tier-1 press and the AI-for-science lane. Added one item: EnvHarness, Google Cloud AI Research's Apache-2.0 wrapper layer for reshaping static agent benchmarks (arXiv 20 Aug, #1 on HF papers, code plus a live demo). Everything else in the 72h window was already in the feed (Mistral Agentic Search, LFM2.5-DSpark, Gemini 3.7 Flash, WeatherNext Cyclones, Sentence Transformers v6.0, Ultra-FineWeb-L1, Stripe/OpenRouter, all three fresh creator videos) or missed the bar (OpenRouter's anonymous 'Ox Alpha' stealth model had no named maker and only 62 HN points; the Grok gibberish glitch had a single outlet; Micro1's run rate is pure business news).",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "google-envharness",
+          "title": "EnvHarness — Google's wrapper layer makes static agent benchmarks adapt",
+          "category": "paper",
+          "note": "Google Cloud AI Research framework, arXiv 2026-08-20, #1 on HuggingFace papers today with 78 upvotes; clears the paper 2-of-N bar with released Apache-2.0 code (google-research/envharness) plus a working interactive demo at envharness.com."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "video",
+        "article",
+        "security",
+        "ecosystem",
+        "tutorial",
+        "rumor"
+      ]
     }
   ]
 }
