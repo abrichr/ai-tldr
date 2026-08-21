@@ -34894,6 +34894,52 @@
         "ecosystem",
         "tutorial"
       ]
+    },
+    {
+      "id": "sweep-20260821t103736z",
+      "timestamp": "2026-08-21T10:37:36.381Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Ox Alpha, an anonymous 1M-context reasoning model that landed free on OpenRouter and hit the HN front page with 162 points; SWE-bench Science, an MIT-licensed 119-task benchmark where the best agent scores 47.90% Pass@1; and Claude Code 2.1.238. Lab blogs were otherwise quiet — Anthropic's newsroom stops at August 14, Meta AI at July, and DeepMind's newest post is the August 6 WeatherNext release.",
+      "counts": {
+        "added": 3,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openrouter-ox-alpha",
+          "title": "Ox Alpha — an anonymous 1M-context coding model, free on OpenRouter",
+          "category": "model",
+          "note": "New stealth reasoning model on OpenRouter with a 1M-token context window, free during testing; HN front page at 162 points with 123 comments, all specs verified from the OpenRouter model and provider pages."
+        },
+        {
+          "id": "openmoss-swe-bench-science",
+          "title": "SWE-bench Science — the best coding agent fixes under half of 119 science bugs",
+          "category": "benchmark",
+          "note": "Released benchmark artifact (MIT dataset on Hugging Face + code + public leaderboard), arXiv v1 dated August 20, and currently top-10 trending on Hugging Face papers."
+        },
+        {
+          "id": "anthropic-claude-code-2-1-238",
+          "title": "Claude Code 2.1.238 — plugin marketplaces can mint their own auth headers",
+          "category": "tool",
+          "note": "Substantive August 20 release from Anthropic's official changelog: authenticated plugin marketplaces, self-hosted-runner shutdown and proxy-auth flags, and a fix for unbounded memory growth in long sessions."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "dataset",
+        "benchmark",
+        "paper",
+        "algorithm",
+        "video",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }

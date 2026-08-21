@@ -1,8 +1,275 @@
 {
-  "generatedAt": "2026-08-21T08:42:44.237Z",
+  "generatedAt": "2026-08-21T10:37:36.381Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openrouter-ox-alpha",
+      "categories": [
+        "model"
+      ],
+      "title": "Ox Alpha — an anonymous 1M-context coding model, free on OpenRouter",
+      "org": "OpenRouter",
+      "date": "2026-08-20",
+      "url": "https://openrouter.ai/stealth/ox-alpha",
+      "summary": "Ox Alpha is a reasoning model that appeared on OpenRouter under the provider name Stealth, with no lab claiming it. It has a 1,048,576-token context window, takes text, images and video, and costs nothing during the test window.",
+      "tags": [
+        "model",
+        "openrouter",
+        "stealth-model",
+        "coding",
+        "agentic",
+        "long-context",
+        "reasoning",
+        "multimodal",
+        "free-tier"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "A free reasoning model with a 1M-token context window, live on OpenRouter with no maker attached.",
+        "whatIsIt": "Ox Alpha appeared on OpenRouter on August 20, 2026 under the provider name \"Stealth\" — no company attached and no lab claiming it. OpenRouter describes it as a reasoning model designed for coding, sustained agentic work, and production workloads, suited to long-horizon software engineering and workflows that combine text with visual context. It accepts text, images and video, and returns text.",
+        "howItWorks": "Requests go to the model ID stealth/ox-alpha through OpenRouter's normal API. OpenRouter states it routes requests to the model and is not its developer, owner, or provider. Function calling works through the tools and tool_choice parameters, and JSON output through response_format without JSON-schema enforcement, so existing agent code runs unchanged.",
+        "whyItMatters": "A 1,048,576-token context window and a 131,072-token maximum output, at zero cost, make long-running coding jobs cheap to test — the kind of workload that normally runs up a bill fast. The trade-off is trust: the provider keeps prompts and completions, and nobody outside knows which lab is on the other end. OfficeChai reports that a developer's tokenizer comparison lined Ox Alpha's tokens up almost exactly with GLM-5.3, but writes that nobody involved has confirmed anything.",
+        "forWho": "developers testing long-context coding agents",
+        "tryIt": "Model ID: stealth/ox-alpha on OpenRouter"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Unknown — listed under the \"Stealth\" provider"
+        },
+        {
+          "label": "Model ID",
+          "value": "stealth/ox-alpha"
+        },
+        {
+          "label": "Context window",
+          "value": "1,048,576 tokens"
+        },
+        {
+          "label": "Max output",
+          "value": "131,072 tokens"
+        },
+        {
+          "label": "Input types",
+          "value": "Text, image and video"
+        },
+        {
+          "label": "Price",
+          "value": "Free (zero per prompt and completion token)"
+        },
+        {
+          "label": "Data policy",
+          "value": "Prompts and completions kept by the provider, not used for training"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Who made Ox Alpha?",
+          "a": "Nobody has said. Ox Alpha is listed on OpenRouter under an anonymous third-party provider called Stealth, and OpenRouter states plainly that it routes requests to the model and is not its developer, owner, or provider. OfficeChai reports that a tokenizer comparison lines Ox Alpha up with GLM-5.3 from Z.ai, and names Xiaomi's MiMo team as the other suspect, but no lab has confirmed it."
+        },
+        {
+          "q": "How much does Ox Alpha cost?",
+          "a": "Nothing right now. OpenRouter lists Ox Alpha at zero cost for both prompt and completion tokens. OfficeChai reports the model is free for a week through OpenRouter and OpenCode. Anonymous models on OpenRouter are normally free while they are being tested, so treat the price as temporary rather than a standing rate."
+        },
+        {
+          "q": "Does Ox Alpha train on the prompts I send it?",
+          "a": "No, according to OpenRouter's data policy for the model. The Ox Alpha page states that prompts and completions are retained by the provider and are not used for training, with all other use governed by the Stealth Model Terms. Retention still means an unnamed party holds your text, so keep sensitive code out of it."
+        },
+        {
+          "q": "Where can I use Ox Alpha?",
+          "a": "Ox Alpha is reachable through the OpenRouter API using the model ID stealth/ox-alpha, which means any tool that already speaks to OpenRouter can point at it. OfficeChai also reports it is available directly inside OpenCode for terminal coding. The listing supports tool calling and JSON responses, so agent harnesses need no special handling."
+        }
+      ],
+      "image": {
+        "url": "https://openrouter.ai/stealth/ox-alpha/opengraph-image-1oizug?abd1ffaa6102aa5f",
+        "alt": "OpenRouter model card for Ox Alpha, a stealth reasoning model",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Model Page",
+          "url": "https://openrouter.ai/stealth/ox-alpha"
+        },
+        {
+          "label": "Stealth Provider",
+          "url": "https://openrouter.ai/provider/stealth"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49381896"
+        },
+        {
+          "label": "Coverage",
+          "url": "https://officechai.com/ai/stealth-model-ox-alpha-available-for-free-for-a-week-on-openrouter-and-opencode/"
+        }
+      ],
+      "publishDate": "2026-08-21T10:37:36.381Z"
+    },
+    {
+      "id": "openmoss-swe-bench-science",
+      "categories": [
+        "benchmark",
+        "dataset",
+        "paper"
+      ],
+      "title": "SWE-bench Science — the best coding agent fixes under half of 119 science bugs",
+      "org": "OpenMOSS",
+      "date": "2026-08-20",
+      "url": "https://github.com/OpenMOSS/SWE-bench-Science",
+      "summary": "SWE-bench Science is an MIT-licensed benchmark of 119 repository-level tasks drawn from 98 scientific codebases across 20 domains. On the published leaderboard, Claude Opus 5 leads with 47.90% Pass@1.",
+      "tags": [
+        "benchmark",
+        "dataset",
+        "coding-agents",
+        "swe-bench",
+        "scientific-software",
+        "evaluation",
+        "open-source",
+        "mit-license",
+        "python",
+        "openmoss",
+        "bioinformatics",
+        "computational-biology"
+      ],
+      "importance": "notable",
+      "metrics": {
+        "Tasks": "119",
+        "Repositories": "98",
+        "Best Pass@1": "47.90%"
+      },
+      "explainer": {
+        "tagline": "119 real bug-fixing tasks pulled from 98 scientific codebases, where every agent tested fails more than half.",
+        "whatIsIt": "SWE-bench Science tests coding agents on software that scientists actually run: 119 repository-level tasks across 98 GitHub repositories and 20 scientific domains, covering density-functional theory, plasma stability, genomics, molecular dynamics and computational physics. Python dominates, with C++, MATLAB/Octave and Fortran also present. OpenMOSS released the dataset on Hugging Face under MIT.",
+        "howItWorks": "Tasks are split into three paradigms — Issue-driven, Expert-exploratory and Engineering-integration — and Pass@1 is reported for each as well as overall. Every task ships Docker container specs for both environment setup and verification, plus the repository URL, commit hash and source license, so a fix only counts when the scientific result checks out.",
+        "whyItMatters": "The leaderboard puts Claude Opus 5 (max) first at 47.90% Pass@1, GPT-5.6 Sol (max) at 46.22% and DeepSeek V4 Pro (max) at 42.02%, so more than half of these bugs go unfixed by every agent tested. The paper names four repeat failures: knowledge gaps, surface-level repairs, incomplete integration and poor generalization. An ablation found that scientific guidance helps only when it is well aligned, and hurts when it is not.",
+        "forWho": "researchers pointing coding agents at scientific code",
+        "tryIt": "Load OpenMOSS-Team/SWE-bench-Science from the Hugging Face datasets hub"
+      },
+      "image": {
+        "url": "https://swescience.github.io/og.png",
+        "alt": "SWE-bench Science benchmark leaderboard card from the project page",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Code",
+          "url": "https://github.com/OpenMOSS/SWE-bench-Science"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.19799"
+        },
+        {
+          "label": "Leaderboard",
+          "url": "https://swescience.github.io"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/OpenMOSS-Team/SWE-bench-Science"
+        }
+      ],
+      "publishDate": "2026-08-21T10:37:36.381Z"
+    },
+    {
+      "id": "anthropic-claude-code-2-1-238",
+      "categories": [
+        "tool"
+      ],
+      "title": "Claude Code 2.1.238 — plugin marketplaces can mint their own auth headers",
+      "org": "Anthropic",
+      "date": "2026-08-20",
+      "url": "https://code.claude.com/docs/en/changelog",
+      "summary": "Claude Code 2.1.238 adds headersHelper, a command that mints HTTP headers such as a short-lived token for private plugin marketplaces. The same build fixes unbounded memory growth in long interactive sessions.",
+      "tags": [
+        "tool",
+        "claude-code",
+        "anthropic",
+        "coding-agent",
+        "plugins",
+        "marketplace",
+        "authentication",
+        "self-hosted-runner",
+        "release",
+        "changelog"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "Private plugin marketplaces can now hand Claude Code a fresh token for every catalog fetch.",
+        "whatIsIt": "Claude Code 2.1.238 adds headersHelper to plugin marketplaces: a command that mints HTTP headers, such as a short-lived token, for catalog and same-origin archive fetches. A catalog entry's helper runs only when you install or update that plugin, after Claude Code prints the command it will run and asks [y/N]. That closes the gap for teams whose internal plugin registry sits behind short-lived credentials.",
+        "howItWorks": "Self-hosted runners get two new flags in the same build. The --defer-shutdown-max-min option keeps serving attached sessions after SIGTERM for a set number of minutes, parks whatever is left, then exits. The --proxy-authorization-command and --proxy-authorization-file options supply a freshly issued Proxy-Authorization header on every connection, for egress proxies that demand one.",
+        "whyItMatters": "Anyone who leaves the terminal agent open all day gets the bigger win: unbounded memory growth in long interactive sessions is fixed, because subagent tool results are now released once they leave the recent display window. The 2.1.237 build from the same day added a built-in \"Concise\" output style that skips preamble and narration.",
+        "forWho": "teams running private plugins or self-hosted runners"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Anthropic"
+        },
+        {
+          "label": "Version",
+          "value": "2.1.238"
+        },
+        {
+          "label": "Released",
+          "value": "August 20, 2026"
+        },
+        {
+          "label": "New in 2.1.238",
+          "value": "headersHelper auth for plugin marketplaces"
+        },
+        {
+          "label": "New in 2.1.237",
+          "value": "Built-in \"Concise\" output style"
+        },
+        {
+          "label": "Notable fix",
+          "value": "Memory growth in long interactive sessions"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which Claude Code versions shipped in this cycle?",
+          "a": "Claude Code put out five builds between August 17 and August 20, 2026: 2.1.234 on the 17th, 2.1.235 on the 18th, 2.1.236 on the 19th, and both 2.1.237 and 2.1.238 on the 20th. Version 2.1.238 is the newest entry in the changelog, and it carries the plugin-marketplace and self-hosted-runner changes."
+        },
+        {
+          "q": "Do I have to approve a plugin marketplace's headersHelper before it runs?",
+          "a": "Yes. Claude Code shows the headersHelper command first, then claude plugin install and claude plugin update ask [y/N] before running it, unless you pass -y. A helper defined in a project .mcp.json, a plugin, or an agent file also runs without inherited credential environment variables, so it cannot quietly pick up your secrets."
+        },
+        {
+          "q": "Does the new Concise output style make Claude Code less thorough?",
+          "a": "No. The Claude Code changelog for 2.1.237 states that the Concise style leads with results and skips preamble and narration while doing the work just as thoroughly. It changes how much Claude Code narrates, not how much it does. You select it under Output style in /config."
+        },
+        {
+          "q": "Why were long Claude Code sessions using more and more memory?",
+          "a": "Subagent tool results were kept in memory for the whole session. Claude Code 2.1.238 releases them once they leave the recent display window, which stops the unbounded growth. The same build also clears leftover /tmp/claude-*-cwd files when a Bash command is killed, times out, or is interrupted."
+        }
+      ],
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/anthropics/claude-code",
+        "alt": "GitHub repository card for anthropics/claude-code",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Changelog",
+          "url": "https://code.claude.com/docs/en/changelog"
+        },
+        {
+          "label": "Releases",
+          "url": "https://github.com/anthropics/claude-code/releases"
+        },
+        {
+          "label": "Plugin Marketplaces",
+          "url": "https://code.claude.com/docs/en/plugin-marketplaces"
+        },
+        {
+          "label": "Self-Hosted Runners",
+          "url": "https://code.claude.com/docs/en/self-hosted-environments-quickstart"
+        }
+      ],
+      "publishDate": "2026-08-21T10:37:36.381Z"
+    },
     {
       "id": "google-envharness",
       "categories": [
