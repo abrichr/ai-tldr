@@ -1,8 +1,179 @@
 {
-  "generatedAt": "2026-08-21T12:42:21.111Z",
+  "generatedAt": "2026-08-21T14:37:34.008Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "nvidia-avo-arc-agi-3",
+      "categories": [
+        "algorithm",
+        "paper",
+        "benchmark"
+      ],
+      "title": "NVIDIA AVO — an agent system scores 100% on ARC-AGI-3's public set",
+      "org": "NVIDIA",
+      "date": "2026-08-21",
+      "url": "https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/",
+      "summary": "NVIDIA AVO scored 100.00 RHAE on the 25-environment public set of ARC-AGI-3, clearing all 183 levels in 6,624 actions. Claude Opus 5 on its own scores about 30% on the same set. The private competition sets were not tested.",
+      "tags": [
+        "nvidia",
+        "avo",
+        "agents",
+        "agentic-ai",
+        "arc-agi-3",
+        "benchmark",
+        "evolutionary-search",
+        "long-horizon-agents",
+        "claude-opus-5",
+        "gpu-kernels",
+        "flash-attention"
+      ],
+      "importance": "major",
+      "metrics": {
+        "ARC-AGI-3 RHAE (public set)": "100.00",
+        "Levels cleared": "183 of 183"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "NVIDIA"
+        },
+        {
+          "label": "Full name",
+          "value": "Agentic Variation Operators"
+        },
+        {
+          "label": "Benchmark tested",
+          "value": "ARC-AGI-3 public set, 25 environments"
+        },
+        {
+          "label": "Base model",
+          "value": "Claude Opus 5, with tests on GPT-5.6 Sol"
+        },
+        {
+          "label": "Actions used",
+          "value": "6,624 (VISTA reported 7,542)"
+        },
+        {
+          "label": "GPU kernel result",
+          "value": "Up to 3.5% over cuDNN, 10.5% over FlashAttention-4"
+        },
+        {
+          "label": "Availability",
+          "value": "Research paper only — no code or weights released"
+        }
+      ],
+      "explainer": {
+        "tagline": "NVIDIA's AVO agent cleared every public ARC-AGI-3 environment, a benchmark where the best single model sat near 30%.",
+        "whatIsIt": "NVIDIA AVO — short for Agentic Variation Operators — cleared all 25 environments of the ARC-AGI-3 public set with a 100.00 RHAE score. ARC-AGI-3 drops an agent into an unfamiliar turn-based world with no instructions, so it has to work out the goal and the rules by playing. NVIDIA says the run used Claude Opus 5 as the underlying model, with extra testing on GPT-5.6 Sol.",
+        "howItWorks": "The design replaces the fixed mutation and crossover steps of classic evolutionary search with a coding agent that decides what to try next. Persistent memory carries earlier implementations, evaluation results, compiler and profiler output forward, so the agent resumes work instead of rebuilding its context each round. A separate supervisor watches the wider search for stalling or repeated dead ends and can redirect the main agent to another strategy.",
+        "whyItMatters": "Long-horizon autonomy is the weak spot in today's agents, and this result points at the harness around a model mattering as much as the model itself. NVIDIA also ran AVO for seven straight days on GPU kernel work for multi-head attention, where it explored more than 500 optimization directions and committed 40 kernel versions. Teams building agents get a concrete design to copy: memory, a supervisor, grounded feedback and recovery.",
+        "forWho": "agent researchers and systems engineers"
+      },
+      "image": {
+        "url": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/08/agentic-ai-visual-cybersecurity-avo-1.webp",
+        "alt": "Abstract agentic AI graphic from NVIDIA's AVO announcement",
+        "fit": "cover"
+      },
+      "faq": [
+        {
+          "q": "Is NVIDIA AVO available to download or use?",
+          "a": "NVIDIA has not released code, weights or an API for AVO. The developer blog points only to the research paper, 'AVO: Agentic Variation Operators for Autonomous Evolutionary Search', on arXiv. Teams who want the approach get the paper's description of the agent loop, persistent memory and supervisor, but there is no NVIDIA implementation to run today."
+        },
+        {
+          "q": "Does the 100% score cover all of ARC-AGI-3?",
+          "a": "No. NVIDIA states the AVO results cover the 25-environment ARC-AGI-3 public set using the official scorecard and RHAE metric, and are not results on the semi-private or fully private competition sets. ARC Prize keeps those held-out sets to guard against overfitting, so the 100.00 RHAE figure is a public-set number only."
+        },
+        {
+          "q": "How does AVO compare with Claude Opus 5 on its own?",
+          "a": "Claude Opus 5 by itself reaches roughly 30% on the ARC-AGI-3 public set, while AVO reaches 100.00 RHAE using the same model family. NVIDIA cautions that its run used a different reasoning setting and a substantially different agent system, and says the comparison should not be read as a controlled ablation."
+        },
+        {
+          "q": "What does the RHAE score in ARC-AGI-3 measure?",
+          "a": "RHAE stands for Relative Human Action Efficiency. The ARC-AGI-3 metric combines task completion with per-level action efficiency measured against first-time human baselines, then aggregates across levels and environments. AVO used 6,624 environment actions to finish 183 levels, about 12% fewer than the 7,542 actions reported for VISTA."
+        },
+        {
+          "q": "What else did NVIDIA test AVO on besides the benchmark?",
+          "a": "NVIDIA ran AVO on GPU kernel optimization for multi-head attention on DGX B200 systems, operating continuously for seven days. AVO explored more than 500 optimization directions and produced 40 committed kernel versions, ending with kernels that outperform cuDNN by up to 3.5% and FlashAttention-4 by up to 10.5% across the evaluated configurations."
+        }
+      ],
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2603.24517"
+        },
+        {
+          "label": "ARC-AGI-3",
+          "url": "https://arcprize.org/arc-agi/3"
+        },
+        {
+          "label": "Scoring Method",
+          "url": "https://docs.arcprize.org/methodology"
+        }
+      ],
+      "publishDate": "2026-08-21T14:37:34.008Z"
+    },
+    {
+      "id": "ant-research-4danyone",
+      "categories": [
+        "model",
+        "repo",
+        "paper"
+      ],
+      "title": "4DAnyone — turn one handheld video of a person into a 4D model",
+      "org": "Ant Research",
+      "date": "2026-08-20",
+      "url": "https://4danyone.github.io",
+      "summary": "4DAnyone rebuilds a moving person in 4D from a single ordinary video. The Ant Research system generates multiview-consistent video first, then lifts it into 4D Gaussian Splatting. Code and checkpoints are public.",
+      "tags": [
+        "4d-reconstruction",
+        "gaussian-splatting",
+        "computer-vision",
+        "ant-research",
+        "video-to-3d",
+        "avatars",
+        "monocular-video",
+        "siggraph-asia",
+        "open-weights"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "4DAnyone reconstructs a moving person in 4D from one casual monocular video, with code and checkpoints released.",
+        "whatIsIt": "4DAnyone takes a casual single-camera video of a person and rebuilds them as a 4D Gaussian Splatting scene you can view from any angle over time. The work comes from Ant Research with Zhejiang University and HKUST, and was accepted to SIGGRAPH Asia 2026. Code, checkpoints and example videos are already public.",
+        "howItWorks": "The pipeline generates multiview-consistent video of the subject, then lifts those views into 4D Gaussian Splatting. Two ideas keep generation stable as the number of target views grows: Reference Context Packing compresses the reference views into a fixed-length mixed-resolution context, and Target Context Routing rotates which views are denoised together so information crosses groups. Depth-buffered skeleton renderings supply 3D-aware pose conditioning, and training adds MVGameHuman, a game-engine dataset the team built.",
+        "whyItMatters": "Capturing a person in 4D normally needs a camera rig or a studio. Working from a phone-style clip puts free-viewpoint replay, avatar creation and 3D video editing in reach of people with no capture hardware. The released repo and checkpoints let researchers reproduce the result instead of only reading about it.",
+        "forWho": "graphics and computer vision researchers",
+        "tryIt": "https://github.com/ant-research/4DAnyone"
+      },
+      "image": {
+        "url": "https://4danyone.github.io/assets/images/social-card.jpg",
+        "alt": "4DAnyone project card showing 4D human reconstruction from a monocular video",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Project Page",
+          "url": "https://4danyone.github.io"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.20335"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/ant-research/4DAnyone"
+        },
+        {
+          "label": "Model Weights",
+          "url": "https://huggingface.co/AntResearch/4DAnyone"
+        }
+      ],
+      "publishDate": "2026-08-21T14:37:34.008Z"
+    },
     {
       "id": "deepseek-v4-flash-vision-exp",
       "categories": [

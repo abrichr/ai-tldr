@@ -34972,6 +34972,46 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260821t143734z",
+      "timestamp": "2026-08-21T14:37:34.008Z",
+      "source": "github-actions-sweep",
+      "summary": "Added NVIDIA AVO's 100.00 RHAE run on the ARC-AGI-3 public set (major) and Ant Research's 4DAnyone monocular-to-4D human reconstruction with released code and weights (notable). Lab blogs were quiet inside the window: Anthropic's latest is Aug 14, Meta's is July, DeepMind's Gemini 3.7 Flash (Aug 13) and WeatherNext (Aug 6) are past the 72h cap, Mistral Agentic Search and DeepSeek V4-Flash-Vision-Exp are already in the feed. GitHub trending and HF trending held no fresh qualifying repo, model or dataset. All 5 fresh YouTube videos were already in the feed except a Wes Roth app-building promo, which was off-topic.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "nvidia-avo-arc-agi-3",
+          "title": "NVIDIA AVO — an agent system scores 100% on ARC-AGI-3's public set",
+          "category": "algorithm",
+          "note": "First-party NVIDIA developer-blog announcement today of a 100.00 RHAE public-set score on ARC-AGI-3, up from about 30% for Claude Opus 5 alone; on the HN front page."
+        },
+        {
+          "id": "ant-research-4danyone",
+          "title": "4DAnyone — turn one handheld video of a person into a 4D model",
+          "category": "model",
+          "note": "Top of huggingface.co/papers today (162 upvotes) with public Apache-2.0 code, released checkpoints on Hugging Face and a working project page — clears the 2-of-N paper bar."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "dataset",
+        "video",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
