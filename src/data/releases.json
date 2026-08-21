@@ -1,8 +1,122 @@
 {
-  "generatedAt": "2026-08-21T16:34:18.414Z",
+  "generatedAt": "2026-08-21T18:42:18.828Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openai-codex-cli-0-149",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "Codex CLI 0.149.0 — a dashboard for every running agent task",
+      "org": "OpenAI",
+      "date": "2026-08-20",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0",
+      "summary": "Codex CLI 0.149.0 adds an interactive `codex agents` dashboard for searching, starting, opening, renaming and stopping tasks. The same build adds `codex queue`, which sends a message into an existing local or remote session.",
+      "tags": [
+        "openai",
+        "codex",
+        "codex-cli",
+        "coding-agent",
+        "cli",
+        "terminal",
+        "agents",
+        "dashboard",
+        "rust",
+        "open-source",
+        "developer-tools",
+        "vim"
+      ],
+      "importance": "major",
+      "metrics": {
+        "GitHub stars": "111.1k"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenAI"
+        },
+        {
+          "label": "Version",
+          "value": "0.149.0"
+        },
+        {
+          "label": "Released",
+          "value": "August 20, 2026"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        },
+        {
+          "label": "Written in",
+          "value": "Rust"
+        },
+        {
+          "label": "New commands",
+          "value": "codex agents, codex queue, /cd, /pwd, /cwd"
+        },
+        {
+          "label": "Requires",
+          "value": "Node.js 16 or higher"
+        }
+      ],
+      "explainer": {
+        "tagline": "Codex CLI 0.149.0 puts every agent task behind one searchable dashboard you can drive with shortcuts.",
+        "whatIsIt": "An interactive `codex agents` dashboard is the headline change in Codex CLI 0.149.0. It searches, starts, opens, renames and stops tasks from one screen, with configurable shortcuts. A second new command, `codex queue`, sends a message into a session that is already running, local or remote. Codex CLI itself is OpenAI's terminal coding agent, written in Rust and shared under Apache-2.0.",
+        "howItWorks": "Working-directory control moves inside the terminal UI: `/cd`, `/pwd` and `/cwd` set and report where a session runs, so you no longer restart Codex CLI to change folders. Vim editing picks up character replacement and more change motions such as `cw`, `c$` and `cc`. The `codex doctor` check now diagnoses endpoint protection, network and proxy failures, desktop app state, and update connectivity.",
+        "whyItMatters": "Running several coding agents at once used to mean guessing which terminal held which task. The dashboard and the queue command give that fleet a single front door. A quieter fix matters just as much for safety: resumed and forked threads now restore the permission profile they were started with, instead of silently falling back to whatever the current defaults happen to be. SDK users also gain exact CLI config overrides and can pick `max` or `ultra` reasoning effort.",
+        "forWho": "developers running several Codex tasks in parallel",
+        "tryIt": "npm install -g @openai/codex@0.149.0"
+      },
+      "faq": [
+        {
+          "q": "Is Codex CLI open source?",
+          "a": "Yes. Codex CLI is published under the Apache-2.0 license on GitHub at openai/codex, where it has 111,133 stars. The agent is written in Rust and described by OpenAI as a lightweight coding agent that runs in your terminal. The npm package @openai/codex ships the same 0.149.0 build and needs Node.js 16 or higher."
+        },
+        {
+          "q": "Can I send pull requests to the Codex repository?",
+          "a": "OpenAI would rather you did not open one cold. The 0.149.0 documentation update clarifies that external contributions to Codex should go through issues and design discussion rather than pull requests. The same docs pass also writes up DNS exfiltration risks and the trust limits of secure devcontainers, so start a conversation in an issue first."
+        },
+        {
+          "q": "What did Codex CLI 0.149.0 fix for sub-agents?",
+          "a": "Codex CLI 0.149.0 removes duplicate sub-agent activity from the display and tightens terminal-UI routing for sub-agent notifications and approvals, so a prompt lands where you can answer it. Realtime WebRTC sideband connections also reconnect after an unexpected transport loss without dropping output that was still pending."
+        },
+        {
+          "q": "Are there Windows-specific improvements in this Codex release?",
+          "a": "Yes. In Codex CLI 0.149.0, inline terminal-UI history stays available in Windows Terminal scrollback, so earlier turns do not vanish when you scroll back. The release also bounds replay buffers for inactive threads, which stops Codex from holding on to large amounts of streamed output you are no longer looking at."
+        },
+        {
+          "q": "What happens to messages queued while a Codex session is idle?",
+          "a": "Queued messages now wake idle Codex sessions reliably in 0.149.0, rather than sitting until you touch the session yourself. The same fix resolves duplicate session names more usefully and preserves the semantics of pasted or deferred commands, so a message you queued behaves the same way it would have if you had typed it live."
+        }
+      ],
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/openai/codex",
+        "alt": "GitHub repository card for openai/codex, OpenAI's terminal coding agent",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Release Notes",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0"
+        },
+        {
+          "label": "Repo",
+          "url": "https://github.com/openai/codex"
+        },
+        {
+          "label": "Codex CLI Docs",
+          "url": "https://learn.chatgpt.com/docs/codex/cli"
+        },
+        {
+          "label": "All Releases",
+          "url": "https://github.com/openai/codex/releases"
+        }
+      ],
+      "publishDate": "2026-08-21T18:42:18.828Z"
+    },
     {
       "id": "nvidia-avo-arc-agi-3",
       "categories": [

@@ -35038,6 +35038,40 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260821t184218z",
+      "timestamp": "2026-08-21T18:42:18.828Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, DeepMind, Meta, Mistral, Cohere, DeepSeek, Google Research, Google AI), GitHub trending daily + weekly, HuggingFace models/datasets/papers, HN front page, 8 YouTube creator feeds, coding-agent release channels and the AI-for-science lane. Added one item: OpenAI's Codex CLI 0.149.0 and its new agents dashboard. Everything else was already in the feed (DeepSeek V4-Flash-Vision-Exp, 4DAnyone, EnvHarness, SWE-bench Science, Mistral Agentic Search, Claude Code 2.1.238, all five fresh creator videos) or failed the 72h cap.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-codex-cli-0-149",
+          "title": "Codex CLI 0.149.0 — a dashboard for every running agent task",
+          "category": "tool",
+          "note": "OpenAI's official Codex CLI release published 2026-08-20T21:04:55Z (verified via the GitHub releases API) ships a new interactive agents dashboard and a queue command on a 111k-star Apache-2.0 repo — a real feature ship on a widely-used coding agent, not a patch roll-up."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "video",
+        "paper",
+        "dataset",
+        "article",
+        "benchmark",
+        "security",
+        "algorithm",
+        "ecosystem"
+      ]
     }
   ]
 }
