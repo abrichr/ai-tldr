@@ -34711,6 +34711,64 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260821t010938z",
+      "timestamp": "2026-08-21T01:09:38.557Z",
+      "source": "github-actions-sweep",
+      "summary": "Five adds from a busy 20 August: Slack Code puts coding agents in shared channels, Google shipped Antigravity IDE extensions plus enterprise controls, Liquid AI released LFM2.5-DSpark draft models, Semantica patched a vulnerability batch in v0.6.6, and Simon Willison flagged ChatGPT's jump to domain-scoped search. Anthropic, OpenAI, Meta, Mistral, DeepSeek, Qwen, MiniMax and Z.ai had nothing new inside 72h; all six fresh YouTube videos except one promo were already in the feed.",
+      "counts": {
+        "added": 5,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "slack-code",
+          "title": "Slack Code — AI coding agents get a channel the whole team can watch",
+          "category": "tool",
+          "note": "Salesforce/Slack shipped Slack Code on 2026-08-20; covered by The Register, SiliconANGLE, Forbes, TNW and Gizmodo, and it is a real tooling launch with named launch-partner agents."
+        },
+        {
+          "id": "google-antigravity-ide-extensions",
+          "title": "Antigravity IDE Extensions — Google's agent moves into VS Code and JetBrains",
+          "category": "tool",
+          "note": "Two official antigravity.google posts dated 2026-08-20 (IDE extensions + Gemini Enterprise), plus The New Stack and The Register — a distinct release from the existing Antigravity 2.0 CLI item."
+        },
+        {
+          "id": "liquid-lfm2-5-dspark",
+          "title": "LFM2.5-DSpark — Liquid AI's draft models decode up to 3.18x faster",
+          "category": "model",
+          "note": "Open-weight speculative-decoding drafters published 2026-08-20 on liquid.ai and Hugging Face with day-one llama.cpp and SGLang support; distinct from the LFM2.5 Q4_0 QAD item, which was quantization."
+        },
+        {
+          "id": "semantica-0-6-6",
+          "title": "Semantica v0.6.6 — security release hardens ingestion, adds CrewAI support",
+          "category": "security",
+          "note": "New tagged release 2026-08-20 on a repo trending with +3,674 stars this week; a different version and a different vulnerability batch from the v0.6.5 item."
+        },
+        {
+          "id": "simonw-chatgpt-site-operator-aug20",
+          "title": "Simon Willison — ChatGPT search now scopes one query in six to a single site",
+          "category": "article",
+          "note": "Influential-voice article from 2026-08-20 on a distinct topic from the two existing Simon Willison items; the underlying Promptwatch data was fetched and verified."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "security",
+        "article",
+        "video",
+        "dataset",
+        "paper",
+        "benchmark",
+        "algorithm",
+        "ecosystem"
+      ]
     }
   ]
 }

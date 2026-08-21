@@ -1,8 +1,448 @@
 {
-  "generatedAt": "2026-08-20T22:31:35.531Z",
+  "generatedAt": "2026-08-21T01:09:38.557Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "slack-code",
+      "categories": [
+        "tool"
+      ],
+      "title": "Slack Code — AI coding agents get a channel the whole team can watch",
+      "org": "Slack",
+      "date": "2026-08-20",
+      "url": "https://slack.com/blog/news/slack-code-channels-for-agents",
+      "summary": "Slack Code turns a coding agent's work into a shared Slack channel with tabs for the plan, the code diffs and a live preview. Claude, Devin, GitHub Copilot and Vercel work at launch; ChatGPT is coming soon.",
+      "tags": [
+        "slack",
+        "salesforce",
+        "coding-agents",
+        "agent-collaboration",
+        "code-review",
+        "devin",
+        "github-copilot",
+        "vercel",
+        "developer-tools",
+        "team-workflow"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Code channels closed within a day": "Over 70%"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Slack (Salesforce)"
+        },
+        {
+          "label": "What it is",
+          "value": "Shared Slack channels for AI coding agents"
+        },
+        {
+          "label": "Agents at launch",
+          "value": "Claude, Devin, GitHub Copilot, Vercel"
+        },
+        {
+          "label": "Coming soon",
+          "value": "ChatGPT (OpenAI)"
+        },
+        {
+          "label": "Availability",
+          "value": "Live from 20 August 2026"
+        },
+        {
+          "label": "Channel lifecycle",
+          "value": "Auto-archives when done, stays searchable"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which AI coding agents work with Slack Code today?",
+          "a": "Slack Code is live for teams already using the Claude (Anthropic), Devin (Cognition), GitHub Copilot and Vercel integrations. Slack says ChatGPT by OpenAI is coming soon. You start a code channel by mentioning one of those agents in an existing conversation, so the agent you already use in Slack is the one that opens the channel."
+        },
+        {
+          "q": "Does Slack Code cost extra?",
+          "a": "Slack's announcement of Slack Code does not list a price, a separate add-on, or a plan requirement, so anything about cost would be a guess. What the post does say is that Slack Code is live today for teams that already have the supported agent integrations connected to their workspace."
+        },
+        {
+          "q": "Can someone approve an agent's changes before they ship?",
+          "a": "Yes. Slack Code routes high-stakes changes to a person for approval inside the channel, in Slack's words \"right in the channel\". Teammates read the same conversation the agent is working from, watch code diffs appear, view a live preview of the output, and leave feedback the agent folds into the next attempt before anything is merged."
+        },
+        {
+          "q": "What happens to a code channel after the work is finished?",
+          "a": "A Slack Code channel archives itself when the assignment completes, so, as Slack puts it, \"nothing sprawls, but everything stays searchable\". The archived channel remains a searchable record of the prompt, the agent's tool runs and the artifacts it produced. Slack reports that over 70% of code channels open and close within a single day."
+        },
+        {
+          "q": "How is this different from using a coding agent in a private chat?",
+          "a": "A private agent chat is visible to one person, so review happens after the fact. Slack Code moves the same work into a channel where the plan, the diffs and the preview each get their own tab and every teammate sees them as they happen. The point is that a review and an approval step live where the work does."
+        }
+      ],
+      "explainer": {
+        "tagline": "Slack Code gives a coding agent its own project channel, so planning, diffs and sign-off all happen in front of the team.",
+        "whatIsIt": "Mention a coding agent in Slack and Slack Code now spins up a dedicated code channel for that job. The channel pulls in the people who need to be there and splits the work across tabs: the conversation, the plan, the code diffs, and a live preview of what the agent built. Slack describes it as a place where \"your team and its agents can plan, write, and review together\".",
+        "howItWorks": "Instead of rendering agent output as walls of text, code channels show diffs and previews as first-class surfaces. Changes flagged as high-stakes get routed to a named person for approval before they land. When the assignment is done the channel archives itself and stays searchable, keeping a record of the prompts, the agent's tool runs and the artifacts. Authentication and permissions ride on the existing Slack integration for whichever agent was tagged.",
+        "whyItMatters": "Coding agents have mostly run in a private browser tab, so teammates only see the result once a pull request lands. Putting the run in a channel makes the intermediate work reviewable while it is still cheap to redirect, and it leaves an audit trail managers and security teams can search later. Slack reports that over 70% of code channels open and close within a single day, from idea to merged PR.",
+        "forWho": "engineering teams already running coding agents in Slack",
+        "tryIt": "https://slack.com/blog/news/slack-code-channels-for-agents"
+      },
+      "image": {
+        "url": "https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/slack-code-where-your-team-and-agents-build-together-hero-unfurl-1200x628-1.jpg",
+        "alt": "Slack Code hero graphic showing a team and AI agents building together in a Slack channel",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://slack.com/blog/news/slack-code-channels-for-agents"
+        },
+        {
+          "label": "The Register",
+          "url": "https://www.theregister.com/saas/2026/08/20/slack-code-taps-into-collective-vibe-puts-ai-agents-into-the-group-chat/5290413"
+        },
+        {
+          "label": "SiliconANGLE",
+          "url": "https://siliconangle.com/2026/08/20/salesforce-introduces-slack-code-to-bring-agentic-team-coding-into-the-open/"
+        }
+      ],
+      "publishDate": "2026-08-21T01:09:38.557Z"
+    },
+    {
+      "id": "google-antigravity-ide-extensions",
+      "categories": [
+        "tool"
+      ],
+      "title": "Antigravity IDE Extensions — Google's agent moves into VS Code and JetBrains",
+      "org": "Google",
+      "date": "2026-08-20",
+      "url": "https://antigravity.google/blog/antigravity-ide-extensions",
+      "summary": "Google put Antigravity inside VS Code, Visual Studio, JetBrains and Zed as one-click extensions that share context with the Antigravity desktop app and CLI. A companion release adds budget caps, token pools and audit logging for enterprises.",
+      "tags": [
+        "google",
+        "antigravity",
+        "coding-agent",
+        "vs-code",
+        "jetbrains",
+        "zed",
+        "visual-studio",
+        "ide",
+        "gemini-enterprise",
+        "developer-tools",
+        "audit-logging"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Google"
+        },
+        {
+          "label": "Supported IDEs",
+          "value": "VS Code, Visual Studio (Preview), JetBrains, Zed"
+        },
+        {
+          "label": "Install",
+          "value": "One click from each IDE's extension marketplace"
+        },
+        {
+          "label": "Individual access",
+          "value": "Any Antigravity plan, including the free tier"
+        },
+        {
+          "label": "Enterprise access",
+          "value": "Eligible Gemini Enterprise Standard and Plus plans"
+        },
+        {
+          "label": "Enterprise sign-in",
+          "value": "Workforce Identity Federation and Application Default Credentials"
+        },
+        {
+          "label": "Admin controls",
+          "value": "Sandboxing, budget caps, shared token pools, audit logging"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is the Antigravity IDE extension free to use?",
+          "a": "Individual developers can install the Antigravity IDE extension on any Antigravity plan, including the free tier, by signing in with a Google account. Teams on Google Cloud reach it through Gemini Enterprise or Google Cloud project credentials instead, where JetBrains and Zed support is still marked Preview."
+        },
+        {
+          "q": "How is the extension different from the Antigravity desktop app?",
+          "a": "Google built the Antigravity extensions as deliberately light integrations rather than a second agent hub — in its words, \"lightweight, high-performance integrations\" instead of trying to turn traditional editors into heavy multi-agent hubs. They are aimed at inspecting a code path, reading compiler diagnostics, or making a local edit, while the desktop app stays the place to orchestrate many agents."
+        },
+        {
+          "q": "Can an admin stop Antigravity agents from browsing the web or running commands?",
+          "a": "Yes. Antigravity administrators can enforce workspace sandboxing and restrict browser or MCP server permissions so that, as Google puts it, agents \"execute strictly within authorized environments\". A single toggle also turns on full audit logging that captures prompts, agent tool executions and the artifacts an agent generates."
+        },
+        {
+          "q": "Does Google train its models on code written through Antigravity at work?",
+          "a": "No. Google states that for enterprise use all Antigravity agent activity stays inside the customer's boundary under Google Cloud Terms of Service, and that \"your code is never used to train base models\". Inference runs through the customer's own Gemini Enterprise Agent Platform project rather than a consumer Google AI subscription."
+        },
+        {
+          "q": "How do teams keep Antigravity from running up an unexpected bill?",
+          "a": "Antigravity administrators set monthly budget thresholds in Google Cloud Billing across projects, teams and individuals. Shared token pools stop purchased quota from sitting idle on one team while another runs dry, and organisations can opt into overages with strict caps so an active agent workflow is not cut off mid-task."
+        }
+      ],
+      "explainer": {
+        "tagline": "Google's agent-first coding platform now installs as a normal extension in the editor you already use.",
+        "whatIsIt": "Antigravity extensions landed on 20 August 2026 for Visual Studio Code, Visual Studio (Preview), JetBrains IDEs including IntelliJ IDEA, PyCharm, WebStorm, GoLand, CLion and Rider, and Zed. Each installs in one click from the editor's own marketplace. Until now Antigravity meant leaving your editor for Google's desktop app, its CLI or its SDK.",
+        "howItWorks": "The extensions are intentionally thin. Google says it built \"lightweight, high-performance integrations\" rather than turning an editor into a second multi-agent hub, so the in-editor surface is for inspecting a code path, reading compiler diagnostics or making a local change. Multi-agent orchestration still runs in the wider Antigravity ecosystem, and the extension shares context with it, so a session you start in Zed is the same session the desktop app sees.",
+        "whyItMatters": "Teams no longer have to adopt a new editor to try Google's coding agent, which removes the biggest reason to skip it. The enterprise release published the same day matters more for buyers: it puts Antigravity inside eligible Gemini Enterprise Standard and Plus subscriptions and hands administrators sandboxing rules, browser and MCP permission limits, Google Cloud budget thresholds, shared token pools and one-toggle audit logging.",
+        "forWho": "developers and platform teams evaluating Google's coding agent",
+        "tryIt": "Install the Antigravity extension from your IDE's marketplace and sign in with a Google account."
+      },
+      "image": {
+        "url": "https://antigravity.google/assets/image/blog/IDE-Extensions-Wide.png",
+        "alt": "Google Antigravity IDE extensions announcement graphic",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://antigravity.google/blog/antigravity-ide-extensions"
+        },
+        {
+          "label": "Enterprise Post",
+          "url": "https://antigravity.google/blog/antigravity-enterprise"
+        },
+        {
+          "label": "The New Stack",
+          "url": "https://thenewstack.io/google-antigravity-ide-extensions/"
+        },
+        {
+          "label": "The Register",
+          "url": "https://www.theregister.com/ai-and-ml/2026/08/21/google-tethers-antigravity-to-enterprise-controls-amid-ai-shakeup/5290730"
+        }
+      ],
+      "publishDate": "2026-08-21T01:09:38.557Z"
+    },
+    {
+      "id": "liquid-lfm2-5-dspark",
+      "categories": [
+        "model"
+      ],
+      "title": "LFM2.5-DSpark — Liquid AI's draft models decode up to 3.18x faster",
+      "org": "Liquid AI",
+      "date": "2026-08-20",
+      "url": "https://www.liquid.ai/blog/lfm2.5-dspark",
+      "summary": "Liquid AI released DSpark draft models for three LFM2.5 checkpoints. Each is about 300M parameters and speeds up decoding through speculative decoding without changing the output: 2.67x on an H100 for LFM2.5-2.6B.",
+      "tags": [
+        "liquid-ai",
+        "lfm2-5",
+        "speculative-decoding",
+        "draft-model",
+        "on-device",
+        "edge-ai",
+        "inference-optimization",
+        "llama-cpp",
+        "sglang",
+        "gguf",
+        "open-weights"
+      ],
+      "importance": "notable",
+      "metrics": {
+        "Speedup (LFM2.5-2.6B on H100)": "2.67x",
+        "Function-calling latency on BFCL": "-57%"
+      },
+      "explainer": {
+        "tagline": "Three ~300M draft models that make Liquid AI's small on-device models decode two to three times faster, with identical output.",
+        "whatIsIt": "DSpark adds speculative decoding to the LFM2.5 family. Liquid AI shipped draft checkpoints for LFM2.5-1.2B-Instruct (295.7M parameters), LFM2.5-2.6B (327.7M) and LFM2.5-8B-A1B (327.7M). Because the drafter only proposes tokens that the target model then verifies, Liquid AI notes the emitted sequence is identical to baseline greedy decoding by construction, so benchmark accuracy does not move.",
+        "howItWorks": "Each drafter stacks three pieces: a DFlash-style parallel backbone conditioned on context features that emits several candidate tokens at once, a lightweight sequential head that models the dependency between those tokens as a Markov chain, and a confidence-scheduled verifier that prunes low-confidence candidates before the target model checks them. Mean acceptance out of 10 drafted tokens runs 4.81 for the 2.6B target, 5.02 for the 1.2B and 6.95 for the 8B-A1B.",
+        "whyItMatters": "Small on-device models are latency-bound, not quality-bound, and this is a free speed win for anyone already running LFM2.5. On an H100 through SGLang at batch size 1, LFM2.5-2.6B goes from 323 to 864 tokens per second, and LFM2.5-1.2B from 656 to 1,384. On an M4 Max MacBook through llama.cpp with Metal, LFM2.5-1.2B goes from 138 to 350 tokens per second. On the BFCL function-calling set, Liquid AI measures a 57% average latency cut for agent workloads.",
+        "forWho": "developers running small models on phones, laptops and edge hardware",
+        "tryIt": "https://huggingface.co/LiquidAI/LFM2.5-2.6B-DSpark"
+      },
+      "image": {
+        "url": "https://aypchzzf9pftwuto.public.blob.vercel-storage.com/dspark_decode_synthetic-eW9KEMLo5fpFfBlmbspCgi8N7GbxDD.gif",
+        "alt": "Animated comparison of baseline decoding against LFM2.5-DSpark speculative decoding",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.liquid.ai/blog/lfm2.5-dspark"
+        },
+        {
+          "label": "Hugging Face Blog",
+          "url": "https://huggingface.co/blog/LiquidAI/lfm25-dspark"
+        },
+        {
+          "label": "2.6B Draft Model",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-2.6B-DSpark"
+        },
+        {
+          "label": "8B-A1B Draft Model",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-8B-A1B-DSpark"
+        }
+      ],
+      "publishDate": "2026-08-21T01:09:38.557Z"
+    },
+    {
+      "id": "semantica-0-6-6",
+      "categories": [
+        "security",
+        "repo",
+        "tool"
+      ],
+      "title": "Semantica v0.6.6 — security release hardens ingestion, adds CrewAI support",
+      "org": "Semantica",
+      "date": "2026-08-20",
+      "url": "https://github.com/semantica-agi/semantica/releases/tag/v0.6.6",
+      "summary": "Semantica v0.6.6 fixes a privately disclosed batch of vulnerabilities across backup, export, outbound requests and triplet-store backends, and hardens ingestion against SSRF. The same release adds CrewAI integration and graph retraction.",
+      "tags": [
+        "semantica",
+        "security",
+        "vulnerability",
+        "ssrf",
+        "knowledge-graph",
+        "agent-memory",
+        "crewai",
+        "rdf",
+        "sparql",
+        "python",
+        "open-source",
+        "provenance"
+      ],
+      "importance": "major",
+      "metrics": {
+        "GitHub stars": 9825
+      },
+      "quickFacts": [
+        {
+          "label": "Project",
+          "value": "Semantica — graph-native context store for AI agents"
+        },
+        {
+          "label": "Version",
+          "value": "v0.6.6"
+        },
+        {
+          "label": "Released",
+          "value": "20 August 2026"
+        },
+        {
+          "label": "Type",
+          "value": "Security release — upgrade strongly recommended"
+        },
+        {
+          "label": "License",
+          "value": "MIT"
+        },
+        {
+          "label": "Install",
+          "value": "pip install semantica==0.6.6"
+        },
+        {
+          "label": "Previous release",
+          "value": "v0.6.5 on 11 August 2026"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Should I upgrade to Semantica v0.6.6 right away?",
+          "a": "The Semantica maintainers label v0.6.6 a security release and write that \"upgrading is strongly recommended\". It closes a privately disclosed batch of vulnerabilities rather than a single bug, and it arrived nine days after v0.6.5, which was also a security release. Anyone running Semantica on untrusted input should treat it as a priority upgrade."
+        },
+        {
+          "q": "Which parts of Semantica were vulnerable?",
+          "a": "The v0.6.6 fixes span backup and restore, database export, outbound requests and the triplet-store backends. The ingestion path got the widest hardening: tarball path traversal, SQL injection, DNS-rebinding time-of-check-to-time-of-use races, stored XSS, SPARQL injection, header injection and credential leakage across redirects. An SSRF guard now also covers feed ingestion."
+        },
+        {
+          "q": "What did Semantica v0.6.6 add besides the security fixes?",
+          "a": "Semantica v0.6.6 ships first-class CrewAI integration, retraction and purge operations on ContextGraph so facts can be pulled back out of a graph, a declared Semantica RDF vocabulary with deterministic entity and relationship IRIs, and timezone-aware timestamps throughout the export and provenance modules."
+        },
+        {
+          "q": "Can agents now be told to forget something stored in Semantica?",
+          "a": "Yes, that is what the new ContextGraph retraction and purge operations in v0.6.6 are for. Retraction removes a fact from the active graph while the provenance record shows it was withdrawn; purge deletes it outright. Both matter for agent memory that has ingested data a user later asks to have deleted."
+        }
+      ],
+      "explainer": {
+        "tagline": "A strongly recommended security upgrade for the MIT-licensed knowledge-graph store behind a lot of agent memory.",
+        "whatIsIt": "Version 0.6.6 of Semantica, the graph-native context and memory store for AI agents, closes a privately disclosed batch of vulnerabilities. The maintainers mark it a security release and state that \"upgrading is strongly recommended\". It follows v0.6.5, itself a security release, by nine days.",
+        "howItWorks": "The fixes cluster around anything that touches outside data. Ingestion picked up guards for tarball path traversal, SQL injection, DNS-rebinding TOCTOU races, stored XSS, SPARQL injection, header injection and credential leakage across HTTP redirects, plus an SSRF guard applied to feed requests and a hardened GitPython clone surface in the repository ingestor. Backup and restore, database export and the triplet-store backends were patched alongside them.",
+        "whyItMatters": "An agent memory store is the one component that deliberately swallows untrusted content — web pages, feeds, repositories, uploaded files — so an injection bug there reaches everything downstream. Beyond the patches, the release adds a CrewAI integration, ContextGraph retraction and purge, a declared RDF vocabulary with deterministic IRIs, and timezone-aware timestamps across export and provenance.",
+        "forWho": "teams running Semantica as agent memory or a RAG knowledge graph",
+        "tryIt": "pip install --upgrade semantica==0.6.6"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/semantica-agi/semantica",
+        "alt": "GitHub repository card for semantica-agi/semantica",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Release Notes",
+          "url": "https://github.com/semantica-agi/semantica/releases/tag/v0.6.6"
+        },
+        {
+          "label": "Repository",
+          "url": "https://github.com/semantica-agi/semantica"
+        },
+        {
+          "label": "PyPI",
+          "url": "https://pypi.org/project/semantica/0.6.6/"
+        }
+      ],
+      "publishDate": "2026-08-21T01:09:38.557Z"
+    },
+    {
+      "id": "simonw-chatgpt-site-operator-aug20",
+      "categories": [
+        "article"
+      ],
+      "title": "Simon Willison — ChatGPT search now scopes one query in six to a single site",
+      "org": "Simon Willison",
+      "date": "2026-08-20",
+      "url": "https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/",
+      "summary": "Simon Willison flags Promptwatch data showing ChatGPT's use of site:-scoped search queries jumped from 0.37% to 16.8% of all fanout queries on 8 August 2026, right after OpenAI updated GPT-5.6 Sol in ChatGPT.",
+      "tags": [
+        "simon-willison",
+        "chatgpt",
+        "gpt-5-6-sol",
+        "search",
+        "geo",
+        "seo",
+        "promptwatch",
+        "citations",
+        "reddit",
+        "openai",
+        "analysis"
+      ],
+      "importance": "notable",
+      "author": {
+        "name": "Simon Willison",
+        "handle": "@simonw",
+        "profileUrl": "https://simonwillison.net/",
+        "avatarUrl": "https://github.com/simonw.png"
+      },
+      "explainer": {
+        "tagline": "Promptwatch caught ChatGPT switching to domain-scoped search almost overnight, and Simon Willison explains what likely changed.",
+        "whatIsIt": "Something changed in how ChatGPT searches the web on 8 August 2026, and Simon Willison's post walks through the evidence. Promptwatch measured the share of ChatGPT fanout queries that use the site: operator: it sat between 0.3% and 0.5% for weeks, dipped to 0.15% from 3 to 5 August, then jumped to 16.8% on 8 August and has stayed at 16-17%.",
+        "howItWorks": "Fanout queries are the individual searches ChatGPT fires off behind one answer. Willison doubts OpenAI is literally telling the model to type site: in a query, and suggests the search tool signature now looks more like search(query, recency, domains), with the domain filter rendered as a site: clause. He ties the timing to OpenAI's 6 August note that it was updating GPT-5.6 Sol in ChatGPT to be more reliable with facts and give more focused answers. Promptwatch also recorded average fanout queries per response rising from about 1.08 to 1.83 the same day, so scoped searches are being added rather than swapped in.",
+        "whyItMatters": "Domain-scoped retrieval decides which sites an AI answer can cite at all, which is the whole game for anyone whose traffic now arrives through a chatbot. A separate Promptwatch report on 18 August found ChatGPT had sharply cut how often Reddit shows up in those searches; Willison notes he cannot confirm whether a system prompt was changed to discourage it.",
+        "forWho": "publishers, SEO and GEO practitioners, and anyone tracking AI search citations",
+        "tryIt": "https://promptwatch.com/data/chatgpt-site-operator-fanouts"
+      },
+      "image": {
+        "url": "https://promptwatch.com/meta.png",
+        "alt": "Promptwatch, the AI-answer monitoring service behind the ChatGPT search data",
+        "fit": "contain",
+        "credit": "Promptwatch"
+      },
+      "links": [
+        {
+          "label": "Blog Post",
+          "url": "https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/"
+        },
+        {
+          "label": "Promptwatch Data",
+          "url": "https://promptwatch.com/data/chatgpt-site-operator-fanouts"
+        },
+        {
+          "label": "Reddit Citations",
+          "url": "https://promptwatch.com/data/reddit-citations-are-dropping-in-chatgpt"
+        }
+      ],
+      "publishDate": "2026-08-21T01:09:38.557Z"
+    },
     {
       "id": "openai-chatgpt-apple-messages-plugin",
       "categories": [
