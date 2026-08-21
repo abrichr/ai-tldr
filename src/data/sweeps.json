@@ -35072,6 +35072,33 @@
         "algorithm",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260821t202748z",
+      "timestamp": "2026-08-21T20:27:48.091Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic newsroom quiet since Aug 14; DeepMind, Meta, Mistral, Cohere, xAI, Qwen, Moonshot, MiniMax, Z.ai, DeepSeek), GitHub trending daily + weekly, HuggingFace models/datasets/papers, HN front page plus a 72h Algolia pass at 60+ points, all 8 YouTube creator feeds, Cursor/Codex changelogs, and the AI-for-science lane (BCI, medical imaging, drug discovery, STAT News, Nature, Lancet Digital Health). Everything inside the 72h window that clears the bar is already in the feed — DeepSeek V4-Flash-Vision-Exp, EnvHarness, 4DAnyone, SWE-bench Science, Mistral Agentic Search, Slack Code, Ultra-FineWeb-L1, Unsloth Dynamic 3.0, Cursor Subscriptions and all 5 fresh creator videos were already ingested by earlier sweeps.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
