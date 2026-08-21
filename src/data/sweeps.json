@@ -34866,6 +34866,34 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260821t084244z",
+      "timestamp": "2026-08-21T08:42:44.237Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic, OpenAI, DeepMind/blog.google, Meta AI, Mistral, x.ai, Qwen, DeepSeek API news, Moonshot, ByteDance Seed, Z.ai), GitHub trending daily, Hugging Face models/datasets/papers/blog, HN front page plus the Algolia >80-point last-72h list, all 8 YouTube creator feeds, tier-1 press (TechCrunch AI, The Register AI), the influential-voices lane (Simon Willison) and the AI-for-science lane (Nature AI subject, neurosciencenews, TechXplore, STAT-adjacent searches for BCI/neural decoding, medical imaging + FDA clearance, protein design + drug discovery). Everything inside the 72h window was already in the feed: EnvHarness, Mistral Agentic Search, Antigravity IDE extensions, Slack Code, Waymo's ASIC, Ramp Router, LFM2.5-DSpark, Ultra-FineWeb-L1, Huzzah, Vomit, RollTab, ChatGPT's Apple Messages plugin, Meta AI for Mac, Binance Agent OS, OpenAI Private Safety Processing, Stripe/OpenRouter, and all six fresh creator videos except one off-topic Wes Roth business clip. Near misses, all dropped: OpenRouter's anonymous 'Ox Alpha' stealth model (132 HN points, under the 150 bar, no named maker, no tier-1 pickup); the DiffusionGemma technical report (arXiv v1 is 31 July and is already linked from the existing DiffusionGemma item); SWE-bench Science, FACET and the Reconstruction benchmark (arXiv-trending only, no released code, fails the 2-of-N paper bar); santifer/career-ops v1.28.0 and cursor/plugins (trending but old repos shipping routine point releases); dontpastetheai.com (undated satire site, not a shipped artifact); and the HN EU copyright thread (discussion of existing German rulings and the 2 August AI Act labeling rule already in the feed, no new event).",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "security",
+        "ecosystem",
+        "tutorial"
+      ]
     }
   ]
 }
