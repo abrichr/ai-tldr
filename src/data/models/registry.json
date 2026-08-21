@@ -4800,6 +4800,39 @@
         }
       ],
       "logo": "/models-logos/thinking-machines.png"
+    },
+    {
+      "id": "poolside",
+      "title": "Poolside",
+      "blurb": "Poolside builds foundation models aimed at software engineering, trained in-house and delivered to enterprises through the Poolside Platform. Its Laguna family is split into XS, S and M size tiers; the S tier ships as open weights under the permissive OpenMDW-1.1 license.",
+      "homepage": "https://poolside.ai/",
+      "lines": [
+        {
+          "id": "laguna-s",
+          "title": "Laguna S",
+          "blurb": "The S size tier of Poolside's Laguna family: sparse Mixture-of-Experts models for long-horizon agentic coding, published as downloadable open weights.",
+          "versions": [
+            {
+              "name": "Laguna S 2.1",
+              "slug": "laguna-s-2-1",
+              "blurb": "Open-weight agentic-coding MoE released July 21, 2026: 118B total / 8B active, a 1M-token context, thinking and no-thinking modes, and an OpenMDW-1.1 license.",
+              "tags": [
+                "open-weights",
+                "coding",
+                "reasoning",
+                "long-context",
+                "agentic"
+              ],
+              "contextWindow": "1M",
+              "license": "OpenMDW-1.1",
+              "date": "2026-07-21",
+              "rich": true,
+              "current": true
+            }
+          ]
+        }
+      ],
+      "logo": "/models-logos/poolside.svg"
     }
   ]
 }

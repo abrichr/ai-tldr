@@ -1978,6 +1978,15 @@
        "logo": "/tools-logos/gh-pgvector.png"
       },
       {
+       "name": "ParadeDB",
+       "slug": "paradedb",
+       "repo": "paradedb/paradedb",
+       "homepage": "https://paradedb.com",
+       "description": "A Postgres extension (pg_search) that adds BM25 full-text search, vector retrieval and aggregations to your existing database, so application data and search live in one system.",
+       "access": "open-core",
+       "detail": true
+      },
+      {
        "name": "Weaviate",
        "slug": "weaviate",
        "repo": "weaviate/weaviate",
@@ -3247,6 +3256,14 @@
        "logo": "/tools-logos/gh-browser-use.png"
       },
       {
+       "name": "Browser Harness",
+       "slug": "browser-harness",
+       "repo": "browser-use/browser-harness",
+       "homepage": "https://browser-harness.com",
+       "description": "A harness that connects a coding agent to your real Chrome over one CDP websocket and lets the agent write its own reusable Python helpers as it works.",
+       "detail": true
+      },
+      {
        "name": "Open Interpreter",
        "slug": "open-interpreter",
        "repo": "openinterpreter/openinterpreter",
@@ -4301,6 +4318,14 @@
        "description": "Autonomous AI app builder that turns natural-language ideas into production web and mobile apps, generating code you own plus deployment.",
        "access": "freemium",
        "logo": "/tools-logos/site-emergent-sh.png"
+      },
+      {
+       "name": "DeepCode",
+       "slug": "deepcode",
+       "repo": "HKUDS/DeepCode",
+       "homepage": "https://hkuds.github.io/DeepCode/",
+       "description": "An open agentic coding system from HKU's Data Intelligence Lab, with a terminal CLI and a Tauri desktop workbench over one agent runtime and durable session history.",
+       "detail": true
       },
       {
        "name": "OpenHands",
@@ -5709,11 +5734,11 @@
        "logo": "/tools-logos/gh-nari-labs.png"
       },
       {
-       "name": "NVIDIA NeMo",
+       "name": "NVIDIA NeMo Speech",
        "slug": "nvidia-nemo",
-       "repo": "NVIDIA-NeMo/NeMo",
-       "homepage": "https://docs.nvidia.com/nemo-framework",
-       "description": "NVIDIA's framework for building speech recognition and text-to-speech models, including the Parakeet and Canary models.",
+       "repo": "NVIDIA-NeMo/Speech",
+       "homepage": "https://docs.nvidia.com/nemo/speech/nightly/",
+       "description": "NVIDIA's PyTorch framework for building speech recognition, text-to-speech and speech LLM models, including the Parakeet, Canary and MagpieTTS checkpoints.",
        "detail": true,
        "logo": "/tools-logos/gh-nvidia-nemo.png"
       },

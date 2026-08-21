@@ -278,7 +278,7 @@
   "nvidia-nemo/curator": 1725,
   "nvidia-nemo/datadesigner": 2169,
   "nvidia-nemo/guardrails": 6989,
-  "nvidia-nemo/nemo": 18191,
+  "nvidia-nemo/speech": 18191,
   "nvidia/garak": 8878,
   "nvidia/megatron-lm": 17501,
   "nvidia/nemo-aligner": 852,
@@ -604,5 +604,8 @@
   "linshenkx/prompt-optimizer": 33217,
   "modsetter/surfsense": 15980,
   "zai-org/open-autoglm": 26056,
-  "vectorize-io/hindsight": 20748
+  "vectorize-io/hindsight": 20748,
+  "paradedb/paradedb": 9178,
+  "browser-use/browser-harness": 16916,
+  "hkuds/deepcode": 16389
 }

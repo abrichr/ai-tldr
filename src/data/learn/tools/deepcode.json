@@ -1,0 +1,64 @@
+{
+  "slug": "deepcode",
+  "name": "DeepCode",
+  "repo": "HKUDS/DeepCode",
+  "homepage": "https://hkuds.github.io/DeepCode/",
+  "category": "coding-assistants",
+  "categoryTitle": "AI Coding",
+  "subcategory": "autonomous-coding",
+  "subcategoryTitle": "Autonomous Coding Agents",
+  "tagline": "An open agentic coding runtime with a terminal CLI and a desktop workbench",
+  "seoTitle": "DeepCode - Open Agentic Coding from HKU Data Intelligence Lab",
+  "metaDescription": "DeepCode is an open-source agentic coding system from HKU's Data Intelligence Lab, with one agent runtime behind a terminal CLI and a Tauri desktop workbench, plus durable session history.",
+  "overview": [
+    "DeepCode is an open-source agentic coding system built by the Data Intelligence Lab at the University of Hong Kong. One agent runtime sits behind two interfaces: an interactive terminal CLI for people who live in a shell, and a Tauri desktop workbench that shows sessions, goals, tool activity, code changes and verification in a visual workspace. Both open the same local projects, session history, models, skills, permissions and automations.",
+    "Work is organised around durable sessions attached to a project. A session records tool calls and their results, not just the conversation, so resuming one restores what the agent actually ran; long conversations are compacted under context pressure while the recent tail survives verbatim. You can move the same history between the desktop app and the terminal without exporting or converting anything.",
+    "Models are yours to configure — you register a provider connection with an API key, refresh its catalogue and pick an exact model ID, so DeepCode is not tied to one vendor. The project also carries its research lineage as Paper2Code, the multi-agent architecture for turning research papers into working implementations that the repository grew out of, described in its arXiv paper. It is MIT-licensed and requires Python 3.12 or newer."
+  ],
+  "features": [
+    "One agent runtime behind two interfaces: an interactive CLI and a Tauri desktop workbench, sharing projects and history",
+    "Durable sessions that record tool calls and their results, so a resumed agent can answer what it just ran",
+    "Context compaction that keeps the recent tail verbatim and anchors on the token count the provider itself reports",
+    "Bring-your-own models: provider connections you register, verify and switch per turn, with a thinking-effort control",
+    "Reusable skills, durable goals and per-turn permission levels, settable from either interface",
+    "Headless and automation modes (`deepcode exec`, goal runs) for scripted or scheduled work",
+    "Paper2Code lineage: a multi-agent pipeline for reproducing research papers as code"
+  ],
+  "gettingStarted": {
+    "intro": "The CLI is the quickest way in. Install it with uv, register a model provider, then start the agent from inside the repository you want it to work on. The desktop app installs separately from GitHub Releases or from source.",
+    "steps": [
+      {
+        "heading": "Install the CLI",
+        "body": "The explicit Python 3.12 selection is required — DeepCode must not fall back to an older interpreter.",
+        "code": "uv tool install --python 3.12 deepcode-hku\ndeepcode init",
+        "lang": "bash"
+      },
+      {
+        "heading": "Connect a model provider",
+        "body": "Register a connection once, load its model catalogue and verify inference. The --api-key flag opens a non-echoing prompt; credentials are stored separately and never written into session history.",
+        "code": "deepcode provider set personal-openrouter --template openrouter --label \"OpenRouter · Personal\" --api-key\ndeepcode provider models personal-openrouter --refresh\ndeepcode provider test personal-openrouter --model <model-id>",
+        "lang": "bash"
+      },
+      {
+        "heading": "Start the agent in your repository",
+        "body": "Run it from the project directory you want DeepCode to work in. Inside the session, /new starts a thread, /resume reopens history, /model and /effort change the next turn, and /permissions sets tool access.",
+        "code": "cd <your-project>\ndeepcode",
+        "lang": "bash"
+      },
+      {
+        "heading": "Or install the desktop workbench",
+        "body": "Check GitHub Releases for a signed installer for your platform. Building from source needs the Tauri 2 prerequisites plus Git, Python 3.12+, uv, Node.js 22+ and stable Rust; then configure a provider under Settings → AI providers.",
+        "code": "git clone https://github.com/HKUDS/DeepCode.git\ncd DeepCode\nuv venv --python 3.12\nuv pip install --python .venv/bin/python -e .\n.venv/bin/deepcode init\ncd desktop && npm ci && npm run setup:sidecar && npm run build:sidecar",
+        "lang": "bash"
+      }
+    ]
+  },
+  "useCases": [
+    "Run a long, multi-step coding task where you need the session to survive a restart and still know which commands were executed",
+    "Switch between a visual review workspace and a terminal on the same piece of work without losing history",
+    "Point an agent at your own model provider and budget instead of a vendor-hosted coding assistant",
+    "Reproduce a research paper as working code through the Paper2Code multi-agent pipeline"
+  ],
+  "language": "Python",
+  "license": "MIT"
+}

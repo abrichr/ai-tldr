@@ -1,0 +1,64 @@
+{
+  "slug": "paradedb",
+  "name": "ParadeDB",
+  "repo": "paradedb/paradedb",
+  "homepage": "https://paradedb.com",
+  "access": "open-core",
+  "category": "retrieval-knowledge",
+  "categoryTitle": "Retrieval & Knowledge (RAG)",
+  "subcategory": "vector-db",
+  "subcategoryTitle": "Vector Databases",
+  "tagline": "Search without a second system: BM25, vectors and aggregations inside Postgres",
+  "seoTitle": "ParadeDB - Postgres Search with the pg_search Extension",
+  "metaDescription": "ParadeDB is an open-source Postgres extension (pg_search) that adds BM25 full-text search, vector retrieval and aggregations to your database, with no separate search engine to sync.",
+  "overview": [
+    "ParadeDB adds full-text search, vector retrieval and aggregations to Postgres through the pg_search extension. Instead of running a separate search engine next to your database and keeping the two in sync, your application data and your search index live in the same Postgres instance, and the index is updated in the same transaction as the write.",
+    "The search engine underneath is Rust: Tantivy powers full-text search and BM25 scoring, Apache DataFusion handles the analytical side, and pgrx bridges the whole thing into Postgres. Vectors are indexed through the pgvector extension today, which is why the install docs tell you to install pgvector first and to create the extension with CASCADE.",
+    "You query it with ordinary SQL — a search predicate and a score function in a normal SELECT — so filtering, joins, ACID guarantees and your existing Postgres tooling all still apply. ParadeDB Community is licensed AGPL-3.0; a separately-licensed ParadeDB Enterprise edition and hosted deployment options exist alongside it."
+  ],
+  "features": [
+    "BM25-scored full-text search inside Postgres, with tokenizers, token filters, highlighting and top-K ordering",
+    "Vector retrieval via pgvector, so keyword and embedding search sit behind the same SQL interface",
+    "Aggregations, facets and bucket/metric queries backed by columnar storage",
+    "Search indexes update transactionally with your writes — no ETL job or sync pipeline between two systems",
+    "Built on Tantivy, Apache DataFusion and pgrx, with fixes contributed back upstream",
+    "ORM integrations for Drizzle, Django, SQLAlchemy, Rails and EF Core, plus an MCP integration for AI agents"
+  ],
+  "gettingStarted": {
+    "intro": "The fastest path is the install script, which pulls a ParadeDB Docker image and drops you into psql. To add pg_search to a Postgres server you already run, install the extension package and enable it.",
+    "steps": [
+      {
+        "heading": "Try it locally in Docker",
+        "body": "Runs ParadeDB in a fresh container and opens a psql session against it.",
+        "code": "curl -fsSL https://paradedb.com/install.sh | sh",
+        "lang": "bash"
+      },
+      {
+        "heading": "Or add pg_search to an existing Postgres",
+        "body": "Install the release package for your platform and Postgres version, then preload the library. This example is the Ubuntu 26.04 / Postgres 18 build from the deployment docs.",
+        "code": "curl -L \"https://github.com/paradedb/paradedb/releases/download/v0.25.3/postgresql-18-pg-search_0.25.3-1PARADEDB-resolute_amd64.deb\" -o /tmp/pg_search.deb\nsudo apt-get install -y /tmp/*.deb\n\n# in postgresql.conf\nshared_preload_libraries = 'pg_search'",
+        "lang": "bash"
+      },
+      {
+        "heading": "Enable the extension",
+        "body": "CASCADE pulls in the vector type from pgvector if it is not already installed.",
+        "code": "CREATE EXTENSION pg_search CASCADE;",
+        "lang": "text"
+      },
+      {
+        "heading": "Index a table and search it",
+        "body": "Create a ParadeDB index over the columns you want searchable and filterable, then run a normal SELECT that combines a search predicate, a SQL filter and BM25 scoring.",
+        "code": "CREATE INDEX search_idx ON mock_items\nUSING paradedb (id, description, rating)\nWITH (key_field='id');\n\nSELECT description, pdb.score(id)\nFROM mock_items\nWHERE description ||| 'running shoes' AND rating > 2\nORDER BY score DESC\nLIMIT 5;",
+        "lang": "text"
+      }
+    ]
+  },
+  "useCases": [
+    "Add relevance-ranked product or document search to an app whose data already lives in Postgres, without standing up Elasticsearch alongside it",
+    "Retire a search cluster and the ETL pipeline that feeds it, so search results can never lag behind a write",
+    "Build hybrid retrieval for a RAG pipeline where keyword matching, vector similarity and SQL filters are all one query",
+    "Run faceted, aggregated search over a large table while keeping transactional guarantees on the same rows"
+  ],
+  "language": "Rust",
+  "license": "AGPL-3.0"
+}

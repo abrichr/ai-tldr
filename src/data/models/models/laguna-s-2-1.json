@@ -1,0 +1,211 @@
+{
+  "slug": "laguna-s-2-1",
+  "name": "Laguna S 2.1",
+  "maker": "poolside",
+  "makerTitle": "Poolside",
+  "line": "laguna-s",
+  "lineTitle": "Laguna S",
+  "tagline": "A 118B / 8B-active open-weight coding MoE with a 1M-token context, released July 21, 2026 under OpenMDW-1.1.",
+  "seoTitle": "Laguna S 2.1 — 118B/8B Open-Weight Coding MoE",
+  "metaDescription": "Laguna S 2.1 is Poolside's open-weight coding model: a 118B total / 8B active Mixture-of-Experts with a 1M-token context, released July 21, 2026 under OpenMDW-1.1.",
+  "releaseDate": "2026-07-21",
+  "status": "Generally available",
+  "license": "OpenMDW-1.1",
+  "openWeights": true,
+  "modalities": [
+    "Text"
+  ],
+  "contextWindow": "1M",
+  "parameters": "118B total · 8B active",
+  "architecture": "48-layer sparse Mixture-of-Experts — 256 routed experts plus one shared expert, grouped-query attention with 8 KV heads, and interleaved global (12 layers) and 512-token sliding-window (36 layers) attention",
+  "tags": [
+    "open-weights",
+    "coding",
+    "reasoning",
+    "long-context",
+    "agentic"
+  ],
+  "overview": [
+    "Laguna S 2.1 is Poolside's open-weight foundation model for agentic coding, released on July 21, 2026. It is a sparse Mixture-of-Experts transformer with 118 billion total parameters and 8 billion active per token, and Poolside describes it as \"a significant step forward in our development of models that pursue longer horizon work and make effective use of reasoning\". It supports both a thinking and a no-thinking mode, and a context window of 1,048,576 tokens in either.",
+    "The architecture is 48 layers of 256 routed experts plus one shared expert, with grouped-query attention (8 KV heads, 128-dimension heads) and attention interleaved between 12 global layers and 36 sliding-window layers with a 512-token window, over a 100,352-token vocabulary. Poolside says pre-training began on May 22, 2026 and the model launched on July 21 — under nine weeks from the start of training to release.",
+    "Weights are published on Hugging Face in BF16, FP8, INT4 and NVFP4 formats, with official GGUF and MLX conversions, under OpenMDW-1.1 — a permissive license allowing commercial and non-commercial use without asking permission. It runs on vLLM, SGLang, Transformers, TRT-LLM and llama.cpp, and is hosted by third parties including OpenRouter, Baseten and the Vercel AI Gateway. Poolside also offers it for chat at chat.poolside.ai without a login."
+  ],
+  "strengths": [
+    "Fully permissive OpenMDW-1.1 open weights — commercial use with no permission step, and four published quantization formats",
+    "Small activated footprint (8B per token from 118B total) makes high-volume agentic work cheap to serve on hardware you control",
+    "1M-token context in both thinking and no-thinking modes, so a long agent trajectory or a large repository fits in one window",
+    "Leads its published comparison on SWE-bench Multilingual (78.5%), SWE-Bench Pro (59.4%), DeepSWE (40.4%) and SWE Atlas (46.2%) against several models many times its size",
+    "Broad runtime support out of the gate: vLLM, SGLang, Transformers, TRT-LLM, llama.cpp, plus GGUF and MLX builds"
+  ],
+  "useCases": [
+    "Reach for it when you want to move high-volume agentic coding off a metered API and onto your own hardware without giving up long-horizon performance.",
+    "Reach for it when the license matters — OpenMDW-1.1 permits commercial use and redistribution without a permission step.",
+    "Reach for it for repository-scale tasks where a 1M-token context and a controllable thinking mode both help.",
+    "Reach for it as an open-weight base for coding-specific fine-tuning, using the BF16 checkpoint or one of the published quantizations."
+  ],
+  "benchmarks": [
+    {
+      "name": "SWE-bench Multilingual",
+      "score": 78.5,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/poolside/Laguna-S-2.1"
+    },
+    {
+      "name": "Terminal-Bench 2.1",
+      "score": 70.2,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/poolside/Laguna-S-2.1"
+    },
+    {
+      "name": "SWE-Bench Pro (public dataset)",
+      "score": 59.4,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/poolside/Laguna-S-2.1"
+    },
+    {
+      "name": "Toolathlon Verified",
+      "score": 49.7,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/poolside/Laguna-S-2.1"
+    },
+    {
+      "name": "SWE Atlas (Codebase QnA)",
+      "score": 46.2,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/poolside/Laguna-S-2.1"
+    },
+    {
+      "name": "DeepSWE",
+      "score": 40.4,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/poolside/Laguna-S-2.1"
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Laguna S 2.1 against the peers Poolside published on its model card. Blank cells were not reported.",
+    "models": [
+      "Laguna S 2.1",
+      "Tencent Hy3",
+      "Inkling",
+      "Nemotron 3 Ultra",
+      "DeepSeek-V4-Pro Max",
+      "Kimi K3",
+      "Qwen 3.7 Max",
+      "Muse Spark 1.1",
+      "Claude Fable 5"
+    ],
+    "subject": 0,
+    "rows": [
+      {
+        "benchmark": "Terminal-Bench 2.1",
+        "unit": "%",
+        "scores": [70.2, 71.7, 63.8, 56.4, 64.0, 88.3, 74.5, 80.0, 88.0]
+      },
+      {
+        "benchmark": "SWE-bench Multilingual",
+        "unit": "%",
+        "scores": [78.5, 75.8, null, 67.7, 76.2, null, 78.3, null, null]
+      },
+      {
+        "benchmark": "SWE-Bench Pro (public dataset)",
+        "unit": "%",
+        "scores": [59.4, 57.9, 54.3, null, 55.4, null, 60.6, 61.5, 80.3]
+      },
+      {
+        "benchmark": "DeepSWE",
+        "unit": "%",
+        "scores": [40.4, null, null, null, 9.0, 69.0, null, 53.3, 70.0]
+      },
+      {
+        "benchmark": "SWE Atlas (Codebase QnA)",
+        "unit": "%",
+        "scores": [46.2, null, null, null, 27.2, null, null, 42.2, null]
+      },
+      {
+        "benchmark": "Toolathlon Verified",
+        "unit": "%",
+        "scores": [49.7, null, 45.5, 34.3, 55.9, null, null, 75.6, null]
+      }
+    ],
+    "source": "https://huggingface.co/poolside/Laguna-S-2.1"
+  },
+  "pricing": {
+    "input": "$0.09",
+    "output": "$0.18",
+    "cachedInput": "$0.009",
+    "unit": "/ 1M tokens",
+    "note": "Third-party hosted pricing on OpenRouter; the weights themselves are free to download and self-host.",
+    "source": "https://openrouter.ai/poolside/laguna-s-2.1"
+  },
+  "apis": [
+    {
+      "provider": "OpenRouter",
+      "url": "https://openrouter.ai/poolside/laguna-s-2.1",
+      "modelId": "poolside/laguna-s-2.1"
+    }
+  ],
+  "links": [
+    {
+      "label": "Introducing Laguna S 2.1 (Poolside announcement)",
+      "url": "https://poolside.ai/blog/introducing-laguna-s-2-1",
+      "kind": "announcement"
+    },
+    {
+      "label": "Laguna S 2.1 model card on Hugging Face",
+      "url": "https://huggingface.co/poolside/Laguna-S-2.1",
+      "kind": "model-card"
+    },
+    {
+      "label": "Laguna S 2.1 on OpenRouter",
+      "url": "https://openrouter.ai/poolside/laguna-s-2.1",
+      "kind": "api-docs"
+    },
+    {
+      "label": "Chat with Laguna S 2.1 (no login)",
+      "url": "https://chat.poolside.ai/",
+      "kind": "playground"
+    },
+    {
+      "label": "Poolside",
+      "url": "https://poolside.ai/",
+      "kind": "official"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is Laguna S 2.1 open source?",
+      "a": "The weights are open. Poolside publishes them on Hugging Face under OpenMDW-1.1, a permissive license that allows both commercial and non-commercial use without asking permission. BF16, FP8, INT4 and NVFP4 checkpoints are published, plus official GGUF and MLX conversions."
+    },
+    {
+      "q": "How big is Laguna S 2.1?",
+      "a": "118 billion total parameters with 8 billion active per token — a sparse Mixture-of-Experts with 256 routed experts plus one shared expert across 48 layers. The small active footprint is what lets it serve high-volume agentic work on modest hardware."
+    },
+    {
+      "q": "What is its context window?",
+      "a": "1,048,576 tokens (1M), available in both the thinking and the no-thinking mode."
+    },
+    {
+      "q": "How does it compare to larger models?",
+      "a": "On the comparison Poolside published with the model card, Laguna S 2.1 scores 78.5% on SWE-bench Multilingual, 59.4% on SWE-Bench Pro and 46.2% on SWE Atlas — ahead of Tencent Hy3 (295B-A21B), Nemotron 3 Ultra (550B-A55B) and DeepSeek-V4-Pro Max (1.6T-A49B) on those rows, while Kimi K3 and Claude Fable 5 lead on Terminal-Bench 2.1 and DeepSWE."
+    },
+    {
+      "q": "How do I run it?",
+      "a": "Self-host with vLLM, SGLang, Transformers, TRT-LLM or llama.cpp, or call it through a hosted provider such as OpenRouter, Baseten or the Vercel AI Gateway. Poolside also runs a free chat interface at chat.poolside.ai."
+    }
+  ],
+  "versionHistory": [
+    {
+      "version": "Laguna S 2.1",
+      "date": "2026-07-21",
+      "note": "118B total / 8B active open-weight MoE for agentic coding, 1M context, OpenMDW-1.1.",
+      "current": true,
+      "slug": "laguna-s-2-1"
+    }
+  ]
+}

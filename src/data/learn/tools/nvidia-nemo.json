@@ -1,19 +1,20 @@
 {
   "slug": "nvidia-nemo",
-  "name": "NVIDIA NeMo",
-  "repo": "NVIDIA-NeMo/NeMo",
-  "homepage": "https://docs.nvidia.com/nemo-framework",
+  "name": "NVIDIA NeMo Speech",
+  "repo": "NVIDIA-NeMo/Speech",
+  "homepage": "https://docs.nvidia.com/nemo/speech/nightly/",
   "category": "multimodal",
   "categoryTitle": "Multimodal Generation",
   "subcategory": "audio-speech",
   "subcategoryTitle": "Audio, Music & Voice",
   "tagline": "NVIDIA's PyTorch framework for speech recognition, text-to-speech, and speech LLMs",
-  "seoTitle": "NVIDIA NeMo - ASR & TTS Framework for PyTorch",
+  "seoTitle": "NVIDIA NeMo Speech - ASR & TTS Framework for PyTorch",
   "metaDescription": "NVIDIA NeMo Speech is an open-source PyTorch framework for building ASR and text-to-speech models, with pre-trained Parakeet and Canary checkpoints.",
   "overview": [
     "NVIDIA NeMo Speech is an open-source framework for building speech AI models in PyTorch. It covers automatic speech recognition (ASR), text-to-speech (TTS), and speech LLMs, and ships with pre-trained checkpoints such as the Parakeet and Canary model families that you can download from HuggingFace and run directly.",
     "It is aimed at researchers and PyTorch developers who want to create, customize, or deploy speech models without starting from scratch. You can use the released checkpoints for inference out of the box, or fine-tune and train your own models using the framework's building blocks.",
-    "Within the speech and audio space, NeMo focuses on the model side rather than being a lightweight inference-only library. It works on top of your existing Python, PyTorch, and CUDA stack, and an NVIDIA GPU is recommended for inference and required for training."
+    "Within the speech and audio space, NeMo Speech focuses on the model side rather than being a lightweight inference-only library. It works on top of your existing Python, PyTorch, and CUDA stack, and an NVIDIA GPU is recommended for inference and required for training.",
+    "The project used to be the single NVIDIA NeMo repository covering every modality. In 2026 it split: this repository (NVIDIA-NeMo/Speech) pivoted to audio, speech and multimodal LLMs, with v3.0.0 the first release after the split and v2.7.3 the last one before it. The other NeMo pieces — Curator, Guardrails, Data Designer and NeMo-Aligner — now live in their own repositories."
   ],
   "features": [
     "Pre-trained ASR checkpoints including the Parakeet and Canary families, with multilingual recognition and translation support",
@@ -29,7 +30,7 @@
       {
         "heading": "Install from source with uv (recommended)",
         "body": "Clone the repo and let uv reproduce the actively tested stack from the committed lockfile. Use the CUDA extra that matches your setup.",
-        "code": "git clone https://github.com/NVIDIA-NeMo/NeMo.git\ncd NeMo\nuv sync --extra all --extra cu13     # CUDA 13.x",
+        "code": "git clone https://github.com/NVIDIA-NeMo/Speech.git\ncd Speech\nuv sync --extra all --extra cu13     # CUDA 13.x",
         "lang": "bash"
       },
       {

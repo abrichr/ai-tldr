@@ -1,0 +1,69 @@
+{
+  "slug": "browser-harness",
+  "name": "Browser Harness",
+  "repo": "browser-use/browser-harness",
+  "homepage": "https://browser-harness.com",
+  "category": "agents",
+  "categoryTitle": "Agents & Automation",
+  "subcategory": "computer-use",
+  "subcategoryTitle": "Computer & Browser Use",
+  "tagline": "Give a coding agent your real browser over one CDP websocket",
+  "seoTitle": "Browser Harness - Connect an LLM to Your Real Browser",
+  "metaDescription": "Browser Harness connects a coding agent to your real Chrome through one CDP websocket and lets it write reusable Python helpers as it works, so the harness improves with every task.",
+  "overview": [
+    "Browser Harness connects a large language model directly to a real browser through a single Chrome DevTools Protocol websocket. Rather than shipping a fixed catalogue of browser actions, it exposes a small Python surface the agent drives, and when a capability it needs is missing the agent writes the helper itself into its own workspace file, so the toolkit grows with each task.",
+    "It is designed to be installed as a skill for a coding agent such as Claude Code or Codex: you install the CLI, register `browser-harness skill` as the skill body, and connect it to Chrome's remote-debugging endpoint. Because it drives the browser you are already signed into, it can work on logged-in sites without a separate authentication dance.",
+    "The project comes from the Browser Use team and is MIT-licensed. Local Chrome needs no API key; Browser Use Cloud is an optional paid path when you want many browsers in parallel with live previews, proxies, stealth and CAPTCHA solving. Local screenshot-and-trace recording is opt-in and defaults to off, because recordings can capture sensitive page content."
+  ],
+  "features": [
+    "One editable CDP websocket to your real, already-logged-in Chrome — no separate managed browser profile",
+    "Self-extending helper workspace: the agent writes missing helpers into `agent_helpers.py` while the harness source stays protected",
+    "Ships as an agent skill — `browser-harness skill` emits the SKILL.md that teaches the browser workflow",
+    "A `--doctor` command that reports whether Chrome is running, the daemon is alive and the CDP endpoint is reachable",
+    "Opt-in local recordings (screenshots and action traces), disabled by default, with the preference preserved across upgrades",
+    "Optional remote/cloud browsers addressed by name for parallel work"
+  ],
+  "gettingStarted": {
+    "intro": "Install the CLI with uv, register it as a skill for your coding agent, then confirm the connection to Chrome. The repo's install.md is written to be pasted into an agent, but the commands work by hand too.",
+    "steps": [
+      {
+        "heading": "Install the CLI and register the skill",
+        "body": "The explicit Python 3.12 selection stops uv from picking an older release. This example registers the skill for Codex; for Claude Code, register a skill named browser-harness with the same body.",
+        "code": "uv tool install --python 3.12 --upgrade --force browser-harness\nmkdir -p \"${CODEX_HOME:-$HOME/.codex}/skills/browser-harness\"\nbrowser-harness skill > \"${CODEX_HOME:-$HOME/.codex}/skills/browser-harness/SKILL.md\"",
+        "lang": "bash"
+      },
+      {
+        "heading": "Allow remote debugging in Chrome",
+        "body": "Open chrome://inspect/#remote-debugging and tick \"Allow remote debugging for this browser instance\". This one-time checkbox is deliberately manual — the harness cannot set it for you.",
+        "code": "",
+        "lang": ""
+      },
+      {
+        "heading": "Verify the connection",
+        "body": "Pipe a snippet into the CLI. If page_info() prints, the agent can reach your browser.",
+        "code": "browser-harness <<'PY'\nprint(page_info())\nPY",
+        "lang": "bash"
+      },
+      {
+        "heading": "Set your recording preference",
+        "body": "Recordings save screenshots and action traces locally and may include sensitive page content, so they default to off. Enable them only if you want to ask the agent to replay what it did.",
+        "code": "browser-harness recordings          # show current setting\nbrowser-harness recordings disable  # or: enable",
+        "lang": "bash"
+      },
+      {
+        "heading": "Diagnose a broken setup",
+        "body": "Reports Chrome, daemon and CDP status, and whether an update is available.",
+        "code": "browser-harness --doctor",
+        "lang": "bash"
+      }
+    ]
+  },
+  "useCases": [
+    "Let a coding agent work inside sites you are already logged into, such as pulling your own posts or exports down from an account",
+    "Automate a repetitive web workflow whose steps do not fit a fixed action API, letting the agent write the helper it needs",
+    "Drive browser-based testing or scraping from an existing coding agent instead of maintaining a separate automation script",
+    "Scale a working local flow out to many parallel browsers via Browser Use Cloud once it is proven"
+  ],
+  "language": "Python",
+  "license": "MIT"
+}
