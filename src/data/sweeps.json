@@ -35012,6 +35012,32 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260821t163418z",
+      "timestamp": "2026-08-21T16:34:18.414Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic quiet since Aug 14, OpenAI/xAI 403 so checked via search, DeepMind's newest posts are Gemini 3.7 Flash / SL2T / WeatherNext which are all already in the feed, Meta last posted Jul 27, Mistral Agentic Search already added, Qwen/Z.ai/DeepSeek/Moonshot/MiniMax nothing new in window), GitHub trending daily + weekly, HuggingFace models/datasets/papers, HN front page + Show HN, all 8 YouTube creator feeds, coding agents (Cursor, Claude Code, Ollama, llama.cpp, vLLM, Bun, Freebuff, llmfit), Simon Willison, and the AI-for-science lane (STAT News, techxplore, Nature subject pages, pharma/BCI/medical-imaging searches). Everything inside the 72h window that clears the bar was already ingested by the 14:38Z sweep; the remaining candidates failed on date (Cursor 'Git at any scale' Aug 18, AWS Bedrock GPT-5.6 cross-region Aug 17, AI-Infra-Guard v4.5.2 Aug 17, llmfit v1.1.10 Aug 17), on the paper 2-of-N bar (FACET, HF #2, has models but only a 22-star repo and no HN/newsletter pickup), or on the no-awesome-list / no-business-news rules (Gemma 1B-downloads milestone, Stripe-OpenRouter and SpaceX-Cognition M&A chatter).",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "dataset",
+        "benchmark",
+        "video",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
