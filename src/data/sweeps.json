@@ -34769,6 +34769,40 @@
         "algorithm",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260821t030705z",
+      "timestamp": "2026-08-21T03:07:05.924Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Qwen, DeepSeek, Moonshot/MiniMax/Z.ai), GitHub trending, HuggingFace models/datasets/papers, HN top 30, all 8 YouTube creator feeds, tier-1 press and the AI-for-science lane. Added one item: Waymo's custom 5nm robotaxi ASIC (official blog + Bloomberg + The Register). Everything else fresh was already in the feed.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "waymo-custom-asic",
+          "title": "Waymo's custom AI chip — a 5nm ASIC that runs 1,000+ TOPS in the car",
+          "category": "tool",
+          "note": "Waymo's first custom ML accelerator, announced on its official blog August 20 and covered by Bloomberg and The Register within 48h; a shipped hardware artifact with verified specs, not a roadmap announcement."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "video",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }

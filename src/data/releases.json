@@ -1,8 +1,113 @@
 {
-  "generatedAt": "2026-08-21T01:09:38.557Z",
+  "generatedAt": "2026-08-21T03:07:05.924Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "waymo-custom-asic",
+      "categories": [
+        "tool"
+      ],
+      "title": "Waymo's custom AI chip — a 5nm ASIC that runs 1,000+ TOPS in the car",
+      "org": "Waymo",
+      "date": "2026-08-20",
+      "url": "https://waymo.com/blog/2026/08/look-under-our-trunk/",
+      "summary": "Waymo announced its own 5nm ASIC, made by TSMC, that runs over 1,000 TOPS of machine-learning work inside its robotaxis. The chip fuses lidar, radar and 13 camera streams in real time and is in production in Waymo's latest robotaxi generation.",
+      "tags": [
+        "waymo",
+        "alphabet",
+        "custom-silicon",
+        "asic",
+        "tsmc",
+        "self-driving",
+        "robotaxi",
+        "autonomous-vehicles",
+        "sensor-fusion",
+        "lidar",
+        "edge-ai",
+        "inference"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Waymo (Alphabet)"
+        },
+        {
+          "label": "Chip",
+          "value": "Purpose-built 5nm ASIC"
+        },
+        {
+          "label": "Foundry",
+          "value": "TSMC, 5nm process"
+        },
+        {
+          "label": "ML performance",
+          "value": "Over 1,000 TOPS"
+        },
+        {
+          "label": "Redundancy",
+          "value": "Two independent engines; one takes over on fault"
+        },
+        {
+          "label": "Cooling",
+          "value": "Tied into the vehicle's liquid cooling system"
+        },
+        {
+          "label": "Status",
+          "value": "In production in Waymo's latest robotaxi generation"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Waymo dropping Nvidia and AMD chips?",
+          "a": "Waymo still lists AMD, Micron, NVIDIA, Samsung, SanDisk, Socionext and TSMC as partners in its announcement. The custom ASIC takes over the machine-learning front end, while The Register reports that parts from those suppliers still handle non-ML work such as orchestration, data movement and logging. Bloomberg reports the chip reduces Waymo's reliance on outside vendors rather than ending it."
+        },
+        {
+          "q": "How does Waymo's chip compare to Nvidia's self-driving systems?",
+          "a": "Waymo's ASIC delivers more than 1,000 TOPS, which Bloomberg reports puts it on par with Nvidia's latest systems for autonomous driving. Bloomberg also notes that TSMC's 5nm process is no longer the foundry's most advanced node, so the gain comes from shaping the silicon around Waymo's own sensor workload rather than from a lead in manufacturing."
+        },
+        {
+          "q": "What happens if the Waymo chip fails while the car is driving?",
+          "a": "Waymo built the compute as two independent engines that normally run full parallel workloads as one unit. Waymo says that if one engine hits a fault, the other seamlessly takes over, so the robotaxi keeps processing sensor data. The module also ties into the vehicle's liquid cooling system instead of running its own separate cooling."
+        },
+        {
+          "q": "Is the Waymo chip already on the road?",
+          "a": "Waymo says the ASIC is in production in its latest robotaxi generation, per Bloomberg's report on the August 20, 2026 announcement. Waymo's blog post does not give a fleet-wide rollout date and does not say how many vehicles carry the chip today, so the rest of the fleet timeline stays open."
+        }
+      ],
+      "explainer": {
+        "tagline": "Waymo now designs the silicon that turns its robotaxi's sensor data into driving decisions.",
+        "whatIsIt": "Waymo has built its own 5nm ASIC to run the machine-learning work inside its robotaxis. The chip delivers over 1,000 TOPS aimed at front-end sensor processing and neural network inference. Waymo describes it in an August 20, 2026 blog post from VP of Engineering Satish Jeyachandran and Compute Lead Daniel Rosenband. Bloomberg reports the chip is in production in Waymo's latest robotaxi generation.",
+        "howItWorks": "Sensor fusion is the job. The ASIC takes lidar, radar and camera streams and turns them into one picture of the road, handling 13 high-resolution cameras at once and in real time. Waymo built the compute as two independent engines that run full parallel workloads as a single unit, and it plugs into the car's liquid cooling loop instead of sitting in a separate cooled box. The Register reports Waymo used Intel FPGAs for sensor processing before this chip.",
+        "whyItMatters": "Latency is the payoff. Waymo wants to shorten the gap between light hitting a sensor and the car steering or braking, which it calls pixels-to-actuation. Owning the chip also lets Waymo shape the silicon around its own models instead of waiting on a vendor roadmap. Bloomberg reports the move cuts Waymo's reliance on outside suppliers such as Nvidia and AMD, though Waymo still names those companies among its partners.",
+        "forWho": "autonomous-driving engineers, edge-AI and custom-silicon teams"
+      },
+      "image": {
+        "url": "https://lh3.googleusercontent.com/gXtsT5ILsGdnyQP5Rsdmoaw14gUU5Mh0FihrVWnXmhdWKDwk52A1yGDfvTDUQA6qPrDmGzcLprS2yydMVkGB092czHhhe8bJxQ",
+        "alt": "Waymo robotaxi onboard compute hardware",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Waymo Announcement",
+          "url": "https://waymo.com/blog/2026/08/look-under-our-trunk/"
+        },
+        {
+          "label": "Bloomberg Report",
+          "url": "https://finance.yahoo.com/technology/ai/articles/alphabet-waymo-built-custom-chip-140000003.html"
+        },
+        {
+          "label": "The Register",
+          "url": "https://www.theregister.com/edge-and-iot/2026/08/20/waymo-has-designed-a-robocar-chip-to-stay-ahead-of-tesla/5290592"
+        },
+        {
+          "label": "Waymo Driver",
+          "url": "https://waymo.com/waymo-driver/"
+        }
+      ],
+      "publishDate": "2026-08-21T03:07:05.924Z"
+    },
     {
       "id": "slack-code",
       "categories": [
