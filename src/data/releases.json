@@ -1,8 +1,110 @@
 {
-  "generatedAt": "2026-08-21T20:27:48.091Z",
+  "generatedAt": "2026-08-21T22:29:20.029Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "anthropic-claude-security-mythos-5",
+      "categories": [
+        "security",
+        "tool",
+        "model"
+      ],
+      "title": "Claude Mythos 5 comes to Claude Security — Anthropic's cyber model for defenders",
+      "org": "Anthropic",
+      "date": "2026-08-21",
+      "url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders",
+      "summary": "Claude Security scans now run on Claude Mythos 5, in public beta for Claude Enterprise customers. Each finding carries a CWE category, severity, confidence and a suggested fix. Anthropic also opened a $35 million Defender Advantage Fund.",
+      "tags": [
+        "security",
+        "cybersecurity",
+        "vulnerability-scanning",
+        "anthropic",
+        "claude-mythos-5",
+        "claude-security",
+        "cwe",
+        "open-source-security",
+        "patching",
+        "code-scanning"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Anthropic"
+        },
+        {
+          "label": "Model",
+          "value": "Claude Mythos 5"
+        },
+        {
+          "label": "Product",
+          "value": "Claude Security code scanning"
+        },
+        {
+          "label": "Availability",
+          "value": "Public beta, Claude Enterprise plans"
+        },
+        {
+          "label": "Price",
+          "value": "Standard token usage, no add-on"
+        },
+        {
+          "label": "Open-source fund",
+          "value": "$35M in credits (0xDAF)"
+        }
+      ],
+      "explainer": {
+        "tagline": "Anthropic's most capable security model now scans Enterprise codebases, backed by a $35 million fund for open-source defenders.",
+        "whatIsIt": "Claude Security scans now run on Claude Mythos 5, and the beta is open to every customer on a Claude Enterprise plan. Mythos is the model family Anthropic keeps behind vetted access because it is strong at finding and chaining exploits. Here the model works on your own repository and no separate model access is needed.",
+        "howItWorks": "A scan points Claude Mythos 5 at a repository you select and returns each vulnerability with a CWE category, a severity rating, a confidence rating, and a proposed patch. Partner products will reach the model the same indirect way: through a purpose-built interface that hands back specific artifacts, such as a patch or a security alert, rather than an open chat with the model.",
+        "whyItMatters": "Security teams get Mythos-level reasoning about their code while Anthropic keeps the raw model away from people who might misuse it. The Defender Advantage Fund pushes the same idea into open source, paying for the unglamorous work of patching widely used projects and automating the scan-and-patch loop.",
+        "forWho": "security teams and open-source maintainers",
+        "tryIt": "https://claude.com/solutions/cybersecurity"
+      },
+      "faq": [
+        {
+          "q": "Who can run Claude Mythos 5 scans today?",
+          "a": "Claude Security with Mythos 5 is in public beta for customers on Claude Enterprise plans. Anthropic says the capability is coming soon to partners' cyber defense tools, and that its Cyber Verification Program will expand to offer Mythos-class access to vetted defenders, with details promised in the coming weeks."
+        },
+        {
+          "q": "How can an open-source project get Defender Advantage Fund credits?",
+          "a": "The Defender Advantage Fund, or 0xDAF, offers $35 million in Anthropic credits for three kinds of work: patching vulnerabilities in widely used open-source projects, automating parts of scanning and patching, and trying more ambitious security approaches. Anthropic says it is starting with a small number of larger pilot grants."
+        },
+        {
+          "q": "Can security vendors embed Claude Mythos 5 in their own products?",
+          "a": "Anthropic is working with cybersecurity technology and services partners to embed Claude Mythos 5 in tools for security operations, incident response, threat intelligence, detection engineering and software remediation. Partners can register their interest through the announcement. Their users never talk to the model directly; they receive the specific artifact the tool asked for."
+        },
+        {
+          "q": "Does a Mythos 5 scan patch code on its own?",
+          "a": "No. Claude Security returns a suggested fix for each finding, and Anthropic requires a person to review and approve every patch before it is applied. Because findings arrive with severity and confidence ratings attached, a team can triage the list first and decide which suggested patches are worth merging."
+        }
+      ],
+      "image": {
+        "url": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/69f398245c0b3933c7940d49_og_claude-security-public-beta%20(1).jpg",
+        "alt": "Anthropic announcement card for the Claude Security public beta running on Claude Mythos 5",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders"
+        },
+        {
+          "label": "Claude for Cybersecurity",
+          "url": "https://claude.com/solutions/cybersecurity"
+        },
+        {
+          "label": "Claude Mythos",
+          "url": "https://www.anthropic.com/claude/mythos"
+        },
+        {
+          "label": "The New Stack",
+          "url": "https://thenewstack.io/anthropic-mythos-claude-security/"
+        }
+      ],
+      "publishDate": "2026-08-21T22:29:20.029Z"
+    },
     {
       "id": "openai-codex-cli-0-149",
       "categories": [

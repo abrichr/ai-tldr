@@ -35099,6 +35099,40 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260821t222920z",
+      "timestamp": "2026-08-21T22:29:20.029Z",
+      "source": "github-actions-sweep",
+      "summary": "One add: Anthropic put Claude Mythos 5 behind Claude Security scans for Enterprise customers and opened a $35M Defender Advantage Fund for open-source security work. Everything else found in the last 72h was already in the feed (DeepSeek V4-Flash-Vision-Exp, NVIDIA AVO, Antigravity, Mistral Agentic Search, all 4 fresh creator videos) or missed the bar: Felony Bench re-surfaced on HN but the site dates to early August, StateM and qXR-Detect are outside 72h, and Astromech was a funding round.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "anthropic-claude-security-mythos-5",
+          "title": "Claude Mythos 5 comes to Claude Security — Anthropic's cyber model for defenders",
+          "category": "security",
+          "note": "Top-lab blog post dated 2026-08-21 plus tier-1 pickup (The New Stack, Bloomberg Law) and an HN front-page thread; a real capability rollout with a named fund, not a restatement of the earlier Claude Security public beta on Opus 4.7."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "security",
+        "paper",
+        "dataset",
+        "benchmark",
+        "video",
+        "article",
+        "algorithm",
+        "ecosystem"
+      ]
     }
   ]
 }
