@@ -1,8 +1,134 @@
 {
-  "generatedAt": "2026-08-21T10:37:36.381Z",
+  "generatedAt": "2026-08-21T12:42:21.111Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "deepseek-v4-flash-vision-exp",
+      "categories": [
+        "model"
+      ],
+      "title": "DeepSeek V4-Flash-Vision-Exp — an experimental V4 model that reads images",
+      "org": "DeepSeek",
+      "date": "2026-08-21",
+      "url": "https://api-docs.deepseek.com/news/news260821/",
+      "summary": "DeepSeek V4-Flash-Vision-Exp is an experimental multimodal model on the DeepSeek API that takes images alongside text. It scores 83.9 on Terminal Bench 2.1 and matches DeepSeek V4-Flash on text-only work.",
+      "tags": [
+        "deepseek",
+        "deepseek-v4-flash-vision-exp",
+        "multimodal",
+        "vision",
+        "vision-language-model",
+        "agents",
+        "api",
+        "llm",
+        "terminal-bench"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "An experimental DeepSeek model that adds image understanding to the V4-Flash line, at V4-Flash prices.",
+        "whatIsIt": "DeepSeek V4-Flash-Vision-Exp adds image input to DeepSeek's V4-Flash line. The model takes mixed text-and-image prompts through the Chat Completions, Messages and Responses APIs, so an agent can read a screenshot, a chart or a photo in the same call it reads text. DeepSeek labels the model experimental and ships it under the id deepseek-v4-flash-vision-exp.",
+        "howItWorks": "Images are turned into tokens and billed like text, and can be passed as base64 data, as an external URL, or through the DeepSeek Files API. On pure-text work — agents, reasoning, world knowledge — DeepSeek V4-Flash-Vision-Exp performs on par with the official DeepSeek V4-Flash, so sight is added without a text-quality trade-off. DeepSeek Harness 0.1.1 shipped the same day with out-of-the-box support for the new model.",
+        "whyItMatters": "Agent benchmarks that need visual understanding are where DeepSeek V4-Flash-Vision-Exp gains the most. DeepSeek says the jump over DeepSeek V4-Flash is significant and brings its multimodal agent skills close to Opus-4.8, at flash-tier prices. Teams building screen-reading, chart-parsing or document agents get a much cheaper model to test against.",
+        "forWho": "developers building vision-capable AI agents",
+        "tryIt": "model='deepseek-v4-flash-vision-exp'"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "DeepSeek"
+        },
+        {
+          "label": "Model ID",
+          "value": "deepseek-v4-flash-vision-exp"
+        },
+        {
+          "label": "Input types",
+          "value": "Text + images (JPEG, PNG, GIF, WebP)"
+        },
+        {
+          "label": "Context window",
+          "value": "1M tokens"
+        },
+        {
+          "label": "Status",
+          "value": "Experimental"
+        },
+        {
+          "label": "Image billing",
+          "value": "Up to 384 tokens per image"
+        },
+        {
+          "label": "APIs",
+          "value": "Chat Completions, Messages, Responses"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much does DeepSeek V4-Flash-Vision-Exp cost?",
+          "a": "DeepSeek V4-Flash-Vision-Exp is billed at DeepSeek V4-Flash rates. Off-peak, input is $0.22 per million tokens on a cache miss and $0.007 on a cache hit, and output is $0.66 per million tokens. Peak rates are double the off-peak rates, and DeepSeek sets peak hours at 01:00-04:00 and 06:00-10:00 UTC."
+        },
+        {
+          "q": "Is DeepSeek V4-Flash-Vision-Exp stable enough for production?",
+          "a": "DeepSeek labels V4-Flash-Vision-Exp an experimental model and gives it an -exp suffix in its id, so treat it as a preview rather than a settled endpoint. Because its text performance matches the official DeepSeek V4-Flash, a team can trial vision calls on the experimental id while keeping text traffic on the stable V4-Flash model."
+        },
+        {
+          "q": "How does DeepSeek V4-Flash-Vision-Exp compare to DeepSeek V4-Flash?",
+          "a": "On pure-text work — agents, reasoning and world knowledge — DeepSeek V4-Flash-Vision-Exp performs on par with the official DeepSeek V4-Flash. The gap shows on agent benchmarks that need visual understanding, where DeepSeek says V4-Flash-Vision-Exp makes a significant leap over V4-Flash and comes close to Opus-4.8. Price and the 1M-token context window are the same."
+        },
+        {
+          "q": "Which benchmark scores did DeepSeek publish for V4-Flash-Vision-Exp?",
+          "a": "DeepSeek listed nine results for V4-Flash-Vision-Exp in its change log: Terminal Bench 2.1 at 83.9, NL2Repo at 57.7, DeepSWE at 59.3, DSBench-Hard at 63.6, AutomationBench (public) at 25.7, ApexBench pass@1 at 36.5, Agents' Last Exam at 27.3, Chartography at 64.3, and ZeroBench pass@5 at 35.0."
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "Input (cache miss)",
+            "price": "$0.22",
+            "unit": "/ 1M tokens",
+            "note": "Off-peak; peak is double"
+          },
+          {
+            "plan": "Input (cache hit)",
+            "price": "$0.007",
+            "unit": "/ 1M tokens",
+            "note": "Off-peak; peak is double"
+          },
+          {
+            "plan": "Output",
+            "price": "$0.66",
+            "unit": "/ 1M tokens",
+            "note": "Off-peak; peak is double"
+          }
+        ],
+        "source": "https://api-docs.deepseek.com/quick_start/pricing"
+      },
+      "image": {
+        "url": "https://api-docs.deepseek.com/img/deepseek-social-card.jpeg",
+        "alt": "DeepSeek API documentation social card",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Release Note",
+          "url": "https://api-docs.deepseek.com/news/news260821/"
+        },
+        {
+          "label": "Change Log",
+          "url": "https://api-docs.deepseek.com/updates/"
+        },
+        {
+          "label": "Vision Guide",
+          "url": "https://api-docs.deepseek.com/guides/vision/"
+        },
+        {
+          "label": "Models & Pricing",
+          "url": "https://api-docs.deepseek.com/quick_start/pricing"
+        }
+      ],
+      "publishDate": "2026-08-21T12:42:21.111Z"
+    },
     {
       "id": "openrouter-ox-alpha",
       "categories": [

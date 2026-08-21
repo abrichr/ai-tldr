@@ -34940,6 +34940,38 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260821t124221z",
+      "timestamp": "2026-08-21T12:42:21.111Z",
+      "source": "github-actions-sweep",
+      "summary": "Added DeepSeek V4-Flash-Vision-Exp, the experimental multimodal model DeepSeek put on its API today (HN front page, 164 points). Everything else fresh was already in the feed: 5 of 6 YouTube videos from the RSS scan were already ingested, and Mistral Agentic Search, EnvHarness, SWE-bench Science, Ox Alpha, Vomit, Huzzah, OpenViking, Mojo and Cactus Needle 2 all had existing entries.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "deepseek-v4-flash-vision-exp",
+          "title": "DeepSeek V4-Flash-Vision-Exp — an experimental V4 model that reads images",
+          "category": "model",
+          "note": "Announced today on DeepSeek's official API change log with nine published benchmark scores and published pricing, and on the HN front page at 164 points."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "article",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }
