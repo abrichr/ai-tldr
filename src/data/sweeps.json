@@ -34839,6 +34839,33 @@
         "tutorial",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260821t064456z",
+      "timestamp": "2026-08-21T06:44:56.082Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep 19 minutes after the previous run. Searched Anthropic, OpenAI, DeepMind, blog.google, Meta AI, Mistral, x.ai, Qwen, Z.ai, MiniMax and OpenRouter blogs; GitHub trending daily and weekly; Hugging Face models, datasets, papers and blog; HN front page plus Show HN and the >100-point last-72h list; The Register, TechCrunch and the science lane (STAT, Nature, neurosciencenews, TechXplore, BCI/imaging/pharma/genomics queries). Everything fresh was already in the feed: Antigravity IDE extensions and its Gemini Enterprise companion post, Mistral Agentic Search, Cursor cloud agents, Ramp Router, Slack Code, Waymo's ASIC, Grok prompt injection, LFM2.5-DSpark, Ultra-FineWeb-L1, EnvHarness, Huzzah, Vomit and RollTab. Nothing new cleared the bar.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "algorithm",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
