@@ -35490,6 +35490,39 @@
       ],
       "removed": [],
       "coverage": []
+    },
+    {
+      "id": "sweep-20260822t222604z",
+      "timestamp": "2026-08-22T22:26:04.545Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, DeepMind, Mistral, Meta, Cohere, DeepSeek, Qwen, xAI), GitHub trending, HuggingFace models/datasets/papers, HN front page + Algolia, 8 YouTube feeds and the AI-for-science lane. Almost everything fresh was already in the feed; added one item — Linus Torvalds crediting an AI in a Linux kernel commit, via Simon Willison.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "simonw-torvalds-ai-debug-aug22",
+          "title": "Simon Willison — Linus Torvalds let an AI write a Linux kernel commit message",
+          "category": "article",
+          "note": "Linus Torvalds credited an AI for the grunt work in an Intel Xe driver debug session and let it write the commit message — verified against the kernel commit itself, Phoronix (2026-08-21) and Simon Willison's post (2026-08-22)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }

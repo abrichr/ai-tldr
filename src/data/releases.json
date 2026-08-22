@@ -1,8 +1,71 @@
 {
-  "generatedAt": "2026-08-22T20:26:05.486Z",
+  "generatedAt": "2026-08-22T22:26:04.545Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "simonw-torvalds-ai-debug-aug22",
+      "categories": [
+        "article"
+      ],
+      "title": "Simon Willison — Linus Torvalds let an AI write a Linux kernel commit message",
+      "org": "Simon Willison",
+      "date": "2026-08-22",
+      "url": "https://simonwillison.net/2026/Aug/22/linus-torvalds/",
+      "summary": "Linus Torvalds credited an AI with much of the grunt work behind an Intel Xe driver fix, and let the AI write the commit message. Simon Willison quotes it: 24 debug patches and 18 kernel boots to find a one-line bug.",
+      "tags": [
+        "simon-willison",
+        "linus-torvalds",
+        "linux-kernel",
+        "ai-assisted-programming",
+        "debugging",
+        "intel-xe",
+        "drm",
+        "open-source",
+        "commit-message",
+        "agentic-coding"
+      ],
+      "importance": "notable",
+      "metrics": {
+        "Debug patches": 24,
+        "Kernel boots": 18
+      },
+      "author": {
+        "name": "Simon Willison",
+        "handle": "@simonw",
+        "profileUrl": "https://simonwillison.net/",
+        "avatarUrl": "https://github.com/simonw.png"
+      },
+      "explainer": {
+        "tagline": "Linus Torvalds called it a debug session from hell, and gave an AI credit for doing most of the grunt work.",
+        "whatIsIt": "A Linux kernel commit from Linus Torvalds now credits an AI, and Simon Willison's post collects the quote. The commit fixes the Intel Xe graphics driver so it stops handing out flat CCS storage as usable VRAM, which was letting the compression hardware overwrite kernel allocations and crash the desktop compositor on a Battlemage G21 card. Torvalds called it \"a debug session from hell, enormously helped by an AI doing much of the grunt-work\", and said he let the AI write the commit message itself.",
+        "howItWorks": "The actual fix is one line: a round_up() that should have been a round_down() when working out the flat CCS offset. Getting there took 24 patches that added more and more debug output and 18 kernel boots, per the commit message. Torvalds notes the AI repeatedly stated the problem was impossible and unsolvable and suggested just writing a report about it, but kept adding debug code and analysing the results faithfully when he pushed back.",
+        "whyItMatters": "An AI credited inside a commit by the Linux kernel's creator is a concrete signal about where these tools help right now: not finding the bug, but grinding through debug output without getting bored. The account also names the failure mode engineers keep hitting — the model calls a problem unsolvable and wants to stop, and only reaches the answer because a stubborn human refuses to accept that.",
+        "forWho": "kernel and systems developers, and anyone using coding agents on hard debugging work",
+        "tryIt": "https://github.com/torvalds/linux/commit/818bebeb63dd6bf5f4e07e145f6cdbace520a34c"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/22087a98ed668cae2b949a46863384f107467421a4bea6f1340abf5c42a38490/torvalds/linux/commit/818bebeb63dd6bf5f4e07e145f6cdbace520a34c",
+        "alt": "Linus Torvalds' Intel Xe kernel commit crediting an AI for the debug work",
+        "fit": "contain",
+        "credit": "GitHub"
+      },
+      "links": [
+        {
+          "label": "Blog Post",
+          "url": "https://simonwillison.net/2026/Aug/22/linus-torvalds/"
+        },
+        {
+          "label": "Kernel Commit",
+          "url": "https://github.com/torvalds/linux/commit/818bebeb63dd6bf5f4e07e145f6cdbace520a34c"
+        },
+        {
+          "label": "Phoronix Report",
+          "url": "https://www.phoronix.com/news/Linus-Torvalds-Debug-AI"
+        }
+      ],
+      "publishDate": "2026-08-22T22:26:04.545Z"
+    },
     {
       "id": "simonw-llm-0-33-aug22",
       "categories": [
