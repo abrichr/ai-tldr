@@ -1,8 +1,68 @@
 {
-  "generatedAt": "2026-08-22T00:59:29.583Z",
+  "generatedAt": "2026-08-22T03:02:31.536Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "adnanakil-nobuzz",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "NoBuzz — a Claude Code skill that rewrites Claude's replies in plain English",
+      "org": "adnanakil",
+      "date": "2026-08-21",
+      "url": "https://github.com/adnanakil/nobuzz",
+      "summary": "NoBuzz is a Claude Code skill, /debuzz, that sends Claude's last reply to the Antigravity CLI and prints back a plain-English version. Three modes — colleague, manager and director — set how much detail survives.",
+      "tags": [
+        "claude-code",
+        "claude-skill",
+        "antigravity",
+        "developer-tools",
+        "cli",
+        "writing",
+        "open-source",
+        "agents"
+      ],
+      "importance": "notable",
+      "metrics": {
+        "GitHub stars": 86,
+        "HN points": 212
+      },
+      "explainer": {
+        "tagline": "NoBuzz hands Claude's answer to a second model and prints the plain-English rewrite instead.",
+        "whatIsIt": "NoBuzz adds a /debuzz command to Claude Code that translates Claude's last reply into plain English. The skill ships three modes: colleague keeps every file path and code block intact, manager gives what happened, why it matters and what's next at about a third the length with no code, and director returns three to five sentences covering outcome, impact and ask. The repo is MIT-licensed and went up on GitHub on 21 August 2026.",
+        "howItWorks": "The mechanism is a shell-out, not a prompt tweak. The skill writes the previous answer to a temporary file, then calls the Antigravity CLI (agy) with plain-English style instructions. Because agy's headless mode does not read stdin and will not open files outside the project, the text goes straight into the prompt. Claude prints the returned rewrite verbatim and is not allowed to edit it, so the original voice cannot creep back in. When agy fails — usually an auth problem — Claude offers its own rewrite with a clear label.",
+        "whyItMatters": "Style complaints about coding agents usually end in a longer system prompt that the model drifts away from within a few turns. Routing the answer through a separate tool makes the rewrite a fixed step instead of a request. The Hacker News thread, posted under the title 'Claudette', reached 212 points and 150 comments. The trade-off is setup: NoBuzz needs both Claude Code and the Antigravity CLI installed and signed in, so it is a two-vendor tool.",
+        "forWho": "Claude Code users",
+        "tryIt": "git clone https://github.com/adnanakil/nobuzz && cp -r nobuzz/debuzz ~/.claude/skills/"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/adnanakil/nobuzz",
+        "alt": "GitHub repository card for adnanakil/nobuzz",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/adnanakil/nobuzz"
+        },
+        {
+          "label": "README",
+          "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49388752"
+        }
+      ],
+      "author": {
+        "name": "adnanakil",
+        "profileUrl": "https://github.com/adnanakil",
+        "avatarUrl": "https://github.com/adnanakil.png"
+      },
+      "publishDate": "2026-08-22T03:02:31.536Z"
+    },
     {
       "id": "1littlecoder-ox-alpha-test-aug21",
       "categories": [

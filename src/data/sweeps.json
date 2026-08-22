@@ -35167,6 +35167,40 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260822t030231z",
+      "timestamp": "2026-08-22T03:02:31.536Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, DeepSeek, Qwen, MiniMax, Z.ai, Moonshot), GitHub trending, HuggingFace models/datasets/papers/blog, HN front page + Show HN, the 8 YouTube creator feeds, tier-1 press and the AI-for-science lane. Almost every fresh candidate was already in the feed; added one new item, the NoBuzz Claude Code skill (HN 212 points, repo created 21 Aug).",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "adnanakil-nobuzz",
+          "title": "NoBuzz — a Claude Code skill that rewrites Claude's replies in plain English",
+          "category": "tool",
+          "note": "HN front page at 212 points / 150 comments, repo created 2026-08-21 with 86 stars and an MIT license — a fresh, runnable Claude Code skill, not a re-post of an older project."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
