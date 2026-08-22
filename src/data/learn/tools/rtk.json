@@ -1,0 +1,70 @@
+{
+  "slug": "rtk",
+  "name": "RTK",
+  "repo": "rtk-ai/rtk",
+  "homepage": "https://www.rtk-ai.app",
+  "category": "production-ops",
+  "categoryTitle": "Evaluation & Production Ops",
+  "subcategory": "llm-gateways",
+  "subcategoryTitle": "Gateways & Routing",
+  "tagline": "A Rust CLI proxy that compresses command output before it reaches your coding agent",
+  "seoTitle": "RTK — CLI Proxy That Cuts Coding-Agent Token Use",
+  "metaDescription": "RTK (Rust Token Killer) is an Apache-2.0 CLI proxy that filters, groups and dedupes the output of 100+ dev commands, cutting the tokens a coding agent has to read.",
+  "overview": [
+    "RTK — \"Rust Token Killer\" — is a command-line proxy that sits between an AI coding agent and the shell commands it runs. Agent loops burn most of their context on raw tool output: pages of `git status`, a full `pytest` run, a `docker build` log. RTK intercepts that output and compresses it before the model ever sees it, which the project measures at a 60–90% reduction on common development commands.",
+    "It compresses with four strategies rather than a model: intelligent filtering to drop noise, grouping to aggregate similar items, truncation that preserves the relevant context, and deduplication to collapse repeated lines. The rules are command-aware — git operations report the confirmation instead of the progress chatter, test runners surface only failures, build tools group errors by file — and it covers more than a hundred commands across git, cargo, npm/pnpm, pytest, docker, the AWS CLI and more.",
+    "RTK ships as a single dependency-free Rust binary with under 10 ms of overhead, installable from Homebrew, an install script, Cargo, or pre-built releases for macOS, Linux and Windows. `rtk init` wires it into an agent through that agent's hook or plugin API — the project lists integrations for Claude Code, GitHub Copilot, Cursor, Gemini CLI, Codex, Windsurf, Cline, Kilo Code and others — after which plain commands are transparently rewritten to their `rtk` equivalents. An `rtk gain` dashboard reports the token savings over a 30-day history. It is Apache-2.0 licensed."
+  ],
+  "features": [
+    "Command-aware compression of 100+ dev commands (git, cargo, npm/pnpm, pytest, docker, AWS CLI and more)",
+    "Four non-model strategies — filtering, grouping, context-preserving truncation and deduplication",
+    "Single Rust binary with no dependencies and under 10 ms of overhead per command",
+    "Auto-rewrite hook that transparently turns `git status` into `rtk git status` inside the agent",
+    "One-command setup per agent via `rtk init`, with integrations for Claude Code, Copilot, Cursor, Gemini CLI, Codex, Windsurf, Cline and others",
+    "`rtk gain` analytics dashboard tracking token savings across a 30-day history",
+    "Per-command exclusions and a \"tee\" mode that keeps full output on failures, configured in a single TOML file"
+  ],
+  "gettingStarted": {
+    "intro": "Install the binary, then run `rtk init` for whichever agent you use and restart it. Nothing else changes — your commands keep the same names.",
+    "steps": [
+      {
+        "heading": "Install RTK",
+        "body": "Homebrew is the recommended path; an install script, Cargo and pre-built release binaries for macOS, Linux and Windows are also available.",
+        "code": "brew install rtk\n\n# or, on Linux/macOS:\ncurl -fsSL https://raw.githubusercontent.com/rtk-ai/rtk/refs/heads/master/install.sh | sh\n\n# or from source:\ncargo install --git https://github.com/rtk-ai/rtk",
+        "lang": "bash"
+      },
+      {
+        "heading": "Wire it into your agent",
+        "body": "`rtk init` installs the hook or plugin for a specific agent. The `-g` flag installs it globally rather than for the current project.",
+        "code": "rtk init -g                    # Claude Code / Copilot (default)\nrtk init -g --gemini           # Gemini CLI\nrtk init -g --agent cursor     # Cursor\nrtk init --agent cline         # Cline / Roo Code",
+        "lang": "bash"
+      },
+      {
+        "heading": "Restart the agent",
+        "body": "After a restart the auto-rewrite hook is active: when the agent runs `git status`, RTK transparently runs `rtk git status` and returns the compressed output instead.",
+        "code": "",
+        "lang": ""
+      },
+      {
+        "heading": "Check what you saved",
+        "body": "The gain command reports token savings, with a 30-day history.",
+        "code": "rtk gain",
+        "lang": "bash"
+      },
+      {
+        "heading": "Tune the config",
+        "body": "Global configuration lives in a TOML file — `~/.config/rtk/config.toml`, or `~/Library/Application Support/rtk/config.toml` on macOS. Use it to exclude specific commands or to turn on \"tee\" mode, which keeps the full output when a command fails.",
+        "code": "",
+        "lang": ""
+      }
+    ]
+  },
+  "useCases": [
+    "Stop a coding agent from filling its context window with build, test and git output",
+    "Cut the per-run cost of long agent loops without changing the model or the prompt",
+    "Keep long agentic sessions coherent by leaving more of the window for actual reasoning",
+    "Measure where an agent's tokens are actually going, per command, with `rtk gain`"
+  ],
+  "language": "Rust",
+  "license": "Apache-2.0"
+}

@@ -1,0 +1,259 @@
+{
+  "slug": "ornith-1-5-397b",
+  "name": "Ornith-1.5-397B",
+  "maker": "ornith",
+  "makerTitle": "Ornith",
+  "line": "ornith",
+  "lineTitle": "Ornith (open-weight)",
+  "tagline": "Flagship of the Ornith-1.5 family, released 18 August 2026: a 397B MIT-licensed Mixture-of-Experts reasoning model trained by an end-to-end self-improvement loop.",
+  "seoTitle": "Ornith-1.5-397B: Open MIT 397B MoE Coding Model",
+  "metaDescription": "Ornith-1.5-397B is a 397B MIT-licensed Mixture-of-Experts model released 18 Aug 2026. It scores 86.1 on Terminal-Bench 2.1 and 86.0 on SWE-bench Verified.",
+  "releaseDate": "2026-08-18",
+  "status": "Generally available — open weights on Hugging Face",
+  "license": "MIT",
+  "openWeights": true,
+  "modalities": [
+    "Text"
+  ],
+  "contextWindow": "262K (≈1M with YaRN)",
+  "parameters": "397B total · Mixture-of-Experts (512 experts, 10 routed per token)",
+  "architecture": "Mixture-of-Experts on a Qwen3.5 base, with interleaved linear and full attention (a full-attention layer every fourth of 60 layers)",
+  "tags": [
+    "open-weights",
+    "frontier",
+    "coding",
+    "reasoning",
+    "agentic",
+    "long-context"
+  ],
+  "overview": [
+    "Ornith-1.5-397B is the flagship of the Ornith-1.5 family, released on 18 August 2026 by Ornith — the model lab of the DeepReinforce team — alongside a 35B Mixture-of-Experts sibling and a 9B dense one. It is a 397-billion-parameter Mixture-of-Experts model that emits a thinking block before its final answer, and it ships as downloadable weights under the MIT license.",
+    "What distinguishes the family is how it is trained. Ornith-1.0, built on top of open Qwen3.5 and Gemma 4 bases with additional continued pretraining, mid-training and post-training, already optimised the scaffold and the rollouts around a fixed set of human-curated tasks. Ornith-1.5 extends that loop end to end: the model proposes new training tasks that expose its own capability gaps, constructs a task-specific scaffold of instructions, tools and decomposition strategies for each, and then produces the solution rollouts used for reinforcement learning — with reward propagated across all three stages. Ornith describes the result as a closed self-improvement loop in which a stronger policy generates harder and more informative tasks.",
+    "The model uses a 60-layer architecture with 512 experts and 10 routed per token, interleaving linear-attention layers with a full-attention layer every fourth layer. Its native context is 262,144 tokens and Ornith documents YaRN RoPE scaling at a factor of 4.0 to reach roughly one million tokens for workloads that need it. In bf16 the checkpoint is about 800 GB, so Ornith's own quickstart assumes multi-GPU serving with vLLM ≥ 0.19.1 or SGLang ≥ 0.5.9 at tensor-parallel size 8; FP8, NVFP4 and GGUF builds are published for smaller deployments, and the GGUF build runs under llama.cpp and Ollama.",
+    "On Ornith's published evaluations the 397B model scores 86.1 on Terminal-Bench 2.1 and 86.0 on SWE-bench Verified, ahead of Claude Opus 4.8 on both (85.0 and 85.8) and ahead of the open-weight GLM-5.2 and DeepSeek-V4-Flash-0731. The picture is not uniform: on the harder agentic rows — Frontier-Bench v0.1, NL2Repo, DeepSWE and SWE Atlas QnA — it trails Opus 4.8 by a wide margin, and Kimi K3 leads it on Terminal-Bench, DeepSWE and BrowseComp. It leads every listed model on WideSearch (80.8) and BrowseComp among the open field."
+  ],
+  "strengths": [
+    "MIT-licensed open weights, free to download, fine-tune, self-host and use commercially",
+    "Terminal-Bench 2.1 86.1 and SWE-bench Verified 86.0 on Ornith's own evaluations — ahead of Claude Opus 4.8 on both rows",
+    "262K native context, documented to extend to roughly 1M tokens with YaRN scaling at factor 4.0",
+    "Sparse Mixture-of-Experts routing (10 of 512 experts per token) keeps per-token compute far below the 397B total",
+    "First-class agent tooling: XML tool-call and reasoning parsers for vLLM and SGLang, plus published FP8, NVFP4 and GGUF builds"
+  ],
+  "useCases": [
+    "Long-horizon terminal and repository coding agents run on self-hosted infrastructure",
+    "Deep-research and web-browsing agents (Ornith reports the family's best WideSearch and BrowseComp scores here)",
+    "Teams that need frontier-adjacent agentic quality under a permissive license rather than a vendor API",
+    "Research on self-improving training loops, where the released weights are the reference implementation of the approach"
+  ],
+  "links": [
+    {
+      "label": "Ornith-1.5-397B model card (Hugging Face)",
+      "url": "https://huggingface.co/ornith-ai/Ornith-1.5-397B",
+      "kind": "model-card"
+    },
+    {
+      "label": "Ornith-1.5: From Self-Scaffolding to Self-Improvement (launch post)",
+      "url": "https://ornith.ai/ornith_1_5.html",
+      "kind": "announcement"
+    },
+    {
+      "label": "Ornith homepage",
+      "url": "https://ornith.ai",
+      "kind": "official"
+    },
+    {
+      "label": "Ornith on Hugging Face",
+      "url": "https://huggingface.co/ornith-ai",
+      "kind": "official"
+    },
+    {
+      "label": "Ornith-1.5-397B GGUF build",
+      "url": "https://huggingface.co/ornith-ai/Ornith-1.5-397B-GGUF",
+      "kind": "model-card"
+    }
+  ],
+  "benchmarks": [
+    {
+      "name": "GPQA Diamond",
+      "score": 92.8,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "BrowseComp",
+      "score": 86.6,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "Terminal-Bench 2.1 (Terminus-2)",
+      "score": 86.1,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "SWE-bench Verified",
+      "score": 86,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "ClawEval",
+      "score": 81.4,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "WideSearch",
+      "score": 80.8,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "MCP-Atlas",
+      "score": 80,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "SWE-bench Multilingual",
+      "score": 79.6,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "Toolathlon-Verified",
+      "score": 71.2,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "SWE-bench Pro",
+      "score": 65.1,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "NL2Repo",
+      "score": 59.5,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "DeepSWE",
+      "score": 56,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "HLE (with tools)",
+      "score": 56.1,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "HLE (no tools)",
+      "score": 44.6,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "Frontier-Bench v0.1",
+      "score": 13.5,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Ornith's published launch comparison for Ornith-1.5-397B (18 August 2026). A dash means the source left the cell blank.",
+    "models": [
+      "Ornith-1.5-397B",
+      "DeepSeek-V4-Flash-0731 (284B)",
+      "GLM-5.2 (753B)",
+      "Claude Opus 4.8",
+      "Kimi K3 (2.8T)",
+      "Ornith-1.0-397B"
+    ],
+    "subject": 0,
+    "rows": [
+      { "benchmark": "Terminal-Bench 2.1 (Terminus-2)", "scores": [86.1, 82.7, 81, 85, 88.3, 77.5] },
+      { "benchmark": "Terminal-Bench 2.1 (Claude Code)", "scores": [85.2, 81.8, 82.7, 78.9, null, 78.2] },
+      { "benchmark": "SWE-bench Verified", "scores": [86, 81.6, 83, 85.8, 86.2, 82.4] },
+      { "benchmark": "SWE-bench Pro", "scores": [65.1, 64.4, 62.1, 68, null, 62.2] },
+      { "benchmark": "SWE-bench Multilingual", "scores": [79.6, 77.9, 78.4, 75.7, null, 78.9] },
+      { "benchmark": "DeepSWE", "scores": [56, 54.4, 46.2, 59, 67.5, 8] },
+      { "benchmark": "Frontier-Bench v0.1", "scores": [13.5, 6.1, 5.1, 21.1, 23, 2.7] },
+      { "benchmark": "NL2Repo", "scores": [59.5, 54.2, 48.9, 69.7, null, 48.2] },
+      { "benchmark": "SWE Atlas – QnA", "scores": [55.6, 51.6, 50, 59.7, 59.7, 41.2] },
+      { "benchmark": "HLE (no tools)", "scores": [44.6, 35, 40.5, 49.8, 43.5, 30.2] },
+      { "benchmark": "HLE (with tools)", "scores": [56.1, 50.8, 54.7, 57.9, 56, 47.5] },
+      { "benchmark": "GPQA Diamond", "scores": [92.8, 91.4, 91.2, 93.6, 93.5, 88.1] },
+      { "benchmark": "MCP-Atlas", "scores": [80, 74.6, 77.8, 82.2, 82.3, 76.4] },
+      { "benchmark": "Toolathlon-Verified", "scores": [71.2, 70.3, 48.2, 76.2, 73.2, 43.2] },
+      { "benchmark": "WideSearch", "scores": [80.8, 77.3, 79, 72.9, null, 75.2] },
+      { "benchmark": "BrowseComp", "scores": [86.6, 84.8, 85.6, 84.3, 91.2, 79.7] },
+      { "benchmark": "ClawEval", "scores": [81.4, 77.6, 78.8, 80.2, null, 77.1] }
+    ],
+    "source": "https://ornith.ai/ornith_1_5.html"
+  },
+  "comparisonFigures": [
+    {
+      "url": "/models-media/ornith-1-5-397b-cmp-1.png",
+      "alt": "Ornith's published bar chart comparing Ornith-1.5 (397B) with Ornith-1.0 (397B), DeepSeek-V4-Flash-0731 (284B), GLM-5.2 (753B) and Claude Opus 4.8 across Terminal-Bench 2.1, SWE-bench Verified, DeepSWE, Frontier-Bench v0.1, NL2Repo, SWE Atlas QnA, HLE, GPQA Diamond, MCP-Atlas, Toolathlon-Verified, WideSearch and BrowseComp.",
+      "caption": "Ornith's launch evaluation chart for Ornith-1.5-397B (18 August 2026).",
+      "credit": "Ornith",
+      "source": "https://huggingface.co/ornith-ai/Ornith-1.5-397B"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is Ornith-1.5-397B open source?",
+      "a": "The weights are published on Hugging Face under the MIT License, so you can download, run, fine-tune and use the model commercially, including self-hosted. Ornith also publishes FP8, NVFP4 and GGUF builds of the same checkpoint."
+    },
+    {
+      "q": "What hardware does it need?",
+      "a": "In bf16 the model is roughly 800 GB, so Ornith's quickstart serves it across eight GPUs with vLLM (`--tensor-parallel-size 8`) or SGLang (`--tp 8`), both at a 262,144-token context. The published FP8, NVFP4 and GGUF quantisations lower that footprint, and the GGUF build runs under llama.cpp and Ollama."
+    },
+    {
+      "q": "What does \"self-improvement\" mean for Ornith-1.5?",
+      "a": "Ornith-1.0 optimised the scaffold and the solution rollouts around human-curated tasks. Ornith-1.5 also generates the tasks: it proposes problems that expose its own capability gaps, builds a task-specific scaffold of instructions, tools and decomposition strategies for each, produces solution rollouts, and propagates reinforcement-learning reward across all three stages — so a stronger policy yields harder training tasks."
+    },
+    {
+      "q": "How long a context does it support?",
+      "a": "262,144 tokens natively. For longer workloads Ornith documents YaRN RoPE scaling — a factor of 4.0 takes the usable window to roughly one million tokens — configurable either in config.json or through vLLM and SGLang command-line overrides. Ornith advises enabling it only when genuinely needed and sizing the factor to the workload."
+    },
+    {
+      "q": "How does it compare with Claude Opus 4.8?",
+      "a": "On Ornith's own numbers it leads on Terminal-Bench 2.1 (86.1 vs 85.0), SWE-bench Verified (86.0 vs 85.8), SWE-bench Multilingual (79.6 vs 75.7) and WideSearch (80.8 vs 72.9), and trails on the harder agentic and knowledge rows — Frontier-Bench v0.1 (13.5 vs 21.1), NL2Repo (59.5 vs 69.7), DeepSWE (56.0 vs 59.0), HLE without tools (44.6 vs 49.8) and GPQA Diamond (92.8 vs 93.6). These are the vendor's published evaluations, not independent ones."
+    }
+  ],
+  "versionHistory": [
+    {
+      "version": "Ornith-1.5-397B",
+      "slug": "ornith-1-5-397b",
+      "date": "2026-08-18",
+      "note": "Self-improvement loop extended to task generation; 86.1 on Terminal-Bench 2.1.",
+      "current": true
+    },
+    {
+      "version": "Ornith-1.0-397B",
+      "date": "2026-06",
+      "note": "First Ornith flagship, built on Qwen3.5 and Gemma 4 bases with self-scaffolding post-training."
+    }
+  ]
+}

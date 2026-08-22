@@ -1813,6 +1813,22 @@
           "blurb": "Flagship Mixture-of-Experts text model line with a native 1M-token context, shipped in a larger Pro tier and a faster, cheaper Flash tier.",
           "versions": [
             {
+              "name": "DeepSeek-V4-Flash-Vision-Exp",
+              "slug": "deepseek-v4-flash-vision-exp",
+              "blurb": "Experimental multimodal V4 tier, released 21 August 2026: adds mixed text + image input to V4-Flash while matching it on text. API-only (no published weights), 1M-token context, billed at V4-Flash rates with images capped at 384 tokens each.",
+              "tags": [
+                "multimodal",
+                "reasoning",
+                "long-context",
+                "agentic",
+                "coding"
+              ],
+              "contextWindow": "1M",
+              "license": "Proprietary (API-only)",
+              "date": "2026-08-21",
+              "rich": true
+            },
+            {
               "name": "DeepSeek-V4-Pro",
               "slug": "deepseek-v4-pro",
               "blurb": "Larger V4 tier: 1.6T total / 49B active MoE, 1M-token context, MIT-licensed open weights. Previewed April 2026 and generally available as V4-Pro-0813 on 13 Aug 2026 — 87.9 on Terminal Bench 2.1, selectable low/high/max reasoning effort.",
@@ -1833,7 +1849,7 @@
             {
               "name": "DeepSeek-V4-Flash",
               "slug": "deepseek-v4-flash",
-              "blurb": "Smaller, faster V4 tier: 284B total / 13B active MoE, 1M-token context, MIT-licensed. Cheapest tier at $0.14/M input (miss) / $0.28/M output. Re-post-trained V4-Flash-0731 checkpoint entered official public beta on 2026-07-31 with upgraded agent scores (Terminal-Bench 2.1 82.7).",
+              "blurb": "Smaller, faster V4 tier: 284B total / 13B active MoE, 1M-token context, MIT-licensed. Cheapest tier at $0.22/M cache-miss input and $0.66/M output off-peak under the time-of-day tariff DeepSeek introduced on 16 Aug 2026. Re-post-trained V4-Flash-0731 checkpoint entered official public beta on 2026-07-31 with upgraded agent scores (Terminal-Bench 2.1 82.7).",
               "tags": [
                 "open-weights",
                 "reasoning",
@@ -4833,6 +4849,73 @@
         }
       ],
       "logo": "/models-logos/poolside.svg"
+    },
+    {
+      "id": "ornith",
+      "title": "Ornith",
+      "blurb": "Ornith is the model lab of the DeepReinforce team. Its Ornith family is trained by an end-to-end self-improvement loop — the model proposes its own tasks, builds a scaffold for each, and learns from the resulting rollouts by reinforcement learning — on top of open Qwen3.5 and Gemma 4 bases. Every Ornith checkpoint ships as downloadable MIT-licensed weights on Hugging Face.",
+      "homepage": "https://ornith.ai",
+      "lines": [
+        {
+          "id": "ornith",
+          "title": "Ornith (open-weight)",
+          "blurb": "Ornith's agentic-coding model family, released in matched flagship MoE, mid-size MoE and small dense sizes under the MIT license.",
+          "versions": [
+            {
+              "name": "Ornith-1.5-397B",
+              "slug": "ornith-1-5-397b",
+              "blurb": "Flagship of the Ornith-1.5 family released 18 August 2026: a 397B MIT-licensed Mixture-of-Experts model scoring 86.1 on Terminal-Bench 2.1 and 86.0 on SWE-bench Verified, with a 262K native context extendable to ~1M via YaRN.",
+              "tags": [
+                "open-weights",
+                "frontier",
+                "coding",
+                "reasoning",
+                "agentic",
+                "long-context"
+              ],
+              "contextWindow": "262K",
+              "license": "MIT",
+              "date": "2026-08-18",
+              "current": true,
+              "rich": true
+            },
+            {
+              "name": "Ornith-1.5-35B-A3B",
+              "slug": "ornith-1-5-35b-a3b",
+              "blurb": "Mid-size member of the Ornith-1.5 family released 18 August 2026: a 35B Mixture-of-Experts model activating ~3B parameters per token, scoring 79.0 on SWE-bench Verified with a 262K native context and MIT weights.",
+              "tags": [
+                "open-weights",
+                "coding",
+                "reasoning",
+                "agentic",
+                "long-context"
+              ],
+              "contextWindow": "262K",
+              "license": "MIT",
+              "date": "2026-08-18",
+              "rich": true
+            },
+            {
+              "name": "Ornith-1.5-9B",
+              "slug": "ornith-1-5-9b",
+              "blurb": "Small dense member of the Ornith-1.5 family released 18 August 2026: 9B parameters sized for a single GPU (with a quantised Mobile build), scoring 70.6 on SWE-bench Verified and 86.4 on GPQA Diamond under an MIT license.",
+              "tags": [
+                "open-weights",
+                "coding",
+                "reasoning",
+                "agentic",
+                "on-device",
+                "long-context"
+              ],
+              "contextWindow": "262K",
+              "license": "MIT",
+              "date": "2026-08-18",
+              "rich": true
+            }
+          ]
+        }
+      ],
+      "logo": "/models-logos/ornith.webp"
     }
   ]
 }

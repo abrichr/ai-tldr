@@ -6343,6 +6343,13 @@
      "title": "Web Scraping & Crawling",
      "tools": [
       {
+       "name": "Agent Reach",
+       "slug": "agent-reach",
+       "repo": "Panniantong/Agent-Reach",
+       "description": "A capability layer that installs, health-checks and routes readers so a CLI agent can read and search web pages, YouTube, RSS, GitHub, Reddit, Twitter/X and more without API fees.",
+       "detail": true
+      },
+      {
        "name": "Firecrawl",
        "slug": "firecrawl",
        "repo": "firecrawl/firecrawl",
@@ -7800,6 +7807,22 @@
      "id": "llm-gateways",
      "title": "Gateways & Routing",
      "tools": [
+      {
+       "name": "OmniRoute",
+       "slug": "omniroute",
+       "repo": "diegosouzapw/OmniRoute",
+       "homepage": "https://omniroute.online",
+       "description": "A local-first AI gateway that fronts hundreds of model providers with one OpenAI-compatible endpoint, quota-aware auto-fallback, many routing strategies and prompt compression.",
+       "detail": true
+      },
+      {
+       "name": "RTK",
+       "slug": "rtk",
+       "repo": "rtk-ai/rtk",
+       "homepage": "https://www.rtk-ai.app",
+       "description": "A single-binary Rust CLI proxy that filters, groups, truncates and dedupes the output of 100+ dev commands before a coding agent reads it, cutting token use by 60–90%.",
+       "detail": true
+      },
       {
        "name": "LiteLLM",
        "slug": "litellm",

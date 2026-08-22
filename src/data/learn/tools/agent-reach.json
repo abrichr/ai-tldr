@@ -1,0 +1,69 @@
+{
+  "slug": "agent-reach",
+  "name": "Agent Reach",
+  "repo": "Panniantong/Agent-Reach",
+  "category": "data",
+  "categoryTitle": "Data & Labeling",
+  "subcategory": "web-scraping",
+  "subcategoryTitle": "Web Scraping & Crawling",
+  "tagline": "A pre-wired web-access layer that gives a CLI agent readers for the sites it can't reach",
+  "seoTitle": "Agent Reach — Web & Social Data Access for AI Agents",
+  "metaDescription": "Agent Reach is an MIT-licensed capability layer that gives CLI AI agents read and search access to the web, YouTube, GitHub, Reddit, Twitter/X and more.",
+  "overview": [
+    "Agent Reach is an MIT-licensed capability layer that gives a CLI AI agent access to the open internet. Rather than being one more scraper, it is the selection-and-plumbing layer above them: for each platform it picks a working method, installs it, health-checks it, and routes requests to a primary backend with fallbacks behind it — so when a site changes or an endpoint is deprecated, the agent keeps working.",
+    "Coverage splits into two tiers. Web pages, YouTube, RSS, GitHub, Bilibili and semantic web search work with zero configuration and no API keys. Twitter/X, Reddit, Facebook, Instagram and LinkedIn need you to be logged in, and Xiaohongshu, V2EX and Xueqiu sit in between. Credentials are kept locally in `~/.agent-reach/config.yaml` and never leave the machine, and the underlying tools it installs are themselves open source, so there are no per-call API fees.",
+    "Installation is deliberately agent-driven: you hand your agent a link to the project's install document and it does the rest, which is why the project describes itself as agent-agnostic — it works with Claude Code, OpenClaw, Cursor, Windsurf or any CLI-capable agent. A built-in `agent-reach doctor` command reports which channels currently work and why the others don't, and Exa semantic search is wired in through mcporter as a free, key-less MCP backend."
+  ],
+  "features": [
+    "One capability layer that selects, installs and health-checks a working reader for each platform",
+    "Zero-config access to web pages, YouTube, RSS, GitHub, Bilibili and semantic web search",
+    "Login-based access to Twitter/X, Reddit, Facebook, Instagram, LinkedIn, Xiaohongshu, V2EX and Xueqiu",
+    "Multi-backend routing — every platform has a primary plus fallbacks, so a site change doesn't break the agent",
+    "`agent-reach doctor` self-diagnostic that reports which channels work and why the rest don't",
+    "Credentials stay local in `~/.agent-reach/config.yaml`; the underlying tools are open source, so there are no API fees",
+    "Agent-agnostic — works with Claude Code, OpenClaw, Cursor, Windsurf or any CLI-capable agent"
+  ],
+  "gettingStarted": {
+    "intro": "Agent Reach is installed by the agent itself: you paste one instruction pointing at the project's install document, and the agent performs the setup.",
+    "steps": [
+      {
+        "heading": "Ask your agent to install it",
+        "body": "Paste this into Claude Code, OpenClaw, Cursor or any CLI-capable agent. It fetches the install document and works through the setup itself.",
+        "code": "Install Agent Reach for me: https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/install.md",
+        "lang": "text"
+      },
+      {
+        "heading": "Check which channels are live",
+        "body": "The doctor command reports every channel's status and, when one is down, why.",
+        "code": "agent-reach doctor",
+        "lang": "bash"
+      },
+      {
+        "heading": "Use the zero-config channels straight away",
+        "body": "Web pages, YouTube, RSS, GitHub, Bilibili and semantic search need no keys and no login — just ask the agent for the content.",
+        "code": "",
+        "lang": ""
+      },
+      {
+        "heading": "Add a login-gated platform",
+        "body": "For Twitter/X, Reddit, Facebook, Instagram, LinkedIn or Xiaohongshu, ask the agent to configure that platform; it walks you through the login and stores the result locally in ~/.agent-reach/config.yaml.",
+        "code": "",
+        "lang": ""
+      },
+      {
+        "heading": "Optionally install system-wide",
+        "body": "By default the installer only checks the environment without modifying it. The --system flag performs a system-wide setup instead.",
+        "code": "agent-reach install --system",
+        "lang": "bash"
+      }
+    ]
+  },
+  "useCases": [
+    "Give a coding or research agent read access to social platforms it otherwise cannot open",
+    "Pull YouTube transcripts, RSS feeds and GitHub content into an agent workflow without writing a scraper",
+    "Run web research from an agent without paying per-call search-API fees",
+    "Keep an agent's web access working when a platform changes, via the fallback backends and doctor check"
+  ],
+  "language": "Python",
+  "license": "MIT"
+}

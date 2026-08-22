@@ -1,0 +1,70 @@
+{
+  "slug": "omniroute",
+  "name": "OmniRoute",
+  "repo": "diegosouzapw/OmniRoute",
+  "homepage": "https://omniroute.online",
+  "category": "production-ops",
+  "categoryTitle": "Evaluation & Production Ops",
+  "subcategory": "llm-gateways",
+  "subcategoryTitle": "Gateways & Routing",
+  "tagline": "A local-first AI gateway that puts hundreds of providers behind one OpenAI-compatible endpoint",
+  "seoTitle": "OmniRoute — Open-Source Local AI Gateway & Router",
+  "metaDescription": "OmniRoute is an MIT-licensed AI gateway you run locally. It fronts hundreds of LLM providers with one OpenAI-compatible endpoint, auto-fallback and token compression.",
+  "overview": [
+    "OmniRoute is an MIT-licensed AI gateway that you install and run on your own machine. It aggregates hundreds of model providers — the major labs (OpenAI, Anthropic, Google Gemini, xAI, DeepSeek, Mistral, Qwen, Meta Llama, Groq, NVIDIA) alongside many smaller ones, a large share of which have free tiers — and exposes all of them through a single OpenAI-compatible `/v1` endpoint on `localhost:20128`, with a web dashboard for managing credentials and routing.",
+    "The point of the aggregation is resilience and cost. Requests can be sent to the special `auto` model and OmniRoute picks a provider for you; when one fails or hits a quota, quota-aware fallback moves the request on, backed by circuit breakers, exponential backoff and per-connection cooldowns. A multi-engine compression pipeline (which bundles techniques such as RTK, Caveman and LLMLingua-2) can shrink prompts before they go out, and a set of routing strategies covers priority, round-robin, cost-optimised, auto-scoring, fusion and pipeline modes.",
+    "It is aimed squarely at coding agents: the project lists integrations with Claude Code, Cursor, Cline, Codex, GitHub Copilot, Continue, Aider, OpenCode and other CLI tools, all of which just need their base URL pointed at the local gateway. Credentials are stored locally with AES-256-GCM encryption and telemetry is off by default; MCP and A2A support lets an agent drive the gateway itself. It is written in TypeScript and ships via npm, Docker, pnpm, AUR and Nix."
+  ],
+  "features": [
+    "One OpenAI-compatible endpoint in front of hundreds of providers and models, including many free tiers",
+    "Quota-aware automatic fallback with circuit breakers, exponential backoff and per-connection cooldowns",
+    "A range of routing strategies — priority, round-robin, cost-optimised, auto-scoring, fusion and pipeline",
+    "A multi-engine prompt-compression pipeline (RTK, Caveman, LLMLingua-2 and others) to cut outbound tokens",
+    "Zero-config `auto` model selection, so a client can work before any provider key is added",
+    "MCP and A2A support so agents can control the gateway as a tool",
+    "Local-first by design: AES-256-GCM encrypted credentials and no telemetry by default"
+  ],
+  "gettingStarted": {
+    "intro": "OmniRoute installs as a global npm package and runs as a local server with a dashboard. Docker, pnpm, AUR and Nix packages are also available.",
+    "steps": [
+      {
+        "heading": "Install and start the gateway",
+        "body": "Install globally with npm, then run it. The server comes up on http://localhost:20128 with a dashboard and an OpenAI-compatible API at /v1.",
+        "code": "npm install -g omniroute\nomniroute",
+        "lang": "bash"
+      },
+      {
+        "heading": "Connect a provider",
+        "body": "Open the dashboard and connect a provider. A free-tier provider is enough to start — you do not need a paid API key to make the first call.",
+        "code": "",
+        "lang": ""
+      },
+      {
+        "heading": "Send a request through it",
+        "body": "Call the special `auto` model and let OmniRoute pick a provider and fall back if one fails.",
+        "code": "curl http://localhost:20128/v1/chat/completions \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"model\":\"auto\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello!\"}]}'",
+        "lang": "bash"
+      },
+      {
+        "heading": "Point your coding agent at it",
+        "body": "Set your IDE or CLI agent's base URL to the local gateway. The project documents integrations for Claude Code, Cursor, Cline, Codex, GitHub Copilot, Continue, Aider and OpenCode, among others.",
+        "code": "http://localhost:20128/v1",
+        "lang": "text"
+      },
+      {
+        "heading": "Tune routing and compression",
+        "body": "Configuration comes from environment variables in a .env file, the dashboard panels, CLI commands or per-request headers — covering compression mode, routing strategy, provider credentials and proxy settings.",
+        "code": "",
+        "lang": ""
+      }
+    ]
+  },
+  "useCases": [
+    "Give a coding agent one stable endpoint and let the gateway handle provider outages and quota limits",
+    "Cut spend by routing cheap requests to free or low-cost providers and compressing prompts before they leave",
+    "Try many models from many providers without wiring up a separate SDK and key for each one",
+    "Keep keys and traffic on your own machine when a hosted gateway is not acceptable"
+  ],
+  "language": "TypeScript",
+  "license": "MIT"
+}

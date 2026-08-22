@@ -1,0 +1,246 @@
+{
+  "slug": "ornith-1-5-35b-a3b",
+  "name": "Ornith-1.5-35B-A3B",
+  "maker": "ornith",
+  "makerTitle": "Ornith",
+  "line": "ornith",
+  "lineTitle": "Ornith (open-weight)",
+  "tagline": "Mid-size member of the Ornith-1.5 family, released 18 August 2026: a 35B Mixture-of-Experts model activating about 3B parameters per token, under an MIT license.",
+  "seoTitle": "Ornith-1.5-35B-A3B: 35B MoE, 3B Active, MIT",
+  "metaDescription": "Ornith-1.5-35B-A3B is an MIT-licensed 35B Mixture-of-Experts model released 18 Aug 2026, activating ~3B parameters per token and scoring 79.0 on SWE-bench Verified.",
+  "releaseDate": "2026-08-18",
+  "status": "Generally available — open weights on Hugging Face",
+  "license": "MIT",
+  "openWeights": true,
+  "modalities": [
+    "Text"
+  ],
+  "contextWindow": "262K (≈1M with YaRN)",
+  "parameters": "~36B total · ~3B active (256 experts, 8 routed per token)",
+  "architecture": "Mixture-of-Experts on a Qwen3.5 base, 40 layers with interleaved linear and full attention",
+  "tags": [
+    "open-weights",
+    "coding",
+    "reasoning",
+    "agentic",
+    "long-context"
+  ],
+  "overview": [
+    "Ornith-1.5-35B-A3B is the mid-size member of the Ornith-1.5 family released on 18 August 2026, sitting between the 397B flagship and the 9B dense model. It is a Mixture-of-Experts model of roughly 36 billion total parameters that routes 8 of its 256 experts per token, so about 3 billion parameters are active on any given token — the source of the \"A3B\" in its name. The weights are published on Hugging Face under the MIT License in bf16, alongside FP8, NVFP4, MLX and GGUF builds.",
+    "It shares the family's training recipe: an end-to-end self-improvement loop in which the model proposes its own training tasks, constructs a task-specific scaffold for each, and learns from the resulting solution rollouts by reinforcement learning, on top of a Qwen3.5 base. Native context is 262,144 tokens, extendable to roughly one million with YaRN RoPE scaling at a factor of 4.0. Ornith's quickstart serves it with vLLM ≥ 0.19.1 across two 80 GB GPUs or with SGLang ≥ 0.5.9, using the qwen3 reasoning parser and an XML or qwen3_coder tool-call parser; the GGUF build runs under Ollama and llama.cpp.",
+    "On Ornith's published evaluations the 35B model scores 79.0 on SWE-bench Verified and 68.5 on Terminal-Bench 2.1 under its better harness, ahead of Qwen3.6-35B-A3B, Gemma-4-31B and Meta's Muse-Glimmer-30B at comparable size, and ahead of the much larger Qwen3.5-397B on several coding rows (SWE-bench Verified 79.0 vs 76.4, NL2Repo 46.2 vs 36.8). It trails that larger model on breadth-of-knowledge and search rows such as HLE with tools, WideSearch and BrowseComp."
+  ],
+  "strengths": [
+    "MIT-licensed open weights with FP8, NVFP4, MLX and GGUF builds published on day one",
+    "~3B active parameters per token, so inference cost tracks a small model while quality tracks a much larger one",
+    "SWE-bench Verified 79.0 and Terminal-Bench 2.1 68.5 on Ornith's evaluations — ahead of same-size open models and of Qwen3.5-397B on coding rows",
+    "262K native context, documented to extend to roughly 1M tokens with YaRN scaling",
+    "Runs on two 80 GB GPUs under vLLM, or locally through the GGUF and MLX builds"
+  ],
+  "useCases": [
+    "Self-hosted coding and terminal agents where a 397B model is too expensive to serve",
+    "Workstation and Apple-silicon local inference through the MLX and GGUF builds",
+    "Fine-tuning a permissively-licensed agentic base on domain-specific tool use",
+    "High-throughput batch agent workloads where the 3B active-parameter footprint sets the cost"
+  ],
+  "links": [
+    {
+      "label": "Ornith-1.5-35B-A3B model card (Hugging Face)",
+      "url": "https://huggingface.co/ornith-ai/Ornith-1.5-35B-A3B",
+      "kind": "model-card"
+    },
+    {
+      "label": "Ornith-1.5: From Self-Scaffolding to Self-Improvement (launch post)",
+      "url": "https://ornith.ai/ornith_1_5.html",
+      "kind": "announcement"
+    },
+    {
+      "label": "Ornith homepage",
+      "url": "https://ornith.ai",
+      "kind": "official"
+    },
+    {
+      "label": "Ornith on Hugging Face",
+      "url": "https://huggingface.co/ornith-ai",
+      "kind": "official"
+    },
+    {
+      "label": "Ornith-1.5-35B-A3B GGUF build",
+      "url": "https://huggingface.co/ornith-ai/Ornith-1.5-35B-A3B-GGUF",
+      "kind": "model-card"
+    }
+  ],
+  "benchmarks": [
+    {
+      "name": "GPQA Diamond",
+      "score": 89.2,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "SWE-bench Verified",
+      "score": 79,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "ClawEval",
+      "score": 72.5,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "SWE-bench Multilingual",
+      "score": 71.4,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "MCP-Atlas",
+      "score": 70.2,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "Terminal-Bench 2.1 (Claude Code)",
+      "score": 68.5,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "WideSearch",
+      "score": 67.8,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "BrowseComp",
+      "score": 67.6,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "SWE-bench Pro",
+      "score": 59.6,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "Toolathlon-Verified",
+      "score": 48.7,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "NL2Repo",
+      "score": 46.2,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "HLE (with tools)",
+      "score": 33.4,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "HLE (no tools)",
+      "score": 25.6,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "DeepSWE",
+      "score": 22,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Ornith's published launch comparison for Ornith-1.5-35B-A3B (18 August 2026). A dash means the source left the cell blank.",
+    "models": [
+      "Ornith-1.5-35B-A3B",
+      "Ornith-1.0-35B-A3B",
+      "Qwen3.6-35B-A3B",
+      "Gemma-4-31B",
+      "Muse-Glimmer-30B",
+      "Qwen3.5-397B"
+    ],
+    "subject": 0,
+    "rows": [
+      { "benchmark": "Terminal-Bench 2.1 (Terminus-2)", "scores": [67.8, 64.2, 52.5, 42.1, 51.7, 53.5] },
+      { "benchmark": "Terminal-Bench 2.1 (Claude Code)", "scores": [68.5, 62.8, 49.2, null, null, 48.6] },
+      { "benchmark": "SWE-bench Verified", "scores": [79, 75.6, 73.4, 52, 76, 76.4] },
+      { "benchmark": "SWE-bench Pro", "scores": [59.6, 50.4, 49.5, 35.7, 51.2, 51.6] },
+      { "benchmark": "SWE-bench Multilingual", "scores": [71.4, 69.3, 67.2, 51.7, null, 69.3] },
+      { "benchmark": "DeepSWE", "scores": [22, 0, 0, null, null, 1] },
+      { "benchmark": "Frontier-Bench v0.1", "scores": [5.1, 1.4, 1.4, null, null, 1.4] },
+      { "benchmark": "NL2Repo", "scores": [46.2, 34.6, 29.4, 15.5, null, 36.8] },
+      { "benchmark": "SWE Atlas – QnA", "scores": [39.8, 37.1, 15.5, null, null, 20.4] },
+      { "benchmark": "HLE (no tools)", "scores": [25.6, 20.8, 21.4, 19.5, 22, 28.7] },
+      { "benchmark": "HLE (with tools)", "scores": [33.4, 30.1, 28.9, 26.5, null, 48.3] },
+      { "benchmark": "GPQA Diamond", "scores": [89.2, 86.2, 86, 84.3, 83.5, 88.4] },
+      { "benchmark": "MCP-Atlas", "scores": [70.2, 64.4, 62.8, 55, 75.5, 72.3] },
+      { "benchmark": "Toolathlon-Verified", "scores": [48.7, 42.4, 41.7, 40.8, null, 38.3] },
+      { "benchmark": "WideSearch", "scores": [67.8, 63.4, 60.1, 54.2, null, 74] },
+      { "benchmark": "BrowseComp", "scores": [67.6, 63.5, 62, null, null, 78.6] },
+      { "benchmark": "ClawEval", "scores": [72.5, 69.8, 68.7, 48.5, null, 70.7] }
+    ],
+    "source": "https://ornith.ai/ornith_1_5.html"
+  },
+  "comparisonFigures": [
+    {
+      "url": "/models-media/ornith-1-5-35b-a3b-cmp-1.png",
+      "alt": "Ornith's published bar chart comparing Ornith-1.5-35B-A3B with Ornith-1.0-35B-A3B, Qwen3.6-35B-A3B, Muse-Glimmer-30B, Gemma-4-31B and the larger Qwen3.5-397B across Terminal-Bench 2.1, SWE-bench Verified, DeepSWE, Frontier-Bench v0.1, NL2Repo, SWE Atlas QnA, HLE, GPQA Diamond, MCP-Atlas, Toolathlon-Verified, WideSearch and BrowseComp.",
+      "caption": "Ornith's launch evaluation chart for Ornith-1.5-35B-A3B (18 August 2026); the dashed line separates same-size models from the larger Qwen3.5-397B.",
+      "credit": "Ornith",
+      "source": "https://huggingface.co/ornith-ai/Ornith-1.5-35B-A3B"
+    }
+  ],
+  "faq": [
+    {
+      "q": "What does \"A3B\" mean in Ornith-1.5-35B-A3B?",
+      "a": "It is the number of ACTIVE parameters per token. The model holds 256 experts and routes 8 of them for each token, so roughly 3 billion of its ~36 billion parameters do work on any given token. That is what keeps inference cost close to a small dense model."
+    },
+    {
+      "q": "Is Ornith-1.5-35B-A3B open source?",
+      "a": "Yes — the weights are on Hugging Face under the MIT License, free for commercial use, fine-tuning and self-hosting. Ornith also publishes FP8, NVFP4, MLX and GGUF builds of the same checkpoint."
+    },
+    {
+      "q": "What hardware does it need?",
+      "a": "Ornith's quickstart serves the bf16 weights with vLLM ≥ 0.19.1 across two 80 GB GPUs at a 262,144-token context, or with SGLang ≥ 0.5.9. The GGUF build runs under Ollama and llama.cpp, and MLX builds down to 4-bit are published for Apple silicon."
+    },
+    {
+      "q": "How does it compare with other ~30B open models?",
+      "a": "On Ornith's own evaluations it leads Qwen3.6-35B-A3B, Gemma-4-31B and Meta's Muse-Glimmer-30B on SWE-bench Verified (79.0 vs 73.4 / 52.0 / 76.0), Terminal-Bench 2.1 (67.8 vs 52.5 / 42.1 / 51.7) and GPQA Diamond (89.2 vs 86.0 / 84.3 / 83.5). Muse-Glimmer-30B leads it on MCP-Atlas (75.5 vs 70.2)."
+    }
+  ],
+  "versionHistory": [
+    {
+      "version": "Ornith-1.5-35B-A3B",
+      "slug": "ornith-1-5-35b-a3b",
+      "date": "2026-08-18",
+      "note": "Self-improvement loop extended to task generation; SWE-bench Verified 79.0.",
+      "current": true
+    },
+    {
+      "version": "Ornith-1.0-35B",
+      "date": "2026-06",
+      "note": "First-generation mid-size Ornith model, trained with self-scaffolding post-training."
+    }
+  ]
+}

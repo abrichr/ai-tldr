@@ -1,0 +1,236 @@
+{
+  "slug": "ornith-1-5-9b",
+  "name": "Ornith-1.5-9B",
+  "maker": "ornith",
+  "makerTitle": "Ornith",
+  "line": "ornith",
+  "lineTitle": "Ornith (open-weight)",
+  "tagline": "Small dense member of the Ornith-1.5 family, released 18 August 2026: 9B parameters sized for one GPU, MIT-licensed, with a 262K context.",
+  "seoTitle": "Ornith-1.5-9B: 9B Dense Open MIT Coding Model",
+  "metaDescription": "Ornith-1.5-9B is an MIT-licensed 9B dense model released 18 Aug 2026 for single-GPU and edge use. It scores 70.6 on SWE-bench Verified and 86.4 on GPQA Diamond.",
+  "releaseDate": "2026-08-18",
+  "status": "Generally available — open weights on Hugging Face",
+  "license": "MIT",
+  "openWeights": true,
+  "modalities": [
+    "Text"
+  ],
+  "contextWindow": "262K (≈1M with YaRN)",
+  "parameters": "~9B (dense)",
+  "architecture": "Dense transformer on a Qwen3.5 base, 32 layers with interleaved linear and full attention",
+  "tags": [
+    "open-weights",
+    "coding",
+    "reasoning",
+    "agentic",
+    "on-device",
+    "long-context"
+  ],
+  "overview": [
+    "Ornith-1.5-9B is the smallest member of the Ornith-1.5 family released on 18 August 2026, a 9-billion-parameter dense model that Ornith describes as designed for efficient single-GPU deployment and edge-deployable on mobile devices through a quantised Ornith-1.5-9B-Mobile variant. In bf16 the checkpoint is about 19 GB. The weights are MIT-licensed on Hugging Face, with GGUF and MLX builds (down to 4-bit) published alongside them.",
+    "It is trained by the same end-to-end self-improvement loop as its larger siblings: rather than learning from a fixed set of human-curated tasks, the model proposes new tasks, constructs a task-specific scaffold of instructions, tools and decomposition strategies for each, and improves through reinforcement learning on the resulting solution rollouts. The base is Qwen3.5, and the model keeps that base's 262,144-token native context, which Ornith documents extending to roughly one million tokens with YaRN RoPE scaling at a factor of 4.0.",
+    "Ornith publishes a full serving quickstart: `vllm serve ornith-ai/Ornith-1.5-9B` with the qwen3 reasoning parser and qwen3_xml tool-call parser, an equivalent SGLang launch, `ollama run ornith-1.5:9b`, and `llama-server -hf hf.co/ornith-ai/Ornith-1.5-9B-GGUF`. Recommended sampling differs by task — temperature 1.0 with presence_penalty 1.5 for general use, temperature 0.6 with no presence penalty for precise coding.",
+    "On Ornith's published evaluations the 9B model reaches 70.6 on SWE-bench Verified and 86.4 on GPQA Diamond, well ahead of the similarly-sized Qwen3.5-9B (53.2 and 81.7) and of the much larger dense Gemma-4-31B on the coding rows (52.0 on SWE-bench Verified). It generally trails the ~35B-class Qwen3.6-35B-A3B on breadth rows such as MCP-Atlas and BrowseComp while beating it on SWE Atlas QnA and NL2Repo."
+  ],
+  "strengths": [
+    "MIT-licensed 9B weights that fit a single GPU (~19 GB in bf16), with GGUF and 4-bit MLX builds for laptops",
+    "SWE-bench Verified 70.6 and GPQA Diamond 86.4 on Ornith's evaluations — far ahead of the same-size Qwen3.5-9B",
+    "Keeps the family's 262K native context, documented to extend to roughly 1M tokens with YaRN",
+    "One-line launches for vLLM, SGLang, Ollama and llama.cpp, with agent tool-call and reasoning parsers configured",
+    "Published per-task sampling recommendations (general vs precise coding) rather than a single default"
+  ],
+  "useCases": [
+    "Local and on-device coding assistants where the whole model must fit one GPU or a laptop",
+    "Edge and mobile deployment through the quantised Mobile and MLX builds",
+    "Cheap high-volume agent steps in a pipeline that escalates hard cases to a larger model",
+    "Fine-tuning a small, permissively-licensed agentic base for a narrow tool-use domain"
+  ],
+  "links": [
+    {
+      "label": "Ornith-1.5-9B model card (Hugging Face)",
+      "url": "https://huggingface.co/ornith-ai/Ornith-1.5-9B",
+      "kind": "model-card"
+    },
+    {
+      "label": "Ornith-1.5: From Self-Scaffolding to Self-Improvement (launch post)",
+      "url": "https://ornith.ai/ornith_1_5.html",
+      "kind": "announcement"
+    },
+    {
+      "label": "Ornith homepage",
+      "url": "https://ornith.ai",
+      "kind": "official"
+    },
+    {
+      "label": "Ornith on Hugging Face",
+      "url": "https://huggingface.co/ornith-ai",
+      "kind": "official"
+    },
+    {
+      "label": "Ornith-1.5-9B GGUF build",
+      "url": "https://huggingface.co/ornith-ai/Ornith-1.5-9B-GGUF",
+      "kind": "model-card"
+    }
+  ],
+  "benchmarks": [
+    {
+      "name": "GPQA Diamond",
+      "score": 86.4,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "SWE-bench Verified",
+      "score": 70.6,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "ClawEval",
+      "score": 66.5,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "WideSearch",
+      "score": 59.5,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "BrowseComp",
+      "score": 56.4,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "SWE-bench Multilingual",
+      "score": 54.4,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "MCP-Atlas",
+      "score": 54.2,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "SWE-bench Pro",
+      "score": 47.5,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "Terminal-Bench 2.1 (Claude Code)",
+      "score": 47,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "Toolathlon-Verified",
+      "score": 41.2,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "NL2Repo",
+      "score": 32.4,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "HLE (with tools)",
+      "score": 30.5,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "SWE Atlas – QnA",
+      "score": 20.6,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    },
+    {
+      "name": "HLE (no tools)",
+      "score": 20.2,
+      "unit": "%",
+      "max": 100,
+      "source": "https://ornith.ai/ornith_1_5.html"
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Ornith's published launch comparison for Ornith-1.5-9B (18 August 2026). A dash means the source left the cell blank; the last two columns are larger models shown for reference.",
+    "models": [
+      "Ornith-1.5-9B",
+      "Ornith-1.0-9B",
+      "Qwen3.5-9B",
+      "Qwen3.6-35B-A3B",
+      "Gemma-4-31B"
+    ],
+    "subject": 0,
+    "rows": [
+      { "benchmark": "Terminal-Bench 2.1 (Terminus-2)", "scores": [46.2, 43.1, 21.3, 52.5, 42.1] },
+      { "benchmark": "Terminal-Bench 2.1 (Claude Code)", "scores": [47, 40.6, 18.9, 49.2, null] },
+      { "benchmark": "SWE-bench Verified", "scores": [70.6, 69.4, 53.2, 73.4, 52] },
+      { "benchmark": "SWE-bench Pro", "scores": [47.5, 42.9, 31.3, 49.5, 35.7] },
+      { "benchmark": "SWE-bench Multilingual", "scores": [54.4, 52, 39.7, 67.2, 51.7] },
+      { "benchmark": "NL2Repo", "scores": [32.4, 27.2, 16.2, 29.4, 15.5] },
+      { "benchmark": "SWE Atlas – QnA", "scores": [20.6, 17.9, 9.2, 15.5, null] },
+      { "benchmark": "HLE (no tools)", "scores": [20.2, 16.8, 14.7, 21.4, 19.5] },
+      { "benchmark": "HLE (with tools)", "scores": [30.5, 26.4, 24.5, 28.9, 26.5] },
+      { "benchmark": "GPQA Diamond", "scores": [86.4, 82.5, 81.7, 86, 84.3] },
+      { "benchmark": "MCP-Atlas", "scores": [54.2, 49.4, 46.8, 62.8, 55] },
+      { "benchmark": "Toolathlon-Verified", "scores": [41.2, 33.4, 29.6, 41.7, 52.8] },
+      { "benchmark": "WideSearch", "scores": [59.5, 55.8, 53.6, 60.1, 54.2] },
+      { "benchmark": "BrowseComp", "scores": [56.4, 44.8, 41.5, 62, null] },
+      { "benchmark": "ClawEval", "scores": [66.5, 63.1, 53.2, 68.7, 48.5] }
+    ],
+    "source": "https://ornith.ai/ornith_1_5.html"
+  },
+  "faq": [
+    {
+      "q": "Can Ornith-1.5-9B run locally?",
+      "a": "Yes. It is a 9B dense model — about 19 GB in bf16 — that Ornith designs for single-GPU deployment. It publishes GGUF builds for llama.cpp and Ollama (`ollama run ornith-1.5:9b`) and MLX builds down to 4-bit for Apple silicon, plus a quantised Ornith-1.5-9B-Mobile variant described on the model card for edge devices."
+    },
+    {
+      "q": "Is it open source?",
+      "a": "The weights are published on Hugging Face under the MIT License, so you can download, run, fine-tune and use the model commercially, including self-hosted and on-device."
+    },
+    {
+      "q": "What sampling settings does Ornith recommend?",
+      "a": "Two profiles. For general tasks: temperature 1.0, top_p 0.95, top_k 20, min_p 0.0, presence_penalty 1.5, repetition_penalty 1.0. For precise coding: temperature 0.6, top_p 0.95, top_k 20, min_p 0.0, presence_penalty 0.0, repetition_penalty 1.0."
+    },
+    {
+      "q": "How much of the larger Ornith models' quality does it keep?",
+      "a": "On Ornith's own evaluations the 9B reaches 70.6 on SWE-bench Verified against 79.0 for the 35B-A3B and 86.0 for the 397B, and 86.4 on GPQA Diamond against 89.2 and 92.8. It is much stronger than the same-size Qwen3.5-9B (53.2 on SWE-bench Verified) and beats the far larger dense Gemma-4-31B on the coding rows."
+    }
+  ],
+  "versionHistory": [
+    {
+      "version": "Ornith-1.5-9B",
+      "slug": "ornith-1-5-9b",
+      "date": "2026-08-18",
+      "note": "Self-improvement loop extended to task generation; SWE-bench Verified 70.6.",
+      "current": true
+    },
+    {
+      "version": "Ornith-1.0-9B",
+      "date": "2026-06",
+      "note": "First-generation small Ornith model, trained with self-scaffolding post-training."
+    }
+  ]
+}
