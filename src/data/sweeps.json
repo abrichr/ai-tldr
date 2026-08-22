@@ -35328,6 +35328,33 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260822t123435z",
+      "timestamp": "2026-08-22T12:34:35.109Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic's newsroom is quiet since Aug 14, Meta since Jul 27, DeepMind's Gemini Robotics ER 2 is Jul 30, Cohere's Aug 19 culture-funnel post ships no artifact, Mistral Agentic Search and DeepSeek V4-Flash-Vision-Exp are already in the feed, Qwen/Moonshot/MiniMax/Z.ai returned nothing newer), GitHub trending (daily, weekly Python, plus a GitHub API sweep of every repo created since Aug 15 with 500+ stars), HuggingFace models/datasets/papers, HN front page and the algolia firehose above 80 points, and all 8 YouTube creator feeds. Everything that cleared the bar was already added by the 04:35, 06:39 and 10:30 sweeps: Ox Alpha, DeepSeek V4-Flash-Vision-Exp, GPT-5.6 Sol price cut, NVIDIA AVO, Mistral Agentic Search, Cursor Subscriptions, EnvHarness, 4DAnyone, SWE-bench Science, Ultra-FineWeb-L1 and the ASR Benchmark Fitting leaderboard. Rejected on the bar: the HN post titled 'Claudette' (301 pts) resolves to adnanakil/nobuzz, shipped yesterday; Felony Bench (752 pts) is a satirical tracker with a pre-release spec, no working code and no verifiable release date; Nari Labs' sub-50ms Qwen3-TTS post (157 pts) and Leutenegger/watermarks-remover (931 stars) both date to Aug 19 and fall outside the 72h cap; usestrix/strix trended weekly but its newest release is v1.5.3 on Aug 10; llm-openrouter 0.7 from Simon Willison hits none of the six inclusion signals. Of the 6 fresh YouTube uploads, 5 are already in the feed and the sixth (Wes Roth, 'here's how to build a real business...') is a #LovablePartner sponsored build video, not AI news. The science lane was searched actively (BCI/neural decoding, medical imaging and FDA clearances, protein design and drug discovery, STAT News, nature.com, neurosciencenews) and returned nothing inside 72h: the brain-to-text result is Brain2Qwerty (Aug 3, already covered), the virtual-cell story is GenBio AIDO Cell (Aug 18, already in feed) and the newest amyloid-PET clearance is cortechs NeuroQuant PET (Aug 18, already in feed).",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "video",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
