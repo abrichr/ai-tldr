@@ -35133,6 +35133,40 @@
         "algorithm",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260822t005929z",
+      "timestamp": "2026-08-22T00:59:29.583Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Cohere, Qwen, Moonshot, DeepSeek, Z.ai, MiniMax), GitHub trending, HuggingFace models/datasets/papers, HN front page and newest, the AI-for-science lane (BCI, medical imaging, pharma) and all 8 YouTube feeds. Only one new qualifying item: 1littlecoder's hands-on test of the Ox Alpha stealth model, uploaded 2 hours ago. Everything else fresh was already in the feed from the 22:30Z sweep.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "1littlecoder-ox-alpha-test-aug21",
+          "title": "1littlecoder — 'I Tested Ox Alpha (stealth model)'",
+          "category": "video",
+          "note": "Fresh upload (2h) from a listed creator testing Ox Alpha; the video is its own item under the video-dedup exception even though openrouter-ox-alpha is already in the feed."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }

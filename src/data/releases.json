@@ -1,8 +1,63 @@
 {
-  "generatedAt": "2026-08-21T22:29:20.029Z",
+  "generatedAt": "2026-08-22T00:59:29.583Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "1littlecoder-ox-alpha-test-aug21",
+      "categories": [
+        "video"
+      ],
+      "title": "1littlecoder — 'I Tested Ox Alpha (stealth model)'",
+      "org": "1littlecoder",
+      "date": "2026-08-21",
+      "url": "https://www.youtube.com/watch?v=3INNP9KXxp4",
+      "summary": "1littlecoder's new video is a hands-on test of Ox Alpha, the anonymous reasoning model that appeared on OpenRouter on August 20 with a 1,048,576-token context window and no charge for tokens.",
+      "tags": [
+        "1littlecoder",
+        "video",
+        "youtube",
+        "Ox Alpha",
+        "openrouter",
+        "stealth-model",
+        "coding-agents",
+        "long-context",
+        "reasoning-models"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "1littlecoder puts Ox Alpha, the free 1M-context stealth model on OpenRouter, through a hands-on test.",
+        "whatIsIt": "Ox Alpha is the subject of 1littlecoder's newest upload: an anonymous reasoning model that showed up on OpenRouter on August 20, 2026 under the provider name \"Stealth\". OpenRouter lists it as a model built for coding, long agent runs and production work, and charges nothing for prompt or completion tokens during the preview.",
+        "howItWorks": "The model takes text, images and video as input and returns text. Its context window is 1,048,576 tokens with a maximum output of 131,072 tokens, and it supports function calling through `tools` and `tool_choice` plus JSON-formatted output. OpenRouter routes the requests but is not the owner, so the lab behind Ox Alpha is not named.",
+        "whyItMatters": "A free 1M-token model that nobody has claimed is exactly the kind of thing developers want measured before they wire it into an agent. OpenRouter also states that the provider keeps prompts and completions, though not for training, which is a real consideration for production code. A creator test gives people numbers to look at while the model is still anonymous.",
+        "forWho": "developers evaluating coding models",
+        "tryIt": "https://openrouter.ai/stealth/ox-alpha"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/3INNP9KXxp4/hqdefault.jpg",
+        "alt": "1littlecoder YouTube thumbnail for 'I Tested Ox Alpha (stealth model)'",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=3INNP9KXxp4"
+        },
+        {
+          "label": "1littlecoder Channel",
+          "url": "https://www.youtube.com/@1littlecoder"
+        },
+        {
+          "label": "Ox Alpha on OpenRouter",
+          "url": "https://openrouter.ai/stealth/ox-alpha"
+        }
+      ],
+      "author": {
+        "name": "1littlecoder",
+        "profileUrl": "https://www.youtube.com/@1littlecoder"
+      },
+      "publishDate": "2026-08-22T00:59:29.583Z"
+    },
     {
       "id": "anthropic-claude-security-mythos-5",
       "categories": [
