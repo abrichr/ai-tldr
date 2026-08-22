@@ -35261,6 +35261,33 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260822t082923z",
+      "timestamp": "2026-08-22T08:29:23.621Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, DeepMind, Mistral, Meta, Cohere, OpenAI, xAI, Qwen and the Chinese frontier labs), GitHub trending daily + weekly, HuggingFace models/datasets/papers, HN front page top 30, all 8 YouTube creator feeds, Simon Willison, tier-1 press and the AI-for-science lane (BCI, clinical imaging, pharma, FDA, nature.com). Nothing new qualified: all 6 fresh YouTube videos except one off-topic business clip are already in the feed; HN's biggest AI stories were Claudette (the same adnanakil/nobuzz repo already shipped) and Felony Bench (a tracker publicly discussed on X since 2026-07-31, so well outside the 72h cap); every HF trending model, dataset and top-10 paper is either already covered, 5-9 days old, or has no released code to clear the 2-of-N paper bar; the newest lab-blog posts (Anthropic Aug 14, DeepMind Gemini 3.7 Flash, Mistral Agentic Search, Cohere Aug 19 research note) are already in the feed or outside the window.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "algorithm",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
