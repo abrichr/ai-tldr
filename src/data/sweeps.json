@@ -35201,6 +35201,33 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260822t043506z",
+      "timestamp": "2026-08-22T04:35:06.088Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic quiet since Aug 14, Meta since Jul 27, Moonshot since Jul 16, Cohere's Aug 19 post has no released artifact, Mistral's Aug 20 Agentic Search already in feed, DeepSeek/Z.ai/Qwen/MiniMax nothing newer than what we hold), GitHub trending (daily + weekly + Go + Python), HuggingFace models/datasets/papers, HN front page and page 2, and the 8 YouTube creator feeds. The 3 fresh videos from yt-rss-scan (Fireship x2, Two Minute Papers) are all already in the feed. Best remaining candidates were rejected on the bar: Ollama v0.32.15 (Aug 20, real 2x TTFT win, but no HN/press/trending/HF signal), llmfit and Tencent AI-Infra-Guard (trending but newest release Aug 17 — outside 72h), caveman (100k stars, trending again, but shipped Apr 8 and already in feed), FACET (HF papers #2 but no public code/demo, fails the paper 2-of-N), FelonyBench (pre-release spec, no working code), ChatGPT for Teens and ChatGPT for Linux (Aug 18 and Aug 11 — outside 72h), Gemini Live Deep Research (same Aug 19 bundle we already carry as google-gemini-student-study-tools). The feed already holds 44 items dated inside this 72h window, so the 2h cadence had picked up everything that qualified.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
