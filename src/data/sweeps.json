@@ -35395,6 +35395,46 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260822t163008z",
+      "timestamp": "2026-08-22T16:30:08.083Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, xAI, Qwen, DeepSeek, Z.ai), GitHub trending daily and weekly, HuggingFace models/datasets/papers/blog, HN front page and newest, all 8 YouTube creator feeds, and the AI-for-science lane (STAT News, Nature subjects, npj Digital Medicine, Endpoints, BCI/medical-imaging/protein-design searches). Added two Anthropic ships from 2026-08-20 that the feed had missed: the agent APIs reaching general availability plus the new browser use tool, and Claude Academy. Everything else fresh in the window was already in the feed (Mistral Agentic Search, Codex CLI 0.149.0, GPT-5.6 Sol price cut, Apple Messages plugin, LFM2.5-DSpark, the ASR benchmark post, and 4 of 5 fresh creator videos).",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "anthropic-agent-apis-ga",
+          "title": "Claude browser use tool — Anthropic's agent APIs are now generally available",
+          "category": "tool",
+          "note": "Anthropic shipped a new browser use tool and moved computer use, the Skills API and the Files API to general availability on 2026-08-20; verified against the announcement plus four platform docs pages."
+        },
+        {
+          "id": "anthropic-claude-academy",
+          "title": "Claude Academy — Anthropic opens a course hub for learning AI",
+          "category": "resource",
+          "note": "Anthropic launched Claude Academy on 2026-08-20; course names, lesson counts and runtimes verified directly on academy.claude.com."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "paper",
+        "dataset",
+        "video",
+        "article",
+        "benchmark",
+        "resource",
+        "tutorial",
+        "ecosystem"
+      ]
     }
   ]
 }

@@ -1,8 +1,162 @@
 {
-  "generatedAt": "2026-08-22T14:24:46.060Z",
+  "generatedAt": "2026-08-22T16:30:08.083Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "anthropic-agent-apis-ga",
+      "categories": [
+        "tool"
+      ],
+      "title": "Claude browser use tool — Anthropic's agent APIs are now generally available",
+      "org": "Anthropic",
+      "date": "2026-08-20",
+      "url": "https://claude.com/blog/computer-use-skills-api-files-api",
+      "summary": "Anthropic moved computer use, the Skills API and the Files API to general availability on the Claude Platform, and added a new browser use tool that reads page structure instead of guessing from pixels alone.",
+      "tags": [
+        "anthropic",
+        "claude",
+        "computer-use",
+        "browser-use",
+        "agents",
+        "skills-api",
+        "files-api",
+        "tool-use",
+        "api",
+        "hipaa"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Anthropic"
+        },
+        {
+          "label": "What's new",
+          "value": "Browser use tool"
+        },
+        {
+          "label": "Now generally available",
+          "value": "Computer use, Skills API, Files API"
+        },
+        {
+          "label": "Browser tool surface",
+          "value": "27 default member tools"
+        },
+        {
+          "label": "File storage",
+          "value": "1 TB per organization"
+        },
+        {
+          "label": "Max file size",
+          "value": "500 MB"
+        },
+        {
+          "label": "Availability",
+          "value": "Claude Platform, Microsoft Foundry"
+        }
+      ],
+      "explainer": {
+        "tagline": "Anthropic's agent building blocks leave preview, joined by a browser tool that targets page elements instead of pixels.",
+        "whatIsIt": "A new browser use tool lets Claude read and act on a webpage directly, instead of working out where to click from a screenshot alone. Anthropic shipped it alongside general availability for three older agent building blocks on the Claude Platform: computer use, the Skills API and the Files API. The browser tool arrives with 27 default member tools covering navigation, clicking, typing, reading page text, forms and tabs.",
+        "howItWorks": "The browser use tool mixes screenshots with page structure: Claude calls read_page or find to get element references, then aims at those references rather than pixel coordinates. Computer use can now return several actions in one response — click, then type, then screenshot — so a task finishes in fewer model calls. Skills are folders of instructions, scripts and templates that Claude loads only when a task needs them, and they run inside the code execution sandbox.",
+        "whyItMatters": "General availability is what lets teams put these agents in front of real users. Anthropic says the computer use tool is now eligible for HIPAA-regulated work under a Business Associate Agreement, which opens up healthcare workflows. Anthropic reports that its customer Asteroid cut its longest claims workflow from 32 minutes to 13, with cost per task down about 30% across every workflow.",
+        "forWho": "teams shipping production AI agents",
+        "tryIt": "Add a browser_toolset_20260801 entry to the tools array of a Messages request"
+      },
+      "faq": [
+        {
+          "q": "Which Claude models support the browser use tool?",
+          "a": "Anthropic's documentation lists the browser use tool as compatible with claude-fable-5, claude-mythos-5, claude-opus-5, claude-sonnet-5 and claude-opus-4-8. The docs also say it runs on the Claude API only, and is not available on Claude Platform on AWS, Amazon Bedrock, Google Cloud or Microsoft Foundry. Computer use is offered across a wider set of deployment options."
+        },
+        {
+          "q": "How is the browser use tool different from computer use?",
+          "a": "Computer use drives a whole desktop through screenshots, mouse and keyboard. The browser use tool stays inside webpages and reads the page itself, so Claude can target an element by reference instead of by pixel position. Anthropic's docs say the browser tool is the closer fit for tasks that never leave the browser, and that both tools can be combined in one request."
+        },
+        {
+          "q": "Can Claude's computer use tool handle healthcare data?",
+          "a": "Anthropic states that the updated computer use tool is now eligible for HIPAA-regulated workloads under its Business Associate Agreement. That makes it usable for agent workflows touching protected health information, as long as the customer has a BAA in place with Anthropic. The announcement does not extend that same eligibility statement to the new browser use tool."
+        },
+        {
+          "q": "How long do files uploaded to the Claude Files API last?",
+          "a": "Files in the Claude Files API stay until you delete them, unless you set an expiry when uploading. The expires_in_seconds field takes a value between 3,600 seconds (one hour) and 7,776,000 seconds (90 days), and it cannot be changed afterwards. Each organization gets 1 TB of storage, with a 500 MB cap on any single file."
+        }
+      ],
+      "image": {
+        "url": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/69051360369f8c1bb58fc2fe_og_build-artifacts.jpg",
+        "alt": "Anthropic announcement card for Claude computer use, the Skills API and the Files API",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://claude.com/blog/computer-use-skills-api-files-api"
+        },
+        {
+          "label": "Browser Use Docs",
+          "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/browser-use-tool"
+        },
+        {
+          "label": "Computer Use Docs",
+          "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool"
+        },
+        {
+          "label": "Skills API Guide",
+          "url": "https://platform.claude.com/docs/en/build-with-claude/skills-guide"
+        },
+        {
+          "label": "Files API Docs",
+          "url": "https://platform.claude.com/docs/en/build-with-claude/files"
+        }
+      ],
+      "publishDate": "2026-08-22T16:30:08.083Z"
+    },
+    {
+      "id": "anthropic-claude-academy",
+      "categories": [
+        "resource",
+        "tutorial"
+      ],
+      "title": "Claude Academy — Anthropic opens a course hub for learning AI",
+      "org": "Anthropic",
+      "date": "2026-08-20",
+      "url": "https://claude.com/blog/anthropics-approach-to-teaching-and-learning-ai",
+      "summary": "Claude Academy is a learning hub from Anthropic with courses, tutorials and use cases for working with AI. It opens with two courses, one tutorial and five product tracks covering Claude.ai, Cowork, Code, Tag and Claude Platform.",
+      "tags": [
+        "anthropic",
+        "claude",
+        "claude-academy",
+        "education",
+        "ai-literacy",
+        "courses",
+        "training"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Claude Academy puts Anthropic's own AI training on a public site, with courses, quizzes and completion badges.",
+        "whatIsIt": "Claude Academy collects Anthropic's AI training into one public site at academy.claude.com. It opens with two full courses — 'AI Fluency: Framework & Foundations' (14 lessons, one quiz, about 4 hours) and 'AI Capabilities and Limitations' (13 lessons, one quiz, about 3.5 hours) — plus a 7-minute tutorial called 'The 4 Properties of AI'. Five product tracks cover Claude.ai, Claude Cowork, Claude Code, Claude Tag and the Claude Platform.",
+        "howItWorks": "Lessons are grouped around real problems and by department, so a legal team can open a collection of legal use cases. A Claude Academy Skill inside Claude recommends what to study next, and finishing a course awards a completion badge that tracks progress. Anthropic says the material mirrors the onboarding it gives its own employees and teaches what it calls the 4D AI Fluency Framework.",
+        "whyItMatters": "Most teams now get Claude access long before they get any training in it. A vendor-written course hub gives managers a shared starting point instead of ad-hoc internal decks, and gives individuals a path from 'I have an account' to knowing what the tool can and cannot do. The courses are reachable from academy.claude.com or the 'Learn more' tab in a Claude profile.",
+        "forWho": "teams rolling out AI internally",
+        "tryIt": "https://academy.claude.com"
+      },
+      "image": {
+        "url": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a87352164143e387edeb760_og_anthropics-approach-to-teaching-and-learning-ai.jpg",
+        "alt": "Anthropic announcement card for its approach to teaching and learning AI",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://claude.com/blog/anthropics-approach-to-teaching-and-learning-ai"
+        },
+        {
+          "label": "Claude Academy",
+          "url": "https://academy.claude.com"
+        }
+      ],
+      "publishDate": "2026-08-22T16:30:08.083Z"
+    },
     {
       "id": "cymerys-ai-blind",
       "categories": [
