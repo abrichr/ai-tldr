@@ -1,8 +1,218 @@
 {
-  "generatedAt": "2026-08-22T08:29:23.621Z",
+  "generatedAt": "2026-08-22T10:30:28.629Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openai-regional-processing-per-request",
+      "categories": [
+        "tool"
+      ],
+      "title": "OpenAI regional processing — pick an inference region per API request",
+      "org": "OpenAI",
+      "date": "2026-08-21",
+      "url": "https://developers.openai.com/api/docs/guides/your-data",
+      "summary": "OpenAI now lets a single API call choose where it runs. Swap api.openai.com for a regional domain such as eu.api.openai.com or jp.api.openai.com and that request is processed in that region. Ten regions are live.",
+      "tags": [
+        "openai",
+        "api",
+        "data-residency",
+        "regional-processing",
+        "compliance",
+        "enterprise",
+        "gdpr",
+        "developer-tools"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenAI"
+        },
+        {
+          "label": "What's new",
+          "value": "Region chosen per request, not per project"
+        },
+        {
+          "label": "Regions",
+          "value": "US, EU, UK, Canada, Australia, Japan, India, Singapore, South Korea, UAE"
+        },
+        {
+          "label": "How",
+          "value": "Prefixed domain, e.g. eu.api.openai.com"
+        },
+        {
+          "label": "Requirement",
+          "value": "API key from a project with Global geography"
+        },
+        {
+          "label": "Endpoints",
+          "value": "/v1/chat/completions, /v1/responses, /v1/embeddings and other marked routes"
+        },
+        {
+          "label": "Extra approval",
+          "value": "Non-US regions need abuse-monitoring approval and a Modified Retention amendment"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Do I need a separate OpenAI project or API key for each region?",
+          "a": "No. Regional processing works from one API key belonging to a project with Global geography, which is the point of the change. OpenAI's Python example reuses a single client and a single key, overriding only the base URL per call, so a region no longer implies a separate project, key rotation or quota to manage."
+        },
+        {
+          "q": "What approvals does OpenAI require before a non-US region can be used?",
+          "a": "OpenAI keeps its existing eligibility rules in place for regional processing. For any non-US region a customer must obtain approval for abuse monitoring controls and execute a Modified Retention amendment. The UAE region carries a further requirement: it needs its own separate approval on top of that, so access is not automatic."
+        },
+        {
+          "q": "Does every OpenAI model and endpoint support regional processing?",
+          "a": "No. Only the endpoints and model snapshots explicitly marked as supporting regional processing in OpenAI's documentation tables accept a regional domain. The listed routes include /v1/chat/completions, /v1/responses and /v1/embeddings, and the supported model snapshots differ by region, so the tables have to be checked per region."
+        },
+        {
+          "q": "Can global and regional requests live in the same application?",
+          "a": "Yes. Because regional processing at OpenAI is selected by hostname, one application can send some traffic to api.openai.com and route other traffic to a regional domain, using the same key. OpenAI's SDK example shows exactly this pattern: keep one client, change base_url on the calls that need a fixed region."
+        }
+      ],
+      "explainer": {
+        "tagline": "One API key, ten regional domains — choose where each OpenAI request is processed.",
+        "whatIsIt": "Regional processing is now a per-request choice at OpenAI instead of a per-project setting. An API key from a project with Global geography can call a region-prefixed domain — eu.api.openai.com, jp.api.openai.com and eight others — and that one request is handled in the chosen region. OpenAI shipped it in the API changelog on 21 August 2026 and documented it in the data controls guide.",
+        "howItWorks": "The routing decision rides entirely on the hostname. The request path, body and API key stay the same, so client code only changes its base URL; OpenAI's Python SDK example reuses one client and overrides base_url per call. Eligibility and data-retention rules are unchanged, and a regional domain is only accepted by the endpoints and model snapshots the docs mark as supported.",
+        "whyItMatters": "Teams under data-residency rules previously had to split traffic across separate region-locked OpenAI projects, each with its own key, quota and deployment. Choosing the region at call time lets one codebase serve an EU customer and a US customer from the same key, which turns residency into a routing decision instead of a fork of the stack.",
+        "forWho": "enterprise and compliance-bound API teams",
+        "tryIt": "base_url=\"https://eu.api.openai.com/v1\""
+      },
+      "image": {
+        "url": "https://developers.openai.com/og/api/docs/guides/your-data.png",
+        "alt": "OpenAI API documentation card for data controls and regional processing",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Data Controls Guide",
+          "url": "https://developers.openai.com/api/docs/guides/your-data"
+        },
+        {
+          "label": "API Changelog",
+          "url": "https://developers.openai.com/api/docs/changelog"
+        },
+        {
+          "label": "Pricing",
+          "url": "https://developers.openai.com/api/docs/pricing"
+        }
+      ],
+      "publishDate": "2026-08-22T10:30:28.629Z"
+    },
+    {
+      "id": "huggingface-asr-benchmark-fitting",
+      "categories": [
+        "benchmark",
+        "paper",
+        "repo"
+      ],
+      "title": "Benchmark Fitting — Hugging Face scores how much ASR models memorize tests",
+      "org": "Hugging Face",
+      "date": "2026-08-21",
+      "url": "https://huggingface.co/blog/asr-benchmark-optimization",
+      "summary": "Hugging Face and Hume AI added a Benchmark Fitting tab to the Open ASR Leaderboard. Three probes check whether a speech model transcribes the audio or repeats the reference. Six of 11 models dropped audible words the reference lacked.",
+      "tags": [
+        "huggingface",
+        "hume-ai",
+        "asr",
+        "speech-recognition",
+        "benchmark",
+        "leaderboard",
+        "evaluation",
+        "overfitting",
+        "open-asr-leaderboard",
+        "voxpopuli",
+        "librispeech",
+        "word-error-rate"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Hugging Face with Hume AI, Artificial Analysis and Treble Technologies"
+        },
+        {
+          "label": "What's new",
+          "value": "Benchmark Fitting tab on the Open ASR Leaderboard"
+        },
+        {
+          "label": "Probes",
+          "value": "Reference disagreement, masked entity retrieval, orthographic switching"
+        },
+        {
+          "label": "Models tested",
+          "value": "11, including Whisper large-v3, Parakeet, Canary, Qwen3-ASR and Voxtral"
+        },
+        {
+          "label": "Also launched",
+          "value": "Real World VoiceEQ and a far-field ASR leaderboard"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0 (evaluation scripts)"
+        },
+        {
+          "label": "Paper",
+          "value": "Towards Quantifying Benchmark Optimization in ASR Models"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does a low word error rate still mean an ASR model is accurate?",
+          "a": "Not on its own, according to the Benchmark Fitting analysis. Hugging Face and Hume AI report that the highest-scoring models were the most likely to reproduce erroneous VoxPopuli transcripts, so part of a strong word error rate reflects learned test-set patterns. The new tab is meant to be read next to word error rate, not instead of it."
+        },
+        {
+          "q": "Are the ASR test sets themselves clean?",
+          "a": "Not fully. The Benchmark Fitting team found that 40% of VoxPopuli test clips contain potential reference errors, touching about 3% of all reference words. Artificial Analysis published a cleaned version as VoxPopuli-Cleaned-AA, and the reference-disagreement probe uses those known errors to measure how often a model repeats them."
+        },
+        {
+          "q": "Did the models behave differently on freshly recorded audio?",
+          "a": "Yes, and that is the control the study leans on. The Benchmark Fitting write-up reports weaker benchmark-optimization behaviour on newly collected audio from the same domains — European Parliament and LibriVox recordings made in 2026 — which separates genuine domain skill from memorization of the published test sets."
+        },
+        {
+          "q": "How can the Benchmark Fitting results be reproduced?",
+          "a": "The evaluation scripts sit under benchmark_fitting in the Apache-2.0 huggingface/open_asr_leaderboard repository, and Hume AI published its own code at HumeAI/asr-benchmark-optimization. Hugging Face also released the un-normalized model outputs in a public bucket, so the scoring can be rechecked without re-running all eleven speech models."
+        }
+      ],
+      "explainer": {
+        "tagline": "A new leaderboard tab measures how much a speech model memorized the test set instead of hearing the audio.",
+        "whatIsIt": "The Open ASR Leaderboard now carries a Benchmark Fitting tab, built by Hugging Face with Hume AI, Artificial Analysis and Treble Technologies. Per model, it reports how much of a good word error rate comes from learned test-set patterns rather than transcription skill. Two further boards launched alongside it: Real World VoiceEQ and a far-field ASR leaderboard.",
+        "howItWorks": "Three behavioural probes drive the score. Reference disagreement checks whether a model repeats a known transcript error instead of the words actually spoken. Masked entity retrieval silences a number in the audio and sees whether the model fills it back in — some models did so 30–40% of the time on LibriSpeech. Orthographic switching tests whether a model copies each dataset's house style, matching conventions such as \"Mr.\" against \"Mister\" up to 90% of the time.",
+        "whyItMatters": "Word error rate is how most teams pick a speech vendor, and these results argue that leading scores are partly a test-taking skill: six of eleven models dropped audible phrases when the audio contradicted the benchmark reference. Anyone comparing ASR systems now has a second column that estimates how much of the headline number survives contact with their own recordings.",
+        "forWho": "speech ML engineers and teams choosing an ASR vendor",
+        "tryIt": "https://huggingface.co/spaces/hf-audio/open_asr_leaderboard"
+      },
+      "image": {
+        "url": "https://huggingface.co/blog/assets/asr-benchmark-optimization/thumbnail.png",
+        "alt": "Thumbnail for the Hugging Face post on measuring benchmark optimization in speech recognition",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://huggingface.co/papers/2608.19936"
+        },
+        {
+          "label": "Open ASR Leaderboard",
+          "url": "https://huggingface.co/spaces/hf-audio/open_asr_leaderboard"
+        },
+        {
+          "label": "Evaluation Code",
+          "url": "https://github.com/huggingface/open_asr_leaderboard"
+        },
+        {
+          "label": "Hume AI Code",
+          "url": "https://github.com/HumeAI/asr-benchmark-optimization"
+        },
+        {
+          "label": "Real World VoiceEQ",
+          "url": "https://huggingface.co/spaces/HumeAI/rw-voice-eq"
+        }
+      ],
+      "publishDate": "2026-08-22T10:30:28.629Z"
+    },
     {
       "id": "openai-gpt-5-6-sol-price-cut",
       "categories": [

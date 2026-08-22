@@ -35288,6 +35288,46 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260822t103028z",
+      "timestamp": "2026-08-22T10:30:28.629Z",
+      "source": "github-actions-sweep",
+      "summary": "Added two items: OpenAI's per-request regional processing (21 Aug) and the Open ASR Leaderboard's new Benchmark Fitting tab from Hugging Face and Hume AI (21 Aug). Lab blogs were otherwise quiet — Anthropic, Meta, Mistral, DeepMind, Qwen and the Chinese labs had nothing new inside 72h; every fresh YouTube video from the 8 creator feeds except one off-topic upload was already in the feed, and the top HN, GitHub-trending and HF trending items (Ox Alpha, DeepSeek V4-Flash-Vision, GPT-5.6 Sol price cut, Antigravity, Cursor Subscriptions, Mistral Agentic Search, OpenRouter/Stripe) were already covered.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-regional-processing-per-request",
+          "title": "OpenAI regional processing — pick an inference region per API request",
+          "category": "tool",
+          "note": "Official OpenAI docs + API changelog entry dated 21 Aug; a concrete developer action (change the base URL to pin a processing region) with ten named regions, so it clears the tool/ecosystem gate."
+        },
+        {
+          "id": "huggingface-asr-benchmark-fitting",
+          "title": "Benchmark Fitting — Hugging Face scores how much ASR models memorize tests",
+          "category": "benchmark",
+          "note": "A released benchmark artifact, not a bare paper: new leaderboard tab, two new leaderboards, Apache-2.0 eval scripts in a 240-star repo and a companion paper — clears the 2-of-N paper bar via public code plus a live leaderboard."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "video",
+        "dataset",
+        "paper",
+        "benchmark",
+        "algorithm",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
