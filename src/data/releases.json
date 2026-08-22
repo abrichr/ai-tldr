@@ -1,8 +1,77 @@
 {
-  "generatedAt": "2026-08-22T16:30:08.083Z",
+  "generatedAt": "2026-08-22T20:26:05.486Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "simonw-llm-0-33-aug22",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "LLM 0.33 — Simon Willison's CLI moves to the OpenAI Python 3.x library",
+      "org": "Simon Willison",
+      "date": "2026-08-22",
+      "url": "https://simonwillison.net/2026/Aug/22/llm/",
+      "summary": "Simon Willison releases LLM 0.33, an update to his Python CLI for language models. The release moves onto the OpenAI Python library 3.x and httpx2, lets embedding commands take a per-call API key, and allows templates to be combined.",
+      "tags": [
+        "llm-cli",
+        "simon-willison",
+        "datasette",
+        "python",
+        "open-source",
+        "developer-tools",
+        "cli",
+        "embeddings",
+        "openai",
+        "httpx2",
+        "plugins",
+        "tool-use"
+      ],
+      "importance": "notable",
+      "metrics": {
+        "GitHub stars": "12,389",
+        "License": "Apache-2.0"
+      },
+      "explainer": {
+        "tagline": "LLM 0.33 rebases Simon Willison's model CLI on the OpenAI Python 3.x library and adds per-call embedding keys.",
+        "whatIsIt": "LLM 0.33 moves Simon Willison's command-line tool for language models onto the OpenAI Python library 3.x and swaps its HTTP client from httpx to httpx2. The release also lets `llm embed` and `llm embed-multi` accept a `--key` flag, shows the output of server-side tool calls inside `llm logs`, and lets `-t/--template` be repeated so one template supplies the model settings while another supplies the prompt.",
+        "howItWorks": "The per-call key travels through a new `key=` argument on `EmbeddingModel.embed()`, `embed_multi()` and the matching `Collection` methods, so a plugin receives the resolved key without the shared model state changing; plugins that still read `self.key` keep working through a compatibility fallback. Server-side tool output is stored with a `server_executed` marker, which is how `llm logs --json` and `llm logs --short` tell it apart from tools that ran on the local machine.",
+        "whyItMatters": "Plugin authors feel this release first: the jump to OpenAI 3.x and httpx2 raises the dependency floor for every plugin in the LLM ecosystem, and the `--key` argument removes a long-standing reason to mutate shared model state just to embed with a second account. For everyday users, repeated `-t` flags mean a saved model configuration and a saved prompt no longer have to live in the same template file.",
+        "forWho": "Python developers and LLM plugin authors",
+        "tryIt": "pip install -U llm"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/426d7b2c327928598f23a613279d5a082deb86d37006e3117af235b5bdba190e/simonw/llm/releases/tag/0.33",
+        "alt": "GitHub release page for simonw/llm version 0.33",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://simonwillison.net/2026/Aug/22/llm/"
+        },
+        {
+          "label": "Release Notes",
+          "url": "https://github.com/simonw/llm/releases/tag/0.33"
+        },
+        {
+          "label": "Changelog",
+          "url": "https://llm.datasette.io/en/stable/changelog.html"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/simonw/llm"
+        }
+      ],
+      "author": {
+        "name": "Simon Willison",
+        "handle": "@simonw",
+        "profileUrl": "https://simonwillison.net",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/9599?v=4"
+      },
+      "publishDate": "2026-08-22T20:25:18.802Z"
+    },
     {
       "id": "anthropic-agent-apis-ga",
       "categories": [

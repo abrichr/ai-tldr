@@ -35435,6 +35435,61 @@
         "tutorial",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260822t202518z",
+      "timestamp": "2026-08-22T20:25:18.802Z",
+      "source": "github-actions-sweep",
+      "summary": "Added LLM 0.33, Simon Willison's CLI release from today. Lab blogs were quiet (Anthropic newest post is Aug 14, Meta Jul 27, Mistral's Agentic Search and OpenAI's Messages plugin, GPT-5.6 Sol price cut and Codex CLI 0.149 are all already in the feed); GitHub trending, HF models/datasets/papers, HN front page and the 8 YouTube feeds returned only items we already carry or items outside the 72h date cap.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "simonw-llm-0-33-aug22",
+          "title": "LLM 0.33 — Simon Willison's CLI moves to the OpenAI Python 3.x library",
+          "category": "tool",
+          "note": "Fresh same-day release (2026-08-22) of a 12.4k-star CLI by a listed influential voice; distinct from the existing LLM 0.32 item (different version, different changes)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
+    },
+    {
+      "id": "sweep-20260822t202605z",
+      "timestamp": "2026-08-22T20:26:05.486Z",
+      "source": "github-actions-sweep",
+      "summary": "Follow-up patch in the same run: shortened the LLM 0.33 summary to fit the 240-char cap. No new discovery pass.",
+      "counts": {
+        "added": 0,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [
+        {
+          "id": "simonw-llm-0-33-aug22",
+          "title": "LLM 0.33 — Simon Willison's CLI moves to the OpenAI Python 3.x library",
+          "note": "Trim summary to 233 chars (was 247, over the 240 cap flagged by finalize-sweep)."
+        }
+      ],
+      "removed": [],
+      "coverage": []
     }
   ]
 }
