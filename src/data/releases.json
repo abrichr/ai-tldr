@@ -1,8 +1,135 @@
 {
-  "generatedAt": "2026-08-22T04:35:06.088Z",
+  "generatedAt": "2026-08-22T06:39:49.118Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openai-gpt-5-6-sol-price-cut",
+      "categories": [
+        "ecosystem",
+        "model"
+      ],
+      "title": "GPT-5.6 Sol price cut — OpenAI drops API rates over 20% for three months",
+      "org": "OpenAI",
+      "date": "2026-08-21",
+      "url": "https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726",
+      "summary": "OpenAI cut GPT-5.6 Sol API pricing by over 20% for three months. Input falls from $5 to $4 per million tokens, cached input from $0.50 to $0.40, and output from $30 to $20. Codex credits and ChatGPT Work get the same rates.",
+      "tags": [
+        "openai",
+        "gpt-5-6-sol",
+        "pricing",
+        "api",
+        "codex",
+        "chatgpt-work",
+        "llm",
+        "inference-cost",
+        "agents"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenAI"
+        },
+        {
+          "label": "Model",
+          "value": "GPT-5.6 Sol"
+        },
+        {
+          "label": "Size of cut",
+          "value": "Over 20%"
+        },
+        {
+          "label": "Announced",
+          "value": "August 21, 2026"
+        },
+        {
+          "label": "Runs through",
+          "value": "November 21, 2026"
+        },
+        {
+          "label": "Where it applies",
+          "value": "API, Codex credits, ChatGPT Work"
+        },
+        {
+          "label": "Not affected",
+          "value": "Pro, Plus and Business plans"
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "Input",
+            "price": "$4.00",
+            "unit": "/ 1M tokens",
+            "note": "Was $5.00"
+          },
+          {
+            "plan": "Cached input",
+            "price": "$0.40",
+            "unit": "/ 1M tokens",
+            "note": "Was $0.50"
+          },
+          {
+            "plan": "Output",
+            "price": "$20.00",
+            "unit": "/ 1M tokens",
+            "note": "Was $30.00"
+          }
+        ],
+        "source": "https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726"
+      },
+      "explainer": {
+        "tagline": "OpenAI's frontier GPT-5.6 Sol now costs over 20% less to call, for the next three months.",
+        "whatIsIt": "GPT-5.6 Sol just got cheaper to run. OpenAI cut its API and credit pricing by over 20% on August 21, 2026. The lower rates are promotional, not permanent: they run for three months and end on November 21, 2026. Sol is OpenAI's frontier model for long-running agent and coding work.",
+        "howItWorks": "The new rates cover standard short-context API calls, and the same discount flows into Codex credits and ChatGPT Work for eligible plans. Cached input drops by the same share as fresh input, so GPT-5.6 Sol keeps its usual 10x prompt-caching advantage on top of the lower base rate. Subscription pricing is untouched — Pro, Plus and Business members pay what they paid before.",
+        "whyItMatters": "Output tokens are where agent workloads spend most of their budget, and Sol's output rate takes the deepest cut in the table — a third off. Teams running long agent loops, large code reviews or high-volume batch jobs see the biggest saving. Reuters reports the cut follows earlier reductions on GPT-5.6 Terra and GPT-5.6 Luna, and ties both to competition from Anthropic and from Chinese AI providers.",
+        "forWho": "teams running high-volume agent and coding workloads",
+        "tryIt": "Model id gpt-5.6-sol on the OpenAI API"
+      },
+      "faq": [
+        {
+          "q": "How long does the GPT-5.6 Sol price cut last?",
+          "a": "OpenAI set the lower GPT-5.6 Sol rates to run for three months, from August 21, 2026 through November 21, 2026. OpenAI has not said what the price will be after that window closes. Teams budgeting past November should treat these rates as promotional rather than as the new list price."
+        },
+        {
+          "q": "Does the GPT-5.6 Sol price cut change my ChatGPT subscription?",
+          "a": "No. The GPT-5.6 Sol reduction covers API usage plus credits on ChatGPT Work and Codex for eligible plans. OpenAI confirmed that Pro, Plus and Business subscription prices stay the same. If you reach GPT-5.6 Sol through one of those plans rather than the API, your monthly bill does not change."
+        },
+        {
+          "q": "Which OpenAI models were discounted before GPT-5.6 Sol?",
+          "a": "OpenAI cut prices on two smaller GPT-5.6 models shortly before the Sol reduction: GPT-5.6 Terra came down 20% and GPT-5.6 Luna came down 80%, according to Reuters. The GPT-5.6 Sol cut extends the same pattern up to OpenAI's frontier tier, which had stayed at full list price until now."
+        },
+        {
+          "q": "Does the discount apply to cached input tokens?",
+          "a": "Yes. GPT-5.6 Sol cached input falls alongside the standard input rate, so prompt caching still costs a tenth of fresh input. Workloads that reuse a long system prompt or a large document across many calls compound both savings — the caching discount and the new lower base rate."
+        }
+      ],
+      "image": {
+        "url": "https://us1.discourse-cdn.com/openai1/optimized/4X/b/e/b/bebe3ca6f23e721a4507c3380e3fdf81befb0dec_2_1024x537.jpeg",
+        "alt": "OpenAI Developers API Docs pricing banner on a pink and orange gradient",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726"
+        },
+        {
+          "label": "API Pricing",
+          "url": "https://platform.openai.com/docs/pricing"
+        },
+        {
+          "label": "Model Docs",
+          "url": "https://platform.openai.com/docs/models/gpt-5.6-sol"
+        },
+        {
+          "label": "Reuters Coverage",
+          "url": "https://www.933thedrive.com/2026/08/21/openai-cuts-developer-pricing-for-frontier-gpt-5-6-sol-model-by-more-than-20/"
+        }
+      ],
+      "publishDate": "2026-08-22T06:39:49.118Z"
+    },
     {
       "id": "adnanakil-nobuzz",
       "categories": [

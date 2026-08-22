@@ -35228,6 +35228,39 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260822t063949z",
+      "timestamp": "2026-08-22T06:39:49.118Z",
+      "source": "github-actions-sweep",
+      "summary": "Added OpenAI's August 21 GPT-5.6 Sol API price cut (over 20% off input, cached input and output for three months), confirmed from OpenAI's own announcement plus Reuters pickup. Everything else checked came back stale or below the bar: Anthropic's newsroom is quiet since Aug 14, Gemini 3.7 Flash is Aug 13 (outside 72h), Meta and Mistral have nothing new, DeepSeek's Aug 21 V4-Flash-Vision-Exp post and Slack Code are already in the feed, and the HN post titled 'Claudette' resolves to adnanakil/nobuzz, which we shipped yesterday. NOTE: yt-rss-scan.ts returned HTTP 404 on all 8 creator channels on two attempts, so the video lane could not be evaluated this run — that is a tool failure, not a genuine empty.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-gpt-5-6-sol-price-cut",
+          "title": "GPT-5.6 Sol price cut — OpenAI drops API rates over 20% for three months",
+          "category": "ecosystem",
+          "note": "OpenAI's own developer-community announcement plus Reuters/Business Standard coverage; a first-party list-price change on a frontier model, distinct from the OpenRouter reseller promo already in the feed."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "paper",
+        "dataset",
+        "benchmark",
+        "algorithm",
+        "video",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
