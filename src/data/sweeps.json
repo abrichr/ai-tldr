@@ -35355,6 +35355,46 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260822t142446z",
+      "timestamp": "2026-08-22T14:24:46.060Z",
+      "source": "github-actions-sweep",
+      "summary": "Added two Hacker News front-page essays on how AI is changing what developers build and read: Thomas Ptacek's 'Stop Making TUIs' (239 points) and Rafal Cymerys' 'I'm becoming AI-blind' (424 points). Lab blogs were quiet after 2026-08-21 — Anthropic's last post is 2026-08-14, Meta's is 2026-07-27, Mistral's Agentic Search and DeepSeek's V4-Flash-Vision-Exp are already in the feed, and DeepMind's newest posts (Gemini 3.7 Flash, WeatherNext cyclones) are already covered. All six fresh YouTube uploads from the RSS scan were already in the feed or off-topic; HF trending models, datasets and papers held nothing new inside 72h (tau0-VLA is 2026-08-18, ChartGalaxy dates to 2025); GitHub trending showed only repos already covered or created in 2024.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "cymerys-ai-blind",
+          "title": "Rafal Cymerys — AI-written docs now get skipped before they get read",
+          "category": "article",
+          "note": "HN front page at 424 points / 429 comments; names concrete, checkable tells for machine-written workplace docs."
+        },
+        {
+          "id": "tptacek-stop-making-tuis",
+          "title": "Thomas Ptacek — coding agents make native apps cheap, so stop building TUIs",
+          "category": "article",
+          "note": "HN front page at 239 points / 320 comments, and picked up by Simon Willison the next day — clears the article bar on two signals."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }

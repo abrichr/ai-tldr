@@ -1,8 +1,128 @@
 {
-  "generatedAt": "2026-08-22T12:34:35.109Z",
+  "generatedAt": "2026-08-22T14:24:46.060Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "cymerys-ai-blind",
+      "categories": [
+        "article"
+      ],
+      "title": "Rafal Cymerys — AI-written docs now get skipped before they get read",
+      "org": "Rafal Cymerys",
+      "date": "2026-08-21",
+      "url": "https://cymerys.com/w/im-becoming-ai-blind",
+      "summary": "Rafal Cymerys writes that he now skips work documents that look AI-written, the same way people ignore banner ads. He lists the tells: Claude-style phrasing, routine features sold as breakthroughs, and long text that says little.",
+      "tags": [
+        "ai-writing",
+        "ai-slop",
+        "writing",
+        "workplace",
+        "developer-experience",
+        "content-quality",
+        "attention",
+        "opinion",
+        "hacker-news",
+        "rafal-cymerys"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Rafal Cymerys says constant exposure to AI-written text has trained him to stop reading it at all.",
+        "whatIsIt": "'I'm becoming AI-blind' is an essay by Rafal Cymerys, CTO of the AI consultancy Upside, about a reflex he did not choose. Cymerys writes that his eyes now slide off any work document carrying the marks of AI generation, before he has decided whether it is worth reading. He treats this as pattern recognition rather than snobbery — people really can spot low-effort machine text.",
+        "howItWorks": "The tells listed in the essay are specific. Cymerys names Claude-style phrasing such as 'This cuts just through it', verbose internal reasoning left sitting in the text, and routine work sold as a breakthrough — his example is a document that dramatizes 'the checkboxes in an RBAC configuration view'. A fourth tell is tonal mismatch: sensible strategy stitched to technical jargon that means nothing.",
+        "whyItMatters": "Banner blindness is the comparison Cymerys reaches for: heavy exposure trains the brain to filter out a whole format, and he argues the same thing has now happened to AI prose. The cost is that useful documents get thrown out with the noise — 'the same AI that was supposed to make me more productive, is what's now slowing me down.' The essay drew 424 points and 429 comments on Hacker News.",
+        "forWho": "anyone writing docs for a team"
+      },
+      "image": {
+        "url": "https://github.com/rafalcymerys.png",
+        "alt": "Rafal Cymerys, author of the essay 'I'm becoming AI-blind'",
+        "fit": "contain",
+        "credit": "Rafal Cymerys"
+      },
+      "author": {
+        "name": "Rafal Cymerys",
+        "profileUrl": "https://cymerys.com/",
+        "avatarUrl": "https://github.com/rafalcymerys.png"
+      },
+      "links": [
+        {
+          "label": "Essay",
+          "url": "https://cymerys.com/w/im-becoming-ai-blind"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49386699"
+        },
+        {
+          "label": "Author",
+          "url": "https://github.com/rafalcymerys"
+        }
+      ],
+      "publishDate": "2026-08-22T14:24:46.060Z"
+    },
+    {
+      "id": "tptacek-stop-making-tuis",
+      "categories": [
+        "article"
+      ],
+      "title": "Thomas Ptacek — coding agents make native apps cheap, so stop building TUIs",
+      "org": "Thomas Ptacek",
+      "date": "2026-08-20",
+      "url": "https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/",
+      "summary": "Thomas Ptacek argues that terminal UIs only ever existed because of modems and because Unix developers avoided GUI toolkits. Coding agents now write idiomatic SwiftUI, so a small native Mac app costs about as little as a CLI.",
+      "tags": [
+        "ai-coding",
+        "coding-agents",
+        "tui",
+        "cli",
+        "native-apps",
+        "swiftui",
+        "macos",
+        "developer-tools",
+        "user-interface",
+        "claude",
+        "codex",
+        "opinion",
+        "hacker-news",
+        "thomas-ptacek"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Thomas Ptacek says coding agents removed the last excuse for shipping a terminal UI instead of a real app.",
+        "whatIsIt": "'Stop Making TUIs' is an essay by Thomas Ptacek arguing that developers should stop building terminal user interfaces and build native graphical apps instead. Ptacek's claim about why TUIs exist is blunt: 'TUIs exist for just two reasons: modems, and because Unix nerds didn't want to learn Motif.' Both reasons, he writes, expired a long time ago.",
+        "howItWorks": "The evidence is a run of small macOS apps Ptacek built with Claude and Codex agents: MDV.app, a Markdown viewer; DJ Roomba, an Apple Music player with an LLM agent inside; Self Driving Wiki.app, a wiki backed by SQLite; a SageMath calculator front end; a menu-bar thermometer called Thermite; and an Apple TV remote. He never opened Xcode — the build is a plain Makefile — and pointed the agents at skills for macOS design, Paul Hudson's SwiftUI material, and Airbnb's Swift style guide.",
+        "whyItMatters": "Native interface work used to need a specialist, which is the real reason backend developers kept shipping command-line tools. That boundary is what Ptacek says agents dissolved: an agent follows Apple's own SwiftUI patterns closely enough to produce something reasonable, so the cheap default for a personal tool moves from the terminal to the desktop. Simon Willison, linking the piece the next day, said he is 'running out of excuses'.",
+        "forWho": "backend and systems developers",
+        "tryIt": "Pick one throwaway CLI and ask a coding agent to rebuild it as a native app."
+      },
+      "image": {
+        "url": "https://github.com/tqbf.png",
+        "alt": "Thomas Ptacek, author of the essay 'Stop Making TUIs'",
+        "fit": "contain",
+        "credit": "Thomas Ptacek"
+      },
+      "author": {
+        "name": "Thomas Ptacek",
+        "handle": "@tqbf",
+        "profileUrl": "https://sockpuppet.org/",
+        "avatarUrl": "https://github.com/tqbf.png"
+      },
+      "links": [
+        {
+          "label": "Essay",
+          "url": "https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49384210"
+        },
+        {
+          "label": "Simon Willison Note",
+          "url": "https://simonwillison.net/2026/Aug/21/stop-making-tuis/"
+        }
+      ],
+      "publishDate": "2026-08-22T14:24:46.060Z"
+    },
     {
       "id": "openai-regional-processing-per-request",
       "categories": [
