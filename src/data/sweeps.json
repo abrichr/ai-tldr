@@ -35597,6 +35597,67 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260823t044249z",
+      "timestamp": "2026-08-23T04:42:49.589Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, DeepSeek, Qwen, Z.ai), GitHub trending daily+weekly, HuggingFace models/datasets/papers, HN front page and Show HN, 8 YouTube creator feeds, the AI-for-science lane (neuro/clinical/pharma/genomics) and tier-1 press. Added Claude Code 2.1.239 and Lucian Ghinda's week-long Codex vs Claude Code report. Almost everything else fresh was already in the feed (DeepSeek V4-Flash-Vision-Exp, Mistral Agentic Search, EnvHarness, 4DAnyone, SWE-bench Science, RollTab, Huzzah, Munder Difflin, both fresh YouTube videos); the MCP roadmap is a roadmap announcement, the 236-point Level1Techs local-LLM post is dated August 16 and misses the 72h cap, and the science lane turned up nothing with a released artifact inside the window.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "anthropic-claude-code-2-1-239",
+          "title": "Claude Code 2.1.239 — a proxy bug that doubled Bedrock API calls is fixed",
+          "category": "tool",
+          "note": "Substantive 60-plus-item release from Anthropic's official repo, including a Bedrock proxy bug that silently doubled billed API calls; two of its changes are independently confirmed by the cross-session-messaging docs."
+        },
+        {
+          "id": "ghinda-codex-over-claude-aug21",
+          "title": "Lucian Ghinda — a week of reaching for Codex instead of Claude Code",
+          "category": "article",
+          "note": "Hacker News front page with 160 points, published within 72h; a rare week-long side-by-side of the two leading coding agents on one real codebase."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "ecosystem",
+        "security"
+      ]
+    },
+    {
+      "id": "sweep-20260823t044317z",
+      "timestamp": "2026-08-23T04:43:17.707Z",
+      "source": "github-actions-sweep",
+      "summary": "Follow-up to sweep-20260823t044249z: trimmed the Claude Code 2.1.239 summary from 241 to 232 characters to fit the 240-char cap. No new items, no removals.",
+      "counts": {
+        "added": 0,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [
+        {
+          "id": "anthropic-claude-code-2-1-239",
+          "title": "Claude Code 2.1.239 — a proxy bug that doubled Bedrock API calls is fixed",
+          "note": "Trim summary to fit the 240-char cap (was 241)."
+        }
+      ],
+      "removed": [],
+      "coverage": []
     }
   ]
 }

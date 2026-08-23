@@ -1,8 +1,174 @@
 {
-  "generatedAt": "2026-08-23T03:08:26.765Z",
+  "generatedAt": "2026-08-23T04:43:17.707Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "anthropic-claude-code-2-1-239",
+      "categories": [
+        "tool"
+      ],
+      "title": "Claude Code 2.1.239 — a proxy bug that doubled Bedrock API calls is fixed",
+      "org": "Anthropic",
+      "date": "2026-08-21",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.239",
+      "summary": "Claude Code 2.1.239 fixes a bug where Bedrock streaming behind proxies that strip the Content-Type header silently doubled billed API calls. The release also adds /claude-api upgrade, which migrates Python projects to anthropic 1.x.",
+      "tags": [
+        "tool",
+        "claude-code",
+        "anthropic",
+        "coding-agent",
+        "release",
+        "changelog",
+        "bedrock",
+        "billing",
+        "cross-session-messaging",
+        "windows",
+        "alpine",
+        "cli"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Version",
+          "value": "2.1.239"
+        },
+        {
+          "label": "Maker",
+          "value": "Anthropic"
+        },
+        {
+          "label": "Released",
+          "value": "August 21, 2026"
+        },
+        {
+          "label": "New command",
+          "value": "/claude-api upgrade"
+        },
+        {
+          "label": "Billing fix",
+          "value": "Bedrock streaming behind Content-Type-stripping proxies"
+        },
+        {
+          "label": "Agent listing",
+          "value": "/list-agents now shows teammates and the session's own name"
+        },
+        {
+          "label": "Later builds",
+          "value": "2.1.240 and 2.1.241 are bug fixes only"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Was I overcharged by the Bedrock streaming bug?",
+          "a": "Claude Code users on Amazon Bedrock whose traffic passed through a proxy that strips the response Content-Type header were billed for twice as many API calls, because Claude Code re-ran every turn non-streaming. The 2.1.239 notes describe the doubled billing but say nothing about refunds or credits, so contact Anthropic support for account-specific billing questions."
+        },
+        {
+          "q": "Does Claude Code 2.1.239 change the cost figures I see?",
+          "a": "Cost estimates in Claude Code now include the 1.1x US-only-inference premium charged to data-residency workspaces. The change applies to the /cost command, the status line, and the --max-budget-usd flag, so a workspace pinned to US-only inference sees a higher, more accurate running total than it did on earlier builds."
+        },
+        {
+          "q": "Can Claude Code sessions on Windows message each other now?",
+          "a": "Windows gets cross-session messaging in the Claude Code 2.1.239 notes, so sessions across your machines can message each other with SendMessage and find each other with ListAgents, as they already could on macOS and Linux. Anthropic's documentation states native Windows needs version 2.1.234 or later for the feature."
+        },
+        {
+          "q": "Does Claude Code work properly on Alpine Linux?",
+          "a": "Alpine and other musl-based builds now load the native image paste, clipboard, and audio-capture add-ons in Claude Code 2.1.239. Earlier builds shipped glibc binaries that the musl runtime refused, so those three add-ons silently failed on Alpine images. Anthropic now ships musl-built binaries for them."
+        },
+        {
+          "q": "Should I upgrade if I code in JetBrains IDEs?",
+          "a": "JetBrains users get a concrete speed fix in Claude Code 2.1.239: Edit and Write calls no longer pause for about five seconds in JetBrains IDE terminals when the Claude Code plugin is connected. The same build also stops a raw crash dump when you start Claude Code from a directory that no longer exists."
+        }
+      ],
+      "explainer": {
+        "tagline": "Anthropic's 2.1.239 build closes a Bedrock proxy bug that silently doubled the API calls you were billed for.",
+        "whatIsIt": "Claude Code 2.1.239 fixes a billing bug on Amazon Bedrock. When streaming ran behind a proxy that strips the response Content-Type header, Claude Code fell back to re-running the whole turn without streaming, so every turn was billed twice. The same build adds /claude-api upgrade, a command that migrates Python projects from the anthropic 0.x library to 1.x.",
+        "howItWorks": "The fix stops Claude Code from reading a missing response Content-Type header as a broken stream, so the turn is no longer replayed as a second, non-streaming request. A related fix makes the credential pre-check honor HTTPS_PROXY, which had left Claude Code hanging at startup on Bedrock with an SSO profile and awsAuthRefresh set.",
+        "whyItMatters": "Teams on Bedrock behind a corporate proxy were paying twice per turn with nothing on screen to show it, and the 2.1.239 notes are where that behavior is first described. Anthropic widened platform coverage in the same build, so Alpine and musl images and native Windows setups pick up features that previously worked only on glibc Linux and macOS.",
+        "forWho": "teams running Claude Code on Bedrock or behind a corporate proxy",
+        "tryIt": "claude --version"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/anthropics/claude-code",
+        "alt": "GitHub repository card for anthropics/claude-code",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Release Notes",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.239"
+        },
+        {
+          "label": "Changelog",
+          "url": "https://code.claude.com/docs/en/changelog"
+        },
+        {
+          "label": "All Releases",
+          "url": "https://github.com/anthropics/claude-code/releases"
+        },
+        {
+          "label": "Session Messaging",
+          "url": "https://code.claude.com/docs/en/cross-session-messaging"
+        }
+      ],
+      "publishDate": "2026-08-23T04:42:49.589Z"
+    },
+    {
+      "id": "ghinda-codex-over-claude-aug21",
+      "categories": [
+        "article"
+      ],
+      "title": "Lucian Ghinda — a week of reaching for Codex instead of Claude Code",
+      "org": "Lucian Ghinda",
+      "date": "2026-08-21",
+      "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
+      "summary": "Lucian Ghinda spent a week using OpenAI's Codex more than Claude Code. He reports that Codex writes simpler Ruby with fewer comments, while Claude Code anticipates edge cases and fits his CLI-based Jira workflow better.",
+      "tags": [
+        "article",
+        "coding-agent",
+        "codex",
+        "claude-code",
+        "openai",
+        "anthropic",
+        "developer-experience",
+        "ruby",
+        "rails",
+        "comparison"
+      ],
+      "importance": "notable",
+      "author": {
+        "name": "Lucian Ghinda",
+        "profileUrl": "https://github.com/lucianghinda",
+        "avatarUrl": "https://github.com/lucianghinda.png"
+      },
+      "explainer": {
+        "tagline": "A week-long, side-by-side account of Codex and Claude Code on the same real Ruby on Rails codebase.",
+        "whatIsIt": "A week of using Codex more than Claude is a hands-on report from Ruby developer Lucian Ghinda, who moved his daily coding work to OpenAI's Codex and wrote down where it beat Claude Code and where it did not. Ghinda says Codex produced Ruby and Rails changes with fewer comments, which he preferred, and reached for simpler, more contained solutions.",
+        "howItWorks": "To close the starting feature gap, Ghinda ported his Claude Code skills across to Codex, then ran several small, focused Codex sessions rather than one long sprawling one. He reports that Codex made fast first changes but needed heavy testing and review afterwards, so he saw no net time saving. He also hit nested branch structures Codex created and had to spell out rebasing.",
+        "whyItMatters": "Benchmarks rank coding agents; Ghinda's post instead describes how the two feel to work with over a full week on one codebase, and it reached the Hacker News front page with 160 points. His conclusion is about temperament: Claude Code anticipates what he will need next and builds more abstraction, while Codex follows the instruction conservatively and does not overextend.",
+        "forWho": "developers choosing between coding agents"
+      },
+      "image": {
+        "url": "https://allaboutcoding.ghinda.com/assets/images/posts/a-week-of-using-codex-more-than-claude/og.png",
+        "alt": "Title card for Lucian Ghinda's post 'A week of using Codex more than Claude'",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49393051"
+        },
+        {
+          "label": "Author on GitHub",
+          "url": "https://github.com/lucianghinda"
+        }
+      ],
+      "publishDate": "2026-08-23T04:42:49.589Z"
+    },
     {
       "id": "sglang-v0-5-18",
       "categories": [
