@@ -35523,6 +35523,46 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260823t010925z",
+      "timestamp": "2026-08-23T01:09:25.783Z",
+      "source": "github-actions-sweep",
+      "summary": "Quiet sweep: Anthropic, Meta, xAI, DeepMind and Mistral posted nothing new inside 72h, and HF papers/models/datasets, GitHub trending, HN and the 8 YouTube feeds were already covered. Added two shipped items, from Cloudflare and OpenRouter.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "cloudflare-bot-preference-sync",
+          "title": "Bot Preference Sync — Cloudflare writes your robots.txt to match your bot rules",
+          "category": "tool",
+          "note": "GA on 2026-08-21 across every Cloudflare plan; auto-generates robots.txt from the Search/Agent/Training bot policy, a concrete change for any site owner who has been hand-syncing the file."
+        },
+        {
+          "id": "openrouter-image-benchmarks",
+          "title": "OpenRouter Image Benchmarks — 39 image models on one page of hard prompts",
+          "category": "benchmark",
+          "note": "Launched 2026-08-21; a free public grid of 39 image models across seven challenge families with cost and generation time, filling a real gap where image-model choice had no shared reference."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "benchmark",
+        "algorithm",
+        "article",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }

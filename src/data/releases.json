@@ -1,8 +1,157 @@
 {
-  "generatedAt": "2026-08-22T22:26:04.545Z",
+  "generatedAt": "2026-08-23T01:09:25.783Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "cloudflare-bot-preference-sync",
+      "categories": [
+        "tool",
+        "ecosystem"
+      ],
+      "title": "Bot Preference Sync — Cloudflare writes your robots.txt to match your bot rules",
+      "org": "Cloudflare",
+      "date": "2026-08-21",
+      "url": "https://blog.cloudflare.com/bot-preference-sync/",
+      "summary": "Bot Preference Sync generates and updates your robots.txt from the AI bot policy you set in the Cloudflare dashboard, so the published file and the rules enforced at the edge stay the same. Free through Enterprise.",
+      "tags": [
+        "cloudflare",
+        "robots-txt",
+        "ai-crawlers",
+        "bots",
+        "crawler-policy",
+        "ai-training-data",
+        "publishing",
+        "web-infrastructure"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Cloudflare"
+        },
+        {
+          "label": "Availability",
+          "value": "All plans, Free to Enterprise"
+        },
+        {
+          "label": "Bot categories",
+          "value": "Search, Agent, Training"
+        },
+        {
+          "label": "Search / Agent options",
+          "value": "Allow, block on ad pages, or block everywhere"
+        },
+        {
+          "label": "Training options",
+          "value": "Allow or Disallow"
+        },
+        {
+          "label": "robots.txt handling",
+          "value": "Prepended between BEGIN/END markers"
+        },
+        {
+          "label": "Bot list source",
+          "value": "Cloudflare BotBase, refreshed periodically"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does Bot Preference Sync overwrite an existing robots.txt?",
+          "a": "No. Cloudflare states that if a site owner already has a robots.txt file, the content Bot Preference Sync adds is prepended to the existing material, so any Disallow directives already in the file are kept. The generated block sits between a BEGIN Cloudflare Bot Preference Sync marker and a matching END marker, leaving the rest of the file untouched."
+        },
+        {
+          "q": "How much does Bot Preference Sync cost?",
+          "a": "Bot Preference Sync costs nothing extra. Cloudflare says the feature is available to all customers from the Free tier to Enterprise. It is on by default for new customers, and no crawler is blocked until the site owner picks a policy for the Search, Agent or Training categories in the dashboard."
+        },
+        {
+          "q": "Can I block AI training but still let search engines index the site?",
+          "a": "Yes. Setting Training to Disallow writes a no-training preference into robots.txt. Cloudflare explains that cooperating mixed-use crawlers which take the extra Transparency step can still reach the content for search indexing, so a publisher can refuse training use without disappearing from search results."
+        },
+        {
+          "q": "What happens to sites already using Cloudflare's older managed robots.txt?",
+          "a": "Existing users of the legacy managed robots.txt feature are not switched over silently. Cloudflare says it will prompt those customers to review and confirm their preferences in order to transition to Bot Preference Sync when it launches, so the current file is not rewritten until the owner approves the new settings."
+        }
+      ],
+      "explainer": {
+        "tagline": "Cloudflare builds your robots.txt out of the AI bot policy you already set in its dashboard.",
+        "whatIsIt": "Bot Preference Sync writes your robots.txt for you, based on the AI bot policy you pick in the Cloudflare dashboard. Cloudflare sorts AI crawlers by the job they are doing — Search, Agent or Training — and turns your choice for each into user-agent rules in the file. It is generally available on every plan, from Free to Enterprise.",
+        "howItWorks": "The generated rules are prepended to any robots.txt you already have, wrapped in BEGIN and END marker comments, so your own Disallow lines survive untouched. Bot names inside that block come from BotBase, Cloudflare's database of tracked crawlers, and are refreshed periodically as crawlers appear or change their user-agent. Search and Agent each take one of three settings; Training is a simple Allow or Disallow.",
+        "whyItMatters": "A hand-maintained robots.txt drifts away from what a site actually enforces at the edge, and crawler operators read the file rather than the firewall. Cloudflare's stated goal is that 'what you say to the world and what you enforce at the edge are kept in sync.' For publishers, the Training setting also puts a no-training preference in writing without costing them search traffic.",
+        "forWho": "publishers and site owners",
+        "tryIt": "Set your Search, Agent and Training preferences in Cloudflare's AI Crawl Control dashboard."
+      },
+      "image": {
+        "url": "https://blog.cloudflare.com/_emdash/api/media/file/01M0GECYZVM1ZRHZTQEK9865VJ.png",
+        "alt": "Cloudflare Bot Preference Sync announcement header",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://blog.cloudflare.com/bot-preference-sync/"
+        },
+        {
+          "label": "AI Crawl Control Docs",
+          "url": "https://developers.cloudflare.com/ai-crawl-control/"
+        },
+        {
+          "label": "Bot Category Launch",
+          "url": "https://blog.cloudflare.com/content-independence-day-ai-options"
+        }
+      ],
+      "publishDate": "2026-08-23T01:09:25.783Z"
+    },
+    {
+      "id": "openrouter-image-benchmarks",
+      "categories": [
+        "benchmark",
+        "tool"
+      ],
+      "title": "OpenRouter Image Benchmarks — 39 image models on one page of hard prompts",
+      "org": "OpenRouter",
+      "date": "2026-08-21",
+      "url": "https://openrouter.ai/blog/announcements/image-benchmarks",
+      "summary": "OpenRouter Image Benchmarks runs the same set of deliberately hard prompts through every image model it hosts and shows the raw pictures side by side, sortable by cost or generation time. Free to view, no account needed.",
+      "tags": [
+        "openrouter",
+        "image-generation",
+        "benchmark",
+        "evaluation",
+        "text-to-image",
+        "model-comparison",
+        "image-editing"
+      ],
+      "importance": "notable",
+      "metrics": {
+        "Image models": 39,
+        "Challenge families": 7
+      },
+      "explainer": {
+        "tagline": "Every image model OpenRouter hosts, run through the same hard prompts, with the raw outputs shown in one grid.",
+        "whatIsIt": "Image Benchmarks is a free public page from OpenRouter that puts the same deliberately hard prompts through every image model on the platform and shows the actual pictures in a grid. The announcement counts 39 image models. You judge the outputs with your own eyes instead of reading a single score.",
+        "howItWorks": "Prompts are grouped into seven challenge families — improbable scenes, counting, text, spatial relations, negation, editing and consistency — each aimed at a known weak spot, with named tests such as Full Wine Glass, Three Fingers, Long Exact String, Occlusion, Minimal Diff and Four References. OpenRouter notes that 'LLM-as-a-judge evals can't yet capture the details a human would notice,' which is why the page shows raw output rather than a graded number.",
+        "whyItMatters": "OpenRouter opens by saying that next to the many LLM benchmarks, 'picking an image model can feel arbitrary.' The grid sorts by cost or by time, and the listed models span roughly $0.006 to $0.25 per image and 3.6 to 208.2 seconds per generation, so a team can see what the cheap and slow ends of that range actually produce before committing.",
+        "forWho": "developers and designers choosing an image model",
+        "tryIt": "https://openrouter.ai/benchmarks/media/images"
+      },
+      "image": {
+        "url": "https://openrouter.ai/blog/images/image-benchmarks.png",
+        "alt": "OpenRouter Image Benchmarks comparison grid",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://openrouter.ai/blog/announcements/image-benchmarks"
+        },
+        {
+          "label": "Benchmark Page",
+          "url": "https://openrouter.ai/benchmarks/media/images"
+        }
+      ],
+      "publishDate": "2026-08-23T01:09:25.783Z"
+    },
     {
       "id": "simonw-torvalds-ai-debug-aug22",
       "categories": [
