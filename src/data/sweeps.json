@@ -35871,6 +35871,40 @@
         "tutorial",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260823t183224z",
+      "timestamp": "2026-08-23T18:32:24.711Z",
+      "source": "github-actions-sweep",
+      "summary": "Quiet Sunday sweep: one fresh video added. Lab blogs are dry (Anthropic last posted Aug 14, Meta July, Mistral's Agentic Search and DeepMind's Gemini 3.7 Flash / WeatherNext / SL2T are already in the feed), HuggingFace posted no daily papers on Aug 22 or 23, and the best trending items were already covered or out of the 72h window.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "wes-roth-ilya-ssi-model-aug23",
+          "title": "Wes Roth — 'Ilya Sutskever new Superintelligence model will change EVERYTHING'",
+          "category": "video",
+          "note": "Fresh 7h-old upload from a listed creator (yt-rss-scan), on the most-anticipated unshipped model in the field; grounded in ssi.inc and NVIDIA's July 27 press release rather than any claim about the video's contents."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "article",
+        "security",
+        "algorithm",
+        "ecosystem"
+      ]
     }
   ]
 }
