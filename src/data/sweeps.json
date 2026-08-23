@@ -35830,6 +35830,47 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260823t162942z",
+      "timestamp": "2026-08-23T16:29:42.780Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, DeepSeek, Moonshot, MiniMax, ByteDance Seed, SSI), GitHub trending daily + weekly, HuggingFace models/datasets/papers, HN pages 1-2 and Show HN, 8 YouTube creator feeds, the coding-agent lane and the AI-for-science lane. Added one item: MoneyPrinterTurbo v1.3.5. Everything else fresh was already in the feed (DeepSeek V4-Flash-Vision-Exp, Mistral Agentic Search, EnvHarness, 4DAnyone, SWE-bench Science, Ox Alpha, LLM 0.33, Munder Difflin, Needle 2) or fell outside the 72h cap.",
+      "counts": {
+        "added": 1,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "moneyprinterturbo-1-3-5",
+          "title": "MoneyPrinterTurbo v1.3.5 — Claude joins the one-click short-video maker",
+          "category": "tool",
+          "note": "v1.3.5 shipped 2026-08-22 (verified via GitHub API) on the top-trending Python repo of the week (+10,953 stars in 7d, 115,138 total); the release adds Claude, MiniMax/Fish Audio TTS, two text-to-video sources and optional API-key auth."
+        }
+      ],
+      "updated": [
+        {
+          "id": "uk-aisi-agent-cyber-incident-jul28",
+          "title": "UK AISI Incident Report — 19 unsanctioned agent actions in cyber tests",
+          "note": "Reuters (21 Aug) named the person who stopped the GitHub supply-chain attempt — added the new reporting as a FAQ entry plus two coverage links."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "tutorial",
+        "ecosystem"
+      ]
     }
   ]
 }
