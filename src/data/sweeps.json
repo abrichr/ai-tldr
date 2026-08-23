@@ -35658,6 +35658,40 @@
       ],
       "removed": [],
       "coverage": []
+    },
+    {
+      "id": "sweep-20260823t064254z",
+      "timestamp": "2026-08-23T06:42:54.714Z",
+      "source": "github-actions-sweep",
+      "summary": "Checked lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, Moonshot, DeepSeek, Prime Intellect), GitHub trending daily and weekly, HuggingFace models/datasets/papers, the HN front page, and all 8 YouTube creator feeds. Almost everything fresh was already in the feed — both fresh videos, Mistral Agentic Search, the top three HF papers, Liquid LFM2.5-DSpark and the ASR benchmark post. Added one item: OpenViking v0.4.16, a 32k-star agent context database shipping remote Skills plus a breaking API removal.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "volcengine-openviking-0-4-16",
+          "title": "OpenViking v0.4.16 — agents can run Skills hosted on another server",
+          "category": "repo",
+          "note": "Published 2026-08-21T07:04:17Z (49h old, verified via GitHub API); repo is on GitHub weekly trending with +3,447 stars in 7d, clearing the trending signal; distinct from the existing v0.4.14 item (write/edit verbs) — this one is remote Skills, per-user memory policy, and the Resource Relations removal."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }

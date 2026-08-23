@@ -1,8 +1,120 @@
 {
-  "generatedAt": "2026-08-23T04:43:17.707Z",
+  "generatedAt": "2026-08-23T06:42:54.714Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "volcengine-openviking-0-4-16",
+      "categories": [
+        "repo",
+        "tool"
+      ],
+      "title": "OpenViking v0.4.16 — agents can run Skills hosted on another server",
+      "org": "Volcengine",
+      "date": "2026-08-21",
+      "url": "https://github.com/volcengine/OpenViking/releases/tag/v0.4.16",
+      "summary": "OpenViking v0.4.16 lets VikingBot find, cache and run Skills stored on a remote OpenViking server, adds a per-user memory extraction policy for admins, and removes the experimental Resource Relations API.",
+      "tags": [
+        "openviking",
+        "volcengine",
+        "agent-memory",
+        "skills",
+        "mcp",
+        "rag",
+        "context-engineering",
+        "vector-database",
+        "open-source",
+        "agents",
+        "python"
+      ],
+      "importance": "major",
+      "metrics": {
+        "GitHub stars": "32,172"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Volcengine"
+        },
+        {
+          "label": "Version",
+          "value": "v0.4.16"
+        },
+        {
+          "label": "Released",
+          "value": "August 21, 2026"
+        },
+        {
+          "label": "License",
+          "value": "AGPL-3.0"
+        },
+        {
+          "label": "Headline feature",
+          "value": "Remote Skills for VikingBot"
+        },
+        {
+          "label": "New URI alias",
+          "value": "viking://~"
+        },
+        {
+          "label": "Breaking change",
+          "value": "Resource Relations API and CLI removed"
+        }
+      ],
+      "explainer": {
+        "tagline": "VikingBot can now pull Skills from a different OpenViking server, so one team can host a set of tools and let many agents share it.",
+        "whatIsIt": "Remote Skills arrive in OpenViking v0.4.16. VikingBot can discover, cache and execute Skills that live on a different OpenViking instance, not just the ones stored locally. Admins also gain a per-user `memory_policy` that limits which memory types the system is allowed to extract for that person. OpenViking is Volcengine's open-source context database that keeps agent memory, knowledge retrieval and skills in one system.",
+        "howItWorks": "Skills are discovered and cached from the remote instance before VikingBot runs them, so a long agent session does not refetch them at every step. Context Compilation gained source materialization and read-path tracing, plus reusable workflows for an LLM wiki, a knowledge graph, daily reports and knowledge distillation. Resource imports called with `wait=false` now move source preparation into a background task that survives a restart, which lowers request latency while keeping task ownership.",
+        "whyItMatters": "Sharing Skills across servers means a team can maintain one set of agent tools instead of copying them into every deployment. The per-user policy gives admins a way to keep sensitive memory types out of extraction for specific people. Upgrading is not free, though: the experimental Resource Relations REST API and the `ov relations`, `ov link` and `ov unlink` CLI commands are gone, so any integration that calls them has to be removed or replaced first.",
+        "forWho": "teams running shared agent memory"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/volcengine/OpenViking",
+        "alt": "OpenViking GitHub repository card — Volcengine's context database for AI agents",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Release Notes",
+          "url": "https://github.com/volcengine/OpenViking/releases/tag/v0.4.16"
+        },
+        {
+          "label": "Repository",
+          "url": "https://github.com/volcengine/OpenViking"
+        },
+        {
+          "label": "Full Changelog",
+          "url": "https://github.com/volcengine/OpenViking/compare/v0.4.15...v0.4.16"
+        },
+        {
+          "label": "Remote Skills PR",
+          "url": "https://github.com/volcengine/OpenViking/pull/4095"
+        },
+        {
+          "label": "Memory Policy PR",
+          "url": "https://github.com/volcengine/OpenViking/pull/4126"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What breaks when I upgrade to OpenViking v0.4.16?",
+          "a": "OpenViking v0.4.16 removes the experimental Resource Relations feature. The `/api/v1/relations` REST endpoint is gone, and so are the `ov relations`, `ov link` and `ov unlink` CLI commands. Any script or integration that calls them must be removed or replaced before you upgrade. Existing canonical URIs such as `viking://user/...` keep working, so no URI rewrite is needed."
+        },
+        {
+          "q": "How do I set a memory policy for a single user in OpenViking?",
+          "a": "Admins call `GET` or `PATCH` on `/api/v1/admin/accounts/{account_id}/users/{user_id}/settings` and set the `memory_policy` field, which limits the memory types OpenViking may extract for that user. Setting `memory_policy` to `null` clears the stored override and the user falls back to the server default. Sessions that carry no explicit policy pick up the new one at their next commit."
+        },
+        {
+          "q": "How is OpenViking v0.4.16 different from v0.4.14?",
+          "a": "Version 0.4.14 opened the `viking://` workspace for writing by adding the `tree`, `write` and `edit` verbs over MCP. OpenViking v0.4.16 is about reach and control instead: VikingBot can run Skills hosted on remote instances, admins get per-user memory extraction policies, and background resource imports become persistable. The two releases shipped four days apart, on August 17 and August 21, 2026."
+        },
+        {
+          "q": "What does the viking://~ alias do?",
+          "a": "The `viking://~` alias added in OpenViking v0.4.16 stands for the user root directory of whoever is making the call, resolved from the authenticated caller. It saves writing out the full user path in every request. Server entry points now normalize and validate Viking URIs in one place, and admin requests expand the current-user alias correctly too."
+        }
+      ],
+      "publishDate": "2026-08-23T06:42:54.714Z"
+    },
     {
       "id": "anthropic-claude-code-2-1-239",
       "categories": [
