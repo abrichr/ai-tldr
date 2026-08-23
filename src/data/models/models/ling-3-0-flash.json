@@ -1,0 +1,113 @@
+{
+  "slug": "ling-3-0-flash",
+  "name": "Ling-3.0-flash",
+  "maker": "ant-group",
+  "makerTitle": "Ant Group (inclusionAI)",
+  "line": "ling",
+  "lineTitle": "Ling (open-weight)",
+  "tagline": "Ant Group's hybrid-linear Mixture-of-Experts reasoning model, announced 26 July 2026: 124B total parameters with 5.1B active per token, MIT-licensed.",
+  "seoTitle": "Ling-3.0-flash: Ant Group's 124B MIT Hybrid MoE",
+  "metaDescription": "Ling-3.0-flash is Ant Group's open-weight hybrid-linear MoE: 124B total and 5.1B active parameters, MIT-licensed, 256K context, published on Hugging Face Aug 2026.",
+  "releaseDate": "2026-08-02",
+  "status": "Generally available — open weights on Hugging Face",
+  "license": "MIT",
+  "openWeights": true,
+  "modalities": [
+    "Text"
+  ],
+  "contextWindow": "256K",
+  "parameters": "124B total · 5.1B activated per token (Mixture-of-Experts)",
+  "architecture": "Hybrid-linear Mixture-of-Experts — 35 Kimi Delta Attention layers and 7 Gated MLA layers stacked 5:1, with 512 routed experts (8 activated) plus 1 shared expert",
+  "tags": [
+    "open-weights",
+    "reasoning",
+    "coding",
+    "agentic",
+    "long-context"
+  ],
+  "overview": [
+    "Ling-3.0-flash is a hybrid reasoning model from inclusionAI, the team behind Ant Group's artificial-general-intelligence programme. Ant Group announced it on 26 July 2026, offered it as a free API on OpenRouter and the Vercel AI Gateway through 3 August 2026, and published the weights to Hugging Face on 2 August 2026 under the MIT license. It is a text-generation model with thinking enabled by default.",
+    "The design point is intelligence density rather than raw scale. Ling-3.0-flash runs 124 billion total parameters but activates only 5.1 billion per token — inclusionAI puts that at roughly 12.4% and 8.1% of its own 1T-class Ring-2.6-1T flagship — and says the smaller model matches or outperforms that predecessor across key benchmarks. Ant Group's announcement claims it 'matches or surpasses industry-leading models with two to three times its parameter scale' on core reasoning, instruction-following and long-context benchmarks; the company published those comparisons as chart images rather than as a numeric table, so the individual scores are not transcribed here.",
+    "Architecturally the model adopts a native hybrid linear attention stack from the start of pretraining: 35 Kimi Delta Attention (KDA) layers alternating 5:1 with 7 Gated MLA layers, KDA fine-grained diagonal gating, and 1/64 sparse Mixture-of-Experts routing over 512 routed experts plus one shared expert, with 8 experts activated per token. Hidden size is 2,560 across 32 attention heads with a 157,184-token vocabulary. Context was trained on an 8K → 32K → 256K schedule, and inclusionAI's own SGLang recipe serves it at a 262,144-token context window.",
+    "The model is aimed at production agent workloads. inclusionAI reports training across more than 10,000 interactive environments covering coding, general and deep-research agent tasks, and native integration with the SGLang HiCache and Mooncake hierarchical caching architecture — physical dual-pools plus a cluster-shared L3 cache — which it credits with cutting time-to-first-token by 60% to over 80% on long-input requests. Its model card names Claude Code, Kilo Code, Qwen Code, Hermes Agent and OpenClaw as harnesses it has been exercised against. The published low-latency recipe runs on four 141GB-class GPUs at tensor-parallel size 4, or eight 80GB cards at tensor-parallel size 8."
+  ],
+  "strengths": [
+    "MIT-licensed open weights — free to download, fine-tune, self-host and use commercially",
+    "Activates only 5.1B of 124B parameters per token, keeping serving cost far below dense models of comparable size",
+    "Native hybrid-linear attention (KDA + Gated MLA, 5:1) designed for long-context efficiency from the start of pretraining",
+    "256K trained context, served at 262,144 tokens in inclusionAI's own SGLang recipe",
+    "Built for agent harnesses: 10,000+ interactive training environments and SGLang HiCache + Mooncake caching, which inclusionAI credits with a 60–80%+ time-to-first-token reduction on long inputs"
+  ],
+  "useCases": [
+    "Production coding and deep-research agents run on self-hosted GPUs under a permissive license",
+    "Long-horizon agent sessions where repeated long-input recomputation dominates latency",
+    "Teams wanting frontier-adjacent reasoning at a fraction of the activated-parameter cost of 1T-class models",
+    "Research on hybrid linear-attention architectures, where the released weights are a reference implementation"
+  ],
+  "links": [
+    {
+      "label": "Ling-3.0-flash model card (Hugging Face)",
+      "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash",
+      "kind": "model-card"
+    },
+    {
+      "label": "Ant Group unveils Ling-3.0-Flash (press release, July 26, 2026)",
+      "url": "https://finance.yahoo.com/technology/ai/articles/ant-group-unveils-ling-3-060000298.html",
+      "kind": "announcement"
+    },
+    {
+      "label": "inclusionAI on Hugging Face",
+      "url": "https://huggingface.co/inclusionAI",
+      "kind": "official"
+    },
+    {
+      "label": "inclusionAI on ModelScope",
+      "url": "https://modelscope.cn/organization/inclusionAI",
+      "kind": "official"
+    },
+    {
+      "label": "Ling-3.0-flash on OpenRouter",
+      "url": "https://openrouter.ai/inclusionai/ling-3.0-flash:free",
+      "kind": "playground"
+    },
+    {
+      "label": "Ling-3.0-flash SGLang deployment cookbook",
+      "url": "https://docs.sglang.io/cookbook/autoregressive/InclusionAI/Ling-3.0-flash",
+      "kind": "tutorial"
+    },
+    {
+      "label": "Ling cookbook (inclusionAI/ling-cookbook on GitHub)",
+      "url": "https://github.com/inclusionAI/ling-cookbook",
+      "kind": "tutorial"
+    }
+  ],
+  "apis": [
+    {
+      "provider": "OpenRouter",
+      "url": "https://openrouter.ai/inclusionai/ling-3.0-flash:free",
+      "modelId": "inclusionai/ling-3.0-flash"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is Ling-3.0-flash open source?",
+      "a": "The weights are published on Hugging Face and ModelScope under the MIT License, so you can download, run, fine-tune and use the model commercially, including self-hosted."
+    },
+    {
+      "q": "How many parameters does Ling-3.0-flash use?",
+      "a": "124 billion total parameters, of which 5.1 billion are activated per token. inclusionAI describes that as roughly 12.4% of the total parameters and 8.1% of the activated parameters of its 1T-class Ring-2.6-1T flagship."
+    },
+    {
+      "q": "What hardware does it need?",
+      "a": "inclusionAI's recommended low-latency SGLang recipe runs on four 141GB-class GPUs (H20-3e) or a four-GPU Blackwell node at tensor-parallel size 4, with a 262,144-token context and NEXTN speculative decoding. On 80GB cards such as the H100 or H800 it uses tensor-parallel size 8 with the same flags."
+    },
+    {
+      "q": "What is the hybrid-linear architecture?",
+      "a": "Ling-3.0 alternates Kimi Delta Attention (KDA) layers with Gated MLA layers in a 5:1 ratio — 35 KDA layers to 7 Gated MLA layers — rather than bolting linear attention on after the fact. inclusionAI adopted it from the start of pretraining and pairs it with KDA fine-grained diagonal gating and 1/64 sparse Mixture-of-Experts routing to cut long-context compute cost."
+    },
+    {
+      "q": "How long a context does it support?",
+      "a": "The model was trained on an 8K → 32K → 256K context schedule, and inclusionAI's published SGLang launch command serves it with a 262,144-token context window."
+    }
+  ]
+}

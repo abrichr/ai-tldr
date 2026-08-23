@@ -444,7 +444,7 @@
             {
               "name": "GPT-5.6 Sol",
               "slug": "gpt-5-6-sol",
-              "blurb": "GPT-5.6 flagship, GA July 9, 2026. Adds max reasoning effort and ultra subagent mode; 1.05M context; 88.8% on Terminal-Bench 2.1; $5/$30 per MTok.",
+              "blurb": "GPT-5.6 flagship, GA July 9, 2026. Adds max reasoning effort and ultra subagent mode; 1.05M context; 88.8% on Terminal-Bench 2.1; $4/$20 per MTok from August 2026.",
               "tags": [
                 "frontier",
                 "proprietary",
@@ -4916,6 +4916,37 @@
         }
       ],
       "logo": "/models-logos/ornith.webp"
+    },
+    {
+      "id": "ant-group",
+      "title": "Ant Group (inclusionAI)",
+      "blurb": "inclusionAI is the home of Ant Group's artificial-general-intelligence programme. It open-sources the Ling and Ring model families on Hugging Face and ModelScope, alongside agent infrastructure such as AWorld and the AReno reinforcement-learning toolkit.",
+      "homepage": "https://huggingface.co/inclusionAI",
+      "lines": [
+        {
+          "id": "ling",
+          "title": "Ling (open-weight)",
+          "blurb": "inclusionAI's Mixture-of-Experts language models, released as downloadable weights and tuned for production agent workloads.",
+          "versions": [
+            {
+              "name": "Ling-3.0-flash",
+              "slug": "ling-3-0-flash",
+              "blurb": "Announced 26 July 2026 and published to Hugging Face on 2 August 2026: a 124B hybrid-linear Mixture-of-Experts model activating 5.1B parameters per token, with a 256K trained context under an MIT license.",
+              "tags": [
+                "open-weights",
+                "reasoning",
+                "coding",
+                "agentic",
+                "long-context"
+              ],
+              "contextWindow": "256K",
+              "license": "MIT",
+              "date": "2026-08-02",
+              "current": true
+            }
+          ]
+        }
+      ]
     }
   ]
 }

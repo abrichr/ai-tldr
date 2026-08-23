@@ -7,7 +7,7 @@
   "lineTitle": "GPT (Flagship / Thinking)",
   "tagline": "OpenAI's GPT-5.6 flagship, built for agentic coding, biology, and cybersecurity workflows.",
   "seoTitle": "GPT-5.6 Sol — OpenAI's July 2026 Flagship Model",
-  "metaDescription": "GPT-5.6 Sol is OpenAI's flagship model in the GPT-5.6 series. Publicly released July 9, 2026 at $5/$30 per 1M tokens with a 1.05M-token context window.",
+  "metaDescription": "GPT-5.6 Sol is OpenAI's flagship model in the GPT-5.6 series. Released July 9, 2026 with a 1.05M-token context window; priced $4/$20 per 1M tokens since August 2026.",
   "releaseDate": "2026-07-09",
   "status": "Available",
   "contextWindow": "1.05M",
@@ -30,7 +30,7 @@
   "overview": [
     "GPT-5.6 Sol is the flagship model in OpenAI's GPT-5.6 series, first announced on June 26, 2026 as a limited preview to around 20 vetted partners and publicly released across the API, Codex, and ChatGPT on July 9, 2026 alongside two smaller tiers, Terra and Luna. OpenAI describes Sol as its strongest model for complex reasoning, advanced coding, agent workflows, and demanding enterprise tasks.",
     "Sol introduces a new max reasoning effort setting that gives the model more time to think, plus an ultra mode that delegates work to subagents to accelerate large, multi-step jobs. The model accepts text and image input, supports a 1,050,000-token context window with up to 128,000 output tokens, and carries a February 16, 2026 knowledge cutoff.",
-    "OpenAI positions Sol as the workhorse tier of the GPT-5.6 family — frontier intelligence for professional work — priced at $5.00 per 1M input tokens and $30.00 per 1M output tokens, the same headline rate as GPT-5.5.",
+    "OpenAI positions Sol as the workhorse tier of the GPT-5.6 family — frontier intelligence for professional work. It launched at $5.00 per 1M input tokens and $30.00 per 1M output tokens, the same headline rate as GPT-5.5. On August 21, 2026 OpenAI cut that to a promotional $4.00 input / $0.40 cached input / $20.00 output, listed as available at least through November 21, 2026.",
     "On August 6, 2026 OpenAI shipped an updated Sol to ChatGPT for Plus and Pro users, adding a slider that lets the user choose how much effort ChatGPT spends on a response. OpenAI's system card distinguishes this snapshot as the 'August' version; the July version remains in use in Codex and ChatGPT Work. The August release reduces factual error rates by roughly 60% versus GPT-5.5 Instant across all three of OpenAI's hallucination prompt sets (factuality-heavy, user-flagged failures, and high-stakes medical, legal, and financial prompts), and improves on every HealthBench evaluation — most sharply on HealthBench Professional (+15.6 points) and HealthBench Hard (+8.5). Under OpenAI's Preparedness Framework the August release is treated as High capability in both Cybersecurity and Biological and Chemical domains.",
     "On August 13, 2026 Cerebras announced Ultrafast, a service tier in the OpenAI API that serves GPT-5.6 Sol on Cerebras hardware at up to 750 output tokens per second — up to 14× faster than Standard processing — with, in Cerebras' words, 'the same intelligence as GPT-5.6 Sol Standard'. It opened in limited preview to a small group of OpenAI customers, with no published price. Cerebras reports the tier completing the full 2,500-question Humanity's Last Exam set in just over 11 hours and a 5.6× end-to-end speedup on GDP-Val with no loss in quality; the speed comes from its Wafer-Scale Engine keeping model weights in 44 GB of on-chip SRAM instead of off-chip memory. OpenAI's Sachin Katti framed the rollout as starting 'with a small group of customers to learn where that speed creates meaningful value'."
   ],
@@ -120,11 +120,12 @@
     "source": "https://openai.com/index/previewing-gpt-5-6-sol/"
   },
   "pricing": {
-    "input": "$5.00",
-    "output": "$30.00",
+    "input": "$4.00",
+    "cachedInput": "$0.40",
+    "output": "$20.00",
     "unit": "/ 1M tokens",
-    "note": "Cached input reads receive a 90% discount; cache writes are billed at 1.25x the input rate, with a 30-minute minimum cache life.",
-    "source": "https://openai.com/index/previewing-gpt-5-6-sol/"
+    "note": "Promotional rate announced August 21, 2026, cut from $5.00 input / $30.00 output and listed as available at least through November 21, 2026. Applies to standard short-context requests; requests over 272K input tokens are billed at 2x input and 1.5x output, and cache writes at 1.25x the input rate.",
+    "source": "https://developers.openai.com/api/docs/pricing"
   },
   "apis": [
     {
@@ -147,6 +148,11 @@
     {
       "label": "GPT-5.6 Sol model documentation",
       "url": "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
+      "kind": "api-docs"
+    },
+    {
+      "label": "OpenAI API pricing (GPT-5.6 Sol rates)",
+      "url": "https://developers.openai.com/api/docs/pricing",
       "kind": "api-docs"
     },
     {
@@ -186,7 +192,7 @@
     },
     {
       "q": "How much does GPT-5.6 Sol cost?",
-      "a": "GPT-5.6 Sol is priced at $5.00 per 1M input tokens and $30.00 per 1M output tokens, the same headline rate as GPT-5.5. Cached input reads receive a 90% discount, while cache writes are billed at 1.25x the input rate with a 30-minute minimum cache life."
+      "a": "OpenAI lists GPT-5.6 Sol at $4.00 per 1M input tokens, $0.40 per 1M cached input tokens, and $20.00 per 1M output tokens. That is a promotional rate announced August 21, 2026 — down from the $5.00 / $30.00 launch price and listed as available at least through November 21, 2026. Cache writes are billed at 1.25x the input rate, and requests over 272K input tokens carry a 2x input and 1.5x output multiplier."
     },
     {
       "q": "How does GPT-5.6 Sol compare to Claude Mythos 5 and GPT-5.5?",
