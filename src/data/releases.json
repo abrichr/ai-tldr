@@ -1,8 +1,81 @@
 {
-  "generatedAt": "2026-08-23T18:32:24.711Z",
+  "generatedAt": "2026-08-23T20:30:27.562Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "ericpardee-fire-hd-ownership",
+      "categories": [
+        "article",
+        "showcase",
+        "security"
+      ],
+      "title": "GLM-5.3 and Kimi K3 root an Amazon Fire tablet — $266 of AI, one 2022 CVE",
+      "org": "ericpardee",
+      "date": "2026-08-21",
+      "url": "https://ericpardee.github.io/fire-hd-ownership/",
+      "summary": "Kimi K3, GLM-5.2 and GLM-5.3 built a working root exploit for an Amazon Fire HD 10 in a write-up that cost $266.15 in AI billing. Claude and ChatGPT refused the exploit work; the Chinese models finished it.",
+      "tags": [
+        "glm-5-3",
+        "kimi-k3",
+        "claude",
+        "z-ai",
+        "moonshot",
+        "cve-2022-38181",
+        "arm-mali",
+        "android",
+        "rooting",
+        "vulnerability-research",
+        "refusals",
+        "coding-agents",
+        "hacker-news"
+      ],
+      "importance": "notable",
+      "metrics": {
+        "Total AI cost": "$266.15",
+        "Amazon packages removed": 100
+      },
+      "explainer": {
+        "tagline": "A tablet that kept powering itself off, settled by $266 of AI inference and a four-year-old Arm Mali GPU bug.",
+        "whatIsIt": "This write-up documents rooting an Amazon Fire HD 10 (11th generation, 2021) that kept powering itself off on its own. Amazon's protected packages held the reboot and shutdown permissions, so the only real fix was root access — and no public root existed for that tablet. Four AI models, billed at $266.15 in total, produced the working chain.",
+        "howItWorks": "The exploit targets CVE-2022-38181, a use-after-free in Arm's Mali GPU kernel driver. Kimi K3 found the bug and wrote the first attempt for $164.25; GLM-5.2 caught a fatal flaw in it for $21.90 — a fixed kernel address offset the code never accounted for; GLM-5.3 corrected the chain on day one of an $80 subscription. The final version manipulates GPU memory writes to flip the selinux_enforcing flag and hand back root, after which 100 Amazon packages were deleted.",
+        "whyItMatters": "Refusal policy is the real story here. Claude carried five months of diagnosis before its safeguards stopped it, and ChatGPT declined parts of the work too, while Kimi K3 and the GLM models kept going. The post also puts a price on the capability: a working kernel exploit for an unpatched 2022 CVE, on a device with no public root, cost under $300 in inference. For the legal basis, it points at the US Copyright Office's Section 1201 exemption rules.",
+        "forWho": "Android tinkerers and anyone tracking where model refusals land"
+      },
+      "author": {
+        "name": "ericpardee",
+        "profileUrl": "https://github.com/ericpardee",
+        "avatarUrl": "https://github.com/ericpardee.png"
+      },
+      "image": {
+        "url": "https://ericpardee.github.io/fire-hd-ownership/blog-assets/glm53-rooted-verified.png",
+        "alt": "Terminal output showing verified root access on an Amazon Fire HD 10 tablet",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Exploit Repo",
+          "url": "https://github.com/ericpardee/fire-hd-ownership"
+        },
+        {
+          "label": "CVE-2022-38181",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-38181"
+        },
+        {
+          "label": "GitHub Advisory",
+          "url": "https://securitylab.github.com/advisories/GHSL-2022-054_Arm_Mali/"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49409073"
+        },
+        {
+          "label": "GLM-5.3 Announcement",
+          "url": "https://z.ai/blog/glm-5.3"
+        }
+      ],
+      "publishDate": "2026-08-23T20:30:27.562Z"
+    },
     {
       "id": "wes-roth-ilya-ssi-model-aug23",
       "categories": [
