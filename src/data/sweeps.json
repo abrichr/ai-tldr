@@ -35939,6 +35939,33 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260823t222234z",
+      "timestamp": "2026-08-23T22:22:34.844Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic newest post Aug 14; OpenAI via release notes + press; DeepMind Gemini 3.7 Flash / WeatherNext / SL2T / EVE all already in feed; Meta quiet since July; Mistral Agentic Search Aug 20 already in feed; DeepSeek V4-Flash-Vision-Exp Aug 21 already in feed; Zhipu GLM-5.3 Aug 14, ByteDance Seed Aug 8-10, Moonshot and MiniMax nothing fresh - all outside the 72h cap), GitHub trending daily and weekly Python (codex, hermes-agent, ComfyUI, MoneyPrinterTurbo, OpenViking, unsloth, oMLX all pre-existing or already in feed; strix's newest release is Aug 10; awesome-lists excluded), HuggingFace models/papers/datasets trending, HN front page top 30 plus Show HN, all 8 YouTube creator feeds, and the biomedical/neuro/pharma science lane. The 2 fresh YouTube videos (Wes Roth on Ilya Sutskever, 1littlecoder on Ox Alpha) are both already in the feed. The top HF paper by upvotes, tau_0-VLA (525 upvotes, arXiv 2608.16885), was submitted Aug 17 - 6 days old, so it fails the 72h cap despite trending now. Inherent's Faraday research post is dated Aug 14 even though TechCrunch covered it Aug 22. Claude Code 2.1.240/2.1.241 are bug-fix-only patches with no described changes. The only HN story above 150 points (GLM-5.3 Fire tablet, 575 pts) is already in the feed. Nothing shipped in the last 72h that is not already covered.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "algorithm",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
