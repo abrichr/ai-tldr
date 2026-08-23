@@ -35761,6 +35761,42 @@
         "rumor",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260823t124006z",
+      "timestamp": "2026-08-23T12:40:06.995Z",
+      "source": "github-actions-sweep",
+      "summary": "Added Ray 2.58.0, which completes KV-cache and token-aware routing in Ray Serve LLM and adds a TorchTPU training backend and an experimental gVisor sandbox. Searched lab blogs (Anthropic latest Aug 14, OpenAI API changelog, DeepMind Gemini 3.7 Flash Aug 13, Meta Jul 27, Mistral Agentic Search Aug 20, Cohere Aug 19, DeepSeek Aug 21, Qwen, Z.ai), GitHub trending daily and weekly, HuggingFace models/datasets/papers/blog, HN front page plus Algolia, 8 YouTube creator feeds, the AI-for-science lane (STAT, Nature, neurosciencenews, pharma and BCI queries), and ~25 AI tool repos via the GitHub releases API. Almost everything fresh was already in the feed.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "ray-2-58-0",
+          "title": "Ray 2.58.0 — KV-cache-aware routing lands for LLM serving",
+          "category": "repo",
+          "note": "Ray is a 43.6k-star Apache-2.0 AI compute engine; 2.58.0 shipped 2026-08-23 with a real headline feature (completed KV-cache-aware LLM routing) plus TPU training, a gVisor sandbox and two security fixes."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "tutorial",
+        "security",
+        "rumor",
+        "ecosystem"
+      ]
     }
   ]
 }

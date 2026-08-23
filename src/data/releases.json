@@ -1,8 +1,125 @@
 {
-  "generatedAt": "2026-08-23T10:27:13.019Z",
+  "generatedAt": "2026-08-23T12:40:06.995Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "ray-2-58-0",
+      "categories": [
+        "repo",
+        "tool"
+      ],
+      "title": "Ray 2.58.0 — KV-cache-aware routing lands for LLM serving",
+      "org": "Ray Project",
+      "date": "2026-08-23",
+      "url": "https://github.com/ray-project/ray/releases/tag/ray-2.58.0",
+      "summary": "Ray 2.58.0 finishes the KV-cache and token-aware request routing that Ray Serve LLM previewed in 2.57. The router tokenizes inside its own ingress replica and passes tokens out-of-band, so the engine never tokenizes twice.",
+      "tags": [
+        "ray",
+        "ray-serve",
+        "ray-train",
+        "ray-data",
+        "llm-serving",
+        "kv-cache",
+        "inference",
+        "distributed-computing",
+        "tpu",
+        "gvisor",
+        "sandboxing",
+        "open-source",
+        "apache-2-0",
+        "python"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Version",
+          "value": "2.58.0"
+        },
+        {
+          "label": "Released",
+          "value": "23 August 2026"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        },
+        {
+          "label": "GitHub stars",
+          "value": "43,584"
+        },
+        {
+          "label": "Ray Serve LLM",
+          "value": "KV-cache and token-aware routing, completed after a 2.57 preview"
+        },
+        {
+          "label": "TPU support",
+          "value": "TorchTPU backend in Ray Train, subslice gang scheduling in Ray Core"
+        },
+        {
+          "label": "Deprecated",
+          "value": "ray_remote_args_fn and Dataset.zip in Ray Data"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What does Ray 2.58.0 change compared with the 2.57 preview?",
+          "a": "Version 2.57 shipped KV-cache and token-aware routing as a preview. Ray 2.58.0 completes it: tokenization moves in-process to the LLMRouter ingress replica, tokens travel out-of-band so the engine skips them, KV lifecycle events reach every ingress replica, and selection plus reservation became a single atomic step."
+        },
+        {
+          "q": "Does Ray 2.58.0 fix any security problems?",
+          "a": "Yes. Ray 2.58.0 patches a remote code execution bug where read_lance or nested pickle objects in Ray Data could run arbitrary code. It also fixes a Ray Serve replica whose ASGIService bypassed token authentication. Both are ordinary entries in the release notes, so teams on older 2.x builds should plan an upgrade."
+        },
+        {
+          "q": "Can Ray 2.58.0 train models on Google TPUs?",
+          "a": "Ray Train adds a TorchTPU backend in 2.58.0, and Ray Core adds SubslicePlacementGroup for gang scheduling on TPU subslices plus single-host TPU support in SlicePlacementGroup. Resource accounting now covers tpu7x and multi-core chips. Together these let a job reserve TPU slices and subslices without writing external gang-scheduling glue."
+        },
+        {
+          "q": "Is Ray Sandbox ready for production use?",
+          "a": "No. Ray Sandbox arrives in 2.58.0 marked experimental. It runs task and actor code under gVisor and can run Docker-built images directly, which is aimed at untrusted or partly trusted workloads. Treat it as something to test rather than depend on until the Ray maintainers drop the experimental label."
+        },
+        {
+          "q": "Is Ray free to use?",
+          "a": "Ray is open source under Apache-2.0, so version 2.58.0 costs nothing to run on your own hardware or cloud account. The repository has 43,584 stars. Anyscale sells a managed platform built on Ray, but nothing in this release is gated behind it — pip install pulls the same code the release notes describe."
+        }
+      ],
+      "explainer": {
+        "tagline": "Ray's AI compute engine finishes cache-aware LLM routing and adds TPU training plus a gVisor sandbox for task code.",
+        "whatIsIt": "KV-cache and token-aware request routing is the headline of Ray 2.58.0 — the Ray Serve LLM feature that was only a preview in 2.57 is now finished. The same release gives Ray Train a TorchTPU backend and adds Ray Sandbox, an experimental way to run task and actor code under gVisor. Ray itself is an open-source distributed compute engine for Python ML workloads.",
+        "howItWorks": "Tokenization moves into the LLMRouter ingress replica, so the routing decision happens where the tokens already exist. Those tokens then travel out-of-band to the serving engine, which no longer re-tokenizes the request. KV lifecycle events are broadcast to every ingress replica, and offloaded CPU KV-cache blocks count toward a replica's cache hit. Ray Core separately moves task-event ingestion off the GCS hot path into a dashboard-head store.",
+        "whyItMatters": "Serving teams get requests steered to the replica that already holds the matching KV cache, which removes repeated prefill work instead of paying for it twice. On the training side, TPU slices and subslices can be reserved from Ray directly rather than through external scheduling glue. Ray Data also picks up Databricks Delta Lake writes with catalog support and a hash shuffle v2 backend for faster joins and aggregations.",
+        "forWho": "ML platform, inference and training infrastructure teams",
+        "tryIt": "pip install -U \"ray[default]==2.58.0\""
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/ray-project/ray",
+        "alt": "Ray GitHub repository card for the open-source distributed AI compute engine",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Release Notes",
+          "url": "https://github.com/ray-project/ray/releases/tag/ray-2.58.0"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/ray-project/ray"
+        },
+        {
+          "label": "Ray Serve LLM Docs",
+          "url": "https://docs.ray.io/en/latest/serve/llm/index.html"
+        },
+        {
+          "label": "2.58.0 Docs",
+          "url": "https://docs.ray.io/en/releases-2.58.0/index.html"
+        },
+        {
+          "label": "Install Guide",
+          "url": "https://docs.ray.io/en/latest/ray-overview/installation.html"
+        }
+      ],
+      "publishDate": "2026-08-23T12:40:06.995Z"
+    },
     {
       "id": "xai-grok-4-6-google-agent-platform",
       "categories": [
