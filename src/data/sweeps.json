@@ -35731,6 +35731,36 @@
         "benchmark",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260823t102713z",
+      "timestamp": "2026-08-23T10:27:13.019Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic latest Aug 14, DeepMind's Gemini 3.7 Flash Aug 13, Meta Jul 27, Mistral Agentic Search Aug 20, Cohere Aug 19, ByteDance Seed Aug 5, DeepSeek V4-Flash-Vision-Exp Aug 21, Z.ai GLM-5.3 Aug 14 — all older than 72h or already in the feed), GitHub trending, HuggingFace models/papers/datasets/blog, HN front page + Show HN + Algolia by date, OpenRouter, Cursor, Ollama, and 8 YouTube feeds. The two fresh videos from yt-rss-scan (1littlecoder 'Ox Alpha', Fireship 'DeepSeek') are already in the feed. Best near-misses were all outside the 72h cap: Inherent's Faraday agent and Prime Intellect's NanoGPT Speedrun Frontier both published Aug 14, the Guidelight lab-containment report Aug 18, and the 356-point HN post 'Why your local LLM feels dumber than it is' was posted to the forum Aug 16. The MCP Roadmap (209 HN points) is a roadmap announcement, which the ecosystem gate rejects. Nothing in the science lane (STAT, EurekAlert, Nature, Lancet Digital Health, hemispheric.ai, BCI/medical-imaging/pharma searches) had a released artifact inside 72h.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "tutorial",
+        "showcase",
+        "security",
+        "rumor",
+        "ecosystem"
+      ]
     }
   ]
 }
