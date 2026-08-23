@@ -35563,6 +35563,40 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260823t030826z",
+      "timestamp": "2026-08-23T03:08:26.765Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI API changelog, Google/DeepMind, Meta, Mistral, xAI, Moonshot, Qwen, Z.ai, DeepSeek), GitHub trending daily and weekly, HuggingFace models/datasets/papers/blog, HN front page plus Algolia by date, 8 YouTube creator feeds, coding-agent changelogs, tier-1 press and the AI-for-science lane. Added one item: SGLang v0.5.18. Everything else in the 72h window was already in the feed (both fresh YouTube videos, GPT-5.6 Sol price cut, Mistral Agentic Search, EnvHarness, 4DAnyone, SWE-bench Science, Antigravity, Slack Code) or failed a bar — the MCP Roadmap is an explicit ecosystem exclusion, FACET and the NVIDIA KV-cache-transfer paper are past 72h, the level1techs local-LLM post dates to 16 August, and Inherent's Faraday agent published 14 August.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "sglang-v0-5-18",
+          "title": "SGLang v0.5.18 — cold starts get 2.38x faster, seven model families land",
+          "category": "tool",
+          "note": "Major release of a 32K-star Apache-2.0 serving engine with measured startup and decode wins plus seven new model families; the feed already tracks the v0.5.10 and v0.5.17 releases, so this is the next entry in an established line, not a dupe."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "video",
+        "article",
+        "ecosystem",
+        "security"
+      ]
     }
   ]
 }
