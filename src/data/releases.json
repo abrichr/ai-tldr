@@ -1,8 +1,134 @@
 {
-  "generatedAt": "2026-08-23T06:42:54.714Z",
+  "generatedAt": "2026-08-23T08:31:48.285Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "xai-grok-4-6-google-agent-platform",
+      "categories": [
+        "model",
+        "tool"
+      ],
+      "title": "Grok 4.6 on Google's agent platform — xAI's flagship arrives in Model Garden",
+      "org": "xAI",
+      "date": "2026-08-21",
+      "url": "https://x.ai/news/grok-4-6-vertex-ai",
+      "summary": "Grok 4.6 is now available on the Google Enterprise Agent Platform through Model Garden. xAI's flagship keeps its 500K-token context window and four reasoning levels, at $2 per million input tokens and $6 per million output.",
+      "tags": [
+        "grok-4-6",
+        "xai",
+        "google-cloud",
+        "model-garden",
+        "gemini-enterprise-agent-platform",
+        "llm",
+        "agents",
+        "api",
+        "enterprise",
+        "long-context",
+        "pricing"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "xAI"
+        },
+        {
+          "label": "Platform",
+          "value": "Google Enterprise Agent Platform (Model Garden)"
+        },
+        {
+          "label": "Context window",
+          "value": "500K tokens"
+        },
+        {
+          "label": "Reasoning efforts",
+          "value": "low, medium, high, xhigh"
+        },
+        {
+          "label": "Price (input)",
+          "value": "$2 / 1M tokens"
+        },
+        {
+          "label": "Price (cached input)",
+          "value": "$0.50 / 1M tokens"
+        },
+        {
+          "label": "Price (output)",
+          "value": "$6 / 1M tokens"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much does Grok 4.6 cost on the Google Enterprise Agent Platform?",
+          "a": "xAI lists three rates for Grok 4.6 on Google's platform: $2 per 1 million input tokens, $6 per 1 million output tokens, and $0.50 per 1 million cached input tokens. The cached rate is a quarter of the standard input price, so prompts that repeat the same long prefix cost far less to send again."
+        },
+        {
+          "q": "Where do I find Grok 4.6 inside Google Cloud?",
+          "a": "Grok 4.6 sits in Model Garden under the xAI publisher on the Google Enterprise Agent Platform. xAI's post points developers at the Grok 4.6 model card in Model Garden, and Google publishes matching partner-model documentation under its Gemini Enterprise Agent Platform docs."
+        },
+        {
+          "q": "Does Grok 4.6 keep its full context window and reasoning settings here?",
+          "a": "Yes. The listing gives Grok 4.6 a 500K-token context window and the same four configurable reasoning efforts xAI ships elsewhere: low, medium, high and xhigh. Teams can dial effort down for cheap, fast calls and up for the slower steps of a long task."
+        },
+        {
+          "q": "What kind of work does xAI say Grok 4.6 is built for?",
+          "a": "xAI describes Grok 4.6 as its latest flagship model, built for long-running agents and for ambitious interactive and visual work. That framing matches the 500K context window, which gives an agent room to hold a long task history instead of restarting from a summary."
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "Input",
+            "price": "$2.00",
+            "unit": "/ 1M tokens"
+          },
+          {
+            "plan": "Cached input",
+            "price": "$0.50",
+            "unit": "/ 1M tokens"
+          },
+          {
+            "plan": "Output",
+            "price": "$6.00",
+            "unit": "/ 1M tokens"
+          }
+        ],
+        "source": "https://x.ai/news/grok-4-6-vertex-ai"
+      },
+      "links": [
+        {
+          "label": "xAI Announcement",
+          "url": "https://x.ai/news/grok-4-6-vertex-ai"
+        },
+        {
+          "label": "Google Model Card",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok/grok-4-6"
+        },
+        {
+          "label": "Grok 4.6 Launch Post",
+          "url": "https://x.ai/news/grok-4-6"
+        },
+        {
+          "label": "xAI Models Docs",
+          "url": "https://docs.x.ai/developers/models"
+        }
+      ],
+      "explainer": {
+        "tagline": "Grok 4.6 is listed in Google's Model Garden with a 500K context window and $2 / $6 per million tokens.",
+        "whatIsIt": "Google's Enterprise Agent Platform now serves Grok 4.6, which xAI announced on August 21, 2026. The model shows up in Model Garden under the xAI publisher, so Google Cloud customers can call xAI's flagship from the same platform they already use for Gemini and other partner models. xAI published the token prices with the listing.",
+        "howItWorks": "A developer picks the Grok 4.6 model card in Model Garden, then sets a reasoning effort — low, medium, high or xhigh — for each call. Requests run inside a 500K-token context window. Billing splits three ways: standard input, output, and a cheaper cached-input rate for prompt content that is sent again.",
+        "whyItMatters": "Teams standardised on Google Cloud no longer have to open a separate xAI account to reach Grok 4.6. Buying through Model Garden keeps the model inside the identity, quota and billing setup a Google Cloud org already runs, which is usually the blocker for regulated buyers rather than the model quality itself. The published cached-input rate also makes long-context agent loops easier to budget.",
+        "forWho": "Google Cloud teams building long-running agents",
+        "tryIt": "Open the Grok 4.6 model card in Google Cloud Model Garden under the xAI publisher"
+      },
+      "image": {
+        "url": "https://x.ai/images/news/og-google-enterprise-agent-platform.webp",
+        "alt": "xAI announcement card for Grok 4.6 on the Google Enterprise Agent Platform",
+        "fit": "cover"
+      },
+      "publishDate": "2026-08-23T08:31:48.285Z"
+    },
     {
       "id": "volcengine-openviking-0-4-16",
       "categories": [
@@ -14280,7 +14406,7 @@
         },
         {
           "label": "Access tiers",
-          "value": "SuperGrok Heavy, Cursor Ultra, Cursor Teams Premium"
+          "value": "SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, Cursor Teams (Standard and Premium)"
         },
         {
           "label": "Team price",
@@ -14306,7 +14432,7 @@
       "faq": [
         {
           "q": "How much does Grok Bot cost?",
-          "a": "Grok Bot has no separate price. Access is bundled into three existing xAI and Cursor subscriptions: SuperGrok Heavy, Cursor Ultra, and Cursor Teams Premium. The team plan is $120 per seat per month and adds centralized billing, a team marketplace, shared analytics, and SAML/OIDC single sign-on. Enterprise buyers join a waitlist through sales."
+          "a": "Grok Bot has no separate price. Access is bundled into xAI and Cursor subscriptions: SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, and Cursor Teams Standard and Premium. xAI widened that list on August 21, 2026, from the three top tiers it launched with. The team plan is $120 per seat per month and adds centralized billing, a team marketplace, shared analytics, and SAML/OIDC single sign-on."
         },
         {
           "q": "Which devices can run Grok Bot?",
@@ -14334,6 +14460,10 @@
         {
           "label": "Announcement",
           "url": "https://x.ai/news/introducing-grok-bot"
+        },
+        {
+          "label": "More Plans Update",
+          "url": "https://x.ai/news/grok-bot-more-plans"
         },
         {
           "label": "Coverage: MacRumors",

@@ -35692,6 +35692,45 @@
         "ecosystem",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260823t083148z",
+      "timestamp": "2026-08-23T08:31:48.285Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Cohere, Moonshot, Qwen, Z.ai), GitHub trending daily and weekly, HuggingFace models/datasets/papers, HN front page and best, all 8 YouTube creator feeds, tier-1 press and the AI-for-science lane. One item cleared the bar: Grok 4.6 listed on Google's Enterprise Agent Platform (2026-08-21, official x.ai post, published pricing). Also patched the stale Grok Bot access tiers after xAI widened them the same day. Both fresh YouTube videos were already in the feed; Inherent's Faraday, Nari Labs' Qwen3-TTS serving work and the FACET paper all shipped before the 72h window and were dropped.",
+      "counts": {
+        "added": 1,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "xai-grok-4-6-google-agent-platform",
+          "title": "Grok 4.6 on Google's agent platform — xAI's flagship arrives in Model Garden",
+          "category": "model",
+          "note": "Posted on x.ai's official news channel within 48h with published token pricing, and it is a distinct platform launch from the existing Amazon Bedrock listing rather than a re-post of it."
+        }
+      ],
+      "updated": [
+        {
+          "id": "xai-grok-bot",
+          "title": "Grok Bot — xAI's always-on agents get their own cloud computer",
+          "note": "xAI widened Grok Bot access on 2026-08-21 (x.ai/news/grok-bot-more-plans): it is now included with SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra and Cursor Teams Standard and Premium. The item's access-tier facts were stale."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "video",
+        "paper",
+        "dataset",
+        "article",
+        "algorithm",
+        "benchmark",
+        "ecosystem"
+      ]
     }
   ]
 }
