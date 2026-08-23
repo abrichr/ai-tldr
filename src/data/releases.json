@@ -1,8 +1,113 @@
 {
-  "generatedAt": "2026-08-23T12:40:06.995Z",
+  "generatedAt": "2026-08-23T14:29:05.900Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "litellm-v1-98-0",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "LiteLLM v1.98.0 — reserved capacity gets flat-cost billing, not per-token",
+      "org": "BerriAI",
+      "date": "2026-08-23",
+      "url": "https://github.com/BerriAI/litellm/releases/tag/v1.98.0",
+      "summary": "LiteLLM v1.98.0 adds provisioned-throughput billing, so a deployment on reserved capacity carries a flat cost instead of a per-token charge. The release also ships shadow evals for the auto-router and a per-key prompt caching switch.",
+      "tags": [
+        "litellm",
+        "ai-gateway",
+        "llm-proxy",
+        "routing",
+        "cost-tracking",
+        "provisioned-throughput",
+        "prompt-caching",
+        "mcp",
+        "open-source",
+        "python"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "LiteLLM v1.98.0 teaches the open-source AI gateway to bill reserved capacity and to test routing changes before adopting them.",
+        "whatIsIt": "Provisioned-throughput (PTU) billing arrives in LiteLLM v1.98.0: you set a flat cost on a model deployment, and the gateway stops charging that deployment per token. Daily rollups record the flat cost by active hour, the model form and the Usage page surface it, and the whole feature sits behind an opt-in environment variable. LiteLLM is an open-source gateway that fronts more than 100 LLM APIs in the OpenAI format with cost tracking, guardrails, load balancing and logging.",
+        "howItWorks": "The auto-router picks up a pre-adoption shadow eval: a blind pairwise judge samples live /v1/messages and /v1/responses traffic and scores a candidate routing change against the routing in use, including in the reverse direction, with results in a new shadow evals tab beside auto-router usage. Routing groups are now callable as virtual models and appear in /v1/models, so a client can ask for a group by name instead of a single deployment.",
+        "whyItMatters": "Platform teams that buy reserved capacity from a provider were mispricing it, because the gateway charged every call per token no matter how the capacity was bought. Flat-cost deployments fix that line in the bill. The rest of the release aims at long-running production traffic: a per-deployment keepalive_seconds heartbeat stops load balancers from cutting long streams, estimated output tokens become configurable per key, team and model for rate limiting, and prompt caching turns into a per-key switch.",
+        "forWho": "platform teams running a shared LLM gateway",
+        "tryIt": "docker pull ghcr.io/berriai/litellm:v1.98.0"
+      },
+      "quickFacts": [
+        {
+          "label": "Version",
+          "value": "v1.98.0 (stable)"
+        },
+        {
+          "label": "Maker",
+          "value": "BerriAI"
+        },
+        {
+          "label": "Released",
+          "value": "August 23, 2026"
+        },
+        {
+          "label": "GitHub stars",
+          "value": "57,066"
+        },
+        {
+          "label": "Billing",
+          "value": "Flat-cost PTU deployments, opt-in env var"
+        },
+        {
+          "label": "Router",
+          "value": "Shadow evals; groups callable as virtual models"
+        },
+        {
+          "label": "Image",
+          "value": "ghcr.io/berriai/litellm:v1.98.0, cosign-signed"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is LiteLLM v1.98.0 a stable release or a preview?",
+          "a": "LiteLLM v1.98.0 is published as a stable release on GitHub, not a pre-release, while the v1.99.0 line was still shipping release candidates and dev builds at the same time. The Docker image ghcr.io/berriai/litellm:v1.98.0 is signed with cosign, and the release notes give the verification command against a pinned commit hash."
+        },
+        {
+          "q": "How do I turn on provisioned-throughput billing in LiteLLM?",
+          "a": "Flat-cost attribution in LiteLLM v1.98.0 is gated behind an opt-in environment variable, so it stays off until you switch it on. After that you enter the PTU inputs on the model deployment in the model form, and daily rollups write the per-model flat cost by active hour so the Usage page can show it."
+        },
+        {
+          "q": "What is a shadow eval in LiteLLM's auto-router?",
+          "a": "A shadow eval lets a LiteLLM operator test a routing change before adopting it. The auto-router samples live /v1/messages and /v1/responses traffic and has a blind pairwise judge compare the candidate routing against the one in use, in either direction. A direction picker and reverse-mode display sit in the shadow evals tab."
+        },
+        {
+          "q": "Which new model pricing does LiteLLM v1.98.0 add?",
+          "a": "LiteLLM v1.98.0 adds price entries for NVIDIA Nemotron 3.5 Lightning on both OpenRouter and DeepInfra. LiteLLM keeps a model-price map that drives its cost tracking, so a model needs an entry there before spend on it can be attributed."
+        },
+        {
+          "q": "Does LiteLLM v1.98.0 change anything for MCP servers?",
+          "a": "Yes. LiteLLM v1.98.0 scopes gateway session bearer tokens to the RFC 8707 resource, so an MCP session token is tied to the resource it was issued for. The release also exposes client HTTP headers to logging callbacks and hooks, and drops the caller host and configured upstream headers from logged metadata."
+        }
+      ],
+      "image": {
+        "url": "https://opengraph.githubassets.com/1/BerriAI/litellm",
+        "alt": "GitHub social preview card for the BerriAI/litellm repository",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Release Notes",
+          "url": "https://github.com/BerriAI/litellm/releases/tag/v1.98.0"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/BerriAI/litellm"
+        },
+        {
+          "label": "Documentation",
+          "url": "https://docs.litellm.ai/docs/"
+        }
+      ],
+      "publishDate": "2026-08-23T14:29:05.900Z"
+    },
     {
       "id": "ray-2-58-0",
       "categories": [

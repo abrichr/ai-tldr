@@ -35797,6 +35797,39 @@
         "rumor",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260823t142905z",
+      "timestamp": "2026-08-23T14:29:05.900Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, DeepMind, Mistral, Meta, Cohere, Moonshot, DeepSeek, SSI), GitHub trending daily and weekly, the releases feed of 30 major AI repos, HuggingFace models/datasets/papers, HN top 30, 8 YouTube creator feeds, and the AI-for-science lane (STAT News, FDA/medical-imaging, BCI/neural-decoding and drug-discovery searches). Added one item: LiteLLM v1.98.0, which brings flat-cost billing for provisioned throughput to the open-source AI gateway. Everything else fresh was already in the feed (DeepSeek V4-Flash-Vision-Exp, SGLang v0.5.18, LLM 0.33, Mistral Agentic Search, Fireship and 1littlecoder videos) or fell outside the 72h cap (Anthropic Python SDK v1.0.0, Hermes Agent v0.20.5, Qwen-UI-Agent, A2A joining the Agentic AI Foundation).",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "litellm-v1-98-0",
+          "title": "LiteLLM v1.98.0 — reserved capacity gets flat-cost billing, not per-token",
+          "category": "tool",
+          "note": "Substantive stable release (published 2026-08-23T00:28Z) of a 57k-star gateway with real production adoption: PTU flat-cost billing, auto-router shadow evals, routing groups as virtual models, per-key prompt caching, RFC 8707 MCP session scoping. Every claim traced to the release body via the GitHub API in this run."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
