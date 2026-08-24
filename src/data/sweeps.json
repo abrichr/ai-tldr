@@ -36021,6 +36021,33 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260824t070222z",
+      "timestamp": "2026-08-24T07:02:22.619Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero adds. Searched lab blogs (Anthropic last posted Aug 14, Meta July, Cohere Aug 19, Mistral Aug 20, DeepMind's Gemini 3.7 Flash / WeatherNext / SL2T all already in feed, OpenAI + xAI 403 so checked via search: only an SB 53 policy statement and minor ChatGPT release notes), Chinese labs (DeepSeek, Z.ai, MiniMax, Moonshot/Kimi, Qwen, ByteDance Seed Aug 5, Baidu, Tencent - nothing new), GitHub trending (all/python/typescript/rust), HuggingFace models + datasets + papers, HN front page top 30 plus the full Algolia by-date list down to 60 points, and 8 YouTube creator feeds. Every strong candidate failed a hard rule, not the search: Fabien Sanglard's agent.md (HN #7, 283 pts) is dated Aug 21 and Earendil's 'What Is a Harness?' (HN #11, 406 pts) Aug 20, both past the 72h cap; the 485-point level1techs local-LLM writeup was posted Aug 16; Inherent's Faraday agent got TechCrunch pickup Aug 22 but its own research page and arXiv preprint are dated Aug 14. Felony Bench (HN 832 pts) is a spec with no working code and a 1-star repo, the new MCP roadmap is a roadmap (excluded), Claude Code 2.1.240/2.1.241 shipped with 'bug fixes and reliability improvements' and nothing else, and oh-my-pi v18.0.4 (fresh today, 26.9k stars) is not on weekly trending so it misses the 500-stars-in-7d signal. HF papers topped out at 18 upvotes with no linked code. Infra note: youtube.com/feeds/videos.xml returned HTTP 404 for all 8 creator channels across three attempts (a single isolated fetch of Two Minute Papers did return 200, whose newest upload is Aug 19 and so out of window) - looks like IP-level throttling on this runner, worth watching since the Aug 23 sweep landed a video fine.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem",
+        "rumor"
+      ]
     }
   ]
 }
