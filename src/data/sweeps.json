@@ -36178,6 +36178,42 @@
         "rumor",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260824t164442z",
+      "timestamp": "2026-08-24T16:44:42.939Z",
+      "source": "github-actions-sweep",
+      "summary": "One item cleared the bar: NVIDIA Groq 3 LPX entered full production at Hot Chips 2026 (Aug 24), with an official newsroom release, product page and pickup from CNBC, IEEE Spectrum, DataCenterDynamics and SiliconANGLE. Everything else in the 72h window was already in the feed or fell short: lab blogs were dry (Anthropic last posted Aug 14, Meta Jul 27, Mistral Aug 20, DeepMind's Gemini 3.7 Flash Aug 13, Ai2 Aug 7; OpenAI and xAI blogs 403'd, and the OpenAI API changelog plus Anthropic's release notes stop at Aug 21 and Aug 20 with both entries already covered); GitHub trending, HF models/datasets/papers and both fresh YouTube videos were already in the feed or are old repos gaining stars; every HN story above 150 points from the window was either covered (Munder Difflin, SGLang v0.5.18, LiteLLM v1.98.0, DeepSeek V4-Flash-Vision-Exp) or excluded (the MCP post is a roadmap, Fabien Sanglard's agent.md and Felony Bench are dated Aug 21 and fail the 72h cap, the level1techs local-LLM writeup is a forum post with no artifact); Claude Code 2.1.240/241, Codex 0.149.1 and Cline 4.1.13-4.1.15 are bug-fix patches, and Ollama v0.33.0-rc2 plus LiteLLM v1.99.0-rc.1 are release candidates. Inherent's Faraday agent and its Replica benchmark are real but dated Aug 13-14 (arXiv 2608.13331 v1), outside the cap. The science lane was searched actively (BCI and neural decoding, medical imaging and FDA clearances, protein and genomics foundation models, pharma AI) across STAT News, Nature subject pages, techxplore and the specialist labs — Aidoc's CT triage clearance is from January, Brain2Qwerty's Nature Neuroscience coverage is Aug 3, and the EU JRC biology-AI report is a policy document, so nothing shipped a verified artifact inside 72h.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "nvidia-groq-3-lpx-production",
+          "title": "NVIDIA Groq 3 LPX — the agent inference chip enters full production",
+          "category": "tool",
+          "note": "NVIDIA's dedicated token-generation accelerator hit full production on Aug 24 with a first named cloud customer (Nebius) and a published Artificial Analysis figure — a shipped hardware artifact, distinct from the Vera Rubin NVL72 full-production item already in the feed."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "tutorial",
+        "security",
+        "ecosystem",
+        "rumor"
+      ]
     }
   ]
 }

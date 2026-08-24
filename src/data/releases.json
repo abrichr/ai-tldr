@@ -1,8 +1,123 @@
 {
-  "generatedAt": "2026-08-24T14:49:04.290Z",
+  "generatedAt": "2026-08-24T16:44:42.939Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "nvidia-groq-3-lpx-production",
+      "categories": [
+        "tool"
+      ],
+      "title": "NVIDIA Groq 3 LPX — the agent inference chip enters full production",
+      "org": "NVIDIA",
+      "date": "2026-08-24",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-groq-3-lpx-now-in-full-production-with-world-class-speed-for-agentic-ai",
+      "summary": "NVIDIA Groq 3 LPX is now in full production. The accelerator handles token generation for AI agents and reached 3,400 output tokens per second on Gemma 4 31B with a 100,000-token context. Nebius is the first cloud to adopt it.",
+      "tags": [
+        "nvidia",
+        "groq-3-lpx",
+        "lpu",
+        "inference",
+        "ai-accelerator",
+        "hardware",
+        "vera-rubin",
+        "nvl72",
+        "agentic-ai",
+        "data-center",
+        "nebius",
+        "hot-chips-2026",
+        "ai-infrastructure"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Output tokens/sec": 3400,
+        "Responsiveness": "4x faster"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "NVIDIA"
+        },
+        {
+          "label": "Status",
+          "value": "Full production"
+        },
+        {
+          "label": "Platform",
+          "value": "Extension of Vera Rubin NVL72"
+        },
+        {
+          "label": "Job split",
+          "value": "NVL72 reads context, LPX decodes tokens"
+        },
+        {
+          "label": "Benchmark setup",
+          "value": "Gemma 4 31B, 100K context (Artificial Analysis)"
+        },
+        {
+          "label": "First cloud",
+          "value": "Nebius, via Nebius Token Factory"
+        },
+        {
+          "label": "Announced at",
+          "value": "Hot Chips 2026"
+        }
+      ],
+      "explainer": {
+        "tagline": "NVIDIA's Groq 3 LPX accelerator is in full production, built to decode tokens fast enough to keep AI agents responsive.",
+        "whatIsIt": "Groq 3 LPX has entered full production — an NVIDIA accelerator built only for the token-generation half of AI inference. It extends the Vera Rubin NVL72 platform instead of replacing it, so a rack can run both parts of an agent's work. NVIDIA announced the milestone at Hot Chips 2026 on August 24, 2026.",
+        "howItWorks": "Inference splits into two very different jobs, and Groq 3 LPX takes one of them. The Vera Rubin GPUs read and process long context, while the LPX accelerators decode the output tokens, which is the step where latency is felt. Running Gemma 4 31B with a 100,000-token context, Artificial Analysis measured 3,400 output tokens per second.",
+        "whyItMatters": "Agents spend most of their wall-clock time waiting on token decoding, so a chip aimed at that step changes how long a coding or research task takes. NVIDIA says Groq 3 LPX is 4x more responsive than the nearest alternative platform on latency-sensitive work. Nebius is the first AI cloud to adopt it, through its Nebius Token Factory inference service.",
+        "forWho": "AI infrastructure teams and inference providers",
+        "tryIt": "Specs and platform details: https://www.nvidia.com/en-us/data-center/lpx/"
+      },
+      "faq": [
+        {
+          "q": "When can I actually use Groq 3 LPX?",
+          "a": "NVIDIA says Groq 3 LPX is now in full production, and Nebius is the first AI cloud to adopt it inside the Nebius Token Factory inference platform. NVIDIA's own release adds the usual caveat that products described are offered on a when-and-if-available basis, so there is no published general availability date for buying racks directly."
+        },
+        {
+          "q": "How is Groq 3 LPX different from Vera Rubin NVL72?",
+          "a": "Groq 3 LPX and Vera Rubin NVL72 split one inference job in two. The NVL72 GPUs handle large-scale context processing — reading the prompt, documents and tool output. Groq 3 LPX handles token decoding, the latency-critical step that produces the answer. NVIDIA designed the LPX as an extension of the NVL72 platform, so the two run together."
+        },
+        {
+          "q": "Where does the Groq name in an NVIDIA product come from?",
+          "a": "The Groq name comes from Groq Inc., the inference-chip startup whose hardware technology NVIDIA acquired in a $20 billion deal, as SiliconANGLE reports alongside the move of founder Jonathan Ross and president Sunny Madra to NVIDIA. Groq 3 LPX is the first NVIDIA-branded accelerator built on that LPU line."
+        },
+        {
+          "q": "What workloads is Groq 3 LPX meant for?",
+          "a": "Groq 3 LPX targets latency-sensitive and agentic workloads — coding agents, chained tool calls and anything where a person or a downstream step is waiting on the next token. NVIDIA frames it as turning agentic tasks that took hours into ones that take minutes, and claims 4x better responsiveness than the nearest alternative platform."
+        }
+      ],
+      "image": {
+        "url": "https://blogs.nvidia.com/wp-content/uploads/2026/08/HotChips_2026_MKT_KV_Rubin_Rack_Family_Front_comp_4k_V004-2-1-1680x945.png",
+        "alt": "NVIDIA Rubin rack family shown at Hot Chips 2026",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-groq-3-lpx-now-in-full-production-with-world-class-speed-for-agentic-ai"
+        },
+        {
+          "label": "NVIDIA Blog",
+          "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
+        },
+        {
+          "label": "Product Page",
+          "url": "https://www.nvidia.com/en-us/data-center/lpx/"
+        },
+        {
+          "label": "Hot Chips 2026",
+          "url": "https://www.nvidia.com/en-us/events/hot-chips-conference/"
+        },
+        {
+          "label": "SiliconANGLE Report",
+          "url": "https://siliconangle.com/2026/08/24/nvidias-dedicated-inference-accelerator-groq-3-lpx-enters-full-production-to-supercharge-ai-agents/"
+        }
+      ],
+      "publishDate": "2026-08-24T16:44:42.939Z"
+    },
     {
       "id": "huggingface-sale-talks-13b",
       "categories": [
