@@ -1,8 +1,62 @@
 {
-  "generatedAt": "2026-08-24T12:49:54.154Z",
+  "generatedAt": "2026-08-24T14:49:04.290Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "huggingface-sale-talks-13b",
+      "categories": [
+        "rumor",
+        "ecosystem"
+      ],
+      "title": "Hugging Face explores a sale — reports put the price at $13B or more",
+      "org": "Hugging Face",
+      "date": "2026-08-23",
+      "url": "https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b/",
+      "summary": "Hugging Face is exploring a sale that would value the AI model hub at $13 billion or more, Business Insider reported on August 23. No buyer is named and no deal is agreed. The site hosts more than 2 million models.",
+      "tags": [
+        "rumor",
+        "hugging-face",
+        "acquisition",
+        "open-source-ai",
+        "model-hub",
+        "datasets",
+        "ecosystem"
+      ],
+      "importance": "rumor",
+      "metrics": {
+        "Reported price": "$13B or more",
+        "2023 valuation": "$4.5B"
+      },
+      "explainer": {
+        "tagline": "Business Insider reports Hugging Face is testing buyer interest at a price close to triple its last public valuation.",
+        "whatIsIt": "Hugging Face has been testing interest from buyers in a sale worth $13 billion or more, according to an August 23 report from Business Insider. Reuters and TechCrunch both picked the report up over the same weekend. No buyer has been named and no deal has been agreed. The company last raised in 2023, a $235 million Series D that valued it at $4.5 billion.",
+        "howItWorks": "The reporting rests on unnamed sources who say terms are being discussed. Business Insider is the only outlet with original sourcing; the later stories credit it rather than adding their own. Hugging Face has not commented, so the $13 billion figure is a price being tested, not a signed number. A named acquirer, a regulatory filing, or a statement from co-founder and CEO Clément Delangue would confirm it. A denial, or a new funding round instead of a sale, would point the other way.",
+        "whyItMatters": "Ownership of Hugging Face touches almost every machine-learning workflow, because the platform is where more than 2 million models, 1 million applications and 500,000 datasets are published and downloaded. Whoever controls that hub sets the hosting terms, the default licences, and which formats stay free to publish. Teams that treat the Hub as permanent free infrastructure now have a reason to check whether their weights and datasets are mirrored somewhere else.",
+        "forWho": "ML engineers and open-model publishers"
+      },
+      "image": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/07/hugging-face-logo-smartphone.jpg?resize=1200,800",
+        "alt": "Hugging Face logo shown on a smartphone screen",
+        "fit": "cover",
+        "credit": "TechCrunch"
+      },
+      "links": [
+        {
+          "label": "TechCrunch Report",
+          "url": "https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b/"
+        },
+        {
+          "label": "Silicon Republic",
+          "url": "https://www.siliconrepublic.com/business/reports-hugging-face-in-talks-for-sale-at-13bn-valuation"
+        },
+        {
+          "label": "Reuters via Yahoo",
+          "url": "https://finance.yahoo.com/technology/ai/articles/hugging-face-exploring-sale-valuing-200012818.html"
+        }
+      ],
+      "publishDate": "2026-08-24T14:49:04.290Z"
+    },
     {
       "id": "dbreunig-fable-free-lunch-aug23",
       "categories": [

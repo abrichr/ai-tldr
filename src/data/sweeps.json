@@ -36144,6 +36144,40 @@
         "ecosystem",
         "showcase"
       ]
+    },
+    {
+      "id": "sweep-20260824t144904z",
+      "timestamp": "2026-08-24T14:49:04.290Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Qwen, DeepSeek, Moonshot, Z.ai), GitHub trending daily and weekly, HuggingFace models/datasets/papers, HN front page and Show HN, 8 YouTube creator feeds, the coding-agent and inference-runtime release pages, and the AI-for-science lane. Only one item cleared the 72h cap: reports that Hugging Face is exploring a sale at $13B or more. Everything else in the window was either already in the feed (Ornith-1.5, Gemini 3.7 Flash, Cloudflare Kitesurf, both fresh YouTube videos, DeepSeek V4-Flash-Vision-Exp) or shipped before 2026-08-22 (Qwen-UI-Agent Aug 20, Inherent Faraday Aug 14, Prime Intellect NanoGPT Speedrun Aug 14, Ollama v0.33.0 Aug 21, Fabien Sanglard's agent.md Aug 21). No model launched between Aug 22 and Aug 24.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "huggingface-sale-talks-13b",
+          "title": "Hugging Face explores a sale — reports put the price at $13B or more",
+          "category": "rumor",
+          "note": "Business Insider broke it Aug 23 and Reuters, TechCrunch and Silicon Republic corroborated within 48h; ownership of the Hub is structural for every open-model publisher, so it ships as a rumor with the source and the confirm/deny conditions stated."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "rumor",
+        "ecosystem"
+      ]
     }
   ]
 }
