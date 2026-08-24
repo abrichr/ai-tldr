@@ -1,8 +1,67 @@
 {
-  "generatedAt": "2026-08-24T16:44:42.939Z",
+  "generatedAt": "2026-08-24T18:50:31.913Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "two-minute-papers-qwen-3-8-27b-aug24",
+      "categories": [
+        "video"
+      ],
+      "title": "Two Minute Papers — 'This Small AI Will Change Everything' on Qwen3.8-27B",
+      "org": "Two Minute Papers",
+      "date": "2026-08-24",
+      "url": "https://www.youtube.com/watch?v=wMl6c_r0ubw",
+      "summary": "Two Minute Papers covers Qwen3.8-27B, Alibaba's 27B open-weights model. The description cites the Hugging Face model card plus community runs, including an NVIDIA forum thread measuring the model on a single DGX Spark.",
+      "tags": [
+        "video",
+        "two-minute-papers",
+        "qwen",
+        "qwen3.8-27b",
+        "open-weights",
+        "local-llm",
+        "quantization",
+        "nvfp4",
+        "explainer"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Two Minute Papers argues that Qwen3.8-27B, a 27B open model small enough to run on one machine, is the release worth paying attention to.",
+        "whatIsIt": "'This Small AI Will Change Everything' is the August 24 Two Minute Papers episode on Qwen3.8-27B, Alibaba's 27B open-weights model. The description points at the Hugging Face model card as the place to download it, then lists the community tests the episode draws on.",
+        "howItWorks": "The episode keeps the channel's short-explainer format. Its listed sources are mostly community runs rather than benchmark tables: an Unsloth results thread, two r/LocalLLaMA test threads (one on Q8_0 weights on Strix Halo), a developer post on X, and an NVIDIA developer-forum thread that measures Qwen3.8-27B in NVFP4 on a single DGX Spark using vLLM with MTP speculative decoding.",
+        "whyItMatters": "Qwen3.8-27B is already in the feed as a release, so the useful part here is the size argument. A 27B model fits on one box, and the threads the video cites are people reporting what it does on real hardware — the kind of number that decides whether you serve a model yourself or keep paying for an API.",
+        "forWho": "developers deciding whether to run an open model locally",
+        "tryIt": "Watch the episode, then pull the weights from huggingface.co/Qwen/Qwen3.8-27B"
+      },
+      "author": {
+        "name": "Two Minute Papers",
+        "profileUrl": "https://www.youtube.com/channel/UCbfYPyITQ-7l4upoX8nvctg"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/wMl6c_r0ubw/hqdefault.jpg",
+        "alt": "Two Minute Papers thumbnail for the episode on Qwen3.8-27B",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=wMl6c_r0ubw"
+        },
+        {
+          "label": "Qwen3.8-27B Model Card",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+        },
+        {
+          "label": "DGX Spark Measurements",
+          "url": "https://forums.developer.nvidia.com/t/qwen3-8-27b-nvfp4-on-a-single-dgx-spark-up-to-1m-context-vllm-mtp-measurements/380244"
+        },
+        {
+          "label": "Two Minute Papers",
+          "url": "https://www.youtube.com/channel/UCbfYPyITQ-7l4upoX8nvctg"
+        }
+      ],
+      "publishDate": "2026-08-24T18:50:31.913Z"
+    },
     {
       "id": "nvidia-groq-3-lpx-production",
       "categories": [
