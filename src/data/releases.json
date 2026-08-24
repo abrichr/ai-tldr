@@ -1,8 +1,104 @@
 {
-  "generatedAt": "2026-08-24T18:50:31.913Z",
+  "generatedAt": "2026-08-24T20:40:53.592Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "tempus-ecg-ph",
+      "categories": [
+        "tool"
+      ],
+      "title": "Tempus ECG-PH — FDA clears AI that spots pulmonary hypertension in a routine ECG",
+      "org": "Tempus AI",
+      "date": "2026-08-24",
+      "url": "https://www.biospace.com/press-releases/tempus-receives-fda-clearance-for-its-ai-product-intended-to-detect-signs-of-pulmonary-hypertension-from-standard-ecgs",
+      "summary": "Tempus ECG-PH is an AI software device that reads a standard 12-lead ECG and flags signs of pulmonary hypertension. The FDA granted it 510(k) clearance on August 24, 2026. It is Tempus' third cleared heart device.",
+      "tags": [
+        "fda-clearance",
+        "clinical-ai",
+        "diagnostics",
+        "healthcare",
+        "precision-medicine",
+        "cardiology",
+        "ecg",
+        "pulmonary-hypertension",
+        "medical-device",
+        "tempus"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Tempus AI (NASDAQ: TEM)"
+        },
+        {
+          "label": "Clearance",
+          "value": "FDA 510(k)"
+        },
+        {
+          "label": "Cleared",
+          "value": "August 24, 2026"
+        },
+        {
+          "label": "Input",
+          "value": "Resting 12-lead ECG"
+        },
+        {
+          "label": "Detects",
+          "value": "Signs of mPAP above 20 mmHg"
+        },
+        {
+          "label": "Intended patients",
+          "value": "Age 40+, cardiac symptoms, no known PH"
+        },
+        {
+          "label": "Output",
+          "value": "Binary result, not a stand-alone diagnosis"
+        }
+      ],
+      "explainer": {
+        "tagline": "An FDA-cleared AI that reads a routine ECG and flags patients who may have pulmonary hypertension.",
+        "whatIsIt": "Tempus ECG-PH is now cleared by the FDA to screen for pulmonary hypertension using an ECG the clinic already takes. The software reads a resting, non-ambulatory 12-lead recording and returns a single yes-or-no signal about raised pressure in the lung arteries. It is intended for people aged 40 and over who have cardiovascular symptoms — breathlessness, tiredness, chest pain or swelling — and no known history of the condition.",
+        "howItWorks": "The cleared software looks for patterns across the 12 ECG leads that go with a mean pulmonary artery pressure above 20 mmHg, the threshold that defines pulmonary hypertension. Tempus says ECG-PH returns a binary output that must be read alongside the original ECG, the patient's symptoms, other tests and their clinical history. It is not meant for tracking a patient over time, and it should not be run on ECGs with paced rhythms.",
+        "whyItMatters": "Pulmonary hypertension affects roughly 1% of people and up to 10% of adults over 65, yet it is often missed, because the early symptoms are vague and the gold-standard test — right heart catheterisation — is invasive. Putting a flag on a recording that clinics already collect gives cardiologists a cheap first filter for who should get an echocardiogram next. Brandon Fornwalt, Tempus' senior vice president of cardiology, says the condition \"has historically been underdiagnosed because early symptoms are non-specific and gold-standard diagnostics are invasive.\"",
+        "forWho": "cardiologists and primary-care clinicians"
+      },
+      "faq": [
+        {
+          "q": "Does Tempus ECG-PH diagnose pulmonary hypertension on its own?",
+          "a": "No. Tempus ECG-PH returns a binary output only and is not intended as a stand-alone diagnostic tool. The company says the result has to be interpreted together with the patient's original ECG recording, their symptoms, other test results and their clinical history. A positive flag points a clinician toward further testing rather than confirming the condition."
+        },
+        {
+          "q": "Which patients is Tempus ECG-PH cleared for?",
+          "a": "Tempus ECG-PH is cleared for clinical diagnostic 12-lead ECG recordings collected at a healthcare facility from patients aged 40 or older who have cardiovascular symptoms such as breathlessness, tiredness, chest pain or swelling, and who have no known history of pulmonary hypertension. The recording must be resting and non-ambulatory."
+        },
+        {
+          "q": "When should Tempus ECG-PH not be used?",
+          "a": "Tempus says ECG-PH should not be used to monitor the same patient over a series of recordings, and it should not be run on ECGs with paced rhythms. It is also outside its cleared use for patients under 40, for people already diagnosed with pulmonary hypertension, and for ambulatory recordings taken outside a healthcare facility."
+        },
+        {
+          "q": "How does this fit with Tempus' other heart products?",
+          "a": "Tempus ECG-PH is the third FDA-cleared device in the company's cardiovascular portfolio. The two earlier clearances cover atrial fibrillation and low ejection fraction. All three read the same standard 12-lead ECG, so a clinic that already runs one of them is looking at the same recording for a different condition."
+        }
+      ],
+      "image": {
+        "url": "https://blockonomi.com/wp-content/uploads/2026/08/Tempus-1.webp",
+        "alt": "Tempus wordmark on a tablet screen, illustrating the ECG-PH FDA clearance",
+        "fit": "cover",
+        "credit": "Blockonomi"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.biospace.com/press-releases/tempus-receives-fda-clearance-for-its-ai-product-intended-to-detect-signs-of-pulmonary-hypertension-from-standard-ecgs"
+        },
+        {
+          "label": "Coverage",
+          "url": "https://blockonomi.com/tempus-ai-tem-stock-surges-as-fda-approves-ai-powered-heart-disease-detection-tool/"
+        }
+      ],
+      "publishDate": "2026-08-24T20:40:53.592Z"
+    },
     {
       "id": "two-minute-papers-qwen-3-8-27b-aug24",
       "categories": [
@@ -97291,9 +97387,13 @@
         {
           "label": "Repo",
           "url": "https://github.com/Layr-Labs/d-inference"
+        },
+        {
+          "label": "Register Report",
+          "url": "https://www.theregister.com/ai-and-ml/2026/08/24/conjure-cash-with-old-macs-by-linking-them-to-ai-inference-borg/5292002"
         }
       ],
-      "summary": "Eigen Labs launches Darkbloom: decentralized AI inference on idle Apple Silicon Macs with four hardware-backed privacy layers. Costs ~50% less than centralized providers; operators keep 100% of revenue. Now live in research preview.",
+      "summary": "Darkbloom runs AI inference on idle Apple Silicon Macs with four hardware-backed privacy layers, at roughly half the cost of centralized providers. It is now a paid inference provider on OpenRouter, with 900+ registered providers and 4.5 billion tokens served.",
       "tags": [
         "decentralized-inference",
         "apple-silicon",
@@ -97308,8 +97408,9 @@
       "metrics": {
         "Cost vs. centralized": "~50% less",
         "Operator revenue share": "100%",
-        "Max model size": "239B parameters",
-        "Minimum macOS": "macOS 14 (Sonoma)"
+        "Tokens served": "4.5 billion",
+        "Registered providers": "900+",
+        "Typical operator earnings": "$120–200 / month per Mac"
       },
       "explainer": {
         "tagline": "Run AI inference on idle Apple Silicon Macs with hardware-backed privacy and half the cost of centralized providers.",

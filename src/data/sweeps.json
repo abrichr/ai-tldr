@@ -36247,6 +36247,47 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260824t204053z",
+      "timestamp": "2026-08-24T20:40:53.592Z",
+      "source": "github-actions-sweep",
+      "summary": "One item cleared the bar: the FDA granted Tempus 510(k) clearance for ECG-PH, an AI that flags signs of pulmonary hypertension in a standard 12-lead ECG (announced 2026-08-24). Lab blogs were quiet inside the 72h window (Anthropic last posted Aug 14, Meta Jul 27, Mistral's Aug 24 post is a HUMAIN partnership with no product, DeepMind's newest is Gemini 3.7 Flash from Aug 13, Cohere Aug 19, DeepSeek's newest is the Aug 21 V4-Flash-Vision-Exp already in the feed). GitHub trending, HF models/datasets/papers and HN front page surfaced nothing new inside 72h; the three fresh YouTube videos from the RSS scan are all already in the feed; Claude Code 2.1.240/241 are \"bug fixes and reliability improvements\" only. Dropped as out-of-window: Inherent's Faraday agent (published Aug 14, despite Aug 22 TechCrunch pickup), the anthropic-sdk-python v1.0.0 httpx2 release (Aug 20), Cloudflare Kitesurf (Aug 6, already in feed) and the Langflow RCE (July disclosure). Also refreshed the existing Darkbloom entry, which still said \"research preview\" but is now a paid OpenRouter provider.",
+      "counts": {
+        "added": 1,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "tempus-ecg-ph",
+          "title": "Tempus ECG-PH — FDA clears AI that spots pulmonary hypertension in a routine ECG",
+          "category": "tool",
+          "note": "FDA 510(k) clearance announced 2026-08-24 for a named, cleared AI device — a released artifact inside the 72h window, verified from the Business Wire press release plus independent coverage; same class as the NeuroQuant PET item added Aug 18, and the sweep's one science-lane item this run."
+        }
+      ],
+      "updated": [
+        {
+          "id": "eigen-labs-darkbloom",
+          "title": "Darkbloom — Private AI Inference on Idle Macs by Eigen Labs",
+          "note": "Darkbloom left research preview: The Register reported on 2026-08-24 that it is now a paid provider on OpenRouter, with 4.5B tokens served, 42M+ requests, 900+ registered providers and typical operator earnings of $120–200/month. Refreshed the stale \"research preview\" wording, added the new verified numbers and the report link."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem",
+        "tutorial"
+      ]
     }
   ]
 }
