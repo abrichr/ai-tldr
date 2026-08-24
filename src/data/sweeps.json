@@ -36116,6 +36116,34 @@
         "security",
         "tutorial"
       ]
+    },
+    {
+      "id": "sweep-20260824t124954z",
+      "timestamp": "2026-08-24T12:49:54.154Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep over a quiet weekend (Aug 22-24). Searched lab blogs (Anthropic quiet since Aug 14, Meta since Jul 27, Mistral since Aug 20, DeepMind's newest is Gemini Robotics ER 2 from Jul 30, Cohere since Aug 19, Ai2 since Aug 7, NVIDIA since Aug 20; OpenAI/xAI blogs returned 403), GitHub trending daily+weekly, HuggingFace models/datasets/papers trending, HN front page + Show HN + Algolia top stories, and all 8 YouTube creator feeds. Every candidate inside the 72h date cap (date >= 2026-08-22) was either already in the feed (SGLang v0.5.18, LiteLLM v1.98.0, both fresh YouTube videos, Munder Difflin, Ox Alpha) or fell short: Claude Code 2.1.240/241 are bug-fix-only, Codex 0.149.1 is a patch on the already-listed 0.149.0, Ollama v0.33.0-rc and LiteLLM v1.99.0-rc.1 are release candidates, and the MCP Roadmap is a roadmap (excluded by the ecosystem gate). Strong HN items published outside the window: 'What Is a Harness?' (earendil.com, 481 pts but published Aug 20) and 'Why your local LLM feels dumber than it is' (417 pts, posted Aug 16). Science lane searched actively (BCI/neural decoding, medical imaging + FDA clearances, protein/genomics foundation models, pharma AI) across STAT News, neurosciencenews.com, Aidoc, Recursion/Insilico and Nature subject pages - nothing shipped a verified artifact inside 72h (the Aidoc CT triage clearance is from January, Inherent's Faraday research post is Aug 14 with no released code). Notable security disclosures (Langflow CVE-2026-9198 in CISA KEV, Check Point's 11 agent-framework bugs, the llama.cpp DEF CON 34 set) all predate the window.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem",
+        "showcase"
+      ]
     }
   ]
 }
