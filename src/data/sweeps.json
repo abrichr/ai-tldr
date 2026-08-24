@@ -36288,6 +36288,33 @@
         "ecosystem",
         "tutorial"
       ]
+    },
+    {
+      "id": "sweep-20260824t222840z",
+      "timestamp": "2026-08-24T22:28:40.432Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Checked lab blogs (Anthropic, OpenAI dev changelog, Google DeepMind, Mistral, Meta, xAI, DeepSeek, Qwen, Z.ai, Moonshot, MiniMax, ByteDance Seed, Baidu), GitHub trending (daily + weekly Python), HuggingFace models/datasets/papers, HN front page and Show HN, 8 YouTube creator feeds, coding-agent release feeds (Claude Code, Cursor, Cline, OpenCode, Goose, Aider, vLLM, Ollama, LiteLLM, SGLang, LangChain, transformers, Unsloth), and the AI-for-science lane (Nature subjects, npj Digital Medicine, STAT News, Arc Institute, Isomorphic Labs, Endpoints, neurosciencenews, plus dated BCI / medical-imaging / genomics / pharma searches). Nothing new cleared the bar: all three fresh YouTube videos and every qualifying release from the last 72h (Groq 3 LPX, Tempus ECG-PH, DeepSeek V4-Flash-Vision-Exp, GPT-5.6 Sol price cut, Agent Lightning v1.0, SGLang 0.5.18, LiteLLM 1.98.0, Hugging Face sale talks, Ox Alpha) are already in the feed. Model trackers show no frontier release after Aug 17. The remaining candidates failed the bar: Claude Code 2.1.240/241, Cline 4.1.15 and OpenCode 1.18.22 are bug-fix-only point releases; Ollama 0.33.0 is still an RC pre-release; the MS Paint InvisMark watermark write-up (475 HN points) is dated Aug 20, outside the 72h cap; GenBio AIDO Cell is Aug 18; TechCrunch's fresh AI items are funding, IPO and acquisition news that the ecosystem gate rejects; HF's top papers are surveys and benchmarks with no released artifact clearing 2-of-N.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
