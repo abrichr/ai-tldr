@@ -35966,6 +35966,34 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260824t010413z",
+      "timestamp": "2026-08-24T01:04:13.994Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, Qwen, Moonshot/Kimi, DeepSeek, Z.ai, MiniMax, ByteDance Seed), GitHub trending daily+weekly, the GitHub API for new high-star repos, HuggingFace models/datasets/papers/blog, HN front page plus Show HN and Algolia for the last 72h, all 8 YouTube creator feeds, and the AI-for-science lane (BCI/neural decoding, FDA AI clearances, pharma AI, nature.com, neurosciencenews). Everything inside the 72h window was already in the feed: DeepSeek V4-Flash-Vision-Exp, the GPT-5.6 Sol price cut, Claude protein binders, Ox Alpha, EnvHarness, 4DAnyone, SWE-bench Science, LLM 0.33, Stop Making TUIs, and both fresh YouTube videos (Wes Roth, 1littlecoder). Every genuinely new find was too old: Inherent's Faraday (Aug 14), Prime Intellect's nanoGPT Speedrun Frontier (Aug 14), Nari Labs' Qwen3-TTS serving stack (Aug 19), Anthropic's Python SDK v1.0 (Aug 20), DeepMind's SL2T sign-language model (Aug 12) and tau0-VLA (Aug 17) - all surfaced on HN or in press this week but shipped outside the cap. The rest failed the bar: the MCP roadmap is a roadmap announcement (ecosystem gate), anthropics/claude-plugins-community is a March repo trending on activity, Ollama v0.33.0-rc2 is a prerelease, the Anthropic IPO reports are financial news, and the Claude Code effort-level claim is an anonymous X post. Nothing qualified.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "video",
+        "article",
+        "security",
+        "ecosystem",
+        "tutorial"
+      ]
     }
   ]
 }
