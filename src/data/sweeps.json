@@ -36048,6 +36048,46 @@
         "ecosystem",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260824t085725z",
+      "timestamp": "2026-08-24T08:57:25.732Z",
+      "source": "github-actions-sweep",
+      "summary": "Quiet Monday-morning sweep: one article added and one existing tool item refreshed. Lab blogs stayed dry (Anthropic last posted Aug 14, Meta July, Mistral Aug 20, DeepMind's Gemini 3.7 Flash / WeatherNext / SL2T and DeepSeek's V4-Flash-Vision-Exp are already in the feed); GitHub trending, HF models/datasets/papers and every HN story above 25 points from the last 40h were either already covered, outside the 72h window, or below the bar.",
+      "counts": {
+        "added": 1,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "dbreunig-fable-free-lunch-aug23",
+          "title": "Drew Breunig — expensive models ended the free lunch in AI coding",
+          "category": "article",
+          "note": "Fresh Aug 23 essay from a voice already in the feed, amplified by Simon Willison the same day; makes a concrete, dated argument with verified cost ratios (GLM 5.2 at ~1/9 of Fable, ~1/5 of Opus 5)."
+        }
+      ],
+      "updated": [
+        {
+          "id": "chaitanyagiri-munder-difflin",
+          "title": "Munder Difflin v0.4.5 — cost reporting and Apple Silicon memory get fixed",
+          "note": "Bumped to v0.4.5 (2026-08-22): cost reporting, Apple Silicon semantic memory and agent-to-agent messaging fixed; stars 2,594 to 3,922."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
