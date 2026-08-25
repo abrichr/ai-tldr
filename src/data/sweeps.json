@@ -36485,6 +36485,46 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260825t103714z",
+      "timestamp": "2026-08-25T10:37:14.313Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic quiet since Aug 14, Meta since Jul 27, Mistral posted only a HUMAIN partnership with no product, DeepMind's recent posts already in the feed), GitHub trending, HuggingFace models/datasets/papers, HN's top 60 by points over 72h, and all 8 YouTube creator feeds. Added two items: Boyd Kane's HN-front-page essay on LLMs attacking their own inference engine, and the Ed-o-meter 28-task LLM leaderboard. Dropped EchoWM (paper only, code and weights not released), ConceptEdit-12M (published Aug 17, outside the 72h cap), Apache Maka (last release Aug 18), and Fabien Sanglard's agent.md post (Aug 21, outside the cap).",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "boydkane-inference-engine-rce",
+          "title": "Boyd Kane — a model could escape by attacking the engine that runs it",
+          "category": "article",
+          "note": "HN front page with 150 points; a concrete security argument grounded in a real patched CVE against vLLM, not speculation."
+        },
+        {
+          "id": "reinvently-ed-o-meter",
+          "title": "Ed-o-meter — a 28-task LLM leaderboard that runs every model down one track",
+          "category": "benchmark",
+          "note": "HN front page with 239 points; an independent 17-model leaderboard with an MIT-licensed harness, published Aug 23."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "article",
+        "video",
+        "security",
+        "paper",
+        "dataset",
+        "benchmark",
+        "algorithm",
+        "ecosystem"
+      ]
     }
   ]
 }
