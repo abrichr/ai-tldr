@@ -1,8 +1,220 @@
 {
-  "generatedAt": "2026-08-25T16:39:25.728Z",
+  "generatedAt": "2026-08-25T18:46:59.229Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openai-jalapeno-first-results",
+      "categories": [
+        "tool"
+      ],
+      "title": "Jalapeño first results — OpenAI's inference chip posts 1.9x more work per watt",
+      "org": "OpenAI",
+      "date": "2026-08-25",
+      "url": "https://openai.com/index/jalapeno-first-results/",
+      "summary": "OpenAI published the first measured results for Jalapeño, its custom inference chip. On SemiAnalysis's InferenceX benchmark it delivered 1.5–1.9x more work per watt and 1.7–3.6x lower end-to-end latency than the comparison systems.",
+      "tags": [
+        "openai",
+        "jalapeno",
+        "inference",
+        "asic",
+        "custom-silicon",
+        "hardware",
+        "ai-accelerator",
+        "semianalysis",
+        "inferencex",
+        "hot-chips-2026",
+        "performance-per-watt",
+        "broadcom",
+        "data-center",
+        "kv-cache"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Work per watt": "1.5–1.9x",
+        "End-to-end latency": "1.7–3.6x lower"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenAI, co-designed with Broadcom"
+        },
+        {
+          "label": "Chip power rating",
+          "value": "700 W"
+        },
+        {
+          "label": "Measured sustained power",
+          "value": "550 W or below"
+        },
+        {
+          "label": "Benchmark",
+          "value": "InferenceX, a public benchmark from SemiAnalysis"
+        },
+        {
+          "label": "Models tested",
+          "value": "GPT-OSS 120B, DeepSeek R1 670B, Kimi K2.5 1T"
+        },
+        {
+          "label": "Interactive workloads",
+          "value": "2.1–4.1x higher performance"
+        },
+        {
+          "label": "Availability",
+          "value": "Small volumes by end of 2026, scaling in 2027"
+        }
+      ],
+      "faq": [
+        {
+          "q": "When can I actually use Jalapeño?",
+          "a": "Jalapeño is not something developers buy or rent directly yet. OpenAI plans to deploy the chip in very small volumes by the end of 2026 and scale it up meaningfully during 2027. OpenAI describes Jalapeño as the start of a multigenerational platform, and says a second and third generation are already in development."
+        },
+        {
+          "q": "How does Jalapeño compare to Nvidia Blackwell?",
+          "a": "TechCrunch reports that Jalapeño was measured against Nvidia Blackwell systems on the InferenceX benchmark. OpenAI's own post is less specific and refers to \"leading commercially available AI systems\" as the comparison. SemiAnalysis, whose engineers ran the workloads themselves, published its analysis under the headline that Jalapeño is better than Nvidia Blackwell."
+        },
+        {
+          "q": "Which models did OpenAI test Jalapeño on?",
+          "a": "OpenAI ran Jalapeño on three public open-weight models: GPT-OSS 120B, DeepSeek R1 670B and Kimi K2.5 1T. On Kimi K2.5, the largest of the three, Jalapeño delivered roughly 1.5 times higher peak performance per watt and 3.4 times lower end-to-end latency. OpenAI says its advantage widened further on frontier OpenAI models in internal testing."
+        },
+        {
+          "q": "Did AI really help design the Jalapeño chip?",
+          "a": "OpenAI says its own models moved Jalapeño from initial design to tapeout in nine months by exploring implementations and shortening design, measurement and verification loops. AI also helped optimize the chip's arithmetic circuits. OpenAI further designed Jalapeño as a predictable programming target, using local tensors and explicit communication, so models can map and schedule work across the system."
+        }
+      ],
+      "explainer": {
+        "tagline": "OpenAI's first custom inference chip now has measured numbers, and they favour tokens per watt over tokens per chip.",
+        "whatIsIt": "The first measured performance numbers for Jalapeño are now public. OpenAI announced the chip earlier and has been testing it, and the system built around it, ever since; the results landed at the Hot Chips conference. Jalapeño is an accelerator built for one job — serving language models, especially interactive agents — and OpenAI ran it on InferenceX, a public benchmark from SemiAnalysis that measures the whole process of serving a request.",
+        "howItWorks": "Language-model inference moves through phases with different bottlenecks: prefill, which processes the prompt, is compute-heavy, while decode, which generates tokens one at a time, is limited by memory bandwidth. Jalapeño is designed to minimise the data movement between them, so model state and the KV cache can be explicitly placed and kept local while the chip activates the right mix of compute, memory and networking for each phase. A large network domain keeps a whole workload inside one connected system.",
+        "whyItMatters": "OpenAI argues that performance per unit of power, not per chip, is the more useful standard — and Jalapeño's numbers are built on that framing, normalised against each accelerator's published power rating. If it holds at scale, OpenAI gets more useful work out of the same megawatts, which matters most for agents that run many steps in a row where every delay compounds. The chip also went from design to tapeout in nine months, with OpenAI's own models helping optimize its arithmetic circuits.",
+        "forWho": "infrastructure and inference engineers"
+      },
+      "image": {
+        "url": "https://images.ctfassets.net/kftzwdyauwt9/5OsuPfmq6Km8mvw4podaWa/be9c8ec1bc37f6a3bd177da03a7fe03f/SEO_Card__2_.png?w=1600&h=900&fit=fill",
+        "alt": "OpenAI card announcing Jalapeño inference chip first results",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show/"
+        },
+        {
+          "label": "SemiAnalysis Analysis",
+          "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia"
+        },
+        {
+          "label": "Chip Specs Report",
+          "url": "https://www.datacenterdynamics.com/en/news/openai-details-jalape%C3%B1o-ai-chip-with-700w-tdp/"
+        },
+        {
+          "label": "Benchmark Numbers",
+          "url": "https://www.techerati.com/news-hub/openai-says-jalapeno-delivers-up-to-1-9x-more-ai-work-per-watt/"
+        }
+      ],
+      "publishDate": "2026-08-25T18:46:59.229Z"
+    },
+    {
+      "id": "openai-gpt-5-6-kiro",
+      "categories": [
+        "model",
+        "tool"
+      ],
+      "title": "GPT-5.6 in Kiro — OpenAI's model family lands in AWS's coding agent",
+      "org": "OpenAI",
+      "date": "2026-08-24",
+      "url": "https://openai.com/index/gpt-5-6-in-kiro/",
+      "summary": "GPT-5.6 Sol, Terra and Luna are now available in Kiro, AWS's spec-driven coding agent. OpenAI and AWS say joint testing on Terminal-Bench 2.1 showed GPT-5.6 Terra finishing tasks in Kiro at roughly 82% lower cost.",
+      "tags": [
+        "openai",
+        "gpt-5-6",
+        "kiro",
+        "aws",
+        "coding-agent",
+        "spec-driven-development",
+        "terminal-bench",
+        "agents",
+        "developer-tools",
+        "agentic-coding",
+        "property-based-testing"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Cost per finished task": "~82% lower on Terminal-Bench 2.1"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "OpenAI, with AWS"
+        },
+        {
+          "label": "Models added",
+          "value": "GPT-5.6 Sol, Terra and Luna"
+        },
+        {
+          "label": "Host",
+          "value": "Kiro, AWS's spec-driven development agent"
+        },
+        {
+          "label": "What's new",
+          "value": "First time OpenAI models are available in Kiro"
+        },
+        {
+          "label": "Also in Kiro",
+          "value": "Claude, DeepSeek 3.2, MiniMax M2.5, GLM-5, Qwen3 Coder Next"
+        },
+        {
+          "label": "Availability",
+          "value": "Live in Kiro now"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which GPT-5.6 models can I pick in Kiro?",
+          "a": "Kiro's model docs list three GPT-5.6 tiers — Sol, Terra and Luna — described as balancing agentic performance against cost. Kiro also offers an Auto option that routes a task to the model it judges best. The docs state that GPT-5.6 brings OpenAI models to Kiro for the first time."
+        },
+        {
+          "q": "Does GPT-5.6 actually make Kiro cheaper to run?",
+          "a": "OpenAI and AWS report that on Terminal-Bench 2.1, GPT-5.6 Terra completed successful tasks in Kiro at roughly 82% lower cost. That figure comes from the two companies' own joint testing, not an independent evaluation, and it measures cost per completed task rather than a change in token pricing."
+        },
+        {
+          "q": "What other models does Kiro support besides GPT-5.6?",
+          "a": "Kiro's documentation lists Claude Opus 5, 4.8, 4.7, 4.6 and 4.5, Claude Sonnet 5, 4.6, 4.5 and 4.0, Claude Haiku 4.5, DeepSeek 3.2, MiniMax M2.5 and M2.1, GLM-5, and Qwen3 Coder Next, alongside the new GPT-5.6 tiers. Kiro describes this as access to frontier and open-weight models from several providers."
+        },
+        {
+          "q": "Can I review the agent's work before changes are applied?",
+          "a": "Yes. OpenAI says developers using GPT-5.6 in Kiro can review and refine the model's work at checkpoints before changes are implemented. Kiro can also check whether an implementation is correct using property-based testing, which generates many inputs against a stated property rather than relying on a fixed set of example cases."
+        }
+      ],
+      "explainer": {
+        "tagline": "OpenAI's GPT-5.6 family is now selectable inside Kiro, AWS's spec-driven coding agent, for the first time.",
+        "whatIsIt": "Kiro can now run OpenAI models. The GPT-5.6 family — Sol, Terra and Luna — is selectable inside AWS's agent, which Kiro's own docs call the first time OpenAI models are available there. Kiro is built around spec-driven development: it converts a high-level request into requirements, a technical design and a list of executable tasks before any code gets written.",
+        "howItWorks": "The claimed gain comes from context, not a bigger model. Rather than a bare prompt, Kiro hands GPT-5.6 structured requirements, designs and task context drawn from the codebase and the team's standards, so the model starts out knowing what is being built and what the finished implementation has to do. Developers step in at checkpoints to review output before changes land, and Kiro can check correctness with property-based testing.",
+        "whyItMatters": "Cost per finished task is what engineering teams actually pay for, and that is the number OpenAI and AWS chose to report for GPT-5.6 in Kiro. For AWS shops the practical effect is choice: OpenAI models now sit next to Claude, GLM-5 and Qwen3 Coder Next in the same agent, so a team can match model to stage — cheap for scaffolding, stronger for a hard refactor — without leaving the tool.",
+        "forWho": "teams doing agentic coding on AWS",
+        "tryIt": "Pick GPT-5.6 Sol, Terra or Luna from the model picker in Kiro — https://kiro.dev/docs/models/"
+      },
+      "image": {
+        "url": "https://images.ctfassets.net/kftzwdyauwt9/6r1E6E5mcdQEGztu6B1TI6/7e1ab3332eb5440e41cb64ba59c65d2b/OAI_Kiro_Partnership_16x9_SEO_Official_Full_Lockup_3840x2160.png?w=1600&h=900&fit=fill",
+        "alt": "OpenAI and Kiro lockup card for GPT-5.6 arriving in AWS Kiro",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Kiro Model Docs",
+          "url": "https://kiro.dev/docs/models/"
+        },
+        {
+          "label": "Kiro Changelog",
+          "url": "https://kiro.dev/changelog/"
+        },
+        {
+          "label": "Coverage",
+          "url": "https://www.developer-tech.com/news/aws-adds-openai-gpt-5-6-kiro-agentic-coding-workflow/"
+        }
+      ],
+      "publishDate": "2026-08-25T18:46:59.229Z"
+    },
     {
       "id": "prime-intellect-offline-sandbox-escape",
       "categories": [

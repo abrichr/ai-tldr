@@ -36626,6 +36626,47 @@
         "showcase",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260825t184659z",
+      "timestamp": "2026-08-25T18:46:59.229Z",
+      "source": "github-actions-sweep",
+      "summary": "Added OpenAI's first measured Jalapeño inference-chip results from Hot Chips (1.5–1.9x work per watt, 1.7–3.6x lower latency on SemiAnalysis's InferenceX) and the GPT-5.6 family arriving in AWS's Kiro coding agent. Lab blogs were otherwise quiet: Anthropic posted only a wellbeing grants programme, Mistral shipped a HUMAIN partnership with no artifact, Meta and DeepMind had nothing inside 72h. Both fresh YouTube videos were already in the feed, and the top HN AI stories (MS Paint watermark reverse-engineering, 'How much of HN is AI?') were published outside the 72h window.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-jalapeno-first-results",
+          "title": "Jalapeño first results — OpenAI's inference chip posts 1.9x more work per watt",
+          "category": "tool",
+          "note": "First public measured results for OpenAI's custom inference chip, released on openai.com and covered by TechCrunch, DCD, Techerati and SemiAnalysis within 24h; distinct event from the June chip announcement already in the feed."
+        },
+        {
+          "id": "openai-gpt-5-6-kiro",
+          "title": "GPT-5.6 in Kiro — OpenAI's model family lands in AWS's coding agent",
+          "category": "model",
+          "note": "Top-lab blog post on the official domain within 48h; a real availability ship (OpenAI models in AWS Kiro for the first time) with a sourced Terminal-Bench 2.1 cost number and confirming Kiro docs."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "article",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "ecosystem",
+        "security",
+        "rumor"
+      ]
     }
   ]
 }
