@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T04:46:29.869Z",
+  "generatedAt": "2026-08-25T06:43:35.443Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
@@ -22356,7 +22356,8 @@
       "categories": [
         "tool",
         "repo",
-        "algorithm"
+        "algorithm",
+        "paper"
       ],
       "title": "Prime Agent — self-improving coding harness beats humans on ARC-AGI-3",
       "org": "Prime Intellect",
@@ -22380,7 +22381,7 @@
       "metrics": {
         "ARC-AGI-3 (Best@1, Opus 5)": "95.5%",
         "Human expert baseline": "95.4%",
-        "GitHub stars": "1,193",
+        "GitHub stars": "18,220",
         "License": "MIT"
       },
       "quickFacts": [
@@ -22448,6 +22449,10 @@
         {
           "label": "GitHub Repo",
           "url": "https://github.com/PrimeIntellect-ai/prime-agent"
+        },
+        {
+          "label": "arXiv Paper",
+          "url": "https://arxiv.org/abs/2608.23552"
         },
         {
           "label": "AlphaSignal Writeup",

@@ -36425,6 +36425,39 @@
         "ecosystem",
         "video"
       ]
+    },
+    {
+      "id": "sweep-20260825t064335z",
+      "timestamp": "2026-08-25T06:43:35.443Z",
+      "source": "github-actions-sweep",
+      "summary": "No release from the last 72h met the inclusion bar, so this sweep adds zero items. Lab blogs are quiet: Anthropic's newsroom stops at 2026-08-14, Meta AI at 2026-07-27, DeepMind's latest is Gemini Robotics ER 2 (2026-07-30, already in the feed), and Mistral's only post inside the window is the HUMAIN partnership (2026-08-24), a business deal with no released model or code. GitHub trending, 30 major AI repo release feeds, Hugging Face models/datasets/papers, HN's front page and newest queue, Cursor's changelog, Simon Willison, STAT News, EurekAlert and TechCrunch all surfaced either items already in the feed (Apodex 1.1, Thomson Reuters, Ox Alpha, free-claude-code, andrej-karpathy-skills, Codex CLI, Hugging Face sale talks) or things outside the 72h window: Inherent's Faraday agent shipped 2026-08-14, Aidoc's FDA CT triage clearance was January 2026, and OpenAI's Astra safety pause dates to 2026-08-18 and is already covered. The AI-for-science lane ran dated searches across medical imaging/FDA, brain-computer interfaces, drug discovery and single-cell genomics and found nothing with a verified artifact inside the window. One update: Prime Intellect's Prime Agent paper landed on arXiv on 2026-08-24, so the existing item gets the paper link plus a refreshed star count. NOTE: yt-rss-scan.ts failed on all 8 YouTube channels (HTTP 404/500 on youtube.com/feeds/videos.xml) across two attempts, so the video lane could not be read this run — that is a fetch outage on the runner, not a confirmed absence of fresh videos.",
+      "counts": {
+        "added": 0,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [
+        {
+          "id": "prime-intellect-prime-agent",
+          "title": "Prime Agent — self-improving coding harness beats humans on ARC-AGI-3",
+          "note": "Prime Intellect published the Prime Agent paper on arXiv (2608.23552) on 2026-08-24; it is now in the Hugging Face daily-papers top 10. Added the paper link, tagged the item as a paper, and refreshed the verified GitHub star count from 1,193 to 18,220 (GitHub API, fetched this run)."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "article",
+        "video",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
