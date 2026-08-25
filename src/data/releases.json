@@ -1,8 +1,179 @@
 {
-  "generatedAt": "2026-08-25T01:05:04.213Z",
+  "generatedAt": "2026-08-25T03:01:17.157Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "apodex-1-1",
+      "categories": [
+        "model",
+        "repo",
+        "paper"
+      ],
+      "title": "Apodex 1.1 — an agent model that finishes whole jobs, with 35B open weights",
+      "org": "Apodex",
+      "date": "2026-08-24",
+      "url": "https://www.apodex.com/blog/apodex-1.1-scaling-agentic-intelligence-for-complex-work",
+      "summary": "Apodex 1.1 is an agent model built to finish real work, not just write a report. It scores 38.5 on APEX-Agents and 78.8 on GDPVal. A 35B Mini version ships with open weights under Apache-2.0.",
+      "tags": [
+        "agents",
+        "open-weights",
+        "apache-2-0",
+        "deep-research",
+        "agent-team",
+        "long-horizon-agents",
+        "reinforcement-learning",
+        "apodex",
+        "frontieragent"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Apodex"
+        },
+        {
+          "label": "Open weights",
+          "value": "Apodex 1.1 Mini, Apache-2.0"
+        },
+        {
+          "label": "Base model",
+          "value": "Qwen3.5-35B-A3B"
+        },
+        {
+          "label": "Context window",
+          "value": "262,144 tokens"
+        },
+        {
+          "label": "Availability",
+          "value": "Web workbench, API platform, local"
+        },
+        {
+          "label": "Agent framework",
+          "value": "FrontierAgent (Apache-2.0)"
+        },
+        {
+          "label": "Training method",
+          "value": "PIVOT-RL"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "APEX-Agents",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Apodex 1.1 (Agent Team)",
+              "score": 38.5,
+              "highlight": true
+            },
+            {
+              "name": "Apodex 1.1 Mini",
+              "score": 27.7
+            }
+          ],
+          "source": "https://huggingface.co/apodex/Apodex-1.1-mini"
+        },
+        {
+          "name": "FrontierFinance",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Apodex 1.1 (Agent Team)",
+              "score": 54.3,
+              "highlight": true
+            },
+            {
+              "name": "Apodex 1.1 Mini",
+              "score": 50.2
+            }
+          ],
+          "source": "https://huggingface.co/apodex/Apodex-1.1-mini"
+        },
+        {
+          "name": "GDPVal",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Apodex 1.1 (Agent Team)",
+              "score": 78.8,
+              "highlight": true
+            }
+          ],
+          "source": "https://huggingface.co/apodex/Apodex-1.1-mini"
+        },
+        {
+          "name": "Humanity's Last Exam",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "Apodex 1.1 (Agent Team)",
+              "score": 56.1,
+              "highlight": true
+            }
+          ],
+          "source": "https://huggingface.co/apodex/Apodex-1.1-mini"
+        }
+      ],
+      "explainer": {
+        "tagline": "Apodex 1.1 works through long tasks end to end, and its 35B Mini version comes with open weights.",
+        "whatIsIt": "Apodex 1.1 adds an Agent Team mode that splits one job across sub-agents running in parallel and keeps folding their results back into the main task. The model works directly with files, data and code, so it can open a CSV, run an analysis and check its own claims instead of stopping at a written summary. Two versions ship: a frontier model on the Apodex web workbench, and a 35B Mini built on Qwen3.5-35B-A3B with open weights.",
+        "howItWorks": "Two scaling ideas sit behind the model. Environment Scaling grows the set of executable file, search and code environments it trains in. Agentic Coordination Scaling teaches it to break a task apart, hand pieces to sub-agents and replan when a step fails. Training uses PIVOT-RL, which finds the few decision points in a long run that actually changed the outcome, so learning still works when the only signal is a final score. A Statement Review step verifies key claims before an answer is delivered.",
+        "whyItMatters": "Open weights are the practical part here. The Mini version scores 50.2 on FrontierFinance and 27.7 on APEX-Agents under an Apache-2.0 license, so a team can run this style of long-horizon work on its own hardware rather than through a hosted agent. FrontierAgent, the framework Apodex open-sourced alongside it, brings the same ReAct and Agent Team setup to a local terminal.",
+        "forWho": "research, finance and analyst teams",
+        "tryIt": "vllm serve apodex/Apodex-1.1-mini"
+      },
+      "faq": [
+        {
+          "q": "Is Apodex 1.1 open source?",
+          "a": "Apodex 1.1 is partly open. The Apodex 1.1 Mini weights are published on Hugging Face under Apache-2.0, and the FrontierAgent framework is Apache-2.0 on GitHub. The larger Apodex 1.1 frontier model is not released as weights — it runs on the hosted workbench at apodex.ai and through the API platform."
+        },
+        {
+          "q": "How does Apodex 1.1 Mini compare to the full Apodex 1.1?",
+          "a": "The gap is real but smaller than the size difference suggests. Running Agent Team, the full Apodex 1.1 scores 38.5 on APEX-Agents and 54.3 on FrontierFinance. Apodex 1.1 Mini reaches 27.7 and 50.2 on the same two benchmarks. Finance work is where the open 35B version stays closest to the frontier model."
+        },
+        {
+          "q": "Where can I run Apodex 1.1?",
+          "a": "Apodex offers three routes. The hosted workbench at apodex.ai runs the frontier model in a browser. An API platform at platform.apodex.ai covers programmatic access. For local use, Apodex 1.1 Mini serves through SGLang or vLLM behind an OpenAI-compatible endpoint, and FrontierAgent drives it from the command line."
+        },
+        {
+          "q": "Can I redirect Apodex 1.1 while it is still working?",
+          "a": "Yes. Apodex 1.1 shows its task breakdown, dependencies and exceptions as the run progresses, and a user can step in to guide or redirect the work mid-task without throwing away the parts already finished. That is one of the differences Apodex highlights against agents that only report back at the end."
+        }
+      ],
+      "image": {
+        "url": "https://framerusercontent.com/images/rYtDYou2GMgPg129wAnBrRwb4I.png",
+        "alt": "Apodex 1.1 announcement graphic",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.apodex.com/blog/apodex-1.1-scaling-agentic-intelligence-for-complex-work"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.23283"
+        },
+        {
+          "label": "Model Weights",
+          "url": "https://huggingface.co/apodex/Apodex-1.1-mini"
+        },
+        {
+          "label": "FrontierAgent Code",
+          "url": "https://github.com/ApodexAI/FrontierAgent"
+        },
+        {
+          "label": "Workbench",
+          "url": "https://www.apodex.ai"
+        }
+      ],
+      "publishDate": "2026-08-25T03:01:17.157Z"
+    },
     {
       "id": "anthropic-claude-code-2-1-243",
       "categories": [

@@ -36350,6 +36350,40 @@
         "security",
         "showcase"
       ]
+    },
+    {
+      "id": "sweep-20260825t030117z",
+      "timestamp": "2026-08-25T03:01:17.157Z",
+      "source": "github-actions-sweep",
+      "summary": "One item cleared the bar: Apodex 1.1, an agentic model family announced 2026-08-24 with a 35B open-weight Mini (Apache-2.0), the open-source FrontierAgent framework, and an arXiv report that sits at #1 on HuggingFace Papers. Everything else inside the 72h window was already in the feed or fell short: lab blogs were quiet (Anthropic last posted Aug 14, Meta Jul 27, DeepSeek Apr 24, Mistral's Aug 24 post is a HUMAIN partnership, OpenAI's dev changelog stops at Aug 21), GitHub trending showed only established repos gaining stars, HF models/datasets trending had nothing new inside 72h, HN's AI front-page items were already covered (GPT-5.6 Sol price cut) or older than 72h (the Aug 20 MS Paint watermark teardown), both fresh YouTube videos are already in the feed, and the AI-for-science lane (nature.com, STAT News, BCI and medical-imaging searches) surfaced only policy talk and an Aug 3 Brain2Qwerty writeup.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "apodex-1-1",
+          "title": "Apodex 1.1 — an agent model that finishes whole jobs, with 35B open weights",
+          "category": "model",
+          "note": "Open-weight 35B agent model plus an Apache-2.0 agent framework, released 2026-08-24 with a technical report that is the top paper on HuggingFace Papers; weights, code, paper and hosted workbench all verified live."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "paper",
+        "algorithm",
+        "video",
+        "dataset",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
