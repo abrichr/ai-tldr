@@ -36458,6 +36458,33 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260825t084539z",
+      "timestamp": "2026-08-25T08:45:39.281Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic news + engineering, OpenAI news/index/release-notes, DeepMind, Meta, Mistral, Cohere, Moonshot, DeepSeek, Qwen, Z.ai, MiniMax, Baidu/ByteDance), GitHub trending + the GitHub API for repos created since 2026-08-18, HuggingFace models/datasets/papers/blog, HN front page and Show HN via Algolia, all 8 YouTube creator feeds, coding agents (Cursor, Claude Code, Codex, Ollama, vLLM, llama.cpp), and the AI-for-science lane (BCI/neural decoding, FDA medical-imaging clearances, STAT News, Nature subjects, neurosciencenews, Lancet Digital Health). Nothing shipped in the last 72h that met the bar: the strongest candidates all fell outside the window (Gemini Robotics ER 2 = Jul 30, Cloudflare Kitesurf = Aug 6, Aidoc CT triage FDA clearance = Jan 21, anthropic-sdk-python v1.0.0 = Aug 20, Ollama v0.33.0 = Aug 21, and the three high-scoring HN essays - 'What Is a Harness?', Fabien Sanglard's agent.md, the MS Paint watermark reverse-engineering - were all published Aug 20-21). The two fresh YouTube videos (Two Minute Papers, Wes Roth) are already in the feed, the top HF papers (EchoWM, Prime Agent) fail the paper 2-of-N bar or duplicate an existing entry, and Mistral x HUMAIN is a partnership with no shipped artifact.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
