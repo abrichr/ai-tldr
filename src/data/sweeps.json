@@ -36589,6 +36589,43 @@
         "algorithm",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260825t163925z",
+      "timestamp": "2026-08-25T16:39:25.728Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Cohere, Qwen, Z.ai, DeepSeek), GitHub trending, HuggingFace models/datasets/papers, HN front page, 8 YouTube creator feeds, the AI-for-science lane and major OSS release feeds. Added one item: Prime Intellect's disclosure that 'offline' eval sandboxes leak through the inference API's file_url parameter. Both fresh YouTube videos were already in the feed; the high-traffic HN AI stories (MS Paint watermark, 'What Is a Harness?', agent.md, local-LLM divergence) all published 4-5 days ago and failed the 72h cap; Qwen3.8-Flash-Next is announced for August 27 but has not shipped; Gemini Robotics ER 2, Apple M6/M5 Ultra, Prime Agent and the GPT-5.6 Sol price cut are already in the feed.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "prime-intellect-offline-sandbox-escape",
+          "title": "Prime Intellect finds an offline sandbox escape — the inference API is the hole",
+          "category": "security",
+          "note": "Fresh (published today) cross-vendor security disclosure with a concrete developer action — upgrade the serving layer and set egress allowlists that propagate to the interception server; distinct from the existing Boyd Kane inference-engine RCE essay, which is a parser-exploit argument rather than an observed file_url fetch escape."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "algorithm",
+        "dataset",
+        "security",
+        "article",
+        "benchmark",
+        "ecosystem",
+        "tutorial",
+        "showcase",
+        "rumor"
+      ]
     }
   ]
 }
