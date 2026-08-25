@@ -36525,6 +36525,31 @@
         "algorithm",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260825t124554z",
+      "timestamp": "2026-08-25T12:45:54.061Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic quiet since Aug 14, Meta since Jul 27, Mistral's only new post is the HUMAIN partnership with no shipped product, Cohere/Kimi/ByteDance Seed/MiniMax stale, openai.com 403s from the runner so nothing could be grounded), GitHub trending daily + weekly, HuggingFace models/datasets/papers/blog, HN front page and Show HN, 8 YouTube creator feeds, coding-agent and inference releases (Cursor, Codex, Claude Code, Ollama, vLLM, llama.cpp), tier-1 press (TechCrunch, The Register) and the AI-for-science lane (STAT News, Neuroscience News, techxplore BCI, FDA/pharma searches). Nothing cleared both the 72h cap and the inclusion bar: the strongest candidate, Xusheng Li's MS Paint invisible-GUID watermark teardown (755 HN points), is dated 2026-08-21 in its own RSS feed and so falls outside the window; both fresh YouTube videos are already in the feed; EchoWM tops HF papers but has no released code or demo; Apache Maka, OpenHuman and ponytail are trending on months-old artifacts with no release in the window; Hugging Face's $13B sale talks and Gemini Robotics ER 2 are already in the feed; Mistral x HUMAIN is a partnership with no developer-facing artifact.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
