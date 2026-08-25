@@ -36315,6 +36315,41 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260825t010504z",
+      "timestamp": "2026-08-25T01:05:04.213Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Cohere, Ai2, DeepSeek), GitHub trending, HuggingFace models/datasets/papers, HN front page, 8 YouTube creator feeds, coding-agent changelogs and the AI-for-science lane. Only Claude Code 2.1.243 shipped inside 72h and cleared the bar; both fresh YouTube videos were already in the feed, and Mistral x HUMAIN, the MS Paint watermark teardown, Cloudflare Kitesurf and Aidoc's FDA clearance all failed the 72h cap or the ecosystem gate.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "anthropic-claude-code-2-1-243",
+          "title": "Claude Code 2.1.243 — the install drops from 340 MB to 75 MB",
+          "category": "tool",
+          "note": "Shipped 2026-08-24 23:40 UTC; anthropics/claude-code is on GitHub trending today and gains well over 500 stars a week; the release cuts install size 340 MB to 75 MB, frees 40-70 MB per session, and adds four organization-facing settings plus keyless Console sign-in. Distinct version from the 2.1.238/2.1.239 items already in the feed."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem",
+        "security",
+        "showcase"
+      ]
     }
   ]
 }

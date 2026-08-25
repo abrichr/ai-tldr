@@ -1,8 +1,116 @@
 {
-  "generatedAt": "2026-08-24T22:28:40.432Z",
+  "generatedAt": "2026-08-25T01:05:04.213Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "anthropic-claude-code-2-1-243",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "Claude Code 2.1.243 — the install drops from 340 MB to 75 MB",
+      "org": "Anthropic",
+      "date": "2026-08-24",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.243",
+      "summary": "Claude Code 2.1.243 cuts the native install from about 340 MB to about 75 MB and frees 40-70 MB of memory per session. It also adds a curated /model picker, prompt cache TTL settings, and keyless sign-in through the Anthropic Console.",
+      "tags": [
+        "claude-code",
+        "anthropic",
+        "coding-agent",
+        "cli",
+        "mcp",
+        "developer-tools",
+        "prompt-caching",
+        "vs-code",
+        "release"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Install size": "75 MB (was 340 MB)",
+        "Memory freed": "40-70 MB per session"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Anthropic"
+        },
+        {
+          "label": "Version",
+          "value": "2.1.243"
+        },
+        {
+          "label": "Released",
+          "value": "August 24, 2026"
+        },
+        {
+          "label": "New settings",
+          "value": "modelPicker, promptCacheTtl, subagentPromptCacheTtl, modelPricing"
+        },
+        {
+          "label": "New sign-in",
+          "value": "Keyless via Anthropic Console under /login"
+        },
+        {
+          "label": "Where it runs",
+          "value": "Terminal, VS Code, Claude Code on the web"
+        }
+      ],
+      "explainer": {
+        "tagline": "A lighter Claude Code: 75 MB to install, 40-70 MB less memory per session, plus four new settings for organizations.",
+        "whatIsIt": "Claude Code 2.1.243 shrinks the native install from about 340 MB to about 75 MB on Linux x64 by compressing the binary with zstd. The same release frees roughly 40-70 MB of memory per session and starts faster, because sandbox and MCP bring-up no longer block the first frame. Four new settings give organizations control over which models appear, how long prompts stay cached, and which prices are reported.",
+        "howItWorks": "The size win comes from zstd compression on the native binary plus on-demand code loading, so the whole bundle no longer stays resident in memory, and the runtime garbage-collects sooner as the heap grows. Caching is split in two: the main conversation can hold a 1-hour prompt cache while subagents stay at 5 minutes. The /login flow gains a keyless path that signs in through an Anthropic Console account instead of an API key.",
+        "whyItMatters": "Smaller downloads and lower memory make Claude Code cheaper to run in CI and on constrained laptops, where a 340 MB auto-update on every release was real bandwidth. The managed settings matter to platform teams: contracted per-model rates now drive /cost, the status line, and telemetry instead of list price, and keyless Console sign-in unblocks organizations that do not allow developers to hold API keys. The release also fixes remote MCP servers never reconnecting after a dropped connection in -p and SDK sessions.",
+        "forWho": "developers and platform teams running Claude Code",
+        "tryIt": "Run /status in Claude Code to see the new Skipped sources and GitHub connection lines."
+      },
+      "faq": [
+        {
+          "q": "Can I choose which models appear in Claude Code's /model picker?",
+          "a": "Claude Code 2.1.243 adds a modelPicker setting that curates the /model list with an ordered, labeled set of models. Any id spelling works, including Vertex and Bedrock ids, and your list can either replace the built-in lineup or be appended to it. Teams that standardize on two or three models can hide the rest."
+        },
+        {
+          "q": "How do I give Claude Code a 1-hour prompt cache?",
+          "a": "Two new settings handle this in Claude Code 2.1.243: promptCacheTtl and subagentPromptCacheTtl. API-key and cloud-provider users can keep a 1-hour prompt cache on the main conversation while subagents stay on the 5-minute default. Splitting the two keeps long main sessions warm without holding short subagent runs in cache."
+        },
+        {
+          "q": "Can I sign in to Claude Code without creating an API key?",
+          "a": "Yes. Claude Code 2.1.243 adds a keyless option under /login, listed as \"Sign in with your Console account\" and marked recommended, next to the existing create-an-API-key path. Anthropic added it for organizations whose policies do not allow developers to hold API keys at all."
+        },
+        {
+          "q": "Will Claude Code show my company's negotiated prices instead of list price?",
+          "a": "A new modelPricing managed setting in Claude Code 2.1.243 does exactly that. An administrator supplies the organization's contracted per-model rates and discount multiplier, and Claude Code then uses those figures for /cost, the status line, and telemetry cost reporting instead of Anthropic's public list price."
+        },
+        {
+          "q": "What changed for Bedrock and Vertex users in Claude Code 2.1.243?",
+          "a": "On Bedrock, Vertex, and Foundry, the /model, /fast, and /effort commands now take effect immediately instead of queueing until the turn ends, and the same applies when telemetry is disabled. The new modelPicker setting also accepts Vertex and Bedrock model ids, so cloud-hosted deployments can list their own model names."
+        }
+      ],
+      "image": {
+        "url": "https://opengraph.githubassets.com/0c09cefd58bdc5c237a27d0059e8071a9e9ef751e716e8cd9d5a1f3b118cf62c/anthropics/claude-code/releases/tag/v2.1.243",
+        "alt": "Claude Code v2.1.243 release page on GitHub",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Release Notes",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.243"
+        },
+        {
+          "label": "Full Changelog",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+        },
+        {
+          "label": "Repository",
+          "url": "https://github.com/anthropics/claude-code"
+        },
+        {
+          "label": "Settings Docs",
+          "url": "https://code.claude.com/docs/en/settings"
+        }
+      ],
+      "publishDate": "2026-08-25T01:05:04.213Z"
+    },
     {
       "id": "tempus-ecg-ph",
       "categories": [
