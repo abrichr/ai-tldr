@@ -1,0 +1,77 @@
+{
+  "slug": "skillspector",
+  "name": "SkillSpector",
+  "repo": "NVIDIA/SkillSpector",
+  "homepage": "https://docs.nvidia.com/skills/scanning-agent-skills",
+  "category": "production-ops",
+  "categoryTitle": "Evaluation & Production Ops",
+  "subcategory": "guardrails",
+  "subcategoryTitle": "Guardrails & Security",
+  "tagline": "Scan an agent skill for malicious patterns before you install it",
+  "seoTitle": "SkillSpector - Security Scanner for AI Agent Skills",
+  "metaDescription": "SkillSpector is NVIDIA's open-source scanner for AI agent skills. It detects prompt injection, data exfiltration, and supply-chain risks before you install a skill.",
+  "overview": [
+    "Agent skills — the packaged instruction bundles that Claude Code, Codex CLI and Gemini CLI load — run with implicit trust and very little vetting. SkillSpector is NVIDIA's open-source scanner for exactly that gap. It answers one question: is this skill safe to install? Point it at a Git repo, a URL, a zip, a directory or a single `SKILL.md`, and it returns a 0–100 risk score with a severity label and a recommendation.",
+    "Detection runs in two stages. A fast static pass applies 70 vulnerability patterns across 17 categories — prompt injection, data exfiltration, privilege escalation, supply chain, excessive agency, output handling, system-prompt leakage, memory poisoning, tool misuse, rogue agent, anti-refusal, trigger abuse, dangerous code via AST analysis, taint tracking, YARA signatures, MCP least privilege and MCP tool poisoning. An optional second pass sends the skill to an LLM for semantic evaluation; supply-chain checks can also query OSV.dev live for CVE data, falling back to offline data when the network is unavailable.",
+    "Reports come out as terminal output, JSON, Markdown or SARIF, so a scan drops straight into CI or an IDE's problem list. A baseline file lets you accept known findings once — either as exact evidence-bound fingerprints or as drift-tolerant glob rules — so re-scans surface only new issues and the risk score reflects un-triaged problems rather than accumulated noise.",
+    "SkillSpector can also run as an MCP server, which turns it from an out-of-band audit into a runtime guardrail: an MCP-capable agent calls `scan_skill` and gates the install on the verdict. It is Apache-2.0 licensed, needs Python 3.12 or newer, ships a Dockerfile for a Python-free path, and is part of NVIDIA's Verified Skills pipeline, which scans, evaluates and signs skills before publishing them to the NVIDIA skills catalog."
+  ],
+  "features": [
+    "70 vulnerability patterns across 17 categories, including prompt injection, data exfiltration, privilege escalation and MCP tool poisoning",
+    "Two-stage analysis: fast static scanning plus optional LLM semantic evaluation",
+    "Multi-format input — Git repos, URLs, zip files, directories or a single SKILL.md",
+    "Terminal, JSON, Markdown and SARIF reports, with a 0–100 risk score and severity label",
+    "Baseline suppression by fingerprint or glob rule, so re-scans surface only new findings",
+    "Runs as an MCP server exposing a `scan_skill` tool, so an agent can gate installs on the result",
+    "Pluggable LLM backends — OpenAI, Anthropic, Bedrock, build.nvidia.com, local Claude/Codex CLIs, or any OpenAI-compatible endpoint such as Ollama or vLLM"
+  ],
+  "gettingStarted": {
+    "intro": "Install the CLI with uv, scan a skill, and read the risk score. Static-only scans need no API key; LLM analysis needs a provider configured. Python 3.12 or newer is required.",
+    "steps": [
+      {
+        "heading": "Install the CLI",
+        "body": "Install straight from the repository with uv. Add the mcp extra now if you plan to run SkillSpector as an MCP server later.",
+        "code": "uv tool install git+https://github.com/NVIDIA/skillspector.git\n\n# with MCP server support\nuv tool install 'skillspector[mcp] @ git+https://github.com/NVIDIA/skillspector.git'",
+        "lang": "bash"
+      },
+      {
+        "heading": "Scan a skill",
+        "body": "Point it at a directory, a single file, a Git URL or a zip archive.",
+        "code": "skillspector scan ./my-skill/\nskillspector scan ./SKILL.md\nskillspector scan https://github.com/user/my-skill\nskillspector scan ./my-skill.zip",
+        "lang": "bash"
+      },
+      {
+        "heading": "Skip the LLM, or configure one",
+        "body": "Static analysis alone needs no credentials. For semantic evaluation, pick a provider and set its key.",
+        "code": "# static only — faster, no API key\nskillspector scan ./my-skill/ --no-llm\n\n# with Anthropic semantic analysis\nexport SKILLSPECTOR_PROVIDER=anthropic\nexport ANTHROPIC_API_KEY=sk-ant-...\nskillspector scan ./my-skill/",
+        "lang": "bash"
+      },
+      {
+        "heading": "Emit a machine-readable report",
+        "body": "SARIF plugs into CI and IDE tooling; JSON and Markdown are also available.",
+        "code": "skillspector scan ./my-skill/ --format sarif --output report.sarif\nskillspector scan ./my-skill/ --format json --output report.json",
+        "lang": "bash"
+      },
+      {
+        "heading": "Baseline known findings",
+        "body": "Record current findings once and commit the baseline, so later scans only report and score what is new.",
+        "code": "skillspector baseline ./my-skill/ -o .skillspector-baseline.yaml\nskillspector scan ./my-skill/ --baseline .skillspector-baseline.yaml",
+        "lang": "bash"
+      },
+      {
+        "heading": "Run it as an MCP server",
+        "body": "Expose scanning as a tool so an agent can check a skill before installing it. stdio suits local CLI agents; HTTP suits remote callers.",
+        "code": "skillspector mcp\nskillspector mcp --transport http --host 127.0.0.1 --port 8000",
+        "lang": "bash"
+      }
+    ]
+  },
+  "useCases": [
+    "Vet a third-party agent skill or MCP server before installing it on a developer machine",
+    "Gate skill installs in CI with a SARIF report and a risk-score threshold",
+    "Give an agent the ability to scan and refuse a skill at runtime through the MCP `scan_skill` tool",
+    "Audit an internal skill library in bulk, then baseline the accepted findings so future scans stay signal-only"
+  ],
+  "language": "Python",
+  "license": "Apache-2.0"
+}

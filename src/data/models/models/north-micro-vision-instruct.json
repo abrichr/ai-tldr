@@ -1,0 +1,215 @@
+{
+  "slug": "north-micro-vision-instruct",
+  "name": "North Micro Vision Instruct",
+  "maker": "cohere",
+  "makerTitle": "Cohere",
+  "line": "north-micro-vision",
+  "lineTitle": "North Micro Vision",
+  "tagline": "Released 12 August 2026: Cohere Labs' 2.4B Apache-2.0 vision-language model, pairing a 2B language model with a 400M encoder that reads images at their native resolution.",
+  "seoTitle": "North Micro Vision Instruct: Cohere's 2.4B Open VLM",
+  "metaDescription": "North Micro Vision Instruct is Cohere Labs' 2.4B Apache-2.0 vision-language model, released 12 Aug 2026. It scores 0.921 on DocVQA and 0.732 on RefCOCO.",
+  "releaseDate": "2026-08-12",
+  "status": "Generally available — open weights on Hugging Face",
+  "license": "Apache-2.0",
+  "openWeights": true,
+  "modalities": [
+    "Text",
+    "Vision"
+  ],
+  "contextWindow": "128K (8K validated for multimodal inputs)",
+  "parameters": "2.4B total · 2B language model + 400M vision encoder",
+  "architecture": "Sliding-window and global attention language model, with patch embeddings from several encoder layers injected into the early language layers",
+  "tags": [
+    "open-weights",
+    "multimodal",
+    "on-device"
+  ],
+  "overview": [
+    "North Micro Vision Instruct is a small vision-language model published by Cohere Labs on 12 August 2026, extending the North family — until then a text and coding line — to images. At 2.4 billion parameters it is aimed squarely at prototyping, task-specific fine-tuning and specialised multimodal applications rather than at leaderboard positions: Cohere Labs describes it as a compact foundation to build on, and ships it under Apache 2.0 with no per-token API price.",
+    "The model combines a 400M vision encoder, custom-trained from SigLIP 2 SO400M and using 2D RoPE alongside learned 1D positional embeddings, with a 2B in-house language model that interleaves sliding-window and global attention. Rather than passing a single pooled image representation into the language model, it injects patch embeddings taken from several encoder layers into the language model's early layers. Images are processed at their native resolution with the aspect ratio preserved, and multiple images can be supplied in one conversation. The language model's context runs to 128K tokens, though Cohere Labs validates multimodal inputs only to 8K.",
+    "Eleven languages are declared on the model card — English, German, French, Spanish, Italian, Portuguese, Hindi, Japanese, Korean, Chinese and Arabic. Its strongest published results are on document and chart understanding (0.921 on DocVQA and 0.808 on ChartQA) and on grounding and counting (0.732 on RefCOCO-average and 0.725 on CountBench), where the native-resolution design pays off most directly.",
+    "Cohere Labs' launch table sets it against seven other small vision-language models. The picture is mixed by design: on broad VQA rows such as MMBench (0.687) and MMStar (0.518) it sits mid-pack behind Qwen3.5-2B and Qwen3-VL-2B, while on RefCOCO it leads every listed model except Qwen3.5-2B by a wide margin — 0.732 against 0.317 for Ministral-3-3B and 0.084 for Gemma-4-E2B. A LiteRT conversion of the checkpoint is published by the litert-community organisation for on-device use."
+  ],
+  "strengths": [
+    "Apache-2.0 open weights, self-hostable with no per-token pricing",
+    "Native-resolution image processing that preserves aspect ratio, with multi-image inputs in one conversation",
+    "0.921 on DocVQA and 0.808 on ChartQA — document and chart reading is the model's strongest published area",
+    "0.732 on RefCOCO-average and 0.725 on CountBench, far ahead of most models in its size class on grounding and counting",
+    "2.4B parameters total, small enough for laptop-class hardware, with a LiteRT build published for on-device runtimes"
+  ],
+  "useCases": [
+    "Document, form, chart and receipt understanding where the input is a scan or screenshot rather than clean text",
+    "Task-specific fine-tuning — Cohere Labs positions the model as a compact base to specialise rather than a finished product",
+    "Visual grounding and object counting in applications that need boxes or tallies, not just captions",
+    "On-device and edge multimodal features, using the LiteRT conversion of the checkpoint"
+  ],
+  "links": [
+    {
+      "label": "North-Micro-Vision-Instruct model card (Hugging Face)",
+      "url": "https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct",
+      "kind": "model-card"
+    },
+    {
+      "label": "Meet North Micro Vision: A 2.4B Native-Resolution Vision-Language Model (Cohere Labs)",
+      "url": "https://huggingface.co/blog/CohereLabs/meet-north-micro-vision-instruct",
+      "kind": "announcement"
+    },
+    {
+      "label": "Cohere Labs on Hugging Face",
+      "url": "https://huggingface.co/CohereLabs",
+      "kind": "official"
+    },
+    {
+      "label": "North-Micro-Vision-Instruct LiteRT build (on-device)",
+      "url": "https://huggingface.co/litert-community/North-Micro-Vision-Instruct",
+      "kind": "model-card"
+    }
+  ],
+  "benchmarks": [
+    {
+      "name": "DocVQA (val)",
+      "score": 0.921,
+      "unit": "",
+      "max": 1,
+      "source": "https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct"
+    },
+    {
+      "name": "ChartQA (test)",
+      "score": 0.808,
+      "unit": "",
+      "max": 1,
+      "source": "https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct"
+    },
+    {
+      "name": "OCRBench",
+      "score": 0.792,
+      "unit": "",
+      "max": 1,
+      "source": "https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct"
+    },
+    {
+      "name": "AI2D (test)",
+      "score": 0.775,
+      "unit": "",
+      "max": 1,
+      "source": "https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct"
+    },
+    {
+      "name": "RefCOCO (average)",
+      "score": 0.732,
+      "unit": "",
+      "max": 1,
+      "source": "https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct"
+    },
+    {
+      "name": "CountBench",
+      "score": 0.725,
+      "unit": "",
+      "max": 1,
+      "source": "https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct"
+    },
+    {
+      "name": "MMBench DEV EN v1.1",
+      "score": 0.687,
+      "unit": "",
+      "max": 1,
+      "source": "https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct"
+    },
+    {
+      "name": "InfoVQA (val)",
+      "score": 0.652,
+      "unit": "",
+      "max": 1,
+      "source": "https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct"
+    },
+    {
+      "name": "RealWorldQA",
+      "score": 0.622,
+      "unit": "",
+      "max": 1,
+      "source": "https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct"
+    },
+    {
+      "name": "HallusionBench",
+      "score": 0.615,
+      "unit": "",
+      "max": 1,
+      "source": "https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct"
+    },
+    {
+      "name": "GQA (test-dev balanced)",
+      "score": 0.574,
+      "unit": "",
+      "max": 1,
+      "source": "https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct"
+    },
+    {
+      "name": "MMStar",
+      "score": 0.518,
+      "unit": "",
+      "max": 1,
+      "source": "https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct"
+    },
+    {
+      "name": "OCRBench v2 (en)",
+      "score": 0.367,
+      "unit": "",
+      "max": 1,
+      "source": "https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct"
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Cohere Labs' published launch comparison against small vision-language models (12 August 2026). Scores are on a 0–1 scale. The source footnotes SmolVLM2.2B's 0.000 on GQA as an answer-extraction failure under VLMEvalKit's rules, not a measured result.",
+    "models": [
+      "North Micro Vision Instruct",
+      "Ministral-3-3B",
+      "LFM2.5-VL-1.6B",
+      "Phi-3.5-vision",
+      "Gemma-4-E2B",
+      "Qwen3-VL-2B",
+      "Qwen3.5-2B",
+      "SmolVLM2.2B"
+    ],
+    "subject": 0,
+    "rows": [
+      { "benchmark": "MMBench DEV EN v1.1", "scores": [0.687, 0.692, 0.696, 0.731, 0.693, 0.744, 0.76, 0.674] },
+      { "benchmark": "MMStar", "scores": [0.518, 0.531, 0.508, 0.495, 0.529, 0.506, 0.614, 0.46] },
+      { "benchmark": "RealWorldQA", "scores": [0.622, 0.583, 0.642, 0.58, 0.507, 0.646, 0.693, 0.567] },
+      { "benchmark": "GQA (test-dev balanced)", "scores": [0.574, 0.544, 0.395, 0.65, 0.387, 0.572, 0.539, 0] },
+      { "benchmark": "DocVQA (val)", "scores": [0.921, 0.896, 0.877, 0.86, 0.732, 0.825, 0.926, 0.799] },
+      { "benchmark": "RefCOCO (average)", "scores": [0.732, 0.317, 0.581, 0.451, 0.084, 0.304, 0.785, 0.018] }
+    ],
+    "source": "https://huggingface.co/blog/CohereLabs/meet-north-micro-vision-instruct"
+  },
+  "faq": [
+    {
+      "q": "Is North Micro Vision Instruct free to use?",
+      "a": "The weights are on Hugging Face under Apache 2.0, so you can download, fine-tune, self-host and use the model commercially. There is no per-token API price because Cohere Labs publishes the weights rather than serving it as a hosted endpoint."
+    },
+    {
+      "q": "How large is it, and what is inside?",
+      "a": "2.4 billion parameters in total: a 400M vision encoder custom-trained from SigLIP 2 SO400M, and a 2B in-house language model that interleaves sliding-window and global attention. Patch embeddings from several encoder layers are injected into the language model's early layers rather than a single pooled image vector being prepended."
+    },
+    {
+      "q": "What does \"native resolution\" mean here?",
+      "a": "Images are processed at their own resolution with the aspect ratio preserved, instead of being squashed or cropped to a fixed square. That matters most for dense inputs such as documents, forms and charts, which is where the model's published scores are strongest — 0.921 on DocVQA and 0.808 on ChartQA."
+    },
+    {
+      "q": "How long a context does it support?",
+      "a": "The language model supports 128K tokens. Cohere Labs validates multimodal inputs — image plus text — only up to 8K, so long-document workloads should be chunked rather than pushed to the text limit."
+    },
+    {
+      "q": "Which languages does it handle?",
+      "a": "The model card declares eleven: English, German, French, Spanish, Italian, Portuguese, Hindi, Japanese, Korean, Chinese and Arabic."
+    }
+  ],
+  "versionHistory": [
+    {
+      "version": "North Micro Vision Instruct",
+      "slug": "north-micro-vision-instruct",
+      "date": "2026-08-12",
+      "note": "First vision-language model in Cohere Labs' North family: 2.4B, Apache 2.0, native-resolution image input.",
+      "current": true
+    }
+  ]
+}

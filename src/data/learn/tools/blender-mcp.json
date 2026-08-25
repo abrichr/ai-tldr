@@ -1,0 +1,70 @@
+{
+  "slug": "blender-mcp",
+  "name": "Blender MCP",
+  "repo": "ahujasid/blender-mcp",
+  "homepage": "https://blendermcp.org/",
+  "category": "agents",
+  "categoryTitle": "Agents & Automation",
+  "subcategory": "computer-use",
+  "subcategoryTitle": "Computer & Browser Use",
+  "tagline": "Let an LLM build and edit 3D scenes inside Blender from a chat prompt",
+  "seoTitle": "Blender MCP - Control Blender 3D with any LLM",
+  "metaDescription": "Blender MCP is an open-source MCP server and Blender addon that lets Claude and other LLMs create, modify, and inspect 3D objects, materials, and scenes in Blender.",
+  "overview": [
+    "Blender MCP connects Blender to any LLM that speaks the Model Context Protocol, so you can describe a 3D scene in plain language and watch the model build it. Ask for a low-poly dungeon with a dragon guarding a pot of gold, or tell it to make a car red and metallic, and the assistant issues real Blender commands rather than handing you a script to paste.",
+    "The project has two halves. A Blender addon (`addon.py`) starts a socket server inside Blender itself, and a Python MCP server (`src/blender_mcp/server.py`) exposes that connection to your MCP client. The two talk over TCP with a simple JSON protocol: commands carry a `type` and optional `params`, responses carry a `status` plus a result or message. Because the addon runs in-process, the model can inspect the live scene as well as change it.",
+    "Beyond primitive shapes and materials, the server wires in asset sources: Poly Haven for models, textures and HDRIs, Sketchfab for downloadable models, and Hyper3D Rodin and Hunyuan3D for AI-generated 3D assets. API keys for those services can be stored in the addon's preferences so they survive a Blender restart, or injected through `BLENDERMCP_*` environment variables for headless and CI setups. It is MIT-licensed and installed with `uvx`.",
+    "One capability deserves care: the `execute_blender_code` tool runs arbitrary Python inside Blender. The project's own README flags this as powerful but dangerous and tells you to save your work first. The same README also notes that only one instance of the MCP server should run at a time — pointing both Claude Desktop and Cursor at it simultaneously causes connection problems."
+  ],
+  "features": [
+    "Two-way socket connection between an MCP client and a running Blender instance",
+    "Create, modify and delete 3D objects, and apply or author materials and colours from a prompt",
+    "Scene inspection — the model can read the current scene's objects and properties before changing them",
+    "Asset pipelines built in: Poly Haven models, textures and HDRIs, plus Sketchfab model search and download",
+    "AI-generated 3D models through Hyper3D Rodin and Hunyuan3D, with keys stored in addon preferences or environment variables",
+    "`execute_blender_code` for running arbitrary Python in Blender when the built-in tools are not enough"
+  ],
+  "gettingStarted": {
+    "intro": "Three steps: install uv, point your MCP client at the server, and install the Blender addon. You need Blender 3.0 or newer and Python 3.10 or newer. Install uv with its official installer — the README warns that `pip install uv` may not create the `uvx` command your MCP client needs.",
+    "steps": [
+      {
+        "heading": "Install uv",
+        "body": "Use the official installer for your platform.",
+        "code": "# macOS\nbrew install uv\n\n# Linux\ncurl -LsSf https://astral.sh/uv/install.sh | sh\n\n# Windows\npowershell -c \"irm https://astral.sh/uv/install.ps1 | iex\"",
+        "lang": "bash"
+      },
+      {
+        "heading": "Add the MCP server to your client",
+        "body": "For Claude Code, one command registers it. For Claude Desktop, add the entry under Settings → Developer → Edit Config.",
+        "code": "claude mcp add blender uvx blender-mcp",
+        "lang": "bash"
+      },
+      {
+        "heading": "Or configure Claude Desktop by hand",
+        "body": "Add the server to the mcpServers block of your Claude Desktop config file.",
+        "code": "{\n    \"mcpServers\": {\n        \"blender\": {\n            \"command\": \"uvx\",\n            \"args\": [\"blender-mcp\"]\n        }\n    }\n}",
+        "lang": "json"
+      },
+      {
+        "heading": "Install the Blender addon",
+        "body": "Run the installer, then enable it in Blender under Edit → Preferences → Add-ons → Interface: Blender MCP.",
+        "code": "uvx blender-mcp install-addon",
+        "lang": "bash"
+      },
+      {
+        "heading": "Connect and prompt",
+        "body": "In Blender's 3D viewport press N, open the BlenderMCP tab, and click Start MCP Server. Your assistant will show a hammer icon with the Blender tools. Run only one MCP server instance at a time — not Cursor and Claude Desktop together.",
+        "code": "",
+        "lang": ""
+      }
+    ]
+  },
+  "useCases": [
+    "Block out a 3D scene from a written description instead of clicking through Blender's modelling tools",
+    "Populate a scene with real assets — Poly Haven HDRIs and textures, Sketchfab models — without leaving the conversation",
+    "Recreate a reference image as a Blender scene, or read an existing scene back out into another format",
+    "Batch-edit materials, lighting and camera framing across a scene using natural-language instructions"
+  ],
+  "language": "Python",
+  "license": "MIT"
+}

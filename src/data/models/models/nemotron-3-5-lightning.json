@@ -1,0 +1,261 @@
+{
+  "slug": "nemotron-3-5-lightning",
+  "name": "Nemotron 3.5 Lightning",
+  "maker": "nvidia",
+  "makerTitle": "NVIDIA",
+  "line": "nemotron",
+  "lineTitle": "Nemotron (open-weight)",
+  "tagline": "Released 11 August 2026: NVIDIA's 30B Mixture-of-Experts model with 3B active parameters, built as the fast execution layer for long-running agents and published under OpenMDW-1.1.",
+  "seoTitle": "Nemotron 3.5 Lightning: NVIDIA's Open 30B MoE",
+  "metaDescription": "NVIDIA Nemotron 3.5 Lightning is a 30B/3B-active open MoE released 11 Aug 2026 under OpenMDW-1.1, with a 1M context and 81.94 on MMLU Pro.",
+  "releaseDate": "2026-08-11",
+  "status": "Generally available — open weights on Hugging Face",
+  "license": "OpenMDW-1.1",
+  "openWeights": true,
+  "modalities": [
+    "Text"
+  ],
+  "contextWindow": "1M (256K on a single H100)",
+  "parameters": "30B total · 3B active (Mixture-of-Experts)",
+  "architecture": "Hybrid Mamba-2 + Mixture-of-Experts + attention",
+  "knowledgeCutoff": "September 2025 (pre-training); May 2026 (post-training)",
+  "tags": [
+    "open-weights",
+    "agentic",
+    "reasoning",
+    "long-context"
+  ],
+  "overview": [
+    "Nemotron 3.5 Lightning is the first model in NVIDIA's Nemotron 3.5 generation, published on 11 August 2026 alongside NeMo Switchyard, an open-source library that routes each step of an agent workflow to the model that fits it. NVIDIA positions Lightning not as a frontier reasoner but as the high-volume execution layer underneath one: the model that handles the many cheap, repetitive steps a long-running agent takes between its occasional hard decisions.",
+    "The architecture is a hybrid — Mamba-2 state-space layers interleaved with attention layers on top of a Mixture-of-Experts feed-forward stack — with 30 billion total parameters and 3 billion active per token. It carries the same shape and small size as Nemotron 3 Nano while scoring substantially higher across NVIDIA's evaluation suite. The context window runs to one million tokens, though NVIDIA's own serving guidance caps a single H100 at 256K because of memory rather than the model.",
+    "Weights ship under the permissive OpenMDW-1.1 license in two checkpoints — a BF16 release aimed at customisation and research, and an NVFP4 quantisation NVIDIA recommends for production inference — together with the pre-training and post-training datasets and the recipes used to build them. The model is served through vLLM, SGLang and TensorRT-LLM, supports speculative decoding via DSpark, DFlash or MTP, and is distributed through Hugging Face, ModelScope, OpenRouter and NVIDIA's own NIM microservices on build.nvidia.com. Supported languages are English, Spanish, French, German, Italian and Japanese, plus code.",
+    "NVIDIA's published table sets Lightning against Qwen 3.6 35B A3B, Gemma 4 26B A4B, GPT-OSS 20B and its own Nemotron 3 Nano and Super. It reads honestly: Lightning scores 81.94 on MMLU Pro, 75.44 on GPQA Diamond and 51.56 on SWE-bench Verified, well clear of Nemotron 3 Nano on every row but behind Qwen 3.6 35B A3B on most of them — including SWE-bench Verified (70.12), Terminal-Bench 2.1 (44.38) and GPQA Diamond (83.40). Its case is speed rather than peak accuracy: NVIDIA reports up to 4× the output speed of similarly-sized models, and its developer blog claims 10,000 PinchBench tasks completed 30% faster than Qwen3.6 35B at comparable accuracy."
+  ],
+  "strengths": [
+    "Permissively licensed under OpenMDW-1.1, with weights, pre-training and post-training datasets and recipes all published",
+    "3B active parameters out of 30B keeps per-token compute — and cost — low for agent loops that make thousands of calls",
+    "1M-token context, with NVIDIA-documented serving configurations for vLLM, SGLang and TensorRT-LLM",
+    "Speculative decoding supported out of the box through DSpark, DFlash or MTP draft strategies",
+    "81.94 on MMLU Pro and 85.37 on PinchBench on NVIDIA's own evaluations — ahead of GPT-OSS 20B and Nemotron 3 Nano across the board"
+  ],
+  "useCases": [
+    "The execution tier of an agent stack, handling routine tool calls and sub-steps while a larger model makes the hard decisions",
+    "Self-hosted deployments where a permissive license and published training data matter more than topping a leaderboard",
+    "High-throughput batch work — classification, extraction, summarisation — where cost per token dominates",
+    "Research and customisation on an open hybrid Mamba-2/MoE architecture, using the BF16 checkpoint and NVIDIA's released recipes"
+  ],
+  "links": [
+    {
+      "label": "Nemotron 3.5 Lightning 30B A3B BF16 model card (Hugging Face)",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+      "kind": "model-card"
+    },
+    {
+      "label": "Nemotron 3.5 Lightning 30B A3B NVFP4 model card (Hugging Face)",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
+      "kind": "model-card"
+    },
+    {
+      "label": "NVIDIA Nemotron 3.5 Lightning Delivers Fast, Accurate Specialized Task Execution for Long-Running Agents",
+      "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-lightning-delivers-fast-accurate-specialized-task-execution-for-long-running-agents/",
+      "kind": "announcement"
+    },
+    {
+      "label": "NVIDIA Nemotron 3.5 Lightning and NeMo Switchyard (NVIDIA blog)",
+      "url": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
+      "kind": "announcement"
+    },
+    {
+      "label": "Nemotron model family (NVIDIA)",
+      "url": "https://www.nvidia.com/en-us/ai-data-science/foundation-models/nemotron/",
+      "kind": "official"
+    },
+    {
+      "label": "Try Nemotron 3.5 Lightning on build.nvidia.com",
+      "url": "https://build.nvidia.com/nvidia/nvidia-nemotron-3-5-lightning-30b-a3b",
+      "kind": "playground"
+    },
+    {
+      "label": "Nemotron 3.5 Lightning on OpenRouter (hosted pricing)",
+      "url": "https://openrouter.ai/nvidia/nemotron-3.5-lightning",
+      "kind": "api-docs"
+    }
+  ],
+  "benchmarks": [
+    {
+      "name": "PinchBench",
+      "score": 85.37,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16"
+    },
+    {
+      "name": "MMLU Pro",
+      "score": 81.94,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16"
+    },
+    {
+      "name": "GPQA Diamond",
+      "score": 75.44,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16"
+    },
+    {
+      "name": "IFBench",
+      "score": 71.88,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16"
+    },
+    {
+      "name": "AA-LCR",
+      "score": 52,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16"
+    },
+    {
+      "name": "SWE-bench Verified",
+      "score": 51.56,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16"
+    },
+    {
+      "name": "SWE-bench Multilingual",
+      "score": 39.33,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16"
+    },
+    {
+      "name": "BrowseComp",
+      "score": 36.97,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16"
+    },
+    {
+      "name": "SciCode",
+      "score": 32.6,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16"
+    },
+    {
+      "name": "Terminal-Bench 2.1",
+      "score": 24.58,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16"
+    },
+    {
+      "name": "AA-Omniscience",
+      "score": 17.5,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16"
+    },
+    {
+      "name": "Humanity's Last Exam",
+      "score": 11.72,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16"
+    },
+    {
+      "name": "τ³-bench (Banking)",
+      "score": 9.28,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16"
+    }
+  ],
+  "comparisonTable": {
+    "caption": "NVIDIA's published reasoning-benchmark comparison for the BF16 checkpoint (11 August 2026). A dash means the source left the cell blank. GDPval-AA-V2 is an Elo-style rating, not a percentage.",
+    "models": [
+      "Nemotron 3.5 Lightning (BF16)",
+      "Qwen 3.6 35B A3B",
+      "Gemma 4 26B A4B",
+      "Nemotron 3 Nano",
+      "Nemotron 3 Super",
+      "GPT-OSS 20B"
+    ],
+    "subject": 0,
+    "rows": [
+      { "benchmark": "MMLU Pro", "scores": [81.94, 85.63, 85.2, 78.46, 83.89, 76.4] },
+      { "benchmark": "AA-Omniscience", "scores": [17.5, 19.47, 22.17, 20.15, 26.68, 16.62] },
+      { "benchmark": "GPQA Diamond", "scores": [75.44, 83.4, 79.61, 74.05, 78.6, 71.46] },
+      { "benchmark": "Humanity's Last Exam", "scores": [11.72, 19.56, 17.42, 10.89, 20.3, 13.76] },
+      { "benchmark": "SciCode", "scores": [32.6, 35.33, 40.28, 30.08, 35.11, 38.63] },
+      { "benchmark": "SWE-bench Verified", "scores": [51.56, 70.12, 57.4, 34.08, 63.08, 52.44] },
+      { "benchmark": "SWE-bench Multilingual", "scores": [39.33, 63.4, 43.4, 14.07, 49.8, 41.93] },
+      { "benchmark": "Terminal-Bench 2.1", "scores": [24.58, 44.38, 37.22, 8.29, 39.61, 15.17] },
+      { "benchmark": "PinchBench", "scores": [85.37, 88.07, 74.7, 66.11, 80.36, 57.2] },
+      { "benchmark": "BrowseComp", "scores": [36.97, 48.74, 26.3, 13.74, 22.77, null] },
+      { "benchmark": "τ³-bench (Banking)", "scores": [9.28, 10.52, 14.02, 7.01, 12.37, null] },
+      { "benchmark": "GDPval-AA-V2", "unit": "Elo", "scores": [832, 1015, 807, 473, 746, null] },
+      { "benchmark": "IFBench", "scores": [71.88, 63.71, 77.25, 72.17, 71.92, 68.5] },
+      { "benchmark": "AA-LCR", "scores": [52, 61.06, 57.56, 32.75, 58.44, 32.88] }
+    ],
+    "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16"
+  },
+  "pricing": {
+    "input": "$0.08",
+    "output": "$0.20",
+    "cachedInput": "$0.04",
+    "unit": "/ 1M tokens",
+    "note": "OpenRouter's hosted rate for the open-weight model at 262K context — NVIDIA publishes weights rather than a first-party token price. A free 1M-context endpoint is also listed.",
+    "source": "https://openrouter.ai/nvidia/nemotron-3.5-lightning"
+  },
+  "apis": [
+    {
+      "provider": "NVIDIA NIM (build.nvidia.com)",
+      "url": "https://build.nvidia.com/nvidia/nvidia-nemotron-3-5-lightning-30b-a3b"
+    },
+    {
+      "provider": "OpenRouter",
+      "url": "https://openrouter.ai/nvidia/nemotron-3.5-lightning",
+      "modelId": "nvidia/nemotron-3.5-lightning"
+    },
+    {
+      "provider": "Hugging Face (weights)",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+      "modelId": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is Nemotron 3.5 Lightning open source?",
+      "a": "The weights are published on Hugging Face under the OpenMDW-1.1 license, and NVIDIA also released the pre-training and post-training datasets and the recipes used to build the model. Two checkpoints are available: BF16 for customisation and research, and an NVFP4 quantisation NVIDIA recommends for production inference."
+    },
+    {
+      "q": "What hardware does it need?",
+      "a": "It is a 30B Mixture-of-Experts model with 3B active parameters, so serving cost tracks the smaller active count. NVIDIA's model card documents vLLM as the recommended path on a single H100, where memory caps the usable context at 256K rather than the model's full 1M. SGLang and TensorRT-LLM are also supported, the latter through the NVFP4 release."
+    },
+    {
+      "q": "How does it compare with Qwen 3.6 35B A3B?",
+      "a": "On NVIDIA's own published table, Qwen 3.6 35B A3B leads on most accuracy rows — SWE-bench Verified 70.12 vs 51.56, Terminal-Bench 2.1 44.38 vs 24.58, GPQA Diamond 83.40 vs 75.44. Lightning leads on IFBench (71.88 vs 63.71) and its argument is throughput: NVIDIA's developer blog reports 10,000 PinchBench tasks completed 30% faster than Qwen3.6 35B at similar accuracy."
+    },
+    {
+      "q": "What is NeMo Switchyard?",
+      "a": "An open-source routing library NVIDIA released alongside Lightning on 11 August 2026. It sends each step of an agent workflow to whichever model fits that step, so a small fast model such as Lightning handles routine execution while a larger model is reserved for the hard decisions."
+    },
+    {
+      "q": "How long a context does it support?",
+      "a": "Up to one million tokens. In practice the limit is memory rather than the model: NVIDIA's card notes 256K on a single H100, and OpenRouter serves the paid endpoint at 262,144 tokens and a free endpoint at the full 1M."
+    }
+  ],
+  "versionHistory": [
+    {
+      "version": "Nemotron 3.5 Lightning",
+      "slug": "nemotron-3-5-lightning",
+      "date": "2026-08-11",
+      "note": "First Nemotron 3.5 model: 30B MoE with 3B active, 1M context, released with NeMo Switchyard.",
+      "current": true
+    }
+  ]
+}

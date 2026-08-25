@@ -4310,6 +4310,28 @@
           ]
         },
         {
+          "id": "north-micro-vision",
+          "title": "North Micro Vision",
+          "blurb": "Cohere Labs' compact open vision-language line: small Apache-2.0 models that read images at their native resolution.",
+          "versions": [
+            {
+              "name": "North Micro Vision Instruct",
+              "slug": "north-micro-vision-instruct",
+              "blurb": "Released 12 August 2026: a 2.4B Apache-2.0 vision-language model (2B language model plus a 400M native-resolution encoder) scoring 0.921 on DocVQA and 0.732 on RefCOCO.",
+              "tags": [
+                "open-weights",
+                "multimodal",
+                "on-device"
+              ],
+              "contextWindow": "128K",
+              "license": "Apache-2.0",
+              "date": "2026-08-12",
+              "current": true,
+              "rich": true
+            }
+          ]
+        },
+        {
           "id": "command-r",
           "title": "Command R",
           "blurb": "Scalable R-series model optimized for RAG, tool use, and long context.",
@@ -4943,6 +4965,38 @@
               "license": "MIT",
               "date": "2026-08-02",
               "current": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nvidia",
+      "title": "NVIDIA",
+      "blurb": "NVIDIA builds the accelerators most of the industry trains and serves models on, and also publishes its own open models. The Nemotron family ships with downloadable weights, training datasets and post-training recipes, and is served through NIM microservices on build.nvidia.com.",
+      "homepage": "https://www.nvidia.com/en-us/ai-data-science/foundation-models/nemotron/",
+      "logo": "/models-logos/nvidia.webp",
+      "lines": [
+        {
+          "id": "nemotron",
+          "title": "Nemotron (open-weight)",
+          "blurb": "NVIDIA's open model family for agentic workloads, released with weights, training data and recipes rather than as an API-only product.",
+          "versions": [
+            {
+              "name": "Nemotron 3.5 Lightning",
+              "slug": "nemotron-3-5-lightning",
+              "blurb": "Released 11 August 2026: a 30B Mixture-of-Experts model activating 3B parameters per token, built as the high-volume execution layer of long-running agents and licensed under OpenMDW-1.1.",
+              "tags": [
+                "open-weights",
+                "agentic",
+                "reasoning",
+                "long-context"
+              ],
+              "contextWindow": "1M",
+              "license": "OpenMDW-1.1",
+              "date": "2026-08-11",
+              "current": true,
+              "rich": true
             }
           ]
         }

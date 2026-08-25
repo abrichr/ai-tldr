@@ -3481,6 +3481,14 @@
        "description": "Agentic AI workspace whose Super Agent autonomously browses the web and orchestrates tools to complete multi-step tasks end to end.",
        "access": "freemium",
        "logo": "/tools-logos/site-genspark.ico"
+      },
+      {
+       "name": "Blender MCP",
+       "slug": "blender-mcp",
+       "repo": "ahujasid/blender-mcp",
+       "homepage": "https://blendermcp.org/",
+       "description": "MCP server and Blender addon that let an LLM drive Blender directly — creating, modifying and inspecting 3D objects, materials and scenes from a chat prompt.",
+       "detail": true
       }
      ]
     },
@@ -7698,6 +7706,14 @@
        "description": "AI firewall and DLP gateway that enforces need-to-know access controls to stop LLM oversharing and data exfiltration in Copilot and RAG deployments.",
        "access": "commercial",
        "logo": "/tools-logos/site-knostic.png"
+      },
+      {
+       "name": "SkillSpector",
+       "slug": "skillspector",
+       "repo": "NVIDIA/SkillSpector",
+       "homepage": "https://docs.nvidia.com/skills/scanning-agent-skills",
+       "description": "Security scanner for AI agent skills that checks a skill for prompt injection, data exfiltration, privilege escalation and supply-chain risks before you install it.",
+       "detail": true
       }
      ]
     },
