@@ -36695,6 +36695,39 @@
         "ecosystem",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260825t222915z",
+      "timestamp": "2026-08-25T22:29:15.722Z",
+      "source": "github-actions-sweep",
+      "summary": "Added IBM Granite 4.2, the Apache-2.0 dense reasoning family (3B/8B/30B) announced today with a switchable thinking mode and agentic RL training. Everything else fresh on lab blogs, GitHub trending, HuggingFace, HN and the 8 YouTube feeds was already in the feed or fell outside the 72h window.",
+      "counts": {
+        "added": 1,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "ibm-granite-4-2",
+          "title": "IBM Granite 4.2 — open reasoning models with a thinking switch",
+          "category": "model",
+          "note": "IBM Research announced the Granite 4.2 family today (2026-08-25) with open Apache-2.0 weights, a public GitHub repo, HuggingFace model cards and a full benchmark table — a released artifact, not an announcement of intent."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "benchmark",
+        "article",
+        "algorithm",
+        "ecosystem"
+      ]
     }
   ]
 }

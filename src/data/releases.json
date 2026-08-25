@@ -1,8 +1,170 @@
 {
-  "generatedAt": "2026-08-25T20:30:30.309Z",
+  "generatedAt": "2026-08-25T22:29:15.722Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "ibm-granite-4-2",
+      "categories": [
+        "model",
+        "repo"
+      ],
+      "title": "IBM Granite 4.2 — open reasoning models with a thinking switch",
+      "org": "IBM",
+      "date": "2026-08-25",
+      "url": "https://research.ibm.com/blog/introducing-granite-4-2",
+      "summary": "Granite 4.2 is IBM's first family of dense reasoning models, released under Apache-2.0 in 3B, 8B and 30B sizes. Each model has a thinking mode you can switch off, and the 8B and 30B learned to use tools inside live sandboxes.",
+      "tags": [
+        "ibm",
+        "granite",
+        "granite-4-2",
+        "open-weights",
+        "apache-2-0",
+        "reasoning",
+        "agentic",
+        "tool-calling",
+        "llm",
+        "enterprise",
+        "reinforcement-learning",
+        "long-context"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "IBM"
+        },
+        {
+          "label": "Sizes",
+          "value": "3B, 8B, 30B (dense, decoder-only)"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        },
+        {
+          "label": "Context window",
+          "value": "128K tokens, extendable to 512K"
+        },
+        {
+          "label": "Training data",
+          "value": "~15T pre-training tokens, 7.2M SFT samples"
+        },
+        {
+          "label": "What's new",
+          "value": "Switchable thinking mode; agentic RL for the 8B and 30B"
+        },
+        {
+          "label": "Availability",
+          "value": "Hugging Face, Ollama, GitHub, LM Studio, OpenRouter, Replicate"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "SWE-Bench Verified",
+          "results": [
+            {
+              "name": "Granite 4.2 30B",
+              "score": 57,
+              "highlight": true
+            },
+            {
+              "name": "Granite 4.2 8B",
+              "score": 47.67
+            }
+          ],
+          "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+        },
+        {
+          "name": "AIME25",
+          "results": [
+            {
+              "name": "Granite 4.2 30B",
+              "score": 89.17,
+              "highlight": true
+            },
+            {
+              "name": "Granite 4.2 8B",
+              "score": 86.67
+            },
+            {
+              "name": "Granite 4.2 3B",
+              "score": 78.33
+            }
+          ],
+          "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+        },
+        {
+          "name": "MMLU-Pro",
+          "results": [
+            {
+              "name": "Granite 4.2 30B",
+              "score": 77.6,
+              "highlight": true
+            },
+            {
+              "name": "Granite 4.2 8B",
+              "score": 74.04
+            },
+            {
+              "name": "Granite 4.2 3B",
+              "score": 67.84
+            }
+          ],
+          "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is IBM Granite 4.2 free for commercial use?",
+          "a": "Yes. IBM published every Granite 4.2 size under the Apache-2.0 license, so organizations can download the weights, fine-tune them, and put them into production without restrictions. There is no separate commercial tier and no usage cap tied to the weights themselves. Hosting costs depend on whichever provider or hardware you choose to run them on."
+        },
+        {
+          "q": "How is Granite 4.2 different from Granite 4.1?",
+          "a": "Granite 4.2 is IBM's first family of dense, decoder-only reasoning models, where earlier Granite generations did not reason step by step before answering. The 30B model is built on the Granite-4.1-30B-Base foundation and then taken through supervised fine-tuning and reinforcement learning stages that add native thinking and tool use."
+        },
+        {
+          "q": "Can you turn off reasoning in Granite 4.2?",
+          "a": "Yes. Granite 4.2 wraps its reasoning in <think> tags and exposes an enable_thinking flag you can set to False to skip it entirely. A low_effort setting sits in between, spending a short reasoning budget on easy questions. Thinking is on by default, so simple prompts do not need the full chain of thought."
+        },
+        {
+          "q": "How good is Granite 4.2 at terminal and agent tasks?",
+          "a": "On Terminal-Bench 2.1, Granite 4.2 30B scores 29.24 and the 8B scores 20.56. Those two sizes went through an agentic reinforcement learning stage where the model acts inside live software-engineering, terminal and web-search environments and is rewarded only when the task is actually solved, rather than on how the answer looks."
+        }
+      ],
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://research.ibm.com/blog/introducing-granite-4-2"
+        },
+        {
+          "label": "Technical Deep Dive",
+          "url": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+        },
+        {
+          "label": "Model Card (30B)",
+          "url": "https://huggingface.co/ibm-granite/granite-4.2-30b"
+        },
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/ibm-granite/granite-4.2-language-models"
+        }
+      ],
+      "explainer": {
+        "tagline": "IBM's first dense reasoning models, in 3B, 8B and 30B, with Apache-2.0 weights and a thinking mode you can switch off.",
+        "whatIsIt": "A switchable thinking mode is the headline change in Granite 4.2, IBM's first family of dense, decoder-only reasoning models. The family ships in three sizes with open Apache-2.0 weights. Every size can plan step by step before it answers, or skip reasoning entirely when the question is simple.",
+        "howItWorks": "Each model is pre-trained from scratch on roughly 15 trillion tokens, then fine-tuned on chain-of-thought, reasoning and agent-trajectory data, then put through a multi-stage reinforcement learning pipeline. For the 8B and 30B, the last stage is agentic RL: the model acts inside live software-engineering, terminal and web-search environments and is rewarded on whether the task was actually solved.",
+        "whyItMatters": "Apache-2.0 weights let a team download Granite 4.2, fine-tune it on their own data and ship it without a license negotiation, which matters most where sending data to a hosted API is not an option. IBM aimed the agentic training at the work it names directly — software engineering and terminal-based coding — so the smaller sizes are pitched at running real agents rather than demos.",
+        "forWho": "enterprise ML teams and self-hosters",
+        "tryIt": "Download the weights at huggingface.co/ibm-granite/granite-4.2-30b"
+      },
+      "image": {
+        "url": "https://cdn-uploads.huggingface.co/production/uploads/65cc2c288ebd392213e58899/XHWV2L_wZsFe3ekksCgvQ.webp",
+        "alt": "IBM Granite 4.2 language model family announcement banner",
+        "fit": "cover"
+      },
+      "publishDate": "2026-08-25T22:29:15.722Z"
+    },
     {
       "id": "openai-jalapeno-first-results",
       "categories": [
