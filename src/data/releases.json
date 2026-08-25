@@ -1,8 +1,171 @@
 {
-  "generatedAt": "2026-08-25T03:01:17.157Z",
+  "generatedAt": "2026-08-25T04:46:29.869Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "thomson-reuters-thomson-1-0-small",
+      "categories": [
+        "model"
+      ],
+      "title": "Thomson 1.0 Small — Thomson Reuters ships its own 35B legal and tax model",
+      "org": "Thomson Reuters",
+      "date": "2026-08-24",
+      "url": "https://www.thomsonreuters.com/en/press-releases/2026/august/thomson-reuters-leverages-its-world-class-data-assets-to-launch-its-own-frontier-model",
+      "summary": "Thomson Reuters released Thomson, its first in-house language model, and put a small 35B version on Hugging Face with open weights for academic and non-commercial use. Training cost $40 million.",
+      "tags": [
+        "thomson-reuters",
+        "open-weights",
+        "mixture-of-experts",
+        "legal-ai",
+        "tax",
+        "cocounsel",
+        "domain-model",
+        "hugging-face"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Tax domain average": "82.6",
+        "Legal domain average": "75.2"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Thomson Reuters"
+        },
+        {
+          "label": "Size",
+          "value": "35B total, 3B active (MoE)"
+        },
+        {
+          "label": "Context window",
+          "value": "262,144 tokens"
+        },
+        {
+          "label": "Base model",
+          "value": "tri-fair-lab/Snowdon1.1-Small"
+        },
+        {
+          "label": "License",
+          "value": "PolyForm Strict 1.0.0"
+        },
+        {
+          "label": "Training spend",
+          "value": "$40 million (talent and compute)"
+        },
+        {
+          "label": "First product",
+          "value": "Tabular Analysis in CoCounsel Legal"
+        }
+      ],
+      "explainer": {
+        "tagline": "A legal and tax specialist model, trained on Westlaw-grade content, with a small open-weight version anyone can download.",
+        "whatIsIt": "Thomson is Thomson Reuters' first language model built in-house rather than bought from a frontier lab. The company started from an open-source foundation and spent $40 million on talent and compute to specialize it on decades of its own legal, tax, regulatory and news content. A smaller version, Thomson-1.0-Small, is published on Hugging Face with open weights for academic and non-commercial use.",
+        "howItWorks": "Thomson-1.0-Small is a mixture-of-experts model with 35B total parameters and 3B active per token, derived from tri-fair-lab/Snowdon1.1-Small and shipped in BF16 with a 262,144-token context. Training used roughly 1.63 × 10²³ FLOP over 35,207 B200 GPU-hours, and the model card also describes an agentic Deep Research setup meant to cut hallucinations by forcing tool use and citations.",
+        "whyItMatters": "Owning the model means Thomson Reuters controls the inference bill for high-volume document review instead of paying frontier-lab API rates. The open-weight small version also gives legal and AI researchers something they rarely get: a real, downloadable domain model to poke at. Thomson Reuters says it keeps using OpenAI and Anthropic models elsewhere in the platform.",
+        "forWho": "legal and tax technologists, domain-model researchers",
+        "tryIt": "AutoModelForCausalLM.from_pretrained(\"thomsonreuters/Thomson-1.0-Small\", dtype=\"auto\")"
+      },
+      "faq": [
+        {
+          "q": "Can I use Thomson 1.0 Small in a commercial product?",
+          "a": "No. Thomson-1.0-Small is published under the PolyForm Strict 1.0.0 license, which Thomson Reuters describes as being for academic and non-commercial use. The company released it so legal and AI academics could evaluate and validate the model directly, and says it will keep opening it to external parties over the coming weeks and months."
+        },
+        {
+          "q": "How do I download and run Thomson 1.0 Small?",
+          "a": "Thomson-1.0-Small lives at huggingface.co/thomsonreuters/Thomson-1.0-Small and loads through standard tooling. The model card lists Hugging Face Transformers, vLLM, SGLang and TokenSpeed as compatible runtimes, and gives a two-line AutoTokenizer plus AutoModelForCausalLM snippet. Weights are BF16 with 3B parameters active per token, so it is far lighter to serve than its 35B total size suggests."
+        },
+        {
+          "q": "Which Thomson Reuters products actually use the Thomson model?",
+          "a": "Thomson lands first in Tabular Analysis inside CoCounsel Legal, the high-volume document review feature used by law firms and corporate legal departments, arriving in an upcoming release. Thomson Reuters plans to extend it across the legal and tax portfolio, and says it will keep a multi-model strategy that still routes some work to OpenAI and Anthropic models."
+        },
+        {
+          "q": "Is Thomson as good as a general frontier model?",
+          "a": "Thomson Reuters claims performance on par with the latest frontier models across a range of tasks, with particular strength in following complex, multi-part professional instructions. The published model card reports a 82.6 average on tax tasks and 75.2 on legal tasks. The company notes it has trained on less than 10% of its proprietary content so far."
+        }
+      ],
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/thomsonreuters/Thomson-1.0-Small.png",
+        "alt": "Hugging Face model card card for thomsonreuters/Thomson-1.0-Small",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.thomsonreuters.com/en/press-releases/2026/august/thomson-reuters-leverages-its-world-class-data-assets-to-launch-its-own-frontier-model"
+        },
+        {
+          "label": "Model Card",
+          "url": "https://huggingface.co/thomsonreuters/Thomson-1.0-Small"
+        },
+        {
+          "label": "Coverage",
+          "url": "https://siliconangle.com/2026/08/24/thomson-reuters-launches-proprietary-ai-model-for-legal-work/"
+        },
+        {
+          "label": "LawSites Analysis",
+          "url": "https://www.lawnext.com/2026/08/thomson-reuters-launches-thomson-its-own-proprietary-llm-trained-on-westlaw-and-practical-law-content.html"
+        }
+      ],
+      "publishDate": "2026-08-25T04:46:29.869Z"
+    },
+    {
+      "id": "pkalogiros-varkos",
+      "categories": [
+        "showcase"
+      ],
+      "title": "Varkos — a local AI companion that talks while it plays Skyrim with you",
+      "org": "Pantelis Kalogiros",
+      "date": "2026-08-23",
+      "url": "https://pantel.is/projects/ai-gaming-companion/",
+      "summary": "Varkos is a voice-driven Skyrim companion that listens, plans and acts in the game while it talks. Speech-to-text lands in 40-80 ms and a spoken reply can arrive in under 500 ms, all from local models.",
+      "tags": [
+        "showcase",
+        "local-inference",
+        "voice-agents",
+        "speech-to-text",
+        "text-to-speech",
+        "gaming",
+        "skyrim",
+        "apple-silicon",
+        "mlx",
+        "latency"
+      ],
+      "author": {
+        "name": "Pantelis Kalogiros",
+        "handle": "@pkalogiros",
+        "profileUrl": "https://github.com/pkalogiros"
+      },
+      "explainer": {
+        "tagline": "A demon-dog companion that hears you, acts in the world, and answers out loud in under half a second — all on local models.",
+        "whatIsIt": "Varkos is an AI character that plays Skyrim alongside you instead of waiting for commands. It keeps an always-on microphone open, tracks the game world, holds persistent plans, and speaks back in a voice. Pantelis Kalogiros built it to test whether a companion can feel present rather than turn-based, and the whole pipeline runs on local models.",
+        "howItWorks": "Speech reaches Varkos through an optimized Qwen3-ASR 1.7b with a custom streaming harness, and replies come back through PocketTTS-Raven and an optimized Qwen-3-TTS. Between them sits ALE, an Action Latent Encoder that mixes embeddings, small classifiers, explicit rules and classic ML to decide what the character does. The game runs on Windows while audio and inference run on an M4 MacBook with 12 GB or more of GPU memory.",
+        "whyItMatters": "The latency budget is the point: 40-80 ms for voice-to-text, 20-60 ms for audio generation, about 20 ms for action analysis, and 300-600 ms to compose a reply, so a full spoken answer can land under 500 ms in the best case. That is the range where a game companion stops feeling like a chatbot. Kalogiros has already open-sourced PocketTTS-Raven and says the Qwen3-ASR harness is coming.",
+        "forWho": "game developers, voice-agent builders",
+        "tryIt": "https://github.com/pkalogiros/pocket-tts-raven"
+      },
+      "image": {
+        "url": "https://pantelis.s3.us-west-2.amazonaws.com/0/varkos/varkos-share.png",
+        "alt": "Varkos, a demon dog AI companion character in Skyrim",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Project Write-Up",
+          "url": "https://pantel.is/projects/ai-gaming-companion/"
+        },
+        {
+          "label": "PocketTTS-Raven Code",
+          "url": "https://github.com/pkalogiros/pocket-tts-raven"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49413561"
+        }
+      ],
+      "importance": "notable",
+      "publishDate": "2026-08-25T04:46:29.869Z"
+    },
     {
       "id": "apodex-1-1",
       "categories": [

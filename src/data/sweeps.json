@@ -36384,6 +36384,47 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260825t044629z",
+      "timestamp": "2026-08-25T04:46:29.869Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Mistral, Meta, xAI, plus DeepSeek/Z.ai/MiniMax/ByteDance/Baidu), GitHub trending and search, HuggingFace models/datasets/papers, HN front page, coding-agent changelogs (Claude Code, Codex, Cursor, Ollama, vLLM, OpenRouter) and the AI-for-science lane. Added Thomson Reuters' Thomson 1.0 Small open-weight model and the Varkos local voice game companion. Everything else fresh was already in the feed (Gemini 3.7 Flash, WeatherNext, SL2T, Ornith-1.5, Apodex 1.1, Ox Alpha, GPT-5.6 Sol price cut, Hugging Face sale talks) or fell outside the 72h cap. NOTE: yt-rss-scan returned HTTP 404 for all 8 YouTube channels on this runner, so the video lane could not be searched at all this sweep.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "thomson-reuters-thomson-1-0-small",
+          "title": "Thomson 1.0 Small — Thomson Reuters ships its own 35B legal and tax model",
+          "category": "model",
+          "note": "First in-house LLM from Thomson Reuters, announced 2026-08-24, with a real 35B open-weight artifact live on Hugging Face and same-day pickup by SiliconANGLE, Law.com, LawSites, Artificial Lawyer, Legal IT Insider and AIwire."
+        },
+        {
+          "id": "pkalogiros-varkos",
+          "title": "Varkos — a local AI companion that talks while it plays Skyrim with you",
+          "category": "showcase",
+          "note": "347 points on the HN front page; a concrete local-inference latency breakdown plus an already-released TTS repo, not a concept demo."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "showcase",
+        "security",
+        "ecosystem",
+        "video"
+      ]
     }
   ]
 }
