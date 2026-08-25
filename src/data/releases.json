@@ -1,8 +1,235 @@
 {
-  "generatedAt": "2026-08-25T12:45:54.061Z",
+  "generatedAt": "2026-08-25T14:48:42.357Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "apple-m6-m5-ultra",
+      "categories": [
+        "tool"
+      ],
+      "title": "Apple M6 and M5 Ultra — 2nm silicon and 512GB for on-device LLMs",
+      "org": "Apple",
+      "date": "2026-08-25",
+      "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
+      "summary": "Apple's M6 is its first 2nm chip, and the new M5 Ultra bonds four dies over UltraFusion to reach an 80-core GPU with 512GB of unified memory. Apple says a Mac Studio can now run frontier-class LLMs entirely on device.",
+      "tags": [
+        "apple",
+        "m6",
+        "m5-ultra",
+        "apple-silicon",
+        "2nm",
+        "neural-engine",
+        "unified-memory",
+        "on-device-ai",
+        "local-llm",
+        "mac-studio",
+        "mac-mini",
+        "ultrafusion",
+        "inference",
+        "hardware",
+        "ai-accelerator"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Apple"
+        },
+        {
+          "label": "M6",
+          "value": "First 2nm chip; 12-core CPU, 12-core GPU, dual 16-core Neural Engine"
+        },
+        {
+          "label": "M6 memory",
+          "value": "Up to 32GB unified at 170GB/s"
+        },
+        {
+          "label": "M5 Ultra",
+          "value": "Quad-die UltraFusion; up to 36-core CPU, 80-core GPU"
+        },
+        {
+          "label": "M5 Ultra memory",
+          "value": "Up to 512GB unified at 1.2TB/s"
+        },
+        {
+          "label": "Mac mini (M6) price",
+          "value": "From $899"
+        },
+        {
+          "label": "Availability",
+          "value": "Pre-order August 25, 2026; ships September 22"
+        }
+      ],
+      "pricing": {
+        "tiers": [
+          {
+            "plan": "Mac Studio (M5 Max)",
+            "price": "$2,499",
+            "note": "$2,299 education"
+          },
+          {
+            "plan": "Mac Studio (M5 Ultra)",
+            "price": "$5,499",
+            "note": "$5,099 education"
+          }
+        ],
+        "source": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/"
+      },
+      "explainer": {
+        "tagline": "Apple's first 2nm chip and its first quad-die M-series part, both aimed squarely at running big models on your desk.",
+        "whatIsIt": "Apple M6 is the company's first chip built on a 2-nanometer process, pairing a 12-core CPU and 12-core GPU with a dual 16-core Neural Engine. Alongside it, the M5 Ultra is the first M-series part to join four dies into one chip, scaling to a 36-core CPU, an 80-core GPU and 512GB of unified memory. The two land in a new Mac mini and a new Mac Studio.",
+        "howItWorks": "The quad-die trick is UltraFusion, Apple's packaging link, which connects two dual-die M5 Max chips at over 4.4TB/s between dies with six times the connection density of the previous generation. Both chips put Neural Accelerators inside each GPU core and feed them from one pool of unified memory — 170GB/s on M6, 1.2TB/s on M5 Ultra — so weights do not have to be copied between CPU, GPU and Neural Engine.",
+        "whyItMatters": "A 512GB unified memory ceiling is the headline for local inference: Apple says Mac Studio lets users run massive models entirely on device with complete privacy, without counting tokens or watching cloud bills. Apple also reports that four Mac Studio machines clustered together deliver up to 3x faster AI inference than one. For M6, nearly 30 percent more peak GPU compute for AI over M5 mostly shows up as quicker prompt processing on on-device LLMs.",
+        "forWho": "people running local models, ML engineers, Mac developers",
+        "tryIt": "Pre-orders are open now at apple.com; both Macs ship September 22, 2026, with the 512GB configuration following in late October."
+      },
+      "image": {
+        "url": "https://www.apple.com/newsroom/images/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/tile/Apple-M6-and-M5-Ultra-hero-260825-lp.jpg.og.jpg?202608251301",
+        "alt": "Apple M6 and M5 Ultra chips shown side by side",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/"
+        },
+        {
+          "label": "New Mac Studio",
+          "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/"
+        },
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/25/apple-debuts-its-most-powerful-chip-ever-in-m5-ultra-and-m6/"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Can a Mac Studio run large language models locally?",
+          "a": "Apple states that Mac Studio with M5 Ultra lets users run massive models entirely on device with complete privacy, without counting tokens or worrying about rising cloud costs. The 512GB unified memory ceiling is what makes frontier-class model sizes fit. Apple also reports that a cluster of four Mac Studio systems delivers up to 3x faster AI inference than a single machine."
+        },
+        {
+          "q": "How much faster is M6 than M5 for AI work?",
+          "a": "Apple claims M6 delivers nearly 30 percent more peak GPU compute for AI than M5, up to 1.2x faster multithreaded CPU performance, and a dual 16-core Neural Engine with up to 2x the peak compute of previous generations. Apple frames the GPU gain as improving prompt processing speed when running on-device LLMs rather than as a general throughput number."
+        },
+        {
+          "q": "What is UltraFusion and why does M5 Ultra use four dies?",
+          "a": "UltraFusion is Apple's die-to-die packaging link, and M5 Ultra is the first M-series chip to use it in a quad-die arrangement, joining two dual-die M5 Max chips into one part. The connection carries over 4.4TB/s between dies with six times the connection density of the prior generation, which is how M5 Ultra reaches 36 CPU cores and 80 GPU cores."
+        },
+        {
+          "q": "When do the new Macs actually ship?",
+          "a": "Pre-orders for the new Mac mini with M6 and the new Mac Studio with M5 Max or M5 Ultra opened on August 25, 2026, and both machines ship to customers from September 22, 2026. Apple notes one exception: the 512GB unified memory configuration of Mac Studio arrives later, in late October 2026."
+        }
+      ],
+      "publishDate": "2026-08-25T14:48:42.357Z"
+    },
+    {
+      "id": "jd-echowm",
+      "categories": [
+        "paper",
+        "model"
+      ],
+      "title": "EchoWM — a world model you can walk through, with sound and speech",
+      "org": "JD.com",
+      "date": "2026-08-24",
+      "url": "https://echo-team-joy-future-academy-jd.github.io/Echo-1.5-Page/wm",
+      "summary": "EchoWM is an omnimodal world model from JD.com's Joy Future Academy that generates 720p video together with matching environmental sound, music and speech, while a viewer steers the camera through the scene step by step.",
+      "tags": [
+        "world-model",
+        "omnimodal",
+        "video-generation",
+        "audio-generation",
+        "jd-com",
+        "joy-future-academy",
+        "6-dof",
+        "camera-control",
+        "navigation",
+        "long-horizon",
+        "research",
+        "arxiv"
+      ],
+      "importance": "major",
+      "metrics": {
+        "WBench Navigation (avg)": "81.7",
+        "Interaction score": "87.2"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "JD.com Joy Future Academy with academic collaborators"
+        },
+        {
+          "label": "Type",
+          "value": "Omnimodal world model for navigable scenes"
+        },
+        {
+          "label": "Outputs",
+          "value": "720p video, environmental sound, music, speech"
+        },
+        {
+          "label": "Control",
+          "value": "Shared metric-scale relative 6-DoF camera trajectory"
+        },
+        {
+          "label": "Paper",
+          "value": "arXiv 2608.23189, submitted August 24, 2026"
+        },
+        {
+          "label": "Code repo",
+          "value": "jd-opensource/JoyAI-Echo (1,901 stars)"
+        }
+      ],
+      "explainer": {
+        "tagline": "An enterable world model that keeps picture, ambient sound and speech in sync while you navigate the scene.",
+        "whatIsIt": "Walking through a generated scene, rather than watching a fixed clip, is what EchoWM adds. The model responds to continuous navigation input and jointly produces 720p video, environmental sound, music and speech for wherever the camera goes. It handles both first-person scenes, where the camera is the observer, and third-person scenes, where the relationship between camera and character is learned from data instead of hand-built controllers.",
+        "howItWorks": "Interaction in EchoWM is organised around camera intent. Discrete commands and continuous poses are both mapped onto one shared metric-scale relative 6-DoF trajectory, and a dataset-level calibration step keeps motion magnitude consistent across training sources that measure movement differently. Training runs in stages — a progressive schedule to learn audio-visual generation and trajectory control together, followed by autoregressive post-training so the model can keep going over long horizons and multi-turn continuations.",
+        "whyItMatters": "Most generative video gives you a clip you cannot enter, and audio is bolted on afterwards. By treating navigation and synchronized sound as first-class outputs, EchoWM points at interactive media — game-like scenes, simulators, training environments — that a person or an agent can move through. The team reports an 81.7 average on WBench Navigation across 158 cases, with the project page publishing playable-style demos of both camera modes.",
+        "forWho": "world-model and video-generation researchers",
+        "tryIt": "Read the paper at arxiv.org/abs/2608.23189; inference code for the Echo family lives at github.com/jd-opensource/JoyAI-Echo."
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/2033fb3203c074d4a7e8d70279222f4b3be2300eef09fc560f3af9b067b993bb/jd-opensource/JoyAI-Echo",
+        "alt": "GitHub repository card for jd-opensource/JoyAI-Echo",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Project Page",
+          "url": "https://echo-team-joy-future-academy-jd.github.io/Echo-1.5-Page/wm"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.23189"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/jd-opensource/JoyAI-Echo"
+        },
+        {
+          "label": "Model Weights",
+          "url": "https://huggingface.co/jdopensource/JoyAI-Echo"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Can I download the EchoWM weights right now?",
+          "a": "The JoyAI-Echo Hugging Face repository publishes echo-longvideo-release.safetensors, the checkpoint for the JoyAI-Echo 1.5 long-video model, and the GitHub repository links the Echo-WM paper. The project does not state a release date for EchoWM's own checkpoint, so treat the world model as published research with code and demos available rather than as downloadable weights today."
+        },
+        {
+          "q": "What license covers the JoyAI-Echo code and checkpoints?",
+          "a": "JoyAI-Echo is released for academic and research purposes only. The project is built on LTX-2 by Lightricks Ltd and remains subject to the LTX-2 Community License Agreement, with the original copyright notices retained. Commercial deployment is not permitted without approval from Lightricks. Anyone planning product work on top of EchoWM or JoyAI-Echo needs to check that license first."
+        },
+        {
+          "q": "How is EchoWM different from a text-to-video model?",
+          "a": "A text-to-video model renders a fixed clip from a prompt. EchoWM instead accepts continuous navigation while generating, so the scene responds as the camera moves and keeps producing new frames over long horizons and multi-turn continuations. It also generates environmental sound, music and speech in sync with the picture, which typical video generators leave to a separate audio pass."
+        },
+        {
+          "q": "What hardware do the Echo models need?",
+          "a": "The published JoyAI-Echo 1.5 checkpoint is roughly 46GB on its own, and it additionally requires the google/gemma-3-12b-it text encoder, around 24GB more. The Hugging Face repository indicates a requirement in the region of 46-50GB of GPU memory to run inference, which puts the released Echo family firmly in datacenter-GPU territory rather than consumer hardware."
+        }
+      ],
+      "publishDate": "2026-08-25T14:48:42.357Z"
+    },
     {
       "id": "boydkane-inference-engine-rce",
       "categories": [

@@ -36550,6 +36550,45 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260825t144842z",
+      "timestamp": "2026-08-25T14:48:42.357Z",
+      "source": "github-actions-sweep",
+      "summary": "Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, Qwen, DeepSeek, Z.ai, MiniMax), GitHub trending, HuggingFace models/datasets/papers, HN front page, 8 YouTube creator feeds and the AI-for-science lane. Added two: Apple's M6 and M5 Ultra chips (2nm, 512GB unified memory for on-device LLMs, HN front page plus tier-1 coverage) and EchoWM, JD.com's navigable omnimodal world model topping HuggingFace papers. Western lab blogs were quiet; both fresh YouTube videos were already in the feed.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "apple-m6-m5-ultra",
+          "title": "Apple M6 and M5 Ultra — 2nm silicon and 512GB for on-device LLMs",
+          "category": "tool",
+          "note": "Apple's first 2nm chip and first quad-die M-series part, announced today with a 512GB unified-memory ceiling explicitly aimed at running frontier-class LLMs locally; 320 points on HN front page plus TechCrunch, Bloomberg, CNBC and Forbes coverage."
+        },
+        {
+          "id": "jd-echowm",
+          "title": "EchoWM — a world model you can walk through, with sound and speech",
+          "category": "paper",
+          "note": "Top-trending HuggingFace paper (1.88k upvotes) submitted 2026-08-24, with a public project page carrying demos and a 1,901-star jd-opensource repository — clears the paper 2-of-N bar on code plus HF trending."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "paper",
+        "dataset",
+        "video",
+        "article",
+        "benchmark",
+        "algorithm",
+        "ecosystem"
+      ]
     }
   ]
 }
