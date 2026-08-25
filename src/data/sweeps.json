@@ -36667,6 +36667,34 @@
         "security",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260825t203030z",
+      "timestamp": "2026-08-25T20:30:30.309Z",
+      "source": "github-actions-sweep",
+      "summary": "Checked lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Qwen, DeepSeek, Z.ai, MiniMax, Moonshot), GitHub trending (daily + weekly + Shell), HuggingFace models/datasets/papers, Hacker News top 60, all 8 YouTube creator feeds, Simon Willison, Cursor and Claude Code changelogs, and the AI-for-science lane (Nature, STAT News, BCI/neural decoding, FDA clearances, pharma AI, genomics). Nothing qualified: the two fresh YouTube videos are already in the feed, HF trending models and papers (Apodex 1.1, EchoWM, Ornith-1.5, Prime Agent) are all existing items, no lab shipped a model in the last 72h, Qwen3.8-Flash-Next is listed but does not release until Aug 26, and the strongest new repo (laude-institute/headlong, Apache-2.0 agent microharness, announced Aug 24) missed every inclusion signal at 114 HN points and no trending or tier-1 pickup. The 833-point MS Paint AI-watermark reverse-engineering post was published Aug 20, outside the 72h cap.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem",
+        "rumor"
+      ]
     }
   ]
 }
