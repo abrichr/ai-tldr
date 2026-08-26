@@ -1,8 +1,179 @@
 {
-  "generatedAt": "2026-08-26T12:47:30.131Z",
+  "generatedAt": "2026-08-26T14:50:09.519Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "gigaai-gigabrain-0-7",
+      "categories": [
+        "model",
+        "repo",
+        "paper"
+      ],
+      "title": "GigaBrain-0.7 — an open robot brain trained on 37,000 hours of embodied data",
+      "org": "GigaAI",
+      "date": "2026-08-25",
+      "url": "https://github.com/open-gigaai/giga-brain-0",
+      "summary": "GigaBrain-0.7 is an open vision-language-action model for robots, released under Apache-2.0 with weights on Hugging Face. GigaAI pretrained it on more than 37,000 hours of mixed robot data and ships the code in the giga-brain-0 repo.",
+      "tags": [
+        "model",
+        "repo",
+        "paper",
+        "gigaai",
+        "gigabrain",
+        "robotics",
+        "embodied-ai",
+        "vision-language-action",
+        "vla",
+        "world-model",
+        "open-weights",
+        "apache-2-0"
+      ],
+      "importance": "major",
+      "metrics": {
+        "GitHub stars": 2611,
+        "Pretraining data": "37,000+ hours"
+      },
+      "explainer": {
+        "tagline": "GigaBrain-0.7 is an Apache-2.0 vision-language-action model that turns camera views and a spoken instruction into robot movement.",
+        "whatIsIt": "GigaBrain-0.7 adds a three-system design that handles understanding, prediction and action in one model, and it is the first GigaBrain version to ship downloadable weights alongside the code. GigaAI published the model card as GigaBrain-0.7-3.5B-Base on Hugging Face on August 24, 2026 and pushed the matching code into the giga-brain-0 repository on August 25. The earlier GigaBrain-0 was described as a world-model-powered vision-language-action model; 0.7 is the scaled-up follow-up.",
+        "howItWorks": "The three systems split the job: one reads images and language, one predicts what happens next, and one produces the actual motor commands, all inside a single network. Pretraining used more than 37,000 hours of heterogeneous embodied data — robot demonstrations gathered across home and industrial settings. The paper describes a single-stage alignment step that trains multimodal understanding and multi-robot action generation together rather than in separate passes.",
+        "whyItMatters": "Robot teams normally have to collect their own demonstration data before a policy will do anything useful, and that data is slow and expensive to gather. An Apache-2.0 checkpoint pretrained on 37,000 hours lets a lab start from a model that already generalizes across robot bodies and fine-tune from there. GigaAI reports gains in zero-shot behaviour across robot embodiments and in following spoken instructions, tested on the Maker H01 platform among others.",
+        "forWho": "robotics researchers and embodied-AI engineers",
+        "tryIt": "Model: open-gigaai/GigaBrain-0.7-3.5B-Base on Hugging Face"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "GigaAI (open-gigaai)"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        },
+        {
+          "label": "Released weights",
+          "value": "GigaBrain-0.7-3.5B-Base"
+        },
+        {
+          "label": "Pretraining data",
+          "value": "37,000+ hours of embodied data"
+        },
+        {
+          "label": "Architecture",
+          "value": "Three-system: understanding, prediction, action"
+        },
+        {
+          "label": "Paper",
+          "value": "arXiv 2608.15875"
+        },
+        {
+          "label": "Robot platform tested",
+          "value": "Maker H01, plus mainstream embodiments"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is GigaBrain-0.7 free to use commercially?",
+          "a": "Yes. GigaBrain-0.7 ships under the Apache-2.0 license on both the giga-brain-0 GitHub repository and the GigaBrain-0.7-3.5B-Base model card on Hugging Face. Apache-2.0 allows commercial use, modification and redistribution as long as the license and attribution notices are kept, so a company can fine-tune the checkpoint for its own robots without a separate agreement."
+        },
+        {
+          "q": "How is GigaBrain-0.7 different from GigaBrain-0?",
+          "a": "GigaBrain-0 was published as a world-model-powered vision-language-action model. GigaBrain-0.7 restructures that into a three-system architecture covering understanding, prediction and action, scales pretraining to more than 37,000 hours of heterogeneous embodied data, and adds a single-stage alignment method that trains multimodal understanding and multi-robot action generation at the same time."
+        },
+        {
+          "q": "Which robots has GigaBrain-0.7 been tested on?",
+          "a": "GigaAI reports results on the Maker H01 platform and on other mainstream robot embodiments across varied environments. The technical report covers zero-shot behaviour across those bodies, language-conditioned instruction following, and post-training task success rates, which is the evidence offered for the claim that one checkpoint transfers between different robot hardware."
+        },
+        {
+          "q": "Where do I get the GigaBrain-0.7 weights and paper?",
+          "a": "The GigaBrain-0.7 weights sit on Hugging Face as open-gigaai/GigaBrain-0.7-3.5B-Base, the training and inference code is in the open-gigaai/giga-brain-0 repository on GitHub, and the technical report is both a PDF inside that repository and an arXiv preprint, 2608.15875, first submitted on August 16, 2026."
+        }
+      ],
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/open-gigaai/GigaBrain-0.7-3.5B-Base.png",
+        "alt": "Hugging Face model card banner for GigaBrain-0.7-3.5B-Base, GigaAI's vision-language-action model",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/open-gigaai/giga-brain-0"
+        },
+        {
+          "label": "arXiv Paper",
+          "url": "https://arxiv.org/abs/2608.15875"
+        },
+        {
+          "label": "Model Weights",
+          "url": "https://huggingface.co/open-gigaai/GigaBrain-0.7-3.5B-Base"
+        },
+        {
+          "label": "Technical Report",
+          "url": "https://github.com/open-gigaai/giga-brain-0/blob/main/tech_report/GigaBrain-0.7.pdf"
+        }
+      ],
+      "publishDate": "2026-08-26T14:50:09.519Z"
+    },
+    {
+      "id": "two-minute-papers-deepseek-harness-aug26",
+      "categories": [
+        "video"
+      ],
+      "title": "Two Minute Papers — 'DeepSeek's New AI System Shouldn't Be Possible'",
+      "org": "Two Minute Papers",
+      "date": "2026-08-26",
+      "url": "https://www.youtube.com/watch?v=L9mMfAFwbl4",
+      "summary": "Two Minute Papers covers DeepSeek Harness, the MIT-licensed agent framework where every capability is a plugin. The episode description links the Harness page and the Cordis plugin-system paper the framework is built on.",
+      "tags": [
+        "video",
+        "two-minute-papers",
+        "deepseek",
+        "deepseek-harness",
+        "agent-framework",
+        "plugins",
+        "cordis",
+        "open-source",
+        "explainer"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Two Minute Papers walks through DeepSeek Harness, the open agent framework that treats models, tools and sandboxes as swappable plugins.",
+        "whatIsIt": "'DeepSeek's New AI System Shouldn't Be Possible' is the August 26 Two Minute Papers episode about DeepSeek Harness. The description points at two sources: the Harness page on deepseek.com and the Cordis paper repository on GitHub. DeepSeek Harness is already in the feed as a release from August 13, 2026.",
+        "howItWorks": "The episode keeps the channel's short-explainer format and draws on DeepSeek's own documentation. Harness is built on the Cordis plugin system and runs on two stated rules — everything is a plugin, and every run is traceable — so models, tools, skills, sessions, sandboxes, storage, loops, scheduling and the UI can each be swapped out. Session logs record every model interaction for later inspection and replay.",
+        "whyItMatters": "Most agent frameworks make you edit core source code to change how the agent behaves. The plugin-first design in DeepSeek Harness means a team can replace the model or the sandbox without forking the project, and the recorded sessions give a way to see what an agent actually did. Harness is free and open source under the MIT license, and is still in developer preview.",
+        "forWho": "developers evaluating open agent frameworks",
+        "tryIt": "npx @deepseek-ai/dsh web"
+      },
+      "author": {
+        "name": "Two Minute Papers",
+        "profileUrl": "https://www.youtube.com/channel/UCbfYPyITQ-7l4upoX8nvctg"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/L9mMfAFwbl4/hqdefault.jpg",
+        "alt": "Two Minute Papers thumbnail for the episode on DeepSeek Harness",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=L9mMfAFwbl4"
+        },
+        {
+          "label": "DeepSeek Harness",
+          "url": "https://deepseek.com/harness/en/"
+        },
+        {
+          "label": "Cordis Paper",
+          "url": "https://github.com/cordiverse/paper"
+        },
+        {
+          "label": "Two Minute Papers",
+          "url": "https://www.youtube.com/channel/UCbfYPyITQ-7l4upoX8nvctg"
+        }
+      ],
+      "publishDate": "2026-08-26T14:50:09.519Z"
+    },
     {
       "id": "openai-assistants-api-sunset",
       "categories": [
@@ -5129,107 +5300,111 @@
       "categories": [
         "model"
       ],
-      "title": "Ox Alpha — Z.ai claims the 1M-context coding model and promises open weights",
+      "title": "GLM-5.3-Flash — Z.ai opens the weights of the model that was Ox Alpha",
       "org": "Z.ai",
-      "date": "2026-08-20",
-      "url": "https://openrouter.ai/stealth/ox-alpha",
-      "summary": "Z.ai confirmed on August 26 that Ox Alpha is a new model in its GLM line and said the weights would ship that night. Ox Alpha topped OpenRouter's leaderboard with more than double DeepSeek's usage, and is free for its first week.",
+      "date": "2026-08-26",
+      "url": "https://z.ai/blog/glm-5.3-flash",
+      "summary": "GLM-5.3-Flash is the open-weights release of the stealth model that topped OpenRouter as Ox Alpha. Z.ai calls it the first natively multimodal GLM-5 model: 320B total parameters, 18B active, MIT licensed, with a 1M-token context.",
       "tags": [
         "model",
+        "glm-5-3-flash",
         "z-ai",
+        "zhipu",
         "glm",
-        "openrouter",
-        "stealth-model",
+        "ox-alpha",
+        "open-weights",
+        "mit-license",
+        "multimodal",
+        "mixture-of-experts",
+        "sparse-attention",
+        "linear-attention",
+        "long-context",
         "coding",
         "agentic",
-        "long-context",
-        "reasoning",
-        "multimodal",
-        "open-weights",
-        "free-tier"
+        "china"
       ],
       "importance": "major",
       "explainer": {
-        "tagline": "Z.ai has claimed Ox Alpha as a GLM-series model and says the open weights follow the same night.",
-        "whatIsIt": "Ox Alpha appeared on OpenRouter on August 20, 2026 under the provider name \"Stealth\", with no lab attached to it. On August 26 that changed: Z.ai told Bloomberg News that Ox Alpha is a new iteration of its GLM series and that the company would release the weights that night. OpenRouter describes the model as a reasoning model for coding and sustained agent work, taking text, image and video input.",
-        "howItWorks": "Requests go to the model ID stealth/ox-alpha through OpenRouter's normal API, so existing agent code runs unchanged — function calling through the tools and tool_choice parameters, JSON output through response_format without JSON-schema enforcement. OpenRouter states it routes requests to the model and is not its developer, owner, or provider.",
-        "whyItMatters": "An open-weights release turns a one-week free trial into something a team can self-host, which is the difference between testing a 1,048,576-token context window and depending on it. Ox Alpha reached the top spot on OpenRouter's leaderboard with more than double DeepSeek's usage, and Stripe CEO Patrick Collison — whose company is acquiring OpenRouter — called the stealth-mode release \"very impressive\". What the model costs after the free week has not been announced.",
-        "forWho": "developers testing long-context coding agents",
-        "tryIt": "Model ID: stealth/ox-alpha on OpenRouter"
+        "tagline": "The stealth model that topped OpenRouter now has a name, a model card and MIT-licensed weights: GLM-5.3-Flash.",
+        "whatIsIt": "GLM-5.3-Flash is a 320B-parameter mixture-of-experts model that activates only 18B parameters per token, and Z.ai calls it the first natively multimodal model in the GLM-5 series — it reads images as well as text. It is the model that ran on OpenRouter for a week under the anonymous name Ox Alpha, where it reached the top of the usage leaderboard with more than double DeepSeek's traffic. Z.ai published the blog post, the model card and the API documentation on August 26, 2026.",
+        "howItWorks": "A hybrid attention design mixes sparse and linear attention, which is how Z.ai keeps cost down at a 1M-token context. Manifold-Constrained Hyper-Connections are used to improve scaling efficiency, and pretraining ran on a 30T-token multimodal corpus. Native multimodal visual coding lets the model look at an interface or a rendered result and act on what it sees, rather than working from text descriptions of the screen.",
+        "whyItMatters": "MIT-licensed weights mean a team can self-host the same model it was testing for free on OpenRouter, which is the difference between trialling a 1M-token context and building on it. Z.ai says GLM-5.3-Flash beats GLM-5.2 across benchmarks and real workloads at one-tenth the price, and approaches Claude Opus 4.8 on coding and agentic benchmarks. The weights run under SGLang, vLLM, TokenSpeed and KTransformers.",
+        "forWho": "teams running long-context coding and agent workloads",
+        "tryIt": "Model: zai-org/GLM-5.3-Flash on Hugging Face; API model ID glm-5.3-flash"
       },
       "quickFacts": [
         {
           "label": "Maker",
-          "value": "Z.ai (confirmed August 26, 2026)"
+          "value": "Z.ai (Zhipu)"
         },
         {
-          "label": "Model family",
-          "value": "GLM series"
+          "label": "License",
+          "value": "MIT"
         },
         {
-          "label": "Model ID",
-          "value": "stealth/ox-alpha"
+          "label": "Parameters",
+          "value": "320B total, 18B active"
         },
         {
           "label": "Context window",
-          "value": "1,048,576 tokens"
+          "value": "1M tokens"
         },
         {
-          "label": "Max output",
-          "value": "131,072 tokens"
+          "label": "Modalities",
+          "value": "Text and images"
         },
         {
-          "label": "Open weights",
-          "value": "Z.ai said it would release them on August 26, 2026"
+          "label": "Pretraining corpus",
+          "value": "30T multimodal tokens"
         },
         {
-          "label": "Price",
-          "value": "Free for the first week; later pricing not announced"
+          "label": "API model ID",
+          "value": "glm-5.3-flash"
         }
       ],
       "faq": [
         {
-          "q": "Who made Ox Alpha?",
-          "a": "Z.ai. The Chinese lab told Bloomberg News on August 26, 2026 that Ox Alpha is a new iteration of its GLM series, ending a week of guesswork after the model appeared on OpenRouter under an anonymous provider called Stealth. Before that confirmation, OfficeChai reported that a developer's tokenizer comparison had already lined Ox Alpha up with Z.ai's GLM-5.3."
+          "q": "Is GLM-5.3-Flash the same model as Ox Alpha?",
+          "a": "Yes. Ox Alpha was the anonymous name GLM-5.3-Flash ran under on OpenRouter, listed by a provider called Stealth with no lab attached. Z.ai confirmed to Bloomberg News on August 26, 2026 that the model was a new GLM-series release and that the weights would follow, then published GLM-5.3-Flash the same day with a blog post and a Hugging Face model card."
         },
         {
-          "q": "Will Ox Alpha have open weights?",
-          "a": "Yes. Z.ai said on August 26, 2026, answering questions from Bloomberg News, that it would release Ox Alpha's weights that night. Publishing the weights lets developers run the model on their own hardware and build products on top of it, instead of depending on the free listing that OpenRouter is hosting during the trial week."
+          "q": "How does GLM-5.3-Flash compare with GLM-5.3?",
+          "a": "GLM-5.3, released on August 14, 2026, is text-only and reuses the GLM-5.2 base model. GLM-5.3-Flash is a separate 320B mixture-of-experts model that reads images as well as text, activates 18B parameters per token, and is built on a hybrid sparse and linear attention design. Z.ai's documentation gives GLM-5.3-Flash three times the quota of GLM-5.3."
         },
         {
-          "q": "How much does Ox Alpha cost?",
-          "a": "Nothing during its first week. OpenRouter lists Ox Alpha at zero cost for both prompt and completion tokens, and Z.ai has not announced what the model will cost once the free window closes. Treat the current price as a trial rate rather than a standing one, and plan for a paid tier or self-hosting after the weights land."
+          "q": "What hardware or serving stack does GLM-5.3-Flash need?",
+          "a": "Z.ai lists four supported local deployment paths for GLM-5.3-Flash: SGLang, vLLM, TokenSpeed and KTransformers, each with its own cookbook or recipe. Only 18B of the 320B parameters are active per token, so serving cost tracks the active count rather than the full weight size, but the whole checkpoint still has to be held or offloaded somewhere."
         },
         {
-          "q": "How much is Ox Alpha being used compared with DeepSeek?",
-          "a": "Ox Alpha reached the top spot on OpenRouter's leaderboard with more than double DeepSeek's usage on the marketplace, according to Bloomberg News. Patrick Collison, chief executive of Stripe, which is acquiring OpenRouter, called the stealth-mode release \"very impressive\". The code name comes from the Chinese film \"Niu Lai\", or \"Ox Comes\", released earlier in the year."
+          "q": "Can I use GLM-5.3-Flash without downloading the weights?",
+          "a": "Yes. GLM-5.3-Flash is served through the Z.ai API platform under the model ID glm-5.3-flash, documented at docs.z.ai, and it also ran on OpenRouter during its free stealth week as Ox Alpha. Z.ai's API guide describes a points-based quota rather than a flat per-token rate, and it grants three times the quota available for GLM-5.3."
         }
       ],
       "image": {
-        "url": "https://openrouter.ai/stealth/ox-alpha/opengraph-image-1oizug?abd1ffaa6102aa5f",
-        "alt": "OpenRouter model card for Ox Alpha, a stealth reasoning model",
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/zai-org/GLM-5.3-Flash.png",
+        "alt": "Hugging Face model card banner for zai-org/GLM-5.3-Flash",
         "fit": "contain"
       },
       "links": [
         {
-          "label": "Model Page",
+          "label": "Announcement",
+          "url": "https://z.ai/blog/glm-5.3-flash"
+        },
+        {
+          "label": "Model Card",
+          "url": "https://huggingface.co/zai-org/GLM-5.3-Flash"
+        },
+        {
+          "label": "API Docs",
+          "url": "https://docs.z.ai/guides/llm/glm-5.3-flash"
+        },
+        {
+          "label": "GLM-5 Tech Report",
+          "url": "https://arxiv.org/abs/2602.15763"
+        },
+        {
+          "label": "Ox Alpha on OpenRouter",
           "url": "https://openrouter.ai/stealth/ox-alpha"
-        },
-        {
-          "label": "Z.ai Confirmation",
-          "url": "https://theedgemalaysia.com/node/815823"
-        },
-        {
-          "label": "Stealth Provider",
-          "url": "https://openrouter.ai/provider/stealth"
-        },
-        {
-          "label": "HN Discussion",
-          "url": "https://news.ycombinator.com/item?id=49381896"
-        },
-        {
-          "label": "Coverage",
-          "url": "https://officechai.com/ai/stealth-model-ox-alpha-available-for-free-for-a-week-on-openrouter-and-opencode/"
         }
       ],
       "publishDate": "2026-08-21T10:37:36.381Z"

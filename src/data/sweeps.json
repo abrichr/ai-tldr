@@ -36986,6 +36986,52 @@
         "article",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260826t145009z",
+      "timestamp": "2026-08-26T14:50:09.519Z",
+      "source": "github-actions-sweep",
+      "summary": "Two adds: GigaBrain-0.7, GigaAI's Apache-2.0 vision-language-action model (weights + code landed Aug 25, #2 on HF papers, 2.6k stars), and a fresh Two Minute Papers episode on DeepSeek Harness. Z.ai's GLM-5.3-Flash shipped today with MIT weights — it is the model that ran as Ox Alpha, so it was applied as an update to the existing Ox Alpha entry rather than a second card for the same model. Checked Anthropic, OpenAI, DeepMind, Meta, Mistral, Qwen, DeepSeek and Z.ai blogs, GitHub trending, HF models/datasets/papers, HN top 30, 8 YouTube feeds, and the bio/neuro/pharma lane (Nature, neurosciencenews, FDA, BCI and drug-discovery searches) — nothing else inside 72h cleared the bar. Mistral x HUMAIN was dropped as a partnership with no shipped artifact; AWS/DuckDB is not an AI release.",
+      "counts": {
+        "added": 2,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "gigaai-gigabrain-0-7",
+          "title": "GigaBrain-0.7 — an open robot brain trained on 37,000 hours of embodied data",
+          "category": "model",
+          "note": "Open-weights embodied foundation model: Apache-2.0 checkpoint + code released Aug 25, #2 trending on HF papers, 2,611-star repo — clears the paper 2-of-N bar on code plus runnable weights."
+        },
+        {
+          "id": "two-minute-papers-deepseek-harness-aug26",
+          "title": "Two Minute Papers — 'DeepSeek's New AI System Shouldn't Be Possible'",
+          "category": "video",
+          "note": "Fresh creator video (uploaded 2026-08-26, 1h old per RSS scan) breaking down DeepSeek Harness; video items coexist with the release they cover."
+        }
+      ],
+      "updated": [
+        {
+          "id": "openrouter-ox-alpha",
+          "title": "GLM-5.3-Flash — Z.ai opens the weights of the model that was Ox Alpha",
+          "note": "Ox Alpha is now named and shipped: Z.ai published GLM-5.3-Flash with a blog post, an MIT-licensed model card and API docs on 2026-08-26. Retitled and rewritten onto the real release rather than added as a second card for the same model (Hard Rule 3)."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "paper",
+        "video",
+        "dataset",
+        "tool",
+        "benchmark",
+        "algorithm",
+        "ecosystem",
+        "article",
+        "security"
+      ]
     }
   ]
 }
