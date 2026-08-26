@@ -36776,6 +36776,33 @@
         "resource",
         "tutorial"
       ]
+    },
+    {
+      "id": "sweep-20260826t032053z",
+      "timestamp": "2026-08-26T03:20:53.515Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Searched lab blogs (Anthropic, OpenAI, DeepMind, Meta, Mistral, xAI, Cohere, Qwen, DeepSeek, Z.ai), GitHub trending daily+weekly, the releases API for 12 major AI repos, HuggingFace models/datasets/papers, the full HN window above 120 points, r/LocalLLaMA and r/MachineLearning (both 403 from CI), the AI-for-science lane (STAT, Nature, neurosciencenews, Lancet Digital Health, Endpoints), and the 8 YouTube creator feeds. Everything that shipped in the window and cleared the bar is already in the feed: Apple M6/M5 Ultra, OpenAI Jalapeno benchmarks, Thomson Reuters Thomson 1.0 Small, Poolside Laguna S 2.1, IBM Granite 4.2, Claude memory everywhere, the GPT-5.6 Sol price cut and the Two Minute Papers video. Notable near-misses all failed the 72h cap on their earliest verifiable timestamp: the MS Paint invisible-watermark reverse-engineering (840 HN points, but published 2026-08-20), Quantization-Aware Healing / Hypernova-60B (arXiv 2026-08-21), and the three HN-hot AI essays (2026-08-20/21). Mistral x HUMAIN is a partnership with no shipped artifact, and Qwen3.8-Flash-Next is an unpublished ModelScope placeholder (IsPublished=0, zero downloads), so both were dropped as vapour. llama.cpp v0.3.0 and ComfyUI v0.34.0 are real and in-window but are routine 3-4 day point releases with no external signal, so they were left out rather than padded in.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "article",
+        "security",
+        "ecosystem",
+        "tutorial"
+      ]
     }
   ]
 }
