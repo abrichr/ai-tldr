@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T10:41:04.707Z",
+  "generatedAt": "2026-08-26T12:47:30.131Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
@@ -275,54 +275,239 @@
     {
       "id": "qwen-3-8-flash-next",
       "categories": [
-        "rumor",
-        "model"
+        "model",
+        "repo"
       ],
-      "title": "Qwen3.8-Flash-Next — Alibaba puts a countdown on a Qwen4 preview",
+      "title": "Qwen3.8-Flash-Next — open 125B MoE with 6B active previews Qwen4",
       "org": "Qwen",
-      "date": "2026-08-25",
+      "date": "2026-08-26",
       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
-      "summary": "Qwen3.8-Flash-Next is an unreleased Qwen model with an official Hugging Face countdown page dated 26 August 2026, described only as a preview of the Qwen4 architecture. Decrypt reports 125B total parameters with 6B active.",
+      "summary": "Qwen3.8-Flash-Next is an open-weights 125B mixture-of-experts model that activates only 6B parameters per token and previews the Qwen4 architecture. It scores 62.5 on SWE-bench Pro, against 53.4 for Claude-Opus-4.6 (Max).",
       "tags": [
         "qwen",
         "alibaba",
         "qwen4",
+        "open-weights",
         "mixture-of-experts",
-        "rumor",
-        "upcoming-release"
+        "sparse-attention",
+        "gated-deltanet",
+        "coding",
+        "agentic",
+        "multimodal",
+        "long-context",
+        "reasoning"
       ],
-      "importance": "rumor",
+      "importance": "seismic",
       "explainer": {
-        "tagline": "Qwen has a public countdown page for Qwen3.8-Flash-Next, billed only as a preview of the Qwen4 architecture.",
-        "whatIsIt": "Qwen3.8-Flash-Next has an official 'Upcoming release' page on Hugging Face under the Qwen organisation, with an expected release date of 26 August 2026 and a live countdown. The page carries one line of description — 'A Preview of the Qwen4 Architecture' — and lists a single planned artifact. Nearly 2,000 people have signed up to be notified. No weights, model card or benchmark table are published yet.",
-        "howItWorks": "Reported specs put Qwen3.8-Flash-Next at 125B total parameters with 6B active per token in a mixture-of-experts layout, according to Decrypt, which cites a pre-release briefing by Alibaba's Qwen team. Decrypt also says the weights were not live on ModelScope at the time of writing and that no benchmark scores have been published, so the numbers stay single-sourced for now.",
-        "whyItMatters": "A Qwen4 architecture preview is the first look at the design behind Alibaba's next model family, and the current Qwen3.8 line already fills most of the top slots on Hugging Face's trending models list. Confidence is high on the name, framing and date, which come from Qwen's own page; the parameter counts are unconfirmed. Weights landing on Hugging Face or ModelScope would settle it.",
-        "forWho": "local-model users tracking the open Chinese labs"
+        "tagline": "Qwen3.8-Flash-Next ships open weights for the first public preview of the Qwen4 architecture.",
+        "whatIsIt": "The countdown ended and the weights are live: Qwen3.8-Flash-Next is now downloadable from Hugging Face and ModelScope under the qwen-community-1.0 license. The model has 125B total parameters but activates 6B per token, plus 51B of n-gram embedding parameters and a 4B multi-token-prediction head. Qwen ships it as an early look at the Qwen4 architecture so the community can prepare for the full Qwen4 family.",
+        "howItWorks": "The 48 layers mix two attention types: Gated DeltaNet for cheap linear recall and Qwen Sparse Attention, which reads a 2,048-token budget in 512-token blocks instead of the whole sequence. Routing picks 10 of 512 experts plus 1 shared expert per token, which is how Qwen3.8-Flash-Next keeps 125B of weights but 6B of compute. A 20-million-entry bigram and trigram embedding sits at layer 2, and Gated Residual mixes 4 branches per layer.",
+        "whyItMatters": "A 6B-active model that posts 62.5 on SWE-bench Pro moves frontier coding scores onto hardware a small team can actually afford to serve. Qwen3.8-Flash-Next also beats Claude-Opus-4.6 (Max) on SWE-bench Multilingual, 81.0 to 77.5, and reads text, images and video through one API. Day-one recipes exist for vLLM, SGLang and TokenSpeed, so serving it does not wait on framework support.",
+        "forWho": "teams self-hosting coding and agent models",
+        "tryIt": "Model ID: Qwen/Qwen3.8-Flash-Next — SGLang cookbook at docs.sglang.io/cookbook/autoregressive/Qwen/Qwen3.8-Flash-Next"
       },
       "image": {
         "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/Qwen/Qwen3.8-Flash-Next.png",
-        "alt": "Hugging Face card for the upcoming Qwen3.8-Flash-Next release",
+        "alt": "Hugging Face model card for the Qwen3.8-Flash-Next open-weights release",
         "fit": "contain"
       },
       "links": [
         {
-          "label": "Hugging Face",
+          "label": "Announcement",
+          "url": "https://qwen.ai/blog?id=qwen3.8-flash-next"
+        },
+        {
+          "label": "Model Card",
           "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
         },
         {
-          "label": "HN Discussion",
-          "url": "https://news.ycombinator.com/item?id=49432317"
+          "label": "GitHub",
+          "url": "https://github.com/QwenLM/Qwen3.8-Flash-Next"
         },
         {
-          "label": "Decrypt Report",
-          "url": "https://decrypt.co/376530/alibaba-qwen-3-8-flash-next-preview-qwen-4"
+          "label": "Technical Report",
+          "url": "https://github.com/QwenLM/Qwen3.8-Flash-Next/blob/main/tech_report.pdf"
+        },
+        {
+          "label": "License",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/blob/main/LICENSE"
+        },
+        {
+          "label": "SGLang Cookbook",
+          "url": "https://docs.sglang.io/cookbook/autoregressive/Qwen/Qwen3.8-Flash-Next"
         },
         {
           "label": "ModelScope",
           "url": "https://modelscope.cn/models/Qwen/Qwen3.8-Flash-Next"
         }
       ],
-      "publishDate": "2026-08-26T06:49:49.017Z"
+      "publishDate": "2026-08-26T06:49:49.017Z",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Qwen (Alibaba Group)"
+        },
+        {
+          "label": "Parameters",
+          "value": "125B total, 6B active per token"
+        },
+        {
+          "label": "Extra weights",
+          "value": "51B n-gram embedding + 4B MTP"
+        },
+        {
+          "label": "Experts",
+          "value": "512, with 10 routed + 1 shared per token"
+        },
+        {
+          "label": "Context window",
+          "value": "262,144 native, up to 1,000,000"
+        },
+        {
+          "label": "License",
+          "value": "qwen-community-1.0"
+        },
+        {
+          "label": "Availability",
+          "value": "Open weights on Hugging Face and ModelScope"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "SWE-bench Pro",
+          "unit": "%",
+          "max": 100,
+          "source": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+          "results": [
+            {
+              "name": "Qwen3.8-Flash-Next",
+              "score": 62.5,
+              "highlight": true
+            },
+            {
+              "name": "Qwen3.8-27B",
+              "score": 61.7
+            },
+            {
+              "name": "DeepSeek-V4-Flash-0731",
+              "score": 56
+            },
+            {
+              "name": "Qwen3.7-Plus",
+              "score": 55.8
+            },
+            {
+              "name": "Claude-Opus-4.6 (Max)",
+              "score": 53.4
+            }
+          ]
+        },
+        {
+          "name": "DeepSWE 1.1 (agentic coding)",
+          "unit": "%",
+          "max": 100,
+          "source": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+          "results": [
+            {
+              "name": "Qwen3.8-Flash-Next",
+              "score": 58.7,
+              "highlight": true
+            },
+            {
+              "name": "DeepSeek-V4-Flash-0731",
+              "score": 54.4
+            },
+            {
+              "name": "Qwen3.8-27B",
+              "score": 42.2
+            },
+            {
+              "name": "Qwen3.7-Plus",
+              "score": 16.5
+            }
+          ]
+        },
+        {
+          "name": "SWE-bench Multilingual",
+          "unit": "%",
+          "max": 100,
+          "source": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+          "results": [
+            {
+              "name": "Qwen3.8-Flash-Next",
+              "score": 81,
+              "highlight": true
+            },
+            {
+              "name": "Claude-Opus-4.6 (Max)",
+              "score": 77.5
+            },
+            {
+              "name": "Qwen3.7-Plus",
+              "score": 75.8
+            },
+            {
+              "name": "Qwen3.8-27B",
+              "score": 73.8
+            }
+          ]
+        },
+        {
+          "name": "GPQA Diamond",
+          "unit": "%",
+          "max": 100,
+          "source": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+          "results": [
+            {
+              "name": "Qwen3.8-Flash-Next",
+              "score": 91.7,
+              "highlight": true
+            },
+            {
+              "name": "Claude-Opus-4.6 (Max)",
+              "score": 91.3
+            },
+            {
+              "name": "DeepSeek-V4-Flash-0731",
+              "score": 90.8
+            },
+            {
+              "name": "Qwen3.7-Plus",
+              "score": 90.3
+            },
+            {
+              "name": "Qwen3.8-27B",
+              "score": 89.2
+            }
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Qwen3.8-Flash-Next open source?",
+          "a": "Qwen3.8-Flash-Next ships open weights under the qwen-community-1.0 license, published on both Hugging Face and ModelScope in Safetensors format. That is Qwen's own community license rather than Apache-2.0 or MIT, so read the license file before commercial deployment. The GitHub repo QwenLM/Qwen3.8-Flash-Next carries the technical report alongside the weights."
+        },
+        {
+          "q": "How does Qwen3.8-Flash-Next compare to Qwen3.8-27B?",
+          "a": "Qwen3.8-Flash-Next leads its 27B sibling on every published benchmark, and the gap is widest on agentic work: 58.7 versus 42.2 on DeepSWE 1.1, and 81.0 versus 73.8 on SWE-bench Multilingual. On SWE-bench Pro the two are close, 62.5 against 61.7. Flash-Next activates 6B parameters per token, so it is cheaper to run despite holding 125B weights."
+        },
+        {
+          "q": "Can I run Qwen3.8-Flash-Next on my own hardware?",
+          "a": "Yes. Qwen published day-one serving recipes for vLLM, SGLang and TokenSpeed, and the model speaks the OpenAI chat-completions API, so existing client code works by pointing at a local endpoint. Note that all 125B parameters plus the 51B n-gram embedding must fit in memory even though only 6B activate per token. Qwen Cloud offers a managed API for teams that would rather not host."
+        },
+        {
+          "q": "Does Qwen3.8-Flash-Next accept images and video?",
+          "a": "Qwen3.8-Flash-Next takes text, images and video as input through the standard image_url and video_url message parts. Its vision scores include 64.4 pass@3 on ClawEval-MM for multimodal tool use, 84.5 on AndroidWorld for mobile control and 90.6 on MathVision. Computer use is the weak spot: 19.4 on OSWorld 2.0, level with Qwen3.8-27B."
+        },
+        {
+          "q": "What does this tell us about Qwen4?",
+          "a": "Qwen describes Qwen3.8-Flash-Next as a preview of the Qwen4 architecture, released early so developers can prepare for the full Qwen4 family. The architectural bets on show are hybrid Gated DeltaNet plus Qwen Sparse Attention, very sparse routing at 10 of 512 experts, and a 20-million-entry n-gram embedding at layer 2. Qwen has not announced a Qwen4 date."
+        },
+        {
+          "q": "How long a prompt does Qwen3.8-Flash-Next handle?",
+          "a": "Qwen3.8-Flash-Next handles 262,144 tokens natively and stretches to 1,000,000 tokens with RoPE scaling. Qwen Sparse Attention is what makes the long end affordable: it reads a 2,048-token budget in 512-token blocks rather than attending across the whole sequence. On CoWorkBench, a long-horizon office benchmark, it scores 73.9 against 70.7 for Qwen3.8-27B."
+        }
+      ]
     },
     {
       "id": "tencent-wemm-embedding",

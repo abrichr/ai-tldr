@@ -36954,6 +36954,38 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260826t124730z",
+      "timestamp": "2026-08-26T12:47:30.131Z",
+      "source": "github-actions-sweep",
+      "summary": "Qwen3.8-Flash-Next shipped: the countdown page became a real open-weights release, so the existing rumor entry was rewritten as a seismic model launch with the model card's benchmark table, specs and license. No new items qualified — lab blogs (Anthropic, Google DeepMind, Meta, Mistral, Z.ai), GitHub trending, HF models/datasets/papers, HN, Reddit and the 8 YouTube feeds were all covered elsewhere in the feed or below the bar.",
+      "counts": {
+        "added": 0,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [
+        {
+          "id": "qwen-3-8-flash-next",
+          "title": "Qwen3.8-Flash-Next — open 125B MoE with 6B active previews Qwen4",
+          "note": "Countdown ended: the weights actually shipped. Rumor entry rewritten as the real open-weights release, with the model card's benchmark table, specs and license."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "benchmark",
+        "article",
+        "ecosystem"
+      ]
     }
   ]
 }
