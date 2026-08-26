@@ -1,8 +1,263 @@
 {
-  "generatedAt": "2026-08-26T03:20:53.515Z",
+  "generatedAt": "2026-08-26T04:45:01.408Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "tencent-wemm-embedding",
+      "categories": [
+        "model",
+        "repo",
+        "paper"
+      ],
+      "title": "WeMM-Embedding — Tencent's multimodal retrieval models top MMEB-v2",
+      "org": "Tencent",
+      "date": "2026-08-25",
+      "url": "https://github.com/Tencent/WeMM-Embedding",
+      "summary": "WeMM-Embedding is a family of open multimodal embedding models from Tencent's WeChat Vision Team, released in 2B, 4B and 9B sizes under Apache-2.0. The 9B model scores 80.6 average on MMEB-v2.",
+      "tags": [
+        "model",
+        "embeddings",
+        "multimodal",
+        "retrieval",
+        "tencent",
+        "wechat",
+        "open-weights",
+        "apache-2-0",
+        "video-retrieval",
+        "document-retrieval",
+        "matryoshka"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "Tencent open-sourced WeMM-Embedding, three multimodal embedding models that turn text, images, video and documents into one vector space.",
+        "whatIsIt": "WeMM-Embedding adds a universal embedding family that handles text, images, video, visual documents, and mixed inputs where all of those are interleaved in one query. Tencent's WeChat Vision Team released three sizes — 2B, 4B and 9B — with weights and code on GitHub and Hugging Face under Apache-2.0. Every size uses Matryoshka output dimensions, so one model can emit a short vector or a long one.",
+        "howItWorks": "A two-stage training recipe teaches the WeMM-Embedding models to place different media types in a shared vector space, so a text query can retrieve a video clip or a page scan without a separate model per modality. Matryoshka representation learning nests smaller vectors inside larger ones, which lets you truncate an embedding to 64 dimensions and still keep usable accuracy.",
+        "whyItMatters": "Teams building search over mixed content — chat logs, screenshots, slide decks, product video — usually stitch together one embedding model per media type and then fight the mismatch between vector spaces. One Apache-2.0 model covering all of them removes that plumbing, and the 2B version already matches 8B baselines, so the cost of running it is small.",
+        "forWho": "search and RAG engineers",
+        "tryIt": "pip install sentence-transformers, then load tencent/WeMM-Embedding-2B"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "WeChat Vision Team, Tencent"
+        },
+        {
+          "label": "Sizes",
+          "value": "2B, 4B, 9B"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        },
+        {
+          "label": "Inputs",
+          "value": "Text, images, video, visual documents, interleaved"
+        },
+        {
+          "label": "Output dimensions",
+          "value": "Matryoshka, 64 to 4096"
+        },
+        {
+          "label": "Serving",
+          "value": "Transformers, SentenceTransformers, vLLM, SGLang"
+        },
+        {
+          "label": "Weights",
+          "value": "Hugging Face, tencent/WeMM-Embedding-2B / -4B / -9B"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "MMEB-v2 (average, 8B-9B class)",
+          "unit": "%",
+          "max": 100,
+          "results": [
+            {
+              "name": "WeMM-Embedding 9B",
+              "score": 80.6,
+              "highlight": true
+            },
+            {
+              "name": "DME-Medium 9B",
+              "score": 78.4
+            },
+            {
+              "name": "Qwen3-VL-Embedding 8B",
+              "score": 77.8
+            },
+            {
+              "name": "GME 8B",
+              "score": 59.2
+            },
+            {
+              "name": "VLM2Vec 8B",
+              "score": 53.2
+            }
+          ],
+          "source": "https://github.com/Tencent/WeMM-Embedding"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is WeMM-Embedding free to use commercially?",
+          "a": "Yes. Tencent releases the code it wrote for WeMM-Embedding under the Apache License 2.0, which permits commercial use, modification and redistribution. The repository notes that third-party components keep their original licenses, so check those if you reuse the full stack. The model weights for all three sizes are published on Hugging Face under tencent/WeMM-Embedding-2B, -4B and -9B."
+        },
+        {
+          "q": "How does WeMM-Embedding compare to Qwen3-VL-Embedding?",
+          "a": "On the MMEB-v2 average reported in the WeMM-Embedding repository, the 9B model scores 80.6 against 77.8 for Qwen3-VL-Embedding 8B. At the small end the gap is wider: WeMM-Embedding 2B scores 77.9 versus 73.2 for Qwen3-VL-Embedding 2B. The 9B model also leads on the video split, 74.3 against 67.1."
+        },
+        {
+          "q": "Which WeMM-Embedding size should you pick?",
+          "a": "The 2B version is the value pick. WeMM-Embedding 2B posts a 77.9 MMEB-v2 average, which edges past the 77.8 that Qwen3-VL-Embedding scores at 8B, so a quarter of the parameters buys roughly the same quality as last generation's large model. Move up to 4B (79.2) or 9B (80.6) when retrieval accuracy matters more than serving cost."
+        },
+        {
+          "q": "Can WeMM-Embedding output smaller vectors to save storage?",
+          "a": "Yes. Every WeMM-Embedding size is trained with Matryoshka representation learning, so a long vector can be truncated to a shorter one without re-encoding. The 2B model spans 64 to 2048 dimensions, the 4B model 64 to 2560, and the 9B model 64 to 4096. Picking a smaller dimension shrinks your index at a graceful cost in accuracy."
+        }
+      ],
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/tencent/WeMM-Embedding-9B.png",
+        "alt": "Hugging Face model card banner for Tencent WeMM-Embedding-9B",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "GitHub Repo",
+          "url": "https://github.com/Tencent/WeMM-Embedding"
+        },
+        {
+          "label": "Technical Report",
+          "url": "https://arxiv.org/abs/2608.24053"
+        },
+        {
+          "label": "Model (9B)",
+          "url": "https://huggingface.co/tencent/WeMM-Embedding-9B"
+        },
+        {
+          "label": "Model (2B)",
+          "url": "https://huggingface.co/tencent/WeMM-Embedding-2B"
+        },
+        {
+          "label": "Paper Page",
+          "url": "https://huggingface.co/papers/2608.24053"
+        }
+      ],
+      "publishDate": "2026-08-26T04:45:01.408Z"
+    },
+    {
+      "id": "laion-bvd",
+      "categories": [
+        "dataset",
+        "paper"
+      ],
+      "title": "LAION-BVD — 10 million hours of open video for multimodal training",
+      "org": "LAION",
+      "date": "2026-08-25",
+      "url": "https://projects.laion.ai/bvd/",
+      "summary": "LAION-BVD is an open video dataset of 80 million videos totalling 10 million hours, pulled from CommonCrawl. It ships 55M captioned clips, 10M audio clips and 300M image frames for research use.",
+      "tags": [
+        "dataset",
+        "open-data",
+        "video",
+        "multimodal",
+        "laion",
+        "video-text",
+        "audio-text",
+        "pretraining",
+        "commoncrawl",
+        "open-source"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "LAION released BVD, an open video dataset of 80 million videos and 10 million hours, built for multimodal pre-training.",
+        "whatIsIt": "LAION-BVD (Big Video Dataset) opens up video pre-training data at a scale that was previously private. LAION extracted 1.3 billion platform-specific video URLs from CommonCrawl and downloaded 80 million of the videos, totalling 10 million hours. From that pool it publishes ready-to-train subsets: 55 million captioned video clips, 10 million audio clips and 300 million extracted image frames.",
+        "howItWorks": "Content-aware scene detection splits each source video in LAION-BVD into scene-level clips, and captions for both the video and the audio are then generated synthetically rather than scraped. Each clip record carries its caption, language and the timestamps marking where it sits in the source video. The frame subset takes scene-changing frames, whose visual distribution the paper reports as different from standard web image corpora.",
+        "whyItMatters": "Open video-language research has been stuck training on small public sets while frontier video models learn from data nobody outside the lab can inspect. LAION-BVD gives academics a corpus in the same size class, plus the URL lists needed to audit or re-derive it. LAION also published ViCLIP-L/14 trained on the 55M clip subset as an MIT-licensed baseline to build against.",
+        "forWho": "multimodal and video-language researchers",
+        "tryIt": "Request access at https://projects.laion.ai/bvd/download.html"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "LAION e.V."
+        },
+        {
+          "label": "Scale",
+          "value": "80M videos, 10M hours"
+        },
+        {
+          "label": "Source",
+          "value": "1.3B video URLs from CommonCrawl"
+        },
+        {
+          "label": "Subsets",
+          "value": "55M video clips, 10M audio clips, 300M frames"
+        },
+        {
+          "label": "Allowed use",
+          "value": "Academic and non-commercial research only"
+        },
+        {
+          "label": "Access",
+          "value": "URL lists open on Hugging Face; media subsets gated"
+        },
+        {
+          "label": "Baseline model",
+          "value": "ViCLIP-L/14, 0.4B params, MIT"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Can LAION-BVD be used for commercial projects?",
+          "a": "No. LAION states that BVD is released exclusively for research purposes and not for commercial use, and the gated Hugging Face subsets restrict access to academic and non-commercial research. LAION also asks users to respect the rights and copyright of the original content creators and to follow the source platforms' terms of use."
+        },
+        {
+          "q": "Do you need approval to download LAION-BVD?",
+          "a": "It depends on the subset. The URL-and-metadata releases such as laion/BVD-URLs and laion/BVD-V-55M-URLs are open on Hugging Face. The subsets that carry actual media, including BVD-V-55M and the full 80M-video BVD-RAW collection, are gated: you submit a central access request form and wait for manual approval, which LAION says usually takes several days."
+        },
+        {
+          "q": "How much storage does LAION-BVD need?",
+          "a": "A lot. The BVD-V-55M clip subset alone is 41.1 TB of files on Hugging Face, and that is only the 55 million scene-level clips cut from 2.4 million source videos. The audio and image-frame subsets are separate downloads on top of that. Teams that cannot host it can start from the open URL lists and fetch only the slice they need."
+        },
+        {
+          "q": "How well does a model trained on LAION-BVD perform?",
+          "a": "LAION published ViCLIP-L-14-BVD-V-55M-s50M-b32K, a 0.4B-parameter video-language model trained on 50M samples from the clip subset, as a reference point. It reports 63.3% top-1 on Kinetics-400, 80.5% on UCF-101 and 60.4% on HMDB51, plus 42.7% recall@1 on MSR-VTT video retrieval. The model is MIT-licensed."
+        }
+      ],
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/datasets/laion/BVD-V-55M.png",
+        "alt": "Hugging Face dataset card banner for LAION BVD-V-55M video clips",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Project Page",
+          "url": "https://projects.laion.ai/bvd/"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.24845"
+        },
+        {
+          "label": "Downloads",
+          "url": "https://projects.laion.ai/bvd/download.html"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/LAION-AI/BVD"
+        },
+        {
+          "label": "Dataset (55M Clips)",
+          "url": "https://huggingface.co/datasets/laion/BVD-V-55M"
+        },
+        {
+          "label": "Baseline Model",
+          "url": "https://huggingface.co/laion/ViCLIP-L-14-BVD-V-55M-s50M-b32K"
+        }
+      ],
+      "publishDate": "2026-08-26T04:45:01.408Z"
+    },
     {
       "id": "anthropic-claude-memory-everywhere",
       "categories": [
