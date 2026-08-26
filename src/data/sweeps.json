@@ -36728,6 +36728,54 @@
         "algorithm",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260826t010704z",
+      "timestamp": "2026-08-26T01:07:04.336Z",
+      "source": "github-actions-sweep",
+      "summary": "Three Anthropic ships from August 25 land: unified Claude memory across chat and Cowork, Claude Code 2.1.246 (gateway credential scoping plus an Auto mode permissions tab), and a $5M grant program for open-source AI wellbeing evaluations. Everything else on the board was already in the feed or out of the 72h window.",
+      "counts": {
+        "added": 3,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "anthropic-claude-memory-everywhere",
+          "title": "Claude memory works everywhere — one memory across chat and Cowork",
+          "category": "tool",
+          "note": "Anthropic blog post dated 2026-08-25 plus coverage from The Register, TechCrunch, Engadget and 9to5Mac — clears the 2-of-N tier-1 bar and is a real user-facing product ship, not in the feed."
+        },
+        {
+          "id": "anthropic-claude-code-2-1-246",
+          "title": "Claude Code 2.1.246 — gateway API keys are no longer sent to Anthropic",
+          "category": "tool",
+          "note": "Released 2026-08-25 22:31 UTC, about 2.5h after the last sweep committed, so it was missed; contains a credential-scoping security fix and new permission tooling. Distinct version from the 2.1.243 item already in the feed."
+        },
+        {
+          "id": "anthropic-wellbeing-eval-grants",
+          "title": "Anthropic wellbeing grants — $5M for open evaluations of AI's effect on people",
+          "category": "resource",
+          "note": "Top-lab blog post within 48h with a released guidance document and a hard September 21 deadline; matches the feed's existing grant-program precedent (DeepMind multi-agent safety grant, Anthropic rare disease grants)."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "paper",
+        "algorithm",
+        "dataset",
+        "benchmark",
+        "video",
+        "article",
+        "security",
+        "ecosystem",
+        "resource",
+        "tutorial"
+      ]
     }
   ]
 }

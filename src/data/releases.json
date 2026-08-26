@@ -1,8 +1,257 @@
 {
-  "generatedAt": "2026-08-25T22:29:15.722Z",
+  "generatedAt": "2026-08-26T01:07:04.336Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "anthropic-claude-memory-everywhere",
+      "categories": [
+        "tool"
+      ],
+      "title": "Claude memory works everywhere — one memory across chat and Cowork",
+      "org": "Anthropic",
+      "date": "2026-08-25",
+      "url": "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it",
+      "summary": "Claude's memory now spans chat and Claude Cowork, so context saved in one shows up in the other. Claude writes topics during a conversation instead of summarizing it afterward, and every topic is a file you can read, edit, or delete.",
+      "tags": [
+        "anthropic",
+        "claude",
+        "claude-cowork",
+        "memory",
+        "personalization",
+        "privacy",
+        "assistant",
+        "release"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Anthropic"
+        },
+        {
+          "label": "What's new",
+          "value": "One memory shared by Claude chat and Cowork"
+        },
+        {
+          "label": "Where it works",
+          "value": "Web, desktop, and mobile"
+        },
+        {
+          "label": "On by default",
+          "value": "Free, Pro, and Max plans"
+        },
+        {
+          "label": "Team and Enterprise",
+          "value": "Off unless an admin turns it on"
+        },
+        {
+          "label": "Sensitive topics",
+          "value": "Excluded by default, opt-in setting"
+        },
+        {
+          "label": "Never stored",
+          "value": "SSNs, government IDs, criminal history, immigration status"
+        }
+      ],
+      "explainer": {
+        "tagline": "Claude and Claude Cowork now draw on the same memory, and every saved topic is a file you can open and change.",
+        "whatIsIt": "Claude's memory now works across chat and Claude Cowork rather than staying inside each one. A cloud task running in Cowork can use what you told Claude in chat, and anything Cowork learns comes back to chat. Memory is on by default on the Free, Pro, and Max plans, across web, desktop, and mobile.",
+        "howItWorks": "Topics are written during the conversation instead of being summarized once it ends. Each topic Claude keeps is stored as a file, and the full list sits under Topics in Memory settings, where you can read it, correct it, or delete it. Fixing one file carries forward: correct an old company name once and every conversation after that uses the new one.",
+        "whyItMatters": "Re-explaining your project, your stack, or your writing style in every new session is the tax people pay for chat assistants, and sharing one memory between chat and Cowork removes it. The editable topic list also answers the usual objection to memory features. You can see exactly what was kept about you and change it, instead of trusting a summary you never get to read.",
+        "forWho": "Claude and Cowork users",
+        "tryIt": "Open Settings > Memory in Claude to see the Topics list."
+      },
+      "faq": [
+        {
+          "q": "Which Claude plans have memory turned on by default?",
+          "a": "Memory is on by default for Claude Free, Pro, and Max users on web, desktop, and mobile. Team and Enterprise organizations work the other way around: an administrator decides whether memory is available, and individual users then switch it on themselves. TechCrunch notes that iOS and Android users need the latest app version for the update."
+        },
+        {
+          "q": "Does Claude store health or religious information in memory?",
+          "a": "Claude leaves sensitive topics out of memory by default, including health, beliefs, race, ethnicity, religion, politics, and gender identity. Turning on the sensitive-topics setting allows them, and Claude then shows a notice each time it saves something in that group. Social security numbers, government IDs, criminal history, and immigration status are never stored either way."
+        },
+        {
+          "q": "Can I keep Claude chat and Cowork memories apart?",
+          "a": "Not inside one account. The Register reports there is no way to split Claude chat memory from Cowork memory, and lists the workarounds: separate accounts, pausing memory, incognito chats, or deleting individual topics by hand. The same report says Claude Code keeps its own memory and was not folded into this change."
+        },
+        {
+          "q": "How do I remove something Claude remembered about me?",
+          "a": "Everything Claude has kept appears as a file under Topics in Settings > Memory, where each entry can be read, edited, or deleted. Because a topic is one file used by both chat and Cowork, a single correction applies in both places, so an outdated employer or project name only has to be fixed once."
+        }
+      ],
+      "image": {
+        "url": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a8dcb60a9e2ed84590a8b9e_og_claudes-memory-works-everywhere-and-you-decide-whats-in-it.jpg",
+        "alt": "Anthropic announcement graphic for Claude memory across chat and Cowork",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it"
+        },
+        {
+          "label": "Release Notes",
+          "url": "https://support.claude.com/en/articles/12138966-release-notes"
+        },
+        {
+          "label": "The Register",
+          "url": "https://www.theregister.com/ai-and-ml/2026/08/25/claude-and-cowork-now-share-what-they-know-about-you/5292412"
+        },
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat/"
+        }
+      ],
+      "publishDate": "2026-08-26T01:07:04.336Z"
+    },
+    {
+      "id": "anthropic-claude-code-2-1-246",
+      "categories": [
+        "tool",
+        "repo"
+      ],
+      "title": "Claude Code 2.1.246 — gateway API keys are no longer sent to Anthropic",
+      "org": "Anthropic",
+      "date": "2026-08-25",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246",
+      "summary": "Claude Code 2.1.246 stops telemetry and metrics requests to Anthropic from carrying the API key set for a third-party gateway, so a credential now only goes to its own host. The release also adds an Auto mode tab to /permissions.",
+      "tags": [
+        "claude-code",
+        "anthropic",
+        "coding-agent",
+        "cli",
+        "security",
+        "permissions",
+        "telemetry",
+        "developer-tools",
+        "release"
+      ],
+      "importance": "major",
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Anthropic"
+        },
+        {
+          "label": "Version",
+          "value": "2.1.246"
+        },
+        {
+          "label": "Released",
+          "value": "August 25, 2026"
+        },
+        {
+          "label": "Credential fix",
+          "value": "A key is only sent to its own host"
+        },
+        {
+          "label": "New in /permissions",
+          "value": "Auto mode tab for classifier rules"
+        },
+        {
+          "label": "New startup warning",
+          "value": "Bash allow rules with a wildcard before the subcommand"
+        }
+      ],
+      "explainer": {
+        "tagline": "A security-heavy Claude Code release: credentials stay on their own host, and auto mode's rules finally get an editor.",
+        "whatIsIt": "Claude Code 2.1.246 fixes a credential-scoping bug. Telemetry and metrics requests sent to Anthropic were carrying the API key configured for a third-party gateway through ANTHROPIC_BASE_URL; a credential is now only sent to its own host. The same release adds an Auto mode tab to /permissions, where auto mode's classifier rules can be viewed and edited.",
+        "howItWorks": "Two permission changes work together. The new tab exposes the classifier rules auto mode uses to decide what it may run on its own, and a startup warning now flags Bash allow rules that put a wildcard before the subcommand, such as Bash(git * main), because those also match options inserted before the subcommand and so permit more than they appear to. Bash permission checks now also always ask for approval on malformed commands that end in a dangling && or ||.",
+        "whyItMatters": "Teams routing Claude Code through a company LLM gateway were handing that gateway's key to a second host on every telemetry call, so the fix lands hardest on platform teams running the agent behind a proxy. The permission work targets a quieter failure: an allow rule that reads narrow but is not. Very large sessions also stop hitting false denials, because the auto mode safety-check deadline now scales with prompt size.",
+        "forWho": "developers and platform teams running Claude Code",
+        "tryIt": "Run /permissions in Claude Code and open the Auto mode tab."
+      },
+      "faq": [
+        {
+          "q": "Who was affected by the credential bug fixed in Claude Code 2.1.246?",
+          "a": "The bug affected anyone pointing ANTHROPIC_BASE_URL at a third-party gateway. Telemetry and metrics requests going to Anthropic carried the API key configured for that gateway rather than leaving it with the gateway. Claude Code 2.1.246 scopes each credential to its own host, so the key travels only to the endpoint it belongs to."
+        },
+        {
+          "q": "What does the new Auto mode tab in /permissions do?",
+          "a": "The Auto mode tab added in Claude Code 2.1.246 shows the classifier rules auto mode consults when it decides which tool calls to approve on its own, and it lets you edit them. Those rules were not viewable from inside a session before this release. The tab sits alongside the existing /permissions views."
+        },
+        {
+          "q": "Why does Claude Code warn about a rule like Bash(git * main)?",
+          "a": "A Bash allow rule with a wildcard before the subcommand also matches options inserted before that subcommand, so Bash(git * main) permits more commands than its author intended. Claude Code 2.1.246 prints a startup warning whenever it finds one. The same release makes malformed commands ending in a dangling && or || always require approval."
+        },
+        {
+          "q": "What install problems does Claude Code 2.1.246 fix?",
+          "a": "Three of them. The curl install script at claude.ai/install.sh no longer fails with a \"Raw mode is not supported\" error for some Team and Enterprise users with server-managed settings. The claude plugin install command now reports an error instead of exiting silently when known_marketplaces.json is empty or corrupted. And plugin installs no longer fail when plugin.json carries a UTF-8 byte-order mark."
+        }
+      ],
+      "image": {
+        "url": "https://opengraph.githubassets.com/6eb7cb669db472da0568049c5dd0bcdeca3cfd5c69e67f620ce2dbd387d1b796/anthropics/claude-code/releases/tag/v2.1.246",
+        "alt": "Claude Code v2.1.246 release page on GitHub",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Release Notes",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246"
+        },
+        {
+          "label": "Full Changelog",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+        },
+        {
+          "label": "Repository",
+          "url": "https://github.com/anthropics/claude-code"
+        },
+        {
+          "label": "Settings Docs",
+          "url": "https://code.claude.com/docs/en/settings"
+        }
+      ],
+      "publishDate": "2026-08-26T01:07:04.336Z"
+    },
+    {
+      "id": "anthropic-wellbeing-eval-grants",
+      "categories": [
+        "resource",
+        "ecosystem"
+      ],
+      "title": "Anthropic wellbeing grants — $5M for open evaluations of AI's effect on people",
+      "org": "Anthropic",
+      "date": "2026-08-25",
+      "url": "https://www.anthropic.com/news/wellbeing-research-grants",
+      "summary": "Anthropic is putting $5 million into outside research on how AI models affect user wellbeing. Grantees get funding, model access, and technical support, and publish their evaluations as open source. Applications close September 21.",
+      "tags": [
+        "anthropic",
+        "ai-safety",
+        "evaluation",
+        "benchmarks",
+        "research-grant",
+        "open-source",
+        "wellbeing",
+        "healthcare"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Anthropic will fund outside teams to build open-source evaluations that measure how AI models affect the people using them.",
+        "whatIsIt": "Anthropic's wellbeing research grants put $5 million behind independent evaluations of how AI models affect user wellbeing. Clinicians, psychologists, methodologists, and other subject-matter experts can apply. Applications close on September 21, and teams picked to send a full proposal hear back on October 5.",
+        "howItWorks": "Selected teams receive direct funding, access to Anthropic's models, and technical support, and their work is published as open source so any developer can run it. A guidance document from Anthropic's Safeguards team, released with the announcement, sets out what qualifies: an evaluation should state plainly what it measures, involve clinical and subject-matter experts in its design and validation, and test for both precautions and harms.",
+        "whyItMatters": "Wellbeing is one of the hardest things to measure about a chat assistant, and public benchmarks mostly skip it in favor of reasoning, code, and factual recall. Paying for open-source wellbeing evaluations gives every lab, not only Anthropic, something concrete to test against. The guidance pushes in a useful direction too, asking for multi-turn conversations validated against real experts rather than one-shot prompts.",
+        "forWho": "clinicians, psychologists, and evaluation researchers",
+        "tryIt": "Applications close September 21 through the form linked from Anthropic's announcement."
+      },
+      "image": {
+        "url": "https://www.anthropic.com/api/opengraph-illustration?name=Hand%20HeadFlower&backgroundColor=heather",
+        "alt": "Anthropic illustration for its AI wellbeing research grant program",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://www.anthropic.com/news/wellbeing-research-grants"
+        },
+        {
+          "label": "Evaluation Guidance",
+          "url": "https://www-cdn.anthropic.com/files/4zrzovbb/website/5ecb637cb206057cb93cf4a9e72e843fda5e9892.pdf"
+        }
+      ],
+      "publishDate": "2026-08-26T01:07:04.336Z"
+    },
     {
       "id": "ibm-granite-4-2",
       "categories": [
