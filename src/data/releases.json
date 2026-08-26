@@ -1,8 +1,160 @@
 {
-  "generatedAt": "2026-08-26T08:46:54.845Z",
+  "generatedAt": "2026-08-26T10:41:04.707Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "openai-assistants-api-sunset",
+      "categories": [
+        "ecosystem",
+        "tool"
+      ],
+      "title": "OpenAI Assistants API shuts down — the beta ends one year after notice",
+      "org": "OpenAI",
+      "date": "2026-08-26",
+      "url": "https://developers.openai.com/api/docs/assistants/migration",
+      "summary": "OpenAI removes the Assistants API on August 26, 2026, one year after telling developers it would. The replacement is the Responses API paired with the Conversations API, and there is no automated tool to move existing Threads across.",
+      "tags": [
+        "openai",
+        "assistants-api",
+        "responses-api",
+        "conversations-api",
+        "deprecation",
+        "api",
+        "migration",
+        "agents",
+        "developer-tools"
+      ],
+      "importance": "major",
+      "explainer": {
+        "tagline": "OpenAI's Assistants API reaches its sunset date today, and the Responses API plus the Conversations API take over.",
+        "whatIsIt": "The Assistants API is removed from OpenAI's platform on August 26, 2026, exactly one year after the deprecation notice went up. OpenAI deprecated the beta once the Responses API reached feature parity, including code interpreter and persistent conversations. By OpenAI's own account, the Responses API had already overtaken Chat Completions in token activity when the notice was posted.",
+        "howItWorks": "Migration is a rename of four object types plus a rewrite of the call flow. Assistants become Prompts, Threads become Conversations, Runs become Responses, and Run steps become Items. In client code that means openai.beta.threads.create() gives way to openai.conversations.create(), and openai.beta.threads.runs.create() gives way to openai.responses.create(). Prompts are built from existing assistants in the dashboard.",
+        "whyItMatters": "Production code still calling the Assistants API stops working once the removal lands, and the stored history does not follow it. OpenAI states plainly that it will not provide an automated tool for migrating Threads to Conversations, and its guide recommends putting new user threads on conversations while moving older ones only as needed — so the cleanup is manual and open-ended.",
+        "forWho": "developers running OpenAI agent apps",
+        "tryIt": "openai.conversations.create() plus openai.responses.create() replace the threads-and-runs pair"
+      },
+      "quickFacts": [
+        {
+          "label": "Removed API",
+          "value": "Assistants API (beta)"
+        },
+        {
+          "label": "Announced",
+          "value": "August 26, 2025"
+        },
+        {
+          "label": "Shutdown",
+          "value": "August 26, 2026"
+        },
+        {
+          "label": "Replacement",
+          "value": "Responses API + Conversations API"
+        },
+        {
+          "label": "Object mapping",
+          "value": "Assistants→Prompts, Threads→Conversations, Runs→Responses, Run steps→Items"
+        },
+        {
+          "label": "Thread migration",
+          "value": "No automated tool provided"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What happens to my existing Threads after the Assistants API shuts down?",
+          "a": "OpenAI does not move them for you. The migration guide says outright that OpenAI will not provide an automated tool for migrating Threads to Conversations, and recommends putting new user threads onto conversations while migrating older ones only as necessary. Any conversation history you want to keep has to be exported and recreated by hand."
+        },
+        {
+          "q": "Is there an extension to the Assistants API deadline?",
+          "a": "None has been offered. OpenAI announced the Assistants API beta deprecation on August 26, 2025 with a sunset exactly one year later, on August 26, 2026, and the announcement post mentions no extension and no provision for data export. The deprecations page lists the same shutdown date with the Responses API and Conversations API as the replacement."
+        },
+        {
+          "q": "How does the Responses API differ from the Assistants API?",
+          "a": "The Responses API drops the threads-and-runs machinery for a direct input-and-output model: you send input items and get output items back. OpenAI says it deprecated the Assistants API only after the Responses API reached feature parity, and describes the newer API as simpler, more flexible, and faster."
+        },
+        {
+          "q": "Which capabilities did OpenAI move into the Responses API?",
+          "a": "Code interpreter and persistent conversations carried over from the Assistants API, and the Responses API adds deep research, MCP, and computer use on top. Those additions are part of why OpenAI treats the Responses API as a full replacement rather than a parallel option, and why the Assistants beta was retired rather than kept running."
+        }
+      ],
+      "image": {
+        "url": "https://developers.openai.com/og/api/docs/assistants/migration.png",
+        "alt": "OpenAI developer docs page for the Assistants API migration guide",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Migration Guide",
+          "url": "https://developers.openai.com/api/docs/assistants/migration"
+        },
+        {
+          "label": "Deprecations",
+          "url": "https://developers.openai.com/api/docs/deprecations"
+        },
+        {
+          "label": "Announcement",
+          "url": "https://community.openai.com/t/assistants-api-beta-deprecation-august-26-2026-sunset/1354666"
+        }
+      ],
+      "publishDate": "2026-08-26T10:41:04.707Z"
+    },
+    {
+      "id": "wes-roth-openai-jalapeno-aug26",
+      "categories": [
+        "video"
+      ],
+      "title": "Wes Roth — 'OpenAI BROKE the Industry Overnight' on the Jalapeño report",
+      "org": "Wes Roth",
+      "date": "2026-08-26",
+      "url": "https://www.youtube.com/watch?v=Im2c-7jvKz8",
+      "summary": "Wes Roth's August 26 episode lists one source in its description: the SemiAnalysis report on OpenAI's Jalapeño inference chip, which argues the chip beats Nvidia Blackwell on throughput per megawatt.",
+      "tags": [
+        "video",
+        "wes-roth",
+        "openai",
+        "jalapeno",
+        "semianalysis",
+        "inference",
+        "ai-chips",
+        "nvidia",
+        "blackwell",
+        "hardware",
+        "explainer"
+      ],
+      "importance": "notable",
+      "explainer": {
+        "tagline": "Wes Roth's August 26 episode points at the SemiAnalysis report that puts OpenAI's first custom inference chip ahead of Nvidia Blackwell.",
+        "whatIsIt": "'OpenAI BROKE the Industry Overnight....' went up on the Wes Roth channel on August 26, 2026, and its description names a single source: the SemiAnalysis report 'OpenAI Jalapeño: Better Than Nvidia Blackwell', published August 25. Jalapeño is OpenAI's first custom inference chip.",
+        "howItWorks": "The SemiAnalysis report behind the episode is an efficiency analysis of a first-generation ASIC. It says Jalapeño leads every other chip on throughput per megawatt without the speculative decoding rivals rely on, reaching over 700 tokens per second per user on complex models and roughly 1,400 on some. The B0 stepping adds about 25% performance per watt over the earlier A0 silicon, HBM4 supplies 15.4TB/s of bandwidth per package, and a dual-rack system draws around 160kW.",
+        "whyItMatters": "Those numbers are the argument that a lab can build its own inference silicon and beat the incumbent on power, which is what decides serving cost at scale. The report also states its own caveats: the performance data came from OpenAI with little independent verification, and the tests ran at 8k-token context rather than the longer production workloads that stress infrastructure differently.",
+        "forWho": "people following AI inference hardware"
+      },
+      "author": {
+        "name": "Wes Roth",
+        "profileUrl": "https://www.youtube.com/channel/UCqcbQf6yw5KzRoDDcZ_wBSw"
+      },
+      "image": {
+        "url": "https://i.ytimg.com/vi/Im2c-7jvKz8/hqdefault.jpg",
+        "alt": "Wes Roth thumbnail for the episode on OpenAI's Jalapeno inference chip",
+        "fit": "cover"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Im2c-7jvKz8"
+        },
+        {
+          "label": "SemiAnalysis Report",
+          "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia"
+        },
+        {
+          "label": "Wes Roth",
+          "url": "https://www.youtube.com/channel/UCqcbQf6yw5KzRoDDcZ_wBSw"
+        }
+      ],
+      "publishDate": "2026-08-26T10:41:04.707Z"
+    },
     {
       "id": "perplexity-portable-computer",
       "categories": [
@@ -4792,13 +4944,15 @@
       "categories": [
         "model"
       ],
-      "title": "Ox Alpha — an anonymous 1M-context coding model, free on OpenRouter",
-      "org": "OpenRouter",
+      "title": "Ox Alpha — Z.ai claims the 1M-context coding model and promises open weights",
+      "org": "Z.ai",
       "date": "2026-08-20",
       "url": "https://openrouter.ai/stealth/ox-alpha",
-      "summary": "Ox Alpha is a reasoning model that appeared on OpenRouter under the provider name Stealth, with no lab claiming it. It has a 1,048,576-token context window, takes text, images and video, and costs nothing during the test window.",
+      "summary": "Z.ai confirmed on August 26 that Ox Alpha is a new model in its GLM line and said the weights would ship that night. Ox Alpha topped OpenRouter's leaderboard with more than double DeepSeek's usage, and is free for its first week.",
       "tags": [
         "model",
+        "z-ai",
+        "glm",
         "openrouter",
         "stealth-model",
         "coding",
@@ -4806,21 +4960,26 @@
         "long-context",
         "reasoning",
         "multimodal",
+        "open-weights",
         "free-tier"
       ],
       "importance": "major",
       "explainer": {
-        "tagline": "A free reasoning model with a 1M-token context window, live on OpenRouter with no maker attached.",
-        "whatIsIt": "Ox Alpha appeared on OpenRouter on August 20, 2026 under the provider name \"Stealth\" — no company attached and no lab claiming it. OpenRouter describes it as a reasoning model designed for coding, sustained agentic work, and production workloads, suited to long-horizon software engineering and workflows that combine text with visual context. It accepts text, images and video, and returns text.",
-        "howItWorks": "Requests go to the model ID stealth/ox-alpha through OpenRouter's normal API. OpenRouter states it routes requests to the model and is not its developer, owner, or provider. Function calling works through the tools and tool_choice parameters, and JSON output through response_format without JSON-schema enforcement, so existing agent code runs unchanged.",
-        "whyItMatters": "A 1,048,576-token context window and a 131,072-token maximum output, at zero cost, make long-running coding jobs cheap to test — the kind of workload that normally runs up a bill fast. The trade-off is trust: the provider keeps prompts and completions, and nobody outside knows which lab is on the other end. OfficeChai reports that a developer's tokenizer comparison lined Ox Alpha's tokens up almost exactly with GLM-5.3, but writes that nobody involved has confirmed anything.",
+        "tagline": "Z.ai has claimed Ox Alpha as a GLM-series model and says the open weights follow the same night.",
+        "whatIsIt": "Ox Alpha appeared on OpenRouter on August 20, 2026 under the provider name \"Stealth\", with no lab attached to it. On August 26 that changed: Z.ai told Bloomberg News that Ox Alpha is a new iteration of its GLM series and that the company would release the weights that night. OpenRouter describes the model as a reasoning model for coding and sustained agent work, taking text, image and video input.",
+        "howItWorks": "Requests go to the model ID stealth/ox-alpha through OpenRouter's normal API, so existing agent code runs unchanged — function calling through the tools and tool_choice parameters, JSON output through response_format without JSON-schema enforcement. OpenRouter states it routes requests to the model and is not its developer, owner, or provider.",
+        "whyItMatters": "An open-weights release turns a one-week free trial into something a team can self-host, which is the difference between testing a 1,048,576-token context window and depending on it. Ox Alpha reached the top spot on OpenRouter's leaderboard with more than double DeepSeek's usage, and Stripe CEO Patrick Collison — whose company is acquiring OpenRouter — called the stealth-mode release \"very impressive\". What the model costs after the free week has not been announced.",
         "forWho": "developers testing long-context coding agents",
         "tryIt": "Model ID: stealth/ox-alpha on OpenRouter"
       },
       "quickFacts": [
         {
           "label": "Maker",
-          "value": "Unknown — listed under the \"Stealth\" provider"
+          "value": "Z.ai (confirmed August 26, 2026)"
+        },
+        {
+          "label": "Model family",
+          "value": "GLM series"
         },
         {
           "label": "Model ID",
@@ -4835,34 +4994,30 @@
           "value": "131,072 tokens"
         },
         {
-          "label": "Input types",
-          "value": "Text, image and video"
+          "label": "Open weights",
+          "value": "Z.ai said it would release them on August 26, 2026"
         },
         {
           "label": "Price",
-          "value": "Free (zero per prompt and completion token)"
-        },
-        {
-          "label": "Data policy",
-          "value": "Prompts and completions kept by the provider, not used for training"
+          "value": "Free for the first week; later pricing not announced"
         }
       ],
       "faq": [
         {
           "q": "Who made Ox Alpha?",
-          "a": "Nobody has said. Ox Alpha is listed on OpenRouter under an anonymous third-party provider called Stealth, and OpenRouter states plainly that it routes requests to the model and is not its developer, owner, or provider. OfficeChai reports that a tokenizer comparison lines Ox Alpha up with GLM-5.3 from Z.ai, and names Xiaomi's MiMo team as the other suspect, but no lab has confirmed it."
+          "a": "Z.ai. The Chinese lab told Bloomberg News on August 26, 2026 that Ox Alpha is a new iteration of its GLM series, ending a week of guesswork after the model appeared on OpenRouter under an anonymous provider called Stealth. Before that confirmation, OfficeChai reported that a developer's tokenizer comparison had already lined Ox Alpha up with Z.ai's GLM-5.3."
+        },
+        {
+          "q": "Will Ox Alpha have open weights?",
+          "a": "Yes. Z.ai said on August 26, 2026, answering questions from Bloomberg News, that it would release Ox Alpha's weights that night. Publishing the weights lets developers run the model on their own hardware and build products on top of it, instead of depending on the free listing that OpenRouter is hosting during the trial week."
         },
         {
           "q": "How much does Ox Alpha cost?",
-          "a": "Nothing right now. OpenRouter lists Ox Alpha at zero cost for both prompt and completion tokens. OfficeChai reports the model is free for a week through OpenRouter and OpenCode. Anonymous models on OpenRouter are normally free while they are being tested, so treat the price as temporary rather than a standing rate."
+          "a": "Nothing during its first week. OpenRouter lists Ox Alpha at zero cost for both prompt and completion tokens, and Z.ai has not announced what the model will cost once the free window closes. Treat the current price as a trial rate rather than a standing one, and plan for a paid tier or self-hosting after the weights land."
         },
         {
-          "q": "Does Ox Alpha train on the prompts I send it?",
-          "a": "No, according to OpenRouter's data policy for the model. The Ox Alpha page states that prompts and completions are retained by the provider and are not used for training, with all other use governed by the Stealth Model Terms. Retention still means an unnamed party holds your text, so keep sensitive code out of it."
-        },
-        {
-          "q": "Where can I use Ox Alpha?",
-          "a": "Ox Alpha is reachable through the OpenRouter API using the model ID stealth/ox-alpha, which means any tool that already speaks to OpenRouter can point at it. OfficeChai also reports it is available directly inside OpenCode for terminal coding. The listing supports tool calling and JSON responses, so agent harnesses need no special handling."
+          "q": "How much is Ox Alpha being used compared with DeepSeek?",
+          "a": "Ox Alpha reached the top spot on OpenRouter's leaderboard with more than double DeepSeek's usage on the marketplace, according to Bloomberg News. Patrick Collison, chief executive of Stripe, which is acquiring OpenRouter, called the stealth-mode release \"very impressive\". The code name comes from the Chinese film \"Niu Lai\", or \"Ox Comes\", released earlier in the year."
         }
       ],
       "image": {
@@ -4874,6 +5029,10 @@
         {
           "label": "Model Page",
           "url": "https://openrouter.ai/stealth/ox-alpha"
+        },
+        {
+          "label": "Z.ai Confirmation",
+          "url": "https://theedgemalaysia.com/node/815823"
         },
         {
           "label": "Stealth Provider",

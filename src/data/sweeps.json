@@ -36909,6 +36909,51 @@
         "security",
         "ecosystem"
       ]
+    },
+    {
+      "id": "sweep-20260826t104104z",
+      "timestamp": "2026-08-26T10:41:04.707Z",
+      "source": "github-actions-sweep",
+      "summary": "Two adds and one correction. OpenAI's Assistants API reaches its one-year sunset today and is replaced by the Responses plus Conversations APIs, and Wes Roth posted a fresh episode on the SemiAnalysis Jalapeño report. Z.ai confirmed to Bloomberg that Ox Alpha is a GLM-series model with weights shipping tonight, so the existing entry's 'maker unknown' framing was patched.",
+      "counts": {
+        "added": 2,
+        "updated": 1,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "openai-assistants-api-sunset",
+          "title": "OpenAI Assistants API shuts down — the beta ends one year after notice",
+          "category": "ecosystem",
+          "note": "A deprecation that breaks downstream users today — the concrete developer action is migrating off /v1/assistants and /v1/threads to the Responses and Conversations APIs, with no automated Thread migration."
+        },
+        {
+          "id": "wes-roth-openai-jalapeno-aug26",
+          "title": "Wes Roth — 'OpenAI BROKE the Industry Overnight' on the Jalapeño report",
+          "category": "video",
+          "note": "Fresh video (1h old) from a listed creator, confirmed by yt-rss-scan; its description cites the SemiAnalysis Jalapeño report as its source. Per the video exception, it is not a semantic dupe of openai-jalapeno-first-results."
+        }
+      ],
+      "updated": [
+        {
+          "id": "openrouter-ox-alpha",
+          "title": "Ox Alpha — Z.ai claims the 1M-context coding model and promises open weights",
+          "note": "Z.ai told Bloomberg News on 2026-08-26 that Ox Alpha is a new GLM-series model and that it would release the weights that night. The existing entry described the maker as unknown, and its FAQ said 'Nobody has said' — both are now wrong. Patched title, org, summary, tags, explainer, quickFacts, faq and links."
+        }
+      ],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "algorithm",
+        "dataset",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
