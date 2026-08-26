@@ -36843,6 +36843,45 @@
         "article",
         "security"
       ]
+    },
+    {
+      "id": "sweep-20260826t064949z",
+      "timestamp": "2026-08-26T06:49:49.017Z",
+      "source": "github-actions-sweep",
+      "summary": "Two adds: Perplexity's Portable Computer (full agent runtime local on NVIDIA DGX Spark / RTX, launched 25 Aug with NVIDIA) and a rumor entry for Qwen3.8-Flash-Next, which has an official Hugging Face countdown page for a Qwen4 architecture preview. Lab blogs, GitHub trending, HuggingFace models/datasets/papers, HN, 8 YouTube feeds and the AI-for-science lane were all checked; everything else fresh was already in the feed or older than 72h.",
+      "counts": {
+        "added": 2,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [
+        {
+          "id": "perplexity-portable-computer",
+          "title": "Portable Computer — Perplexity's agent runs fully on your own GPU",
+          "category": "tool",
+          "note": "First-party launch with NVIDIA on 25 Aug, covered by The Register, VentureBeat and Tom's Guide, with the PPLX 27B checkpoint published on Hugging Face — a real shipped artifact, not an announcement."
+        },
+        {
+          "id": "qwen-3-8-flash-next",
+          "title": "Qwen3.8-Flash-Next — Alibaba puts a countdown on a Qwen4 preview",
+          "category": "rumor",
+          "note": "Official Qwen 'Upcoming release' page on Hugging Face with a 26 Aug countdown plus a 300+ point HN thread; filed as rumor because no weights, model card or benchmarks exist yet and the parameter counts are single-sourced to Decrypt."
+        }
+      ],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "tool",
+        "repo",
+        "video",
+        "dataset",
+        "paper",
+        "algorithm",
+        "article",
+        "ecosystem",
+        "rumor"
+      ]
     }
   ]
 }

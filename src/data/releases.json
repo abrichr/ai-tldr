@@ -1,8 +1,177 @@
 {
-  "generatedAt": "2026-08-26T04:45:01.408Z",
+  "generatedAt": "2026-08-26T06:49:49.017Z",
   "promptVersion": "5.3.0",
   "source": "github-actions-sweep",
   "items": [
+    {
+      "id": "perplexity-portable-computer",
+      "categories": [
+        "tool",
+        "model"
+      ],
+      "title": "Portable Computer — Perplexity's agent runs fully on your own GPU",
+      "org": "Perplexity",
+      "date": "2026-08-25",
+      "url": "https://www.theregister.com/ai-and-ml/2026/08/26/now-perplexity-is-trying-to-get-into-the-local-ai-action/5292449",
+      "summary": "Perplexity Portable Computer runs its whole agent stack — orchestrator, subagents and harness — on hardware you own. Local work uses no billing credits, and the agent asks permission before sending any step to a cloud model.",
+      "tags": [
+        "perplexity",
+        "agents",
+        "local-inference",
+        "on-device",
+        "nvidia",
+        "dgx-spark",
+        "qwen",
+        "privacy",
+        "speculative-decoding"
+      ],
+      "importance": "major",
+      "metrics": {
+        "Local Knowledge Work Bench": "82.6%",
+        "BrowseComp": "66.7%"
+      },
+      "quickFacts": [
+        {
+          "label": "Maker",
+          "value": "Perplexity, with NVIDIA"
+        },
+        {
+          "label": "Local models",
+          "value": "Qwen3.8-27B or PPLX 27B"
+        },
+        {
+          "label": "Hardware",
+          "value": "NVIDIA DGX Spark, or an RTX GPU with 24GB+ VRAM"
+        },
+        {
+          "label": "Operating system",
+          "value": "Linux at launch; Windows in September 2026"
+        },
+        {
+          "label": "Plans",
+          "value": "Pro, Max, Enterprise Pro, Enterprise Max"
+        },
+        {
+          "label": "Billing",
+          "value": "Local work uses no credits"
+        },
+        {
+          "label": "Coming next",
+          "value": "NVIDIA Nemotron 3.5 Lightning"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What does Perplexity Portable Computer cost?",
+          "a": "Portable Computer is included with an active Perplexity Pro, Max, Enterprise Pro or Enterprise Max subscription. Work that finishes on your own machine consumes no billing credits, because local inference has no per-token API fee. You supply the hardware, so the running cost is your own electricity and the NVIDIA GPU you already own."
+        },
+        {
+          "q": "What hardware do you need to run Portable Computer?",
+          "a": "Portable Computer needs an NVIDIA GPU with at least 24GB of VRAM, which is roughly a GeForce RTX 3090 or newer. It runs on the desktop-sized NVIDIA DGX Spark workstation, built on the Grace Blackwell GB10 platform with 128GB of unified memory, and on other Linux machines running DGX OS or Ubuntu on ARM or x64."
+        },
+        {
+          "q": "Does Portable Computer send my data to the cloud?",
+          "a": "Portable Computer starts every task on the device and never escalates silently. When a step needs a stronger model, it runs a PII classifier over the outgoing context and shows exactly what would leave the machine before asking permission. The remote model returns guidance only — it never gets access to your local files or tools."
+        },
+        {
+          "q": "Can I run Portable Computer on Windows?",
+          "a": "Not yet. Portable Computer launched on Linux only, and Perplexity says Windows support arrives in September 2026. Until then the supported setups are NVIDIA DGX Spark with DGX OS, or an Ubuntu machine on ARM or x64 with a qualifying NVIDIA GPU."
+        },
+        {
+          "q": "What is PPLX 27B?",
+          "a": "PPLX 27B is Perplexity's own post-trained build of Qwen3.8-27B, published on Hugging Face. The checkpoint went through RFT and SDPO post-training, was quantized to NVFP4, and ships with draft tensors baked in for DFlash2 speculative decoding, so it serves faster on DGX Spark and GB10 hardware."
+        }
+      ],
+      "explainer": {
+        "tagline": "Perplexity's full agent runtime now runs on a DGX Spark or a 24GB RTX GPU, with no cloud dependency.",
+        "whatIsIt": "Portable Computer moves the entire Perplexity Computer runtime — the orchestrator LLM, the subagent LLM and the agent harness — onto hardware you own. Perplexity launched it with NVIDIA on 25 August 2026 for Pro, Max, Enterprise Pro and Enterprise Max subscribers. The first build is Linux-only and needs an NVIDIA GPU with 24GB of VRAM or more.",
+        "howItWorks": "Every task starts on the device, running either Qwen3.8-27B or PPLX 27B, Perplexity's post-trained NVFP4 build of that model with DFlash2 speculative decoding. When a step needs a stronger model, a PII classifier scans the outgoing context, the app shows exactly what would leave the machine, and nothing is sent until you agree. The cloud model replies with guidance only and never touches local files or tools.",
+        "whyItMatters": "Running the agent locally removes the per-token API bill and keeps private context off remote clusters, which is the blocker for teams that cannot ship documents to a cloud endpoint. Perplexity reports 82.6% accuracy on its 53-task Local Knowledge Work Bench and 66.7% on BrowseComp with the 27B model, so the local setup is not a toy fallback.",
+        "forWho": "privacy-sensitive teams and DGX Spark or RTX owners",
+        "tryIt": "https://huggingface.co/perplexity-ai/pplx-computer-qwen-3-8-27b-dflash2-20260824"
+      },
+      "image": {
+        "url": "https://image.theregister.com/261759.jpg?imageId=261759&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+        "alt": "Illustration for The Register's report on Perplexity's local-first Portable Computer agent",
+        "fit": "cover",
+        "credit": "The Register"
+      },
+      "links": [
+        {
+          "label": "The Register",
+          "url": "https://www.theregister.com/ai-and-ml/2026/08/26/now-perplexity-is-trying-to-get-into-the-local-ai-action/5292449"
+        },
+        {
+          "label": "Perplexity Post",
+          "url": "https://x.com/perplexity_ai/status/2092268362386780270"
+        },
+        {
+          "label": "PPLX 27B Weights",
+          "url": "https://huggingface.co/perplexity-ai/pplx-computer-qwen-3-8-27b-dflash2-20260824"
+        },
+        {
+          "label": "NVIDIA DGX Spark",
+          "url": "https://www.nvidia.com/en-us/products/workstations/dgx-spark/"
+        },
+        {
+          "label": "Tom's Guide",
+          "url": "https://www.tomsguide.com/ai/perplexitys-new-local-first-ai-runs-on-your-pc-and-asks-before-using-the-cloud"
+        }
+      ],
+      "publishDate": "2026-08-26T06:49:49.017Z"
+    },
+    {
+      "id": "qwen-3-8-flash-next",
+      "categories": [
+        "rumor",
+        "model"
+      ],
+      "title": "Qwen3.8-Flash-Next — Alibaba puts a countdown on a Qwen4 preview",
+      "org": "Qwen",
+      "date": "2026-08-25",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+      "summary": "Qwen3.8-Flash-Next is an unreleased Qwen model with an official Hugging Face countdown page dated 26 August 2026, described only as a preview of the Qwen4 architecture. Decrypt reports 125B total parameters with 6B active.",
+      "tags": [
+        "qwen",
+        "alibaba",
+        "qwen4",
+        "mixture-of-experts",
+        "rumor",
+        "upcoming-release"
+      ],
+      "importance": "rumor",
+      "explainer": {
+        "tagline": "Qwen has a public countdown page for Qwen3.8-Flash-Next, billed only as a preview of the Qwen4 architecture.",
+        "whatIsIt": "Qwen3.8-Flash-Next has an official 'Upcoming release' page on Hugging Face under the Qwen organisation, with an expected release date of 26 August 2026 and a live countdown. The page carries one line of description — 'A Preview of the Qwen4 Architecture' — and lists a single planned artifact. Nearly 2,000 people have signed up to be notified. No weights, model card or benchmark table are published yet.",
+        "howItWorks": "Reported specs put Qwen3.8-Flash-Next at 125B total parameters with 6B active per token in a mixture-of-experts layout, according to Decrypt, which cites a pre-release briefing by Alibaba's Qwen team. Decrypt also says the weights were not live on ModelScope at the time of writing and that no benchmark scores have been published, so the numbers stay single-sourced for now.",
+        "whyItMatters": "A Qwen4 architecture preview is the first look at the design behind Alibaba's next model family, and the current Qwen3.8 line already fills most of the top slots on Hugging Face's trending models list. Confidence is high on the name, framing and date, which come from Qwen's own page; the parameter counts are unconfirmed. Weights landing on Hugging Face or ModelScope would settle it.",
+        "forWho": "local-model users tracking the open Chinese labs"
+      },
+      "image": {
+        "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/Qwen/Qwen3.8-Flash-Next.png",
+        "alt": "Hugging Face card for the upcoming Qwen3.8-Flash-Next release",
+        "fit": "contain"
+      },
+      "links": [
+        {
+          "label": "Hugging Face",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
+        },
+        {
+          "label": "HN Discussion",
+          "url": "https://news.ycombinator.com/item?id=49432317"
+        },
+        {
+          "label": "Decrypt Report",
+          "url": "https://decrypt.co/376530/alibaba-qwen-3-8-flash-next-preview-qwen-4"
+        },
+        {
+          "label": "ModelScope",
+          "url": "https://modelscope.cn/models/Qwen/Qwen3.8-Flash-Next"
+        }
+      ],
+      "publishDate": "2026-08-26T06:49:49.017Z"
+    },
     {
       "id": "tencent-wemm-embedding",
       "categories": [
