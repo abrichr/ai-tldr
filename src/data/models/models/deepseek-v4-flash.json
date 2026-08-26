@@ -211,7 +211,7 @@
     "output": "$0.66 off-peak · $1.32 peak",
     "cachedInput": "$0.007 off-peak · $0.014 peak",
     "unit": "/ 1M tokens",
-    "note": "Input prices are cache-miss. DeepSeek bills V4 by time of day from 16:00 UTC on 16 August 2026: peak is 01:00–04:00 and 06:00–10:00 UTC, all other hours are off-peak, and off-peak is half the peak rate. Before that change V4-Flash was a flat $0.14 cache-miss input / $0.0028 cache-hit input / $0.28 output per 1M tokens.",
+    "note": "Input prices are cache-miss. DeepSeek bills V4 by time of day from 16:00 UTC on 16 August 2026: peak is 01:00–04:00 and 06:00–10:00 UTC, Monday to Friday, all other hours are off-peak, and off-peak is half the peak rate. Before that change V4-Flash was a flat $0.14 cache-miss input / $0.0028 cache-hit input / $0.28 output per 1M tokens.",
     "source": "https://api-docs.deepseek.com/quick_start/pricing"
   },
   "apis": [

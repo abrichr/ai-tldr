@@ -5001,6 +5001,70 @@
           ]
         }
       ]
+    },
+    {
+      "id": "ibm",
+      "title": "IBM",
+      "blurb": "IBM publishes the Granite family of enterprise-oriented open models under the Apache 2.0 license, with weights distributed through Hugging Face, Ollama and GitHub. Granite is aimed at business workloads — reasoning, code generation, tool calling and agentic workflows — at sizes small enough to run on-premises or at the edge.",
+      "homepage": "https://www.ibm.com/granite",
+      "logo": "/models-logos/ibm.svg",
+      "lines": [
+        {
+          "id": "granite",
+          "title": "Granite (open-weight)",
+          "blurb": "IBM's Apache-2.0 language models for enterprise use, published as downloadable weights in small dense sizes rather than as an API-only product.",
+          "versions": [
+            {
+              "name": "Granite 4.2 30B",
+              "slug": "granite-4-2-30b",
+              "blurb": "Released 25 August 2026: the largest of IBM's first dense reasoning Granite models, a 30B decoder-only model with a switchable thinking mode, trained with agentic reinforcement learning on software-engineering, terminal and search tasks.",
+              "tags": [
+                "open-weights",
+                "reasoning",
+                "agentic",
+                "coding",
+                "long-context"
+              ],
+              "contextWindow": "128K",
+              "license": "Apache-2.0",
+              "date": "2026-08-25",
+              "current": true,
+              "rich": true
+            },
+            {
+              "name": "Granite 4.2 8B",
+              "slug": "granite-4-2-8b",
+              "blurb": "Released 25 August 2026: the mid-size Granite 4.2 reasoning model, an 8B dense decoder-only model with a switchable thinking mode and the same agentic reinforcement-learning recipe as the 30B.",
+              "tags": [
+                "open-weights",
+                "reasoning",
+                "agentic",
+                "coding",
+                "long-context"
+              ],
+              "contextWindow": "128K",
+              "license": "Apache-2.0",
+              "date": "2026-08-25",
+              "rich": true
+            },
+            {
+              "name": "Granite 4.2 3B",
+              "slug": "granite-4-2-3b",
+              "blurb": "Released 25 August 2026: the smallest Granite 4.2 reasoning model, a 3B dense decoder-only model with a switchable thinking mode, sized for on-premises and edge deployment.",
+              "tags": [
+                "open-weights",
+                "reasoning",
+                "on-device",
+                "long-context"
+              ],
+              "contextWindow": "128K",
+              "license": "Apache-2.0",
+              "date": "2026-08-25",
+              "rich": true
+            }
+          ]
+        }
+      ]
     }
   ]
 }

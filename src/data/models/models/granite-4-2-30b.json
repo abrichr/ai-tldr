@@ -1,0 +1,265 @@
+{
+  "slug": "granite-4-2-30b",
+  "name": "Granite 4.2 30B",
+  "maker": "ibm",
+  "makerTitle": "IBM",
+  "line": "granite",
+  "lineTitle": "Granite (open-weight)",
+  "tagline": "Largest member of IBM's Granite 4.2 family, released 25 August 2026: a 30B dense decoder-only reasoning model with a switchable thinking mode, published under Apache 2.0.",
+  "seoTitle": "Granite 4.2 30B: IBM's Apache-2.0 Reasoning Model",
+  "metaDescription": "Granite 4.2 30B is IBM's Apache-2.0 dense reasoning model, released 25 Aug 2026 with a switchable thinking mode, 128K context and 57.0 on SWE-bench Verified.",
+  "releaseDate": "2026-08-25",
+  "status": "Generally available — open weights on Hugging Face",
+  "license": "Apache-2.0",
+  "openWeights": true,
+  "modalities": [
+    "Text"
+  ],
+  "contextWindow": "128K (long-context extension to 512K)",
+  "parameters": "30B (dense)",
+  "architecture": "Dense decoder-only transformer — 64 layers, Grouped Query Attention (32 heads, 8 KV heads), RoPE, SwiGLU MLP, RMSNorm, bfloat16",
+  "tags": [
+    "open-weights",
+    "reasoning",
+    "agentic",
+    "coding",
+    "long-context"
+  ],
+  "overview": [
+    "Granite 4.2 30B is the largest of the three models IBM published on 25 August 2026 as its first family of dense, decoder-only reasoning language models. Where earlier Granite releases were instruction-tuned chat models, every Granite 4.2 model ships with an explicit thinking mode: the model emits chain-of-thought inside <think>…</think> tags before answering, and callers can switch that reasoning off, or run it at low effort, to trade depth for latency. The weights are on Hugging Face under the Apache 2.0 license, with builds also distributed through Ollama and GitHub.",
+    "The training recipe starts with pre-training from scratch on roughly 15 trillion tokens across a five-phase schedule that extends the context window, followed by supervised fine-tuning on about 7.2 million samples of chain-of-thought, reasoning and agentic-trajectory data. Post-training is a multi-stage GRPO reinforcement-learning pipeline; the 8B and 30B models additionally go through agentic RL inside real software-engineering, terminal and web-search environments, which is the step the 3B model skips. Context is 128K tokens natively with a documented long-context extension to 512K, and the model supports native OpenAI-compatible tool calling across twelve languages including English, German, Spanish, French, Japanese, Portuguese, Arabic, Czech, Italian, Korean, Dutch and Chinese.",
+    "On IBM's published evaluations the 30B leads its two smaller siblings across the board: 89.17 on AIME25, 66.41 on GPQA, 75.77 on LiveCodeBench v6, 57.00 on SWE-bench Verified, 29.24 on Terminal-Bench 2.1, 77.60 on MMLU-Pro and 81.38 on RULER at 128K. It runs under Transformers, vLLM or SGLang, and IBM publishes FP8, NVFP4, MXFP4 and GGUF quantizations alongside the bf16 weights."
+  ],
+  "strengths": [
+    "Apache 2.0 weights — no licence restrictions on commercial use, fine-tuning or self-hosting",
+    "Switchable thinking mode: full chain-of-thought, low-effort reasoning, or direct answers from one checkpoint",
+    "Agentic reinforcement learning inside real software-engineering, terminal and search environments",
+    "Strongest long-context scores in the family — RULER 89.96 at 64K and 81.38 at 128K",
+    "Native OpenAI-compatible tool calling and 12-language support",
+    "FP8, NVFP4, MXFP4 and GGUF builds published alongside the bfloat16 weights"
+  ],
+  "useCases": [
+    "Self-hosted coding and terminal agents that need permissively-licensed weights",
+    "Enterprise deployments where data cannot leave on-premises or private-cloud infrastructure",
+    "Long-document analysis and retrieval workloads using the 128K native context",
+    "Fine-tuning an Apache-2.0 reasoning base on domain-specific tool use"
+  ],
+  "links": [
+    {
+      "label": "Granite-4.2-30B model card (Hugging Face)",
+      "url": "https://huggingface.co/ibm-granite/granite-4.2-30b",
+      "kind": "model-card"
+    },
+    {
+      "label": "Granite 4.2 brings native reasoning to enterprise agents (IBM Research)",
+      "url": "https://research.ibm.com/blog/introducing-granite-4-2",
+      "kind": "announcement"
+    },
+    {
+      "label": "Granite 4.2 LLMs: How They're Built (IBM Granite on Hugging Face)",
+      "url": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+      "kind": "paper"
+    },
+    {
+      "label": "IBM Granite",
+      "url": "https://www.ibm.com/granite",
+      "kind": "official"
+    },
+    {
+      "label": "IBM Granite on Hugging Face",
+      "url": "https://huggingface.co/ibm-granite",
+      "kind": "official"
+    }
+  ],
+  "benchmarks": [
+    {
+      "name": "AIME25",
+      "score": 89.17,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+    },
+    {
+      "name": "HMMT Feb25",
+      "score": 89.17,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+    },
+    {
+      "name": "RULER 64K",
+      "score": 89.96,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+    },
+    {
+      "name": "RULER 128K",
+      "score": 81.38,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+    },
+    {
+      "name": "MMLU-Pro",
+      "score": 77.6,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+    },
+    {
+      "name": "LiveCodeBench v6",
+      "score": 75.77,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+    },
+    {
+      "name": "Arena-Hard-V2",
+      "score": 67.93,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+    },
+    {
+      "name": "GPQA",
+      "score": 66.41,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+    },
+    {
+      "name": "τ³-bench",
+      "score": 62,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+    },
+    {
+      "name": "BFCL v4",
+      "score": 61.39,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+    },
+    {
+      "name": "SWE-bench Verified",
+      "score": 57,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+    },
+    {
+      "name": "IFBench (prompt)",
+      "score": 77.17,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+    },
+    {
+      "name": "ProfBench",
+      "score": 42.9,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+    },
+    {
+      "name": "SWE-bench Multilingual",
+      "score": 41.89,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+    },
+    {
+      "name": "BirdBench",
+      "score": 41.85,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+    },
+    {
+      "name": "SciCode",
+      "score": 38.76,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+    },
+    {
+      "name": "SWE-bench Pro",
+      "score": 33.29,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+    },
+    {
+      "name": "Terminal-Bench 2.1",
+      "score": 29.24,
+      "unit": "%",
+      "max": 100,
+      "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+    }
+  ],
+  "comparisonTable": {
+    "caption": "IBM's published Granite 4.2 evaluation table (25 August 2026), the three sizes side by side. A dash means the source left the cell blank — the 3B skips the agentic-RL benchmarks.",
+    "models": [
+      "Granite 4.2 3B",
+      "Granite 4.2 8B",
+      "Granite 4.2 30B"
+    ],
+    "subject": 2,
+    "rows": [
+      { "benchmark": "AIME25", "unit": "%", "scores": [78.33, 86.67, 89.17] },
+      { "benchmark": "HMMT Feb25", "unit": "%", "scores": [66.67, 78.33, 89.17] },
+      { "benchmark": "GPQA", "unit": "%", "scores": [54.8, 64.14, 66.41] },
+      { "benchmark": "LiveCodeBench v6", "unit": "%", "scores": [69.71, 73.24, 75.77] },
+      { "benchmark": "SciCode", "unit": "%", "scores": [24.11, 36.09, 38.76] },
+      { "benchmark": "SWE-bench Verified", "unit": "%", "scores": [null, 47.67, 57] },
+      { "benchmark": "SWE-bench Pro", "unit": "%", "scores": [null, 19.11, 33.29] },
+      { "benchmark": "SWE-bench Multilingual", "unit": "%", "scores": [null, 30.78, 41.89] },
+      { "benchmark": "Terminal-Bench 2.1", "unit": "%", "scores": [null, 20.56, 29.24] },
+      { "benchmark": "τ³-bench", "unit": "%", "scores": [45.78, 58.06, 62] },
+      { "benchmark": "BFCL v4", "unit": "%", "scores": [52.41, 50.29, 61.39] },
+      { "benchmark": "ProfBench", "unit": "%", "scores": [32.1, 41.2, 42.9] },
+      { "benchmark": "BirdBench", "unit": "%", "scores": [null, 41.07, 41.85] },
+      { "benchmark": "GDPval", "scores": [null, 1189, 1225] },
+      { "benchmark": "MMLU-Pro", "unit": "%", "scores": [67.84, 74.04, 77.6] },
+      { "benchmark": "Arena-Hard-V2", "unit": "%", "scores": [34.96, 65.19, 67.93] },
+      { "benchmark": "IFBench (prompt)", "unit": "%", "scores": [74.33, 79.33, 77.17] },
+      { "benchmark": "RULER 64K", "unit": "%", "scores": [67.52, 80.99, 89.96] },
+      { "benchmark": "RULER 128K", "unit": "%", "scores": [55.3, 71.41, 81.38] }
+    ],
+    "source": "https://huggingface.co/blog/ibm-granite/granite-4-2"
+  },
+  "faq": [
+    {
+      "q": "Is Granite 4.2 30B open source?",
+      "a": "Yes. IBM publishes the weights on Hugging Face under the Apache 2.0 license, so commercial use, fine-tuning and self-hosting carry no licence restrictions. Builds are also distributed through Ollama and GitHub."
+    },
+    {
+      "q": "What is the thinking mode?",
+      "a": "Granite 4.2 emits explicit chain-of-thought inside <think>…</think> tags before its answer. The same checkpoint can be run in non-thinking mode for direct responses, or in a low-effort mode with a short reasoning budget, so you can trade reasoning depth against latency without swapping models."
+    },
+    {
+      "q": "How long a context does it handle?",
+      "a": "128K tokens natively, with a documented long-context extension to 512K. On IBM's RULER evaluation it scores 89.96 at 64K and 81.38 at 128K — the best of the three Granite 4.2 sizes."
+    },
+    {
+      "q": "How does it compare with the 8B and 3B models?",
+      "a": "The 30B leads on every published row: 89.17 vs 86.67 and 78.33 on AIME25, 57.00 vs 47.67 on SWE-bench Verified (the 3B is not scored on the agentic coding benchmarks), and 77.60 vs 74.04 and 67.84 on MMLU-Pro. The 8B edges it on IFBench prompt-following, 79.33 to 77.17."
+    }
+  ],
+  "versionHistory": [
+    {
+      "version": "Granite 4.2 30B",
+      "slug": "granite-4-2-30b",
+      "date": "2026-08-25",
+      "note": "First dense Granite reasoning models: switchable thinking mode plus agentic RL on SWE, terminal and search environments.",
+      "current": true
+    },
+    {
+      "version": "Granite 4.1 (3B / 8B / 30B)",
+      "date": "2026-04-29",
+      "note": "Dense decoder-only base and instruct models in 3B, 8B and 30B, released under Apache 2.0 alongside vision, speech, embedding and guardian models."
+    }
+  ]
+}
