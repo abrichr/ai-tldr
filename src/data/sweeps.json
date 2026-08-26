@@ -36882,6 +36882,33 @@
         "ecosystem",
         "rumor"
       ]
+    },
+    {
+      "id": "sweep-20260826t084654z",
+      "timestamp": "2026-08-26T08:46:54.845Z",
+      "source": "github-actions-sweep",
+      "summary": "Zero-add sweep. Lab blogs quiet or already covered: Anthropic's newest post (wellbeing grants, Aug 25) is already in the feed, Meta's blog has nothing since Jul 27, Moonshot since Jul 16, ByteDance Seed since Aug 5, Cohere's Aug 25 post is an IDC market brief with no artifact, and Mistral's Aug 24 post is a HUMAIN partnership with no released model or tool. DeepMind/Google's freshest ships (Gemini 3.7 Flash, WeatherNext Cyclones, SL2T) are all already in the feed; the Aug 25 blog.google item is a how-to for a previously announced Gemini macOS dictation feature, not a release. OpenAI's API changelog has nothing newer than Aug 21 (regional processing and the GPT-5.6 Sol price cut, both already in the feed). GitHub trending's movers are old repos with no fresh release: apache/maka last tagged Aug 18, tinyhumansai/openhuman Aug 7, Tencent/AI-Infra-Guard Aug 17. HuggingFace models/datasets/papers top-10 held nothing inside 72h — the top paper (OraRL, 2608.20492) was submitted Aug 20. HN front page and every 150+ story from the last three days were either already in the feed (Apple M6/M5 Ultra and the Mac Studio/mini launches, OpenAI Jalapeno, GPT-5.6 Sol price cut, boydkane inference-engine RCE, Varkos, Qwen3.8-Flash-Next) or outside the cap: the MS Paint invisible-watermark reversing post is from Aug 20, 'How much of HN is AI?' from March 2026, and 'Training AI to Paint with Code' from March 2026 with no released code. Qwen3.8-Flash-Next weights had not shipped at sweep time (open-sourcing scheduled 11pm Beijing, Aug 26) and the countdown item already covers it. yt-rss-scan returned two fresh videos (Two Minute Papers Aug 24, Wes Roth Aug 23) and both are already in the feed. The science lane (BCI/neural decoding, medical imaging + FDA clearances, protein and drug design, single-cell genomics, STAT News, Nature subjects, neurosciencenews) surfaced nothing inside 72h with a released artifact — Brain2Qwerty's Nature Neuroscience writeup is from Aug 3 and already covered.",
+      "counts": {
+        "added": 0,
+        "updated": 0,
+        "removed": 0
+      },
+      "added": [],
+      "updated": [],
+      "removed": [],
+      "coverage": [
+        "model",
+        "repo",
+        "tool",
+        "video",
+        "paper",
+        "dataset",
+        "algorithm",
+        "benchmark",
+        "article",
+        "security",
+        "ecosystem"
+      ]
     }
   ]
 }
